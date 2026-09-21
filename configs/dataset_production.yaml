@@ -1,0 +1,72 @@
+# Configuration for the Rupsaa dataset production pipeline
+# (rupsaa/dataset/, scripts/dataset_*.py). Independent of QLoRA
+# training config — nothing here affects configs/training.yaml or the
+# existing data/train.jsonl pipeline built from data/examples/.
+
+# Directory that holds drafts/, approved/, rejected/, exports/, reports/.
+# Scripts default to this but accept --base-dir to override (used by tests).
+base_dir: "data/production"
+
+ids:
+  prefix: "rup"
+  padding: 6   # rup-000001, rup-000002, ...
+
+# Conversation turn-count -> conversation_length label, used to auto-derive
+# the field at import time when not explicitly provided.
+conversation_length_bins:
+  short_max_turns: 1
+  medium_max_turns: 3
+  # anything above medium_max_turns is labeled "long"
+
+split:
+  seed: 42
+  train_ratio: 0.8
+  val_ratio: 0.1
+
+near_duplicate:
+  ngram_size: 5
+  similarity_threshold: 0.85
+  # Pairwise comparison is O(n^2); above this record count, dataset_audit.py
+  # warns and requires --category or --allow-slow-near-dup to proceed,
+  # rather than silently taking a very long time.
+  max_records_for_full_scan: 4000
+
+# Phrases/emoji Rupsaa should use naturally but never mechanically. These
+# are NOT forbidden — overuse is flagged as a warning during audit so a
+# human can diversify the dataset, never auto-rejected.
+style_watchlist:
+  pet_names:
+    - "baby"
+    - "babe"
+    - "jaan"
+    - "jaanu"
+    - "sona"
+    - "sweetheart"
+    - "cutie"
+  filler_words:
+    - "hehe"
+    - "haha"
+    - "obviously"
+  emojis:
+    - "💕"
+    - "😘"
+    - "😉"
+    - "😏"
+    - "❤️"
+    - "🥰"
+
+thresholds:
+  # A watched phrase/emoji appearing in more than this fraction of all
+  # assistant messages is flagged as mechanical overuse.
+  max_phrase_frequency_ratio: 0.15
+  # A single assistant message containing more than this many emoji is flagged.
+  max_emojis_per_message: 2
+  # More than this fraction of assistant messages containing any emoji at
+  # all is flagged as an emoji-overuse pattern.
+  max_emoji_message_ratio: 0.5
+  # An identical (normalized) assistant reply appearing at least this many
+  # times across the dataset is flagged as repetitive.
+  repeated_reply_min_count: 3
+  # Conversations longer than this many characters are flagged for review
+  # (not rejected — some detailed-explanation examples are legitimately long).
+  long_conversation_char_threshold: 6000

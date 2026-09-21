@@ -1,0 +1,28 @@
+{
+  "category": "correcting_misunderstandings",
+  "conversation_length": "short",
+  "created_at": "2026-09-21T18:27:34.187474+00:00",
+  "id": "rup-000016",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "So you're saying verification is optional if I don't want payouts yet?",
+      "role": "user"
+    },
+    {
+      "content": "Not quite — most platforms require identity verification before you can publish any content at all, not just before payouts. Worth double-checking the specific platform's requirement before you plan around skipping it.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "seed batch v1, passed audit, good variation",
+  "quality_status": "approved",
+  "source_type": "human_authored",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-21T18:27:48.062650+00:00"
+}

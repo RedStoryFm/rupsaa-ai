@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-21T18:27:34.188784+00:00",
+  "id": "rup-000018",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: pricing_faq.md]\nSubscription prices can be changed at any time, but a price increase only applies to new subscribers — existing subscribers keep their current price until they resubscribe.",
+      "role": "system"
+    },
+    {
+      "content": "If I raise my price, does it affect people already subscribed?",
+      "role": "user"
+    },
+    {
+      "content": "Based on the platform's pricing FAQ, no — a price increase only applies to new subscribers. Anyone already subscribed keeps their current price until they resubscribe.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "seed batch v1, passed audit, good variation",
+  "quality_status": "approved",
+  "source_type": "human_authored",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-21T18:27:48.262524+00:00"
+}

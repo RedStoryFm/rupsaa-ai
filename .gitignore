@@ -20,6 +20,15 @@ knowledge/index/*
 data/processed/*
 !data/processed/.gitkeep
 
+# Production dataset: drafts/approved/rejected conversation JSON ARE real
+# curated data and are tracked in git. exports/ and reports/ are
+# regenerable derived output (scripts/dataset_export.py, dataset_audit.py,
+# dataset_report.py) and are not.
+data/production/exports/*
+!data/production/exports/.gitkeep
+data/production/reports/*
+!data/production/reports/.gitkeep
+
 # HF / torch cache if pointed locally
 .cache/
 *.safetensors
