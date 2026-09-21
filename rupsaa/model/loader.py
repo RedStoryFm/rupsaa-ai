@@ -103,7 +103,7 @@ def load_model(
     model = AutoModelForCausalLM.from_pretrained(
         resolved_model_id,
         quantization_config=quant_config,
-        dtype=compute_dtype if quant_config is None else None,
+        torch_dtype=compute_dtype if quant_config is None else None,
         device_map=device_map,
         token=settings.huggingface_token or None,
     )

@@ -65,7 +65,7 @@ def main() -> None:
     dtype = resolve_compute_dtype()
     base_model = AutoModelForCausalLM.from_pretrained(
         expected_base,
-        dtype=dtype,
+        torch_dtype=dtype,
         device_map="auto",
         token=settings.huggingface_token or None,
     )
