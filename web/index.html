@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rupsaa</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="avatar">R</div>
+        <div class="brand-text">
+          <div class="brand-name">Rupsaa</div>
+          <div class="brand-status" id="status-line">connecting…</div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <label class="rag-toggle">
+          <input type="checkbox" id="rag-toggle">
+          <span>Use knowledge base</span>
+        </label>
+        <button id="reset-btn" title="Start a new chat">New chat</button>
+      </div>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite"></main>
+
+    <div id="error-banner" class="error-banner" hidden></div>
+
+    <footer class="composer">
+      <textarea id="input" placeholder="Message Rupsaa… (বাংলা, Banglish, or English)" rows="1"></textarea>
+      <button id="send-btn" aria-label="Send">➤</button>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+
+# Model / data artifacts (large, regenerable)
+checkpoints/*
+!checkpoints/.gitkeep
+adapters/*
+!adapters/.gitkeep
+merged_model/*
+!merged_model/.gitkeep
+knowledge/index/*
+!knowledge/index/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# HF / torch cache if pointed locally
+.cache/
+*.safetensors
+*.bin
+*.pt
+*.gguf
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

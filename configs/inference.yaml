@@ -1,0 +1,21 @@
+# Default generation settings for Rupsaa inference (chat.py and the API).
+# Individual requests (CLI flags or API request body) may override these.
+
+generation:
+  max_new_tokens: 512
+  temperature: 0.8
+  top_p: 0.9
+  top_k: 50
+  repetition_penalty: 1.1
+  do_sample: true
+
+# Conversation memory kept in-process per conversation_id (see
+# rupsaa/conversation/manager.py). This is a message count, not a token
+# budget; approximate token usage is also tracked and logged.
+conversation:
+  max_history_messages: 20
+
+# use_adapter: whether to load the LoRA adapter on top of the base model by
+# default. If ADAPTER_PATH does not exist yet (e.g. before training), the
+# loader automatically falls back to the base model and logs a warning.
+use_adapter: true

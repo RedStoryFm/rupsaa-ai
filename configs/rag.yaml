@@ -1,0 +1,32 @@
+# RAG (retrieval-augmented generation) configuration.
+#
+# Embedding model: intfloat/multilingual-e5-small
+#   - Small (118M params, ~470MB), fast enough for CPU-only ingestion/query.
+#   - Trained for retrieval across 100 languages, with solid Bengali and
+#     English coverage — matches Rupsaa's language mix.
+#   - E5 models expect "query: " / "passage: " prefixes on inputs; this is
+#     handled inside rupsaa/rag/embeddings.py, not left to callers.
+
+embedding_model_id: "intfloat/multilingual-e5-small"
+embedding_dim: 384
+
+vector_store:
+  backend: "faiss"          # modular: retriever.py only depends on the
+  index_dir: "knowledge/index"   # VectorStore interface in vector_store.py
+  index_filename: "rupsaa.index"
+  metadata_filename: "rupsaa_metadata.jsonl"
+
+chunking:
+  chunk_size_chars: 800
+  chunk_overlap_chars: 120
+
+retrieval:
+  top_k: 4
+  # Minimum cosine similarity for a chunk to be considered a real match.
+  # Below this, retrieval is treated as "no useful context" rather than
+  # forcing irrelevant chunks into the prompt (see rupsaa/rag/pipeline.py).
+  min_score: 0.72
+
+documents:
+  source_dir: "knowledge/documents"
+  supported_extensions: [".txt", ".md", ".json", ".pdf"]

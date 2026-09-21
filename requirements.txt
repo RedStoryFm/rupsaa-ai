@@ -1,0 +1,35 @@
+# Rupsaa AI — pinned to versions verified compatible with this Lightning Studio
+# environment: NVIDIA L4 (23GB), CUDA 13.0 driver / cu128 runtime, torch 2.8.0+cu128.
+# torch is intentionally NOT pinned here — it is already installed and working
+# against the studio's CUDA driver. Reinstalling it is unnecessary and risky.
+
+# --- Core ML / fine-tuning stack ---
+transformers==4.46.3
+accelerate==1.15.0
+peft==0.21.0
+trl==0.12.2
+bitsandbytes==0.50.2
+datasets==5.0.1
+sentencepiece==0.2.2
+protobuf==7.36.1
+einops==0.8.2
+
+# --- RAG stack ---
+sentence-transformers==5.7.0
+faiss-cpu==1.15.1
+pypdf==6.19.0
+
+# --- Hub / config ---
+huggingface_hub==0.36.2
+pydantic==2.13.5
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+PyYAML==6.0.3
+
+# --- API ---
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+
+# --- Testing ---
+pytest==9.1.1
+httpx==0.28.1

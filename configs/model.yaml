@@ -1,0 +1,52 @@
+# Base model selection for Rupsaa.
+#
+# Selected: Qwen/Qwen2.5-7B-Instruct
+#
+# Why:
+#   - Apache-2.0 license: no restrictive "acceptable use policy" (unlike Gemma
+#     or Llama community licenses), which matters for an 18+-oriented product.
+#   - Strong multilingual pretraining data (29+ languages) gives usable
+#     Bengali + Banglish + English + code-switching behavior out of the box,
+#     which fine-tuning then sharpens into Rupsaa's actual voice.
+#   - 7B fits comfortably in 4-bit QLoRA on a single 23GB L4 GPU with room
+#     for gradient checkpointing, activations, and a reasonable sequence length.
+#   - Uses a native ChatML chat template supported directly by
+#     transformers' tokenizer.apply_chat_template — no custom template needed.
+#   - Ungated public repo: no Hugging Face access request / approval wait.
+#
+# Fallback: if VRAM is insufficient (e.g. shared/smaller GPU), switch to
+# Qwen/Qwen2.5-3B-Instruct below. Nothing else in the codebase needs to change;
+# base_model_id is read from this file everywhere (rupsaa/config.py).
+
+base_model_id: "Qwen/Qwen2.5-7B-Instruct"
+fallback_model_id: "Qwen/Qwen2.5-3B-Instruct"
+
+# Chat template comes from the tokenizer itself (ChatML). Do not hard-code one.
+use_native_chat_template: true
+
+# Standard Qwen2 decoder-only architecture: attention (q/k/v/o) + MLP
+# (gate/up/down) projections. These are the actual Linear module names in
+# Qwen2's transformers implementation and are the conventional LoRA target
+# set for this architecture family.
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
+  # bf16 compute dtype: NVIDIA L4 (Ada Lovelace, compute cap 8.9) supports bf16
+  # natively. Falls back to fp16 automatically at load time if the detected
+  # GPU does not support bf16 (see rupsaa/model/loader.py).
+  bnb_4bit_compute_dtype: "bfloat16"
+
+tokenizer:
+  padding_side: "right"
+  # Qwen2.5 tokenizer already defines a pad token; loader.py only sets a
+  # fallback (eos_token) if one is somehow missing.

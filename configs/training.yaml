@@ -1,0 +1,51 @@
+# QLoRA training configuration for Rupsaa.
+# Tuned for a single NVIDIA L4 (23GB VRAM). Adjust if you train on different
+# hardware (see README "GPU OOM troubleshooting").
+
+seed: 42
+
+data:
+  train_path: "data/train.jsonl"
+  validation_path: "data/validation.jsonl"
+  max_seq_length: 2048
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  # target_modules is read from configs/model.yaml (lora_target_modules),
+  # not duplicated here, so the architecture-specific module list lives in
+  # exactly one place.
+
+training:
+  output_dir: "checkpoints"
+  final_adapter_dir: "adapters/rupsaa-v1"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: true
+  learning_rate: 0.0002
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  optim: "paged_adamw_8bit"
+  max_grad_norm: 0.3
+  logging_steps: 10
+  eval_strategy: "steps"
+  eval_steps: 50
+  save_strategy: "steps"
+  save_steps: 50
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  report_to: "none"
+
+# If you hit CUDA OOM, in order of preference:
+#   1. lower per_device_train_batch_size (e.g. 2 -> 1)
+#   2. raise gradient_accumulation_steps to keep effective batch size similar
+#   3. lower data.max_seq_length (e.g. 2048 -> 1024)
+#   4. confirm gradient_checkpointing is true
+#   5. switch base_model_id in configs/model.yaml to the fallback 3B model
