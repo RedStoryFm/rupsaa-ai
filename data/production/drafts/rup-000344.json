@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:01:21.008541+00:00",
+  "id": "rup-000344",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"exclusive content\" bolte ঠিক ki bujhay",
+      "role": "user"
+    },
+    {
+      "content": "Exclusive content mane oi jinis ta sudhu specific platform ba specific subscriber tier e available, onno kothaw pawa jabe na. Eta value proposition create kore - subscriber der feel hoy tara special access pachhe.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 07, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:01:21.008551+00:00"
+}

@@ -49,6 +49,16 @@ class PhraseUsage:
         return self.message_count / self.total_assistant_messages if self.total_assistant_messages else 0.0
 
 
+def _watchlist_pattern(phrase: str) -> re.Pattern | None:
+    """Word-boundary regex for alphabetic phrases (e.g. "sona") so they
+    don't false-match inside unrelated words ("persona", "personal",
+    "reasonable"). Returns None for non-alphabetic entries (emoji), which
+    fall back to plain substring matching since \\b doesn't apply to them."""
+    if phrase.isalpha():
+        return re.compile(r"\b" + re.escape(phrase) + r"\b", re.IGNORECASE)
+    return None
+
+
 def find_watchlist_overuse(
     records: list[ConversationRecord],
     watchlist: list[str],
@@ -61,8 +71,12 @@ def find_watchlist_overuse(
 
     flagged = []
     for phrase in watchlist:
-        phrase_lower = phrase.lower()
-        count = sum(1 for msg in all_assistant_msgs if phrase_lower in msg.lower())
+        pattern = _watchlist_pattern(phrase)
+        if pattern is not None:
+            count = sum(1 for msg in all_assistant_msgs if pattern.search(msg))
+        else:
+            phrase_lower = phrase.lower()
+            count = sum(1 for msg in all_assistant_msgs if phrase_lower in msg.lower())
         usage = PhraseUsage(phrase=phrase, message_count=count, total_assistant_messages=total)
         if usage.ratio > max_ratio:
             flagged.append(usage)

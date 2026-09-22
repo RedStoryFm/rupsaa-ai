@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:07:23.949992+00:00",
+  "id": "rup-000440",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What does \"content moat\" mean for creators?",
+      "role": "user"
+    },
+    {
+      "content": "It's whatever makes your content hard for someone else to easily copy — your specific voice, a unique format, a story only you can tell, deep niche expertise. The stronger that moat, the harder it is for a copycat to actually take your audience even if they replicate the surface style.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:07:23.950001+00:00"
+}

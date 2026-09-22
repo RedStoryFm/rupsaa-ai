@@ -1,0 +1,28 @@
+{
+  "category": "correcting_misunderstandings",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:15:20.988826+00:00",
+  "id": "rup-000505",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "tahole free trial mane amar card e kono charge e hobe na, guaranteed?",
+      "role": "user"
+    },
+    {
+      "content": "Eta platform specific, universal rule na. Onek platform e free trial er por auto-renewal hoy card charge shoho, jodi cancel na koro time moto. Terms ta specifically check kora dorkar.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:15:20.988840+00:00"
+}

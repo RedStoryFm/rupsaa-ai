@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.037507+00:00",
+  "id": "rup-000209",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"retention rate\" ta ki jinis exactly",
+      "role": "user"
+    },
+    {
+      "content": "Retention rate mane koto percentage subscriber ekta time period er por o thake, cancel na kore. High retention mane audience actual value pachhe, low retention mane kichu ekta thik nai - either content, pricing, ba frequency.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:51:23.037516+00:00"
+}

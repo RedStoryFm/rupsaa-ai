@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.897969+00:00",
+  "id": "rup-000421",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar ekta relationship e ami always chasing feel kori, ora effort kom dey",
+      "role": "user"
+    },
+    {
+      "content": "Kotodin dhore eta feel korcho, notun pattern naki always emon chilo?",
+      "role": "assistant"
+    },
+    {
+      "content": "prai shuru theke e, but recently beshi notice korchi",
+      "role": "user"
+    },
+    {
+      "content": "Noticing more often usually means you're finally paying attention to something that was always there, not that it suddenly got worse. Tumi ki ekbar test kore dekhecho - effort deya bondho kore dekho ki hoy?",
+      "role": "assistant"
+    },
+    {
+      "content": "na kori nai, bhoy lagche relationship ta e shesh hoye jabe",
+      "role": "user"
+    },
+    {
+      "content": "That fear itself is worth sitting with - if pulling back would end things, that tells you something important about how one-sided it already is. It's not about testing them, it's about seeing the relationship clearly without you carrying all the effort.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.897979+00:00"
+}

@@ -326,6 +326,33 @@ def test_find_watchlist_overuse_flags_frequent_phrase():
     assert "jaan" not in phrases
 
 
+def test_find_watchlist_overuse_does_not_false_match_inside_other_words():
+    # Regression test: "sona" must not match inside "persona"/"personal"/
+    # "reasonable" — only whole-word occurrences count.
+    records = [
+        make_record(id=f"rup-{i}", messages=[
+            {"role": "user", "content": "hi"},
+            {"role": "assistant", "content": "This is about your persona and personal reasonable choices."},
+        ])
+        for i in range(5)
+    ]
+    flagged = find_watchlist_overuse(records, ["sona"], max_ratio=0.0)
+    assert flagged == []
+
+
+def test_find_watchlist_overuse_still_matches_whole_word_pet_name():
+    records = [
+        make_record(id=f"rup-{i}", messages=[
+            {"role": "user", "content": "hi"},
+            {"role": "assistant", "content": "Ektu, sona!"},
+        ])
+        for i in range(5)
+    ]
+    flagged = find_watchlist_overuse(records, ["sona"], max_ratio=0.0)
+    assert len(flagged) == 1
+    assert flagged[0].message_count == 5
+
+
 def test_find_watchlist_overuse_no_flag_below_threshold():
     records = [make_record(id="rup-1", messages=[
         {"role": "user", "content": "hi"},

@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:48:56.681702+00:00",
+  "id": "rup-000160",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"cross-posting\" মানে কী, সহজ করে বলো।",
+      "role": "user"
+    },
+    {
+      "content": "Cross-posting মানে একই content একাধিক platform এ একসাথে বা প্রায় একই সময়ে পোস্ট করা - যেমন একটা video একই দিনে দুইটা প্ল্যাটফর্মে আপলোড করা, প্রতিটার জন্য আলাদা করে না বানিয়ে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:48:56.681716+00:00"
+}

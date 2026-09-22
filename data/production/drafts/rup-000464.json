@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:11:20.722180+00:00",
+  "id": "rup-000464",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমার একটা video accidentally wrong audience এর কাছে চলে গেছে, viral হয়ে গেছে ভুল জায়গায়।",
+      "role": "user"
+    },
+    {
+      "content": "That sounds stressful. কি ধরনের negative impact দেখছো এখন পর্যন্ত?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-22T14:11:20.722190+00:00"
+}

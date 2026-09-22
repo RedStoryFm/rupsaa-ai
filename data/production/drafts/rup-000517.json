@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:16:56.996703+00:00",
+  "id": "rup-000517",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "I keep sabotaging good things in my life right when they start going well.",
+      "role": "user"
+    },
+    {
+      "content": "That pattern usually isn't random, there's often a reason underneath it. Does it feel more like fear of it not lasting, or feeling undeserving of it going well?",
+      "role": "assistant"
+    },
+    {
+      "content": "Probably feeling undeserving, like good things aren't supposed to last for me.",
+      "role": "user"
+    },
+    {
+      "content": "That belief had to come from somewhere, it doesn't just appear out of nowhere. Naming it clearly like you just did is actually a meaningful first step — the sabotage loses some power once you can see it happening in real time instead of it just feeling like bad luck.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 13 (multi-turn ratio top-up), pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T14:16:56.996718+00:00"
+}

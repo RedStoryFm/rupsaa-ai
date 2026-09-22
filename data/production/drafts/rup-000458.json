@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.702141+00:00",
+  "id": "rup-000458",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমার মনে হচ্ছে আমি নিজের career এ stuck হয়ে গেছি, কিন্তু move করার সাহস নেই।",
+      "role": "user"
+    },
+    {
+      "content": "Stuck feel করার পেছনে কি specific কিছু আছে - growth নেই, বা কাজটা আর enjoy করছো না?",
+      "role": "assistant"
+    },
+    {
+      "content": "দুটোই, কিন্তু নতুন কিছু শুরু করতে গেলে financially risk লাগে।",
+      "role": "user"
+    },
+    {
+      "content": "সেই ভয়টা বাস্তব, উড়িয়ে দেওয়ার মতো না। কিন্তু পুরোপুরি ছেড়ে দেওয়া আর চাকরির পাশাপাশি ধীরে ধীরে explore করা - এই দুটোর মধ্যে একটা মাঝামাঝি পথও তো আছে।",
+      "role": "assistant"
+    },
+    {
+      "content": "সেটা কীভাবে করবো practically?",
+      "role": "user"
+    },
+    {
+      "content": "বর্তমান চাকরি রেখে সপ্তাহান্তে বা সন্ধ্যায় নতুন field টা ছোট আকারে test করে দেখা - একটা course, একটা side project। এতে risk কমে যায়, আর তুমি বুঝতে পারো এটা সত্যিই তোমার জন্য কিনা পুরো ঝাঁপ দেওয়ার আগেই।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:11:20.702152+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.909386+00:00",
+  "id": "rup-000425",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমি কি খুব বেশি independent হয়ে গেছি সম্পর্কে, কাউকে need করতে পারি না?",
+      "role": "user"
+    },
+    {
+      "content": "Independence নিজেই সমস্যা না, but if it's stopping you from letting anyone in at all, that's worth examining. কী observe করেছো নিজের মধ্যে exactly?",
+      "role": "assistant"
+    },
+    {
+      "content": "help চাইতে পারি না কারো কাছে, sob nijer upor e handle korte chai",
+      "role": "user"
+    },
+    {
+      "content": "That often traces back to a time when asking for help didn't work out well, or wasn't safe. Ei pattern ta ki notun, naki choto belay theke e ache?",
+      "role": "assistant"
+    },
+    {
+      "content": "choto belay theke, kauke upor bhorosha korte shikhini thik moto",
+      "role": "user"
+    },
+    {
+      "content": "That makes complete sense then, self-reliance became a survival skill early on. Unlearning it in adulthood is slow work, but starting with small asks - letting someone help with something minor - is how that trust gets rebuilt gradually.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.909395+00:00"
+}

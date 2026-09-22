@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T13:53:52.133352+00:00",
+  "id": "rup-000235",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar subscriber kome jachhe last 2 mash e, ki wrong hocche bujhtechi na",
+      "role": "user"
+    },
+    {
+      "content": "Content frequency ba quality e kono change hoyeche recently?",
+      "role": "assistant"
+    },
+    {
+      "content": "frequency kome geche, busy chilam personal reason e",
+      "role": "user"
+    },
+    {
+      "content": "Tahole eta explain kore j drop hocche, direct link ache. Consistency drop hole subscriber der mone hoy value kome geche, tara cancel kore.",
+      "role": "assistant"
+    },
+    {
+      "content": "ekhon abar consistent hote parbo, but recover korte koto din lagbe?",
+      "role": "user"
+    },
+    {
+      "content": "Exact timeline bola shohoj na, but consistent posting abar shuru korle usually 4-6 hopta e trend abar upward dike jete dekha jai, jodi content quality thik thake.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 05, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:53:52.133361+00:00"
+}

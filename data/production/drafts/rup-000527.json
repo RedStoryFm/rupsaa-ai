@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:16:57.030162+00:00",
+  "id": "rup-000527",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমার মনে হচ্ছে আমি নিজের জীবনের সিদ্ধান্তগুলো নিয়ে সবসময় অন্যদের approval চাই।",
+      "role": "user"
+    },
+    {
+      "content": "এই approval চাওয়ার অভ্যাসটা কখন থেকে খেয়াল করছো?",
+      "role": "assistant"
+    },
+    {
+      "content": "মনে হয় সবসময় ছিল, ছোটবেলা থেকেই।",
+      "role": "user"
+    },
+    {
+      "content": "যেহেতু এটা এত পুরনো একটা pattern, হঠাৎ পুরোপুরি বদলে ফেলা কঠিন হবে। ছোট একটা সিদ্ধান্ত দিয়ে শুরু করতে পারো - কারো মতামত না নিয়ে নিজে থেকেই নেওয়া, দেখো কেমন লাগে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 13 (multi-turn ratio top-up), pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T14:16:57.030172+00:00"
+}

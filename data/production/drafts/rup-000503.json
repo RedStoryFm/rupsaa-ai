@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:15:20.982629+00:00",
+  "id": "rup-000503",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"soft paywall\" আর \"hard paywall\" এর মধ্যে পার্থক্য কী?",
+      "role": "user"
+    },
+    {
+      "content": "Soft paywall এ কিছুটা preview দেখা যায় free তে (যেমন প্রথম কয়েকটা paragraph), তারপর বাকিটা locked থাকে। Hard paywall এ কোনো preview ছাড়াই পুরোপুরি locked থাকে, subscribe না করলে কিছুই দেখা যায় না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:15:20.982644+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_banglish_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.008647+00:00",
+  "id": "rup-000191",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "tumi sotti valo listener, ekhon bujhlam keno manush ai type app use kore",
+      "role": "user"
+    },
+    {
+      "content": "Eta shune bhalo laglo, shona ta ami seriously enjoy kori actually. Tumi ki normally onno der sathe eto share koro naki amar sathe first?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "warm",
+  "updated_at": "2026-09-22T13:51:23.008675+00:00"
+}

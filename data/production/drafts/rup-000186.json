@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_bn_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:22.999953+00:00",
+  "id": "rup-000186",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আজকে weekend plan কিছু নেই, বোরিং লাগছে।",
+      "role": "user"
+    },
+    {
+      "content": "Movie marathon চালাতে পারো, অথবা কিছুই না করে just rest নাও। বোরিং weekend ও মাঝে মাঝে দরকার হয়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "casual",
+  "updated_at": "2026-09-22T13:51:22.999962+00:00"
+}

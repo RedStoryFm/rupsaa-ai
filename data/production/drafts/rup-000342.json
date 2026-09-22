@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:01:21.001796+00:00",
+  "id": "rup-000342",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "parasocial relationship ei concept ta creator der jonno explain koro details e",
+      "role": "user"
+    },
+    {
+      "content": "Parasocial relationship hocche ekta one-sided emotional connection, jekhane fan ekjon creator ke seriously chene mone kore, kintu creator er kache fan just ekjon anek follower er modhhe ekjon.\n\nEta natural, entertainment ar content consumption er part - kono problem na basic level e. Kintu eta problematic hoy jokhon fan boundary bujhte pare na - jemon creator er personal life e overly invested hoye jawa, real relationship asha kora, ba possessive hoye jawa.\n\nCreator der jonno eta bujhe rakha important duitা karone. Ekta holo, fan der attachment ta respect kora - tarা genuinely care kore, seta dismiss kora thik na. Dwitiyo holo, healthy boundary maintain kora - personal ar public persona er modhhe clear line rakha, jate parasocial dynamic ta unhealthy direction e না jai kono jon er jonno e.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 07, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:01:21.001809+00:00"
+}

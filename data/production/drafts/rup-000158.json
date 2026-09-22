@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:48:56.677425+00:00",
+  "id": "rup-000158",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's a simple way to track if my content strategy is actually working?",
+      "role": "user"
+    },
+    {
+      "content": "Pick two or three numbers and watch them monthly instead of daily — daily fluctuation is mostly noise. Subscriber retention rate and average engagement per post tend to tell you more than raw follower count ever will.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:48:56.677445+00:00"
+}

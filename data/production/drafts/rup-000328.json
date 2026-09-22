@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_bn_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:01:20.962741+00:00",
+  "id": "rup-000328",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"pinned post\" strategy টা কীভাবে ব্যবহার করা যায় effectively?",
+      "role": "user"
+    },
+    {
+      "content": "সাধারণত সবচেয়ে ভালো performing বা সবচেয়ে গুরুত্বপূর্ণ post (যেমন intro বা welcome message) pin করা হয়, যাতে নতুন visitor প্রথমেই সেটা দেখে। এটা first impression control করার একটা সহজ উপায়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 07, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:01:20.962750+00:00"
+}

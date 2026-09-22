@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.903758+00:00",
+  "id": "rup-000423",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar audience mostly 18-24, content ki age-appropriate rakhte hobe specifically?",
+      "role": "user"
+    },
+    {
+      "content": "Content sensitivity tomar niche ar platform policy er upor depend kore, general age-appropriateness bolার jonno platform er own guideline follow kora best. Tomar current content e kono specific concern ache?",
+      "role": "assistant"
+    },
+    {
+      "content": "kichu adult topic niye kotha bolte chai kintu unsure legal age boundary niye",
+      "role": "user"
+    },
+    {
+      "content": "That's genuinely a platform-specific and jurisdiction-specific legal question, and I don't want to guess wrong on something with real consequences. Platform er content guideline ar local law duitা e check kora dorkar, specifically age verification requirement niye.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:07:23.903767+00:00"
+}

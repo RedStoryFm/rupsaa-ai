@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.895207+00:00",
+  "id": "rup-000420",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is it better to focus on one platform deeply or spread across several early on?",
+      "role": "user"
+    },
+    {
+      "content": "Early on, depth on one platform usually beats breadth across several — splitting limited time and energy too thin often means mediocre presence everywhere instead of a real foothold anywhere. Which platform are you leaning toward as your primary?",
+      "role": "assistant"
+    },
+    {
+      "content": "I was thinking about splitting time evenly between two actually.",
+      "role": "user"
+    },
+    {
+      "content": "I'd gently push back on that instinct, at least initially. Pick the one where your target audience is most concentrated, nail your format and consistency there first, then expand once you have some traction and content you can repurpose across platforms.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:07:23.895216+00:00"
+}
