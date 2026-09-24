@@ -106,10 +106,8 @@ fi
 step 9 "Rupsaa adapter (download / restore + checksum verification)"
 FETCH_ARGS=()
 [ -n "${RUPSAA_ADAPTER_FROM_DIR:-}" ] && FETCH_ARGS+=(--from-dir "$RUPSAA_ADAPTER_FROM_DIR")
-set +e
-RUPSAA_HF_REPO="$HF_REPO" "$PY" scripts/fetch_adapter.py "${FETCH_ARGS[@]}"
-FETCH_RC=$?
-set -e
+FETCH_RC=0  # "|| FETCH_RC=$?" keeps a failure here from tripping set -e / the ERR trap
+RUPSAA_HF_REPO="$HF_REPO" "$PY" scripts/fetch_adapter.py "${FETCH_ARGS[@]}" || FETCH_RC=$?
 ADAPTER_OK=1
 if [ $FETCH_RC -ne 0 ]; then
   ADAPTER_OK=0
