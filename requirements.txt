@@ -28,7 +28,16 @@ PyYAML==6.0.3
 
 # --- API ---
 fastapi==0.141.1
-uvicorn[standard]==0.52.4
+# uvicorn with its "standard" extras pinned individually: uvicorn[standard]
+# asks for websockets>=13, but the LLaMA-Factory GUI's gradio_client 1.1.0
+# needs websockets<12. The app never uses websockets; 11.0.3 is the
+# known-working version, so pinning it here stops pip from upgrading it and
+# scripts/setup_llamafactory.sh from downgrading it again.
+uvicorn==0.52.4
+httptools==0.8.0
+uvloop==0.22.1
+watchfiles==1.2.0
+websockets==11.0.3
 python-multipart==0.0.32  # FastAPI file uploads (terminology CSV/XLSX import)
 
 # --- Testing ---
