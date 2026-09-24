@@ -1,0 +1,36 @@
+{
+  "category": "follow_up_questions",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.434997+00:00",
+  "id": "rup-001497",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "chargeback ki?",
+      "role": "user"
+    },
+    {
+      "content": "Chargeback mane customer tar bank-ke bole j ekta transaction unauthorized ba problem thake, ar bank shei taka merchant theke ferot niye customer-ke diye dey.",
+      "role": "assistant"
+    },
+    {
+      "content": "simple kore bojhao",
+      "role": "user"
+    },
+    {
+      "content": "Simple bhabe: customer bank-e giye bole 'eta amar na', ar bank taka ferot niye nei. Eta seller-er jonno kharap, karon taka ar content dutoi hariye jai.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "simple_kore_bojhao",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.435018+00:00"
+}

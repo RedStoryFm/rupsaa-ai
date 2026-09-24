@@ -1,56 +1,56 @@
 {
   "assumption": "KEEP records + all REPAIR proposals accepted; REJECT and HUMAN_REVIEW excluded. Hypothetical — nothing approved.",
-  "records": 1362,
+  "records": 1384,
   "by_language": {
     "en": 453,
-    "banglish": 355,
+    "banglish": 377,
     "bn": 381,
     "mixed": 173
   },
   "by_category": {
-    "detailed_explanations": 32,
+    "detailed_explanations": 35,
     "casual_friendly": 64,
     "bengali_natural": 53,
-    "banglish_natural": 62,
+    "banglish_natural": 64,
     "english_conversation": 34,
     "code_switch_bn_en": 47,
     "code_switch_banglish_en": 28,
-    "rupsaa_personality": 91,
+    "rupsaa_personality": 92,
     "relationship_dating": 64,
     "adult_terminology_education": 57,
-    "creator_questions_workflows": 63,
+    "creator_questions_workflows": 65,
     "short_answers": 71,
     "follow_up_questions": 52,
     "uncertainty_handling": 53,
     "correcting_misunderstandings": 51,
-    "multi_turn": 300,
+    "multi_turn": 312,
     "adversarial_difficult_language": 51,
-    "creator_platform_terminology": 51,
-    "rag_aware": 84,
+    "creator_platform_terminology": 52,
+    "rag_aware": 85,
     "flirty_contextual_adult": 54
   },
   "diversity": {
-    "total_replies": 1865,
+    "total_replies": 1906,
     "issues": [
       {
         "severity": "warn",
         "kind": "skeleton",
         "scope": "corpus",
         "key": "S-",
-        "count": 512,
-        "total": 1865,
+        "count": 521,
+        "total": 1906,
         "threshold": 0.15,
-        "ratio": 0.2745
+        "ratio": 0.2733
       },
       {
         "severity": "warn",
         "kind": "skeleton",
         "scope": "corpus",
         "key": "S|SQ",
-        "count": 297,
-        "total": 1865,
+        "count": 306,
+        "total": 1906,
         "threshold": 0.15,
-        "ratio": 0.1592
+        "ratio": 0.1605
       },
       {
         "severity": "warn",
@@ -58,9 +58,9 @@
         "scope": "corpus",
         "key": "that's",
         "count": 159,
-        "total": 1865,
+        "total": 1906,
         "threshold": 0.08,
-        "ratio": 0.0853
+        "ratio": 0.0834
       },
       {
         "severity": "warn",
@@ -78,28 +78,28 @@
         "scope": "corpus",
         "key": "that's a",
         "count": 90,
-        "total": 1865,
+        "total": 1906,
         "threshold": 0.03,
-        "ratio": 0.0483
+        "ratio": 0.0472
       }
     ],
     "phrase_rates": {
       "corpus": {
-        "actually": 0.0198,
-        "genuinely": 0.0091,
+        "actually": 0.0194,
+        "genuinely": 0.0089,
         "basically": 0.0005,
         "literally": 0.0005,
         "fair enough": 0.0005,
-        "not gonna lie": 0.0038,
-        "sotti bolte": 0.0107,
-        "সত্যি বলতে": 0.0027,
+        "not gonna lie": 0.0037,
+        "sotti bolte": 0.011,
+        "সত্যি বলতে": 0.0026,
         "jaan": 0.0005,
         "sona": 0.0005
       },
       "language:banglish": {
-        "sotti bolte": 0.037,
-        "jaan": 0.0021,
-        "sona": 0.0021
+        "sotti bolte": 0.0361,
+        "jaan": 0.0019,
+        "sona": 0.0019
       },
       "language:bn": {
         "fair enough": 0.002,
@@ -119,22 +119,22 @@
       },
       "source:human_authored": {},
       "source:imported": {
-        "actually": 0.0296,
-        "genuinely": 0.014,
-        "basically": 0.0016,
-        "literally": 0.0016,
+        "actually": 0.0292,
+        "genuinely": 0.0138,
+        "basically": 0.0015,
+        "literally": 0.0015,
         "sotti bolte": 0.0062,
-        "সত্যি বলতে": 0.0016,
-        "jaan": 0.0016,
-        "sona": 0.0016
+        "সত্যি বলতে": 0.0015,
+        "jaan": 0.0015,
+        "sona": 0.0015
       },
       "source:synthetic_curated": {
-        "actually": 0.015,
-        "genuinely": 0.0066,
+        "actually": 0.0146,
+        "genuinely": 0.0065,
         "fair enough": 0.0008,
-        "not gonna lie": 0.0058,
-        "sotti bolte": 0.0133,
-        "সত্যি বলতে": 0.0033
+        "not gonna lie": 0.0057,
+        "sotti bolte": 0.0138,
+        "সত্যি বলতে": 0.0032
       }
     },
     "top_openings": [
@@ -143,24 +143,24 @@
         159
       ],
       [
+        "eta",
+        73
+      ],
+      [
         "সেটা",
         72
       ],
       [
-        "eta",
-        71
+        "fair",
+        69
       ],
       [
         "that",
         65
       ],
       [
-        "fair",
-        62
-      ],
-      [
         "sheta",
-        50
+        53
       ],
       [
         "না",
@@ -192,10 +192,10 @@
       ],
       [
         "na",
-        28
+        29
       ],
       [
-        "হ্যাঁ",
+        "ekta",
         25
       ]
     ],
@@ -214,18 +214,22 @@
       ],
       [
         "eta khub",
-        13
+        14
+      ],
+      [
+        "depend kore",
+        12
       ],
       [
         "no i",
         12
       ],
       [
-        "depend kore",
-        11
+        "that fear",
+        10
       ],
       [
-        "that fear",
+        "notice kora",
         10
       ],
       [
@@ -255,16 +259,12 @@
       [
         "না আমি",
         8
-      ],
-      [
-        "sotti bolte",
-        8
       ]
     ],
     "top_ngrams": [
       [
         "specific",
-        149
+        152
       ],
       [
         "real",
@@ -275,11 +275,19 @@
         100
       ],
       [
+        "content",
+        97
+      ],
+      [
         "feeling",
+        96
+      ],
+      [
+        "fair",
         94
       ],
       [
-        "content",
+        "time",
         93
       ],
       [
@@ -291,19 +299,19 @@
         92
       ],
       [
-        "time",
-        90
-      ],
-      [
         "feel",
-        90
+        91
       ],
       [
         "something",
         89
       ],
       [
-        "fair",
+        "common",
+        86
+      ],
+      [
+        "beshi",
         86
       ],
       [
@@ -311,16 +319,8 @@
         85
       ],
       [
-        "common",
-        84
-      ],
-      [
         "এর",
         80
-      ],
-      [
-        "pattern",
-        76
       ],
       [
         "মনে হয়",
@@ -335,15 +335,15 @@
         39
       ],
       [
+        "mone hoy",
+        38
+      ],
+      [
         "hote pare",
         36
       ],
       [
         "হতে পারে",
-        34
-      ],
-      [
-        "mone hoy",
         34
       ],
       [
@@ -379,50 +379,50 @@
         25
       ],
       [
-        "মাঝে মাঝে",
-        23
+        "depend kore",
+        24
       ]
     ],
     "top_skeletons": [
       [
         "S-",
-        512
+        521
       ],
       [
         "S|SQ",
-        297
+        306
       ],
       [
         "S-|S",
-        221
+        224
       ],
       [
         "S|S",
-        176
+        178
       ],
       [
         "S",
-        165
+        168
       ],
       [
         "S|S-",
-        87
+        88
       ],
       [
         "S-|SQ",
-        68
+        69
+      ],
+      [
+        "F-",
+        55
       ],
       [
         "S-Q",
         53
       ],
       [
-        "F-",
-        51
-      ],
-      [
         "SQ",
-        44
+        47
       ]
     ],
     "gated": true,

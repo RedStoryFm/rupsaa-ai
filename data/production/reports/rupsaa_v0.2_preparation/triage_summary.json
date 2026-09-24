@@ -1,9 +1,9 @@
 {
   "classification": {
     "KEEP": 508,
-    "REPAIR": 854,
-    "REJECT": 7,
-    "HUMAN_REVIEW": 110
+    "REPAIR": 876,
+    "REJECT": 5,
+    "HUMAN_REVIEW": 90
   },
   "by_language": {
     "en": {
@@ -14,9 +14,9 @@
     },
     "banglish": {
       "KEEP": 143,
-      "REPAIR": 212,
-      "REJECT": 3,
-      "HUMAN_REVIEW": 48
+      "REPAIR": 234,
+      "REJECT": 1,
+      "HUMAN_REVIEW": 28
     },
     "bn": {
       "KEEP": 152,
@@ -38,15 +38,15 @@
     },
     "imported": {
       "KEEP": 305,
-      "REPAIR": 174,
-      "REJECT": 2,
-      "HUMAN_REVIEW": 27
+      "REPAIR": 179,
+      "REJECT": 1,
+      "HUMAN_REVIEW": 23
     },
     "synthetic_curated": {
       "KEEP": 184,
-      "HUMAN_REVIEW": 81,
-      "REPAIR": 680,
-      "REJECT": 4
+      "HUMAN_REVIEW": 65,
+      "REPAIR": 697,
+      "REJECT": 3
     }
   },
   "by_status": {
@@ -55,46 +55,46 @@
     },
     "draft": {
       "KEEP": 453,
-      "REPAIR": 129,
-      "REJECT": 2,
-      "HUMAN_REVIEW": 35
+      "REPAIR": 138,
+      "REJECT": 1,
+      "HUMAN_REVIEW": 27
     },
     "approved": {
       "KEEP": 54,
-      "HUMAN_REVIEW": 75,
-      "REPAIR": 725,
-      "REJECT": 4
+      "HUMAN_REVIEW": 63,
+      "REPAIR": 738,
+      "REJECT": 3
     },
     "rejected": {
       "REJECT": 1
     }
   },
   "top_reasons": {
-    "REPAIR:INTRAWORD_SCRIPT_MIX": 94,
+    "REPAIR:INTRAWORD_SCRIPT_MIX": 108,
     "KEEP:CATCHPHRASE": 39,
-    "REJECT:INTRAWORD_SCRIPT_MIX": 6,
     "REJECT:FOREIGN_SCRIPT": 1,
-    "REJECT:SCRIPT_INCONSISTENT": 3,
+    "REJECT:INTRAWORD_SCRIPT_MIX": 4,
+    "REJECT:SCRIPT_INCONSISTENT": 1,
     "HUMAN_REVIEW:LANGUAGE_MISMATCH": 31,
-    "REPAIR:CATCHPHRASE": 809,
-    "REPAIR:ENGLISH_DISCOURSE_OPENER": 376,
+    "REPAIR:CATCHPHRASE": 824,
+    "REPAIR:ENGLISH_DISCOURSE_OPENER": 389,
     "REPAIR:ENGLISH_FILLER_IN_BENGALI": 239,
-    "HUMAN_REVIEW:INTRAWORD_SCRIPT_MIX": 57,
-    "HUMAN_REVIEW:SCRIPT_INCONSISTENT": 23,
-    "HUMAN_REVIEW:CATCHPHRASE": 79,
+    "HUMAN_REVIEW:INTRAWORD_SCRIPT_MIX": 45,
+    "REPAIR:SCRIPT_INCONSISTENT": 18,
+    "HUMAN_REVIEW:SCRIPT_INCONSISTENT": 7,
+    "HUMAN_REVIEW:CATCHPHRASE": 66,
     "HUMAN_REVIEW:QUESTION_UNANSWERED": 2,
-    "REJECT:CATCHPHRASE": 5,
     "HUMAN_REVIEW:ENGLISH_CALQUE": 16,
     "REPAIR:TRAILING_FILLER": 59,
-    "REPAIR:FILLER_STACK": 510,
-    "HUMAN_REVIEW:ENGLISH_DISCOURSE_OPENER": 60,
-    "HUMAN_REVIEW:FILLER_STACK": 57,
+    "REPAIR:FILLER_STACK": 520,
     "HUMAN_REVIEW:ENGLISH_FILLER_IN_BENGALI": 18,
-    "REJECT:FILLER_STACK": 4,
+    "HUMAN_REVIEW:FILLER_STACK": 48,
+    "HUMAN_REVIEW:ENGLISH_DISCOURSE_OPENER": 48,
     "REJECT:LANGUAGE_MISMATCH": 3,
+    "REJECT:CATCHPHRASE": 3,
+    "REJECT:FILLER_STACK": 3,
     "HUMAN_REVIEW:FOREIGN_SCRIPT": 2,
-    "REJECT:TRAILING_FILLER": 1,
-    "REJECT:ENGLISH_DISCOURSE_OPENER": 2,
-    "HUMAN_REVIEW:TRAILING_FILLER": 1
+    "HUMAN_REVIEW:TRAILING_FILLER": 2,
+    "REJECT:ENGLISH_DISCOURSE_OPENER": 1
   }
 }

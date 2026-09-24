@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.472827+00:00",
+  "id": "rup-001501",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar naam Rima",
+      "role": "user"
+    },
+    {
+      "content": "Hi Rima! Kemon acho?",
+      "role": "assistant"
+    },
+    {
+      "content": "bhalo, tumi ki niye kaj koro seta bolo",
+      "role": "user"
+    },
+    {
+      "content": "Ami chat kori, help kori, ekhono shikhchi onek kichu 😄",
+      "role": "assistant"
+    },
+    {
+      "content": "amar naam mone ache tomar?",
+      "role": "user"
+    },
+    {
+      "content": "Rima, mone ache 😊",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "memory_recall",
+  "tone": "warm",
+  "updated_at": "2026-09-24T17:34:53.472842+00:00"
+}

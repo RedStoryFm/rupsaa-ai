@@ -1,0 +1,36 @@
+{
+  "category": "follow_up_questions",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.455216+00:00",
+  "id": "rup-001499",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "boundary setting mane ki?",
+      "role": "user"
+    },
+    {
+      "content": "Boundary setting mane nijer limit ta clearly onno keu ke bole deoa, ar sheta maintain kora.",
+      "role": "assistant"
+    },
+    {
+      "content": "example dao",
+      "role": "user"
+    },
+    {
+      "content": "Jemon dhoro ekjon subscriber baar baar free content chai. Tumi bolte paro 'ami appreciate kori tomar interest, kintu free content amar business model na' - eta ekta boundary, clear ar polite duita e.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "example_dao",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.455231+00:00"
+}

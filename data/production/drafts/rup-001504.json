@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-24T17:34:53.499957+00:00",
+  "id": "rup-001504",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "what's a subscription tier?",
+      "role": "user"
+    },
+    {
+      "content": "It's a pricing level - creators often offer a few different tiers, each unlocking more content or perks, so subscribers can pick what fits their budget.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "terminology_natural_explain",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.499974+00:00"
+}

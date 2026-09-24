@@ -230,30 +230,73 @@ _BN_TO_LATIN = {
     "ড়": "r", "ঢ়": "rh", "য়": "y", "ৎ": "t", "অ": "o", "আ": "a", "ই": "i", "ঈ": "i", "উ": "u",
     "ঊ": "u", "এ": "e", "ঐ": "oi", "ও": "o", "ঔ": "ou",
 }
+# The three nukta-letter keys above ("ড়"/"ঢ়"/"য়") are, as typed, the
+# *decomposed* two-codepoint form (base letter + combining nukta U+09BC) —
+# Unicode excludes these letters from NFC recomposition, so that's what any
+# literal glyph in source normalizes to. They therefore never match a
+# genuinely precomposed single-codepoint input character. repair_script_mix
+# pre-normalizes decomposed input to precomposed, so give it real,
+# unambiguous single-codepoint keys built from ordinals to match against.
+_BN_TO_LATIN[chr(0x09DC)] = "r"   # ড়
+_BN_TO_LATIN[chr(0x09DD)] = "rh"  # ঢ়
+_BN_TO_LATIN[chr(0x09DF)] = "y"   # য়
 _LATIN_TO_BN_SINGLE = {"e": "এ", "o": "ও", "i": "ই", "h": "হ", "k": "ক", "g": "গ", "j": "জ", "t": "ত", "d": "দ", "n": "ন",
                        "p": "প", "b": "ব", "m": "ম", "r": "র", "l": "ল", "s": "স"}
 
 
-def repair_script_mix(text: str) -> str:
+def repair_script_mix(text: str, language: str | None = None) -> str:
     """Mechanically fix words spelled half in Latin, half in Bengali script
     ("korার" → "korar" in a Latin-script reply; "hঠাৎ" → "হঠাৎ" in a
-    Bengali-script reply). Only simple, unambiguous cases; anything else is
-    left for a human (and stays flagged)."""
+    Bengali-script reply), and — only for `language == "banglish"` — whole
+    Bengali-script words stranded inside an otherwise Latin-script Banglish
+    reply ("shudhu tomar demand না" → "shudhu tomar demand na"). That's the
+    SCRIPT_INCONSISTENT case for Banglish records (see analyze_record's
+    `record.language == "banglish"` gate, mirrored here exactly), which the
+    V0.2 triage (data/production/reports/rupsaa_v0.2_preparation/) found was
+    by far the most common HUMAN_REVIEW residual: dozens of records where
+    the mechanical filler-removal proposal was otherwise already clean.
+    Deliberately NOT applied for "mixed"/other languages, where a short
+    Bengali-script flourish inside a Latin-dominant reply is legitimate
+    code-switching, not a defect analyze_record even flags. Only simple,
+    unambiguous cases; anything else is left for a human (and stays
+    flagged). Text that isn't touched is returned byte-for-byte identical
+    to the input — important because the triage (rupsaa.dataset.language_
+    quality.triage_record) compares proposed output to the original to
+    decide whether anything changed at all."""
     reply_is_latin = dominant_script(text) == "latin"
 
     def fix(m: re.Match) -> str:
         word = m.group(0)
-        if not _INTRAWORD_MIX_RE.search(word):
+        # Bengali nukta letters (য়/ড়/ঢ়) are excluded from Unicode NFC
+        # recomposition, so decomposed source (base letter + combining
+        # nukta U+09BC, e.g. "য" + "়") survives even after normalization
+        # and won't match a precomposed single-codepoint dict key. Collapse
+        # it locally, for counting/lookup only — if this word turns out not
+        # to need a fix, the ORIGINAL (possibly still-decomposed) word is
+        # returned unchanged, so untouched text is never perturbed just by
+        # containing an ordinary nukta letter.
+        collapsed = (
+            word.replace("ড়", "ড়")  # ড + ়  -> ড়
+            .replace("ঢ়", "ঢ়")  # ঢ + ়  -> ঢ়
+            .replace("য়", "য়")  # য + ়  -> য়
+        )
+        if _INTRAWORD_MIX_RE.search(collapsed):
+            latin = len(re.findall(r"[A-Za-z]", collapsed))
+            bengali = len(collapsed) - latin
+            # Only unambiguous cases: a short Bengali suffix on a Latin stem
+            # ("korার") or a single Latin letter on a Bengali word ("hঠাৎ").
+            # Anything longer ("shobসাধারণ") is left alone and stays flagged.
+            if latin >= bengali and bengali <= 3:
+                return "".join(_BN_TO_LATIN.get(ch, ch) for ch in collapsed)
+            if latin == 1 and bengali > latin and not reply_is_latin:
+                return re.sub(r"[A-Za-z]", lambda c: _LATIN_TO_BN_SINGLE.get(c.group(0).lower(), c.group(0)), word)
             return word
-        latin = len(re.findall(r"[A-Za-z]", word))
-        bengali = len(word) - latin
-        # Only unambiguous cases: a short Bengali suffix on a Latin stem
-        # ("korার") or a single Latin letter on a Bengali word ("hঠাৎ").
-        # Anything longer ("shobসময়") is left alone and stays flagged.
-        if latin >= bengali and bengali <= 3:
-            return "".join(_BN_TO_LATIN.get(ch, ch) for ch in word)
-        if latin == 1 and bengali > latin and not reply_is_latin:
-            return re.sub(r"[A-Za-z]", lambda c: _LATIN_TO_BN_SINGLE.get(c.group(0).lower(), c.group(0)), word)
+        # A whole word in pure Bengali script, stranded in a Latin-dominant
+        # Banglish reply: transliterate it wholesale. Capped at 12 chars —
+        # long enough for real Bengali function/content words seen in the
+        # corpus ("প্রথমবারের" = 10), short enough to stay conservative.
+        if language == "banglish" and reply_is_latin and len(collapsed) <= 12 and _BN_WORD_RE.fullmatch(collapsed):
+            return "".join(_BN_TO_LATIN.get(ch, ch) for ch in collapsed)
         return word
 
     return re.sub(rf"[A-Za-z{_BN_CHAR}]+", fix, text)
@@ -298,7 +341,7 @@ def propose_repair(record: ConversationRecord) -> list[dict]:
     """Mechanical proposal for every assistant turn: filler removal +
     intra-word script-mix transliteration. A proposal, never applied."""
     return [
-        {**m, "content": propose_filler_repair(repair_script_mix(m["content"]), record.language)}
+        {**m, "content": propose_filler_repair(repair_script_mix(m["content"], record.language), record.language)}
         if m.get("role") == "assistant" else dict(m)
         for m in record.messages
     ]

@@ -1,0 +1,36 @@
+{
+  "category": "follow_up_questions",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.445494+00:00",
+  "id": "rup-001498",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "what's a chargeback?",
+      "role": "user"
+    },
+    {
+      "content": "A chargeback is when a customer disputes a payment through their bank instead of asking the seller directly, and the bank pulls the money back.",
+      "role": "assistant"
+    },
+    {
+      "content": "eta Banglish e bolo",
+      "role": "user"
+    },
+    {
+      "content": "Thik ache: chargeback mane customer bank-er kache complain kore j eta tar transaction na, ar bank taka ferot niye nei - seller-er double loss hoy, taka o jai content o jai.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "eta_banglish_e_bolo",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.445518+00:00"
+}

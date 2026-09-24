@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-24T17:34:53.536128+00:00",
+  "id": "rup-001505",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "পেওয়াল মানে কী?",
+      "role": "user"
+    },
+    {
+      "content": "পেওয়াল মানে একটা ডিজিটাল বাধা যেটা টাকা না দিলে কনটেন্ট দেখা যায় না। বিনামূল্যে একটা অংশ দেখানো হয়, বাকিটা দেখতে হলে পেমেন্ট করতে হয়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "terminology_natural_explain",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.536150+00:00"
+}

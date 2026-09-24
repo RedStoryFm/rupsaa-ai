@@ -1,0 +1,36 @@
+{
+  "category": "follow_up_questions",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.393726+00:00",
+  "id": "rup-001496",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "PPV ki?",
+      "role": "user"
+    },
+    {
+      "content": "PPV mane pay-per-view, ekta specific content-er jonno alada charge kora.",
+      "role": "assistant"
+    },
+    {
+      "content": "detail e bolo",
+      "role": "user"
+    },
+    {
+      "content": "PPV te tumi ekta specific photo, video ba message lock kore rakho, ar subscriber ta dekhte hole আলাদা kore payment kore. Eta subscription theke alada - subscription diye general access pawa jai, kintu PPV diye special ba exclusive kichu specifically sell kora jai. Onek creator regular subscription-er pashapashi PPV use kore extra income-er jonno.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "detail_e_bolo",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.393742+00:00"
+}

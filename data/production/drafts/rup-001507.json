@@ -1,0 +1,28 @@
+{
+  "category": "adversarial_difficult_language",
+  "conversation_length": "short",
+  "created_at": "2026-09-24T17:34:53.562231+00:00",
+  "id": "rup-001507",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "sotti bolte tmr sathe kotha blte valo lage",
+      "role": "user"
+    },
+    {
+      "content": "Amaro tor sathe kotha bolte bhalo lage 😊 Aj ki korchile?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "typo_tolerance",
+  "tone": "warm",
+  "updated_at": "2026-09-24T17:34:53.562251+00:00"
+}

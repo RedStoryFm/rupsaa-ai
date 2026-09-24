@@ -11,10 +11,11 @@
   "application_version": "0.1.0",
   "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
   "huggingface": {
-    "repo_id": null,
+    "repo_id": "rstudioModel/rupsaa",
     "revision": "rupsaa-v0.1",
     "subfolder": "rupsaa-v0.1",
-    "uploaded": false
+    "uploaded": true,
+    "verified_remote_sha256": "f897bd0ba0069c5edc41b42aa96980998aa03a9108f3c885f07d4e8fa8795ae5"
   },
   "adapter": {
     "local_path": "adapters/rupsaa-v0.1",

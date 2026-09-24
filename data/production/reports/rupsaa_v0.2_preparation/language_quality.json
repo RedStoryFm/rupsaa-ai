@@ -12,8 +12,8 @@
       "CATCHPHRASE": 35,
       "ENGLISH_DISCOURSE_OPENER": 4,
       "ENGLISH_CALQUE": 1,
-      "FILLER_STACK": 8,
       "TRAILING_FILLER": 1,
+      "FILLER_STACK": 8,
       "QUESTION_UNANSWERED": 1
     },
     "banglish|synthetic_curated": {
@@ -23,8 +23,8 @@
       "SCRIPT_INCONSISTENT": 16,
       "TRAILING_FILLER": 18,
       "ENGLISH_CALQUE": 5,
-      "ENGLISH_DISCOURSE_OPENER": 143,
       "FILLER_STACK": 144,
+      "ENGLISH_DISCOURSE_OPENER": 143,
       "FOREIGN_SCRIPT": 2
     },
     "bn|human_authored": {
@@ -57,8 +57,8 @@
     "en|imported": {
       "_records": 120,
       "CATCHPHRASE": 66,
-      "FILLER_STACK": 18,
-      "TRAILING_FILLER": 5
+      "TRAILING_FILLER": 5,
+      "FILLER_STACK": 18
     },
     "en|synthetic_curated": {
       "_records": 323,

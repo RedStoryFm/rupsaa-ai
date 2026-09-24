@@ -1,0 +1,36 @@
+{
+  "category": "follow_up_questions",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.384536+00:00",
+  "id": "rup-001495",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "creator hisebe pricing kivabe thik korbo bistarito bolo",
+      "role": "user"
+    },
+    {
+      "content": "Prothome market rate dekho - similar creator ra ki charge kore. Tarpor nijer content-er quality ar audience size onujayi ekta starting point thik koro, khub kom na abar khub beshi na. Kichudin try kore feedback ar conversion rate dekhe adjust koro. Overthink na kore shuru kora important, perfect number pawa jabe na prothome i.",
+      "role": "assistant"
+    },
+    {
+      "content": "short kore bolo",
+      "role": "user"
+    },
+    {
+      "content": "Simple: market rate dekhe shuru koro, tarpor data dekhe adjust koro.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "short_kore_bolo",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.384551+00:00"
+}

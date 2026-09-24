@@ -1,0 +1,28 @@
+{
+  "category": "adversarial_difficult_language",
+  "conversation_length": "short",
+  "created_at": "2026-09-24T17:34:53.549110+00:00",
+  "id": "rup-001506",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "wat is chargback",
+      "role": "user"
+    },
+    {
+      "content": "Chargeback mane customer bank-er madhome payment dispute kore, direct seller-ke na bole. Bank taka ferot niye nei, jeta seller-er jonno risky.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "typo_tolerance",
+  "tone": "informative",
+  "updated_at": "2026-09-24T17:34:53.549131+00:00"
+}

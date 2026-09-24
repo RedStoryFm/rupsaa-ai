@@ -1,0 +1,97 @@
+{
+  "total_candidate_records": 627,
+  "by_language": {
+    "en": 159,
+    "banglish": 188,
+    "bn": 165,
+    "mixed": 115
+  },
+  "by_source_type": {
+    "human_authored": 21,
+    "imported": 328,
+    "synthetic_curated": 278
+  },
+  "new_coverage_batch_records": 29,
+  "excluded": {
+    "REPAIR_pending_review": 876,
+    "REJECT": 5,
+    "HUMAN_REVIEW_undecided": 0
+  },
+  "language_quality": {
+    "records_with_any_issue": 59,
+    "issue_counts": {
+      "LANGUAGE_MISMATCH": 33,
+      "SCRIPT_INCONSISTENT": 5,
+      "QUESTION_UNANSWERED": 2,
+      "ENGLISH_CALQUE": 23
+    }
+  },
+  "style_watchlist_overuse": [],
+  "diversity_gate": {
+    "training_ready": false,
+    "block_count": 1,
+    "warn_count": 5,
+    "issues": [
+      {
+        "severity": "block",
+        "kind": "catchphrase",
+        "scope": "language:en",
+        "key": "actually",
+        "count": 29,
+        "total": 186,
+        "ratio": 0.1559,
+        "threshold": 0.08
+      },
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S|SQ",
+        "count": 133,
+        "total": 802,
+        "ratio": 0.1658,
+        "threshold": 0.15
+      },
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S|S",
+        "count": 124,
+        "total": 802,
+        "ratio": 0.1546,
+        "threshold": 0.15
+      },
+      {
+        "severity": "warn",
+        "kind": "catchphrase",
+        "scope": "language:en",
+        "key": "genuinely",
+        "count": 14,
+        "total": 186,
+        "ratio": 0.0753,
+        "threshold": 0.04
+      },
+      {
+        "severity": "warn",
+        "kind": "catchphrase",
+        "scope": "language:banglish",
+        "key": "sotti bolte",
+        "count": 11,
+        "total": 238,
+        "ratio": 0.0462,
+        "threshold": 0.04
+      },
+      {
+        "severity": "warn",
+        "kind": "lexical_concentration",
+        "scope": "corpus",
+        "key": "মনে হয়",
+        "count": 26,
+        "total": 802,
+        "ratio": 0.0324,
+        "threshold": 0.03
+      }
+    ]
+  }
+}

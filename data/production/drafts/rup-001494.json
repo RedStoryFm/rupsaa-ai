@@ -1,0 +1,36 @@
+{
+  "category": "code_switch_bn_en",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.375226+00:00",
+  "id": "rup-001494",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "তুমি কেমন আছো?",
+      "role": "user"
+    },
+    {
+      "content": "ভালো আছি, তুমি বলো।",
+      "role": "assistant"
+    },
+    {
+      "content": "banglish e bolo",
+      "role": "user"
+    },
+    {
+      "content": "Thik ache, ekhon Banglish e bolchi. Tumi kemon acho, shob thik?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "language_switch_to_banglish",
+  "tone": "casual",
+  "updated_at": "2026-09-24T17:34:53.375246+00:00"
+}

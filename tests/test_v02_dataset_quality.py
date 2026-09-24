@@ -162,7 +162,27 @@ def test_detects_intraword_script_mix_and_repairs_suffixes():
     assert "INTRAWORD_SCRIPT_MIX" in analyze_record(r).codes
     assert repair_script_mix("korার") == "korar"
     assert repair_script_mix("hঠাৎ সিদ্ধান্ত") == "হঠাৎ সিদ্ধান্ত"
-    assert repair_script_mix("shobসময়") == "shobসময়"  # ambiguous → left for a human
+    # 4+ Bengali graphemes on a Latin stem stays ambiguous, left for a human.
+    assert repair_script_mix("shobসাধারণ") == "shobসাধারণ"
+
+
+def test_repair_script_mix_handles_decomposed_nukta_letters():
+    # য়/ড়/ঢ় are excluded from Unicode NFC recomposition, so source text can
+    # carry them as base-letter + combining-nukta (two codepoints) even
+    # after normalization. A naive char-by-char transliteration then leaves
+    # a stray nukta behind once the base letter is converted.
+    assert repair_script_mix("kombায়", "banglish") == "kombay"
+    assert repair_script_mix("barায়", "banglish") == "baray"
+
+
+def test_repair_script_mix_transliterates_stranded_bengali_words_in_banglish():
+    # Whole Bengali-script function words stranded in an otherwise-Latin
+    # Banglish reply (SCRIPT_INCONSISTENT) — this is what most of the V0.2
+    # HUMAN_REVIEW queue's Banglish residuals turned out to be.
+    assert repair_script_mix("nijer সাথে kotha bolo", "banglish") == "nijer sathe kotha bolo"
+    # Not applied outside "banglish" — a short Bengali-script flourish in a
+    # Latin-dominant "mixed" reply is legitimate code-switching, not a defect.
+    assert repair_script_mix("nijer সাথে kotha bolo", "mixed") == "nijer সাথে kotha bolo"
 
 
 def test_detects_english_filler_in_bengali_and_script_inconsistency():
@@ -247,3 +267,88 @@ def test_frozen_v01_export_unchanged_counts():
     for split in ("train", "validation", "test"):
         counts[split] = sum(1 for _ in open(PROJECT_ROOT / f"data/production/exports/rupsaa_v0.1/{split}.jsonl", encoding="utf-8"))
     assert counts == {"train": 772, "validation": 43, "test": 43}
+
+
+# --- V0.2 candidate system prompt -------------------------------------------------------------
+
+def test_v02_system_prompt_is_short_and_does_not_touch_v01_persona():
+    from rupsaa.personality.system_prompt import BASE_PERSONA
+    from rupsaa.personality.system_prompt_v02 import V02_SYSTEM_PROMPT
+
+    # Roughly under ~150 tokens (chars/4 is a coarse but standard proxy) —
+    # V0.1's persona is ~300 tokens and didn't measurably change behavior.
+    assert len(V02_SYSTEM_PROMPT) // 4 < 200
+    assert "Rupsaa" in V02_SYSTEM_PROMPT
+    # This module must never mutate the string the V0.1 adapter was served.
+    assert BASE_PERSONA.startswith("You are Rupsaa, a warm, modern, confident conversational AI companion.")
+
+
+# --- V0.2 candidate dataset assembly ----------------------------------------------------------
+
+def test_v02_apply_edits_replaces_only_targeted_assistant_reply():
+    from scripts.v02_build_candidate import apply_edits
+
+    messages = [
+        {"role": "system", "content": "You are Rupsaa."},
+        {"role": "user", "content": "hi"},
+        {"role": "assistant", "content": "original 1"},
+        {"role": "user", "content": "and?"},
+        {"role": "assistant", "content": "original 2"},
+    ]
+    out = apply_edits(messages, {"2": "edited 2"})
+    assert [m["content"] for m in out] == ["You are Rupsaa.", "hi", "original 1", "and?", "edited 2"]
+    # Original list is untouched (candidate build must never mutate the source record).
+    assert messages[4]["content"] == "original 2"
+
+
+def test_v02_candidate_build_excludes_repair_and_undecided_human_review(tmp_path, monkeypatch):
+    import json as _json
+
+    from rupsaa.dataset.schema import ConversationRecord
+    from rupsaa.dataset.store import DatasetStore
+    import scripts.v02_build_candidate as build_mod
+
+    store = DatasetStore(tmp_path / "store")
+    keep = ConversationRecord(id="rup-900001", language="en", category="casual_friendly",
+                              source_type="human_authored", quality_status="approved",
+                              messages=[{"role": "user", "content": "hi"}, {"role": "assistant", "content": "hey"}])
+    repair = ConversationRecord(id="rup-900002", language="en", category="casual_friendly",
+                                source_type="synthetic_curated", quality_status="draft",
+                                messages=[{"role": "user", "content": "hi"}, {"role": "assistant", "content": "honestly hey"}])
+    undecided_hr = ConversationRecord(id="rup-900003", language="banglish", category="casual_friendly",
+                                      source_type="synthetic_curated", quality_status="draft",
+                                      messages=[{"role": "user", "content": "hi"}, {"role": "assistant", "content": "korার hey"}])
+    new_batch = ConversationRecord(id="rup-900004", language="en", category="casual_friendly",
+                                   source_type="synthetic_curated", quality_status="draft",
+                                   notes="V0.2 new-coverage batch: test fixture",
+                                   messages=[{"role": "user", "content": "hi"}, {"role": "assistant", "content": "hey there"}])
+    for r in (keep, repair, undecided_hr, new_batch):
+        store.save_new(r)
+
+    triage_path = tmp_path / "triage.jsonl"
+    triage_path.write_text("\n".join(_json.dumps(t) for t in [
+        {"record_id": "rup-900001", "classification": "KEEP"},
+        {"record_id": "rup-900002", "classification": "REPAIR", "proposed_messages": repair.messages},
+        {"record_id": "rup-900003", "classification": "HUMAN_REVIEW", "proposed_messages": undecided_hr.messages},
+    ]), encoding="utf-8")
+    decisions_path = tmp_path / "decisions.jsonl"
+    decisions_path.write_text("", encoding="utf-8")
+    out_dir = tmp_path / "out"
+    report_dir = tmp_path / "reports"
+    report_dir.mkdir()
+
+    monkeypatch.setattr(build_mod, "TRIAGE", triage_path)
+    monkeypatch.setattr(build_mod, "DECISIONS", decisions_path)
+    monkeypatch.setattr(build_mod, "OUT_DIR", out_dir)
+    monkeypatch.setattr(build_mod, "REPORT_DIR", report_dir)
+    monkeypatch.setattr(build_mod, "default_base_dir", lambda: tmp_path / "store")
+
+    build_mod.main()
+
+    candidate_ids = {
+        _json.loads(line)["id"]
+        for line in open(out_dir / "candidate_set.jsonl", encoding="utf-8")
+    }
+    # REPAIR (unreviewed) and undecided HUMAN_REVIEW must NOT appear; KEEP and
+    # the new-coverage batch must.
+    assert candidate_ids == {"rup-900001", "rup-900004"}

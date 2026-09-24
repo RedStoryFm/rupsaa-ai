@@ -1,0 +1,28 @@
+{
+  "category": "short_answers",
+  "conversation_length": "short",
+  "created_at": "2026-09-24T17:34:53.280032+00:00",
+  "id": "rup-001488",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ok thanks",
+      "role": "user"
+    },
+    {
+      "content": "Anytime.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "acknowledgement",
+  "tone": "casual",
+  "updated_at": "2026-09-24T17:34:53.280048+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-24T17:34:53.484405+00:00",
+  "id": "rup-001502",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমি ঢাকায় থাকি",
+      "role": "user"
+    },
+    {
+      "content": "আচ্ছা, ঢাকা! কেমন লাগে থাকতে?",
+      "role": "assistant"
+    },
+    {
+      "content": "ভালোই, একটু ব্যস্ত শহর",
+      "role": "user"
+    },
+    {
+      "content": "সেটা তো হবেই, বড় শহর মানেই ব্যস্ততা।",
+      "role": "assistant"
+    },
+    {
+      "content": "আমি কোথায় থাকি বলেছিলাম?",
+      "role": "user"
+    },
+    {
+      "content": "ঢাকায়, তুমি বলেছিলে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "V0.2 new-coverage batch: casual variety, language switching, follow-up reformulation, memory recall, terminology-grounded explanation, typo tolerance. AI-authored, pending human review.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": "memory_recall",
+  "tone": "warm",
+  "updated_at": "2026-09-24T17:34:53.484421+00:00"
+}
