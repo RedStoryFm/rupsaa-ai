@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.892391+00:00",
+  "id": "rup-000419",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "তুমি কি মনে করো মানুষ আসলে কখনো সম্পূর্ণ বদলাতে পারে নাকি শুধু better hide করতে শেখে?",
+      "role": "user"
+    },
+    {
+      "content": "সত্যিকারের পরিবর্তন সম্ভব মনে হয় আমার, কিন্তু rare, কারণ এটা conscious continuous effort দাবি করে। তুমি কারো কথা ভাবছো নাকি general question?",
+      "role": "assistant"
+    },
+    {
+      "content": "ekjon er kotha bhabchi, se bole change hoyeche kintu ami sure na",
+      "role": "user"
+    },
+    {
+      "content": "That skepticism is fair, words alone don't prove much. কতদিন ধরে দেখছো তার behavior, শুধু বলা না actually consistent action?",
+      "role": "assistant"
+    },
+    {
+      "content": "kichu shopta dhore dekhchi, kichuta different lagche but nishchit na",
+      "role": "user"
+    },
+    {
+      "content": "A few weeks is a start, but real change usually needs to hold up over months, especially under stress, not just calm periods. এখনই পুরোপুরি বিশ্বাস না করে, একটু আরো সময় দেওয়া reasonable।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-23T11:51:04.130812+00:00"
+}

@@ -1,0 +1,75 @@
+# Rupsaa V0.1 — first real QLoRA training run.
+#
+# Base model, quantization, and LoRA target_modules come from
+# configs/model.yaml (single source of truth — not duplicated here).
+# This file is the versioned record of the V0.1 experiment's
+# hyperparameters, deliberately conservative (not tuned for speed) since
+# this is a first real run on a frozen, human-approved dataset.
+#
+# Dataset: the frozen Rupsaa V0.1 export (858 approved conversations —
+# see data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json
+# for the exact conversation IDs and dataset SHA-256). This file's
+# data.train_path/validation_path point at that frozen export directly,
+# NOT at data/train.jsonl, so this run is reproducible independent of
+# whatever the live production dataset looks like later.
+#
+# Use with: python scripts/train_qlora.py --config configs/training/rupsaa_v0.1_qlora.yaml
+# Also selectable from the LLaMA-Factory WebUI (see configs/training/llamafactory_rupsaa_v0.1.yaml).
+
+seed: 42
+
+data:
+  train_path: "data/production/exports/rupsaa_v0.1/train.jsonl"
+  validation_path: "data/production/exports/rupsaa_v0.1/validation.jsonl"
+  # Held-out test split (data/production/exports/rupsaa_v0.1/test.jsonl) is
+  # intentionally never referenced here — it must never be trained on.
+  max_seq_length: 2048
+
+lora:
+  # Conservative, standard-for-7B starting point — not pushed for speed.
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  # target_modules is read from configs/model.yaml (lora_target_modules).
+
+training:
+  output_dir: "checkpoints/rupsaa_v0.1"
+  final_adapter_dir: "adapters/rupsaa-v0.1"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 8
+  # effective batch size = 2 * 8 = 16
+  gradient_checkpointing: true
+  learning_rate: 0.0002
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  optim: "paged_adamw_8bit"
+  max_grad_norm: 0.3
+  logging_steps: 10
+  eval_strategy: "steps"
+  eval_steps: 50
+  save_strategy: "steps"
+  save_steps: 50
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  report_to: "none"
+
+# 858 approved conversations / effective batch 16 ≈ 48 steps/epoch ≈ 144
+# steps total over 3 epochs — eval/save every 50 steps means eval runs
+# roughly 3 times total, which is coarse for this dataset size but keeps
+# checkpoint I/O overhead low on a single L4. Revisit eval_steps downward
+# (e.g. 25) if per-checkpoint eval_loss signal turns out too sparse to
+# judge from once real training starts.
+#
+# If you hit CUDA OOM, in order of preference:
+#   1. lower per_device_train_batch_size (e.g. 2 -> 1), raise
+#      gradient_accumulation_steps to 16 to keep effective batch size at 16
+#   2. lower data.max_seq_length (e.g. 2048 -> 1024) — only if genuinely
+#      necessary, since it truncates longer multi-turn conversations
+#   3. confirm gradient_checkpointing is true (it already is here)
+#   4. switch base_model_id in configs/model.yaml to the fallback 3B model

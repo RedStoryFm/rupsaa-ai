@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:28:27.320041+00:00",
+  "id": "rup-000899",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ami ekta creator hisebe first time price barate jacchi, ki bhabe announce korbo?",
+      "role": "user"
+    },
+    {
+      "content": "Actually transparency shobcheye best approach - keno barcho sheta clearly bolo, value ki notun thakবে sheta o mention koro।",
+      "role": "assistant"
+    },
+    {
+      "content": "existing subscriber der ki grandfather kora uchit old price e?",
+      "role": "user"
+    },
+    {
+      "content": "Depend kore business decision er upor, kintu honestly onek creator e eta kore loyalty reward hisebe - short term e revenue kom hoy, kintu trust build hoy.",
+      "role": "assistant"
+    },
+    {
+      "content": "eta korle new subscriber der kache unfair lagbe na?",
+      "role": "user"
+    },
+    {
+      "content": "Actually na, eta standard practice bhabে dekha hoy - loyalty reward kono industry te unusual na, new subscriber der eta bujhte problem hobar kotha na।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 5 (Track A Step 4, multi-turn emphasis) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-23T11:51:05.052782+00:00"
+}

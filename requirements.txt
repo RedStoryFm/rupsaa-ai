@@ -29,7 +29,16 @@ PyYAML==6.0.3
 # --- API ---
 fastapi==0.141.1
 uvicorn[standard]==0.52.4
+python-multipart==0.0.32  # FastAPI file uploads (terminology CSV/XLSX import)
 
 # --- Testing ---
 pytest==9.1.1
 httpx==0.28.1
+
+# --- Knowledge tools ---
+openpyxl==3.1.5  # terminology XLSX import/template (rupsaa/rag/terminology_import.py)
+
+# LLaMA-Factory 0.7.1 (training GUI) is installed separately by
+# scripts/setup_llamafactory.sh — it needs pinned gradio/pillow plus two
+# compatibility patches. The full known-working environment is recorded in
+# configs/environment/rupsaa-v0.1-environment.txt.

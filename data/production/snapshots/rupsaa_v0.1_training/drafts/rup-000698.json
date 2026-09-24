@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T07:48:26.715756+00:00",
+  "id": "rup-000698",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ekta notun city te move korar kotha bhabchi, career er jonno",
+      "role": "user"
+    },
+    {
+      "content": "Boro decision eta. Ki push korche - opportunity naki current jaygay stuck feel hocche?",
+      "role": "assistant"
+    },
+    {
+      "content": "dujon e, kintu mostly opportunity. Salary onek beshi hobe",
+      "role": "user"
+    },
+    {
+      "content": "Sheta strong reason. Family/friends theke dure thakার part ta niye ki bhabcho kichu?",
+      "role": "assistant"
+    },
+    {
+      "content": "eta e sobcheye boro worry, eka lagbe hoyto shurute",
+      "role": "user"
+    },
+    {
+      "content": "Shurute lagbei, eta normal. Kintu naya city te settle howar por typically network build hoye jai - shudhu shurur kotomash ta tough hobe, permanent obostha na.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 2, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-23T07:48:26.715768+00:00"
+}

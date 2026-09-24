@@ -1,0 +1,36 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.719263+00:00",
+  "id": "rup-000463",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar partner amake ekhono nijer family ke introduce kore nai, 6 mash hoye gelo",
+      "role": "user"
+    },
+    {
+      "content": "Six months is a meaningful stretch without that step happening. Ki reason dey jokhon jigges koro?",
+      "role": "assistant"
+    },
+    {
+      "content": "bole j family complicated, right time asheni",
+      "role": "user"
+    },
+    {
+      "content": "That could be genuine, or it could be a soft way of keeping things less serious than they seem. Worth asking more directly what \"right time\" actually looks like to them, instead of accepting a vague answer indefinitely.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:11:20.719272+00:00"
+}

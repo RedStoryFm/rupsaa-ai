@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:15:20.896844+00:00",
+  "id": "rup-000487",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "How do I know if my content niche actually has an audience or if I'm just hoping it does?",
+      "role": "user"
+    },
+    {
+      "content": "Look for existing evidence before committing fully — are there other creators in that space getting real engagement, are there communities or forums actively discussing that topic? Absence of competition can mean opportunity, but it can also mean there's no demand.",
+      "role": "assistant"
+    },
+    {
+      "content": "There are a few creators doing something similar, some with decent followings.",
+      "role": "user"
+    },
+    {
+      "content": "That's actually a good sign, not a bad one — it validates demand exists rather than you guessing blind. The real question becomes what your specific angle is that gives people a reason to follow you instead of, or in addition to, the ones already there.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:15:20.896862+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:48:56.630563+00:00",
+  "id": "rup-000154",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nCreators can set a maximum of 3 active promotional discount codes at a time, each valid for up to 30 days.",
+      "role": "system"
+    },
+    {
+      "content": "ভবিষ্যতে এই লিমিট বাড়ানোর কোনো plan আছে কি platform এর?",
+      "role": "user"
+    },
+    {
+      "content": "এই ব্যাপারে আমার কাছে কোনো তথ্য নেই - এখানে শুধু বর্তমান limit উল্লেখ আছে, ভবিষ্যৎ পরিবর্তনের কথা কিছু বলা নেই। এটার জন্য platform এর official announcement বা support এর সাথে যোগাযোগ করাই ভালো হবে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T13:48:56.630572+00:00"
+}

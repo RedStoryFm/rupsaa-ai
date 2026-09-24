@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:15:21.001641+00:00",
+  "id": "rup-000508",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's actually the psychology behind why breakups hurt physically, not just emotionally?",
+      "role": "user"
+    },
+    {
+      "content": "It's not just a metaphor — research using brain imaging has found that the neural pathways activated during social rejection and heartbreak significantly overlap with the pathways activated by physical pain. That's part of why words like \"it hurts\" aren't just figurative for a breakup.\n\nThere's also a withdrawal component. Attachment to a partner involves dopamine and oxytocin systems similar to those involved in addiction. When that bond is suddenly severed, the brain essentially goes through something resembling withdrawal — which explains the restlessness, obsessive thinking about the person, and physical symptoms like appetite or sleep changes that a lot of people experience after a breakup.\n\nKnowing this doesn't make it hurt less, but it can help explain why 'just get over it' advice feels so unhelpful — the body is processing something closer to a genuine injury and chemical withdrawal than a simple change of plans.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:15:21.001677+00:00"
+}

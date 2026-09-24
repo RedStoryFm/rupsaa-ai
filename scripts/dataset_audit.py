@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from rupsaa.dataset.config import default_base_dir, load_dataset_config  # noqa: E402
 from rupsaa.dataset.dedup import find_exact_duplicates, find_near_duplicates  # noqa: E402
 from rupsaa.dataset.repetition import find_emoji_overuse, find_repeated_assistant_replies, find_watchlist_overuse  # noqa: E402
+from rupsaa.dataset.diversity import analyze_with_config  # noqa: E402
 from rupsaa.dataset.schema import validate_record  # noqa: E402
 from rupsaa.dataset.store import DatasetStore  # noqa: E402
 
@@ -38,6 +39,8 @@ def main() -> None:
     parser.add_argument("--base-dir", default=None)
     parser.add_argument("--skip-near-duplicates", action="store_true")
     parser.add_argument("--allow-slow-near-dup", action="store_true", help="Proceed with near-dup scan even above the configured record-count cap.")
+    parser.add_argument("--allow-diversity-failures", action="store_true",
+                        help="Report corpus-diversity BLOCK issues without failing (diagnosis runs only; never for a training candidate).")
     args = parser.parse_args()
 
     cfg = load_dataset_config()
@@ -110,6 +113,10 @@ def main() -> None:
     emoji_report = find_emoji_overuse(records, thresholds["max_emojis_per_message"], thresholds["max_emoji_message_ratio"])
     report["emoji_overuse"] = asdict(emoji_report)
 
+    # 7. Corpus-level diversity / catchphrase concentration (training gate).
+    diversity = analyze_with_config(records)
+    report["diversity"] = diversity.to_dict()
+
     # --- Print summary ---
     print(f"\nSchema/Unicode errors: {len(schema_errors)}")
     for rid, errs in list(schema_errors.items())[:10]:
@@ -124,6 +131,10 @@ def main() -> None:
     print(f"Emoji-containing assistant messages: {emoji_report.emoji_message_ratio:.1%} "
           f"(threshold {thresholds['max_emoji_message_ratio']:.0%}, exceeded={emoji_report.exceeds_message_ratio_threshold})")
     print(f"Messages with > {thresholds['max_emojis_per_message']} emoji: {len(emoji_report.messages_with_excess_emoji)}")
+    print(f"Corpus diversity: {len(diversity.blocking)} BLOCK / {len(diversity.warnings)} WARN "
+          f"(training_ready={diversity.training_ready})")
+    for issue in diversity.issues[:15]:
+        print(f"  - {issue.describe()}")
 
     # --- Write report files ---
     store.reports_dir.mkdir(parents=True, exist_ok=True)
@@ -147,16 +158,24 @@ def main() -> None:
         md_lines.append(f"- {p['id_a']} ~ {p['id_b']} (similarity {p['similarity']})")
     md_lines.append(f"\n## Repeated assistant replies: {len(repeated)}")
     for r in repeated:
-        md_lines.append(f"- \"{r['text']}...\" used {r['count']}x in {r['record_ids']}")
+        md_lines.append(f"- \"{r.text}...\" used {r.count}x in {r.record_ids}")
     md_lines.append(f"\n## Style watchlist overuse: {len(overuse)}")
     for u in overuse:
-        md_lines.append(f"- '{u['phrase']}': {u['message_count']}/{u['total_assistant_messages']} ({u['ratio']:.1%})")
+        md_lines.append(f"- '{u.phrase}': {u.message_count}/{u.total_assistant_messages} ({u.ratio:.1%})")
+    md_lines.append(f"\n## Corpus diversity: {len(diversity.blocking)} BLOCK / {len(diversity.warnings)} WARN "
+                    f"(training_ready={diversity.training_ready})")
+    for issue in diversity.issues:
+        md_lines.append(f"- {issue.describe()}")
     md_path.write_text("\n".join(md_lines), encoding="utf-8")
 
     print(f"\nReport written to:\n  {json_path}\n  {md_path}")
 
     if schema_errors:
         print("\nAudit FAILED — schema/Unicode errors must be fixed before approval.")
+        sys.exit(1)
+    if diversity.blocking and not args.allow_diversity_failures:
+        print("\nAudit FAILED — corpus diversity BLOCK issues: this corpus is NOT training-ready "
+              "(a catchphrase/opening/template dominates the assistant voice). See rupsaa/dataset/diversity.py.")
         sys.exit(1)
     print("\nAudit passed (no hard errors). Review warnings above before approving.")
 

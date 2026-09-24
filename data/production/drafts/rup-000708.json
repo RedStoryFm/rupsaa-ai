@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:30.732614+00:00",
+  "id": "rup-000708",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "tax form kobe issue kora hoy creator der jonno?",
+      "role": "user"
+    },
+    {
+      "content": "Eta country ar platform vede different hote pare, ar amar kache specific date documented nai. Financial/tax related info er jonno official support ba tax professional er sathe confirm kora shobcheye safe.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:30.732634+00:00"
+}

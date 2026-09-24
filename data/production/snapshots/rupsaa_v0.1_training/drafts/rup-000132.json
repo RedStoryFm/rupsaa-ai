@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T13:48:56.590089+00:00",
+  "id": "rup-000132",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar roommate er sathe thik jachhe na, ekdom alada lifestyle",
+      "role": "user"
+    },
+    {
+      "content": "Kon jaigatay sobcheye beshi clash hocche - cleanliness, noise, naki guest niye asha?",
+      "role": "assistant"
+    },
+    {
+      "content": "mostly cleanliness ar sleep schedule",
+      "role": "user"
+    },
+    {
+      "content": "Eta khub practical issue, emotional na hole solve kora shohoj - specific rules set kora jai jemon kon somoy porjonto quiet thakte hobe. Kotha bolecho ei niye directly?",
+      "role": "assistant"
+    },
+    {
+      "content": "na, bhoy lagche awkward hoye jabe bole",
+      "role": "user"
+    },
+    {
+      "content": "Awkward hoyeo hoy, kintu chup kore thakle resentment barbe just. Ekta neutral somoy e, calmly bola best - blame na kore, just \"amader ekta schedule thik kora dorkar\" emon bhabe shuru kora jete pare.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T13:48:56.590133+00:00"
+}

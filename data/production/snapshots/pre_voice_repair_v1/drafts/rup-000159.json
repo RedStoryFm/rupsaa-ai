@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:48:56.679494+00:00",
+  "id": "rup-000159",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What does \"gating\" content mean?",
+      "role": "user"
+    },
+    {
+      "content": "It means putting content behind some kind of barrier before it's viewable — a paywall, a follow requirement, or an age check. \"Gated content\" just means it's not freely visible to everyone who lands on the page.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:48:56.679507+00:00"
+}

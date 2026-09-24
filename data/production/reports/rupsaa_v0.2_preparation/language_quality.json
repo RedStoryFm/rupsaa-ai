@@ -1,0 +1,169 @@
+{
+  "note": "records_with_issue = records with >=1 assistant turn raising the code; heuristic, see rupsaa/dataset/language_quality.py",
+  "records_with_issue": {
+    "banglish|human_authored": {
+      "_records": 4
+    },
+    "banglish|imported": {
+      "_records": 154,
+      "INTRAWORD_SCRIPT_MIX": 30,
+      "FOREIGN_SCRIPT": 1,
+      "SCRIPT_INCONSISTENT": 7,
+      "CATCHPHRASE": 35,
+      "ENGLISH_DISCOURSE_OPENER": 4,
+      "ENGLISH_CALQUE": 1,
+      "FILLER_STACK": 8,
+      "TRAILING_FILLER": 1,
+      "QUESTION_UNANSWERED": 1
+    },
+    "banglish|synthetic_curated": {
+      "_records": 248,
+      "CATCHPHRASE": 185,
+      "INTRAWORD_SCRIPT_MIX": 73,
+      "SCRIPT_INCONSISTENT": 16,
+      "TRAILING_FILLER": 18,
+      "ENGLISH_CALQUE": 5,
+      "ENGLISH_DISCOURSE_OPENER": 143,
+      "FILLER_STACK": 144,
+      "FOREIGN_SCRIPT": 2
+    },
+    "bn|human_authored": {
+      "_records": 3
+    },
+    "bn|imported": {
+      "_records": 121,
+      "SCRIPT_INCONSISTENT": 1,
+      "QUESTION_UNANSWERED": 1,
+      "CATCHPHRASE": 26,
+      "ENGLISH_DISCOURSE_OPENER": 16,
+      "ENGLISH_FILLER_IN_BENGALI": 24,
+      "FILLER_STACK": 2
+    },
+    "bn|synthetic_curated": {
+      "_records": 265,
+      "CATCHPHRASE": 208,
+      "ENGLISH_FILLER_IN_BENGALI": 169,
+      "SCRIPT_INCONSISTENT": 1,
+      "TRAILING_FILLER": 25,
+      "ENGLISH_DISCOURSE_OPENER": 196,
+      "FILLER_STACK": 148,
+      "INTRAWORD_SCRIPT_MIX": 11,
+      "LANGUAGE_MISMATCH": 1
+    },
+    "en|human_authored": {
+      "_records": 13,
+      "CATCHPHRASE": 2
+    },
+    "en|imported": {
+      "_records": 120,
+      "CATCHPHRASE": 66,
+      "FILLER_STACK": 18,
+      "TRAILING_FILLER": 5
+    },
+    "en|synthetic_curated": {
+      "_records": 323,
+      "CATCHPHRASE": 273,
+      "FILLER_STACK": 176,
+      "TRAILING_FILLER": 8
+    },
+    "mixed|human_authored": {
+      "_records": 2
+    },
+    "mixed|imported": {
+      "_records": 113,
+      "LANGUAGE_MISMATCH": 13,
+      "CATCHPHRASE": 52,
+      "ENGLISH_DISCOURSE_OPENER": 9,
+      "ENGLISH_FILLER_IN_BENGALI": 18,
+      "INTRAWORD_SCRIPT_MIX": 16,
+      "SCRIPT_INCONSISTENT": 1,
+      "FILLER_STACK": 7,
+      "TRAILING_FILLER": 1
+    },
+    "mixed|synthetic_curated": {
+      "_records": 113,
+      "LANGUAGE_MISMATCH": 20,
+      "INTRAWORD_SCRIPT_MIX": 27,
+      "CATCHPHRASE": 85,
+      "ENGLISH_DISCOURSE_OPENER": 70,
+      "ENGLISH_FILLER_IN_BENGALI": 46,
+      "FILLER_STACK": 68,
+      "TRAILING_FILLER": 3,
+      "ENGLISH_CALQUE": 10
+    }
+  },
+  "turn_issue_counts": {
+    "banglish|imported": {
+      "INTRAWORD_SCRIPT_MIX": 32,
+      "FOREIGN_SCRIPT": 1,
+      "SCRIPT_INCONSISTENT": 7,
+      "CATCHPHRASE": 36,
+      "ENGLISH_DISCOURSE_OPENER": 4,
+      "ENGLISH_CALQUE": 1,
+      "FILLER_STACK": 8,
+      "TRAILING_FILLER": 1,
+      "QUESTION_UNANSWERED": 1
+    },
+    "banglish|synthetic_curated": {
+      "CATCHPHRASE": 281,
+      "INTRAWORD_SCRIPT_MIX": 79,
+      "SCRIPT_INCONSISTENT": 16,
+      "TRAILING_FILLER": 18,
+      "ENGLISH_CALQUE": 6,
+      "ENGLISH_DISCOURSE_OPENER": 152,
+      "FILLER_STACK": 201,
+      "FOREIGN_SCRIPT": 2
+    },
+    "bn|imported": {
+      "SCRIPT_INCONSISTENT": 1,
+      "QUESTION_UNANSWERED": 1,
+      "CATCHPHRASE": 26,
+      "ENGLISH_FILLER_IN_BENGALI": 24,
+      "ENGLISH_DISCOURSE_OPENER": 16,
+      "FILLER_STACK": 2
+    },
+    "bn|synthetic_curated": {
+      "ENGLISH_FILLER_IN_BENGALI": 212,
+      "CATCHPHRASE": 291,
+      "SCRIPT_INCONSISTENT": 1,
+      "ENGLISH_DISCOURSE_OPENER": 247,
+      "TRAILING_FILLER": 25,
+      "FILLER_STACK": 203,
+      "INTRAWORD_SCRIPT_MIX": 11,
+      "LANGUAGE_MISMATCH": 1
+    },
+    "en|human_authored": {
+      "CATCHPHRASE": 2
+    },
+    "en|imported": {
+      "CATCHPHRASE": 73,
+      "FILLER_STACK": 18,
+      "TRAILING_FILLER": 5
+    },
+    "en|synthetic_curated": {
+      "CATCHPHRASE": 394,
+      "FILLER_STACK": 212,
+      "TRAILING_FILLER": 8
+    },
+    "mixed|imported": {
+      "LANGUAGE_MISMATCH": 13,
+      "ENGLISH_FILLER_IN_BENGALI": 18,
+      "ENGLISH_DISCOURSE_OPENER": 9,
+      "CATCHPHRASE": 56,
+      "INTRAWORD_SCRIPT_MIX": 18,
+      "SCRIPT_INCONSISTENT": 1,
+      "FILLER_STACK": 7,
+      "TRAILING_FILLER": 1
+    },
+    "mixed|synthetic_curated": {
+      "LANGUAGE_MISMATCH": 21,
+      "INTRAWORD_SCRIPT_MIX": 28,
+      "ENGLISH_FILLER_IN_BENGALI": 49,
+      "ENGLISH_DISCOURSE_OPENER": 74,
+      "CATCHPHRASE": 139,
+      "FILLER_STACK": 102,
+      "TRAILING_FILLER": 3,
+      "ENGLISH_CALQUE": 10
+    }
+  }
+}

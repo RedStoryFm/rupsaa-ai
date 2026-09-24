@@ -9,6 +9,41 @@ This README documents the actual pipeline built in this repository, inside
 this specific Lightning AI Studio environment. Every command below has been
 run against this codebase.
 
+## Quick start
+
+**Current release: Rupsaa V0.1.** It's a LoRA adapter (rank 16, alpha 32, all 7 attention and MLP projection
+layers) trained with SFT + QLoRA on `Qwen/Qwen2.5-7B-Instruct`. The adapter is served in 4-bit NF4 on top of the
+base model and is never merged.
+
+```bash
+# Fresh install / restore (new Lightning Studio or any Linux + NVIDIA GPU box)
+git clone <your-github-repo-url> rupsaa-ai
+cd rupsaa-ai
+hf auth login                 # only if the Hugging Face adapter repo is private
+bash setup_rupsaa.sh
+
+# Start
+bash scripts/start_rupsaa_v01.sh
+```
+
+**Open:** port **5500** only.
+
+**Verify the trained model:** send one chat message (the first one downloads and loads the base model, so it can
+take minutes), then open `<5500 URL>/api/model/info`. It should show:
+
+```json
+"adapter_loaded": true,
+"quantized": true
+```
+
+**Tools and docs:**
+- **Knowledge Manager:** `<5500 URL>/knowledge.html`. It covers documents plus the **Terminology** tab: create,
+  edit, delete, search and routing test, and **CSV/XLSX bulk import** with downloadable templates, a preview, and
+  duplicate SKIP/UPDATE.
+- **Backup, restore and release:** [docs/BACKUP_AND_RESTORE.md](docs/BACKUP_AND_RESTORE.md).
+- **Release record:** `release/rupsaa-v0.1/` (manifest, checksums, model card).
+- **Offline install check:** `python scripts/verify_installation.py`.
+
 ---
 
 ## 1. What Rupsaa is
@@ -44,6 +79,27 @@ Web chat UI (web/) / future mobile app
 Everything that shapes *how Rupsaa talks* lives in `rupsaa/personality/`.
 Everything that must never be allowed lives, isolated, in
 `rupsaa/guardrails/`. Neither scatters into the model, RAG, or API code.
+
+**Three deliberately separate layers, never merged:**
+- **QLoRA training data** (`data/production/` → `data/train.jsonl`) teaches
+  voice, response style, and language behavior. It should not carry large
+  factual payloads (platform policies, FAQs) that change over time.
+- **RAG knowledge** (`knowledge/documents/` → FAISS index) supplies facts
+  that change over time. Editing a document and running a reindex changes
+  what Rupsaa knows immediately — it never requires retraining.
+- **System prompt / runtime config** (`rupsaa/personality/system_prompt.py`)
+  reinforces voice at inference time. Personality facts are not hard-coded
+  scattered across Python files — see `knowledge/documents/rupsaa_identity.md`
+  for owner-editable identity facts, which is RAG content, not code.
+
+Two owner-only tools (not exposed as public features — see
+`api/owner_routes.py` for the auth model) write into these layers directly
+through the same production pipelines used everywhere else, never a second
+parallel format:
+- **Teach Rupsaa** (`web/teach.html`) — manually author conversation
+  examples into the dataset pipeline as `draft`/`human_authored` records.
+- **Rupsaa Knowledge** (`web/knowledge.html`) — create/edit/delete RAG
+  knowledge documents and trigger a reindex.
 
 ## 3. Lightning Studio hardware detected
 
@@ -237,6 +293,19 @@ Final adapter: `adapters/rupsaa-v1/` (path set by
 `training.final_adapter_dir` in `configs/training.yaml`). Intermediate
 checkpoints: `checkpoints/`.
 
+**Rupsaa V0.1** (trained with LLaMA-Factory, see
+`configs/training/llamafactory_webui_rupsaa_v0.1.yaml`) lives in
+`adapters/rupsaa-v0.1/`. Its top-level adapter is the best-eval-loss
+checkpoint (`checkpoint-100`, `load_best_model_at_end`). Run the app with it:
+
+```bash
+bash scripts/start_rupsaa_v01.sh     # sets RUPSAA_ADAPTER_PATH, runs start_rupsaa.py
+```
+
+`GET /api/model/info` (via the web port) shows `configured_adapter_path` /
+`configured_adapter_exists` immediately, and `adapter_loaded: true` +
+`adapter_path` once the model has loaded (lazily, on the first message).
+
 ## 17. Testing the adapter
 
 ```bash
@@ -270,6 +339,29 @@ python scripts/ingest_knowledge.py
 Rebuilds `knowledge/index/` from scratch from whatever is currently in
 `knowledge/documents/` — safe to re-run any time; never requires retraining
 Rupsaa.
+
+**Terminology** (structured definitions, e.g. "Strip mane ki?") lives in
+`knowledge/terminology/` — one JSON file per term, managed in the owner UI
+(`knowledge.html` → **Terminology** tab) or via `/owner/terminology`. Terms
+are live on the next message: no reindex, no retraining.
+
+**Routing** (`rupsaa/rag/router.py`): each message is classified as
+casual / memory / follow-up / terminology / knowledge / general before any
+retrieval. Casual chat and "what did I say?" questions never get documents;
+definition questions use terminology first. Hidden files such as
+`.metadata.json` are never indexed or returned as sources.
+
+## Dataset V0.2 preparation
+
+```bash
+python scripts/v02_dataset_diagnosis.py        # reports → data/production/reports/rupsaa_v0.2_preparation/
+python scripts/v02_repair_review.py summary     # review KEEP/REPAIR/REJECT/HUMAN_REVIEW proposals
+```
+
+`scripts/dataset_audit.py` now fails and `scripts/dataset_export.py` refuses
+to export when a catchphrase, opening or response template dominates the
+corpus (`rupsaa/dataset/diversity.py`, thresholds in
+`configs/dataset_production.yaml` → `diversity`).
 
 ## 21. Terminal chat
 
@@ -326,6 +418,12 @@ uncertainty, RAG grounding, essential-boundary behavior) and writes both
 base-model and adapter outputs side by side for you to read. It does not
 auto-score quality — don't claim fine-tuning helped without reading the
 output yourself.
+
+For V0.1: `python scripts/evaluate_v01.py` runs the same cases for base vs
+base + `adapters/rupsaa-v0.1` (one 4-bit load, adapter toggled, identical
+seeds/params, production and training system prompts, RAG where the
+pipeline retrieves context) and computes assistant-token loss on the
+held-out `test.jsonl`. Results: `data/production/reports/rupsaa_v0.1_evaluation/`.
 
 ## 26. Deployment options
 

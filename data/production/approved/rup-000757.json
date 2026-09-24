@@ -1,0 +1,36 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:21:36.471717+00:00",
+  "id": "rup-000757",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা account suspend হলে appeal করার কোনো official process আছে কি?",
+      "role": "user"
+    },
+    {
+      "content": "হ্যাঁ, documentation অনুযায়ী আছে - suspension notification এর সাথে একটা appeal link দেওয়া হয়, যেটা ৭ দিনের মধ্যে ব্যবহার করতে হয়।",
+      "role": "assistant"
+    },
+    {
+      "content": "7 diner por appeal korle ki hobe?",
+      "role": "user"
+    },
+    {
+      "content": "সেটা নিয়ে honestly আমার কাছে specific তথ্য নেই - শুধু window টা ৭ দিন বলা আছে, তারপরের situation documented না। Support এর সাথে সরাসরি যোগাযোগ করাই safest এক্ষেত্রে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.427993+00:00"
+}

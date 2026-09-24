@@ -1,0 +1,28 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:13.486488+00:00",
+  "id": "rup-000567",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's the actual difference between flirting and just being friendly?",
+      "role": "user"
+    },
+    {
+      "content": "Flirting usually has an intentional charge to it - sustained eye contact, teasing with a purpose, physical touch that lingers a bit. Being friendly is warmth without that undertone. Context and consistency toward one person specifically is usually the tell.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:13.486503+00:00"
+}

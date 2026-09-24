@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.716426+00:00",
+  "id": "rup-000462",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একজন creator হিসেবে আমি কি স্পষ্টভাবে নিজের brand niche ঠিক না করেও শুরু করতে পারি?",
+      "role": "user"
+    },
+    {
+      "content": "পারো, অনেকেই এভাবেই শুরু করে - explore করতে করতে niche টা স্পষ্ট হয়ে ওঠে। শুরুতে কোন ধরনের content বানাতে সবচেয়ে বেশি আগ্রহ লাগছে?",
+      "role": "assistant"
+    },
+    {
+      "content": "কয়েকটা different জিনিস try করতে চাই আসলে, একদম নিশ্চিত না।",
+      "role": "user"
+    },
+    {
+      "content": "সেটা একদম ঠিক আছে, প্রথম কয়েক মাস experimentation phase হিসেবে দেখো। শুধু একটা জিনিস খেয়াল রাখো - প্রতিটা content এর মধ্যে তোমার নিজস্ব voice/personality টা consistent থাকা উচিত, format ভিন্ন হলেও।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:11:20.716436+00:00"
+}

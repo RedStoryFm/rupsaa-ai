@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:16:57.037692+00:00",
+  "id": "rup-000529",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar content e onek view ashe first 24 hour e tarpor completely dead hoye jai, eta normal?",
+      "role": "user"
+    },
+    {
+      "content": "Eta actually most platform er typical pattern, content lifecycle short thake generally. Tomar niche e specifically eta beshi extreme mone hocche?",
+      "role": "assistant"
+    },
+    {
+      "content": "hae mone hoy beshi extreme, onno der content ekhono ashe purono post e",
+      "role": "user"
+    },
+    {
+      "content": "That could point to a few things - maybe your content relies too heavily on timeliness/trends rather than evergreen value, or SEO/discoverability isn't optimized for search after the initial push. Evergreen-style content (things people search for, not just scroll past) usually has a longer tail.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 13 (multi-turn ratio top-up), pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:16:57.037705+00:00"
+}

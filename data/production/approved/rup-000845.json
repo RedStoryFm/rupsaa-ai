@@ -1,0 +1,36 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:25:58.478681+00:00",
+  "id": "rup-000845",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar partner amake surprise korte pochondo kore na, ami valobashi, eta ki problem?",
+      "role": "user"
+    },
+    {
+      "content": "Na eta problem na necessarily, honestly - eta just love language er difference. Tumi acts of surprise value koro, o hoyto onno kichu (jemon quality time) beshi value kore.",
+      "role": "assistant"
+    },
+    {
+      "content": "tahole ki ami surprise chawa bondho kore dibo?",
+      "role": "user"
+    },
+    {
+      "content": "Actually na, chawa bondho korার dorkar nai - shudhu direct kore bolo je eta tomar kache matter kore. Guess kore hoyto o kortoi na, kintu bolle try korte pare।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 4 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-23T11:51:04.832759+00:00"
+}

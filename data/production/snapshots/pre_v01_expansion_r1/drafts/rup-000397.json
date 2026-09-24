@@ -1,0 +1,28 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:05:23.240978+00:00",
+  "id": "rup-000397",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "প্রথম date এ কতটা vulnerable হওয়া উচিত?",
+      "role": "user"
+    },
+    {
+      "content": "Extreme vulnerability na, moderate honesty ভালো - নিজের সম্পর্কে real কথা বলো, কিন্তু সব trauma বা deep insecurity প্রথম date এ dump করার দরকার নেই। Trust build হতে সময় লাগে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 09, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:05:23.240987+00:00"
+}

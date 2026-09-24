@@ -1,0 +1,432 @@
+{
+  "assumption": "KEEP records + all REPAIR proposals accepted; REJECT and HUMAN_REVIEW excluded. Hypothetical — nothing approved.",
+  "records": 1362,
+  "by_language": {
+    "en": 453,
+    "banglish": 355,
+    "bn": 381,
+    "mixed": 173
+  },
+  "by_category": {
+    "detailed_explanations": 32,
+    "casual_friendly": 64,
+    "bengali_natural": 53,
+    "banglish_natural": 62,
+    "english_conversation": 34,
+    "code_switch_bn_en": 47,
+    "code_switch_banglish_en": 28,
+    "rupsaa_personality": 91,
+    "relationship_dating": 64,
+    "adult_terminology_education": 57,
+    "creator_questions_workflows": 63,
+    "short_answers": 71,
+    "follow_up_questions": 52,
+    "uncertainty_handling": 53,
+    "correcting_misunderstandings": 51,
+    "multi_turn": 300,
+    "adversarial_difficult_language": 51,
+    "creator_platform_terminology": 51,
+    "rag_aware": 84,
+    "flirty_contextual_adult": 54
+  },
+  "diversity": {
+    "total_replies": 1865,
+    "issues": [
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S-",
+        "count": 512,
+        "total": 1865,
+        "threshold": 0.15,
+        "ratio": 0.2745
+      },
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S|SQ",
+        "count": 297,
+        "total": 1865,
+        "threshold": 0.15,
+        "ratio": 0.1592
+      },
+      {
+        "severity": "warn",
+        "kind": "opening",
+        "scope": "corpus",
+        "key": "that's",
+        "count": 159,
+        "total": 1865,
+        "threshold": 0.08,
+        "ratio": 0.0853
+      },
+      {
+        "severity": "warn",
+        "kind": "catchphrase",
+        "scope": "language:en",
+        "key": "actually",
+        "count": 37,
+        "total": 623,
+        "threshold": 0.04,
+        "ratio": 0.0594
+      },
+      {
+        "severity": "warn",
+        "kind": "opening_bigram",
+        "scope": "corpus",
+        "key": "that's a",
+        "count": 90,
+        "total": 1865,
+        "threshold": 0.03,
+        "ratio": 0.0483
+      }
+    ],
+    "phrase_rates": {
+      "corpus": {
+        "actually": 0.0198,
+        "genuinely": 0.0091,
+        "basically": 0.0005,
+        "literally": 0.0005,
+        "fair enough": 0.0005,
+        "not gonna lie": 0.0038,
+        "sotti bolte": 0.0107,
+        "সত্যি বলতে": 0.0027,
+        "jaan": 0.0005,
+        "sona": 0.0005
+      },
+      "language:banglish": {
+        "sotti bolte": 0.037,
+        "jaan": 0.0021,
+        "sona": 0.0021
+      },
+      "language:bn": {
+        "fair enough": 0.002,
+        "সত্যি বলতে": 0.0079
+      },
+      "language:en": {
+        "actually": 0.0594,
+        "genuinely": 0.0273,
+        "basically": 0.0016,
+        "literally": 0.0016,
+        "not gonna lie": 0.0112,
+        "sotti bolte": 0.0016
+      },
+      "language:mixed": {
+        "sotti bolte": 0.004,
+        "সত্যি বলতে": 0.004
+      },
+      "source:human_authored": {},
+      "source:imported": {
+        "actually": 0.0296,
+        "genuinely": 0.014,
+        "basically": 0.0016,
+        "literally": 0.0016,
+        "sotti bolte": 0.0062,
+        "সত্যি বলতে": 0.0016,
+        "jaan": 0.0016,
+        "sona": 0.0016
+      },
+      "source:synthetic_curated": {
+        "actually": 0.015,
+        "genuinely": 0.0066,
+        "fair enough": 0.0008,
+        "not gonna lie": 0.0058,
+        "sotti bolte": 0.0133,
+        "সত্যি বলতে": 0.0033
+      }
+    },
+    "top_openings": [
+      [
+        "that's",
+        159
+      ],
+      [
+        "সেটা",
+        72
+      ],
+      [
+        "eta",
+        71
+      ],
+      [
+        "that",
+        65
+      ],
+      [
+        "fair",
+        62
+      ],
+      [
+        "sheta",
+        50
+      ],
+      [
+        "না",
+        49
+      ],
+      [
+        "এই",
+        44
+      ],
+      [
+        "এটা",
+        43
+      ],
+      [
+        "i",
+        43
+      ],
+      [
+        "not",
+        35
+      ],
+      [
+        "no",
+        32
+      ],
+      [
+        "it's",
+        29
+      ],
+      [
+        "na",
+        28
+      ],
+      [
+        "হ্যাঁ",
+        25
+      ]
+    ],
+    "top_opening_bigrams": [
+      [
+        "that's a",
+        90
+      ],
+      [
+        "i don't",
+        20
+      ],
+      [
+        "that's worth",
+        16
+      ],
+      [
+        "eta khub",
+        13
+      ],
+      [
+        "no i",
+        12
+      ],
+      [
+        "depend kore",
+        11
+      ],
+      [
+        "that fear",
+        10
+      ],
+      [
+        "মাঝে মাঝে",
+        9
+      ],
+      [
+        "এই specific",
+        9
+      ],
+      [
+        "এই ধরনের",
+        8
+      ],
+      [
+        "that's the",
+        8
+      ],
+      [
+        "i think",
+        8
+      ],
+      [
+        "it's the",
+        8
+      ],
+      [
+        "না আমি",
+        8
+      ],
+      [
+        "sotti bolte",
+        8
+      ]
+    ],
+    "top_ngrams": [
+      [
+        "specific",
+        149
+      ],
+      [
+        "real",
+        105
+      ],
+      [
+        "people",
+        100
+      ],
+      [
+        "feeling",
+        94
+      ],
+      [
+        "content",
+        93
+      ],
+      [
+        "usually",
+        92
+      ],
+      [
+        "মনে",
+        92
+      ],
+      [
+        "time",
+        90
+      ],
+      [
+        "feel",
+        90
+      ],
+      [
+        "something",
+        89
+      ],
+      [
+        "fair",
+        86
+      ],
+      [
+        "worth",
+        85
+      ],
+      [
+        "common",
+        84
+      ],
+      [
+        "এর",
+        80
+      ],
+      [
+        "pattern",
+        76
+      ],
+      [
+        "মনে হয়",
+        55
+      ],
+      [
+        "a lot",
+        46
+      ],
+      [
+        "rather than",
+        39
+      ],
+      [
+        "hote pare",
+        36
+      ],
+      [
+        "হতে পারে",
+        34
+      ],
+      [
+        "mone hoy",
+        34
+      ],
+      [
+        "long term",
+        31
+      ],
+      [
+        "lot of",
+        29
+      ],
+      [
+        "আমার কাছে",
+        29
+      ],
+      [
+        "a lot of",
+        28
+      ],
+      [
+        "the same",
+        26
+      ],
+      [
+        "instead of",
+        26
+      ],
+      [
+        "thing to",
+        25
+      ],
+      [
+        "বিশেষ করে",
+        25
+      ],
+      [
+        "মাঝে মাঝে",
+        23
+      ]
+    ],
+    "top_skeletons": [
+      [
+        "S-",
+        512
+      ],
+      [
+        "S|SQ",
+        297
+      ],
+      [
+        "S-|S",
+        221
+      ],
+      [
+        "S|S",
+        176
+      ],
+      [
+        "S",
+        165
+      ],
+      [
+        "S|S-",
+        87
+      ],
+      [
+        "S-|SQ",
+        68
+      ],
+      [
+        "S-Q",
+        53
+      ],
+      [
+        "F-",
+        51
+      ],
+      [
+        "SQ",
+        44
+      ]
+    ],
+    "gated": true,
+    "notes": [],
+    "training_ready": true
+  }
+}

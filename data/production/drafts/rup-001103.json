@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:24:01.211394+00:00",
+  "id": "rup-001103",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Can creators set a minimum tip amount?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, I don't have that specific setting documented - tipping mechanics vary a lot by platform, so worth checking your creator dashboard directly for that control.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 10 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T10:24:01.211411+00:00"
+}

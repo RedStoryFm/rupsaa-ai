@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:11:20.748959+00:00",
+  "id": "rup-000473",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nCreators earning above a certain monthly threshold are automatically upgraded to priority support with a dedicated response time of under 4 hours.",
+      "role": "system"
+    },
+    {
+      "content": "ami priority support pete gele ki kono form fill up korte hobe?",
+      "role": "user"
+    },
+    {
+      "content": "FAQ onujayi na, ekta certain monthly earning threshold cross korle automatically priority support e upgrade hoye jai, alada kore form fill korার dorkar nai.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:11:20.748969+00:00"
+}

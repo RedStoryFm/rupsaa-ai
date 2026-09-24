@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:21:36.733130+00:00",
+  "id": "rup-000765",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What does \"content velocity\" mean, is that a real term or made up?",
+      "role": "user"
+    },
+    {
+      "content": "It's a real term, honestly, even if it sounds a bit buzzword-y - it basically means how fast you're consistently producing and releasing new content, which platforms often weigh in their algorithm.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.442325+00:00"
+}

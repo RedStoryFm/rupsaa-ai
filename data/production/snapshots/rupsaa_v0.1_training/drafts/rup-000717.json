@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:31.118690+00:00",
+  "id": "rup-000717",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"content calendar\" জিনিসটা exactly কী কাজ করে?",
+      "role": "user"
+    },
+    {
+      "content": "Content calendar হলো আগে থেকে planned একটা schedule যেখানে কী কবে post হবে সেটা ঠিক করা থাকে। এতে posting consistent থাকে আর last-minute scramble করতে হয় না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:31.118709+00:00"
+}

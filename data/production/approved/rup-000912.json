@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:34:07.252060+00:00",
+  "id": "rup-000912",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is there a way to see analytics from before I joined the platform historically?",
+      "role": "user"
+    },
+    {
+      "content": "No, actually - the documentation confirms analytics only track from your account creation forward, there's no retroactive historical data available.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 6 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.136268+00:00"
+}

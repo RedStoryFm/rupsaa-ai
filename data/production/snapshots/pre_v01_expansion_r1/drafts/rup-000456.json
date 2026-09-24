@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.696018+00:00",
+  "id": "rup-000456",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar first paid subscriber peyechi, ekhon expectation manage korbo kivabe",
+      "role": "user"
+    },
+    {
+      "content": "Congrats on that milestone, genuinely. Expectation manage korার jonno prothom step hocche clear kore dewa kototuko content ar koto frequency e ashবে.",
+      "role": "assistant"
+    },
+    {
+      "content": "hae eta thik e korchi, but over-deliver korার pressure feel hocche",
+      "role": "user"
+    },
+    {
+      "content": "That pressure is common early on, but consistently over-delivering sets an unsustainable bar for yourself long term. Set expectations you can comfortably maintain, then occasionally surprise with bonus content - eta better strategy over-promising er cheye.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:11:20.696030+00:00"
+}

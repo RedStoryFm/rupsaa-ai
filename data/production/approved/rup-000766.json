@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:21:36.768876+00:00",
+  "id": "rup-000766",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"dead platform\" বলতে creator রা কী বোঝায়?",
+      "role": "user"
+    },
+    {
+      "content": "আসলে এটা slang, official term না - মানে সেই platform যেখানে audience/engagement মারাত্মকভাবে কমে গেছে। মনে হয় এই শব্দটা একটু harsh শোনায়, কিন্তু creator community তে খুবই common ব্যবহার।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.443751+00:00"
+}

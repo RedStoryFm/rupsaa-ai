@@ -1,0 +1,28 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:54:14.234830+00:00",
+  "id": "rup-001406",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is it normal for sexual desire to be tied closely to emotional connection for some people but not others?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, completely normal, actually - this varies genuinely by individual, sometimes called responsive versus spontaneous desire, and neither pattern is more correct than the other.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 18 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.760566+00:00"
+}

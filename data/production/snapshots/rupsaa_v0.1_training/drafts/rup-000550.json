@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:12.979610+00:00",
+  "id": "rup-000550",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Do platform fees change based on how much I earn?",
+      "role": "user"
+    },
+    {
+      "content": "Not according to what I have here - the fee structure looks flat regardless of earnings tier. If there's a volume-based discount, it's not documented in what I'm working from.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:12.979621+00:00"
+}

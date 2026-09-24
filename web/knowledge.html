@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rupsaa Knowledge</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="owner.css">
+</head>
+<body>
+  <div class="owner-app">
+    <header class="owner-topbar">
+      <div>
+        <h1>Rupsaa Knowledge</h1>
+        <div class="subtitle">Owner tool — manage RAG knowledge documents and terminology.</div>
+      </div>
+      <div class="owner-nav">
+        <a href="teach.html">Teach Rupsaa →</a>
+        <a href="index.html">← Back to chat</a>
+        <div class="owner-key-box">
+          <label for="owner-key">Owner key</label>
+          <input type="text" id="owner-key" placeholder="(if configured)" autocomplete="off">
+        </div>
+      </div>
+    </header>
+
+    <div class="owner-banner">
+      Documents here are retrieved at chat time (RAG) — they do <strong>not</strong> require
+      QLoRA retraining to take effect. Never put secrets, credentials, or private user data
+      into a document.
+    </div>
+
+    <div class="owner-tabs" role="tablist">
+      <button class="owner-tab active" id="tab-docs" type="button" role="tab" aria-selected="true">Documents</button>
+      <button class="owner-tab" id="tab-terms" type="button" role="tab" aria-selected="false">Terminology</button>
+    </div>
+
+    <section id="docs-section">
+    <div class="owner-card">
+      <h2 id="form-title">New document</h2>
+
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="doc-title">Title</label>
+          <input type="text" id="doc-title" placeholder="e.g. Chargeback policy basics">
+        </div>
+        <div class="owner-field">
+          <label for="doc-category">Category</label>
+          <select id="doc-category"></select>
+        </div>
+      </div>
+
+      <div class="owner-field">
+        <label for="doc-content">Content (Markdown)</label>
+        <textarea id="doc-content" rows="10" placeholder="# Title&#10;&#10;Document content…"></textarea>
+      </div>
+
+      <div class="owner-field">
+        <label for="doc-notes">Source / notes <span style="font-weight:400">(optional)</span></label>
+        <input type="text" id="doc-notes" placeholder="Where this came from, why it exists…">
+      </div>
+
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="save-doc-btn" type="button">Save document</button>
+        <button class="owner-btn secondary" id="cancel-edit-btn" type="button" hidden>Cancel edit</button>
+      </div>
+
+      <div id="doc-result-msg"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Documents</h2>
+      <div class="owner-actions" style="margin-bottom: 14px;">
+        <button class="owner-btn secondary" id="refresh-btn" type="button">Refresh list</button>
+        <button class="owner-btn secondary" id="reindex-btn" type="button">Rebuild RAG index</button>
+      </div>
+      <div id="reindex-result-msg"></div>
+      <div id="doc-list" class="doc-list"></div>
+    </div>
+    </section>
+
+    <section id="terms-section" hidden>
+    <div class="owner-banner">
+      Terminology entries are structured definitions Rupsaa looks up when someone asks what a
+      term means ("Strip mane ki?", "what does X mean?"). They take effect on the <strong>next chat
+      message</strong> — no reindex, no retraining. Rupsaa explains them in her own words; the
+      definition is knowledge, not a script.
+    </div>
+
+    <div class="owner-card">
+      <h2 id="term-form-title">New term</h2>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="term-term">Term</label>
+          <input type="text" id="term-term" placeholder="e.g. Strip / Stripping">
+        </div>
+        <div class="owner-field">
+          <label for="term-category">Category</label>
+          <select id="term-category"></select>
+        </div>
+      </div>
+      <div class="owner-field">
+        <label for="term-aliases">Aliases <span style="font-weight:400">(one per line or comma-separated — other spellings, Banglish/Bengali forms)</span></label>
+        <textarea id="term-aliases" rows="3" placeholder="strip&#10;stripping&#10;স্ট্রিপ"></textarea>
+      </div>
+      <div class="owner-field">
+        <label for="term-definition">Definition</label>
+        <textarea id="term-definition" rows="3" placeholder="Plain, accurate definition."></textarea>
+      </div>
+      <div class="owner-field">
+        <label for="term-details">Details <span style="font-weight:400">(optional — context, nuances, related terms)</span></label>
+        <textarea id="term-details" rows="3"></textarea>
+      </div>
+      <div class="owner-field">
+        <label for="term-guidance">Answer guidance <span style="font-weight:400">(optional — how Rupsaa should approach answering)</span></label>
+        <textarea id="term-guidance" rows="2" placeholder="Answer the definition directly; start concise; more detail if asked."></textarea>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="term-examples">Example queries <span style="font-weight:400">(one per line)</span></label>
+          <textarea id="term-examples" rows="3" placeholder="strip mane ki&#10;what does stripping mean"></textarea>
+        </div>
+        <div class="owner-field">
+          <label for="term-tags">Tags <span style="font-weight:400">(comma-separated)</span></label>
+          <input type="text" id="term-tags" placeholder="adult, performance">
+          <label style="margin-top:12px">Languages</label>
+          <div class="owner-checks" id="term-languages"></div>
+          <label class="owner-check-inline"><input type="checkbox" id="term-enabled" checked> Enabled</label>
+        </div>
+      </div>
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="save-term-btn" type="button">Save term</button>
+        <button class="owner-btn secondary" id="cancel-term-btn" type="button" hidden>Cancel edit</button>
+      </div>
+      <div id="term-result-msg"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Import Terminology</h2>
+      <p class="import-help">
+        Add many terms at once from a <strong>.csv</strong> or <strong>.xlsx</strong> file. Start from a template —
+        it has the right columns and one example row. Multi-value columns (aliases, languages,
+        example_queries, tags) use a pipe: <code>strip|stripping|স্ট্রিপ</code>.
+        Nothing is saved until you review the preview and click <em>Import Valid Records</em>.
+      </p>
+      <div class="owner-actions">
+        <a class="owner-btn secondary" id="tmpl-csv-link" href="#" download="terminology_template.csv">Download CSV Template</a>
+        <a class="owner-btn secondary" id="tmpl-xlsx-link" href="#" download="terminology_template.xlsx">Download XLSX Template</a>
+      </div>
+      <div class="owner-field" style="margin-top:14px">
+        <label for="import-file">Choose file to preview (.csv or .xlsx, max 2 MB / 1000 rows)</label>
+        <input type="file" id="import-file" accept=".csv,.xlsx">
+      </div>
+      <div id="import-msg"></div>
+      <div id="import-preview" hidden>
+        <div class="import-counts" id="import-counts"></div>
+        <div class="owner-actions" id="import-bulk-row" hidden>
+          <label for="import-bulk-action" style="font-weight:400">Existing terms in this file:</label>
+          <select id="import-bulk-action">
+            <option value="skip">SKIP all (keep existing)</option>
+            <option value="update">UPDATE all</option>
+          </select>
+        </div>
+        <div class="import-table-wrap">
+          <table class="import-table">
+            <thead><tr><th>Row</th><th>Term</th><th>Status</th><th>Details</th><th>Action</th></tr></thead>
+            <tbody id="import-rows"></tbody>
+          </table>
+        </div>
+        <div class="owner-actions">
+          <button class="owner-btn primary" id="import-commit-btn" type="button">Import Valid Records</button>
+          <button class="owner-btn secondary" id="import-cancel-btn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Test a chat message</h2>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <input type="text" id="term-test-input" placeholder="Strip mane ki?">
+        </div>
+        <div class="owner-actions" style="margin:0">
+          <button class="owner-btn secondary" id="term-test-btn" type="button">Check routing</button>
+        </div>
+      </div>
+      <div id="term-test-result"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Terms</h2>
+      <div class="owner-field-row" style="margin-bottom: 14px;">
+        <div class="owner-field">
+          <input type="text" id="term-search" placeholder="Search term, alias, tag, definition…">
+        </div>
+        <div class="owner-actions" style="margin:0">
+          <button class="owner-btn secondary" id="term-refresh-btn" type="button">Refresh</button>
+        </div>
+      </div>
+      <div id="term-list" class="doc-list"></div>
+    </div>
+    </section>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="knowledge.js"></script>
+  <script src="terminology.js"></script>
+</body>
+</html>

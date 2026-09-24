@@ -1,0 +1,34 @@
+{
+  "id": "term-scratch",
+  "term": "Scratch",
+  "definition": "Lightly scratching a partner's skin during intimacy.",
+  "category": "adult_terminology",
+  "aliases": [
+    "scratch",
+    "scratching",
+    "scratch ki",
+    "scratch mane ki",
+    "স্ক্র্যাচ"
+  ],
+  "details": "Nail pressure and consent should be discussed.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "scratch ki",
+    "scratch mane ki",
+    "স্ক্র্যাচ মানে কী",
+    "what is scratching in intimacy"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.728369+00:00",
+  "updated_at": "2026-09-24T16:58:36.728380+00:00"
+}

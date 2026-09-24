@@ -1,0 +1,28 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.035914+00:00",
+  "id": "rup-000208",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "polyamory মানে কি শুধু একসাথে অনেকজনের সাথে ঘুরে বেড়ানো?",
+      "role": "user"
+    },
+    {
+      "content": "না, এটা একটা common ভুল ধারণা আসলে। Polyamory মানে একই সময়ে একাধিক সম্মতিপূর্ণ, transparent সম্পর্কে থাকা - সবার জানা এবং একমত হয়ে। Cheating থেকে মূল পার্থক্য হলো honesty আর consent, secrecy না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-23T11:51:03.971499+00:00"
+}

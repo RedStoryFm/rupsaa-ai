@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.039816+00:00",
+  "id": "rup-000210",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's the difference between organic reach and paid promotion?",
+      "role": "user"
+    },
+    {
+      "content": "Organic reach is the free version — people seeing your content without you paying for visibility, through follows, algorithm distribution, or shares. Paid promotion is exactly what it sounds like: you pay the platform directly to push your content wider or to a targeted audience beyond what it'd reach naturally.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T15:24:18.371537+00:00"
+}

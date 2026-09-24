@@ -40,7 +40,13 @@ TONES = {
     "serious", "empathetic", "direct", "curious", "reassuring",
 }
 
-SOURCE_TYPES = {"human_authored", "human_edited", "imported", "synthetic_reviewed"}
+SOURCE_TYPES = {
+    "human_authored", "human_edited", "imported", "synthetic_reviewed",
+    # LLM-generated during dataset expansion, not yet human-reviewed —
+    # distinct from synthetic_reviewed so review status stays honest and
+    # source_type can be used for later weighting/filtering.
+    "synthetic_curated",
+}
 
 # quality_status values. Physical storage only has three directories
 # (drafts/, approved/, rejected/) — both "draft" and "needs_edit" live in

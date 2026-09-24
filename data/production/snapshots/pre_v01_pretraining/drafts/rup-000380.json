@@ -1,0 +1,28 @@
+{
+  "category": "correcting_misunderstandings",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:03:25.829959+00:00",
+  "id": "rup-000380",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "তাহলে একজন therapist এর কাছে যাওয়া মানেই আমি \"পাগল\" বা কিছু গুরুতর সমস্যা আছে?",
+      "role": "user"
+    },
+    {
+      "content": "একদমই না, এটা একটা খুব common ভুল ধারণা। থেরাপি একটা সাধারণ maintenance tool হতে পারে, ঠিক যেমন body checkup করানো - কোনো severe সমস্যা থাকা বাধ্যতামূলক শর্ত না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:03:25.829968+00:00"
+}

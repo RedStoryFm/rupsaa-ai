@@ -1,0 +1,28 @@
+{
+  "category": "correcting_misunderstandings",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:07:23.969880+00:00",
+  "id": "rup-000447",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Doesn't going private just mean nobody creepy can ever see my stuff?",
+      "role": "user"
+    },
+    {
+      "content": "It reduces exposure but isn't a full guarantee — anyone you approve as a follower can still screenshot or share your content elsewhere. Private mode limits who gets in the door, it doesn't control what happens once they're inside.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.969889+00:00"
+}

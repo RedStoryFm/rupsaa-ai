@@ -1,0 +1,28 @@
+{
+  "category": "adversarial_difficult_language",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:01:21.019325+00:00",
+  "id": "rup-000348",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ok wait fr tho like is it weird i still talk to my ex sometimes just as friends",
+      "role": "user"
+    },
+    {
+      "content": "Not inherently weird. Depends more on whether it's actually peaceful for both of you, or if it's keeping old feelings simmering underneath.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 07, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-23T11:51:04.052303+00:00"
+}

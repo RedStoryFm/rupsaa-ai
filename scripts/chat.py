@@ -26,7 +26,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from rupsaa.conversation.manager import ConversationManager  # noqa: E402
 from rupsaa.model.inference import RupsaaEngine  # noqa: E402
+from rupsaa.config import PROJECT_ROOT, get_settings  # noqa: E402
+from rupsaa.rag.context_builder import build_turn_knowledge  # noqa: E402
 from rupsaa.rag.pipeline import RagPipeline  # noqa: E402
+from rupsaa.rag.terminology import TerminologyStore  # noqa: E402
 
 logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
 
@@ -67,6 +70,8 @@ def main() -> None:
     print("\nRupsaa is ready. Type /reset to clear history, /exit to quit.\n")
 
     try:
+        terminology = TerminologyStore(PROJECT_ROOT / get_settings().knowledge_terminology_dir)
+        last_terms: list[str] | None = None
         while True:
             try:
                 user_input = input("You: ").strip()
@@ -83,19 +88,34 @@ def main() -> None:
                 print("(conversation reset)\n")
                 continue
 
-            retrieved_context = None
-            if rag_pipeline:
-                retrieved_context, sources = rag_pipeline.query(user_input)
-                if sources:
-                    src_list = ", ".join(s["source_filename"] for s in sources)
-                    print(f"  [retrieved from: {src_list}]")
+            # Same routing/knowledge path as the API (rupsaa/rag/context_builder.py).
+            knowledge = build_turn_knowledge(
+                user_input,
+                use_rag=rag_pipeline is not None,
+                rag_query=(lambda q, strict=False: rag_pipeline.query(q, strict=strict)) if rag_pipeline else None,
+                terminology=terminology,
+                previous_terms=last_terms,
+                history_messages=len(conversation.messages),
+                history_truncated=conversation.dropped_messages > 0,
+            )
+            if knowledge.sources:
+                src_list = ", ".join(s["source_filename"] for s in knowledge.sources)
+                print(f"  [retrieved from: {src_list}]")
+            if knowledge.terms_used:
+                print(f"  [terminology: {', '.join(knowledge.terms_used)}]")
 
             result = engine.chat(
                 history=conversation.messages,
                 user_message=user_input,
-                retrieved_context=retrieved_context,
+                retrieved_context=knowledge.retrieved_context,
+                terminology_context=knowledge.terminology_context,
+                conversation_note=knowledge.conversation_note,
                 generation_overrides=generation_overrides,
             )
+            if knowledge.terms_used:
+                last_terms = knowledge.terms_used
+            elif knowledge.route not in ("followup", "memory"):
+                last_terms = None
 
             print(f"\nRupsaa: {result.text}\n")
 

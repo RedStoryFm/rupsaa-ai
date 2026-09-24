@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:05:23.212599+00:00",
+  "id": "rup-000386",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমার একটা YouTube channel শুরু করার কথা ভাবছি, কিন্তু equipment নিয়ে confuse।",
+      "role": "user"
+    },
+    {
+      "content": "শুরুতে খুব complex equipment এর দরকার নেই, phone camera দিয়েই অনেক successful creator শুরু করেছে। Budget কেমন ভাবছো এটার জন্য?",
+      "role": "assistant"
+    },
+    {
+      "content": "খুব বেশি নেই, হয়তো ৫-৬ হাজার টাকা।",
+      "role": "user"
+    },
+    {
+      "content": "সেটা দিয়ে একটা basic microphone আর ছোট tripod কেনা যায়, যেগুলো audio আর stability সবচেয়ে বেশি improve করে। Video quality এর চেয়ে audio quality actually বেশি matter করে viewer retention এ।",
+      "role": "assistant"
+    },
+    {
+      "content": "microphone কি ধরনের কেনা উচিত জানো কিছু?",
+      "role": "user"
+    },
+    {
+      "content": "Specific brand recommend করার মতো updated market knowledge আমার নেই, কিন্তু general guideline হলো - একটা lavalier (clip-on) mic বেশিরভাগ talking-head content এর জন্য যথেষ্ট এবং affordable হয়। Local electronics shop এ গিয়ে budget বলে দিলে ভালো option দেখাতে পারবে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 09, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:05:23.212610+00:00"
+}

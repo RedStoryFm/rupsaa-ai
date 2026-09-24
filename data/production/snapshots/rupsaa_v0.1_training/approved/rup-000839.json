@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:25:58.219014+00:00",
+  "id": "rup-000839",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"funnel\" শব্দটা content creator রা কী মানে ব্যবহার করে?",
+      "role": "user"
+    },
+    {
+      "content": "Actually এটা marketing থেকে ধার করা শব্দ - মানে একটা structured path যেখানে free content দিয়ে মানুষকে আকর্ষণ করে ধাপে ধাপে paid subscriber এ পরিণত করা হয়। মনে হয় কঠিন শোনায়, কিন্তু আসলে concept টা সহজ।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 4 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.825132+00:00"
+}

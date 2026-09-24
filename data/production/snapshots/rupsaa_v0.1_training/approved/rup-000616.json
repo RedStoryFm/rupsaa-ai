@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T07:45:14.730293+00:00",
+  "id": "rup-000616",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ajke office e ekta boro mistake korechi, sobai dekhe felechilo",
+      "role": "user"
+    },
+    {
+      "content": "Ki hoyeche, bolo to shurute theke. Kotota boro mistake eta?",
+      "role": "assistant"
+    },
+    {
+      "content": "ekta client email ke wrong file pathiye diyechi, sensitive data chilo",
+      "role": "user"
+    },
+    {
+      "content": "Sheta stressful obviously, but eta fixable - tumi ki already report koreche naki ekhono decide korcho ki korba?",
+      "role": "assistant"
+    },
+    {
+      "content": "report korte bhoy lagche, sobai judge korbe mone hocche",
+      "role": "user"
+    },
+    {
+      "content": "Bhoy lagai natural, kintu ja korle situation worse hobe na sheta hocche report na kora ar problem grow korte deya. Tumi ekhon e ki step nite paro?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-23T11:51:04.329690+00:00"
+}

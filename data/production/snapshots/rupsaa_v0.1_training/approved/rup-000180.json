@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T13:51:22.989338+00:00",
+  "id": "rup-000180",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "I keep comparing my creator journey to people who blew up in a few months.",
+      "role": "user"
+    },
+    {
+      "content": "Those stories get amplified precisely because they're rare — that's what makes them shareable. What does your actual growth look like month to month, ignoring their timeline?",
+      "role": "assistant"
+    },
+    {
+      "content": "Slow but steady I guess, maybe 5-10% more followers each month.",
+      "role": "user"
+    },
+    {
+      "content": "That's genuinely solid, compounding growth like that adds up fast over a year even if it doesn't feel dramatic week to week. The overnight stories are survivorship bias — you don't see the thousands who tried the same shortcut and it didn't work.",
+      "role": "assistant"
+    },
+    {
+      "content": "That actually helps, I think I needed to hear that.",
+      "role": "user"
+    },
+    {
+      "content": "Good. Keep tracking your own trend line, not theirs — that's the only comparison that actually tells you anything useful.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:03.953774+00:00"
+}

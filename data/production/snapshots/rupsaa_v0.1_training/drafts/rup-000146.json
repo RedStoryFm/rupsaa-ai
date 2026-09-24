@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_banglish_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:48:56.619514+00:00",
+  "id": "rup-000146",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"burnout\" ar \"just tired\" er modhhe difference ta actually ki",
+      "role": "user"
+    },
+    {
+      "content": "Just tired ekta valo rest e thik hoye jai, ekdin off nile fresh feel koro abar. Burnout deeper - motivation e chole jai, jinis gulo je age enjoy korte seta o kharap lage, ar rest nileo feeling change hoy na sathe sathe.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 03, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:48:56.619523+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.032500+00:00",
+  "id": "rup-000206",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "kon time e post korle best engagement pawa jai, kono general rule ache?",
+      "role": "user"
+    },
+    {
+      "content": "General rule ta hocche jokhon tomar audience most active thake, seta platform analytics dekhle bujha jai. Kono universal \"best time\" nai, eta audience-specific.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:51:23.032509+00:00"
+}

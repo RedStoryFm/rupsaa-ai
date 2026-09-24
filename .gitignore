@@ -1,5 +1,10 @@
-# Secrets
+# Secrets — never commit real values (.env.example is the template)
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+.git-credentials
 
 # Python
 __pycache__/
@@ -28,13 +33,40 @@ data/production/exports/*
 !data/production/exports/.gitkeep
 data/production/reports/*
 !data/production/reports/.gitkeep
+# ...except release-relevant artifacts (see docs/BACKUP_AND_RESTORE.md):
+# the FROZEN V0.1 train/validation/test split (516 KB, checksummed in
+# release/rupsaa-v0.1/checksums.sha256) and the V0.1 audit/evaluation and
+# V0.2 preparation reports, which are expensive (GPU) or impossible to
+# regenerate exactly. Timestamped audit_*/stats_* runs stay ignored.
+!data/production/exports/rupsaa_v0.1/
+!data/production/reports/rupsaa_v0.1_evaluation/
+!data/production/reports/rupsaa_v0.2_preparation/
+!data/production/reports/PRETRAINING_V01_REPORT.md
+!data/production/reports/V01_*
+!data/production/reports/VOICE_AUDIT_V1_0_TRACKA_FINAL*
 
 # HF / torch cache if pointed locally
 .cache/
 *.safetensors
 *.bin
 *.pt
+*.pth
+*.ckpt
 *.gguf
+
+# Logs / temp / partial downloads
+*.log
+nohup.out
+*.partial
+*.tmp
+
+# LLaMA-Factory WebUI generated state (its own dataset_info.json companion
+# is checked in under data/production/exports/, but these are the WebUI's
+# own cache/last-used-args/checkpoint-output directories — see
+# scripts/setup_llamafactory.sh and scripts/start_llamafactory_gui.sh).
+/cache/
+/config/
+/saves/
 
 # OS / editor
 .DS_Store

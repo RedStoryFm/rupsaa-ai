@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:34:07.288630+00:00",
+  "id": "rup-000913",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ami ki amar account permanently delete korার age data export korte pari?",
+      "role": "user"
+    },
+    {
+      "content": "Hae actually, documentation onujayi delete korার age ekta data export option thake - সেটা ব্যবহার করা উচিত, কারণ delete howar por recovery possible na।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 6 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T08:34:07.288656+00:00"
+}

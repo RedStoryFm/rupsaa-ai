@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:03:25.832465+00:00",
+  "id": "rup-000381",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nCreators may not use platform-provided messaging to solicit off-platform payment methods; violations can result in account suspension.",
+      "role": "system"
+    },
+    {
+      "content": "ami ki subscriber der bolte pari amake direct bank transfer kore payment korte, platform fee bachanor jonno?",
+      "role": "user"
+    },
+    {
+      "content": "FAQ onujayi na, platform messaging babohar kore off-platform payment solicit kora violation, ar eta account suspension porjonto lead korte pare. Eta korар risk niyo na.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:03:25.832473+00:00"
+}

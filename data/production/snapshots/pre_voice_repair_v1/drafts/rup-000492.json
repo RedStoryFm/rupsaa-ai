@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:15:20.921078+00:00",
+  "id": "rup-000492",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar ekta content series shuru korte chai, kivabe plan korবো theme ta",
+      "role": "user"
+    },
+    {
+      "content": "Prothome bhabo tomar audience er sobcheye common question ba struggle ki, series ta oi around e build koro.",
+      "role": "assistant"
+    },
+    {
+      "content": "amar audience mostly beginner creator der question kore",
+      "role": "user"
+    },
+    {
+      "content": "Tahole ekta \"beginner creator FAQ\" type series khub relevant hobe - protita episode e ekta specific common question address koro. Structured ar predictable hole audience ashar moto follow korte pare.",
+      "role": "assistant"
+    },
+    {
+      "content": "koto episode diye shuru kora uchit?",
+      "role": "user"
+    },
+    {
+      "content": "5-6 ta core question diye shuru koro, oita test kore dekho response kemon ashe. Valo response paile extend koro, na paile format adjust koro - overcommit na kore small scale e test kora better.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:15:20.921095+00:00"
+}

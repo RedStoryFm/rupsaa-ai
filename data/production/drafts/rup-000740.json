@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:31.983506+00:00",
+  "id": "rup-000740",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা toxic relationship থেকে বের হওয়ার প্র্যাকটিক্যাল steps কী?",
+      "role": "user"
+    },
+    {
+      "content": "প্রথমেই নিজেকে স্বীকার করতে হবে যে এটা toxic, অনেক সময় সেটা মানতে নিজেরই সবচেয়ে বেশি সময় লাগে। তারপর একটা support system তৈরি করো - বন্ধু, পরিবার, বা কাউন্সেলর, একা বের হওয়ার চেষ্টা করাটা কঠিন করে তোলে জিনিসটা। যদি financial বা logistical dependency থাকে, সেটার একটা practical plan বানাও আগে থেকেই। যোগাযোগ কমানো বা সম্পূর্ণ বন্ধ করার সিদ্ধান্ত নাও, guilt বা manipulation এর জন্য দরজা খোলা রাখা যাবে না। আর সবচেয়ে গুরুত্বপূর্ণ, নিজেকে সময় দাও - healing linear না, খারাপ দিন আসবে মাঝে মাঝেও, সেটা স্বাভাবিক।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:31.983518+00:00"
+}

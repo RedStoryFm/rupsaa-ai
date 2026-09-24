@@ -75,6 +75,28 @@ def test_model_info_reads_config_without_loading_model(client):
     body = response.json()
     assert body["base_model_id"] == "Qwen/Qwen2.5-7B-Instruct"
     assert body["device"] == "not loaded yet"
+    assert body["adapter_loaded"] is False
+
+
+def test_model_info_reports_configured_adapter_before_load(monkeypatch, tmp_path):
+    """/model/info must show which adapter will be attached (and whether it
+    exists) before the lazy model load, without loading the model."""
+    from api.services import RupsaaService
+    from rupsaa.config import get_settings
+
+    adapter = tmp_path / "rupsaa-v0.1"
+    adapter.mkdir()
+    (adapter / "adapter_config.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setenv("RUPSAA_ADAPTER_PATH", str(adapter))
+    get_settings.cache_clear()
+    try:
+        info = RupsaaService().model_info()
+    finally:
+        get_settings.cache_clear()
+    assert info["configured_adapter_path"] == str(adapter)
+    assert info["configured_adapter_exists"] is True
+    assert info["adapter_loaded"] is False
+    assert info["adapter_path"] is None
 
 
 def test_chat_returns_expected_shape(client, fake_service):

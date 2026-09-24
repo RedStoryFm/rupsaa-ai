@@ -1,0 +1,3719 @@
+{
+  "snapshot_name": "pre_voice_repair_v1",
+  "created_at": "2026-09-22T15:17:29.370250+00:00",
+  "file_count": 530,
+  "git_commit": "434ba834ec52da8cd58137ad2d8c0c1d9589c94b",
+  "git_working_tree_dirty_at_snapshot_time": true,
+  "conversations": [
+    {
+      "conversation_id": "rup-000021",
+      "status_dir": "drafts",
+      "quality_status": "needs_edit",
+      "filename": "rup-000021.json",
+      "sha256": "e6d8eab79063bf079d2a758abe2ac4010e74b5f2a98e30ca16ed837a0d70186c"
+    },
+    {
+      "conversation_id": "rup-000023",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000023.json",
+      "sha256": "e75424ed47b56055e7dd336bb05a8ecb3694277d3e194322ca400f6e83ac0574"
+    },
+    {
+      "conversation_id": "rup-000024",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000024.json",
+      "sha256": "46f51f8af622a65fde8e0e6591d2be489b9044709569421e49d38626ff3aa977"
+    },
+    {
+      "conversation_id": "rup-000025",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000025.json",
+      "sha256": "5063782cadb4bbe3490f8004ee456b01c277d9bc389889dd369ec6870858848a"
+    },
+    {
+      "conversation_id": "rup-000026",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000026.json",
+      "sha256": "77cd159de101b7d8e19a340c592abe6de266604608b9189f893fd3e7fa36ac7e"
+    },
+    {
+      "conversation_id": "rup-000027",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000027.json",
+      "sha256": "36a130427a3a67d73acb3a927539ed93d873b8379fe9091b08768951aecce9f2"
+    },
+    {
+      "conversation_id": "rup-000028",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000028.json",
+      "sha256": "ecb97f9c3364535841b799300dd3cd7cd9a47025897450e7f02e3cd0647b9b6f"
+    },
+    {
+      "conversation_id": "rup-000029",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000029.json",
+      "sha256": "0ea4fa868d51ba351b73ff10e065b22c19e625bca2ccb470c74218b55a320784"
+    },
+    {
+      "conversation_id": "rup-000030",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000030.json",
+      "sha256": "9608df0ff969d34c869f3d3e987c2ef300e328592bb9f44b41341c9ea5f87a0a"
+    },
+    {
+      "conversation_id": "rup-000031",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000031.json",
+      "sha256": "f8b28b95829c7bfe921061415b3f081d56fafaef540668e3a0b2bf51043845f4"
+    },
+    {
+      "conversation_id": "rup-000032",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000032.json",
+      "sha256": "b50f251ae35e5d9a4892f3c04d0a1b590efe9a7b9b184b86db0c519ff722d009"
+    },
+    {
+      "conversation_id": "rup-000033",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000033.json",
+      "sha256": "60298dfa37bd9322301eb64d4e1431d8c39fc388ebddfecfa4bc172ab8db10b4"
+    },
+    {
+      "conversation_id": "rup-000034",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000034.json",
+      "sha256": "e9fedd3472ee11c748ed4b1580e0e949d21f625b37ff67fa5a3ede2bfdaed517"
+    },
+    {
+      "conversation_id": "rup-000035",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000035.json",
+      "sha256": "a474b8306a93083d54c89e925617d99f757eb6511f5c984ad7c2cec853a68d40"
+    },
+    {
+      "conversation_id": "rup-000036",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000036.json",
+      "sha256": "584ad864377a3de66a0b35bd4661511a6ce30867f885257eb2e45c0f2cf0ff08"
+    },
+    {
+      "conversation_id": "rup-000037",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000037.json",
+      "sha256": "c2fcdc14625fc4615e06ec9ff6a43d6a4e63c130c7f6b644ad94cd84dca7c275"
+    },
+    {
+      "conversation_id": "rup-000038",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000038.json",
+      "sha256": "05b09903007a5af7e976c8df5423025417a60ff108bb7cb367e3f29b94720418"
+    },
+    {
+      "conversation_id": "rup-000039",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000039.json",
+      "sha256": "575791bf48b4fcda40318ceb646d774b7f5399760db80f29a5b45f1768500370"
+    },
+    {
+      "conversation_id": "rup-000040",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000040.json",
+      "sha256": "c047e6be7c5ceb6437fcded508b4dc6f56999e8e5910336bcdaa9ee0ddf2962e"
+    },
+    {
+      "conversation_id": "rup-000041",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000041.json",
+      "sha256": "4f2437e7b597d1df3956ddea3c5a444380109dc0614e41a218e4e4d9dc854b2c"
+    },
+    {
+      "conversation_id": "rup-000042",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000042.json",
+      "sha256": "c61ea1b70db6f3f678cdfd9f4315db367005f0251c5dc42973b119106092f41b"
+    },
+    {
+      "conversation_id": "rup-000043",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000043.json",
+      "sha256": "ca99e141edeacc83293f9bdd9282b650b37216030689ad65b087f30442490e86"
+    },
+    {
+      "conversation_id": "rup-000044",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000044.json",
+      "sha256": "0e83bb262b27dd1048b002500453347e59d03a542c44dd129eb3dbaf79fdb251"
+    },
+    {
+      "conversation_id": "rup-000045",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000045.json",
+      "sha256": "e1c1627a0bbe7aed37bd887699ca053fb626137baf77f8b947d090da2d50172e"
+    },
+    {
+      "conversation_id": "rup-000046",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000046.json",
+      "sha256": "c915f7221e5091dcb639a244bb9d6ecfe0f8a7d2f4f9b035642ae58250d78451"
+    },
+    {
+      "conversation_id": "rup-000047",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000047.json",
+      "sha256": "f3e956161f223d04f47c40d272cef09ab5ad3bc09abd299c2eaf29e5a40b3a8b"
+    },
+    {
+      "conversation_id": "rup-000048",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000048.json",
+      "sha256": "6f72b0784d6fc2ba923447ce4ac0ce19603c2deac19119801100d61cd74399f2"
+    },
+    {
+      "conversation_id": "rup-000049",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000049.json",
+      "sha256": "a0949f521d27a9df7c991bcbd8940c36c9df6112b6e090770600fdd9000b58e8"
+    },
+    {
+      "conversation_id": "rup-000050",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000050.json",
+      "sha256": "76430b0a00c0d2a70feafbda94161be817821c9a1754d256af9d87c921f50680"
+    },
+    {
+      "conversation_id": "rup-000051",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000051.json",
+      "sha256": "08bae336428bfbebd2dc94797982baa78bd651f52eb67b4a760ea76d57eac918"
+    },
+    {
+      "conversation_id": "rup-000052",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000052.json",
+      "sha256": "0875cc45337b6b73ac61ad08c61dd725ece43cbf646a30a543e8226ea0548078"
+    },
+    {
+      "conversation_id": "rup-000053",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000053.json",
+      "sha256": "3e6f412d27df4183509e581f44b38360085ddd7bfc9ead8cf6896a9d9e1521e5"
+    },
+    {
+      "conversation_id": "rup-000054",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000054.json",
+      "sha256": "4f31ba40be08339067c78c609786fc610b6a15577669cd002334adc188d6db0f"
+    },
+    {
+      "conversation_id": "rup-000055",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000055.json",
+      "sha256": "984db897e162e0818ebabe0d68e639a2bb08fdc5e7e74ead3edb6bb4a055381c"
+    },
+    {
+      "conversation_id": "rup-000056",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000056.json",
+      "sha256": "1ff91dcc53298920a4df771192a1687cda43d7f77bb7b65a2df2fd0cca1d0ec8"
+    },
+    {
+      "conversation_id": "rup-000057",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000057.json",
+      "sha256": "63d2e081c9cb8c1653b38de8383e92d6d9c49080c19b9669bf7cb79653fbe316"
+    },
+    {
+      "conversation_id": "rup-000058",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000058.json",
+      "sha256": "0f982dbcebcffbea15fdd2c31c3bfcea4d1b2274a9f8dac1f312b27df9360582"
+    },
+    {
+      "conversation_id": "rup-000059",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000059.json",
+      "sha256": "ee2279267eecbc9fd660f9f6deb4baf3584c54a68a090b5cfd34ceb878da07f2"
+    },
+    {
+      "conversation_id": "rup-000060",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000060.json",
+      "sha256": "31869fa45965093afe318345aba9867a8d09c14cda7349b8f5e90b8aef5abc48"
+    },
+    {
+      "conversation_id": "rup-000061",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000061.json",
+      "sha256": "0e533873aae9d94f22aff4fb6fa07d0a0470a86271ba6b815d34de7db6086693"
+    },
+    {
+      "conversation_id": "rup-000062",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000062.json",
+      "sha256": "608d9c61b2471ab1e513480918532afa735391374459a3cd97767c9c93b21e26"
+    },
+    {
+      "conversation_id": "rup-000063",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000063.json",
+      "sha256": "22331415683060c25bb184187b0c53354eda11fdb8c150c3fe4369e1427bbac9"
+    },
+    {
+      "conversation_id": "rup-000064",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000064.json",
+      "sha256": "8a7672fffb2d7f9d52bd0b5daa333e4243f1dedc92792d3c28cdefb43d0f5137"
+    },
+    {
+      "conversation_id": "rup-000065",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000065.json",
+      "sha256": "1d9294157da416584456f751a0068471fd55aa2536b2a81858dcc17ad78e0f62"
+    },
+    {
+      "conversation_id": "rup-000066",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000066.json",
+      "sha256": "317de280fd712e915a69115cae467e7379fc1e481a6d53682ba5667667c3f1eb"
+    },
+    {
+      "conversation_id": "rup-000067",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000067.json",
+      "sha256": "76990eaa8d9f6417e002fda15f2f2771f316954707c9639b52c8b4281cc5ab80"
+    },
+    {
+      "conversation_id": "rup-000068",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000068.json",
+      "sha256": "16ec58644ee0fe5395c8b331f0f64e9c7c339af3fd71d1b930420349174c704b"
+    },
+    {
+      "conversation_id": "rup-000069",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000069.json",
+      "sha256": "130dbaa24a24b4ea8d1c178c3702b849eb6d4cdbec13f7e1e85a57eca7dabdfb"
+    },
+    {
+      "conversation_id": "rup-000070",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000070.json",
+      "sha256": "c7e540c571e341cbc1cc1bdb536c5986f0002092e562bf00da683e7db8ded439"
+    },
+    {
+      "conversation_id": "rup-000071",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000071.json",
+      "sha256": "fc932367d870957b4f7fe0eca1be69ccfca0e8cf7f8505ecada24cf343725849"
+    },
+    {
+      "conversation_id": "rup-000072",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000072.json",
+      "sha256": "89088f8ba88c22c2c6225497a9660742f461f57127fd8283b9a5e3b3070fdbc9"
+    },
+    {
+      "conversation_id": "rup-000073",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000073.json",
+      "sha256": "2f971fbbe44bf71a8cc9b724c068bc9c227325abf9c0db52265163d7a87876cd"
+    },
+    {
+      "conversation_id": "rup-000074",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000074.json",
+      "sha256": "2d957b2d93fc29d2302261ed16a2ae23072eec949c8d9a06f7ea36ef4672e8c4"
+    },
+    {
+      "conversation_id": "rup-000075",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000075.json",
+      "sha256": "7e95deaf6e9a1c2cde7bf11b4d85de62e9ade32c16775c8db7a1391972bbef7f"
+    },
+    {
+      "conversation_id": "rup-000076",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000076.json",
+      "sha256": "d0bed3cbd58b6fa674d946ab95961f8df6122b0386369b74b6ae8ffdc2ff4296"
+    },
+    {
+      "conversation_id": "rup-000077",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000077.json",
+      "sha256": "0aa868af6a0d333bc890980a07c94eb9452064aa3d63dd7e06991a1fce6ddf05"
+    },
+    {
+      "conversation_id": "rup-000078",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000078.json",
+      "sha256": "c71fe9b1ddc3135c5e715661d71ce1f10b76d7fee6eb5e3e208019432df985ab"
+    },
+    {
+      "conversation_id": "rup-000079",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000079.json",
+      "sha256": "3fcdad4c35396aeb1ca4613860892447862fbb9f89842415dfce44ee7c16091f"
+    },
+    {
+      "conversation_id": "rup-000080",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000080.json",
+      "sha256": "c01e78bc228b791e366eb81700155225e68130ae1e60dbe415a54e933efc9454"
+    },
+    {
+      "conversation_id": "rup-000081",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000081.json",
+      "sha256": "c4fe04cc418326d900faa9649003b7dbcbad1c96812269f88f690fb08795ef2b"
+    },
+    {
+      "conversation_id": "rup-000082",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000082.json",
+      "sha256": "794b481533402b71e458aef5dce6430040dbdedeb8b17c93bb3390cac5ba7eb3"
+    },
+    {
+      "conversation_id": "rup-000083",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000083.json",
+      "sha256": "ba7e3d9987ee89b86c06d7e9a3fd5d7de2811f7355c7ff4b5c82cd7cebd8be19"
+    },
+    {
+      "conversation_id": "rup-000084",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000084.json",
+      "sha256": "b475611f1b91be0101359e6bc302724b3244848d400d02ac7c7b5e337853212b"
+    },
+    {
+      "conversation_id": "rup-000085",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000085.json",
+      "sha256": "6909faf3b0d9ba48c77e8c7e04a39350826055a61d9fa47c2a54f1795baf8444"
+    },
+    {
+      "conversation_id": "rup-000086",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000086.json",
+      "sha256": "dcca04bc052ae056efac948a4ed0c09afc15607122d76c190f00d797af0ace11"
+    },
+    {
+      "conversation_id": "rup-000087",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000087.json",
+      "sha256": "680dea81536d0fc0e0bce636377259342579461882f889fd1eabc3769668aea2"
+    },
+    {
+      "conversation_id": "rup-000088",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000088.json",
+      "sha256": "c29d0b0332e94e4b465b5ce2a9dba4b2b3c2d72d1f62cf89411e216290e91c7b"
+    },
+    {
+      "conversation_id": "rup-000089",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000089.json",
+      "sha256": "45ba4b7961d4dfc72873d3b03d2e43ac8daa1a883fce18254e4fa7fde936ca9b"
+    },
+    {
+      "conversation_id": "rup-000090",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000090.json",
+      "sha256": "32ac054b1e37067dfcedfe68b612fc19450ea697264a9e2a6b4b80e93d7a1353"
+    },
+    {
+      "conversation_id": "rup-000091",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000091.json",
+      "sha256": "ecf5e364f023e7e3dd46d932e654aebeceb8c756c5679bfe81c93ab08c07a055"
+    },
+    {
+      "conversation_id": "rup-000092",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000092.json",
+      "sha256": "8baafc5c49c9ddcd2fb2cf3f429b4ae04387e17768ed4ed2bbfd099f9483c2e6"
+    },
+    {
+      "conversation_id": "rup-000093",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000093.json",
+      "sha256": "d4d97ed8ee3027de88b4bafe83cd2178fdf903af9aa934d26c4bdc773256182f"
+    },
+    {
+      "conversation_id": "rup-000094",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000094.json",
+      "sha256": "94e24de3a0522eef51a10d627d9f0a294a26b652ecbb4255dcc7324c2ef13699"
+    },
+    {
+      "conversation_id": "rup-000095",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000095.json",
+      "sha256": "ea1bf733fff51a3e078bc9703b9dd6d02dd052cd4da77d79fb62c9299024d536"
+    },
+    {
+      "conversation_id": "rup-000096",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000096.json",
+      "sha256": "e7414e9391ae714e608fb92edbda94d483e8ada17f071b6dc6905b417c87ed0b"
+    },
+    {
+      "conversation_id": "rup-000097",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000097.json",
+      "sha256": "bbfb86bf44bbe479a5e3e7224f49741a16d7a3e1269869c1abb64af3ede9e9ed"
+    },
+    {
+      "conversation_id": "rup-000098",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000098.json",
+      "sha256": "6559a9e800a89fd139897c9a848bbafea0ab4debbdbbea6c263a68f67f03efc4"
+    },
+    {
+      "conversation_id": "rup-000099",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000099.json",
+      "sha256": "6ab27fa55b67b297809acb764822f735f415bbf55fd1064620ac535b14677245"
+    },
+    {
+      "conversation_id": "rup-000100",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000100.json",
+      "sha256": "226e7c99bf59bc72b71f5f49e95826b40e74346dd5239089dc5abbe35e08b5a4"
+    },
+    {
+      "conversation_id": "rup-000101",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000101.json",
+      "sha256": "1ce9c44243667e5cb8ed4fd998b8f9506b94b9e4eee91f5f2cdc0020624ffcf8"
+    },
+    {
+      "conversation_id": "rup-000102",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000102.json",
+      "sha256": "76edcc666afce83600f9a01fb6ffc649520d08a103b0a005aa55e4f295e39102"
+    },
+    {
+      "conversation_id": "rup-000103",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000103.json",
+      "sha256": "ddcc18b2c139d204ae20440872f25c41738f266bb727d09ba80ed0c9914eef70"
+    },
+    {
+      "conversation_id": "rup-000104",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000104.json",
+      "sha256": "db52fcf2dd691ce4cbb3f9374c82b09655ed0db82839c58a107ab4c4f2f56b22"
+    },
+    {
+      "conversation_id": "rup-000105",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000105.json",
+      "sha256": "21437d12d88f344cac59ae3005d230d1fe2375385c561690ad47914a3e2b05fe"
+    },
+    {
+      "conversation_id": "rup-000106",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000106.json",
+      "sha256": "9cadeeb9c0066ec50caa88a6f8afe099344f5e74bacb2d4e30b641c75064b6ae"
+    },
+    {
+      "conversation_id": "rup-000107",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000107.json",
+      "sha256": "afadb656c3d3cb38a055e8ecc9e9dd3897d30d6922c0aa5d981af00d5d817f79"
+    },
+    {
+      "conversation_id": "rup-000108",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000108.json",
+      "sha256": "3983068367af81d59bd6f162ed4619f8547d025fed1a67eadf3574a72b65c6e8"
+    },
+    {
+      "conversation_id": "rup-000109",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000109.json",
+      "sha256": "1ee8387fc2b11c36239e86c8ca4ef2dda72f511fe78c8184468637b22a062110"
+    },
+    {
+      "conversation_id": "rup-000110",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000110.json",
+      "sha256": "6148e96e81bca73c3d39bfb5fd50e813a9c1d4af5755b07b9a7a9c9a3cb86191"
+    },
+    {
+      "conversation_id": "rup-000111",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000111.json",
+      "sha256": "f23cf2f8d7dd4154c5bf111ca9bae54ed639f0956d230d9964dda0261f9169d3"
+    },
+    {
+      "conversation_id": "rup-000112",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000112.json",
+      "sha256": "2a96103f8faab5bdbcea7c86cfe43924653ae8b9f0015897a93e3f84aad40874"
+    },
+    {
+      "conversation_id": "rup-000113",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000113.json",
+      "sha256": "41395ecf8d7d77a8ef6748b756a5654787435760866e3df5a0a48039cc0cc853"
+    },
+    {
+      "conversation_id": "rup-000114",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000114.json",
+      "sha256": "f069c6ad01b322b8f978d67761bcfa4bd331a69b6dfa0a829e37d98842ee9675"
+    },
+    {
+      "conversation_id": "rup-000115",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000115.json",
+      "sha256": "96050d4e60eb8669bdd620409db8d2a34c3b68a6f09257cd5f0b72f04ebf3ace"
+    },
+    {
+      "conversation_id": "rup-000116",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000116.json",
+      "sha256": "af33e0628513c5a45b6600157bca501ad6296e8abfbc889ce346a302feea5569"
+    },
+    {
+      "conversation_id": "rup-000117",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000117.json",
+      "sha256": "6e1979cc4814e8a031727df800300afc45f35b1edc291e2ad2d1a1f8a011b460"
+    },
+    {
+      "conversation_id": "rup-000118",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000118.json",
+      "sha256": "d916824e45bc66f4d3460fb556d556e999f803de367e9e0a09d161556b2735d6"
+    },
+    {
+      "conversation_id": "rup-000119",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000119.json",
+      "sha256": "c501e9461d804abd8447eaab8da4d214bd86b6d22eabb772047caf09ed6667f1"
+    },
+    {
+      "conversation_id": "rup-000120",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000120.json",
+      "sha256": "5a2732cc2af1640fd1157ee4625aa7cdba084a33e340639ac85a1f9e243225f4"
+    },
+    {
+      "conversation_id": "rup-000121",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000121.json",
+      "sha256": "98622055c87cb413d1bc7b2d4480943183ae9a7a5d7ab20065cdfae49b3af079"
+    },
+    {
+      "conversation_id": "rup-000122",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000122.json",
+      "sha256": "056ed6477fcc7c3b3edbd5b74f528cdac449df832161491ba7248ead3bf472d7"
+    },
+    {
+      "conversation_id": "rup-000123",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000123.json",
+      "sha256": "bd92bcaaefa9821820644ce3532a10999fc840c517b72233fdd7bd0ed0725baf"
+    },
+    {
+      "conversation_id": "rup-000124",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000124.json",
+      "sha256": "2322b2b00bf57095ac20b911f9f3c9bd26f1cd4eaa13fef9ac83739e7711f609"
+    },
+    {
+      "conversation_id": "rup-000125",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000125.json",
+      "sha256": "0b498508ff49a93df5bb871ae48a3295080b0b7b1b0e1c2dbcf68ee6a205ac81"
+    },
+    {
+      "conversation_id": "rup-000126",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000126.json",
+      "sha256": "891399062e1520f56073bea3f8c84e1380cad87901372b98b8088031aec30e00"
+    },
+    {
+      "conversation_id": "rup-000127",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000127.json",
+      "sha256": "a673913731b47fcbbdd36a12a191ffdf28f837221d927abdd9112a565c882486"
+    },
+    {
+      "conversation_id": "rup-000128",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000128.json",
+      "sha256": "8108def50d8e1c83feefee32a008033ba986f6def258a71db49a5a497e519a89"
+    },
+    {
+      "conversation_id": "rup-000129",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000129.json",
+      "sha256": "4d56b17996006ae032ac2f7a5d5bfd945808c4d0747484f9b7b8b17ab1ef3bff"
+    },
+    {
+      "conversation_id": "rup-000130",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000130.json",
+      "sha256": "296e9fb6a3b5a417aa51f2812bb283b178aee784b8afff7ea5fa624808ac28c0"
+    },
+    {
+      "conversation_id": "rup-000131",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000131.json",
+      "sha256": "ae0404e420175e6a8c06ec5dba51a610ab9097b9974bcd0bee3ddde5f7f7b34a"
+    },
+    {
+      "conversation_id": "rup-000132",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000132.json",
+      "sha256": "d595e8c2d8558c1fddc2ac3072748146200820d264bbf2fb8e6ab46f65d4bbc5"
+    },
+    {
+      "conversation_id": "rup-000133",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000133.json",
+      "sha256": "7de3611e846a47379f0ed257e1b83427a0001f4e4ae4eccdc0a1555ff9fecdc9"
+    },
+    {
+      "conversation_id": "rup-000134",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000134.json",
+      "sha256": "0d19aa7d3ddbead697fa346e32296d1789ff416bd6ebe0e79419dee7696cf315"
+    },
+    {
+      "conversation_id": "rup-000135",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000135.json",
+      "sha256": "a412765e2bc038bd7aa0a3a41ea3853b6324163fffa8ee6e1e5a77b5fea4ebe2"
+    },
+    {
+      "conversation_id": "rup-000136",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000136.json",
+      "sha256": "25af1c88494cb5ba3d342aab2319fe5414532cbc34fe297de0f88f3b729a4a92"
+    },
+    {
+      "conversation_id": "rup-000137",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000137.json",
+      "sha256": "ef2f46e53fe17220325a69add3fa2534d235c6e9435117afe305e9a0c6ec9778"
+    },
+    {
+      "conversation_id": "rup-000138",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000138.json",
+      "sha256": "ac5787f8ab4f3125dbf14a806ab398da212a68b3473af1e92b54521c18a3e039"
+    },
+    {
+      "conversation_id": "rup-000139",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000139.json",
+      "sha256": "b0e399de7d966a9c759be9197bc33c9184cc4ecc8d3ebdb42f00baffad7003f3"
+    },
+    {
+      "conversation_id": "rup-000140",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000140.json",
+      "sha256": "46544133c17524b7d427dcbf1903e167a67ef1f7b2a00f21aa2baf6760526194"
+    },
+    {
+      "conversation_id": "rup-000141",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000141.json",
+      "sha256": "b9c0508c6b70b52a593064633eb17d57b5f8117b221feeb24ec65c74fc668a83"
+    },
+    {
+      "conversation_id": "rup-000142",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000142.json",
+      "sha256": "ec0a2d1ee4be1ae2baab176ce5b5f897eca7c3f7a31e218e0db94cb84be06f58"
+    },
+    {
+      "conversation_id": "rup-000143",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000143.json",
+      "sha256": "8ffd42dedff3f16011d2a0cf2adbf5aacda0f730fa12a36f3f8a6b39937f4984"
+    },
+    {
+      "conversation_id": "rup-000144",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000144.json",
+      "sha256": "8eb3bf4210433f4dce01dce060f2d3e9e127b3c14a92fea8e3cb70971508cb15"
+    },
+    {
+      "conversation_id": "rup-000145",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000145.json",
+      "sha256": "af374553bf02871fcd26af35df03111d933b513e3bcff17e0225ad7b6e06ccf4"
+    },
+    {
+      "conversation_id": "rup-000146",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000146.json",
+      "sha256": "ff08a6c0f63f37bd7f8397694ca6c360b8b0563cd96039bb4de8bcb22bca4d65"
+    },
+    {
+      "conversation_id": "rup-000147",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000147.json",
+      "sha256": "8aa2ab3eef0be498f16038f0b1fee89d6731e5c942eb710991aa8a0311412222"
+    },
+    {
+      "conversation_id": "rup-000148",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000148.json",
+      "sha256": "f2beaa8c3d1abae0781b7a3b7d41509f88031623317e31033bb399a5f08815fe"
+    },
+    {
+      "conversation_id": "rup-000149",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000149.json",
+      "sha256": "b4cadabae7e99c2d3e21b9013ac4d626cffa1bf1ce4328bf5625c8184c772937"
+    },
+    {
+      "conversation_id": "rup-000150",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000150.json",
+      "sha256": "05668a31c14dd85e5b5e30fc998c988831879551aa010a1f0728e859c2d7055c"
+    },
+    {
+      "conversation_id": "rup-000151",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000151.json",
+      "sha256": "9d2872fdd1e7422c72cf1f4d0a79e3e8267f61497925e2123da80f79bbe1f814"
+    },
+    {
+      "conversation_id": "rup-000152",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000152.json",
+      "sha256": "861bfd118d47d3465639e0afd147429183e906a3940ddd253793f9ba9c791f02"
+    },
+    {
+      "conversation_id": "rup-000153",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000153.json",
+      "sha256": "6e073100379886dfa643a6eb07110c0001e845ad2f37543c68b98c441d0c0693"
+    },
+    {
+      "conversation_id": "rup-000154",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000154.json",
+      "sha256": "b8e7e6086856f69f3ce64cb9d8b42aed15208ded99f16b9c892eaf1673bb9d01"
+    },
+    {
+      "conversation_id": "rup-000155",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000155.json",
+      "sha256": "a316580525677f6f6d25abd96acab5a22688065c4406de2e3d09ba0b21072e60"
+    },
+    {
+      "conversation_id": "rup-000156",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000156.json",
+      "sha256": "e5e2568dfbcdf4e807e950adb9727dfcac0bdd7f225ff9fe91816b2d65fda744"
+    },
+    {
+      "conversation_id": "rup-000157",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000157.json",
+      "sha256": "81f797fbd3f47eae29b4eca0c3e9ae7f91a3935b74e70c7a54f0ecce15e57360"
+    },
+    {
+      "conversation_id": "rup-000158",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000158.json",
+      "sha256": "724054e2eead56ea9f57f861249fadea1040d457886e893cd8b32b300bedd8c9"
+    },
+    {
+      "conversation_id": "rup-000159",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000159.json",
+      "sha256": "62e0f4c269a261f129a2c3a519805b11b81f30d2355ebb2808405e39b344cba4"
+    },
+    {
+      "conversation_id": "rup-000160",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000160.json",
+      "sha256": "b5a6854962d5e5ae4b8bc24c18d349743abb75bd79969711254d685469ca0ffa"
+    },
+    {
+      "conversation_id": "rup-000161",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000161.json",
+      "sha256": "a339acf0b93d52bbada86c3d2d191e9e10aa938f88763c05ae8985f058faf486"
+    },
+    {
+      "conversation_id": "rup-000162",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000162.json",
+      "sha256": "caf7a39c15cf9b9aec594109180aee287555c8f2f68ebfe3e493055e6c7ee754"
+    },
+    {
+      "conversation_id": "rup-000163",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000163.json",
+      "sha256": "9cdd99e8d83840a73aa1ce2fa94ff7086d1aa356fdb2e54b902adb8926b2698a"
+    },
+    {
+      "conversation_id": "rup-000164",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000164.json",
+      "sha256": "c157f09b86bee13eefb39101f07393eea1a624cb5b345cbbe035a4b49e19b39c"
+    },
+    {
+      "conversation_id": "rup-000165",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000165.json",
+      "sha256": "c067adb7fca4ad968077ddcf686a14ee8df97b2f1f889e70b2260711691cb067"
+    },
+    {
+      "conversation_id": "rup-000166",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000166.json",
+      "sha256": "d3140b4857b9071f07c4d356a64993eb917bcef167105e4109f0af3a02c7d434"
+    },
+    {
+      "conversation_id": "rup-000167",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000167.json",
+      "sha256": "3ac754a5cc338202ae64728b8f4d5f2806770401761431a86dbc78de9ea154c0"
+    },
+    {
+      "conversation_id": "rup-000168",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000168.json",
+      "sha256": "8dba3ad6ed99c9e14a0959310c74451aeb7fe879202e71802d80abe57f9a833f"
+    },
+    {
+      "conversation_id": "rup-000169",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000169.json",
+      "sha256": "228c378bc0cb18a0d379da075e8778218e85dc8437794bf22e2000de4edc9965"
+    },
+    {
+      "conversation_id": "rup-000170",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000170.json",
+      "sha256": "ef4c5f0f31f0e558773e7f6440c3d5d588c3b2eedd9da920b1f8b6c5f5b2299d"
+    },
+    {
+      "conversation_id": "rup-000171",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000171.json",
+      "sha256": "b01bdc1354cd2bacf7a77536f231d506489d7aa2ad0ab0bde56a812db3284836"
+    },
+    {
+      "conversation_id": "rup-000172",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000172.json",
+      "sha256": "0c8e46e4466d832c22669687f5c09d73648aa9ed637f0a571d7471252ee1eb14"
+    },
+    {
+      "conversation_id": "rup-000173",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000173.json",
+      "sha256": "44ad0b57041579bbe9ea7ef2e669dedcb3dc3ca501bdbd73b6ab4199e230edb4"
+    },
+    {
+      "conversation_id": "rup-000174",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000174.json",
+      "sha256": "7ebb2dd65bce6109de48cc5e064f3e2f03e07936a6a6517d8296973988b13fe9"
+    },
+    {
+      "conversation_id": "rup-000175",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000175.json",
+      "sha256": "4283f9c61c69d67d802b69ae0edd3aaec56304dcf5a03d075d9d897c9c3bfb08"
+    },
+    {
+      "conversation_id": "rup-000176",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000176.json",
+      "sha256": "fbf9322c0060e9da10cedf66a5f85c466591e911079ff80e660cd0a68e67e577"
+    },
+    {
+      "conversation_id": "rup-000177",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000177.json",
+      "sha256": "d0621eca4b4e0b11e6e193f03a98b18b22c67d8adccb1dabf13670eeeeea7049"
+    },
+    {
+      "conversation_id": "rup-000178",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000178.json",
+      "sha256": "f81fb3f3b0d22edd143f488baff8a53a6577cb4841aea05b0fa00683af6680f6"
+    },
+    {
+      "conversation_id": "rup-000179",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000179.json",
+      "sha256": "1257a3ea069a33c8bde5062ddd7a1163152d712acfdc22216f682254bfe51c54"
+    },
+    {
+      "conversation_id": "rup-000180",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000180.json",
+      "sha256": "0407151b29156470baed1d21f3f8bac53329a0e0f10f9a7aa3f9c51de861f00e"
+    },
+    {
+      "conversation_id": "rup-000181",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000181.json",
+      "sha256": "5594f33bc740b9bfe22d6d10b47e8a81c900b94a1aec585c5804efe056985579"
+    },
+    {
+      "conversation_id": "rup-000182",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000182.json",
+      "sha256": "eeb54d21ea3be3d11e27762643eb5b5a5e4dd65c7e40cdf35fc5132bd0c704f4"
+    },
+    {
+      "conversation_id": "rup-000183",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000183.json",
+      "sha256": "45de58c335d9bb1bed31bd2990ce46f9db570b6e718f26b53678c17e2b330d63"
+    },
+    {
+      "conversation_id": "rup-000184",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000184.json",
+      "sha256": "57c9f300b862d1f10553bf9eb2dd394dba4bb869b7d333dd659b485af2318683"
+    },
+    {
+      "conversation_id": "rup-000185",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000185.json",
+      "sha256": "ca650d505b3e74dfd7a9d0e769a67c2bed0c02413ce0ca4082b9c3284d3b8090"
+    },
+    {
+      "conversation_id": "rup-000186",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000186.json",
+      "sha256": "c841f915da6417c249e2fb58ab5a93d2b2028c6178ff0d4be9b2c35825f83ada"
+    },
+    {
+      "conversation_id": "rup-000187",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000187.json",
+      "sha256": "13a8b457f7a0508ae7b994a349d5b00095f348f0914e78385c246192f0822d65"
+    },
+    {
+      "conversation_id": "rup-000188",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000188.json",
+      "sha256": "c1f2b3948baf3df30a2e28cc2592e9563cb75b662fa64f832ecd96d4cb18f666"
+    },
+    {
+      "conversation_id": "rup-000189",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000189.json",
+      "sha256": "8d81b2c05936474efe80acf5b583e248f58feed736c8bf746207c72add5092b0"
+    },
+    {
+      "conversation_id": "rup-000190",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000190.json",
+      "sha256": "bae146fce52f9c04398c1d4a9ae87c6c04f4d6ade8f148f6e72ac5142ee68b3a"
+    },
+    {
+      "conversation_id": "rup-000191",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000191.json",
+      "sha256": "f3fdc0c78e6b36a97c46022fda11e647331f7d42407905904202c5f84740c6cc"
+    },
+    {
+      "conversation_id": "rup-000192",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000192.json",
+      "sha256": "3f8e2dcf2e7571beb9ac1b0c6044399b6d8f576fbb743c50929b5005416f6ebd"
+    },
+    {
+      "conversation_id": "rup-000193",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000193.json",
+      "sha256": "037e47b7a5059e9fce2255fe9a23c4534f9d87538e1eecd92c8d07da77140bd6"
+    },
+    {
+      "conversation_id": "rup-000194",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000194.json",
+      "sha256": "4b1dc757401438d376ebb0a10a884be6f5775f4dead0a7277c9a36dcaa5ff7f1"
+    },
+    {
+      "conversation_id": "rup-000195",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000195.json",
+      "sha256": "c3bb029b1c0f49cfced383c352dfd9c3390b4d9b017c16fe7b3ef0c37b95efae"
+    },
+    {
+      "conversation_id": "rup-000196",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000196.json",
+      "sha256": "012c20c49a56e6386f207a248893b2f218207a2d73c7c08e0c4dcd225610b975"
+    },
+    {
+      "conversation_id": "rup-000197",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000197.json",
+      "sha256": "51b0b65bc22b8147cc5275a0308b187db982a4daa408ab87c7579ac77923e7ea"
+    },
+    {
+      "conversation_id": "rup-000198",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000198.json",
+      "sha256": "ff82f8323d0378654c33acd876729cf2105ee59d6b8d9448334af681c5223421"
+    },
+    {
+      "conversation_id": "rup-000199",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000199.json",
+      "sha256": "e7597d9e45fe918459d8c1da75916f007fc966b409b4f9e20e3371270573e30d"
+    },
+    {
+      "conversation_id": "rup-000200",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000200.json",
+      "sha256": "b6f8fca95e355f66ce9e380c9cc22398fcc00c56132aebb17b5ab45f93c6d895"
+    },
+    {
+      "conversation_id": "rup-000201",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000201.json",
+      "sha256": "4310c66eeaa538d87e0a991d575583d61976b1ff0b979fc18e75f0e614afc2e4"
+    },
+    {
+      "conversation_id": "rup-000202",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000202.json",
+      "sha256": "182ab6d32d9b37b32aa2cd071ca511b7d9402bdb7e25b16d56c92ef114f348cf"
+    },
+    {
+      "conversation_id": "rup-000203",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000203.json",
+      "sha256": "a3cf0e73aa8df45ef3c78d7cb2d6285bdaeac6dd940cfdbcd87d463679744ac7"
+    },
+    {
+      "conversation_id": "rup-000204",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000204.json",
+      "sha256": "f8aec0ae7709827b707ebba45aeb6ba85c260c9a191f8983de7a365c0b8e4556"
+    },
+    {
+      "conversation_id": "rup-000205",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000205.json",
+      "sha256": "6aa0ab7ab096d9b24206dbfeba3254f4f9d3d76af3038329a8b2c90ef09ccf6f"
+    },
+    {
+      "conversation_id": "rup-000206",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000206.json",
+      "sha256": "5f38a06dcd836b3e5aa715fcc7aad3c84f1ab48e756e6792c86f1963120fca49"
+    },
+    {
+      "conversation_id": "rup-000207",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000207.json",
+      "sha256": "9c4ffd225ba550fa506aa885a190693f4299dfe08b5938c6f9a5f127da46ff04"
+    },
+    {
+      "conversation_id": "rup-000208",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000208.json",
+      "sha256": "42e7fbbfe37f178a7698dae2846c0a32a3f9586e81d3b28c2d1991524ee39f42"
+    },
+    {
+      "conversation_id": "rup-000209",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000209.json",
+      "sha256": "c75d011f214deaa23a105120599225b73359a4227acd6dd9e67245cd4471b60d"
+    },
+    {
+      "conversation_id": "rup-000210",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000210.json",
+      "sha256": "110ae7e910eb09cd5d923159295c6d0628cc1c036dd1e9ed29dc3f5beef03f3e"
+    },
+    {
+      "conversation_id": "rup-000211",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000211.json",
+      "sha256": "a87eab27d561ea7df8b4ccfaddf6e9be5a2bde275fbbf05f042474b1512b02a5"
+    },
+    {
+      "conversation_id": "rup-000212",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000212.json",
+      "sha256": "4180016920ad467740c88932c08f9f99423d91784ab2616874f0295aecfa49e6"
+    },
+    {
+      "conversation_id": "rup-000213",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000213.json",
+      "sha256": "465df8a9e0bf1b311423c5c3557d821db85b12c23ac827dd58a0c79f2334b1c2"
+    },
+    {
+      "conversation_id": "rup-000214",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000214.json",
+      "sha256": "1f9f76badfb72d598c4b5b67d5a0313c62d86e4c6b7ae5ac13395832f8574bfc"
+    },
+    {
+      "conversation_id": "rup-000215",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000215.json",
+      "sha256": "a917623f9c4b7703af1c2ece12223fe19eef8d0804664768fccfe5085a1b779d"
+    },
+    {
+      "conversation_id": "rup-000216",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000216.json",
+      "sha256": "71dc8ab2e604dddec8bdd01344a55bea4fc844d2b37473f16a5f9ca0e2fe450e"
+    },
+    {
+      "conversation_id": "rup-000217",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000217.json",
+      "sha256": "84967ebac780244fb42440ca921d724eecd98ad6b6cbbfbea3f160bdaec262c8"
+    },
+    {
+      "conversation_id": "rup-000218",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000218.json",
+      "sha256": "31b8d285fe8430e2e2d2377d0195b7f4061ce952807b620095b095e9746f51e4"
+    },
+    {
+      "conversation_id": "rup-000219",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000219.json",
+      "sha256": "bca81b96e063cc15a5aa97d0d60d7872456e263a7d60670184e4d4009775a712"
+    },
+    {
+      "conversation_id": "rup-000220",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000220.json",
+      "sha256": "564a2f8345588955be77261f67789cf99d27ba917f915f287240919e4e3f1980"
+    },
+    {
+      "conversation_id": "rup-000221",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000221.json",
+      "sha256": "62c4401c2fde3b1d687c30cec07109ccefb47694f6bfeb1645aabdbe4c973060"
+    },
+    {
+      "conversation_id": "rup-000222",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000222.json",
+      "sha256": "8166f223360ad98bd26783a08a60366f003a0c73198f22c67a5fb110fea3676a"
+    },
+    {
+      "conversation_id": "rup-000223",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000223.json",
+      "sha256": "6009b2eb9c71bc85bb6ebbf51397f1a2dab3702ab2b8697a9268408fc9eea430"
+    },
+    {
+      "conversation_id": "rup-000224",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000224.json",
+      "sha256": "e6abdd576cffa97c157f353a31c4403b98d8baf6305aa60b900bee1186bf188a"
+    },
+    {
+      "conversation_id": "rup-000225",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000225.json",
+      "sha256": "9b81c8d20159f884cd3a6f96a46177eb08d36624d58f3df294fa53294e3474c5"
+    },
+    {
+      "conversation_id": "rup-000226",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000226.json",
+      "sha256": "7b58ae06dbe12967332ed0262aa06c904a30be841c8c24441c541acb32c6a11b"
+    },
+    {
+      "conversation_id": "rup-000227",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000227.json",
+      "sha256": "fd71fe96048b3a5d27afc5450b91daf9fdbc70308b98d4eb62ac298adf9c025b"
+    },
+    {
+      "conversation_id": "rup-000228",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000228.json",
+      "sha256": "86e6f12840b7a5e6236a64b1187c8e9decb501b667e5956fab4f920514d157d5"
+    },
+    {
+      "conversation_id": "rup-000229",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000229.json",
+      "sha256": "641a5a7ece778c2e5b51a9907dea933d6544f8b607d5d4839507d18d3fde942c"
+    },
+    {
+      "conversation_id": "rup-000230",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000230.json",
+      "sha256": "e0d181af2b81ee12795825761abf7f6dfae1fafd6976441e541acb42a538c8ea"
+    },
+    {
+      "conversation_id": "rup-000231",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000231.json",
+      "sha256": "355d471fd79ea0e83e900de91a72779f97f47b7bda46610e9d4cbbc49f9c263c"
+    },
+    {
+      "conversation_id": "rup-000232",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000232.json",
+      "sha256": "4f070a65e261de3afbb2b6186b0901d7d8907b32f48c161054da96da5ea81b05"
+    },
+    {
+      "conversation_id": "rup-000233",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000233.json",
+      "sha256": "6e2861886243b2561f39a2a79891b5354d71e1fcd948b9da8be0abcb1ed1cad2"
+    },
+    {
+      "conversation_id": "rup-000234",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000234.json",
+      "sha256": "e0a3a76675066134a51319a7419d18b182ff4cbb0c9de051f9c7db6f51b8035d"
+    },
+    {
+      "conversation_id": "rup-000235",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000235.json",
+      "sha256": "ccb780529590979d61886fbd46a9f1aa43af821dc2af7958bf7e7321fb93fae5"
+    },
+    {
+      "conversation_id": "rup-000236",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000236.json",
+      "sha256": "7239209db57b40f79455793b84819319166f06ecb6d06b0e644f3a82096d4cb0"
+    },
+    {
+      "conversation_id": "rup-000237",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000237.json",
+      "sha256": "ddb5e0163e2f5253ac6df5daf608633919c27aed61670f8744c88d54ef2235c6"
+    },
+    {
+      "conversation_id": "rup-000238",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000238.json",
+      "sha256": "d32c02d127b61e75fddbe217dc7ed0d439d60ae638a7a0ca4e7f437dd3ae7023"
+    },
+    {
+      "conversation_id": "rup-000239",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000239.json",
+      "sha256": "5d55dbb5b6c8a80b0277d855d9519cba1fb2df2707a08e76bbe5a420ad1d9ddc"
+    },
+    {
+      "conversation_id": "rup-000240",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000240.json",
+      "sha256": "eca084c2ff44956d0d08610e20c85c3ed44b41270003bc99d48af77a359c5fde"
+    },
+    {
+      "conversation_id": "rup-000241",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000241.json",
+      "sha256": "9c430e36721a8f44bdd5caa7960f9458c79720fd2780f02cde8f982a89c1c7b5"
+    },
+    {
+      "conversation_id": "rup-000242",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000242.json",
+      "sha256": "15aa65fc6266319975c0a5360cfebe2c0502a9dacb9212adafd38f60fab58458"
+    },
+    {
+      "conversation_id": "rup-000243",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000243.json",
+      "sha256": "26d3e0e800410e96e5bd733d7de90ad5edbdef869ff6fcbc3239139bef0e6237"
+    },
+    {
+      "conversation_id": "rup-000244",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000244.json",
+      "sha256": "4fc749367634fd81e90e11c096dbe5a383c7eb86366c968bad5a5e86061c328b"
+    },
+    {
+      "conversation_id": "rup-000245",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000245.json",
+      "sha256": "ea8825f56a3930112430a1606203a1c04543381b8d55d2fe8f6170362db989f2"
+    },
+    {
+      "conversation_id": "rup-000246",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000246.json",
+      "sha256": "b95025dc6c7170c639a336b00844496fd5aae572c4ace4fd86916d03dc299623"
+    },
+    {
+      "conversation_id": "rup-000247",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000247.json",
+      "sha256": "740755478006f1f2b71197722edbac0c2d52bcbad22b907d8178fd9b6f1e356d"
+    },
+    {
+      "conversation_id": "rup-000248",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000248.json",
+      "sha256": "9dd23c3dd15e875d24d45996874e6c7bd72384db358e5ff8511838c9dc1d72ab"
+    },
+    {
+      "conversation_id": "rup-000249",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000249.json",
+      "sha256": "8decb213b86958ea2412958e39289398156f7217bb0cf99ce399d1261bbf92c4"
+    },
+    {
+      "conversation_id": "rup-000250",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000250.json",
+      "sha256": "81534af0ba18f6a42a36152cdeec13c54f3d4260314a5738992b33fb0de3c127"
+    },
+    {
+      "conversation_id": "rup-000251",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000251.json",
+      "sha256": "c3960da474fcdf0fe73c31dbf637b7af38f242a11163ba173892186890c116ec"
+    },
+    {
+      "conversation_id": "rup-000252",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000252.json",
+      "sha256": "93b59c6678290e3100cef7b7ae6c4798fa92bc1f0d5765752db7d10f56204ab7"
+    },
+    {
+      "conversation_id": "rup-000253",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000253.json",
+      "sha256": "079525e921aa5be84e99deffa0bd1851749e683f037d837f3a6812ae8b766a8b"
+    },
+    {
+      "conversation_id": "rup-000254",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000254.json",
+      "sha256": "4767e86f5d361741d9975fde8d2dce8f5429bf8f6e33a98d9715e09658ec9e44"
+    },
+    {
+      "conversation_id": "rup-000255",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000255.json",
+      "sha256": "7c2da35acf907180f2fcaecf950daf0db62825ab02b30fa7d223fbcf39d6124e"
+    },
+    {
+      "conversation_id": "rup-000256",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000256.json",
+      "sha256": "6a5f978276253c167a9df91def5d64708c37f93162bbfd258e8d996b815d9e0b"
+    },
+    {
+      "conversation_id": "rup-000257",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000257.json",
+      "sha256": "2eb8beac44791156abf6245324d3e419276a19f15a26f60b3c2092d02c351517"
+    },
+    {
+      "conversation_id": "rup-000258",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000258.json",
+      "sha256": "b52ebe711b528c386c1ddb42266e996195724001c69c7300f3d68e7d4a93e80c"
+    },
+    {
+      "conversation_id": "rup-000259",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000259.json",
+      "sha256": "d8cc0d53c0eafcf72efcd901528ca1363992e9bff6ff97a93c9e0a98288a6341"
+    },
+    {
+      "conversation_id": "rup-000260",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000260.json",
+      "sha256": "f2b14fe0d79770cc3b941b3574f535968af6069769107b47da1ada4657c99eb3"
+    },
+    {
+      "conversation_id": "rup-000261",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000261.json",
+      "sha256": "1bd6e2210a9ecbd2b5d343ddea487f302b8fba79e907a42acc7d0a5f1016424a"
+    },
+    {
+      "conversation_id": "rup-000262",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000262.json",
+      "sha256": "8801a2209bc3a2d39c9678f4d0b372e973b8dd031f10b03504577bee7fcf033c"
+    },
+    {
+      "conversation_id": "rup-000263",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000263.json",
+      "sha256": "45c7556cbfee0b49d33c1249c80be74be6ff81ea4a58df849a074dddb7c2dd32"
+    },
+    {
+      "conversation_id": "rup-000264",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000264.json",
+      "sha256": "955d41ad833f27fc5de43d7443d1cb660c4f78c27a6b81ae547bfd593c163432"
+    },
+    {
+      "conversation_id": "rup-000265",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000265.json",
+      "sha256": "96d581f66f6670da94cc9be39a2c9e1802c69abd1de0c98f8bba61d033e8d11e"
+    },
+    {
+      "conversation_id": "rup-000266",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000266.json",
+      "sha256": "c1492dfb5ee65ea31de70c9ed645e707682ceebb45a87461f86cbd6945d80419"
+    },
+    {
+      "conversation_id": "rup-000267",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000267.json",
+      "sha256": "667b2b2c817919fe508015dedecbac554308f91dab29d1e99d9f28914237fe8e"
+    },
+    {
+      "conversation_id": "rup-000268",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000268.json",
+      "sha256": "9d66e1690894a8b336d5848d7233dd50ffa0c44c852c35a6431aaeec9affbbad"
+    },
+    {
+      "conversation_id": "rup-000269",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000269.json",
+      "sha256": "78d1a3992164fa01bbff631bd7c318e35c76da5075599a6ef723b9d98d29c793"
+    },
+    {
+      "conversation_id": "rup-000270",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000270.json",
+      "sha256": "0f706701c9000fe069fa940fa79d2b1f1a65c0618b0c84a355f318f8fb25f360"
+    },
+    {
+      "conversation_id": "rup-000271",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000271.json",
+      "sha256": "1000c6bffcd01fc8bc25bafa506abfc87aba4555d9882eee0f1cb4143dcf8d1f"
+    },
+    {
+      "conversation_id": "rup-000272",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000272.json",
+      "sha256": "1d4db6f6aeb82508d68a5b0fe4b964a5240da23b667bcf73e1052408392f7115"
+    },
+    {
+      "conversation_id": "rup-000273",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000273.json",
+      "sha256": "fa8512cdf0d6ebfc699b5aa623a9ed6f8dfc075854b31333b194eb56e3c0b433"
+    },
+    {
+      "conversation_id": "rup-000274",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000274.json",
+      "sha256": "b3d6136aa6f82621115b48755bca1deba70287b361c4d2013b5b5f3be2b0956e"
+    },
+    {
+      "conversation_id": "rup-000275",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000275.json",
+      "sha256": "74ce41516e758ce03ebb9814ff099a5d2ca026f5467605a9a1626ed4bb74c048"
+    },
+    {
+      "conversation_id": "rup-000276",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000276.json",
+      "sha256": "080f09316f20662c4cc9e565d21f5a99179671ae1d0b011464b22eb95db2129f"
+    },
+    {
+      "conversation_id": "rup-000277",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000277.json",
+      "sha256": "ee63d4e2e024d9d324ff1001461de7137ad668c3d17deee4e76e4e60c2ebf370"
+    },
+    {
+      "conversation_id": "rup-000278",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000278.json",
+      "sha256": "8199b58b7a3e8f3786569aba3eccf76ac8f72970a7b55d0469ce4846b371eef1"
+    },
+    {
+      "conversation_id": "rup-000279",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000279.json",
+      "sha256": "5436944e3f84b7cabf6c567282177bd815aee6ecdf603d3de5c76a62eab714ae"
+    },
+    {
+      "conversation_id": "rup-000280",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000280.json",
+      "sha256": "29e81f424148b59dd2770ee6ef28c7def3a1790d874be44f5a6f5751732ed613"
+    },
+    {
+      "conversation_id": "rup-000281",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000281.json",
+      "sha256": "1ed6bce451abfce31d4af1688ab7198f3f4f5417d7bedff691f3019d20abf547"
+    },
+    {
+      "conversation_id": "rup-000282",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000282.json",
+      "sha256": "99b05c926e536dd3456e5f42d014a29522a114d6263a5a9dc782e1315a75b36b"
+    },
+    {
+      "conversation_id": "rup-000283",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000283.json",
+      "sha256": "1f04e382f43c2523a93656c3e6ab13ee4b9d7fddefb105689adb95aada136d41"
+    },
+    {
+      "conversation_id": "rup-000284",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000284.json",
+      "sha256": "086b38346208f7181d33fb12dbe81847ec0a7c60d7640152ff21ccd0c0775c35"
+    },
+    {
+      "conversation_id": "rup-000285",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000285.json",
+      "sha256": "43ee16064dc9b336ecf602f98e59ab0e850ed0d78002b23d1d32701efe663b6e"
+    },
+    {
+      "conversation_id": "rup-000286",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000286.json",
+      "sha256": "284c76944f4e1414853fba59d6dfe0a831ab7036090e029db2a31c17c1e6a67d"
+    },
+    {
+      "conversation_id": "rup-000287",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000287.json",
+      "sha256": "4f52785a6a7b8b4ddbada8d198081747b0ed6aabedc49b322c2ec0999bfb0527"
+    },
+    {
+      "conversation_id": "rup-000288",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000288.json",
+      "sha256": "d2f7f2710784202f00d8b97ea53738d7523e5592c9ac734789a4281a08e7a491"
+    },
+    {
+      "conversation_id": "rup-000289",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000289.json",
+      "sha256": "e45c0bfbea7cada49041d778fd04c81f3c3d61340ff724ad2287a14a346175e8"
+    },
+    {
+      "conversation_id": "rup-000290",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000290.json",
+      "sha256": "2e491cc13f8e4d38dfd8d5653a5261a58f04019adf16b5bb03f98f3d8b82b47f"
+    },
+    {
+      "conversation_id": "rup-000291",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000291.json",
+      "sha256": "6b30178fe76cfd3a6089f9bf61467c1c1095fa05f8353977b2ddfbff1243ee6b"
+    },
+    {
+      "conversation_id": "rup-000292",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000292.json",
+      "sha256": "2eefc603389ff332e7c43d78dc72a14071287d7a3e6cc704800a8fbd923af4be"
+    },
+    {
+      "conversation_id": "rup-000293",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000293.json",
+      "sha256": "3553cbd6a0c32e54397c111cc83fd318d523c06fc96dee769050ee75e62cf9df"
+    },
+    {
+      "conversation_id": "rup-000294",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000294.json",
+      "sha256": "e6ce5adde93eaf32228dd1faef979c277bc89a320070e7f16f0226de3e0de1d5"
+    },
+    {
+      "conversation_id": "rup-000295",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000295.json",
+      "sha256": "33ebf08836217bdb2bb02598eb30b47c6ab3c365e46ee0a7a0efa5225adb77f0"
+    },
+    {
+      "conversation_id": "rup-000296",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000296.json",
+      "sha256": "9e8a65a52c1098b5bdead7eb66237f2162a2deabf14150e0e3adde1a03ec3891"
+    },
+    {
+      "conversation_id": "rup-000297",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000297.json",
+      "sha256": "258c298eebd69c4f9331f5bc341d541f83ea5d676c6cf6f5a9ff105f421cc089"
+    },
+    {
+      "conversation_id": "rup-000298",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000298.json",
+      "sha256": "2360a12f866c46fe67bdc11e519d8e5d44ac0511114f5c6485b782fc7951d1bf"
+    },
+    {
+      "conversation_id": "rup-000299",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000299.json",
+      "sha256": "6010e1bf7b1fcd5dfec5ab5b96e01c255269d5751b6164f89b2f9a65e2d87f6c"
+    },
+    {
+      "conversation_id": "rup-000300",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000300.json",
+      "sha256": "01f4bf70b8f97799edb85144c049dfb3ca3bdbf4c8d5efe9166218a9fcaf20db"
+    },
+    {
+      "conversation_id": "rup-000301",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000301.json",
+      "sha256": "590db237eb52bcbba30c9ef9d23419ad6239cbd64d81e66fa32d67f181ea07a2"
+    },
+    {
+      "conversation_id": "rup-000302",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000302.json",
+      "sha256": "d83480b229e3460ef513cfb3194bc58c6ac1d833ba59eae659702b4bdb9f9d4e"
+    },
+    {
+      "conversation_id": "rup-000303",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000303.json",
+      "sha256": "4f6217f510bb3a1421855aa78475a2b6b470d842f6493486846dcc00d40c78c5"
+    },
+    {
+      "conversation_id": "rup-000304",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000304.json",
+      "sha256": "23e057596fd77dc9652c01cc3b9c61516ea146a2add7d85ca5c994e527712fcb"
+    },
+    {
+      "conversation_id": "rup-000305",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000305.json",
+      "sha256": "57d3fce77aa6c1c19634594bd61d3c9bee70f00481944de660d8775440cfa899"
+    },
+    {
+      "conversation_id": "rup-000306",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000306.json",
+      "sha256": "15e4126d80d79baa71276d617b22d95a1c5411e4ae484cf48343b182a98ae88d"
+    },
+    {
+      "conversation_id": "rup-000307",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000307.json",
+      "sha256": "a44a5f55426ca5b7a43de2a976dbdd3f186c5a72801274cc8bb4068023c3013e"
+    },
+    {
+      "conversation_id": "rup-000308",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000308.json",
+      "sha256": "7d24f409a145296d0cdd24f7900dfe557e5d7b523701e2ebd9b2dec25ca8512b"
+    },
+    {
+      "conversation_id": "rup-000309",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000309.json",
+      "sha256": "cefdfc43fb5d931833e16d03d5254166636b1c6b8fb087a8cd4c145c79d8f59b"
+    },
+    {
+      "conversation_id": "rup-000310",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000310.json",
+      "sha256": "24794f56398d0dca059ce7a554a48cfde45b26a11657e1c38e09626e47200a8e"
+    },
+    {
+      "conversation_id": "rup-000311",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000311.json",
+      "sha256": "e702d288dd10f171e01ed687f3419d1888df9fe0ecdbef430cab2a70fd453a67"
+    },
+    {
+      "conversation_id": "rup-000312",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000312.json",
+      "sha256": "709c24fad1aeeab7b0876f50c74fc2296f951e6e0555f565d13299cdc8d6ee1d"
+    },
+    {
+      "conversation_id": "rup-000313",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000313.json",
+      "sha256": "bc3756fbfc0253c1f7d9cc0c0e5d0a9587429eef182689e59994ac616c628022"
+    },
+    {
+      "conversation_id": "rup-000314",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000314.json",
+      "sha256": "3f2f048fbbf39700a2f655f42cb0d45da4d235ac140811647dc6da9918e99424"
+    },
+    {
+      "conversation_id": "rup-000315",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000315.json",
+      "sha256": "b39783d32bf4ec64e60a5716a484f758a6b0eac4798c2eca347bd5e6149aad93"
+    },
+    {
+      "conversation_id": "rup-000316",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000316.json",
+      "sha256": "d249998fc04f74b85d88dc3b54e2b3e29fe71805dda1a18fc36968395e57a475"
+    },
+    {
+      "conversation_id": "rup-000317",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000317.json",
+      "sha256": "4d9a0b2f001d47e37fcb5d00ad44fdbe175e9e9436725028974bce72727ebe19"
+    },
+    {
+      "conversation_id": "rup-000318",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000318.json",
+      "sha256": "d9ef9c37207debc351c7026bb1a8e67a1e80cb553e6d675ed24c8eaa705258ac"
+    },
+    {
+      "conversation_id": "rup-000319",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000319.json",
+      "sha256": "66b9ce321471822ec184cec6df3ea02ab4c3dbe20f94fa7f0476a5f98f597328"
+    },
+    {
+      "conversation_id": "rup-000320",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000320.json",
+      "sha256": "5dbecfb76a003d423a34271b34eb4301fa24717e46b251b597f1e6e99a2a5dc3"
+    },
+    {
+      "conversation_id": "rup-000321",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000321.json",
+      "sha256": "98bad367aab9e52be9c107dd93d98ff2a465fc15e2a39cfaae606034a25bc0a3"
+    },
+    {
+      "conversation_id": "rup-000322",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000322.json",
+      "sha256": "0fe1c81276f6189b1619fc20bf6018121d82bd93d8e2ce8ff4a68668cb6801e2"
+    },
+    {
+      "conversation_id": "rup-000323",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000323.json",
+      "sha256": "bbae03ed80d9c06da59ad843ca8cf9462175882fbdfa380ce002298595887c17"
+    },
+    {
+      "conversation_id": "rup-000324",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000324.json",
+      "sha256": "e39d220c2842d5240f7115442a237b274746d182bc01c48e6226806d9e4986dc"
+    },
+    {
+      "conversation_id": "rup-000325",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000325.json",
+      "sha256": "2918ed34431ade5e631be7d00bea357a5f4d7359da59bd13fcaf29beab4cbf8e"
+    },
+    {
+      "conversation_id": "rup-000326",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000326.json",
+      "sha256": "9588f1dec43a50a0fe5b3e6e9d801d89b3ca0ac3228389bc6105ae258d727b8f"
+    },
+    {
+      "conversation_id": "rup-000327",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000327.json",
+      "sha256": "cf8c8569930cbf8d874e3686633218293a2462ea4eb6027e50418691d52111b2"
+    },
+    {
+      "conversation_id": "rup-000328",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000328.json",
+      "sha256": "4970fa26d975502b33fc12e31f98995bf052da1e81c3a59738852c6e97b9545a"
+    },
+    {
+      "conversation_id": "rup-000329",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000329.json",
+      "sha256": "50ade21c43e119cb988c51b6a66b88b2c73bcfe5ab4d4b3ef6362694123fcd5c"
+    },
+    {
+      "conversation_id": "rup-000330",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000330.json",
+      "sha256": "56cc6bab87726a1a65ff6e1106ccd1d8141ecf5bcb59d443ff16e395ca9f563a"
+    },
+    {
+      "conversation_id": "rup-000331",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000331.json",
+      "sha256": "fae194aacbce5dcc6ff2ba1c1e73b72b20a791b4d5b2b04fc98bb5db15771a71"
+    },
+    {
+      "conversation_id": "rup-000332",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000332.json",
+      "sha256": "f740d7af246bcbf8eb56ecea1f634660638c7a23e0521b3ae9fb805270c45cdd"
+    },
+    {
+      "conversation_id": "rup-000333",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000333.json",
+      "sha256": "629c0f33f9113aecf910b607cced54e978c4311f7a03d51ff9dfb4b8be685203"
+    },
+    {
+      "conversation_id": "rup-000334",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000334.json",
+      "sha256": "85724920080ea106fc407e0c87addcd61365f7e59861788cc0746016065c5d87"
+    },
+    {
+      "conversation_id": "rup-000335",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000335.json",
+      "sha256": "bea741188bfeb65eb787f1c37266408905c68da69f8bded26408a652e3c337e3"
+    },
+    {
+      "conversation_id": "rup-000336",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000336.json",
+      "sha256": "51c80c9d1d82f69053d3ce538654344f06bcce1e2139a66f7539ce32a09f71af"
+    },
+    {
+      "conversation_id": "rup-000337",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000337.json",
+      "sha256": "53325749d4a0dff1aa0e7594b5416989bcdc84cc6cd1a3ad1188ecc89bbdeb89"
+    },
+    {
+      "conversation_id": "rup-000338",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000338.json",
+      "sha256": "3bacf6cd7ef8fd90f1c674c12d7cc24406b1fd9e5c265d53b4343f0f7033b450"
+    },
+    {
+      "conversation_id": "rup-000339",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000339.json",
+      "sha256": "9a0cdf23ae2b161a0c422696a375012690137cff9ca881841aa8ec3f0905fa18"
+    },
+    {
+      "conversation_id": "rup-000340",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000340.json",
+      "sha256": "5fe1a803c7ef7ee8fa206624bb6fa18564b425af47b39bba5d740b6fb4a16367"
+    },
+    {
+      "conversation_id": "rup-000341",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000341.json",
+      "sha256": "76a8d8368a8cf03e2dbfef0f8db0398fcf3477d1b7633202d0243feb21aca75e"
+    },
+    {
+      "conversation_id": "rup-000342",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000342.json",
+      "sha256": "fbb50855163b0fa37e4589d0c9736130ae5e1af7f29e1fdb676a9b57251af4c8"
+    },
+    {
+      "conversation_id": "rup-000343",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000343.json",
+      "sha256": "2da7c7001bda1a098f1f6a86c120c6c1b74c3a22a3d2412924eaab7af5611698"
+    },
+    {
+      "conversation_id": "rup-000344",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000344.json",
+      "sha256": "e1cfb74c1d10a25c8c46b40f7024272ff97cf26caa32862faa60d26a2c6b7b91"
+    },
+    {
+      "conversation_id": "rup-000345",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000345.json",
+      "sha256": "dbc8fb1f84099c82597e0e0b81e07b57ee54244aed1e52d973ba4f6f49de0892"
+    },
+    {
+      "conversation_id": "rup-000346",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000346.json",
+      "sha256": "34b8d7b5e8f075a9dd2ebec7afe1bdb863e8c8fef6ce4af2b238e394e926dde3"
+    },
+    {
+      "conversation_id": "rup-000347",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000347.json",
+      "sha256": "c052ee7e15a4a647980884a4d32db47336a80c23c4fba18dfb94e1bda50eb4d8"
+    },
+    {
+      "conversation_id": "rup-000348",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000348.json",
+      "sha256": "9a73207db06ef716954eb5534e165d879e4ebd2bbc907ba759534404bbd0520d"
+    },
+    {
+      "conversation_id": "rup-000349",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000349.json",
+      "sha256": "daa053213048cb0ad5b56732bd6418d9bb33bfc7d62f6120fba179a1e396b404"
+    },
+    {
+      "conversation_id": "rup-000350",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000350.json",
+      "sha256": "80639c5a8c1bfa2683b6dbcd22995ac6f40c52e3333f9dfa11c19df084fc2b9e"
+    },
+    {
+      "conversation_id": "rup-000351",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000351.json",
+      "sha256": "d16db8dc70334cb9aded08a4be63633f2e7e35ad5768c5170b3b926a751a83f8"
+    },
+    {
+      "conversation_id": "rup-000352",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000352.json",
+      "sha256": "48a850ac4b7511fa432753996868d24b3d2f811a888f97509d1bba5b4cbd4b47"
+    },
+    {
+      "conversation_id": "rup-000353",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000353.json",
+      "sha256": "aa710c15010b223e3cede5256e85d255bf46bde69a8a39143905e203deec8ad1"
+    },
+    {
+      "conversation_id": "rup-000354",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000354.json",
+      "sha256": "94e960ea446f67bb89afe4ff46b445082a5d634a6ce886cdf3bdfa78d604d4bb"
+    },
+    {
+      "conversation_id": "rup-000355",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000355.json",
+      "sha256": "66a13d324771facda21104174b8063312af0702b15b89b663be6610b7be8b417"
+    },
+    {
+      "conversation_id": "rup-000356",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000356.json",
+      "sha256": "c3c76089d87e124a677548fc0c03078a4d52df09ccf18f44495eb746dafe54b5"
+    },
+    {
+      "conversation_id": "rup-000357",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000357.json",
+      "sha256": "824e16be8a240397a7495af3a6471be55d05ae15e1c3d65ce54f911f8660a5ca"
+    },
+    {
+      "conversation_id": "rup-000358",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000358.json",
+      "sha256": "f8213475e5bbcec8e0213b11c73406c61ca3f13a2b85d7f9421663782894a550"
+    },
+    {
+      "conversation_id": "rup-000359",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000359.json",
+      "sha256": "36bcb11393ba3c766cf1460dea6ef2b51c390844cebdd993ddc6cf6d5efa8ec9"
+    },
+    {
+      "conversation_id": "rup-000360",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000360.json",
+      "sha256": "3d96f6164d6eb5ba392252d1e9d832128ef836e4bd3bcf355742a8df2124f794"
+    },
+    {
+      "conversation_id": "rup-000361",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000361.json",
+      "sha256": "8c9f0d0277e4a018859a86bd1b03a58d69f1fdff059aab2150b019374683a4cd"
+    },
+    {
+      "conversation_id": "rup-000362",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000362.json",
+      "sha256": "b7b637891d567aaa4e82f4e2d23472515bac364149cefbccfb48728e8da1cd11"
+    },
+    {
+      "conversation_id": "rup-000363",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000363.json",
+      "sha256": "d2dc6287e8ea7f0865376bbbbfe89345638303b85b509c1f20514e613975e32b"
+    },
+    {
+      "conversation_id": "rup-000364",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000364.json",
+      "sha256": "9a60acb25b27d99833b0b08631c469a5d7610d0c7b484eb2ac58432fe54c21f2"
+    },
+    {
+      "conversation_id": "rup-000365",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000365.json",
+      "sha256": "8264c85ac8811e81022d2ab95b1eae895b9522df3e04ea661e606e7983266e7e"
+    },
+    {
+      "conversation_id": "rup-000366",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000366.json",
+      "sha256": "0a3beb48dec4689923eb863e35b948a18ab8bcb5e5356754ebac9755d8ba7671"
+    },
+    {
+      "conversation_id": "rup-000367",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000367.json",
+      "sha256": "0fdb9197899ccae19782d9394ac49c5881e7e4a9a16b3b8ab5d3d5e8b1747959"
+    },
+    {
+      "conversation_id": "rup-000368",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000368.json",
+      "sha256": "fdfa29162625646d50eea345970eda3f55fd54091f4a92fd2a0960d8c9be691d"
+    },
+    {
+      "conversation_id": "rup-000369",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000369.json",
+      "sha256": "26d3e252fd6f249ef4a9e2ea4b7b558dad42efe511c9e85d759e7bd415b3a7a1"
+    },
+    {
+      "conversation_id": "rup-000370",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000370.json",
+      "sha256": "7a7883a6769584a533193e569bf9faaf8db02346926d50098e29cefbfa0e1689"
+    },
+    {
+      "conversation_id": "rup-000371",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000371.json",
+      "sha256": "aa5e19519fc01d4f799efda57d243dbb200dd7d3d444e181eb5d3c7ec151886c"
+    },
+    {
+      "conversation_id": "rup-000372",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000372.json",
+      "sha256": "48b2f267f9f54e0b9be63acea70768591566e39627a4bbe8996e018a73c3815a"
+    },
+    {
+      "conversation_id": "rup-000373",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000373.json",
+      "sha256": "d54d6c82210fbcc3536ccdc06ed631375358c6e1974fbb1ec87a931cd8f6f7b8"
+    },
+    {
+      "conversation_id": "rup-000374",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000374.json",
+      "sha256": "a3776cec3b5a7e67dc8ea057e71be1c4981cd9a297ae5d8ff177821cccf668b3"
+    },
+    {
+      "conversation_id": "rup-000375",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000375.json",
+      "sha256": "d6f99067d5cd3af82815bb3ce62a4180004b805c9d6088132ab8cc9a420f89fc"
+    },
+    {
+      "conversation_id": "rup-000376",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000376.json",
+      "sha256": "3c42660d8a857bdc40efd3e97df63e25f8e437b074193dd493b2f9def7a80bc7"
+    },
+    {
+      "conversation_id": "rup-000377",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000377.json",
+      "sha256": "2d1aa13f5b7ee0f1f1b4fcde075e6b60a7a82a4a3ec33413d465239f5bbf9568"
+    },
+    {
+      "conversation_id": "rup-000378",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000378.json",
+      "sha256": "bfb20450e454a0c96bfddeecc03995c3c9e7e48efe150b09b1edfb3e72a171a8"
+    },
+    {
+      "conversation_id": "rup-000379",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000379.json",
+      "sha256": "4dff5b263803a548fd3eea38106c85266a0603be9cf09a78dd5ebf0210a30deb"
+    },
+    {
+      "conversation_id": "rup-000380",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000380.json",
+      "sha256": "0c4e065c87de868369aa67b2dceef9701f6728492867156fc10a9a2f6ca1e88a"
+    },
+    {
+      "conversation_id": "rup-000381",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000381.json",
+      "sha256": "ad95154472605319dd4a265f2a491b00613b01f3692f76f80b15b96ffc9c8780"
+    },
+    {
+      "conversation_id": "rup-000382",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000382.json",
+      "sha256": "5f808d2e9fc6ede7b00894e49545656bd05b2e4c020ffbd85b4447c8021cb348"
+    },
+    {
+      "conversation_id": "rup-000383",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000383.json",
+      "sha256": "c4805458d6ad1147dd9ada3dffd72d1a259da29689bea58422d7c03bea83c89f"
+    },
+    {
+      "conversation_id": "rup-000384",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000384.json",
+      "sha256": "64310772266e1c649965609fa39a2e07b9f635ad221905d37b173248db2ff7bf"
+    },
+    {
+      "conversation_id": "rup-000385",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000385.json",
+      "sha256": "f4c6961a92d2d89615dbc33ba26acc969f11926ec30efa36f5d2d5390744ac20"
+    },
+    {
+      "conversation_id": "rup-000386",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000386.json",
+      "sha256": "fdd10f0219194aac022ace205202bc75c2153ed23565a60bca1f8172dcb4edcb"
+    },
+    {
+      "conversation_id": "rup-000387",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000387.json",
+      "sha256": "f47a76e400f5d3c92f531a840b5510ff55f55576627fd1043d12c8474fc2e0ee"
+    },
+    {
+      "conversation_id": "rup-000388",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000388.json",
+      "sha256": "ad9e104759961f4b905bc81cd65bb51ac916735718a387ad0ec2cf44e8430cc0"
+    },
+    {
+      "conversation_id": "rup-000389",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000389.json",
+      "sha256": "e5332ea7c8c00e73f94e535c4f0f9c3e3edc5d79a3181a71de31ca6c7a6a7d5f"
+    },
+    {
+      "conversation_id": "rup-000390",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000390.json",
+      "sha256": "02c1969d93e13aec8b36e98ca1c1c2eda5c2ac20eab4969d66843c7a5c9ca463"
+    },
+    {
+      "conversation_id": "rup-000391",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000391.json",
+      "sha256": "59a4affe80e5321ad2da11a7729b0d8d538c56c6fe3e042b597e1c889588ada2"
+    },
+    {
+      "conversation_id": "rup-000392",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000392.json",
+      "sha256": "56f9140bd2610ea74e9ac3bfd7edc68408c9f5922d93701f849b3a25919466c5"
+    },
+    {
+      "conversation_id": "rup-000393",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000393.json",
+      "sha256": "bc80cbcc0087cc74d2f6f9a80d2a311818fc3c3e3f36a06cee12acdc055a3623"
+    },
+    {
+      "conversation_id": "rup-000394",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000394.json",
+      "sha256": "d45f8e5ff505f6b249be137a8884599d22454f3f8b16c6ff091950a5c2af44c6"
+    },
+    {
+      "conversation_id": "rup-000395",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000395.json",
+      "sha256": "8a1e688214d892d84e72e8812f1fa99714697b7992e118e72c5787e7013d1f5d"
+    },
+    {
+      "conversation_id": "rup-000396",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000396.json",
+      "sha256": "4a3de428d92df7206bf315e90ee2c335a06c3fc9414f3ae9e5b1375f66698814"
+    },
+    {
+      "conversation_id": "rup-000397",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000397.json",
+      "sha256": "b8c0ad277c34ec058fee94596b7be677929f7ed5e3200c54e5fa1f9750ea10ff"
+    },
+    {
+      "conversation_id": "rup-000398",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000398.json",
+      "sha256": "b524f38380f01723ff8b1b090f07a34434eac1c4c49bc7914db8f0c8e24abfcf"
+    },
+    {
+      "conversation_id": "rup-000399",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000399.json",
+      "sha256": "554bc0ae6ee0f9ea18eb36b30d20f200e97978812f4c38af3d79edf64e62b733"
+    },
+    {
+      "conversation_id": "rup-000400",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000400.json",
+      "sha256": "9b12a167a61bd3cb8b70dfc1644cbf61b86e8e4662fb1835d51a45c6463fc480"
+    },
+    {
+      "conversation_id": "rup-000401",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000401.json",
+      "sha256": "b99db4212c9263644e6d90ac4dd0c4865c5689e0fbaddf9df6461812a18e477b"
+    },
+    {
+      "conversation_id": "rup-000402",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000402.json",
+      "sha256": "6846425864ffb47d1c9abff3e56eb79fe5313188fb9f9e3c2a3863dbfeb4524d"
+    },
+    {
+      "conversation_id": "rup-000403",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000403.json",
+      "sha256": "6f59b0030547fac3b20b2c1efdf52fb4b3daccd316777c70c543fd210341d8e2"
+    },
+    {
+      "conversation_id": "rup-000404",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000404.json",
+      "sha256": "731cc9f589c675719a24fe32fb3344021207be49d14935b670d992cd04816e14"
+    },
+    {
+      "conversation_id": "rup-000405",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000405.json",
+      "sha256": "e5972320a9ce4654de806b004a9060f9ea7190b587e6690676b029bd6adaaec7"
+    },
+    {
+      "conversation_id": "rup-000406",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000406.json",
+      "sha256": "1b83136f783ec7401fece56467fcde87d0122d5fb49416e80e819b7425bf1fe1"
+    },
+    {
+      "conversation_id": "rup-000407",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000407.json",
+      "sha256": "6cf6f5e704eb5064b1ffb0a94441a4d939b65badbeb36f3b27bbb88ab80ff5f9"
+    },
+    {
+      "conversation_id": "rup-000408",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000408.json",
+      "sha256": "93e48dfbbc7d7026c46280fb21bf1821e997d726da1d9f3ed30894edb32fc37c"
+    },
+    {
+      "conversation_id": "rup-000409",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000409.json",
+      "sha256": "196abe6a74dbabefd51d34fa4ba427ad054b4d3de576f7bed12b5b913a34739d"
+    },
+    {
+      "conversation_id": "rup-000410",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000410.json",
+      "sha256": "b10600139f50ba69cfb678f5c74632ee4c4820acd054afc7ccb8e77706a57e3e"
+    },
+    {
+      "conversation_id": "rup-000411",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000411.json",
+      "sha256": "9517de74c39eba16b83e3997bed80fd789f1ffd785a57b0bebe2bd71f9aa240d"
+    },
+    {
+      "conversation_id": "rup-000412",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000412.json",
+      "sha256": "47197a763d2d36ff3e1a5daf67c3cbe047c5b49e520534ceae8beb6a525d662c"
+    },
+    {
+      "conversation_id": "rup-000413",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000413.json",
+      "sha256": "26ea21f90817bc157a13b148a03c58b4a963210eef7d144d117623693e3e3444"
+    },
+    {
+      "conversation_id": "rup-000414",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000414.json",
+      "sha256": "b341ae06d7278e59bbf16a19e9efff7c5d4c2f7fa47967b275b100a7ae817dd1"
+    },
+    {
+      "conversation_id": "rup-000415",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000415.json",
+      "sha256": "82d1ee74d1aa0bfd91aaeafd436d1a0efd9d56d02e9b171c2de190cc7da4277c"
+    },
+    {
+      "conversation_id": "rup-000416",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000416.json",
+      "sha256": "c0ed16e27ce1eccdfd2b9de559b85125b4ad233b137ce10c6baf0d00530ccb8b"
+    },
+    {
+      "conversation_id": "rup-000417",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000417.json",
+      "sha256": "101f3da0933299310d15d38b5ea4d58da5720224d326ffdd9a0cdc26444c6011"
+    },
+    {
+      "conversation_id": "rup-000418",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000418.json",
+      "sha256": "646545b328682ea4b389cc3b25b96b7f5b13ca3b8f4928f9de33bcddc299ecac"
+    },
+    {
+      "conversation_id": "rup-000419",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000419.json",
+      "sha256": "6d367be1975d33b589f8f937f6bcf1d8a2a1b13b413a36e94188deff93e161d0"
+    },
+    {
+      "conversation_id": "rup-000420",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000420.json",
+      "sha256": "61556941a7e5d6e3b7950a4ca9d6b66a6954e06262ef108f08575f5f163d0865"
+    },
+    {
+      "conversation_id": "rup-000421",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000421.json",
+      "sha256": "5d48f73164c2797ffdfe1b484aee702541fb4e5257ab0b1716f0a4d4640a2579"
+    },
+    {
+      "conversation_id": "rup-000422",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000422.json",
+      "sha256": "cef93eeb103f54bb4c255ba7b620d7570cd858ee4e988068b84c3e0f7b50a2be"
+    },
+    {
+      "conversation_id": "rup-000423",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000423.json",
+      "sha256": "9b4d948c6918aa578f218718d41d23404f7a90995868cf52ed35834972d64203"
+    },
+    {
+      "conversation_id": "rup-000424",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000424.json",
+      "sha256": "7188808d92dbb29490df667d8a048faa99ba23be595a82b0953cbd99955cec5a"
+    },
+    {
+      "conversation_id": "rup-000425",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000425.json",
+      "sha256": "7443c41bb713d6a49273100b95c8a8e6d2d36f4bdd4a2f1f42c99fa2dbc278d9"
+    },
+    {
+      "conversation_id": "rup-000426",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000426.json",
+      "sha256": "ef36fd71637073f28f16e63cfbcc19c53ed152be9eb8f75d87736beea82b9a47"
+    },
+    {
+      "conversation_id": "rup-000427",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000427.json",
+      "sha256": "665c7b05f53461746cc02c0b61bb642fc2145c09880791afe4086574a9e41a19"
+    },
+    {
+      "conversation_id": "rup-000428",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000428.json",
+      "sha256": "9d9076836d6c51a1de3ddce0b1b73dd2b3515d524bd7658f63b1c6e74902f097"
+    },
+    {
+      "conversation_id": "rup-000429",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000429.json",
+      "sha256": "470f252cd32818f3375dba658d874a81d153252d38d4b631dc5237398507754b"
+    },
+    {
+      "conversation_id": "rup-000430",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000430.json",
+      "sha256": "164bb7a44d20e612fc342d3323b96fddb2ccb52872fee73c540f8a808b579eb5"
+    },
+    {
+      "conversation_id": "rup-000431",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000431.json",
+      "sha256": "9654eb327765fd3ca6b8addfbc1ba3802495b900fbd058154a7b8fef40bccd96"
+    },
+    {
+      "conversation_id": "rup-000432",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000432.json",
+      "sha256": "e033e0ce8d79dff732387060edce4ccb1bb8c7bbeedecf41cfb7b7f5a68e5262"
+    },
+    {
+      "conversation_id": "rup-000433",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000433.json",
+      "sha256": "9ee7c8cf78ba18db617c63dda4a6fb7c72db3902295e753f4477ab3a43143087"
+    },
+    {
+      "conversation_id": "rup-000434",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000434.json",
+      "sha256": "9b3f5ff808132341f2c6ade37c18102a965e99574b1f9ec3aa104079ef27dd2d"
+    },
+    {
+      "conversation_id": "rup-000435",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000435.json",
+      "sha256": "d233c3647505dacd6b27c14e261b0be18ced623d418654dc1b7821930f99f915"
+    },
+    {
+      "conversation_id": "rup-000436",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000436.json",
+      "sha256": "7e1df1a49ece607a71b75cb3ae15c371fd09f3f1fb3881e4fba56614c773b312"
+    },
+    {
+      "conversation_id": "rup-000437",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000437.json",
+      "sha256": "048d110d11cdc56a14a610192cee6aad2ff62f5ffcae2c5987114973fc2792b4"
+    },
+    {
+      "conversation_id": "rup-000438",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000438.json",
+      "sha256": "b7d5a4ececaff15ad6ba2eef51c3c7fad90599b964caae1966504da06c4af87f"
+    },
+    {
+      "conversation_id": "rup-000439",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000439.json",
+      "sha256": "fd357fedf4d5e7ae25a53c10514aac2e6320e385d7604c776aa595b9ef5aa79b"
+    },
+    {
+      "conversation_id": "rup-000440",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000440.json",
+      "sha256": "bcd2968a399c3de271acfc7efdb73fdd60805aa3448bccb80fe29675ebe64c59"
+    },
+    {
+      "conversation_id": "rup-000441",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000441.json",
+      "sha256": "f39c00b0da6b825548b61a804b00985b53011438e15cf5c23178c8f0cda5a4e2"
+    },
+    {
+      "conversation_id": "rup-000442",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000442.json",
+      "sha256": "281197aa495aa3a7cee881a343c7ab3366037bad66bd9e0c9cee371338db8365"
+    },
+    {
+      "conversation_id": "rup-000443",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000443.json",
+      "sha256": "0624afc8270236b8821cfa5c6792e8a076273aacc84b347819ef2e078b8aca66"
+    },
+    {
+      "conversation_id": "rup-000444",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000444.json",
+      "sha256": "baf704754729537619ce700195b3823ad0c8c17b6fa33caafd4b5f13f115ea63"
+    },
+    {
+      "conversation_id": "rup-000445",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000445.json",
+      "sha256": "cf90d52325b721ab4f7abda84c87f23d926866dfca2059f20210d5f3ebb2d283"
+    },
+    {
+      "conversation_id": "rup-000446",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000446.json",
+      "sha256": "840160d70a88566a09ffcc886f1fbfdbb0604530c1bac9f701e3f7b3b2f35424"
+    },
+    {
+      "conversation_id": "rup-000447",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000447.json",
+      "sha256": "0783089d9d9da23af0539d292cac0bbc20282fa5447e6d857be605d5ae919509"
+    },
+    {
+      "conversation_id": "rup-000448",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000448.json",
+      "sha256": "148baa66176d7e437633b9a1c39f44d70f654a8d5831ada0cb4446be485854df"
+    },
+    {
+      "conversation_id": "rup-000449",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000449.json",
+      "sha256": "81c0fd58a4d394c28751011afe07101891b9bdaee0134a57d2c33dcd50255333"
+    },
+    {
+      "conversation_id": "rup-000450",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000450.json",
+      "sha256": "20dc0e4cb42aea217f3539916cea45860da6be661fd2d8ad327fb4c55dbf8808"
+    },
+    {
+      "conversation_id": "rup-000451",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000451.json",
+      "sha256": "f140109da0906cb9c0b130adc724d82abcf209deeec7cb8f392afa863c53c1a6"
+    },
+    {
+      "conversation_id": "rup-000452",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000452.json",
+      "sha256": "3f9ad757f3735bd09146f1b369104f8e966f026d8c337f1607dc782a425d5787"
+    },
+    {
+      "conversation_id": "rup-000453",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000453.json",
+      "sha256": "239b62f873a373e7bede381a2368fd3067633ad357f7c2ffb09ffe42780841d9"
+    },
+    {
+      "conversation_id": "rup-000454",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000454.json",
+      "sha256": "0dfb1390b4fd3d258851cf8bb06cc57e241c9c03098fb525e25e13ab294b86ac"
+    },
+    {
+      "conversation_id": "rup-000455",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000455.json",
+      "sha256": "c076c7f728e1462a3bde69dd3c7305492239aeae7d44468df8a810383aed1702"
+    },
+    {
+      "conversation_id": "rup-000456",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000456.json",
+      "sha256": "e2d8688195e80afebc856eca33c5b4889bb4fed858689f3abd7c5cfa96ce7803"
+    },
+    {
+      "conversation_id": "rup-000457",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000457.json",
+      "sha256": "6803251dcbb46a74ab0dda9dc84f5551a8a299680dc9df544e7c3378692e287a"
+    },
+    {
+      "conversation_id": "rup-000458",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000458.json",
+      "sha256": "8e21a0ec4127e588f84cc58f07a8192e5896c841abe6fd6bf22b9f8ce380536a"
+    },
+    {
+      "conversation_id": "rup-000459",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000459.json",
+      "sha256": "39a99752f754708a2472409e0cbc694a873d9d13b2d05ee76db7c10a42f0d749"
+    },
+    {
+      "conversation_id": "rup-000460",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000460.json",
+      "sha256": "f1f2bbadce1bbec5517cce4a3000279bcde39c9eea0819fe3397379e1c200e32"
+    },
+    {
+      "conversation_id": "rup-000461",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000461.json",
+      "sha256": "3931c7c5c50acc3a7a95a0c49a2788e35c76cf156b0a1fb3a0926a763881ad2c"
+    },
+    {
+      "conversation_id": "rup-000462",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000462.json",
+      "sha256": "6f6bfad00e32d29d5586243e60ee9f0b45c4d50610925860fbc86c5c68b33f1e"
+    },
+    {
+      "conversation_id": "rup-000463",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000463.json",
+      "sha256": "daa48869ce1823b93d19a0bfa9818025000c1fc21cb168866a06a4cfd8894681"
+    },
+    {
+      "conversation_id": "rup-000464",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000464.json",
+      "sha256": "d57419513e08be7ad4569a6aa581e5132eb2278705a3bc94eda0dc9e8e032ee9"
+    },
+    {
+      "conversation_id": "rup-000465",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000465.json",
+      "sha256": "309920afa40c730207cb8269fb7bf9f3b072e55c0d83f355c8b8e50564c71d09"
+    },
+    {
+      "conversation_id": "rup-000466",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000466.json",
+      "sha256": "6ae7c3ab72fee8f62dcac807d63e814b76f954811dab56d230623b7ad6e5389b"
+    },
+    {
+      "conversation_id": "rup-000467",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000467.json",
+      "sha256": "571368b745f1c0486dcf9e38c6a081213dbe39b8f90795280467295fd57c00af"
+    },
+    {
+      "conversation_id": "rup-000468",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000468.json",
+      "sha256": "fddea6057f381329209fcac2137bacf41bb97354a6ee001557016ec022369a77"
+    },
+    {
+      "conversation_id": "rup-000469",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000469.json",
+      "sha256": "b659bb2f04bd66b67346499d29528703f9a3fa54de0ec961f0385719b7738b11"
+    },
+    {
+      "conversation_id": "rup-000470",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000470.json",
+      "sha256": "7decb283c39ca524ad3ef2fed008e601b64d7c4404b24311fb5263d21c776cb0"
+    },
+    {
+      "conversation_id": "rup-000471",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000471.json",
+      "sha256": "c7aea2ce26c1e2628a93439dd652bb97d43b2900cdb1d51e82dd36bee7494d0a"
+    },
+    {
+      "conversation_id": "rup-000472",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000472.json",
+      "sha256": "93663b2e610bce9aa739b078b56950134d4c8658046e7131f7d06b49f5c6ba25"
+    },
+    {
+      "conversation_id": "rup-000473",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000473.json",
+      "sha256": "a804eebc770adc7b45f680aea0fb91488be701246f1d850cea9d0e6f5a641b56"
+    },
+    {
+      "conversation_id": "rup-000474",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000474.json",
+      "sha256": "713e8a222902a17d7ff2edd7926937e5ce260c5720b0bbe0af195cb9be7254f9"
+    },
+    {
+      "conversation_id": "rup-000475",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000475.json",
+      "sha256": "e6e7c681b4819e20e48ae41beaee2372693dc975b393fab0ff3b9a2427e2161e"
+    },
+    {
+      "conversation_id": "rup-000476",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000476.json",
+      "sha256": "be69e6a4384d788d0cc628f59a893001d24140dce3cc206b0df3599e3e8902bc"
+    },
+    {
+      "conversation_id": "rup-000477",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000477.json",
+      "sha256": "55355c8a096ad2080550e5e61fd5a3be11678b67856b5edecb9da911446003d8"
+    },
+    {
+      "conversation_id": "rup-000478",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000478.json",
+      "sha256": "b0ff9f440c3902269326b9adc007b9c2430a596a47057a88395f77db8121547f"
+    },
+    {
+      "conversation_id": "rup-000479",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000479.json",
+      "sha256": "8e99a65a44b5560bbca4d51d25dc8cf4afb51161e6a3f4b5ba246505723f3707"
+    },
+    {
+      "conversation_id": "rup-000480",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000480.json",
+      "sha256": "181872df5770e4ef1aa43882aac6a46fa6b4e3cb5e2454ead576845c67680227"
+    },
+    {
+      "conversation_id": "rup-000481",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000481.json",
+      "sha256": "f2a409efaaf96f7d3b8c65ef1fc0a920990aef36d97fbb675ddfd2092565c297"
+    },
+    {
+      "conversation_id": "rup-000482",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000482.json",
+      "sha256": "0b30cade6f95f2db2ce312d07f36edc7199f5075055e49e1035d927681431012"
+    },
+    {
+      "conversation_id": "rup-000483",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000483.json",
+      "sha256": "ad3b3c926183f4e885dce0ca6644b9093b51603463734eda9982c7a510cc7121"
+    },
+    {
+      "conversation_id": "rup-000484",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000484.json",
+      "sha256": "ecfbe3970e7544295810c278770e4cb63d3dcdf8df8ec3bc6cb3349afcf86501"
+    },
+    {
+      "conversation_id": "rup-000485",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000485.json",
+      "sha256": "85fed40539a77a27b33341df1891b29ec36f7890c3fae818e56259842dfb2180"
+    },
+    {
+      "conversation_id": "rup-000486",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000486.json",
+      "sha256": "1b3addf6a42793c36d3db46b29556bff4f540b2e4e34def9d96fd956e68c9782"
+    },
+    {
+      "conversation_id": "rup-000487",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000487.json",
+      "sha256": "28d2aba8264c9f8f264a2c0eed41d85fefc880a63cde52f92a296b51b2de71e5"
+    },
+    {
+      "conversation_id": "rup-000488",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000488.json",
+      "sha256": "434add1afb25e4cd7379075d69d6117ec35984ab140525d93e653b6d1e33f2f9"
+    },
+    {
+      "conversation_id": "rup-000489",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000489.json",
+      "sha256": "e18de585136c0d6b477f57f8df3018cfd8335b1d87905adccefbd51aa230afcf"
+    },
+    {
+      "conversation_id": "rup-000490",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000490.json",
+      "sha256": "d82337e8adeeeb307267d201b95f4211600bf5d08c42064161ce815388c954b6"
+    },
+    {
+      "conversation_id": "rup-000491",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000491.json",
+      "sha256": "dae8135a76b9dc2f46e402f0926cafda19f35be09e8a1362176e54f2e981d06e"
+    },
+    {
+      "conversation_id": "rup-000492",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000492.json",
+      "sha256": "efe42c752a3691556ed94379d0143d3af1028ec39fce06adb0579cdedd183338"
+    },
+    {
+      "conversation_id": "rup-000493",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000493.json",
+      "sha256": "2b4d2fc8e0299bd000e3685d17003f6f89976d8b46dd8c4b6ef7cac5fdf2a7c9"
+    },
+    {
+      "conversation_id": "rup-000494",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000494.json",
+      "sha256": "9e7f160bfef6b8cd5b60352df1a92f3de8c55e0b247d4358cfe0e78a1d541956"
+    },
+    {
+      "conversation_id": "rup-000495",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000495.json",
+      "sha256": "83fb1e5618098ebd41ad083d237052af195dee786044f59538b4fcfac280e7f0"
+    },
+    {
+      "conversation_id": "rup-000496",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000496.json",
+      "sha256": "8b73c4f1a54af776e6e43c7ccc2f2e55cb73ce8f6dd278b92b7604fc3806bf8d"
+    },
+    {
+      "conversation_id": "rup-000497",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000497.json",
+      "sha256": "033cec3dd3f4f0a4cff59837d90b82ba4f9f9308824d86f66f40fcf273de0192"
+    },
+    {
+      "conversation_id": "rup-000498",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000498.json",
+      "sha256": "1a70bd0b4ac1500cb30e128126bde45488eabc0927033db9ac6fd2f02f00cc2c"
+    },
+    {
+      "conversation_id": "rup-000499",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000499.json",
+      "sha256": "5706f31c55f47a9e13f147ba438c22ba8a7bae6fd5460a584933db145c4189d2"
+    },
+    {
+      "conversation_id": "rup-000500",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000500.json",
+      "sha256": "b3e888dd7722aaca4553614c13808853e720a6c1d812ed3599f1b18f646aafff"
+    },
+    {
+      "conversation_id": "rup-000501",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000501.json",
+      "sha256": "4262d9c46fbc258e9bbf8058f50893a40c8eb99673d10b43ee05248d8d362aaf"
+    },
+    {
+      "conversation_id": "rup-000502",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000502.json",
+      "sha256": "526faaa120dc6c67523fdca67f50d5be59d6e50d7f7b5725cb4eac96d0dc98c3"
+    },
+    {
+      "conversation_id": "rup-000503",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000503.json",
+      "sha256": "a26d142b1f833b2d8cea73c5630f46898a7a5a151c572a7c692d04d1baa94235"
+    },
+    {
+      "conversation_id": "rup-000504",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000504.json",
+      "sha256": "f47a8269f2afee9cce360e5dce4d8902cde0d85833a849d6599ff8520270db1b"
+    },
+    {
+      "conversation_id": "rup-000505",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000505.json",
+      "sha256": "c3c0fc30d7c7a2cd4e560354bbeb1f466a16b0e54e48278d31dd1d71ce9a4cb5"
+    },
+    {
+      "conversation_id": "rup-000506",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000506.json",
+      "sha256": "1c69b29ddda048b5a1086e74808fa675904d7e330204dd56e62437ce065b7017"
+    },
+    {
+      "conversation_id": "rup-000507",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000507.json",
+      "sha256": "40fee7f71b9edb941b09d8db2aed77223a500a50a426dd74088c4923e2fb4269"
+    },
+    {
+      "conversation_id": "rup-000508",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000508.json",
+      "sha256": "7246a34d811a9d01318813861b5e42136d6927adb697d5c8d4c8509b40064d4a"
+    },
+    {
+      "conversation_id": "rup-000509",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000509.json",
+      "sha256": "2842135e13473335c2bc2b80677d58d9e08de7adee0ec10ce1ef8ed88d8454df"
+    },
+    {
+      "conversation_id": "rup-000510",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000510.json",
+      "sha256": "3d1d830408b7b1c99d79dae4b655b2dd24fe9cf2a41e61f81896dad628a4ff65"
+    },
+    {
+      "conversation_id": "rup-000511",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000511.json",
+      "sha256": "3f0451c59886c4cc2bbfe49a459839c743bba7bcbde5d9d46d0d5c1cfea0a6e3"
+    },
+    {
+      "conversation_id": "rup-000512",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000512.json",
+      "sha256": "e1545f56555774b59e6337ede73bdab236e2f3b42c47da59d06b48b423af8e1e"
+    },
+    {
+      "conversation_id": "rup-000513",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000513.json",
+      "sha256": "555be616d8d21fcdab6af003865453b1bfbbc10d5da7ccb795de436263ec96d5"
+    },
+    {
+      "conversation_id": "rup-000514",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000514.json",
+      "sha256": "a6b24a05198c5728daba0fec781af89ba2ca3c9e101c4e28f9e249af8963596b"
+    },
+    {
+      "conversation_id": "rup-000515",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000515.json",
+      "sha256": "d3843a91e42c4b8398410161a7cdeffd963e914b682bf1253d59911dea5877c5"
+    },
+    {
+      "conversation_id": "rup-000516",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000516.json",
+      "sha256": "93baab661d1cbd666d8dbdf253389e6bf0857a9add2a800e13f10801240273e2"
+    },
+    {
+      "conversation_id": "rup-000517",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000517.json",
+      "sha256": "70e38ef7ebfb25a7c1e359881017b3abe41affcf2123df84b433faaf0d4c9ef1"
+    },
+    {
+      "conversation_id": "rup-000518",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000518.json",
+      "sha256": "7bd2b79835ec58c4259a5fc3f6567ff892aea82eb2e9901b44c5f012b838a5cb"
+    },
+    {
+      "conversation_id": "rup-000519",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000519.json",
+      "sha256": "b20ee44c93533972ba4ee465b2bef98272b97b848cabf7ae404dd559f388b758"
+    },
+    {
+      "conversation_id": "rup-000520",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000520.json",
+      "sha256": "cbfc91b015f5aa48d198e546e8529bb5fdc3cae1f6aab4b3348b72e6717bc23f"
+    },
+    {
+      "conversation_id": "rup-000521",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000521.json",
+      "sha256": "67b43afeb1bfdd4a2ec4a93979dbec934b4fd191f0d280be9c79c9e3171ecc97"
+    },
+    {
+      "conversation_id": "rup-000522",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000522.json",
+      "sha256": "a7b5657d0a749c7d78317b817b6c5d16cb0336a1275902f53fd63463e295e289"
+    },
+    {
+      "conversation_id": "rup-000523",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000523.json",
+      "sha256": "7c9c5847c8f005e38796e06afbce32cb8df5d0e39bf71160cd543a9a83479828"
+    },
+    {
+      "conversation_id": "rup-000524",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000524.json",
+      "sha256": "ef1fd670aa45ef7948b502510e2d5d40c7e2ba47914111d27d4794a3528c3f25"
+    },
+    {
+      "conversation_id": "rup-000525",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000525.json",
+      "sha256": "3f7388244d2ae11696ac45eebd1dd524dc84b0ba3fbfe9f1cedf31f3119b2d0e"
+    },
+    {
+      "conversation_id": "rup-000526",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000526.json",
+      "sha256": "c6b36da9dfd28260f2726c89b88ea07ab1c7b5a1bc6b85c9479b616497a16639"
+    },
+    {
+      "conversation_id": "rup-000527",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000527.json",
+      "sha256": "c7573a7e54fb960a5f7b45b2cf5ca0356197438920a2179034efe4303d21a1b6"
+    },
+    {
+      "conversation_id": "rup-000528",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000528.json",
+      "sha256": "a540be56d17f5a3519ccefb627a598ce6cc6949977e3b91ab416fd71c5216c30"
+    },
+    {
+      "conversation_id": "rup-000529",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000529.json",
+      "sha256": "14fbe3b05fb4ec6e059d7ee1e8f372ead447afd7d6c0781ad087bd1e94d69a83"
+    },
+    {
+      "conversation_id": "rup-000530",
+      "status_dir": "drafts",
+      "quality_status": "draft",
+      "filename": "rup-000530.json",
+      "sha256": "5eb22d57626c29992dcd671438d671ba9f92cccd4cfe5233201f4fe8ba0346c4"
+    },
+    {
+      "conversation_id": "rup-000001",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000001.json",
+      "sha256": "47903b5a89432130aa78a1826039beb7bab617ecd20ac23dca13f0217d45d6f4"
+    },
+    {
+      "conversation_id": "rup-000002",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000002.json",
+      "sha256": "7e313d8d7fe17edca13bd739889ef75ead9669f38603dd1818e000f7a3734d99"
+    },
+    {
+      "conversation_id": "rup-000003",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000003.json",
+      "sha256": "ae16a22dd97ddad488b2a2e8542a8f9dc0fdf834eff69ac93869e23965de936d"
+    },
+    {
+      "conversation_id": "rup-000004",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000004.json",
+      "sha256": "c5d6404880e34395178290f6eaa2256cef3b2f014660e65cb775e330ce53204f"
+    },
+    {
+      "conversation_id": "rup-000005",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000005.json",
+      "sha256": "7bd552f38dc524dacaf8129f1bbea5660650d296e3b4b13f60518b56d72b3a49"
+    },
+    {
+      "conversation_id": "rup-000006",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000006.json",
+      "sha256": "f7ce0c678c92327914295023c9e6e81a194be57e40f79df1f0b125aa4f08eea7"
+    },
+    {
+      "conversation_id": "rup-000007",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000007.json",
+      "sha256": "a4931943919ec604aca99a3938f2ff8e2c1e8d6067740912448f6e61f09d803a"
+    },
+    {
+      "conversation_id": "rup-000008",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000008.json",
+      "sha256": "0e8b46bc2e7f34c8737f9e941dd7e2d5527aec540ff80d0cb0575285e79e6030"
+    },
+    {
+      "conversation_id": "rup-000009",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000009.json",
+      "sha256": "6cc6cba1b691d983f7b271ad734573b44f19112f90ffdad8439219028c5f4a84"
+    },
+    {
+      "conversation_id": "rup-000010",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000010.json",
+      "sha256": "094ecc234e0b35907477ce1533e41acddc9441458aab35819de257efcefa6dc4"
+    },
+    {
+      "conversation_id": "rup-000011",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000011.json",
+      "sha256": "176bfc9853855eca7775baab76c57e924a19734e956b2efa73ba29f8f10e17f3"
+    },
+    {
+      "conversation_id": "rup-000012",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000012.json",
+      "sha256": "db6be41e0e4c20c69eaf3dcf1e5fdfc7815ac6548f4b376588e96d2c1c45647b"
+    },
+    {
+      "conversation_id": "rup-000013",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000013.json",
+      "sha256": "ea941786e5ca2d1547d6391369c9562cf373af3928121ab499c7c0c7612e6939"
+    },
+    {
+      "conversation_id": "rup-000014",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000014.json",
+      "sha256": "ca281d370d5e67160654315a7ffaa02493a68ea3c3fd30453a843a69b7099a2c"
+    },
+    {
+      "conversation_id": "rup-000015",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000015.json",
+      "sha256": "f1a7218174b95bdbd7d1087d69513a4d06ba7b7853b5e447764f8594f1180d99"
+    },
+    {
+      "conversation_id": "rup-000016",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000016.json",
+      "sha256": "10395e118f604c269981dec4077b85447cb73ef42c6b12cf66c7bba5c5ba04b0"
+    },
+    {
+      "conversation_id": "rup-000017",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000017.json",
+      "sha256": "1a65cc413ba10a85572286d8c52b98e2c43cc3989885e0263203d339d676d325"
+    },
+    {
+      "conversation_id": "rup-000018",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000018.json",
+      "sha256": "6914ebf45069b81dc93734ebb587398703c98ba40ad4f32eb60ea49fae2642fc"
+    },
+    {
+      "conversation_id": "rup-000019",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000019.json",
+      "sha256": "c3bfb901e055aea1b4d6d40f705eca13389abd546a56a3321398430c39ce5619"
+    },
+    {
+      "conversation_id": "rup-000020",
+      "status_dir": "approved",
+      "quality_status": "approved",
+      "filename": "rup-000020.json",
+      "sha256": "85ee28d3cceee5e6add791b0a8d95014c9313d4c70c7e9e665d131aba43968a2"
+    },
+    {
+      "conversation_id": "rup-000022",
+      "status_dir": "rejected",
+      "quality_status": "rejected",
+      "filename": "rup-000022.json",
+      "sha256": "c202d6a1bb3bee5bebc6c75cc808a3f684b8111018f72201d56d850cdb48be2b"
+    }
+  ]
+}

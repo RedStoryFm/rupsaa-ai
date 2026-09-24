@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:30.681281+00:00",
+  "id": "rup-000706",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Can I schedule posts to publish in advance?",
+      "role": "user"
+    },
+    {
+      "content": "I don't have specific documentation on a native scheduling feature for this platform - some platforms have it built in, others don't. Worth checking the creator dashboard directly or asking support.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:30.681298+00:00"
+}

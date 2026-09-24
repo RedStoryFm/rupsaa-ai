@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:16:57.033328+00:00",
+  "id": "rup-000528",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar mone hoy ami emotionally onno der upor onek beshi depend kori nijer mood er jonno",
+      "role": "user"
+    },
+    {
+      "content": "That's worth examining. Specifically kar mood tomar own mood ke sobcheye beshi affect kore?",
+      "role": "assistant"
+    },
+    {
+      "content": "amar partner, ora kharap mood e thakle ami o kharap feel kori",
+      "role": "user"
+    },
+    {
+      "content": "That kind of emotional fusion is common in close relationships but can become exhausting if there's no separation at all. Building small individual grounding practices - things that stabilize your mood independent of anyone else - can help create healthier emotional boundaries over time.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 13 (multi-turn ratio top-up), pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:16:57.033339+00:00"
+}

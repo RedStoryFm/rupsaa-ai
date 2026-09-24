@@ -31,7 +31,17 @@ When retrieved context is provided below, ground your answer in it and prefer it
 """
 
 
-def build_system_prompt(*, retrieved_context: str | None = None) -> str:
+TERMINOLOGY_INSTRUCTIONS = """
+Reference terminology from Rupsaa's owner is included below as background knowledge. Use it so the answer is accurate, but explain it in your own words, in the user's language and register, at the length they asked for — it is not text to recite.
+"""
+
+
+def build_system_prompt(
+    *,
+    retrieved_context: str | None = None,
+    terminology_context: str | None = None,
+    conversation_note: str | None = None,
+) -> str:
     """Assemble the full system prompt for a single turn.
 
     Args:
@@ -39,9 +49,19 @@ def build_system_prompt(*, retrieved_context: str | None = None) -> str:
             retrieval found nothing useful). Formatting of the block itself
             is the RAG pipeline's job (rupsaa/rag/pipeline.py), not this
             module's — this only decides whether/where it gets inserted.
+        terminology_context: Structured terminology entries matched for this
+            turn (rupsaa/rag/terminology.py) — knowledge, not a canned reply.
+        conversation_note: One factual line about the conversation itself
+            (e.g. "the user is asking about earlier messages"), set by
+            rupsaa/rag/context_builder.py for memory questions.
     """
     parts = [BASE_PERSONA.strip()]
+    if terminology_context:
+        parts.append(TERMINOLOGY_INSTRUCTIONS.strip())
+        parts.append(f"Reference terminology:\n{terminology_context}")
     if retrieved_context:
         parts.append(RAG_INSTRUCTIONS.strip())
         parts.append(f"Retrieved context:\n{retrieved_context}")
+    if conversation_note:
+        parts.append(conversation_note)
     return "\n\n".join(parts)

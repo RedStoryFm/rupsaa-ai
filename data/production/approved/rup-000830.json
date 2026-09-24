@@ -1,0 +1,36 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:25:57.856273+00:00",
+  "id": "rup-000830",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "দুইটা আলাদা device থেকে একই account এ login করা যায় কি?",
+      "role": "user"
+    },
+    {
+      "content": "হ্যাঁ যায়, actually documentation এ specifically বলা আছে multiple device support থাকে।",
+      "role": "assistant"
+    },
+    {
+      "content": "ekshathe kotogulo device e login thakte pare?",
+      "role": "user"
+    },
+    {
+      "content": "Eta niye honestly specific number kono kothaw dekhini amar documentation e - unlimited na hoyeo kono hard limit mention kora nai. Support ke jigges korle clear answer pabe।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 4 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.740471+00:00"
+}

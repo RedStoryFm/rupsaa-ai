@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:57:20.556185+00:00",
+  "id": "rup-000300",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমি কি একসাথে একাধিক social media platform এ same content post করবো?",
+      "role": "user"
+    },
+    {
+      "content": "শুরুতে করা যায় সময় বাঁচাতে, কিন্তু প্রতিটা platform এর audience এর style একটু আলাদা হয়। ধীরে ধীরে প্রতিটা platform এর জন্য সামান্য customize করলে result ভালো হয়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 06, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T13:57:20.556196+00:00"
+}

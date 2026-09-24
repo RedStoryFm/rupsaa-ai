@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:16:56.991732+00:00",
+  "id": "rup-000516",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা creator হিসেবে আমি কি নিজের সব platform এ same voice রাখা উচিত?",
+      "role": "user"
+    },
+    {
+      "content": "Core personality consistent thaka important, but tone slightly adjust kora jete pare platform er norm onujayi. Kon platform gulo use korcho?",
+      "role": "assistant"
+    },
+    {
+      "content": "instagram ar ekta subscription based platform",
+      "role": "user"
+    },
+    {
+      "content": "Instagram e usually lighter, more polished tone expect kore, subscription platform e deeper/more personal content expect kore subscribers. Voice ta same thakবে, just depth ar formality level ta context onujayi shift korte pare.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 13 (multi-turn ratio top-up), pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:16:56.991748+00:00"
+}

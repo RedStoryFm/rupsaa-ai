@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:53:52.195169+00:00",
+  "id": "rup-000268",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nAccounts inactive for more than 12 months with zero content or login activity may be archived, but never permanently deleted without a 30-day email warning first.",
+      "role": "system"
+    },
+    {
+      "content": "আমি যদি অনেকদিন account use না করি, তাহলে কি হঠাৎ delete হয়ে যেতে পারে?",
+      "role": "user"
+    },
+    {
+      "content": "FAQ অনুযায়ী না, ১২ মাসের বেশি inactive থাকলে archive হতে পারে, কিন্তু delete হওয়ার আগে অন্তত ৩০ দিনের email warning দেওয়া হয়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 05, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T13:53:52.195178+00:00"
+}

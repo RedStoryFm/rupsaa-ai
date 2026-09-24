@@ -1,0 +1,14 @@
+# Files published to Hugging Face for this release (relative to the adapter dir)
+adapter_config.json
+adapter_model.safetensors
+trainer_config.yaml
+all_results.json
+train_results.json
+eval_results.json
+trainer_state.json
+trainer_log.jsonl
+training_loss.png
+training_eval_loss.png
+README.md  (from MODEL_CARD.md)
+manifest.json
+checksums.sha256  (adapter files only)

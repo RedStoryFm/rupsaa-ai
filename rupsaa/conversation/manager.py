@@ -21,6 +21,9 @@ from rupsaa.model.generation import ChatMessage
 class Conversation:
     conversation_id: str
     messages: list[ChatMessage] = field(default_factory=list)
+    # How many of the oldest messages were dropped by the history cap, so a
+    # "what did I say first?" question can be answered honestly.
+    dropped_messages: int = 0
 
     def approx_token_count(self) -> int:
         # Rough heuristic (chars/4) used only for logging/observability, not
@@ -76,6 +79,8 @@ class ConversationManager:
         conversation.messages.append(ChatMessage(role="user", content=user_message))
         conversation.messages.append(ChatMessage(role="assistant", content=assistant_message))
         if len(conversation.messages) > self.max_history_messages:
+            overflow = len(conversation.messages) - self.max_history_messages
+            conversation.dropped_messages += overflow
             conversation.messages = conversation.messages[-self.max_history_messages:]
         self.store.save(conversation)
         return conversation

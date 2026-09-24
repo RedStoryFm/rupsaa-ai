@@ -70,3 +70,54 @@ thresholds:
   # Conversations longer than this many characters are flagged for review
   # (not rejected — some detailed-explanation examples are legitimately long).
   long_conversation_char_threshold: 6000
+
+# Corpus-level diversity gate (rupsaa/dataset/diversity.py). Added after
+# V0.1 shipped with "honestly" in 863/1129 training replies: every check
+# above is per-conversation or a small pet-name watchlist, so nothing
+# measured how concentrated the corpus voice was as a whole — which is what
+# a LoRA learns. Ratios are over ALL assistant replies (and each language
+# group with >= min_group_replies). BLOCK issues make scripts/dataset_audit.py
+# exit non-zero and scripts/dataset_export.py refuse to export. Words are
+# never banned — only their share of the corpus is capped.
+diversity:
+  watchlist:
+    - "honestly"
+    - "actually"
+    - "genuinely"
+    - "basically"
+    - "obviously"
+    - "literally"
+    - "fair call"
+    - "fair enough"
+    - "not gonna lie"
+    - "to be fair"
+    - "sotti bolte"
+    - "সত্যি বলতে"
+    - "baby"
+    - "babe"
+    - "jaan"
+    - "jaanu"
+    - "sona"
+    - "sweetheart"
+    - "cutie"
+    - "hehe"
+    - "haha"
+  thresholds:
+    min_replies_to_gate: 30
+    min_group_replies: 50
+    # Natural conversational English uses "honestly" in low single-digit
+    # percent of turns; 8% of all replies is already a noticeable verbal habit.
+    catchphrase_warn: 0.04
+    catchphrase_block: 0.08
+    # Any non-function-word n-gram (watchlisted or not), by n.
+    ngram_warn: {1: 0.10, 2: 0.03, 3: 0.02}
+    ngram_block: {1: 0.20, 2: 0.06, 3: 0.04}
+    # Share of replies opening with the same word / same two words.
+    opening_warn: 0.08
+    opening_block: 0.15
+    opening_bigram_warn: 0.03
+    opening_bigram_block: 0.06
+    # Share of replies with the same sentence-shape skeleton.
+    skeleton_warn: 0.15
+    skeleton_block: 0.30
+    synthetic_ratio_warn: 3.0

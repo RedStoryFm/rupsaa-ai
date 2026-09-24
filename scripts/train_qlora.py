@@ -68,7 +68,7 @@ def format_example(example: dict, tokenizer) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--config", default="configs/training.yaml", help="unused override hook; config is loaded via rupsaa.config")
+    parser.add_argument("--config", default="configs/training.yaml", help="Path to a training config YAML (e.g. configs/training/rupsaa_v0.1_qlora.yaml)")
     parser.add_argument("--resume-from-checkpoint", default=None)
     parser.add_argument(
         "--smoke-test",
@@ -78,7 +78,7 @@ def main() -> None:
     args = parser.parse_args()
 
     model_cfg = load_model_config()
-    training_cfg = load_training_config()
+    training_cfg = load_training_config(args.config)
     set_seed(training_cfg["seed"])
 
     logger.info("Base model: %s", model_cfg["base_model_id"])

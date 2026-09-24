@@ -50,13 +50,19 @@ class RupsaaEngine:
         history: list[ChatMessage],
         user_message: str,
         retrieved_context: str | None = None,
+        terminology_context: str | None = None,
+        conversation_note: str | None = None,
         generation_overrides: dict | None = None,
     ) -> ChatResult:
         boundary = check_text(user_message)
         if not boundary.allowed:
             return ChatResult(text=REFUSAL_MESSAGE, blocked=True)
 
-        system_prompt = build_system_prompt(retrieved_context=retrieved_context)
+        system_prompt = build_system_prompt(
+            retrieved_context=retrieved_context,
+            terminology_context=terminology_context,
+            conversation_note=conversation_note,
+        )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]
             + history

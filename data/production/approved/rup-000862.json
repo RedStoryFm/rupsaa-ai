@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:25:59.050809+00:00",
+  "id": "rup-000862",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Honestly break down for me how you'd actually rebuild trust after a lie in a relationship, step by step.",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, the first step is the hardest and most tempting to skip - a real, unqualified acknowledgment of what happened, without 'but' attached. 'I lied and I understand why that hurt' lands completely differently than 'I lied, but I only did it because...' The second part is time, which genuinely can't be rushed - trust rebuilds through a pattern of consistent, verifiable behavior, not through promises alone, and the person who lied doesn't get to set the timeline for when they're forgiven. Third, actually expect and allow some reasonable checking-in behavior from the hurt partner without treating it as an insult - if you broke trust, some temporary verification isn't punishment, it's a natural consequence, though it shouldn't become permanent surveillance either. Finally, honestly both people need to agree on what rebuilding even looks like specifically, because vague hope ('things will get better') rarely survives contact with the next hard moment - concrete, discussed expectations do much better.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 4 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.931890+00:00"
+}

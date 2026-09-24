@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:15:20.948608+00:00",
+  "id": "rup-000498",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is it possible to know you're not compatible with someone but still not want to break up?",
+      "role": "user"
+    },
+    {
+      "content": "Definitely possible, and honestly common. Comfort, history, and fear of starting over can all outweigh logic for a while. What's making the incompatibility clear to you?",
+      "role": "assistant"
+    },
+    {
+      "content": "Our long-term goals are just really different, we've talked about it and it doesn't align.",
+      "role": "user"
+    },
+    {
+      "content": "That's one of the harder kinds of incompatibility, because it's not about a fixable behavior, it's a fundamental direction mismatch. Staying can feel safer short-term, but usually just delays a harder conversation that becomes more painful the longer two people build a life in different directions.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-22T14:15:20.948621+00:00"
+}

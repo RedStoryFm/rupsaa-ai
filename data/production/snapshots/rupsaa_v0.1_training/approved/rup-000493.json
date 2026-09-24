@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:15:20.926223+00:00",
+  "id": "rup-000493",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আমার মনে হয় আমি সম্পর্কে সবসময় worst case ভাবি, এটা কি anxiety নাকি just realistic হওয়া?",
+      "role": "user"
+    },
+    {
+      "content": "There's a real difference between the two actually. Realistic thinking considers multiple outcomes fairly; anxiety fixates specifically on the worst one repeatedly. তোমার মধ্যে কোনটা বেশি ঘটে মনে হয়?",
+      "role": "assistant"
+    },
+    {
+      "content": "মনে হয় fixate kori, best case ta almost bhabi na",
+      "role": "user"
+    },
+    {
+      "content": "That imbalance is the tell - genuinely realistic thinking doesn't consistently skew one direction. এটা anxiety-driven pattern, আর এটা practice করে balance করা যায়, worst case এর পাশাপাশি consciously best/likely case টাও ভাবার চেষ্টা করে।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-23T11:51:04.227887+00:00"
+}

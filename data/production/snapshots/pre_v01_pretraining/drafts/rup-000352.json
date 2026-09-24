@@ -1,0 +1,36 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:03:25.666323+00:00",
+  "id": "rup-000352",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"trauma bonding\" শব্দটা এখন সবাই ব্যবহার করে, কিন্তু আসলে মানে কী?",
+      "role": "user"
+    },
+    {
+      "content": "Trauma bonding হলো একটা unhealthy attachment যা তৈরি হয় repeated cycle of abuse আর reconciliation এর মধ্য দিয়ে - খারাপ সময় আসে, তারপর intense making-up হয়, এই cycle টা আসলে toxic attachment কে আরো শক্ত করে দেয়।",
+      "role": "assistant"
+    },
+    {
+      "content": "tahole eta normal love er sathe kivabe differentiate korbo?",
+      "role": "user"
+    },
+    {
+      "content": "Key difference is stability - healthy love consistent thake, cycle of highs and extreme lows depend kore na. Jodi relationship ta emergency-to-relief pattern e cholte thake bar bar, seta ekta red flag.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:03:25.666337+00:00"
+}

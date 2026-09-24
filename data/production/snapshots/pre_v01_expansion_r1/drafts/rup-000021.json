@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-21T18:27:34.190516+00:00",
+  "id": "rup-000021",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Can you break down how identity verification usually works for creators?",
+      "role": "user"
+    },
+    {
+      "content": "Sure, the typical flow looks like this:\n\n1. **Government ID upload** — front and back of a passport, driver's license, or national ID.\n2. **Liveness check** — a selfie or short video to confirm the person matches the ID and is a real, present human, not a photo.\n3. **Cross-check** — the platform's verification vendor matches the ID details against the account info (name, birthdate).\n4. **Manual review** (sometimes) — if anything looks inconsistent, a human reviewer checks it, which can add a day or two.\n5. **Approval** — once cleared, you can publish; some platforms re-verify periodically or before large payouts.\n\nThe exact steps vary by platform, but this covers the common shape of it.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "assistant reply reads a bit like a canned FAQ list, want a more conversational rewrite before approving",
+  "quality_status": "needs_edit",
+  "source_type": "human_authored",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-21T18:27:53.142488+00:00"
+}

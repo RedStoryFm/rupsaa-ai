@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_bn_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:03:25.709490+00:00",
+  "id": "rup-000360",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আজকে খুব anxious লাগছে কোনো specific কারণ ছাড়াই।",
+      "role": "user"
+    },
+    {
+      "content": "এই ধরনের unexplained anxiety সত্যিই frustrating, কারণ কী নিয়ে address করবে সেটাই বোঝা যায় না। শরীরে কি breathing বা heart rate এ কোনো change feel করছো?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T14:03:25.709506+00:00"
+}

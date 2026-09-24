@@ -16,6 +16,7 @@ from pathlib import Path
 
 import yaml
 from dotenv import load_dotenv
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -35,7 +36,16 @@ class Settings(BaseSettings):
 
     huggingface_token: str | None = None
     model_id: str | None = None  # overrides configs/model.yaml if set
-    adapter_path: str = "adapters/rupsaa-v1"
+    # Which trained LoRA adapter to load on top of the base model. Override
+    # via the RUPSAA_ADAPTER_PATH env var (e.g. "adapters/rupsaa-v0.1" once
+    # that adapter exists). If the resolved path doesn't exist or is empty,
+    # rupsaa/model/loader.py logs a warning and serves the base model only
+    # — nothing breaks if this points at an adapter that hasn't been
+    # trained yet.
+    adapter_path: str = Field(
+        default="adapters/rupsaa-v1",
+        validation_alias=AliasChoices("RUPSAA_ADAPTER_PATH", "ADAPTER_PATH"),
+    )
 
     api_host: str = "0.0.0.0"
     api_port: int = 8000
@@ -46,6 +56,16 @@ class Settings(BaseSettings):
     embedding_model_id: str | None = None  # overrides configs/rag.yaml if set
     vector_store_dir: str = "knowledge/index"
     knowledge_docs_dir: str = "knowledge/documents"
+    # Structured terminology entries (rupsaa/rag/terminology.py), one JSON
+    # file per term, owner-editable via web/knowledge.html → Terminology.
+    knowledge_terminology_dir: str = "knowledge/terminology"
+
+    # Owner-only tools (Teach Rupsaa, Rupsaa Knowledge) — see api/owner_routes.py.
+    # Unset (empty) by default for local development, which allows access
+    # with a logged warning. Set this to a real secret before ever exposing
+    # the API beyond localhost/a trusted tunnel — once set, every /owner/*
+    # request must send a matching `X-Owner-Key` header or it's rejected.
+    owner_api_key: str = ""
 
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
@@ -79,8 +99,21 @@ def load_model_config() -> dict:
 
 
 @lru_cache
-def load_training_config() -> dict:
-    return _load_yaml("training.yaml")
+def load_training_config(config_path: str | None = None) -> dict:
+    """Loads a training config YAML.
+
+    `config_path` is an optional path to a specific training config (e.g.
+    "configs/training/rupsaa_v0.1_qlora.yaml"), resolved relative to
+    PROJECT_ROOT if not absolute. Defaults to configs/training.yaml,
+    preserving existing CLI/behavior when no override is given.
+    """
+    if config_path is None:
+        return _load_yaml("training.yaml")
+    path = Path(config_path)
+    if not path.is_absolute():
+        path = PROJECT_ROOT / path
+    with open(path, encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
 
 @lru_cache

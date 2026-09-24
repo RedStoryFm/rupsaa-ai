@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:52:08.813432+00:00",
+  "id": "rup-001367",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা account এ কি দুইটা different currency তে earnings track করা যায়?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly এই specific feature টা documented নেই আমার কাছে - সাধারণত একটা base currency থাকে মনে হয়, কিন্তু নিশ্চিত না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 17 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.711904+00:00"
+}

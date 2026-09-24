@@ -1,0 +1,553 @@
+{
+  "total_replies": 2074,
+  "issues": [
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:en",
+      "key": "honestly",
+      "count": 390,
+      "total": 626,
+      "threshold": 0.08,
+      "ratio": 0.623
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:bn",
+      "key": "honestly",
+      "count": 287,
+      "total": 521,
+      "threshold": 0.08,
+      "ratio": 0.5509
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "corpus",
+      "key": "honestly",
+      "count": 1060,
+      "total": 2074,
+      "threshold": 0.08,
+      "ratio": 0.5111
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:banglish",
+      "key": "actually",
+      "count": 269,
+      "total": 577,
+      "threshold": 0.08,
+      "ratio": 0.4662
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:bn",
+      "key": "actually",
+      "count": 228,
+      "total": 521,
+      "threshold": 0.08,
+      "ratio": 0.4376
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:banglish",
+      "key": "honestly",
+      "count": 243,
+      "total": 577,
+      "threshold": 0.08,
+      "ratio": 0.4211
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "corpus",
+      "key": "actually",
+      "count": 870,
+      "total": 2074,
+      "threshold": 0.08,
+      "ratio": 0.4195
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:mixed",
+      "key": "actually",
+      "count": 145,
+      "total": 350,
+      "threshold": 0.08,
+      "ratio": 0.4143
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:mixed",
+      "key": "honestly",
+      "count": 140,
+      "total": 350,
+      "threshold": 0.08,
+      "ratio": 0.4
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:en",
+      "key": "actually",
+      "count": 228,
+      "total": 626,
+      "threshold": 0.08,
+      "ratio": 0.3642
+    },
+    {
+      "severity": "block",
+      "kind": "opening",
+      "scope": "corpus",
+      "key": "honestly",
+      "count": 542,
+      "total": 2074,
+      "threshold": 0.15,
+      "ratio": 0.2613
+    },
+    {
+      "severity": "block",
+      "kind": "catchphrase",
+      "scope": "language:en",
+      "key": "genuinely",
+      "count": 103,
+      "total": 626,
+      "threshold": 0.08,
+      "ratio": 0.1645
+    },
+    {
+      "severity": "warn",
+      "kind": "synthetic_catchphrase",
+      "scope": "source:synthetic_curated",
+      "key": "honestly",
+      "count": 956,
+      "total": 1354,
+      "threshold": 0.04,
+      "ratio": 0.7061
+    },
+    {
+      "severity": "warn",
+      "kind": "synthetic_catchphrase",
+      "scope": "source:synthetic_curated",
+      "key": "actually",
+      "count": 783,
+      "total": 1354,
+      "threshold": 0.04,
+      "ratio": 0.5783
+    },
+    {
+      "severity": "warn",
+      "kind": "skeleton",
+      "scope": "corpus",
+      "key": "F-",
+      "count": 357,
+      "total": 2074,
+      "threshold": 0.15,
+      "ratio": 0.1721
+    },
+    {
+      "severity": "warn",
+      "kind": "catchphrase",
+      "scope": "corpus",
+      "key": "genuinely",
+      "count": 161,
+      "total": 2074,
+      "threshold": 0.04,
+      "ratio": 0.0776
+    },
+    {
+      "severity": "warn",
+      "kind": "catchphrase",
+      "scope": "language:mixed",
+      "key": "genuinely",
+      "count": 23,
+      "total": 350,
+      "threshold": 0.04,
+      "ratio": 0.0657
+    },
+    {
+      "severity": "warn",
+      "kind": "catchphrase",
+      "scope": "language:banglish",
+      "key": "obviously",
+      "count": 33,
+      "total": 577,
+      "threshold": 0.04,
+      "ratio": 0.0572
+    }
+  ],
+  "phrase_rates": {
+    "corpus": {
+      "honestly": 0.5111,
+      "actually": 0.4195,
+      "genuinely": 0.0776,
+      "basically": 0.0053,
+      "obviously": 0.0164,
+      "literally": 0.0005,
+      "fair enough": 0.0005,
+      "not gonna lie": 0.0034,
+      "sotti bolte": 0.0125,
+      "সত্যি বলতে": 0.0029,
+      "jaan": 0.0005,
+      "sona": 0.0005
+    },
+    "language:banglish": {
+      "honestly": 0.4211,
+      "actually": 0.4662,
+      "genuinely": 0.0277,
+      "basically": 0.0069,
+      "obviously": 0.0572,
+      "sotti bolte": 0.0381,
+      "jaan": 0.0017,
+      "sona": 0.0017
+    },
+    "language:bn": {
+      "honestly": 0.5509,
+      "actually": 0.4376,
+      "genuinely": 0.0365,
+      "fair enough": 0.0019,
+      "সত্যি বলতে": 0.0077
+    },
+    "language:en": {
+      "honestly": 0.623,
+      "actually": 0.3642,
+      "genuinely": 0.1645,
+      "basically": 0.0096,
+      "obviously": 0.0016,
+      "literally": 0.0016,
+      "not gonna lie": 0.0112,
+      "sotti bolte": 0.0016
+    },
+    "language:mixed": {
+      "honestly": 0.4,
+      "actually": 0.4143,
+      "genuinely": 0.0657,
+      "basically": 0.0029,
+      "sotti bolte": 0.0086,
+      "সত্যি বলতে": 0.0057
+    },
+    "source:human_authored": {
+      "honestly": 0.087
+    },
+    "source:imported": {
+      "honestly": 0.1463,
+      "actually": 0.1248,
+      "genuinely": 0.0473,
+      "basically": 0.0057,
+      "obviously": 0.0057,
+      "literally": 0.0014,
+      "sotti bolte": 0.0057,
+      "সত্যি বলতে": 0.0029,
+      "jaan": 0.0014,
+      "sona": 0.0014
+    },
+    "source:synthetic_curated": {
+      "honestly": 0.7061,
+      "actually": 0.5783,
+      "genuinely": 0.0945,
+      "basically": 0.0052,
+      "obviously": 0.0222,
+      "fair enough": 0.0007,
+      "not gonna lie": 0.0052,
+      "sotti bolte": 0.0162,
+      "সত্যি বলতে": 0.003
+    }
+  },
+  "top_openings": [
+    [
+      "honestly",
+      542
+    ],
+    [
+      "that's",
+      114
+    ],
+    [
+      "sheta",
+      77
+    ],
+    [
+      "fair",
+      75
+    ],
+    [
+      "সেটা",
+      61
+    ],
+    [
+      "that",
+      59
+    ],
+    [
+      "eta",
+      45
+    ],
+    [
+      "না",
+      38
+    ],
+    [
+      "obviously",
+      31
+    ],
+    [
+      "not",
+      28
+    ],
+    [
+      "na",
+      26
+    ],
+    [
+      "এই",
+      23
+    ],
+    [
+      "এটা",
+      23
+    ],
+    [
+      "no",
+      21
+    ],
+    [
+      "actually",
+      21
+    ]
+  ],
+  "top_opening_bigrams": [
+    [
+      "honestly that's",
+      47
+    ],
+    [
+      "that's a",
+      39
+    ],
+    [
+      "that's honestly",
+      32
+    ],
+    [
+      "fair actually",
+      32
+    ],
+    [
+      "honestly eta",
+      32
+    ],
+    [
+      "sheta actually",
+      31
+    ],
+    [
+      "sheta honestly",
+      28
+    ],
+    [
+      "honestly এই",
+      24
+    ],
+    [
+      "honestly i",
+      23
+    ],
+    [
+      "সেটা actually",
+      22
+    ],
+    [
+      "না honestly",
+      19
+    ],
+    [
+      "honestly এটা",
+      18
+    ],
+    [
+      "obviously honestly",
+      17
+    ],
+    [
+      "honestly না",
+      16
+    ],
+    [
+      "honestly that",
+      15
+    ]
+  ],
+  "top_ngrams": [
+    [
+      "honestly",
+      1060
+    ],
+    [
+      "actually",
+      870
+    ],
+    [
+      "genuinely",
+      161
+    ],
+    [
+      "specific",
+      158
+    ],
+    [
+      "worth",
+      112
+    ],
+    [
+      "real",
+      111
+    ],
+    [
+      "content",
+      104
+    ],
+    [
+      "feeling",
+      102
+    ],
+    [
+      "people",
+      102
+    ],
+    [
+      "মনে",
+      102
+    ],
+    [
+      "pattern",
+      101
+    ],
+    [
+      "fair",
+      101
+    ],
+    [
+      "beshi",
+      98
+    ],
+    [
+      "feel",
+      98
+    ],
+    [
+      "usually",
+      97
+    ],
+    [
+      "মনে হয়",
+      62
+    ],
+    [
+      "kor ার",
+      62
+    ],
+    [
+      "honestly that's",
+      59
+    ],
+    [
+      "a lot",
+      47
+    ],
+    [
+      "mone hoy",
+      46
+    ],
+    [
+      "actually honestly",
+      46
+    ],
+    [
+      "honestly eta",
+      43
+    ],
+    [
+      "hote pare",
+      42
+    ],
+    [
+      "rather than",
+      39
+    ],
+    [
+      "sheta actually",
+      39
+    ],
+    [
+      "হতে পারে",
+      38
+    ],
+    [
+      "না honestly",
+      38
+    ],
+    [
+      "না actually",
+      37
+    ],
+    [
+      "honestly i",
+      34
+    ],
+    [
+      "fair actually",
+      34
+    ]
+  ],
+  "top_skeletons": [
+    [
+      "F-",
+      357
+    ],
+    [
+      "S-",
+      286
+    ],
+    [
+      "S|SQ",
+      211
+    ],
+    [
+      "S-|S",
+      188
+    ],
+    [
+      "S|S",
+      174
+    ],
+    [
+      "S",
+      118
+    ],
+    [
+      "F|SQ",
+      118
+    ],
+    [
+      "S|S-",
+      88
+    ],
+    [
+      "F-|S",
+      73
+    ],
+    [
+      "F",
+      68
+    ]
+  ],
+  "gated": true,
+  "notes": [],
+  "training_ready": false
+}

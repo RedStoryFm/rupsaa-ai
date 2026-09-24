@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:44:02.955718+00:00",
+  "id": "rup-001011",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "subscription price ekdom minimum koto rakha jai platform e?",
+      "role": "user"
+    },
+    {
+      "content": "Eta niye actually specific number amar documentation e nai, honestly - platform bhede vary kore mone hoy।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 8 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.286952+00:00"
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teach Rupsaa</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="owner.css">
+</head>
+<body>
+  <div class="owner-app">
+    <header class="owner-topbar">
+      <div>
+        <h1>Teach Rupsaa</h1>
+        <div class="subtitle">Owner tool — manually author conversation examples for the production dataset.</div>
+      </div>
+      <div class="owner-nav">
+        <a href="knowledge.html">Rupsaa Knowledge →</a>
+        <a href="index.html">← Back to chat</a>
+        <div class="owner-key-box">
+          <label for="owner-key">Owner key</label>
+          <input type="text" id="owner-key" placeholder="(if configured)" autocomplete="off">
+        </div>
+      </div>
+    </header>
+
+    <div class="owner-banner">
+      This is an owner/development tool, not a public feature. Every example is saved as a
+      <strong>DRAFT</strong> with <code>source_type = human_authored</code> — it still needs review
+      and approval before it can be used for training. Nothing here is ever silently auto-approved
+      or overwritten.
+    </div>
+
+    <div class="owner-card">
+      <h2>New example</h2>
+
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="language">Language</label>
+          <select id="language"></select>
+        </div>
+        <div class="owner-field">
+          <label for="category">Category</label>
+          <select id="category"></select>
+        </div>
+      </div>
+
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="subcategory">Subcategory <span style="font-weight:400">(optional)</span></label>
+          <input type="text" id="subcategory" placeholder="e.g. bn_en">
+        </div>
+        <div class="owner-field">
+          <label for="tone">Tone <span style="font-weight:400">(optional)</span></label>
+          <input type="text" id="tone" placeholder="e.g. playful, reassuring">
+        </div>
+      </div>
+
+      <div id="turns-container"></div>
+
+      <div class="owner-actions" style="margin-bottom: 16px;">
+        <button class="owner-btn secondary" id="add-turn-btn" type="button">+ Add turn</button>
+      </div>
+
+      <div class="owner-field">
+        <label for="notes">Notes <span style="font-weight:400">(optional, not shown to the model)</span></label>
+        <textarea id="notes" rows="2" placeholder="Why this example matters, context for reviewers…"></textarea>
+      </div>
+
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="save-btn" type="button">Save example</button>
+        <button class="owner-btn secondary" id="clear-btn" type="button">Clear form</button>
+      </div>
+
+      <div id="result-msg"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="teach.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.792714+00:00",
+  "id": "rup-000483",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar mone hoy ami sob relationship e same mistake repeat kori, ki wrong amar sathe",
+      "role": "user"
+    },
+    {
+      "content": "Nothing's inherently wrong with you for repeating a pattern, that's actually really common until it's consciously addressed. Kirokom mistake ta, ekta specific example bolte parbe?",
+      "role": "assistant"
+    },
+    {
+      "content": "ami khub tara-tari sob kichu deye disi, then feel kori exploited",
+      "role": "user"
+    },
+    {
+      "content": "That's a really specific and useful pattern to name. Eta ki always emon chilo naki kono ekta relationship theke shikhechile eta thik jinis?",
+      "role": "assistant"
+    },
+    {
+      "content": "shayad ekta boro relationship theke, jekhane onek diye o kom pete",
+      "role": "user"
+    },
+    {
+      "content": "That imbalance probably taught you that giving more is how you earn love or keep someone around, which then keeps repeating in new relationships unconsciously. Ekhon awareness ache eta niye, seta e first real step change korার dike.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:11:20.792726+00:00"
+}

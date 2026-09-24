@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:03:25.822385+00:00",
+  "id": "rup-000377",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"comparison trap\" social media te kivabe kaj kore ar eta theke ber hoyar kono practical way ache?",
+      "role": "user"
+    },
+    {
+      "content": "Comparison trap shuru hoy karon amra sobsomoy onno der highlight reel dekhi, tader behind-the-scenes struggle na. Ekta perfectly edited photo dekhe amra assume kori oder life ta oi rokom e perfect, jeta almost kokhono sotti hoy na.\n\nEta ber howar kichu practical way ache. Prothomoto, notice koro kokhon scroll korার somoy negative feeling ashe - specific account gulo mute ba unfollow koro jara consistently oi feeling create kore. Dwitiyoto, nijer growth track koro time ke, onno kauke na - last mash er nijer theke aj kotota better acho seta compare koro.\n\nAr sobcheye important, mone rakho social media ekta highlight reel, full picture na. Jara sobcheye \"perfect\" dekhay, tader o নিজের struggle ache je tumi dekhcho na simply.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:03:25.822394+00:00"
+}

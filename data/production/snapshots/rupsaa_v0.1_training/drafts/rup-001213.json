@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:35:47.584866+00:00",
+  "id": "rup-001213",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "If I dispute a chargeback and lose, does that count against my account standing?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, I don't have specifics on account-standing impact from lost disputes - the documentation covers the dispute process itself, not downstream consequences.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 13 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T10:35:47.584880+00:00"
+}

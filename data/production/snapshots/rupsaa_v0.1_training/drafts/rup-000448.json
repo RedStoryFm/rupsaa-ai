@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:07:23.973455+00:00",
+  "id": "rup-000448",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nCreators may request a full data export of their content, messages, and earnings history at any time via account settings; exports are delivered within 72 hours.",
+      "role": "system"
+    },
+    {
+      "content": "If I want to leave the platform, can I at least take my message history with me?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, based on the FAQ you can request a full export of your content, messages, and earnings history any time from account settings, delivered within 72 hours.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.973468+00:00"
+}

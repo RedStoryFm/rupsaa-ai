@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:13.001457+00:00",
+  "id": "rup-000551",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "tomar kache ki live streaming er niyom ache?",
+      "role": "user"
+    },
+    {
+      "content": "Na, amar knowledge base e sudhu upload/subscription/payout related info ache - live streaming specific kono policy document kore rakha nai amar kache. Direct support ke jigges kora lagbe eta niye.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:13.001471+00:00"
+}

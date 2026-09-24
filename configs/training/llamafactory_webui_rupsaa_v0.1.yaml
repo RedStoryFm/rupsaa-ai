@@ -1,0 +1,71 @@
+# Rupsaa V0.1 — LLaMA-Factory 0.7.1 **WebUI "Load arguments"** template.
+#
+# DO NOT point the GUI at this file directly. scripts/start_llamafactory_gui.sh
+# renders it (substituting the project-root placeholder in train.output_dir)
+# into config/rupsaa_v0.1.yaml on
+# every launch; in the GUI you then type just:   rupsaa_v0.1.yaml
+#
+# Why a separate file from configs/training/llamafactory_rupsaa_v0.1.yaml
+# (verified by reading the installed llamafactory 0.7.1 source):
+#  * webui/common.py load_args() opens os.path.join("config", <textbox>) —
+#    "config" is RELATIVE TO THE WEBUI PROCESS'S CWD. It is not a free path.
+#  * webui/runner.py load_args() maps every YAML key through
+#    manager.get_elem_by_id(<key>): keys must be Gradio elem_ids like
+#    "top.model_path" / "train.cutoff_len", not CLI args like
+#    "model_name_or_path". The CLI file is valid for `llamafactory-cli train`
+#    but not for the WebUI.
+#  * runner._parse_train_args() computes the real output dir as
+#    os.path.join("saves", <model_name>, <finetuning_type>, <train.output_dir>).
+#    An ABSOLUTE train.output_dir makes os.path.join return it unchanged, so
+#    the adapter lands in exactly <root>/adapters/rupsaa-v0.1 instead of
+#    saves/Custom/lora/adapters/rupsaa-v0.1. Hence the rendered root path.
+#
+# Values that are deliberately identical to what the page shows on load
+# (top.model_name/model_path via cache/user_config.yaml seeded by the
+# launcher, train.dataset_dir = the default "data", finetuning_type,
+# training_stage): loading them causes no Gradio .change event, so the GUI's
+# own change-handlers cannot overwrite top.template (model_name.change ->
+# get_template("Custom") = "default") or blank train.dataset
+# (dataset_dir.change -> list_dataset() returns value=[]).
+#
+# Same experiment as configs/training/rupsaa_v0.1_qlora.yaml, except where
+# this GUI version cannot express a setting:
+#  * warmup_ratio 0.03 -> warmup_steps 4 (3% of 135 optimizer steps:
+#    733 train rows after the 5% resplit, micro-batch 2, grad-accum 8,
+#    3 epochs)
+#  * weight_decay 0.01 -> not exposed by this WebUI (trainer default 0.0)
+#  * frozen validation.jsonl -> 5% resplit of rupsaa_v0.1_train (no separate
+#    eval-file field on the Train tab in 0.7.1)
+#  * save_total_limit 3 -> not exposed (135 steps / save every 50 = 2 mid-run
+#    checkpoints + final, so effectively the same)
+
+top.model_name: Custom
+top.model_path: Qwen/Qwen2.5-7B-Instruct
+top.finetuning_type: lora
+top.quantization_bit: "4"
+top.template: qwen
+
+train.training_stage: Supervised Fine-Tuning
+train.dataset_dir: data
+train.dataset:
+  - rupsaa_v0.1_train
+train.learning_rate: "2e-4"
+train.num_train_epochs: "3.0"
+train.max_grad_norm: "0.3"
+train.max_samples: "100000"
+train.compute_type: bf16
+train.cutoff_len: 2048
+train.batch_size: 2
+train.gradient_accumulation_steps: 8
+train.val_size: 0.05
+train.lr_scheduler_type: cosine
+train.logging_steps: 10
+train.save_steps: 50
+train.warmup_steps: 4
+train.optim: paged_adamw_8bit
+train.upcast_layernorm: true
+train.lora_rank: 16
+train.lora_alpha: 32
+train.lora_dropout: 0.05
+train.lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+train.output_dir: "@RUPSAA_ROOT@/adapters/rupsaa-v0.1"

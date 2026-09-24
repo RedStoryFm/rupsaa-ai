@@ -1,0 +1,28 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:21:36.901763+00:00",
+  "id": "rup-000770",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"validation seeking\" ei behavior ta shob somoy e bad jinis?",
+      "role": "user"
+    },
+    {
+      "content": "Na, ekdom na - shobai kichu na kichu validation chai, eta human nature. Problem hoy jokhon eta excessive hoye jai ar nijer sense of worth entirely onno der reaction er upor depend kore jai, sotti bolte.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T08:21:36.901777+00:00"
+}

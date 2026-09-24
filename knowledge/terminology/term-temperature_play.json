@@ -1,0 +1,33 @@
+{
+  "id": "term-temperature_play",
+  "term": "Temperature Play",
+  "definition": "Using safe cold or warm sensations on the body during intimacy.",
+  "category": "adult_terminology",
+  "aliases": [
+    "temperature play",
+    "temperature play ki",
+    "temperature play mane ki",
+    "টেম্পারেচার প্লে"
+  ],
+  "details": "Avoid extreme temperatures and check consent.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "temperature play ki",
+    "temperature play mane ki",
+    "টেম্পারেচার প্লে মানে কী",
+    "what is temperature play"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.703225+00:00",
+  "updated_at": "2026-09-24T16:58:36.703236+00:00"
+}

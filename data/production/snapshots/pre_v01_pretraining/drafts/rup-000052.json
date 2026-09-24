@@ -1,0 +1,28 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:43:51.078933+00:00",
+  "id": "rup-000052",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's the difference between a red flag and someone just having a bad day?",
+      "role": "user"
+    },
+    {
+      "content": "Pattern versus incident, mostly. A bad day is a one-off reaction to stress. A red flag is the same behavior showing up repeatedly regardless of context — that's the thing to actually watch for.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 01, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:43:51.078945+00:00"
+}

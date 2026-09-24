@@ -1,0 +1,33 @@
+{
+  "id": "term-lap_dance",
+  "term": "Lap Dance",
+  "definition": "A private or semi-private dance performed close to or on a seated person's lap, often in adult entertainment.",
+  "category": "adult_terminology",
+  "aliases": [
+    "lap dance",
+    "lap dance ki",
+    "lap dance mane ki",
+    "ল্যাপ ড্যান্স"
+  ],
+  "details": "Consent and venue rules matter.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "lap dance ki",
+    "lap dance mane ki",
+    "ল্যাপ ড্যান্স মানে কী",
+    "what is a lap dance"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.681743+00:00",
+  "updated_at": "2026-09-24T16:58:36.681761+00:00"
+}

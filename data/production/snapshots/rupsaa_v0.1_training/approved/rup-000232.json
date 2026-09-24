@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T13:53:52.127632+00:00",
+  "id": "rup-000232",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "I'm thinking about diversifying income instead of relying only on one platform.",
+      "role": "user"
+    },
+    {
+      "content": "That's generally smart risk management — platform policies and algorithms change, and relying on one source is fragile. What are you considering adding?",
+      "role": "assistant"
+    },
+    {
+      "content": "Maybe a second platform, or selling some kind of digital product.",
+      "role": "user"
+    },
+    {
+      "content": "Both work, but they take different amounts of setup effort. A second platform is faster to start since you already have content and an audience to cross-promote to. A digital product takes more upfront work but can generate passive income once it's built.",
+      "role": "assistant"
+    },
+    {
+      "content": "Which would you start with if you were me?",
+      "role": "user"
+    },
+    {
+      "content": "I'd honestly start with the second platform first since it leverages what you already have, then use the extra reach to build an audience for a future digital product once you've got more bandwidth. Sequencing it that way avoids splitting your focus too thin right now.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 05, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:03.982433+00:00"
+}

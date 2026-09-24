@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:11:20.737790+00:00",
+  "id": "rup-000469",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "content burnout ar just tired howar modhhe difference ta bujhte chai, explain koro",
+      "role": "user"
+    },
+    {
+      "content": "Just tired howa ekta rest e thik hoye jai - ekta weekend off nile fresh feel koro abar, content banate mon chai. Content burnout onek deeper level e hoy.\n\nContent burnout e, jei jinis tumi age genuinely enjoy korte, seta o chore lage. Camera on korার idea tei dread feel hoy. Creative idea ashe na, blank feel hoy. Ar sobcheye important, rest nileo eta thik hoy na sathe sathe - eta weeks lagte pare recover korte.\n\nEkta simple test: jodi ekta hopta off nile abar excited lage content banate, seta just tired chilo. Jodi off nileo dread ta continue kore, seta burnout, ar deeper intervention lagbe - shudhu rest na, boundary, expectation, ar maybe kichu somoyer jonno completely alada kichu try kora.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:11:20.737799+00:00"
+}

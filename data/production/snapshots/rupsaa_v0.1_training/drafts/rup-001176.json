@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:32:01.539611+00:00",
+  "id": "rup-001176",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is there a way to see which specific post drove the most new subscribers?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, I don't have that level of analytics breakdown documented - basic subscriber counts are covered, but per-post attribution isn't something I have detail on.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 12 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T10:32:01.539629+00:00"
+}

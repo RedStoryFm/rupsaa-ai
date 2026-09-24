@@ -1,0 +1,28 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:15:20.931225+00:00",
+  "id": "rup-000494",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "kivabe bujhbo j ami ready commitment er jonno?",
+      "role": "user"
+    },
+    {
+      "content": "Nijer time, energy, ar emotional space onno kauke genuinely deyar jonno willing feel korle - eta ekta sign. Tumi ki eta niye unsure feel korcho ekhon?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-22T14:15:20.931243+00:00"
+}

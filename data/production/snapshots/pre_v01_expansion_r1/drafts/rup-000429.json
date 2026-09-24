@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_banglish_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:07:23.920146+00:00",
+  "id": "rup-000429",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "tumi ki mone koro ami ekhono move on korte parini purono relationship theke?",
+      "role": "user"
+    },
+    {
+      "content": "That's hard to say without more context, but if you're still asking this question actively, some part of you probably knows the answer already.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.920155+00:00"
+}

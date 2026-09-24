@@ -27,6 +27,7 @@ from api.schemas import (
     ResetRequest,
     ResetResponse,
 )
+from api.owner_routes import router as owner_router
 from api.services import RupsaaService, get_service
 from rupsaa.config import get_settings
 
@@ -54,9 +55,14 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origin_list(),
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
+
+# Owner-only tools (Teach Rupsaa, Rupsaa Knowledge) — see api/owner_routes.py
+# for the auth model. Mounted under /owner/*, separate from the public chat
+# routes below.
+app.include_router(owner_router)
 
 
 @app.exception_handler(Exception)

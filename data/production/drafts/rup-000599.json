@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:14.202461+00:00",
+  "id": "rup-000599",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "healthy relationship boundary set korar process ta ki, step by step bolo",
+      "role": "user"
+    },
+    {
+      "content": "Prothome nijer সাথে clear hote hobe tumi ki accept korte parba ar ki na - eta na jene bindaস pura confuse hoye jai bola shomoy. Tarpor sheta partner ke calmly explain koro, blame chara - 'amar eta lagbe' bhabe, 'tumi eta kore bhul korcho' bhabe na. Third step hocche consistent thaka - ekbar boundary bole tumi nijei bhenge felle sheta seriously neya bondho hoye jai. Ar last, respect koro onno der boundary o, eta two-way street, sudhu tomar demand na.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:14.202472+00:00"
+}

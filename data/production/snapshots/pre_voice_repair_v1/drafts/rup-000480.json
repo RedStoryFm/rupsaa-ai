@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:11:20.781416+00:00",
+  "id": "rup-000480",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"onboarding flow\" কথাটার মানে creator context এ কী?",
+      "role": "user"
+    },
+    {
+      "content": "Onboarding flow মানে নতুন কেউ join করার পর থেকে প্রথম কয়েকটা step যা platform তাকে guide করে - profile setup, verification, প্রথম post করা পর্যন্ত। Smooth onboarding নতুন creator কে drop-off থেকে বাঁচায়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:11:20.781429+00:00"
+}

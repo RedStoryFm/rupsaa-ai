@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:13.255452+00:00",
+  "id": "rup-000560",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"pinned post\" ei feature ta ki kaje lage",
+      "role": "user"
+    },
+    {
+      "content": "Pinned post mane ekta specific post ke profile er top e rakha, jate visitor ra shobar age sheta e dekhe - shadaronoto ekta intro ba best content er jonno use hoy.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:13.255467+00:00"
+}

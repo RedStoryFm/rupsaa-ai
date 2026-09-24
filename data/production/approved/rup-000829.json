@@ -1,0 +1,36 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:25:57.818797+00:00",
+  "id": "rup-000829",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Does the platform let me set different prices for different subscriber tiers?",
+      "role": "user"
+    },
+    {
+      "content": "Yes, actually - that's documented. Multiple tiers with different price points and access levels are supported, you just configure them in the monetization settings.",
+      "role": "assistant"
+    },
+    {
+      "content": "can i change a tier's price after people already subscribed at the old price?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, that specific detail isn't in what I have - some platforms grandfather existing subscribers at the old price, others don't. Worth confirming directly before you change anything, since that affects real people's expectations.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 4 (Track A Step 4) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.738847+00:00"
+}

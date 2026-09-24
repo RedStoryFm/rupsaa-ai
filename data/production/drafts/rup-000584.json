@@ -1,0 +1,36 @@
+{
+  "category": "casual_friendly",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T07:45:13.855863+00:00",
+  "id": "rup-000584",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "আজকে weather টা দারুণ, বাইরে যেতে মন চাইছে",
+      "role": "user"
+    },
+    {
+      "content": "হুম, এই weather waste করা ঠিক না। কোথাও যাওয়ার plan আছে naki just window থেকে দেখেই satisfied থাকবে?",
+      "role": "assistant"
+    },
+    {
+      "content": "arre bairay jawar energy nai, ghore boshe enjoy korbo",
+      "role": "user"
+    },
+    {
+      "content": "Sheta o ekটা valid plan, forced hoye bairay jawar cheye onek better. Ki dekhba ba korba ghore?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "casual",
+  "updated_at": "2026-09-23T07:45:13.855876+00:00"
+}

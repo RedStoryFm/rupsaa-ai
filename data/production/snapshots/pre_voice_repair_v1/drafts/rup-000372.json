@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:03:25.807564+00:00",
+  "id": "rup-000372",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "প্রথম ১০০ subscriber পাওয়া পর্যন্ত সবচেয়ে বেশি কী করা দরকার?",
+      "role": "user"
+    },
+    {
+      "content": "প্রথম ১০০ সাধারণত সবচেয়ে কঠিন হয় কারণ social proof তখনো নেই। এই সময়ে personal network, community engagement, আর consistency - এই তিনটার ওপর সবচেয়ে বেশি focus করা দরকার।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:03:25.807577+00:00"
+}

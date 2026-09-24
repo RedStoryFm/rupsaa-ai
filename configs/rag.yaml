@@ -26,6 +26,14 @@ retrieval:
   # Below this, retrieval is treated as "no useful context" rather than
   # forcing irrelevant chunks into the prompt (see rupsaa/rag/pipeline.py).
   min_score: 0.72
+  # multilingual-e5 similarity is compressed: casual chat ("Hi Rupsaa, kemon
+  # acho?" 0.84) can outscore real knowledge questions ("withdrawal minimum
+  # koto?" 0.80) against the same documents, so NO absolute threshold
+  # separates them. Relevance is decided mainly by rupsaa/rag/router.py
+  # (casual / memory / follow-up messages never retrieve). Within a
+  # retrieval, chunks more than relative_margin below the best match are
+  # dropped; strict routes also require keyword overlap (pipeline.py).
+  relative_margin: 0.04
 
 documents:
   source_dir: "knowledge/documents"

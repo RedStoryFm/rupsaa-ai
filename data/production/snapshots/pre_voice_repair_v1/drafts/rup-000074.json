@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T13:43:51.101782+00:00",
+  "id": "rup-000074",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "How much content should I have ready before I even launch?",
+      "role": "user"
+    },
+    {
+      "content": "Enough for about 2-3 weeks of consistent posting is a reasonable starting cushion — it buys you time to find your rhythm without scrambling.",
+      "role": "assistant"
+    },
+    {
+      "content": "And after that, how far ahead should I stay?",
+      "role": "user"
+    },
+    {
+      "content": "Once you're rolling, aiming for a week or two ahead is usually sustainable without feeling like you're always behind. Some weeks you'll build that buffer back up, some weeks you'll eat into it — that's normal, just don't let it hit zero regularly.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 01, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:43:51.101792+00:00"
+}

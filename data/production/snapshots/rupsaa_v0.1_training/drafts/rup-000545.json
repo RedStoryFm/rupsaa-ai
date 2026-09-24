@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:45:12.874314+00:00",
+  "id": "rup-000545",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "payout minimum threshold ki shob platform e same thake?",
+      "role": "user"
+    },
+    {
+      "content": "Na, eta platform bhede vary kore ekdom. Amar kache je documentation ache sheta ekta specific platform er jonno - tumi kon platform er kotha bolcho?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:45:12.874324+00:00"
+}

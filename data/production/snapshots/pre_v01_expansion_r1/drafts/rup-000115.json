@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:46:26.495826+00:00",
+  "id": "rup-000115",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা সম্পর্কে বিশ্বাস আবার তৈরি করা কি আদৌ সম্ভব একবার ভাঙার পর?",
+      "role": "user"
+    },
+    {
+      "content": "সম্ভব, কিন্তু সহজ না এবং সময় লাগে। এটা নির্ভর করে কয়েকটা জিনিসের ওপর।\n\nপ্রথমত, যে ভুল করেছে তার সত্যিকারের accountability থাকতে হবে - শুধু sorry বলা না, বরং কেন হয়েছে সেটা বোঝা এবং আচরণে পরিবর্তন আনা। দ্বিতীয়ত, যাকে আঘাত করা হয়েছে তার নিজের গতিতে সময় নেওয়ার অধিকার আছে, তাড়াহুড়ো করানো যাবে না। তৃতীয়ত, ছোট ছোট consistent পদক্ষেপ - বড় বড় gesture এর চেয়ে প্রতিদিনের নির্ভরযোগ্যতা বেশি কাজ করে বিশ্বাস ফিরিয়ে আনতে।\n\nআর সবচেয়ে গুরুত্বপূর্ণ কথা হলো, কখনো কখনো বিশ্বাস পুরোপুরি ফিরে আসে না, আর সেটা মেনে নেওয়াও একটা valid সিদ্ধান্ত।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 02, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:46:26.495860+00:00"
+}

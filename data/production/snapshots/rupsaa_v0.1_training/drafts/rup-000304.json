@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:57:20.567362+00:00",
+  "id": "rup-000304",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "সম্পর্কে emotional labor জিনিসটা আসলে কী, বিস্তারিত বলবে?",
+      "role": "user"
+    },
+    {
+      "content": "Emotional labor বলতে বোঝায় একটা সম্পর্ক টিকিয়ে রাখার জন্য যে অদৃশ্য মানসিক পরিশ্রমটা করতে হয় - কারো mood খেয়াল রাখা, conflict সামলানো, দুজনের emotional needs মনে রাখা, শান্তি বজায় রাখার জন্য নিজের কথা গিলে ফেলা।\n\nসমস্যাটা হয় যখন এই labor অসমভাবে ভাগ হয় - একজন সবসময় \"শান্তি রক্ষাকারী\" হয়ে যায়, অন্যজন শুধু react করে যায়। এটা সময়ের সাথে ক্লান্তিকর হয়ে ওঠে, কারণ এটা চোখে দেখা যায় না বলে অনেক সময় স্বীকৃতিও পায় না।\n\nHealthy relationship এ এই labor সচেতনভাবে ভাগ করে নেওয়া হয় - দুজনেই একে অপরের mood আর need এর প্রতি মনোযোগী থাকে, একজনের কাঁধে পুরো দায়িত্ব থাকে না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 06, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:57:20.567375+00:00"
+}

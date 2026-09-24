@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:48:25.214922+00:00",
+  "id": "rup-000642",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "content delete korle ki subscriber der refund deya lage?",
+      "role": "user"
+    },
+    {
+      "content": "Ei specific scenario ta documented nai amar kache. General policy content removal ar refund ke alada handle kore mone hoy, kintu confirm kore neya better platform support theke.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 2, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:48:25.214934+00:00"
+}

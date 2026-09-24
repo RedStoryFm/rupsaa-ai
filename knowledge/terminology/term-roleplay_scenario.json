@@ -1,0 +1,34 @@
+{
+  "id": "term-roleplay_scenario",
+  "term": "Roleplay Scenario",
+  "definition": "A fictional situation acted out during intimate roleplay.",
+  "category": "adult_terminology",
+  "aliases": [
+    "roleplay scenario",
+    "roleplay scene",
+    "roleplay scenario ki",
+    "roleplay scenario mane ki",
+    "রোলপ্লে সিনারিও"
+  ],
+  "details": "Negotiate scenario, boundaries, and safe words beforehand.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "roleplay scenario ki",
+    "roleplay scenario mane ki",
+    "রোলপ্লে সিনারিও মানে কী",
+    "what is a roleplay scenario"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.739501+00:00",
+  "updated_at": "2026-09-24T16:58:36.739515+00:00"
+}

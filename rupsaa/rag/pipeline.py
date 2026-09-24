@@ -9,15 +9,53 @@ retraining Rupsaa (see rupsaa/model/).
 from __future__ import annotations
 
 import logging
+import re
 
 from rupsaa.config import PROJECT_ROOT, load_rag_config
 from rupsaa.rag.chunker import chunk_text
 from rupsaa.rag.document_loader import load_documents_from_dir
 from rupsaa.rag.embeddings import embed_passages
 from rupsaa.rag.retriever import build_vector_store, retrieve
-from rupsaa.rag.vector_store import ChunkMetadata, FaissVectorStore
+from rupsaa.rag.vector_store import ChunkMetadata, FaissVectorStore, SearchResult
 
 logger = logging.getLogger("rupsaa.rag.pipeline")
+
+_BN = "\u0980-\u09FF"
+_TOKEN_RE = re.compile(rf"[A-Za-z]+|[{_BN}]+")
+# Words too common to count as evidence that a chunk is about the question.
+_STOPWORDS = frozenset(
+    """
+    what which who whom when where why how does do did is are was were be the a an and or but of to in on at
+    for with from by as it its this that these those there here about your you my me i we they them their
+    can could would should will just really like know think want need tell explain please mean means
+    rupsaa ami tumi tui amar tomar ki ki na eta sheta ekta kore kora hoy hobe ache nai theke jonno niye
+    ar o je mane bolo bolte keno kivabe kothay kokhon kemon acho
+    আমি তুমি আমার তোমার কি কী না এটা সেটা একটা করে করা হয় হবে আছে নেই থেকে জন্য নিয়ে আর ও যে মানে বলো
+    """.split()
+)
+
+
+def is_hidden_source(filename: str) -> bool:
+    name = filename.rsplit("/", 1)[-1]
+    return name.startswith(".") or name.endswith("metadata.json")
+
+
+def _content_stems(text: str) -> set[str]:
+    return {t.lower()[:5] for t in _TOKEN_RE.findall(text) if len(t) >= 3 and t.lower() not in _STOPWORDS}
+
+
+def filter_results(question: str, results: list[SearchResult], *, strict: bool = False) -> list[SearchResult]:
+    cfg = load_rag_config()["retrieval"]
+    results = [r for r in results if not is_hidden_source(r.metadata.source_filename)]
+    if not results:
+        return []
+    top = max(r.score for r in results)
+    margin = cfg.get("relative_margin", 0.04)
+    results = [r for r in results if r.score >= top - margin]
+    if strict:
+        q = _content_stems(question)
+        results = [r for r in results if q & _content_stems(r.metadata.text)]
+    return results
 
 
 class RagPipeline:
@@ -68,7 +106,7 @@ class RagPipeline:
         logger.info("Indexed %d chunk(s) from %d document(s).", len(all_chunks), len(docs))
         return len(all_chunks)
 
-    def query(self, question: str, top_k: int | None = None) -> tuple[str | None, list[dict]]:
+    def query(self, question: str, top_k: int | None = None, *, strict: bool = False) -> tuple[str | None, list[dict]]:
         """Returns (formatted_context_or_None, sources).
 
         formatted_context is None when retrieval found nothing above the
@@ -76,8 +114,19 @@ class RagPipeline:
         case (see rupsaa/personality/system_prompt.py RAG_INSTRUCTIONS).
         sources is always a list (possibly empty) of source dicts suitable
         for exposing directly in an API response.
+
+        Which messages reach this at all is decided by rupsaa/rag/router.py
+        (casual/memory/follow-up messages never do). On top of min_score:
+          * hidden/tooling files (e.g. .metadata.json) are never returned
+          * chunks scoring well below the best match are dropped
+            (retrieval.relative_margin) — multilingual-e5 scores are
+            compressed (~0.75–0.85 for almost anything), so an absolute
+            threshold alone can't separate relevant from irrelevant
+          * strict=True (router: GENERAL, or a definition question with no
+            terminology entry) additionally requires each chunk to share a
+            content keyword with the question
         """
-        results = retrieve(question, self.store, top_k)
+        results = filter_results(question, retrieve(question, self.store, top_k), strict=strict)
         if not results:
             return None, []
 

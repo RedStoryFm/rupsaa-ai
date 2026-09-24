@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.059242+00:00",
+  "id": "rup-000221",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.\n\nRetrieved context:\n[Source: creator_faq.md]\nPayout requests are processed within 5-7 business days, sent to the bank account or payment method registered on file.",
+      "role": "system"
+    },
+    {
+      "content": "It's been 10 days and I still haven't gotten paid, is that normal?",
+      "role": "user"
+    },
+    {
+      "content": "Based on the documented timeline, honestly 5-7 business days is the norm, so 10 days is past that window - that's worth actually reaching out to platform support about rather than assuming it's fine. I don't have info here on what happens when it's delayed.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-23T11:51:03.974676+00:00"
+}

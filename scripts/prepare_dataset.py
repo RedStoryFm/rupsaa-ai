@@ -54,6 +54,51 @@ def split_records(
     return train, val, test
 
 
+def split_id_groups(
+    id_groups: list[list[str]], seed: int, train_ratio: float, val_ratio: float
+) -> tuple[set[str], set[str], set[str]]:
+    """Assigns whole groups of ids (e.g. near-duplicate clusters from
+    rupsaa.dataset.dedup.group_near_duplicates) to train/val/test, so no
+    cluster is ever split across sets — used by scripts/dataset_export.py
+    to keep near-identical conversation variants from leaking between
+    train and validation/test.
+
+    Greedily packs groups, largest first, into whichever bucket is
+    furthest below its target share of the total record count. This
+    trades exact ratio precision for the hard constraint that groups
+    never split — with target ratios like 90/5/5 and mostly-singleton
+    groups (the common case), the achieved ratios end up close to target.
+    """
+    total = sum(len(g) for g in id_groups)
+    targets = {
+        "train": total * train_ratio,
+        "val": total * val_ratio,
+        "test": total * (1 - train_ratio - val_ratio),
+    }
+    counts = {"train": 0, "val": 0, "test": 0}
+    buckets: dict[str, set[str]] = {"train": set(), "val": set(), "test": set()}
+
+    rng = random.Random(seed)
+    ordered = id_groups[:]
+    rng.shuffle(ordered)
+    ordered.sort(key=len, reverse=True)  # largest clusters placed first
+
+    for group in ordered:
+        # Pick the bucket furthest (proportionally) below its target.
+        deficits = {
+            name: targets[name] - counts[name]
+            for name in ("train", "val", "test")
+            if targets[name] > 0
+        }
+        if not deficits:
+            deficits = {"train": 1}
+        chosen = max(deficits, key=deficits.get)
+        buckets[chosen].update(group)
+        counts[chosen] += len(group)
+
+    return buckets["train"], buckets["val"], buckets["test"]
+
+
 def write_jsonl(records: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:

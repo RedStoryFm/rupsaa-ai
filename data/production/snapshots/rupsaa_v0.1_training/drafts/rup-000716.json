@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:31.050323+00:00",
+  "id": "rup-000716",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's an \"algorithm reset\" that creators sometimes talk about?",
+      "role": "user"
+    },
+    {
+      "content": "It's an informal term for when a platform's recommendation system seems to suddenly stop showing your content to new people, often after a change in posting pattern or platform-side algorithm updates - it's usually temporary, not permanent.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:31.050337+00:00"
+}

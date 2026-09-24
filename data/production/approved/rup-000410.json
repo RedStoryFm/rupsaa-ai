@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:05:23.277950+00:00",
+  "id": "rup-000410",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Why do some people avoid conflict entirely while others seem to seek it out?",
+      "role": "user"
+    },
+    {
+      "content": "It usually traces back to what conflict meant in the environment someone grew up in. If disagreement in your household was volatile or scary as a kid, you likely learned that conflict equals danger, and avoidance becomes a survival strategy that sticks into adulthood.\n\nOn the other side, people who seem to seek out conflict often learned the opposite lesson — that conflict was how you got heard or how issues actually got resolved, especially in households where quiet disagreement got ignored but loud conflict got addressed.\n\nNeither pattern is really a personality flaw, they're both learned responses to different early environments. The useful move isn't judging either style, but noticing your own default and asking whether it's actually serving you now, or just running on old programming from a very different context.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 09, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.129610+00:00"
+}

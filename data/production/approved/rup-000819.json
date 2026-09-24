@@ -1,0 +1,36 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:22:09.178519+00:00",
+  "id": "rup-000819",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is it normal to feel bored in a stable relationship sometimes?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, yes - stability and excitement pull in slightly different directions, that's just true. Boredom in itself isn't a red flag, it's what you do with it that matters.",
+      "role": "assistant"
+    },
+    {
+      "content": "what should i do with it then",
+      "role": "user"
+    },
+    {
+      "content": "Fair question - actually try introducing novelty together rather than assuming the relationship itself is broken. New activities, deeper conversations, even just changing routine can genuinely help before you conclude something's wrong.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-23T11:51:04.723836+00:00"
+}

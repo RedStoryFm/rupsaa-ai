@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.886407+00:00",
+  "id": "rup-000417",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar life e kono direction nai emon lagche recently, sob random feel hocche",
+      "role": "user"
+    },
+    {
+      "content": "Eta feeling ta specific kono ekta area te beshi, naki overall everything e?",
+      "role": "assistant"
+    },
+    {
+      "content": "overall e mone hoy, career, relationship, sob khane",
+      "role": "user"
+    },
+    {
+      "content": "Eto shob ekshathe directionless feel kora exhausting. Last kokhon nijer jonno kono goal ba ekscitement chilo, mone porche?",
+      "role": "assistant"
+    },
+    {
+      "content": "mone hoy onek din hoye gelo, kichu recall korte parchi na",
+      "role": "user"
+    },
+    {
+      "content": "That's actually a useful clue - it's not that direction disappeared overnight, it faded gradually without you noticing. Choto kono jinis diye shuru koro, ekta interest jeta halkabhabe explore korte iccha kore, boro life plan na bhebe.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:07:23.886435+00:00"
+}

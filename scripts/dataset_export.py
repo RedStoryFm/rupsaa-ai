@@ -30,8 +30,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from rupsaa.dataset.config import default_base_dir, load_dataset_config  # noqa: E402
+from rupsaa.dataset.dedup import group_near_duplicates  # noqa: E402
+from rupsaa.dataset.diversity import analyze_with_config  # noqa: E402
 from rupsaa.dataset.store import DatasetStore  # noqa: E402
-from scripts.prepare_dataset import split_records  # noqa: E402
+from scripts.prepare_dataset import split_id_groups  # noqa: E402
 from scripts.validate_dataset import print_report, validate_file  # noqa: E402
 
 
@@ -49,6 +51,9 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=None)
     parser.add_argument("--train-ratio", type=float, default=None)
     parser.add_argument("--val-ratio", type=float, default=None)
+    parser.add_argument("--allow-diversity-failures", action="store_true",
+                        help="Export even if the corpus-diversity gate reports BLOCK issues. Only for reproducing "
+                             "historical exports / diagnosis — such an export is NOT training-ready.")
     args = parser.parse_args()
 
     cfg = load_dataset_config()
@@ -66,10 +71,39 @@ def main() -> None:
         print("No approved conversations found — nothing to export. Approve some with scripts/dataset_review.py first.")
         sys.exit(1)
 
+    # Corpus-level diversity gate (V0.1 post-mortem: "honestly" in 863/1129
+    # training replies passed every per-record check).
+    diversity = analyze_with_config(approved)
+    if diversity.blocking:
+        print(f"Corpus diversity gate: {len(diversity.blocking)} BLOCK issue(s):")
+        for issue in diversity.blocking[:15]:
+            print(f"  - {issue.describe()}")
+        if not args.allow_diversity_failures:
+            print("REFUSING to export: the approved corpus is not training-ready. Fix the concentration "
+                  "(see scripts/dataset_audit.py) or pass --allow-diversity-failures for a non-training export.")
+            sys.exit(1)
+        print("WARNING: --allow-diversity-failures set — this export is NOT training-ready.")
+
     print(f"Exporting {len(approved)} approved conversation(s) (seed={seed}, train_ratio={train_ratio}, val_ratio={val_ratio})")
 
-    stripped = [r.strip_for_training() for r in approved]
-    train, val, test = split_records(stripped, seed, train_ratio, val_ratio)
+    # Group near-duplicate/closely-related conversations before splitting,
+    # so no cluster of similar variants ends up split across train and
+    # validation/test (which would let validation loss look artificially
+    # good just from memorized near-copies in train).
+    near_cfg = cfg["near_duplicate"]
+    id_groups = group_near_duplicates(
+        approved, ngram_size=near_cfg["ngram_size"], threshold=near_cfg["similarity_threshold"],
+        max_records=near_cfg["max_records_for_full_scan"],
+    )
+    non_singleton = [g for g in id_groups if len(g) > 1]
+    if non_singleton:
+        print(f"Grouped {sum(len(g) for g in non_singleton)} near-duplicate record(s) into {len(non_singleton)} cluster(s) kept together across the split.")
+
+    train_ids, val_ids, test_ids = split_id_groups(id_groups, seed, train_ratio, val_ratio)
+    by_id = {r.id: r for r in approved}
+    train = [by_id[i].strip_for_training() for i in train_ids]
+    val = [by_id[i].strip_for_training() for i in val_ids]
+    test = [by_id[i].strip_for_training() for i in test_ids]
 
     train_path = output_dir / "train.jsonl"
     val_path = output_dir / "validation.jsonl"
@@ -77,6 +111,9 @@ def main() -> None:
     write_jsonl(train, train_path)
     write_jsonl(val, val_path)
     write_jsonl(test, test_path)
+    (output_dir / "diversity_report.json").write_text(
+        json.dumps(diversity.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     print(f"Wrote {len(train)} train / {len(val)} validation / {len(test)} test examples to {output_dir}")
 

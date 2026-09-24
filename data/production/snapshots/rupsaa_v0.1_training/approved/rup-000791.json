@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T08:22:08.279623+00:00",
+  "id": "rup-000791",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা relationship এ money niye disagreement handle korar shothik ways ki, honestly bolo bistarito.",
+      "role": "user"
+    },
+    {
+      "content": "এটা honestly অনেক couple এর সবচেয়ে কঠিন জায়গাগুলোর একটা, তাই ভালো করে ভাবা দরকার। প্রথম step হলো নিজেদের individual money habits নিয়ে অকপটে কথা বলা - কে saver, কে spender, কার কী financial history আছে, judgment ছাড়া। এরপর একটা shared system ঠিক করা দরকার যেটা দুজনের জন্যই কাজ করে - সবসময় সব কিছু 50-50 split করতে হবে এমন rule না, বরং income অনুযায়ী proportional contribution অনেক relationship এ বেশি fair মনে হয়। বড় purchase নিয়ে আগে থেকে একটা threshold ঠিক করে রাখা ভালো - যেমন, একটা নির্দিষ্ট amount এর বেশি খরচের আগে দুজনেই জানাবে, ছোট খরচে individual freedom থাকবে। আর honestly সবচেয়ে গুরুত্বপূর্ণ জিনিস হলো, money নিয়ে conversation টাকে একবারের বদলে ongoing রাখা - পরিস্থিতি বদলায়, আয় বদলায়, তাই বছরে অন্তত একবার revisit করাটা সুস্থ অভ্যাস, শুধু সমস্যা হলেই কথা বলা না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.559032+00:00"
+}

@@ -81,6 +81,12 @@ def load_documents_from_dir(source_dir: Path, supported_extensions: list[str]) -
         logger.warning("Knowledge source directory does not exist: %s", source_dir)
         return docs
     for path in sorted(source_dir.iterdir()):
+        # Hidden files are tooling, not knowledge: .metadata.json is the
+        # Knowledge Manager's sidecar (see document_manager.py) and was being
+        # indexed as a "document" whose text is just "{}" — it then matched
+        # every query at ~0.80 and showed up as a user-visible source.
+        if path.name.startswith("."):
+            continue
         if path.is_file() and path.suffix.lower() in supported_extensions:
             doc = load_document(path)
             if doc:

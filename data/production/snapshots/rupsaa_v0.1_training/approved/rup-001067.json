@@ -1,0 +1,28 @@
+{
+  "category": "creator_platform_terminology",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:21:25.709839+00:00",
+  "id": "rup-001067",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's the actual definition of \"impressions per follower\"?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly it's a ratio - total impressions divided by follower count, actually used to gauge whether existing followers are engaged enough to keep seeing your content repeatedly, not just new discovery.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 9 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.382495+00:00"
+}

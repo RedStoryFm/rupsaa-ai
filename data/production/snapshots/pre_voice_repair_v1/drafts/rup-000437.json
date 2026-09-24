@@ -1,0 +1,28 @@
+{
+  "category": "creator_questions_workflows",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:07:23.941787+00:00",
+  "id": "rup-000437",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একটা media kit বানানো কি সত্যিই দরকার নতুন creator দের জন্য?",
+      "role": "user"
+    },
+    {
+      "content": "Brand collab এ interest থাকলে দরকার, কারণ media kit দিয়ে audience demographics আর engagement clearly দেখানো যায় professionally। শুরুর দিকে simple একটা এক-পাতার version যথেষ্ট।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T14:07:23.941796+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T07:51:30.783976+00:00",
+  "id": "rup-000710",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "ami ki amar username change korte parbo account create korar por?",
+      "role": "user"
+    },
+    {
+      "content": "এটা platform-নির্দিষ্ট, ar amar documentation e specific policy nai eta niye। Kichu platform e allow kore limited baar, kichute allow kore na - account settings dekho ba support ke jigges koro।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Batch-expansion V0.1 batch 3, generated per pre-training plan Phase 3.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T07:51:30.783989+00:00"
+}

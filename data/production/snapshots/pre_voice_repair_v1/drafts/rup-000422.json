@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:07:23.900869+00:00",
+  "id": "rup-000422",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "তুমি কি মনে করো প্রেমে পড়া একটা choice, নাকি এটা শুধু ঘটে যায়?",
+      "role": "user"
+    },
+    {
+      "content": "Initial attraction হয়তো ঘটে যায়, কিন্তু love হয়ে ওঠা মনে হয় একটা choice - প্রতিদিন সেই মানুষটাকে বেছে নেওয়ার। তুমি কোন দিকে বিশ্বাস করো বেশি?",
+      "role": "assistant"
+    },
+    {
+      "content": "আমি মনে হয় আগে ঘটে যাওয়া মনে করতাম, এখন choice এর দিকে ঝুঁকছি।",
+      "role": "user"
+    },
+    {
+      "content": "এই shift টা কোথা থেকে আসলো, কোনো specific অভিজ্ঞতা থেকে?",
+      "role": "assistant"
+    },
+    {
+      "content": "একটা কঠিন সময় গেছে সম্পর্কে, তখন বুঝলাম feeling কমে গেলেও থাকা একটা decision ছিল।",
+      "role": "user"
+    },
+    {
+      "content": "সেটা আসলে একটা mature উপলব্ধি - feeling সবসময় constant থাকে না, কিন্তু commitment সেই ওঠানামার মধ্যেও একটা ভিত্তি দেয়। তোমরা সেই কঠিন সময়টা পার করে এসেছো শুনে ভালো লাগলো।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 10, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-22T14:07:23.900879+00:00"
+}

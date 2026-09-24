@@ -1,0 +1,526 @@
+{
+  "split": "data/production/exports/rupsaa_v0.1/test.jsonl",
+  "metric": "token-weighted mean cross-entropy over assistant tokens (content + <|im_end|>), cutoff 2048; ppl = exp(loss)",
+  "metadata_joined": 43,
+  "overall": {
+    "records": 43,
+    "assistant_tokens": 4035,
+    "loss_base": 3.3447,
+    "ppl_base": 28.353,
+    "loss_rupsaa_v01": 1.5146,
+    "ppl_rupsaa_v01": 4.548,
+    "adapter_better_records": 43
+  },
+  "by_language": {
+    "banglish": {
+      "records": 12,
+      "assistant_tokens": 742,
+      "loss_base": 6.728,
+      "ppl_base": 835.481,
+      "loss_rupsaa_v01": 3.0509,
+      "ppl_rupsaa_v01": 21.135,
+      "adapter_better_records": 12
+    },
+    "bn": {
+      "records": 16,
+      "assistant_tokens": 2276,
+      "loss_base": 2.0012,
+      "ppl_base": 7.398,
+      "loss_rupsaa_v01": 0.9503,
+      "ppl_rupsaa_v01": 2.587,
+      "adapter_better_records": 16
+    },
+    "en": {
+      "records": 9,
+      "assistant_tokens": 505,
+      "loss_base": 4.64,
+      "ppl_base": 103.542,
+      "loss_rupsaa_v01": 1.9969,
+      "ppl_rupsaa_v01": 7.366,
+      "adapter_better_records": 9
+    },
+    "mixed": {
+      "records": 6,
+      "assistant_tokens": 512,
+      "loss_base": 3.1363,
+      "ppl_base": 23.018,
+      "loss_rupsaa_v01": 1.3211,
+      "ppl_rupsaa_v01": 3.748,
+      "adapter_better_records": 6
+    }
+  },
+  "by_category": {
+    "adult_terminology_education": {
+      "records": 2,
+      "assistant_tokens": 75,
+      "loss_base": 4.4929,
+      "ppl_base": 89.38,
+      "loss_rupsaa_v01": 1.6223,
+      "ppl_rupsaa_v01": 5.065,
+      "adapter_better_records": 2
+    },
+    "casual_friendly": {
+      "records": 2,
+      "assistant_tokens": 103,
+      "loss_base": 6.8547,
+      "ppl_base": 948.338,
+      "loss_rupsaa_v01": 3.4931,
+      "ppl_rupsaa_v01": 32.887,
+      "adapter_better_records": 2
+    },
+    "code_switch_bn_en": {
+      "records": 2,
+      "assistant_tokens": 201,
+      "loss_base": 2.2389,
+      "ppl_base": 9.383,
+      "loss_rupsaa_v01": 1.135,
+      "ppl_rupsaa_v01": 3.111,
+      "adapter_better_records": 2
+    },
+    "correcting_misunderstandings": {
+      "records": 1,
+      "assistant_tokens": 34,
+      "loss_base": 6.7156,
+      "ppl_base": 825.17,
+      "loss_rupsaa_v01": 2.087,
+      "ppl_rupsaa_v01": 8.061,
+      "adapter_better_records": 1
+    },
+    "creator_platform_terminology": {
+      "records": 1,
+      "assistant_tokens": 193,
+      "loss_base": 1.2697,
+      "ppl_base": 3.56,
+      "loss_rupsaa_v01": 0.756,
+      "ppl_rupsaa_v01": 2.13,
+      "adapter_better_records": 1
+    },
+    "creator_questions_workflows": {
+      "records": 2,
+      "assistant_tokens": 93,
+      "loss_base": 6.3507,
+      "ppl_base": 572.897,
+      "loss_rupsaa_v01": 3.0901,
+      "ppl_rupsaa_v01": 21.979,
+      "adapter_better_records": 2
+    },
+    "detailed_explanations": {
+      "records": 1,
+      "assistant_tokens": 600,
+      "loss_base": 1.3754,
+      "ppl_base": 3.957,
+      "loss_rupsaa_v01": 1.0386,
+      "ppl_rupsaa_v01": 2.825,
+      "adapter_better_records": 1
+    },
+    "follow_up_questions": {
+      "records": 1,
+      "assistant_tokens": 89,
+      "loss_base": 1.7274,
+      "ppl_base": 5.626,
+      "loss_rupsaa_v01": 0.6395,
+      "ppl_rupsaa_v01": 1.895,
+      "adapter_better_records": 1
+    },
+    "multi_turn": {
+      "records": 16,
+      "assistant_tokens": 1449,
+      "loss_base": 4.8052,
+      "ppl_base": 122.147,
+      "loss_rupsaa_v01": 1.9981,
+      "ppl_rupsaa_v01": 7.375,
+      "adapter_better_records": 16
+    },
+    "rag_aware": {
+      "records": 4,
+      "assistant_tokens": 326,
+      "loss_base": 2.7012,
+      "ppl_base": 14.898,
+      "loss_rupsaa_v01": 0.9377,
+      "ppl_rupsaa_v01": 2.554,
+      "adapter_better_records": 4
+    },
+    "relationship_dating": {
+      "records": 2,
+      "assistant_tokens": 257,
+      "loss_base": 1.9834,
+      "ppl_base": 7.267,
+      "loss_rupsaa_v01": 0.9327,
+      "ppl_rupsaa_v01": 2.541,
+      "adapter_better_records": 2
+    },
+    "rupsaa_personality": {
+      "records": 5,
+      "assistant_tokens": 284,
+      "loss_base": 2.9964,
+      "ppl_base": 20.014,
+      "loss_rupsaa_v01": 1.3754,
+      "ppl_rupsaa_v01": 3.957,
+      "adapter_better_records": 5
+    },
+    "short_answers": {
+      "records": 2,
+      "assistant_tokens": 28,
+      "loss_base": 4.7942,
+      "ppl_base": 120.812,
+      "loss_rupsaa_v01": 0.8899,
+      "ppl_rupsaa_v01": 2.435,
+      "adapter_better_records": 2
+    },
+    "uncertainty_handling": {
+      "records": 2,
+      "assistant_tokens": 303,
+      "loss_base": 2.0515,
+      "ppl_base": 7.78,
+      "loss_rupsaa_v01": 1.1933,
+      "ppl_rupsaa_v01": 3.298,
+      "adapter_better_records": 2
+    }
+  },
+  "per_record": [
+    {
+      "id": "rup-001130",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 75,
+      "loss_base": 6.637668132781982,
+      "loss_rupsaa_v01": 3.5224602222442627
+    },
+    {
+      "id": "rup-001250",
+      "language": "banglish",
+      "category": "rupsaa_personality",
+      "assistant_tokens": 31,
+      "loss_base": 6.737192153930664,
+      "loss_rupsaa_v01": 2.958054542541504
+    },
+    {
+      "id": "rup-000779",
+      "language": "banglish",
+      "category": "casual_friendly",
+      "assistant_tokens": 45,
+      "loss_base": 6.554592609405518,
+      "loss_rupsaa_v01": 3.5758821964263916
+    },
+    {
+      "id": "rup-001387",
+      "language": "mixed",
+      "category": "multi_turn",
+      "assistant_tokens": 58,
+      "loss_base": 6.476288795471191,
+      "loss_rupsaa_v01": 1.6407499313354492
+    },
+    {
+      "id": "rup-001263",
+      "language": "bn",
+      "category": "follow_up_questions",
+      "assistant_tokens": 89,
+      "loss_base": 1.727449893951416,
+      "loss_rupsaa_v01": 0.6394625902175903
+    },
+    {
+      "id": "rup-000160",
+      "language": "bn",
+      "category": "creator_platform_terminology",
+      "assistant_tokens": 193,
+      "loss_base": 1.26968252658844,
+      "loss_rupsaa_v01": 0.7559869885444641
+    },
+    {
+      "id": "rup-001255",
+      "language": "en",
+      "category": "adult_terminology_education",
+      "assistant_tokens": 35,
+      "loss_base": 4.639146327972412,
+      "loss_rupsaa_v01": 1.22000253200531
+    },
+    {
+      "id": "rup-001003",
+      "language": "mixed",
+      "category": "multi_turn",
+      "assistant_tokens": 115,
+      "loss_base": 3.7188713550567627,
+      "loss_rupsaa_v01": 1.5784306526184082
+    },
+    {
+      "id": "rup-000476",
+      "language": "mixed",
+      "category": "rupsaa_personality",
+      "assistant_tokens": 74,
+      "loss_base": 2.561753511428833,
+      "loss_rupsaa_v01": 1.4826626777648926
+    },
+    {
+      "id": "rup-000944",
+      "language": "banglish",
+      "category": "correcting_misunderstandings",
+      "assistant_tokens": 34,
+      "loss_base": 6.71558952331543,
+      "loss_rupsaa_v01": 2.0870168209075928
+    },
+    {
+      "id": "rup-001238",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 69,
+      "loss_base": 6.947022438049316,
+      "loss_rupsaa_v01": 2.754725694656372
+    },
+    {
+      "id": "rup-001252",
+      "language": "bn",
+      "category": "rag_aware",
+      "assistant_tokens": 65,
+      "loss_base": 2.952554941177368,
+      "loss_rupsaa_v01": 1.182199478149414
+    },
+    {
+      "id": "rup-001269",
+      "language": "en",
+      "category": "multi_turn",
+      "assistant_tokens": 71,
+      "loss_base": 5.166086673736572,
+      "loss_rupsaa_v01": 1.9438012838363647
+    },
+    {
+      "id": "rup-001353",
+      "language": "en",
+      "category": "multi_turn",
+      "assistant_tokens": 78,
+      "loss_base": 5.089544773101807,
+      "loss_rupsaa_v01": 2.013636589050293
+    },
+    {
+      "id": "rup-001463",
+      "language": "bn",
+      "category": "multi_turn",
+      "assistant_tokens": 137,
+      "loss_base": 2.174187183380127,
+      "loss_rupsaa_v01": 0.6943271160125732
+    },
+    {
+      "id": "rup-001368",
+      "language": "banglish",
+      "category": "creator_questions_workflows",
+      "assistant_tokens": 39,
+      "loss_base": 6.474557399749756,
+      "loss_rupsaa_v01": 2.569132089614868
+    },
+    {
+      "id": "rup-000226",
+      "language": "en",
+      "category": "rupsaa_personality",
+      "assistant_tokens": 24,
+      "loss_base": 4.782450199127197,
+      "loss_rupsaa_v01": 2.8498001098632812
+    },
+    {
+      "id": "rup-000139",
+      "language": "en",
+      "category": "multi_turn",
+      "assistant_tokens": 74,
+      "loss_base": 4.181602478027344,
+      "loss_rupsaa_v01": 2.1292574405670166
+    },
+    {
+      "id": "rup-001097",
+      "language": "en",
+      "category": "multi_turn",
+      "assistant_tokens": 94,
+      "loss_base": 4.438621997833252,
+      "loss_rupsaa_v01": 1.842400074005127
+    },
+    {
+      "id": "rup-000833",
+      "language": "bn",
+      "category": "rag_aware",
+      "assistant_tokens": 110,
+      "loss_base": 2.2852015495300293,
+      "loss_rupsaa_v01": 0.8439527750015259
+    },
+    {
+      "id": "rup-000791",
+      "language": "bn",
+      "category": "detailed_explanations",
+      "assistant_tokens": 600,
+      "loss_base": 1.3754032850265503,
+      "loss_rupsaa_v01": 1.0385606288909912
+    },
+    {
+      "id": "rup-001050",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 99,
+      "loss_base": 6.739885330200195,
+      "loss_rupsaa_v01": 3.226987600326538
+    },
+    {
+      "id": "rup-001007",
+      "language": "bn",
+      "category": "rupsaa_personality",
+      "assistant_tokens": 91,
+      "loss_base": 1.9219558238983154,
+      "loss_rupsaa_v01": 0.6475186944007874
+    },
+    {
+      "id": "rup-001141",
+      "language": "bn",
+      "category": "rag_aware",
+      "assistant_tokens": 73,
+      "loss_base": 3.0829601287841797,
+      "loss_rupsaa_v01": 0.9277299046516418
+    },
+    {
+      "id": "rup-000236",
+      "language": "en",
+      "category": "multi_turn",
+      "assistant_tokens": 84,
+      "loss_base": 4.107053279876709,
+      "loss_rupsaa_v01": 2.222876787185669
+    },
+    {
+      "id": "rup-001455",
+      "language": "mixed",
+      "category": "code_switch_bn_en",
+      "assistant_tokens": 67,
+      "loss_base": 2.8337056636810303,
+      "loss_rupsaa_v01": 0.9408851861953735
+    },
+    {
+      "id": "rup-000960",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 75,
+      "loss_base": 6.877007484436035,
+      "loss_rupsaa_v01": 2.6464004516601562
+    },
+    {
+      "id": "rup-000188",
+      "language": "mixed",
+      "category": "code_switch_bn_en",
+      "assistant_tokens": 134,
+      "loss_base": 1.9415467977523804,
+      "loss_rupsaa_v01": 1.2321256399154663
+    },
+    {
+      "id": "rup-001439",
+      "language": "bn",
+      "category": "rag_aware",
+      "assistant_tokens": 78,
+      "loss_base": 2.721137762069702,
+      "loss_rupsaa_v01": 0.8754252791404724
+    },
+    {
+      "id": "rup-000911",
+      "language": "mixed",
+      "category": "rupsaa_personality",
+      "assistant_tokens": 64,
+      "loss_base": 2.54500675201416,
+      "loss_rupsaa_v01": 0.9668835401535034
+    },
+    {
+      "id": "rup-001260",
+      "language": "en",
+      "category": "short_answers",
+      "assistant_tokens": 5,
+      "loss_base": 11.2006254196167,
+      "loss_rupsaa_v01": 1.161665678024292
+    },
+    {
+      "id": "rup-000784",
+      "language": "bn",
+      "category": "uncertainty_handling",
+      "assistant_tokens": 170,
+      "loss_base": 2.6639320850372314,
+      "loss_rupsaa_v01": 1.5852054357528687
+    },
+    {
+      "id": "rup-000170",
+      "language": "bn",
+      "category": "uncertainty_handling",
+      "assistant_tokens": 133,
+      "loss_base": 1.2687945365905762,
+      "loss_rupsaa_v01": 0.6923074722290039
+    },
+    {
+      "id": "rup-001195",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 61,
+      "loss_base": 7.088016986846924,
+      "loss_rupsaa_v01": 2.968477249145508
+    },
+    {
+      "id": "rup-001161",
+      "language": "bn",
+      "category": "multi_turn",
+      "assistant_tokens": 98,
+      "loss_base": 3.6841580867767334,
+      "loss_rupsaa_v01": 1.0639426708221436
+    },
+    {
+      "id": "rup-000921",
+      "language": "en",
+      "category": "adult_terminology_education",
+      "assistant_tokens": 40,
+      "loss_base": 4.364926338195801,
+      "loss_rupsaa_v01": 1.9742934703826904
+    },
+    {
+      "id": "rup-001431",
+      "language": "bn",
+      "category": "multi_turn",
+      "assistant_tokens": 159,
+      "loss_base": 2.5583901405334473,
+      "loss_rupsaa_v01": 0.959656834602356
+    },
+    {
+      "id": "rup-000835",
+      "language": "banglish",
+      "category": "creator_questions_workflows",
+      "assistant_tokens": 54,
+      "loss_base": 6.261256694793701,
+      "loss_rupsaa_v01": 3.466348171234131
+    },
+    {
+      "id": "rup-000889",
+      "language": "banglish",
+      "category": "multi_turn",
+      "assistant_tokens": 102,
+      "loss_base": 6.527305603027344,
+      "loss_rupsaa_v01": 2.947890043258667
+    },
+    {
+      "id": "rup-000932",
+      "language": "banglish",
+      "category": "casual_friendly",
+      "assistant_tokens": 58,
+      "loss_base": 7.087562084197998,
+      "loss_rupsaa_v01": 3.428809404373169
+    },
+    {
+      "id": "rup-001181",
+      "language": "bn",
+      "category": "relationship_dating",
+      "assistant_tokens": 61,
+      "loss_base": 3.4026148319244385,
+      "loss_rupsaa_v01": 0.896713376045227
+    },
+    {
+      "id": "rup-000102",
+      "language": "bn",
+      "category": "relationship_dating",
+      "assistant_tokens": 196,
+      "loss_base": 1.5416898727416992,
+      "loss_rupsaa_v01": 0.943952739238739
+    },
+    {
+      "id": "rup-001340",
+      "language": "bn",
+      "category": "short_answers",
+      "assistant_tokens": 23,
+      "loss_base": 3.4015462398529053,
+      "loss_rupsaa_v01": 0.8308042287826538
+    }
+  ]
+}

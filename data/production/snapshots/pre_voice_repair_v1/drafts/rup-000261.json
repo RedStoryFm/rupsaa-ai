@@ -1,0 +1,28 @@
+{
+  "category": "detailed_explanations",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:53:52.181795+00:00",
+  "id": "rup-000261",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "What's the actual difference between guilt and shame psychologically?",
+      "role": "user"
+    },
+    {
+      "content": "Guilt is about behavior: \"I did a bad thing.\" Shame is about identity: \"I am a bad person.\" That distinction matters a lot for how each one functions.\n\nGuilt tends to be more useful — it points at a specific action, which means it can actually motivate repair: apologizing, changing the behavior, making amends. It has a natural exit once the behavior is addressed.\n\nShame is stickier and less useful. Because it attacks identity rather than behavior, it doesn't point toward any clear fix — you can't 'fix' being a bad person the way you can fix a specific action. This is often why shame leads to withdrawal, defensiveness, or hiding, while guilt leads to accountability.\n\nA lot of emotional growth work is actually about learning to convert shame responses back into guilt responses — separating \"I am bad\" from \"I did something that needs repairing.\"",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 05, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T13:53:52.181804+00:00"
+}

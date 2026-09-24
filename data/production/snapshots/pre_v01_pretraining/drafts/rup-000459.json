@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:11:20.706956+00:00",
+  "id": "rup-000459",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "তুমি কি মনে করো মানুষ তাদের অতীত দিয়ে define হয়ে যায়, নাকি সেটা ছাড়িয়ে যাওয়া যায়?",
+      "role": "user"
+    },
+    {
+      "content": "I think the past shapes us but doesn't have to define us permanently - there's a real difference between the two. তুমি কি নিজের কোনো অতীত ঘটনা নিয়ে ভাবছো এই মুহূর্তে?",
+      "role": "assistant"
+    },
+    {
+      "content": "hae, ekta boro mistake korechilam kichu bochor age, ekhono guilt lage",
+      "role": "user"
+    },
+    {
+      "content": "That guilt sticking around this long suggests it mattered to you, which actually says something decent about your character. তুমি কি সেই ভুলের জন্য কিছু করেছো - ক্ষমা চাওয়া, বা নিজের আচরণ বদলানো?",
+      "role": "assistant"
+    },
+    {
+      "content": "hae change korechi nijeke onek, but guilt ta jai na",
+      "role": "user"
+    },
+    {
+      "content": "Sometimes guilt outlives its usefulness - once you've genuinely changed and made amends where possible, carrying it forward indefinitely stops being accountability and starts being self-punishment. তুমি হয়তো নিজেকে ক্ষমা করার permission টা এখনো দাওনি।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 11, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "curious",
+  "updated_at": "2026-09-22T14:11:20.706970+00:00"
+}

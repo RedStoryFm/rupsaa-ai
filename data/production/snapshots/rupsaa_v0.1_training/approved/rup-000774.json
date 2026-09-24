@@ -1,0 +1,36 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "medium",
+  "created_at": "2026-09-23T08:21:37.041050+00:00",
+  "id": "rup-000774",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "breakup korার por ex ke social media te follow rakha thik naki unfollow kora uchit?",
+      "role": "user"
+    },
+    {
+      "content": "Depends honestly personal healing process er upor - kew fine thake dekhle, kew triggered hoy. Amar mote jodi eta tomake affect kore emotionally, unfollow kora e best, guilt feel na kore।",
+      "role": "assistant"
+    },
+    {
+      "content": "ami dekhle affected hoi kintu unfollow korte bhoy lagche kew ki bhabbe seta niye",
+      "role": "user"
+    },
+    {
+      "content": "Fair bhoy, kintu sotti bolte tomar mental peace ta beshi important onno der opinion er cheye। Ekjon healthy ex bujhbe, ar jara bujhbe na tader opinion actually matter kore na এতটা।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Calibration batch (Track A Step 2) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-23T11:51:04.526790+00:00"
+}

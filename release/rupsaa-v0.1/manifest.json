@@ -1,0 +1,155 @@
+{
+  "manifest_schema": 1,
+  "release_name": "rupsaa-v0.1",
+  "release_version": "v0.1",
+  "created_at": "2026-09-24T17:00:45.974541+00:00",
+  "git": {
+    "commit": "434ba834ec52da8cd58137ad2d8c0c1d9589c94b",
+    "branch": "master",
+    "dirty": true
+  },
+  "application_version": "0.1.0",
+  "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "huggingface": {
+    "repo_id": null,
+    "revision": "rupsaa-v0.1",
+    "subfolder": "rupsaa-v0.1",
+    "uploaded": false
+  },
+  "adapter": {
+    "local_path": "adapters/rupsaa-v0.1",
+    "files": [
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "all_results.json",
+      "eval_results.json",
+      "train_results.json",
+      "trainer_config.yaml",
+      "trainer_log.jsonl",
+      "trainer_state.json",
+      "training_eval_loss.png",
+      "training_loss.png"
+    ],
+    "adapter_model_sha256": "f897bd0ba0069c5edc41b42aa96980998aa03a9108f3c885f07d4e8fa8795ae5",
+    "adapter_model_bytes": 161533192,
+    "adapter_config_sha256": "df71a7836665025e9d402f278566f1a241552341aa51c067d9e08055046c4cee",
+    "peft_type": "LORA",
+    "peft_version": "0.21.0",
+    "task_type": "CAUSAL_LM"
+  },
+  "training": {
+    "method": "SFT + QLoRA (LLaMA-Factory)",
+    "stage": "sft",
+    "finetuning_type": "lora",
+    "quantization": {
+      "training": "4-bit NF4 (bitsandbytes), bf16 compute",
+      "inference": "4-bit NF4, double quantization, bf16 compute (configs/model.yaml)"
+    },
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "down_proj",
+      "gate_proj",
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "up_proj",
+      "v_proj"
+    ],
+    "learning_rate": 0.0002,
+    "epochs": 3.0,
+    "cutoff_len": 2048,
+    "per_device_batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "lr_scheduler": "cosine",
+    "template": "qwen",
+    "load_best_model_at_end": true,
+    "results": {
+      "epoch": 2.9536784741144415,
+      "total_flos": 1.767735055048704e+16,
+      "train_loss": 1.468487181486907,
+      "train_runtime": 1020.0471,
+      "train_samples_per_second": 2.156,
+      "train_steps_per_second": 0.132,
+      "eval_loss": 1.7037299871444702,
+      "eval_runtime": 6.7357,
+      "eval_samples_per_second": 5.79,
+      "eval_steps_per_second": 2.969
+    },
+    "config_files": [
+      "configs/training/llamafactory_webui_rupsaa_v0.1.yaml",
+      "configs/training/llamafactory_rupsaa_v0.1.yaml",
+      "configs/training/rupsaa_v0.1_qlora.yaml",
+      "configs/model.yaml",
+      "configs/inference.yaml",
+      "data/dataset_info.json"
+    ]
+  },
+  "dataset": {
+    "version": "rupsaa_v0.1",
+    "sha256": "2df533999559d5f873be9e5dc5350812e874dd18c8e4017741f5b8c18666fa2a",
+    "sha256_definition": "rupsaa.release.dataset_sha256: sorted json.dumps(record, sort_keys=True) lines of the approved records, joined by '\\n', SHA-256 of UTF-8",
+    "records": 858,
+    "splits": {
+      "train": 772,
+      "validation": 43,
+      "test": 43
+    },
+    "snapshot_manifest": "data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json",
+    "export_dir": "data/production/exports/rupsaa_v0.1",
+    "storage": "Versioned in the GitHub repository (snapshot records + exported splits); NOT uploaded to Hugging Face."
+  },
+  "environment": {
+    "python": "3.12.11",
+    "platform": "Linux-6.8.0-1067-gcp-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.46.3",
+      "peft": "0.21.0",
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "trl": "0.12.2",
+      "datasets": "5.0.1",
+      "sentence-transformers": "5.7.0",
+      "faiss-cpu": "1.15.1",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.20.3",
+      "huggingface-hub": "0.36.2",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "starlette": "1.6.0",
+      "pydantic": "2.13.5",
+      "pydantic-settings": "2.15.0",
+      "python-multipart": "0.0.32",
+      "gradio": "4.38.1",
+      "gradio_client": "1.1.0",
+      "llamafactory": "0.7.1",
+      "openpyxl": "3.1.5",
+      "numpy": "1.26.4"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA L4",
+    "nvidia_smi": "NVIDIA L4, 580.173.02, 23034 MiB"
+  },
+  "compatibility_notes": [
+    "Loads with transformers 4.46.3 + peft 0.21.0 + bitsandbytes 0.50.2 on torch 2.8.0+cu128 (NVIDIA L4, 23 GB).",
+    "Base model is downloaded from the Hub on first load (Qwen/Qwen2.5-7B-Instruct, ~15 GB); the adapter is never merged.",
+    "Chat template: Qwen ChatML via tokenizer.apply_chat_template (LLaMA-Factory template 'qwen' in training).",
+    "Top-level adapter = best-eval checkpoint (checkpoint-100 of 135 steps, load_best_model_at_end).",
+    "Trained with system prompt 'You are Rupsaa.'; the app serves a longer persona prompt (see V0.2 preparation report).",
+    "LLaMA-Factory 0.7.1 GUI needs scripts/setup_llamafactory.sh (pinned gradio 4.38.1 + two compatibility patches)."
+  ],
+  "known_limitations": [
+    "Strong verbal tic: 'honestly'/'actually' in most replies (inherited from the V0.1 dataset; 863/1129 training replies).",
+    "Bengali-script and Banglish replies are often incoherent or semantically wrong; English is the strongest language.",
+    "Flirting can come out flat or dismissive.",
+    "Occasional overclaiming of capabilities (browsing, live data).",
+    "Held-out test loss 3.345 -> 1.515 vs base; this measures fit to the dataset style, not overall quality.",
+    "18+ adult-oriented persona. Not a general-purpose assistant."
+  ],
+  "evaluation": {
+    "human_review": "data/production/reports/rupsaa_v0.1_evaluation/HUMAN_REVIEW_V01_VS_BASE.md"
+  }
+}

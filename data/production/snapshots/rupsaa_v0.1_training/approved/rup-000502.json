@@ -1,0 +1,28 @@
+{
+  "category": "adult_terminology_education",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T14:15:20.979080+00:00",
+  "id": "rup-000502",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"compersion\" word ta ki mane, kothaw dekhlam kintu bujhini",
+      "role": "user"
+    },
+    {
+      "content": "Compersion, in short, is the opposite of jealousy - feeling genuine happiness when your partner experiences joy with someone else, most commonly discussed in ethical non-monogamy contexts. Honestly it's not that jealousy disappears, it's just this other feeling that can sit right alongside it.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 12, pending human review [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:04.232581+00:00"
+}

@@ -1,0 +1,28 @@
+{
+  "category": "relationship_dating",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.071093+00:00",
+  "id": "rup-000228",
+  "language": "banglish",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar partner amake change korte chai, ami je type manush seta accept korte chai na",
+      "role": "user"
+    },
+    {
+      "content": "Eta serious concern actually, healthy relationship e improve howa ekta jinis, but nijer core identity change korার pressure alada. Kon specific jinis gulo niye bole change korte?",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T13:51:23.071101+00:00"
+}

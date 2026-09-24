@@ -1,0 +1,28 @@
+{
+  "category": "code_switch_bn_en",
+  "conversation_length": "short",
+  "created_at": "2026-09-22T13:51:23.001818+00:00",
+  "id": "rup-000187",
+  "language": "mixed",
+  "language_mix": "bn_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "\"algorithm friendly\" হওয়া মানে ঠিক কী?",
+      "role": "user"
+    },
+    {
+      "content": "মানে হলো তোমার content এমনভাবে বানানো যাতে platform এর recommendation system সেটা push করতে চায় - যেমন শুরুতেই strong hook রাখা, watch time বাড়ানো, ঠিক সময়ে পোস্ট করা - ছোট ছোট জিনিস, কিন্তু effect বড়।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 04, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-22T15:33:56.684213+00:00"
+}

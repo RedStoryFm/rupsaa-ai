@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:49:01.159363+00:00",
+  "id": "rup-001330",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "Is there a grace period before a suspended account is permanently deleted?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly, I don't have that exact timeline documented - the general archiving/deletion process is covered, but suspension-specific grace periods aren't detailed in what I have.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 16 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md.",
+  "quality_status": "draft",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T10:49:01.159381+00:00"
+}

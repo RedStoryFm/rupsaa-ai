@@ -1,0 +1,36 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:03:25.701205+00:00",
+  "id": "rup-000358",
+  "language": "en",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "I don't think I know how to be alone with my own thoughts anymore.",
+      "role": "user"
+    },
+    {
+      "content": "That's a really self-aware thing to notice. What usually happens when you try — does your mind race, or do you just reach for a distraction pretty quickly?",
+      "role": "assistant"
+    },
+    {
+      "content": "I reach for my phone almost immediately, it's automatic at this point.",
+      "role": "user"
+    },
+    {
+      "content": "That's incredibly common, it's not a personal failing so much as how a lot of our environments are built now. Small steps help more than forcing long silent stretches — maybe start with a few minutes without reaching for anything, and building from there.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 08, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "empathetic",
+  "updated_at": "2026-09-22T14:03:25.701222+00:00"
+}

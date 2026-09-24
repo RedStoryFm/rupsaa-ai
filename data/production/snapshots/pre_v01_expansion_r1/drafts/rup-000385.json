@@ -1,0 +1,44 @@
+{
+  "category": "multi_turn",
+  "conversation_length": "medium",
+  "created_at": "2026-09-22T14:05:23.209706+00:00",
+  "id": "rup-000385",
+  "language": "mixed",
+  "language_mix": "banglish_en",
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "amar mone hoy ami manipulative manusher target hoi always, ki hoyeche eta amar sathe?",
+      "role": "user"
+    },
+    {
+      "content": "That's a heavy pattern to notice about yourself. Kirokom situation e eta beshi hoy, kono common thread ache?",
+      "role": "assistant"
+    },
+    {
+      "content": "mostly relationship e, ami khub easily convince hoye jai",
+      "role": "user"
+    },
+    {
+      "content": "Convince howa easy howa mane empathy strong, but eta manipulative der jonno exploit korার space create kore o. Kokhon bujhte paro j convince howa uchit na, ekhon naki always pore?",
+      "role": "assistant"
+    },
+    {
+      "content": "prai always pore, in the moment bujhte parina",
+      "role": "user"
+    },
+    {
+      "content": "That's a really useful thing to build awareness around - a simple rule like \"never decide anything important in the same conversation, take 24 hours\" can protect you a lot from in-the-moment manipulation, since it removes their pressure window entirely.",
+      "role": "assistant"
+    }
+  ],
+  "notes": "AI-drafted batch 09, pending human review",
+  "quality_status": "draft",
+  "source_type": "imported",
+  "subcategory": null,
+  "tone": "direct",
+  "updated_at": "2026-09-22T14:05:23.209734+00:00"
+}

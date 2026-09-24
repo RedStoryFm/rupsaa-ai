@@ -1,0 +1,100 @@
+{
+  "classification": {
+    "KEEP": 508,
+    "REPAIR": 854,
+    "REJECT": 7,
+    "HUMAN_REVIEW": 110
+  },
+  "by_language": {
+    "en": {
+      "KEEP": 150,
+      "REPAIR": 303,
+      "HUMAN_REVIEW": 2,
+      "REJECT": 1
+    },
+    "banglish": {
+      "KEEP": 143,
+      "REPAIR": 212,
+      "REJECT": 3,
+      "HUMAN_REVIEW": 48
+    },
+    "bn": {
+      "KEEP": 152,
+      "HUMAN_REVIEW": 8,
+      "REPAIR": 229
+    },
+    "mixed": {
+      "KEEP": 63,
+      "HUMAN_REVIEW": 52,
+      "REPAIR": 110,
+      "REJECT": 3
+    }
+  },
+  "by_source": {
+    "human_authored": {
+      "KEEP": 19,
+      "HUMAN_REVIEW": 2,
+      "REJECT": 1
+    },
+    "imported": {
+      "KEEP": 305,
+      "REPAIR": 174,
+      "REJECT": 2,
+      "HUMAN_REVIEW": 27
+    },
+    "synthetic_curated": {
+      "KEEP": 184,
+      "HUMAN_REVIEW": 81,
+      "REPAIR": 680,
+      "REJECT": 4
+    }
+  },
+  "by_status": {
+    "needs_edit": {
+      "KEEP": 1
+    },
+    "draft": {
+      "KEEP": 453,
+      "REPAIR": 129,
+      "REJECT": 2,
+      "HUMAN_REVIEW": 35
+    },
+    "approved": {
+      "KEEP": 54,
+      "HUMAN_REVIEW": 75,
+      "REPAIR": 725,
+      "REJECT": 4
+    },
+    "rejected": {
+      "REJECT": 1
+    }
+  },
+  "top_reasons": {
+    "REPAIR:INTRAWORD_SCRIPT_MIX": 94,
+    "KEEP:CATCHPHRASE": 39,
+    "REJECT:INTRAWORD_SCRIPT_MIX": 6,
+    "REJECT:FOREIGN_SCRIPT": 1,
+    "REJECT:SCRIPT_INCONSISTENT": 3,
+    "HUMAN_REVIEW:LANGUAGE_MISMATCH": 31,
+    "REPAIR:CATCHPHRASE": 809,
+    "REPAIR:ENGLISH_DISCOURSE_OPENER": 376,
+    "REPAIR:ENGLISH_FILLER_IN_BENGALI": 239,
+    "HUMAN_REVIEW:INTRAWORD_SCRIPT_MIX": 57,
+    "HUMAN_REVIEW:SCRIPT_INCONSISTENT": 23,
+    "HUMAN_REVIEW:CATCHPHRASE": 79,
+    "HUMAN_REVIEW:QUESTION_UNANSWERED": 2,
+    "REJECT:CATCHPHRASE": 5,
+    "HUMAN_REVIEW:ENGLISH_CALQUE": 16,
+    "REPAIR:TRAILING_FILLER": 59,
+    "REPAIR:FILLER_STACK": 510,
+    "HUMAN_REVIEW:ENGLISH_DISCOURSE_OPENER": 60,
+    "HUMAN_REVIEW:FILLER_STACK": 57,
+    "HUMAN_REVIEW:ENGLISH_FILLER_IN_BENGALI": 18,
+    "REJECT:FILLER_STACK": 4,
+    "REJECT:LANGUAGE_MISMATCH": 3,
+    "HUMAN_REVIEW:FOREIGN_SCRIPT": 2,
+    "REJECT:TRAILING_FILLER": 1,
+    "REJECT:ENGLISH_DISCOURSE_OPENER": 2,
+    "HUMAN_REVIEW:TRAILING_FILLER": 1
+  }
+}

@@ -106,3 +106,42 @@ def find_near_duplicates(
             if similarity >= threshold:
                 pairs.append(NearDuplicatePair(id_a=records[i].id, id_b=records[j].id, similarity=round(similarity, 4)))
     return pairs
+
+
+def group_near_duplicates(
+    records: list[ConversationRecord],
+    ngram_size: int = 5,
+    threshold: float = 0.85,
+    max_records: int = 4000,
+) -> list[list[str]]:
+    """Clusters records into groups that are mutually near-duplicate-linked
+    (via find_near_duplicates + union-find), so a train/val/test splitter
+    can keep each whole cluster on one side of the split instead of leaking
+    near-identical variants across train and validation/test.
+
+    Returns a list of id-groups; every record id in `records` appears in
+    exactly one group (singletons for records with no near-duplicate).
+    """
+    pairs = find_near_duplicates(records, ngram_size=ngram_size, threshold=threshold, max_records=max_records)
+
+    parent: dict[str, str] = {r.id: r.id for r in records}
+
+    def find(x: str) -> str:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a: str, b: str) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    for pair in pairs:
+        union(pair.id_a, pair.id_b)
+
+    clusters: dict[str, list[str]] = {}
+    for r in records:
+        root = find(r.id)
+        clusters.setdefault(root, []).append(r.id)
+    return list(clusters.values())

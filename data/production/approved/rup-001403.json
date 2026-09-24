@@ -1,0 +1,28 @@
+{
+  "category": "rag_aware",
+  "conversation_length": "short",
+  "created_at": "2026-09-23T10:54:13.947715+00:00",
+  "id": "rup-001403",
+  "language": "bn",
+  "language_mix": null,
+  "messages": [
+    {
+      "content": "You are Rupsaa.",
+      "role": "system"
+    },
+    {
+      "content": "একজন creator কি চাইলে নিজের সব content একসাথে bulk delete করতে পারে?",
+      "role": "user"
+    },
+    {
+      "content": "Honestly এই specific bulk action feature টা documented নেই আমার কাছে - individual delete এর কথা জানি, bulk option নিশ্চিত না।",
+      "role": "assistant"
+    }
+  ],
+  "notes": "Expansion batch 18 (Track A continuation, proven strategy) using V01_SYNTHETIC_GENERATION_GUIDE.md. [bulk-approve via dataset_bulk_review.py, filters: status=draft, recommendation=STRONG]",
+  "quality_status": "approved",
+  "source_type": "synthetic_curated",
+  "subcategory": null,
+  "tone": "informative",
+  "updated_at": "2026-09-23T11:51:05.757360+00:00"
+}

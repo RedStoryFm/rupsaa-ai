@@ -1,0 +1,79 @@
+# LLaMA-Factory native config for the Rupsaa V0.1 experiment.
+#
+# This represents the SAME experiment as configs/training/rupsaa_v0.1_qlora.yaml
+# (same base model, same LoRA rank/alpha/dropout/target_modules, same
+# learning rate/scheduler/epochs/batch size, same frozen dataset), just
+# expressed in LLaMA-Factory's own argument names so the GUI and the CLI
+# pipeline are running comparable experiments. Loadable in the WebUI's
+# "Train" tab or via: llamafactory-cli train configs/training/llamafactory_rupsaa_v0.1.yaml
+#
+# Dataset: registered in data/production/exports/rupsaa_v0.1/dataset_info.json
+# as "rupsaa_v0.1_train" / "rupsaa_v0.1_validation" / "rupsaa_v0.1_test" —
+# the SAME frozen export files scripts/train_qlora.py reads, not a copy.
+# See data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json
+# for the exact conversation IDs and dataset SHA-256 this was exported from.
+
+### model
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+### quantization (QLoRA)
+quantization_bit: 4
+quantization_type: nf4
+double_quantization: true
+upcast_layernorm: true
+
+### dataset
+# NOTE: llamafactory 0.7.1's SFT pipeline does not support pointing at a
+# separate, pre-split eval file the way scripts/train_qlora.py does (no
+# `eval_dataset` argument in this version) — it only supports splitting a
+# fraction off the training set via val_size below. That means the GUI
+# path evaluates on a *resplit* of rupsaa_v0.1_train, not on the exact
+# frozen validation.jsonl the CLI path uses. This is the one place the
+# two paths genuinely diverge; "rupsaa_v0.1_validation" is still
+# registered in dataset_info.json and can be loaded manually in the
+# WebUI's dataset dropdown if you want to eyeball it, just not wired as
+# an automatic eval set here.
+dataset_dir: data/production/exports/rupsaa_v0.1
+dataset: rupsaa_v0.1_train
+val_size: 0.05
+template: qwen
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 4
+
+### output
+output_dir: checkpoints/rupsaa_v0.1_llamafactory
+adapter_name_or_path: null
+overwrite_output_dir: false
+logging_steps: 10
+save_steps: 50
+save_total_limit: 3
+plot_loss: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+gradient_checkpointing: true
+learning_rate: 2.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.01
+optim: paged_adamw_8bit
+max_grad_norm: 0.3
+bf16: true
+seed: 42
+
+### eval
+per_device_eval_batch_size: 2
+eval_strategy: steps
+eval_steps: 50
