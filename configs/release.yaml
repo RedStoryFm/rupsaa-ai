@@ -6,11 +6,10 @@
 #   RUPSAA_HF_REVISION   -> revision (tag/branch/commit) to download
 #   RUPSAA_ADAPTER_PATH  -> local adapter directory (also read by the app)
 #
-# hf_repo_id is intentionally EMPTY until the owner decides which Hugging Face
-# model repository to use (e.g. "<your-hf-username>/rupsaa"). Nothing is ever
-# uploaded to, or downloaded from, a guessed location. Create the repo as
-# PRIVATE on huggingface.co unless you deliberately want it public.
-hf_repo_id: ""
+# Owner's Hugging Face model repo (Rupsaa V0.1 published 2026-09-24, tag
+# rupsaa-v0.1, folder rupsaa-v0.1/). Nothing is ever uploaded to, or
+# downloaded from, a guessed location.
+hf_repo_id: "rstudioModel/rupsaa"
 
 # Current production release. Each release lives in its own subfolder of the
 # HF repo AND gets its own git tag there, so publishing v0.2 can never
