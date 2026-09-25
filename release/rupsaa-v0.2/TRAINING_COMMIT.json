@@ -1,0 +1,7 @@
+{
+  "training_commit": "afe6e4ec3580a028e8b6e39ba2a5b2a3f4628bed",
+  "tag": "rupsaa-v0.2-training",
+  "dataset_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+  "recorded_at": "2026-09-25T07:57:45.943065+00:00",
+  "note": "The V0.2 adapter is trained from this commit's tree. This file is added by the NEXT commit, which changes nothing training-relevant; scripts/posttrain_v02.py checks that training inputs are unchanged since training_commit."
+}
