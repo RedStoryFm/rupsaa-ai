@@ -44,6 +44,9 @@ class ModelInfo(BaseModel):
     # and whether it exists on disk — visible before the lazy model load.
     configured_adapter_path: str | None = None
     configured_adapter_exists: bool = False
+    # System-prompt version the engine sends (v0.2 = the exact V0.2 training prompt).
+    # Before the lazy load this is the version it *will* use for the configured adapter.
+    prompt_version: str | None = None
 
 
 class HealthResponse(BaseModel):

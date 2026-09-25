@@ -90,6 +90,46 @@ VERSION_INFO = {
         ],
         "eval_summary": "data/production/reports/rupsaa_v0.1_evaluation/HUMAN_REVIEW_V01_VS_BASE.md",
     },
+    "v0.2": {
+        "dataset": {
+            "version": "rupsaa_v0.2",
+            "snapshot_dir": "data/production/snapshots/rupsaa_v0.2_training",
+            "snapshot_manifest": "data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json",
+            "export_dir": "data/production/exports/rupsaa_v0.2",
+            # V0.2 identity = sha256 of the frozen records file (see V02_TRAINING_MANIFEST.json).
+            "sha256_file": "data/production/snapshots/rupsaa_v0.2_training/frozen_records.jsonl",
+            "sha256_definition": "sha256 of snapshots/rupsaa_v0.2_training/frozen_records.jsonl (one sorted-key JSON "
+                                 "object per record, sorted by id, including split and frozen messages)",
+            "expected_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+            "storage": "Versioned in the GitHub repository (frozen records + exported splits); NOT uploaded to Hugging Face.",
+        },
+        "training_configs": [
+            "configs/training/llamafactory_webui_rupsaa_v0.2.yaml",
+            "configs/training/llamafactory_rupsaa_v0.2.yaml",
+            "configs/model.yaml",
+            "configs/inference.yaml",
+            "data/dataset_info.json",
+            "rupsaa/personality/system_prompt_v02.py",
+        ],
+        "compatibility_notes": [
+            "Loads with transformers 4.46.3 + peft 0.21.0 + bitsandbytes 0.50.2 on torch 2.8.0+cu128 (NVIDIA L4, 23 GB).",
+            "Base model is downloaded from the Hub on first load (Qwen/Qwen2.5-7B-Instruct, ~15 GB); the adapter is never merged.",
+            "Chat template: Qwen ChatML via tokenizer.apply_chat_template (LLaMA-Factory template 'qwen' in training).",
+            "Top-level adapter = best-eval checkpoint (checkpoint-160 of 164 steps, load_best_model_at_end).",
+            "Train-as-serve: trained with the exact app system prompt V02_SYSTEM_PROMPT "
+            "(rupsaa/personality/system_prompt_v02.py); serve with RUPSAA_PROMPT_VERSION=v0.2.",
+        ],
+        "limitations": [
+            "Banglish and Bengali-script definitions are often semantically garbled or ungrammatical (post-training eval).",
+            "'এটা বাংলায় বুঝিয়ে বলো' follow-ups often stay in Banglish instead of Bengali script.",
+            "Weak recall for 'ami age ki bolechilam?'-style questions about earlier turns.",
+            "English is the strongest language; the V0.1 'honestly'/'actually' tic is gone (0 of 89 replies).",
+            "18+ adult-oriented persona. Not a general-purpose assistant.",
+        ],
+        "eval_summary": "data/production/reports/rupsaa_v0.2_posttraining/POSTTRAINING_REPORT.md",
+        "serve_command": "bash scripts/start_rupsaa_v02.sh",
+        "example_system_literal": "V02_SYSTEM_PROMPT",  # defined in rupsaa/personality/system_prompt_v02.py
+    },
 }
 
 
@@ -194,13 +234,13 @@ base = AutoModelForCausalLM.from_pretrained(base_id, quantization_config=bnb, de
 model = PeftModel.from_pretrained(base, "{repo_ref}", subfolder="{sub}", revision="{rev}")
 model.eval()
 
-messages = [{{"role": "system", "content": "You are Rupsaa."}}, {{"role": "user", "content": "kemon acho?"}}]
+messages = [{{"role": "system", "content": {info.get("example_system_literal", '"You are Rupsaa."')}}}, {{"role": "user", "content": "kemon acho?"}}]
 inputs = tokenizer.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
 print(tokenizer.decode(model.generate(inputs, max_new_tokens=128)[0][inputs.shape[1]:], skip_special_tokens=True))
 ```
 
 With the Rupsaa application:
-`git clone <rupsaa repo> && cd rupsaa-ai && bash setup_rupsaa.sh && bash scripts/start_rupsaa_v01.sh`.
+`git clone <rupsaa repo> && cd rupsaa-ai && bash setup_rupsaa.sh && {info.get("serve_command", "bash scripts/start_rupsaa_v01.sh")}`.
 
 ## Files
 
@@ -254,7 +294,11 @@ def cmd_prepare(args) -> None:
                      f"A published release is never silently replaced — use a new version number.")
 
     ds = info["dataset"]
-    n, actual = snapshot_dataset_sha256(PROJECT_ROOT / ds["snapshot_dir"])
+    if ds.get("sha256_file"):
+        path = PROJECT_ROOT / ds["sha256_file"]
+        n, actual = sum(1 for _ in open(path, encoding="utf-8")), sha256_file(path)
+    else:
+        n, actual = snapshot_dataset_sha256(PROJECT_ROOT / ds["snapshot_dir"])
     if actual != ds["expected_sha256"]:
         sys.exit(f"Dataset identity mismatch: snapshot hashes to {actual}, expected {ds['expected_sha256']}")
     export_dir = PROJECT_ROOT / ds["export_dir"]
@@ -266,7 +310,8 @@ def cmd_prepare(args) -> None:
     dataset = {
         "version": ds["version"],
         "sha256": actual,
-        "sha256_definition": "rupsaa.release.dataset_sha256: sorted json.dumps(record, sort_keys=True) lines of the "
+        "sha256_definition": ds.get("sha256_definition") or
+                             "rupsaa.release.dataset_sha256: sorted json.dumps(record, sort_keys=True) lines of the "
                              "approved records, joined by '\\n', SHA-256 of UTF-8",
         "records": n,
         "splits": splits,
@@ -290,12 +335,25 @@ def cmd_prepare(args) -> None:
         manifest["huggingface"] = previous["huggingface"]  # keep the record of what was published
     manifest["evaluation"] = {"human_review": info["eval_summary"]}
 
+    # A release dir may already hold the training-freeze checksums (release/rupsaa-v0.2): they must still
+    # match, and they are carried into the release checksums rather than overwritten.
+    freeze = {}
+    if not previous and (out_dir / "checksums.sha256").exists():
+        freeze = read_checksums(out_dir / "checksums.sha256")
+        changed = [rel for rel, h in freeze.items() if sha256_file(PROJECT_ROOT / rel) != h]
+        if changed:
+            sys.exit("REFUSING: frozen training inputs changed since the freeze:\n  " + "\n  ".join(changed))
+
     out_dir.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     checksum_targets = release_files(adapter_dir)
     checksum_targets += [export_dir / f"{s}.jsonl" for s in ("train", "validation", "test")]
-    checksum_targets += [PROJECT_ROOT / ds["snapshot_manifest"], PROJECT_ROOT / ds["snapshot_dir"] / "MANIFEST.json"]
+    checksum_targets += [PROJECT_ROOT / ds["snapshot_manifest"]]
+    if (PROJECT_ROOT / ds["snapshot_dir"] / "MANIFEST.json").exists():
+        checksum_targets.append(PROJECT_ROOT / ds["snapshot_dir"] / "MANIFEST.json")
     checksum_targets += [PROJECT_ROOT / p for p in info["training_configs"]]
+    checksum_targets += [PROJECT_ROOT / rel for rel in freeze]
+    checksum_targets = list(dict.fromkeys(p.resolve() for p in checksum_targets))
     write_checksums(checksum_targets, out_dir / "checksums.sha256")
     (out_dir / "MODEL_CARD.md").write_text(model_card(manifest, version, hf_repo), encoding="utf-8")
     (out_dir / "UPLOAD_FILES.txt").write_text(

@@ -6,7 +6,7 @@
 # Never trains, merges, or switches the app. Steps (see scripts/posttrain_v02.py):
 #   best checkpoint -> adapter integrity -> frozen validation/test loss -> clean V0.1-vs-V0.2
 #   subset -> unseen-terminology suite -> 10 live-behaviour checks -> V0.1 / V0.2 / base
-#   comparison -> data/production/reports/rupsaa_v0.2_evaluation/POSTTRAIN_REPORT.md
+#   comparison -> data/production/reports/rupsaa_v0.2_posttraining/POSTTRAIN_REPORT.md
 #   (+ APP_INTEGRATION.md only if the automatic gate passes).
 
 set -euo pipefail

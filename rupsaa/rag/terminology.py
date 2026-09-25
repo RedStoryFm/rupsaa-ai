@@ -285,7 +285,21 @@ class TerminologyStore:
                 ratio = max((difflib.SequenceMatcher(None, cand, k).ratio() for k in keys), default=0.0)
                 if ratio >= 0.85:
                     add(rec, round(ratio * 0.9, 3), cand, "fuzzy")
+                elif " " not in cand and any(len(k) >= 4 and _one_edit_apart(cand, k) for k in keys):
+                    add(rec, 0.75, cand, "fuzzy")
         return sorted(matches.values(), key=lambda m: -m.score)[:limit]
+
+
+def _one_edit_apart(a: str, b: str) -> bool:
+    """Damerau distance <= 1 (one substitution, insertion, deletion or adjacent swap: "stirp" ~ "strip")."""
+    if a == b or abs(len(a) - len(b)) > 1:
+        return a == b
+    i = 0
+    while i < min(len(a), len(b)) and a[i] == b[i]:
+        i += 1
+    if len(a) == len(b):
+        return a[i + 1:] == b[i + 1:] or (a[i:i + 2] == b[i:i + 2][::-1] and a[i + 2:] == b[i + 2:])
+    return (a[i + 1:] == b[i:]) if len(a) > len(b) else (a[i:] == b[i + 1:])
 
 
 def format_terminology_context(matches: list[TermMatch]) -> str | None:

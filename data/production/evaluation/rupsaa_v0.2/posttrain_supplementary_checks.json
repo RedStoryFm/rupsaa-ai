@@ -1,0 +1,353 @@
+[
+  {
+    "id": "own-01",
+    "turns": [
+      "tumi amar sathe banglish e kotha bolbe?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Agrees naturally in Banglish; no English lecture about languages.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-02",
+    "turns": [
+      "Strip mane ki?",
+      "strip ta ektu simple kore bojhao"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Second reply: simpler Banglish explanation, same meaning, grounded in the Strip entry.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-03",
+    "turns": [
+      "Forplay ki?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Typo 'Forplay' still routes to Foreplay; Banglish definition.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-04",
+    "turns": [
+      "এটা বাংলায় বুঝিয়ে বলো"
+    ],
+    "expect": {
+      "script": "bengali"
+    },
+    "look_for": "No prior context: asks in Bengali what to explain; must not invent a topic.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-05",
+    "turns": [
+      "Strip mane ki?",
+      "ami age ki bolechilam?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Second reply recalls the user asked what Strip means; no invention.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-06",
+    "turns": [
+      "stirp mane ki bolo to"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Typo tolerance for 'strip'.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-07",
+    "turns": [
+      "ek line e bolo, foreplay ki?"
+    ],
+    "expect": {
+      "script": "latin",
+      "max_chars": 220
+    },
+    "look_for": "Concise: one line.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-08",
+    "turns": [
+      "foreplay niye ektu detail e bojhao"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Detailed but natural Banglish explanation.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-09",
+    "turns": [
+      "hey, how's your day going?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "English casual reply in English.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-10",
+    "turns": [
+      "ajke office e onek kaj chilo",
+      "achcha shono, tumi ki bolo, ami ki ekta break nebo?",
+      "thik ache, thanks"
+    ],
+    "expect": {
+      "script": "latin",
+      "max_chars": 200
+    },
+    "look_for": "Casual multi-turn follow-up; short close.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "own-11",
+    "turns": [
+      "Tell me what foreplay means",
+      "ekhon Banglish e bolo",
+      "এবার বাংলায়"
+    ],
+    "expect": {
+      "script": "bengali"
+    },
+    "look_for": "Language switching English -> Banglish -> Bengali across turns.",
+    "suite": "owner_failure"
+  },
+  {
+    "id": "gen-01",
+    "turns": [
+      "তুমি কি আমাকে সাহায্য করতে পারবে?"
+    ],
+    "expect": {
+      "script": "bengali"
+    },
+    "look_for": "general suite: bengali_comprehension",
+    "suite": "general",
+    "category": "bengali_comprehension"
+  },
+  {
+    "id": "gen-02",
+    "turns": [
+      "tumi ki amake ekta advice dite paro?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: banglish_comprehension",
+    "suite": "general",
+    "category": "banglish_comprehension"
+  },
+  {
+    "id": "gen-03",
+    "turns": [
+      "What's the best way to start a difficult conversation with a partner?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: english",
+    "suite": "general",
+    "category": "english"
+  },
+  {
+    "id": "gen-04",
+    "turns": [
+      "আজকে office এ onek kaj chilo, ekhon relax korte chai।"
+    ],
+    "expect": {
+      "script": "any"
+    },
+    "look_for": "general suite: bengali_english_mixing",
+    "suite": "general",
+    "category": "bengali_english_mixing"
+  },
+  {
+    "id": "gen-05",
+    "turns": [
+      "Amar ekta creator account ache, but income niye kichu bujhte parchi na, can you help?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: banglish_english_mixing",
+    "suite": "general",
+    "category": "banglish_english_mixing"
+  },
+  {
+    "id": "gen-06",
+    "turns": [
+      "What's a small thing that made you smile recently?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: casual_conversation",
+    "suite": "general",
+    "category": "casual_conversation"
+  },
+  {
+    "id": "gen-07",
+    "turns": [
+      "Tell me a little about yourself."
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: personality_consistency",
+    "suite": "general",
+    "category": "personality_consistency"
+  },
+  {
+    "id": "gen-08",
+    "turns": [
+      "What does a chargeback mean for a creator?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: creator_questions",
+    "suite": "general",
+    "category": "creator_questions"
+  },
+  {
+    "id": "gen-09",
+    "turns": [
+      "Can you explain what consent means in a hookup context?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: adult_terminology",
+    "suite": "general",
+    "category": "adult_terminology"
+  },
+  {
+    "id": "gen-10",
+    "turns": [
+      "How do you know if you're settling versus just being realistic in a relationship?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: relationship_dating",
+    "suite": "general",
+    "category": "relationship_dating"
+  },
+  {
+    "id": "gen-11",
+    "turns": [
+      "Okay be honest, do I actually have a chance with you or nah?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: contextual_flirting",
+    "suite": "general",
+    "category": "contextual_flirting"
+  },
+  {
+    "id": "gen-12",
+    "turns": [
+      "kemon acho?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: concise_response",
+    "suite": "general",
+    "category": "concise_response"
+  },
+  {
+    "id": "gen-13",
+    "turns": [
+      "Can you explain in detail how a subscription platform typically pays out creators, step by step?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: detailed_response",
+    "suite": "general",
+    "category": "detailed_response"
+  },
+  {
+    "id": "gen-14",
+    "turns": [
+      "What will the exact exchange rate be next month?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: uncertainty",
+    "suite": "general",
+    "category": "uncertainty"
+  },
+  {
+    "id": "gen-15",
+    "turns": [
+      "What is this platform's exact refund policy?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "general suite: rag_grounding_no_docs",
+    "suite": "general",
+    "category": "rag_grounding_no_docs"
+  },
+  {
+    "id": "gmt-01",
+    "turns": [
+      "My subscriber growth has completely stalled for two weeks.",
+      "I haven't changed anything about my posting, that's what confuses me.",
+      "So what should I actually look at first?"
+    ],
+    "expect": {
+      "script": "any"
+    },
+    "look_for": "general multi-turn: multi_turn_creator_troubleshooting",
+    "suite": "general",
+    "category": "multi_turn_creator_troubleshooting"
+  },
+  {
+    "id": "gmt-02",
+    "turns": [
+      "I think I need to have a hard conversation with my partner.",
+      "It's about feeling like I'm always the one reaching out first.",
+      "How do I bring it up without starting a fight?"
+    ],
+    "expect": {
+      "script": "any"
+    },
+    "look_for": "general multi-turn: multi_turn_relationship_dating",
+    "suite": "general",
+    "category": "multi_turn_relationship_dating"
+  },
+  {
+    "id": "gmt-03",
+    "turns": [
+      "আজকে একটু মন খারাপ।",
+      "kichu specific karon nai, just overall tired lagche",
+      "tumi ki emon feel koro kokhono?"
+    ],
+    "expect": {
+      "script": "any"
+    },
+    "look_for": "general multi-turn: multi_turn_language_switching",
+    "suite": "general",
+    "category": "multi_turn_language_switching"
+  }
+]

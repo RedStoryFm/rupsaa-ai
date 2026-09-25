@@ -191,6 +191,23 @@ def test_followup_carries_previous_terms_without_documents(terms):
     assert k.route == "followup" and k.terms_used == ["term-strip_stripping"] and rag.calls == []
 
 
+def test_posttrain_router_gaps_are_closed(terms):
+    """Owner failure prompts found in the V0.2 post-training evaluation."""
+    k = build_turn_knowledge("strip ta ektu simple kore bojhao", use_rag=False, rag_query=None, terminology=terms,
+                             previous_terms=["term-strip_stripping"], history_messages=2)
+    assert k.route == "followup" and k.terms_used == ["term-strip_stripping"]
+    k = build_turn_knowledge("stirp mane ki bolo to", use_rag=False, rag_query=None, terminology=terms)
+    assert k.route == "terminology" and k.terms_used == ["term-strip_stripping"]
+    k = build_turn_knowledge("Tell me what strip means", use_rag=False, rag_query=None, terminology=terms)
+    assert k.route == "terminology" and k.terms_used == ["term-strip_stripping"]
+    k = build_turn_knowledge("strip niye ektu detail e bojhao", use_rag=False, rag_query=None, terminology=terms)
+    assert k.route == "general" and k.terms_used == ["term-strip_stripping"]
+    k = build_turn_knowledge("এটা বাংলায় বুঝিয়ে বলো", use_rag=False, rag_query=None, terminology=terms, history_messages=0)
+    assert k.route == "followup" and not k.terms_used and "no earlier messages" in k.conversation_note
+    k = build_turn_knowledge("I need to talk to my partner about something hard", use_rag=False, rag_query=None, terminology=terms)
+    assert k.terms_used == []
+
+
 def test_memory_turn_gets_note_and_no_knowledge(terms):
     rag = SpyRag()
     k = build_turn_knowledge("ami age ki bolechilam?", use_rag=True, rag_query=rag, terminology=terms,

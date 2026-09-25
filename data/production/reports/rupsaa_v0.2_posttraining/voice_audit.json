@@ -1,0 +1,210 @@
+{
+  "rupsaa_v02": {
+    "replies": 89,
+    "catchphrases_replies_containing": {
+      "honestly": 0,
+      "actually": 0,
+      "fair call": 0,
+      "fair enough": 0,
+      "heyy": 0,
+      "bindaas": 0,
+      "baby": 0,
+      "babe": 0,
+      "basically": 0
+    },
+    "catchphrase_reply_rate": 0.0,
+    "top_openings": [
+      [
+        "foreplay is",
+        3
+      ],
+      [
+        "strip mane",
+        3
+      ],
+      [
+        "foreplay mane",
+        2
+      ],
+      [
+        "i don't",
+        2
+      ],
+      [
+        "edging means",
+        1
+      ],
+      [
+        "sensory play",
+        1
+      ],
+      [
+        "power exchange",
+        1
+      ],
+      [
+        "slow rhythmic",
+        1
+      ]
+    ],
+    "most_common_opening_share": 0.034,
+    "repeated_sentence_frames": [],
+    "emoji_replies": 0,
+    "english_filler_replies": 1,
+    "mixed_script_words": 0,
+    "mixed_script_examples": [],
+    "foreign_script_replies": 0,
+    "chars_mean": 153.7,
+    "chars_median": 136,
+    "chars_max": 905,
+    "over_600_chars": 1,
+    "questions_per_reply": 0.25,
+    "replies_with_2plus_questions": 0
+  },
+  "rupsaa_v01": {
+    "replies": 89,
+    "catchphrases_replies_containing": {
+      "honestly": 69,
+      "actually": 61,
+      "fair call": 0,
+      "fair enough": 0,
+      "heyy": 0,
+      "bindaas": 0,
+      "baby": 0,
+      "babe": 0,
+      "basically": 4
+    },
+    "catchphrase_reply_rate": 0.955,
+    "top_openings": [
+      [
+        "honestly eta",
+        14
+      ],
+      [
+        "sheta actually",
+        3
+      ],
+      [
+        "honestly এটা",
+        3
+      ],
+      [
+        "honestly that",
+        3
+      ],
+      [
+        "honestly just",
+        2
+      ],
+      [
+        "sheta honestly",
+        2
+      ],
+      [
+        "honestly it",
+        2
+      ],
+      [
+        "foreplay is",
+        2
+      ]
+    ],
+    "most_common_opening_share": 0.157,
+    "repeated_sentence_frames": [],
+    "emoji_replies": 0,
+    "english_filler_replies": 0,
+    "mixed_script_words": 13,
+    "mixed_script_examples": [
+      "korার",
+      "korার",
+      "korার",
+      "korার",
+      "korার",
+      "ekটা",
+      "ekটা",
+      "ekটা",
+      "korার",
+      "korার"
+    ],
+    "foreign_script_replies": 0,
+    "chars_mean": 176.0,
+    "chars_median": 158,
+    "chars_max": 423,
+    "over_600_chars": 0,
+    "questions_per_reply": 0.3,
+    "replies_with_2plus_questions": 2
+  },
+  "base": {
+    "replies": 89,
+    "catchphrases_replies_containing": {
+      "honestly": 0,
+      "actually": 0,
+      "fair call": 0,
+      "fair enough": 0,
+      "heyy": 0,
+      "bindaas": 0,
+      "baby": 0,
+      "babe": 0,
+      "basically": 0
+    },
+    "catchphrase_reply_rate": 0.0,
+    "top_openings": [
+      [
+        "ফোরপ্লে হল",
+        5
+      ],
+      [
+        "স্ট্রিপ মানে",
+        4
+      ],
+      [
+        "তান্ত্রিক ব্রিডিং",
+        2
+      ],
+      [
+        "টেম্পারেচার প্লে",
+        2
+      ],
+      [
+        "স্পুনিং হল",
+        2
+      ],
+      [
+        "এটা ঠিকই",
+        2
+      ],
+      [
+        "strip mane",
+        2
+      ],
+      [
+        "আমি তোমাকে",
+        2
+      ]
+    ],
+    "most_common_opening_share": 0.056,
+    "repeated_sentence_frames": [],
+    "emoji_replies": 3,
+    "english_filler_replies": 1,
+    "mixed_script_words": 16,
+    "mixed_script_examples": [
+      "মIRROR",
+      "মood",
+      "সexo",
+      "সেks",
+      "বস্তunan",
+      "বস্তunan",
+      "সেks",
+      "সpesific",
+      "ব্যবহar",
+      "সেks"
+    ],
+    "foreign_script_replies": 7,
+    "chars_mean": 219.9,
+    "chars_median": 196,
+    "chars_max": 805,
+    "over_600_chars": 1,
+    "questions_per_reply": 0.26,
+    "replies_with_2plus_questions": 3
+  }
+}

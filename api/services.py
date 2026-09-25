@@ -140,6 +140,8 @@ class RupsaaService:
 
         settings = get_settings()
         configured = settings.resolve_path(settings.adapter_path)
+        from rupsaa.personality.system_prompt import resolve_prompt_version
+
         adapter_info = {
             "configured_adapter_path": str(configured),
             "configured_adapter_exists": (configured / "adapter_config.json").is_file(),
@@ -153,6 +155,7 @@ class RupsaaService:
                 "quantized": False,
                 "device": "not loaded yet",
                 "adapter_loaded": False,
+                "prompt_version": resolve_prompt_version(str(configured), settings.prompt_version),
                 **adapter_info,
             }
         loaded = self._engine.loaded
@@ -162,6 +165,7 @@ class RupsaaService:
             "quantized": loaded.quantized,
             "device": str(next(loaded.model.parameters()).device),
             "adapter_loaded": loaded.adapter_path is not None,
+            "prompt_version": self._engine.prompt_version,
             **adapter_info,
         }
 

@@ -89,7 +89,7 @@ _FOLLOWUP_RE = _rx(
     rf"^\s*(what do you mean|i don'?t get it|didn'?t understand)",
     # Banglish
     rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*(bujhiye|bujhie|bujhaye)?\s*(bolo|bolen|bol|likho)",
-    rf"{_B}(eta|sheta|seta)?\s*(short|choto|sohoj|shohoj|easy) kore (bolo|bol|bujhao|likho)",
+    rf"{_B}(eta|sheta|seta)?\s*(short|choto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
     rf"{_B}(aro|ektu) (detail|bistarito|bistarito bhabe|bujhiye) (bolo|bol|bujhao)",
     rf"{_B}(bujhlam|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",
     # Bengali
@@ -104,6 +104,7 @@ _TERM_PATTERNS = [
     # English
     re.compile(r"^\s*what(?:'s| is| are| does)\s+(?:a |an |the )?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*(?:mean|means|stand for)?\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:what(?:'s| is) the )?meaning of\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
+    re.compile(r"^\s*what\s+(?:a |an |the )?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|stands for)\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:define|explain the term|explain)\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|meaning)\s*\?\s*$", re.I),
     # Banglish: "strip mane ki", "strip ki", "strip bolte ki bojhay", "strip ki jinis", "strip er mane ki"
@@ -121,6 +122,8 @@ _TERM_PATTERNS = [
 _TERM_PREFIX_RE = re.compile(
     rf"^(?:ok(?:ay)?|accha|acha|achha|hmm+|so|tell me|bolo(?: to)?|amake bolo|আচ্ছা|বলো তো)[,\s]+", re.I
 )
+# Trailing filler after a definition question ("stirp mane ki bolo to", "foreplay ki? please").
+_TERM_SUFFIX_RE = re.compile(r"[\s,]+(?:bolo(?: to| na)?|bolo to dekhi|please|pls|plz|ektu bolo|বলো তো|বলো)\s*[?.!]*\s*$", re.I)
 # Things that look like "X ki?" but are casual questions, not term lookups.
 _NOT_A_TERM = re.compile(
     rf"^(?:tumi|tui|apni|ami|amar|tomar|tor|ajke|aj|kal|ekhon|keno|kemon|kivabe|kothay|kokhon|ke|eta|sheta|seta|oita|"
@@ -154,7 +157,7 @@ _CASUAL_RE = _rx(
 
 
 def _term_candidate(message: str) -> str | None:
-    text = _TERM_PREFIX_RE.sub("", message.strip())
+    text = _TERM_SUFFIX_RE.sub("", _TERM_PREFIX_RE.sub("", message.strip()))
     for pat in _TERM_PATTERNS:
         m = pat.match(text)
         if not m:
@@ -182,4 +185,6 @@ def classify_message(message: str) -> RouteDecision:
                              use_documents=True, use_terminology=True)
     if _CASUAL_RE.search(text) or len(re.findall(rf"[A-Za-z{_BN}]+", text)) <= 3:
         return RouteDecision(Route.CASUAL, "greeting / small talk / short casual message")
-    return RouteDecision(Route.GENERAL, "no strong knowledge signal", use_documents=True, strict_documents=True)
+    # Terminology here is whole-phrase containment only ("foreplay niye detail e bojhao").
+    return RouteDecision(Route.GENERAL, "no strong knowledge signal", use_documents=True, strict_documents=True,
+                         use_terminology=True)

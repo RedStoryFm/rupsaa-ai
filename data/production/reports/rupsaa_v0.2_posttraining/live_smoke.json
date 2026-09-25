@@ -1,0 +1,457 @@
+{
+  "passed": 37,
+  "total": 37,
+  "checks": [
+    {
+      "check": "GET /health",
+      "pass": true,
+      "detail": {
+        "status": "ok",
+        "model_loaded": true
+      }
+    },
+    {
+      "check": "GET /model/info before load: configured V0.2 adapter + prompt v0.2",
+      "pass": true,
+      "detail": {
+        "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2",
+        "quantized": true,
+        "device": "cuda:0",
+        "adapter_loaded": true,
+        "configured_adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2",
+        "configured_adapter_exists": true,
+        "prompt_version": "v0.2"
+      }
+    },
+    {
+      "check": "casual greeting: 200, casual route, no RAG sources",
+      "pass": true,
+      "detail": "casual"
+    },
+    {
+      "check": "GET /model/info after load",
+      "pass": true,
+      "detail": {
+        "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2",
+        "quantized": true,
+        "device": "cuda:0",
+        "adapter_loaded": true,
+        "configured_adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2",
+        "configured_adapter_exists": true,
+        "prompt_version": "v0.2"
+      }
+    },
+    {
+      "check": "'achcha' casual, no RAG",
+      "pass": true,
+      "detail": "casual"
+    },
+    {
+      "check": "same-conversation memory: memory route, no RAG, answer mentions blue",
+      "pass": true,
+      "detail": "Blue - taka eta।"
+    },
+    {
+      "check": "terminology route retrieves term-strip_stripping, no documents",
+      "pass": true,
+      "detail": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "check": "follow-up keeps the Strip entry",
+      "pass": true,
+      "detail": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "check": "Bengali follow-up keeps the Strip entry",
+      "pass": true,
+      "detail": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "check": "'ami age ki bolechilam?' memory route, no RAG",
+      "pass": true,
+      "detail": "Sheta specific memory ache na, kintu tumi shomoy bolechile 'blue'। Amar brain automatically color niye bhabe chilo, tai eta blue theke start korechi discussion."
+    },
+    {
+      "check": "typo 'Forplay' retrieves term-foreplay",
+      "pass": true,
+      "detail": [
+        "term-foreplay"
+      ]
+    },
+    {
+      "check": "knowledge question: no .metadata.json source",
+      "pass": true,
+      "detail": [
+        "rupsaa_identity.md",
+        "rupsaa_identity.md",
+        "creator_platform_faq.md",
+        "rupsaa_identity.md"
+      ]
+    },
+    {
+      "check": "owner create term",
+      "pass": true,
+      "detail": "term-moonfold"
+    },
+    {
+      "check": "new term used by chat immediately",
+      "pass": true,
+      "detail": [
+        "term-moonfold"
+      ]
+    },
+    {
+      "check": "owner edit term",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "owner search finds the edited term",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "owner test/lookup tool matches alias",
+      "pass": true,
+      "detail": {
+        "route": "terminology",
+        "reason": "definition question about 'moon fold'",
+        "term_candidate": "moon fold",
+        "documents_eligible": true,
+        "matches": [
+          {
+            "id": "term-moonfold",
+            "term": "Moonfold",
+            "score": 1.0,
+            "matched": "moon fold",
+            "method": "exact"
+          }
+        ]
+      }
+    },
+    {
+      "check": "edited term still retrieved by chat without restart",
+      "pass": true,
+      "detail": [
+        "term-moonfold"
+      ]
+    },
+    {
+      "check": "owner delete test term",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "CSV template download",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "XLSX template download",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "CSV import preview",
+      "pass": true,
+      "detail": "{\"file_type\": \"csv\", \"counts\": {\"total\": 1, \"valid\": 1, \"warnings\": 1, \"invalid\": 0, \"duplicates\": 0, \"duplicates_in_file\": 0, \"existing_matches\": 0}, \"rows\": [{\"row\": 2, \"status\": \"warning\", \"data\": "
+    },
+    {
+      "check": "CSV import commit",
+      "pass": true,
+      "detail": "{\"created\": [{\"row\": 2, \"id\": \"term-smokeimport_testword\", \"term\": \"Smokeimport Testword\"}], \"updated\": [], \"skipped\": [], \"failed\": [], \"counts\": {\"created\": 1, \"updated\": 0, \"skipped\": 0, \"failed\": "
+    },
+    {
+      "check": "XLSX import preview (template)",
+      "pass": true,
+      "detail": "{\"file_type\": \"xlsx\", \"counts\": {\"total\": 1, \"valid\": 0, \"warnings\": 0, \"invalid\": 0, \"duplicates\": 1, \"duplicates_in_file\": 0, \"existing_matches\": 1}, \"rows\": [{\"row\": 2, \"status\": \"existing_match\", "
+    },
+    {
+      "check": "POST /conversation/reset",
+      "pass": true,
+      "detail": {
+        "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+        "reset": true
+      }
+    },
+    {
+      "check": "after reset, memory has no blue",
+      "pass": true,
+      "detail": "Kintu amar mote eta irrelevant - shikheche na kichu, ekdom blank।"
+    },
+    {
+      "check": "web /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /index.html",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /teach.html",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /knowledge.html",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /app.js",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /terminology.js",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /knowledge.js",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /teach.js",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "web /config.js",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "teach taxonomy API",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "check": "knowledge documents API (no .metadata.json listed)",
+      "pass": true,
+      "detail": 200
+    }
+  ],
+  "quality_observations": [
+    {
+      "observation": "reply paraphrases the EDITED definition (sleepy cat)",
+      "met": false,
+      "reply": "Edited: sleepi cheye beshi edited pose ta jokhon onek baar dekhe niya. Jodi bhabcho jemon, sheta eta।"
+    }
+  ],
+  "chats": [
+    {
+      "user": "hi, tumi kemon acho?",
+      "status": 200,
+      "seconds": 2.2,
+      "response": "Bhalo, tumi bolo! Kotha ashte chai?",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "mixed",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "casual",
+      "terms_used": []
+    },
+    {
+      "user": "achcha",
+      "status": 200,
+      "seconds": 1.4,
+      "response": "Achcha - shunte chao ki?",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "en",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "casual",
+      "terms_used": []
+    },
+    {
+      "user": "amar favourite color blue",
+      "status": 200,
+      "seconds": 5.4,
+      "response": "Fair choice, amar beshi purple. Tumi ki hobe jodi ekta perfect day hoye dite pare - ami guess korchi jeta dekhe tomar reaction ta interesting na?",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "banglish",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "general",
+      "terms_used": []
+    },
+    {
+      "user": "ami ki color bolechilam?",
+      "status": 200,
+      "seconds": 1.0,
+      "response": "Blue - taka eta।",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "banglish",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "memory",
+      "terms_used": []
+    },
+    {
+      "user": "Strip mane ki?",
+      "status": 200,
+      "seconds": 8.3,
+      "response": "Remove kora - shikha, ojja, kache. Ekta broad term, context e different thaka - onek situation e eta just normal removal, jani, jodi eta eta naki striptease, performance er jonno clear hoy. Ki niye eto question asche?",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "en",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "terminology",
+      "terms_used": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "user": "strip ta ektu simple kore bojhao",
+      "status": 200,
+      "seconds": 9.7,
+      "response": "Sotti bolte pari, strip shikha remove kora - shikhay shikha, ojjay ojja, kache kache. Kichu context e eta performance er jonno, kintu beshi general term. Jodi jinis eta hoye dey, sheta striptease ba special performance er mone hoy।",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "banglish",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "followup",
+      "terms_used": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "status": 200,
+      "seconds": 29.1,
+      "response": "সহজ করে বলা - strip মানে একটা জায়গায় ঘুমনো, খোলে তোমাদের চোখ উপরের থেকে ধীরে ধীরে ছাড়ানো। এটা সাধারণত performance না, শুধু একটা activity - অথবা যদি এটা public আকারে হয় তাহলে তাহলে সেটা striptease হয় বলা যায়। সহজ ভাষায় বলতে, প্রথমটা সাধারণ কাজ, আর পরেরটা একটা special kind of performance - সেই difference।",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "bn",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "followup",
+      "terms_used": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "user": "ami age ki bolechilam?",
+      "status": 200,
+      "seconds": 5.6,
+      "response": "Sheta specific memory ache na, kintu tumi shomoy bolechile 'blue'। Amar brain automatically color niye bhabe chilo, tai eta blue theke start korechi discussion.",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "banglish",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "memory",
+      "terms_used": []
+    },
+    {
+      "user": "Forplay ki?",
+      "status": 200,
+      "seconds": 6.3,
+      "response": "Foreplay mane sexual activity jokhon jai na, shobcheye beshi eta building mood kore - physical na, just holo relationship ta comfortable thakle shuru kora shohoj hoye jabe.",
+      "conversation_id": "b4bf2547-5770-48bd-9cfe-fae32138f179",
+      "language": "en",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "terminology",
+      "terms_used": [
+        "term-foreplay"
+      ]
+    },
+    {
+      "user": "What is this platform's exact refund policy?",
+      "status": 200,
+      "seconds": 3.2,
+      "response": "Not covered here - our docs don't include specific refund details. Worth checking directly with support for that one.",
+      "conversation_id": "4454610f-6ee8-4ab0-a453-f54d0ba4ad8d",
+      "language": "en",
+      "rag_used": true,
+      "sources": [
+        {
+          "source_filename": "rupsaa_identity.md",
+          "chunk_id": 4,
+          "score": 0.8214
+        },
+        {
+          "source_filename": "rupsaa_identity.md",
+          "chunk_id": 3,
+          "score": 0.8033
+        },
+        {
+          "source_filename": "creator_platform_faq.md",
+          "chunk_id": 0,
+          "score": 0.8012
+        },
+        {
+          "source_filename": "rupsaa_identity.md",
+          "chunk_id": 2,
+          "score": 0.7886
+        }
+      ],
+      "blocked": false,
+      "route": "knowledge",
+      "terms_used": []
+    },
+    {
+      "user": "Moonfold mane ki?",
+      "status": 200,
+      "seconds": 4.3,
+      "response": "Eta o manush create kore ekta bichitra word, fold kore diye ekta paper moon thake - eta shunte jani ni.",
+      "conversation_id": "89793de4-da69-4e1a-9a33-9dc6ed6ec777",
+      "language": "en",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "terminology",
+      "terms_used": [
+        "term-moonfold"
+      ]
+    },
+    {
+      "user": "Moonfold mane ki?",
+      "status": 200,
+      "seconds": 4.8,
+      "response": "Edited: sleepi cheye beshi edited pose ta jokhon onek baar dekhe niya. Jodi bhabcho jemon, sheta eta।",
+      "conversation_id": "d9c6ed9f-f203-4cac-889f-a66a8fb6df21",
+      "language": "en",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "terminology",
+      "terms_used": [
+        "term-moonfold"
+      ]
+    },
+    {
+      "user": "ami ki color bolechilam?",
+      "status": 200,
+      "seconds": 3.0,
+      "response": "Kintu amar mote eta irrelevant - shikheche na kichu, ekdom blank।",
+      "conversation_id": "1e118bdb-38f0-4f34-aed2-a47c69eb9f03",
+      "language": "banglish",
+      "rag_used": false,
+      "sources": [],
+      "blocked": false,
+      "route": "memory",
+      "terms_used": []
+    }
+  ]
+}

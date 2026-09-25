@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Start the Rupsaa app serving Qwen2.5-7B-Instruct + the Rupsaa V0.2 LoRA (4-bit, not merged).
-# Use only after reviewing data/production/reports/rupsaa_v0.2_evaluation/POSTTRAIN_REPORT.md.
+# Use only after reviewing data/production/reports/rupsaa_v0.2_posttraining/POSTTRAINING_REPORT.md (verdict: FAIL, opt-in only).
 # Roll back any time with: bash scripts/start_rupsaa_v01.sh
 #
 # Usage:  bash scripts/start_rupsaa_v02.sh

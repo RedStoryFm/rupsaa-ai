@@ -69,11 +69,18 @@ def build_turn_knowledge(
 
     matches = []
     if terminology is not None:
-        if decision.route == Route.FOLLOWUP and previous_terms:
+        if decision.route == Route.FOLLOWUP:
             by_id = {r.id: r for r in terminology.list(include_disabled=False)}
-            matches = [_Carried(by_id[t]) for t in previous_terms if t in by_id]
+            matches = [_Carried(by_id[t]) for t in previous_terms or [] if t in by_id]
+            # "strip ta simple kore bojhao" names the term itself; a newly named term joins the carried one.
+            carried = set(previous_terms or [])
+            matches += [m for m in terminology.lookup(message) if m.record.id not in carried]
+            matches = matches[:2]
         elif decision.use_terminology:
             matches = terminology.lookup(message, decision.term_candidate)
+    if decision.route == Route.FOLLOWUP and history_messages == 0:
+        out.conversation_note = ("The user refers to an earlier answer, but this conversation has no earlier messages yet — "
+                                 "ask what they would like explained instead of guessing a topic.")
     if matches:
         out.terminology_context = format_terminology_context(matches)
         out.terms_used = [m.record.id for m in matches]

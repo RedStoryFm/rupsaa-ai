@@ -44,6 +44,7 @@ data/production/reports/*
 !data/production/reports/rupsaa_v0.2_preparation/
 !data/production/reports/rupsaa_v0.2_training/
 !data/production/reports/rupsaa_v0.2_evaluation/
+!data/production/reports/rupsaa_v0.2_posttraining/
 !data/production/reports/PRETRAINING_V01_REPORT.md
 !data/production/reports/V01_*
 !data/production/reports/VOICE_AUDIT_V1_0_TRACKA_FINAL*

@@ -149,3 +149,23 @@ def test_conversation_reset(client, fake_service):
 def test_conversation_reset_requires_id(client, fake_service):
     response = client.post("/conversation/reset", json={})
     assert response.status_code == 422
+
+
+def test_model_info_reports_prompt_version_for_v02_adapter(monkeypatch, tmp_path):
+    """Serving adapters/rupsaa-v0.2 must show (and use) the V0.2 training prompt."""
+    from api.services import RupsaaService
+    from rupsaa.config import get_settings
+
+    adapter = tmp_path / "rupsaa-v0.2"
+    adapter.mkdir()
+    (adapter / "adapter_config.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setenv("RUPSAA_ADAPTER_PATH", str(adapter))
+    monkeypatch.delenv("RUPSAA_PROMPT_VERSION", raising=False)
+    get_settings.cache_clear()
+    try:
+        assert RupsaaService().model_info()["prompt_version"] == "v0.2"
+        monkeypatch.setenv("RUPSAA_PROMPT_VERSION", "v0.1")
+        get_settings.cache_clear()
+        assert RupsaaService().model_info()["prompt_version"] == "v0.1"
+    finally:
+        get_settings.cache_clear()

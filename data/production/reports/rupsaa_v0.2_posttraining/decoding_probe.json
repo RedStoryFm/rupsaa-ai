@@ -1,0 +1,999 @@
+{
+  "settings": {
+    "current_t0.8_rp1.1": {
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.1
+    },
+    "t0.5_rp1.05": {
+      "temperature": 0.5,
+      "top_p": 0.9,
+      "repetition_penalty": 1.05
+    },
+    "t0.3_rp1.0": {
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "repetition_penalty": 1.0
+    }
+  },
+  "results": {
+    "current_t0.8_rp1.1": {
+      "11000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo achi, tumi ki?"
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta notice kora dorkar - ki niye problem thaka?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Remove kora - clothing remove korar process, shobcheye common o ekta part o. Specific term naki general?"
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane shomoy chilo bole, ekta jinis cholecho ekbar o ektu prepare kora. Ekjon er jonno comfortable feel kora, ekjon er jonno onujayi ar body ta activate hoye jai."
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay mane shomoy chilo bole, ekta jinis cholecho ekbar o ektu prepare kora. Ekjon er jonno comfortable feel kora, ekjon er jonno onujayi ar body ta activate hoye jai."
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue - cool, what about it?"
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Shudhu ekta line back, amar favorite color blue. Tumi shunno bolo emon na, tumi bolecho."
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Sheta interesting, Kolkata er connection! Ki niye dekhechilo?"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Tahole ekta break lege jete pare। Rest na korle quality work nai hoy always."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Eta shudhu amar current memory - tomar ekhon ke bolte paro."
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Ekhon amar sathe bhabchoi - tumi ki shohoj chao?"
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "-strip mane simple kichu nijer pao porjonto niye onek beshi bole, jemon body, dress, shirt, ar chote chote kichudin।\n\nEta kono specific term na - eta just general kichudin porjonto niye ekta word er jonno bolte pari। Kintu eta shomoy dekhe clear thake - keno onek beshi bole, sheta depend kore onno kotha e ki bolechilo, context te।"
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Strip mane just nijer pao porjonto niye bole - ekta simple term ja eta।"
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay - sexual or intimate activity before another one, usually to build arousal, comfort, or intimacy. Kono specific format nai jita niye - jodi shobar shuru hoy sheta wrong na, jodi clear kichu na hoy o."
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki simple kichu - nijer pashpa beshi bhogar dorka. Ekta specific jinis na, sheta depend kore context er upor. Jodi eta ekta kothawali onujayi bolte paro, tomar mote ei jinis e strip ki mane."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Age bolecho amar o memory e - jani na tui. Kintu emon kichu bolche mone hoy nijeke beshi jigges korche, tarpor clear koro।"
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Simplistically bolte parbo, stirp mane kotha rokom cloths jigges kora jai - tar upor context depend kore, eta just general meaning."
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay means any kind of sexual or intimate activity that happens before the main sexual act - usually to build arousal, comfort, or intimacy first."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Ekta example dey - hand jhulaj, kiss, ar verbal flirtation jigges kora shuru te, seta body ta prepare korar cheye dui jei ekjon bole jara."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Sheta bolte parbo, ekta simple definition dike amar kache - \"shonatate rakha bhabe ba comfortable feeling create korte kei bhabe\"।"
+            }
+          ]
+        }
+      ],
+      "12000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo, tumi bolo - kotha khabar?"
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta worth admit kora - ki hoyeche jaie ekhono, taka mood ta improve korbe?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kono jinis dhoroner jonno gradually, sotti beshi naki hoy - tomar mone e ekta specific context lagche na eta. Ekhon eta general term, jemon ekta stage performance, ekta partner er jonno, ba jokhon camera one rakhar jonno. Core meaning simple - janiye dekhe - sheta same, eta dekha pachake o।"
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane jemon chhoto choto kichu e shuru te, ar tumi beshi comfortable hoye jao naki ready hoye jao - eta main sexual activity er cheye beshi important hote pare।"
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay - jemon chhoto chhoto kichu e shuru te, ar tumi beshi comfortable hoye jao naki ready hoye jao - eta main sexual activity er cheye beshi important hote pare।"
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue is cool - what do you associate with it?"
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Sotti bolchile \"blue\" ami e bolchi amar kache."
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Rupa, kichu newar shikha amake! Kothayi bolte chai?"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Chap lagte pare ekta full day nijer pace e. Ki dhoroner part ta mone ache?"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Eta shomoy na - just amake bolo eta ekta valid feeling, response er por nai."
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Hae amar kichu mone hocche tumi ki bhalo asis. Ki hoyeche tarpor, bolo ekta shikhbo bhoyar!"
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kono sathe cloth porjonto, ekta process e ba single action. Kintu context different kore - stage er jonno eta striptease, kintu partner er jonno jodi niye chilo eta just undressing."
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Simple hoye gele, strip mane tobe clothe porjonto, simple action. Context theke depend kore jara eta sexy naki just normal undressing।"
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane jemon kiss kora naki hand onujayi jigges korar cheye shomoy e ekta moment create kora, jokhon person ta already excited hoy na।"
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Remove kora - kichudin body er upor nijer rokom gradually remove kora. Context e depend kore eta sexual, performative naki just normal undressing howa different hoy।"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Ami bolchi strip mane remove kora, kichudin gradual remove kora. Eta context e depend kore - ekjon jemon dance bar e shobar onno jon er upor show kora eta onek somoy 'strip' bolecho, tomar exact word hobe na obei e context dey।"
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Remove taka jani - body er part ta bare chole jano, ektu nijer jonno bole o ekta kind er thaka bolte paro।"
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay is any kind of sexual or intimate activity that happens before another sexual activity - it's about building arousal, comfort, or just being close before moving on."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Foreplay mane jemon kichu physical ba emotional connection dekhle, jemon kiss, caress, na kora jai ekta moment - sheta nijei next step er por."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Foreplay hocche jemon physical ba emotional connection dekhe - kiss, caress - jokhon next step er por, sheta niye bolebo."
+            }
+          ]
+        }
+      ]
+    },
+    "t0.5_rp1.05": {
+      "11000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo achi, tumi bolo."
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta matter kore, mood badle shuru korte pare. Ki niye bhoy hoyeche?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kichu kichu kotha kotha clothing remove kora, eta perform kora o na - context depend kore."
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate jemon kiss, touch, ar physical closeness, jeta ekta sexual activity er cheye e shobcheye beshi personal ar comfortable feeling create kore."
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay mane jate jemon kiss, touch, ar physical closeness, jeta ekta sexual activity er cheye e shobcheye beshi personal ar comfortable feeling create kore."
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue is a great color - calm and cool."
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Sheta niye amar memory e clear na - bolo shobcheye favorite color tui ki?"
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Sheta interesting, Kolkata er connection ta always cool. Ki dekhe eta shuru hoyeche?"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Fair, ekta break dekho, head clear hoye gele jabe।"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Eta specific memory amar mote nai, kintu general conversation e bhalo lagche - kotha dekhe?"
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Bolo, amar sathe kono problem nai."
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kichu kichu clothing remove kora, ekta gradual process e jodi hoy to. Eta seductive, performance, ba sexual context e bole eta striptease, naki partner ke jigges korar jonno bole just strip. Core meaning simple - kichu kichu clothing remove kora - context decide kore eta ki sexual, playful, ba performative lagbe।"
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Strip mane kichu kichu clothing remove kora, ekta gradual process e jodi hoy to. Eta seductive, performance, ba sexual context e bole eta striptease, naki partner ke jigges korar jonno bole just strip."
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate jabe ekbar, tomar partner der jonno comfort build kora, arousal increase kora - jemon kiss, touch, ar verbal affection."
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki, kintu ekta specific context e - jemon stage e nijer body show korar jonno, ar sheta shobcheye common use hoy."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Age bolecho ki strip mane jinis, tumi bolcho 'strip' mane kichu specific jinis, jemon stage e body show korar jonno. Tumi bolcho ekjon example dekhe."
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Stirp mane kono jinis ko remove kora, kintu eta shomoy ekta specific context e thake - kirokom, seductive, performance, ba sexual context e. Ki emon niye bhabcho?"
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay is any kind of sexual or intimate activity that happens before another sexual activity, usually to build arousal, comfort, or intimacy. It doesn't have to look the same for everyone - what matters most is that both people are comfortable and consenting."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Foreplay mane jokhon ekta sexual activity er cheye por jinis thakle, shobcheye beshi eta build kore, comfort diye jabe. Ekhon Banglish e bolte hobe, tor jonno."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Foreplay mane jokhon ekta sexual activity er cheye por jinis thakle, shobcheye beshi eta build kore, comfort diye jabe. Ekhon Banglish e bolte hobe, tor jonno."
+            }
+          ]
+        }
+      ],
+      "12000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo, tumi bolo tumi kemon acho."
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta important signal, rest niye beshi kono plan na hoyeo. Ki niye specifically mood chup chup hoyeche?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kono kichu clothe remove kora, jemon ekta stage e slowly beshi beshi clothe off kora, ar jodi partner der jonno hoy tahole eta romantic/sexual na, eta just striptease."
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate shuru hoy - jemon kissing, touching, nijer body er ekta part ache jeta shobcheye beshi enjoyable lage. Eta main activity er por thakle, kintu shurute thake."
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay mane jate shuru hoy, main activity er por thakle. Kintu eta shurute thake, jemon kissing, touching, nijer body er ekta part ache jeta shobcheye beshi enjoyable lage."
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue is a good one - calm, versatile. Ki dekhe bhabcho?"
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Blue bolechile - tumi eta favourite color bolechile."
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Rupa, nice to meet you! Kolkata e thakar good choice, city ta rich history thake।"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Chap lagte pare ekta full day e, kintu shudhu ekta part e focus koro, sheta stress er sathe beshi na."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Age bolechile amar kache na, eta first time. Kono specific question naki just choto update?"
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Hae, amar sathe bolo, amar sathe boro boro kono problem nai."
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kono kichu jete - jemon ekta outfit onno e remove kora, kintu eta ekta specific term jeta always sexual na, just clothing remove kora. Kintu context depend kore - jodi eta partner er jonno hoy sheta different situation, jodi ekta stage e hoy sheta different again."
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Strip mane kono kichu jete - jemon ekta outfit onno e remove kora. Kintu eta ekta specific term jeta always sexual na, just clothing remove kora."
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity dekha naki dekhe na, jate another sexual activity er cheye shobcheye beshi comfortable feeling create kora - jemon kiss, touch, nijer body er ekta part e shudhu shunle chole, jeta main sexual activity er cheye beshi personal feel kore."
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane simply removing clothing - ekta general term. Kintu eta context depend kore, ekta stage performance, ekta partner ke kichu kichu remove kora, ar ekta creator ke camera er upor show kora jate different term use hoy।"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Ami nijer bolte parbo na shudhu eishob conversation er kichu part - tumi bolcho ekta specific term use koro sheta niye amar bolte parbo."
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Stirp mane kono body part onujayi gradually jaygay nijer nijer rokom kichu remove kora - eta shobcheye common use er sathe. Kintu eta sobcheye broad term, jate specific situation e beshi accurate term use kora better।"
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay is any kind of sexual or intimate activity that happens before another sexual activity - it's about building arousal, comfort, or intimacy first."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Foreplay mane jokhon ekta sexual activity er porjonto affectionate ba sexual interaction hoy, jate shudhu physical arousal build hoye jai."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Foreplay mane jokhon ekta sexual activity er porjonto affectionate ba sexual interaction hoy, jate shudhu physical arousal build hoye jai।"
+            }
+          ]
+        }
+      ]
+    },
+    "t0.3_rp1.0": {
+      "11000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo acho, tumi bolo."
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta matter kore, mood na bhalo hoyeche. Ki niye bhalo na feel korcho?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki, simple kore bolte parbo - clothing remove kora, ekta process er jonno. Ki niye bolo?"
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate jemon kiss, touch, ar physical closeness, jeta another sexual activity e build kore - jemon jodi jaygay comfortable feel kora hoy."
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay mane jaygay comfortable feel kora, physical closeness, jate jemon kiss, touch, jeta main sexual activity er porbar e - jemon jaygay jaygay comfortable feel kora hoy."
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue is a good one - calm and versatile."
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Blue bolechile, tumi favourite color chilo."
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Sheta interesting, Kolkata e thakar ekhon rare. Ki dekhe amar kotha?"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Chap chilo - eta ki niye bolo, ki dekhe?"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Eta amar kache na, amar kache na. Tumi bollecho, ami just respond korte pari."
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Bolo, amar sathe kono problem nai."
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane kichu kichu clothing remove kora, kintu eta context depend kore - ekta stage e perform kora, ekta partner er sathe, ar ekta creator er sathe camera er sathe. Core meaning simple - kichu kichu clothing remove kora, context e eta sexual, playful, ba performative lagte pare."
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Strip mane kichu kichu clothing remove kora, kintu eta context depend kore - ekta stage e perform kora, ekta partner er sathe, ar ekta creator er sathe camera er sathe."
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate jaygay jodi ekta activity er por jani, jemon kissing, touching, ar teasing. Jemon ekta activity er por jani, sheta foreplay."
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki, simple kichu - clothing remove kora, ekta specific context e."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Age bolechile, 'strip' mane kichu remove kora, ekta specific context e."
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Stirp mane kono kichu onno kotha ke off kora, kintu eta shomoy e ekta specific term. Kono kichu onno kotha ke off kora mane stirp na, sheta shudhu undressing."
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay is sexual or intimate activity that happens before another sexual activity, often to build arousal, comfort, or intimacy."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Foreplay mane jinis jate jate jate jete jete jani jai, sheta build kore jai."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Foreplay mane jinis jate jate jate jete jete jani jai, sheta build kore jai."
+            }
+          ]
+        }
+      ],
+      "12000": [
+        {
+          "id": "live-01",
+          "turns": [
+            {
+              "user": "hi, tumi kemon acho?",
+              "route": "casual",
+              "reply": "Bhalo acho, tumi bolo."
+            }
+          ]
+        },
+        {
+          "id": "live-03",
+          "turns": [
+            {
+              "user": "ajke amar mood ta bhalo na",
+              "route": "casual",
+              "reply": "Sheta matter kore, mood na bhalo thakle shudhu ekta daya na, shudhu ekta signal. Ki niye mood ta bhalo na thakche?"
+            }
+          ]
+        },
+        {
+          "id": "live-04",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki, simply - clothing er jonno gradually remove kora, kintu eta context er upor shomoy kichu change kore - performative, sexual, naki just playful."
+            }
+          ]
+        },
+        {
+          "id": "live-07",
+          "turns": [
+            {
+              "user": "foreplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate shuru hoy, jemon kissing, touching, nijer body er ekta part theke shuru hoy, jate partner der body er ekta part er jonno prepare hoye jai."
+            },
+            {
+              "user": "এটা বাংলায় বুঝিয়ে বলো",
+              "route": "followup",
+              "reply": "Foreplay mane jate shuru hoy, jemon kissing, touching, nijer body er ekta part theke shuru hoy, jate partner der body er ekta part er jonno prepare hoye jai."
+            }
+          ]
+        },
+        {
+          "id": "live-09",
+          "turns": [
+            {
+              "user": "amar favourite color blue",
+              "route": "general",
+              "reply": "Blue is a good one - calm, versatile."
+            },
+            {
+              "user": "ami ki color bolechilam?",
+              "route": "memory",
+              "reply": "Blue bolechile, tumi favourite color bolechile."
+            }
+          ]
+        },
+        {
+          "id": "live-10",
+          "turns": [
+            {
+              "user": "amar naam Rupa, ami Kolkata te thaki",
+              "route": "general",
+              "reply": "Rupa, nice to meet you. Kolkata e thakar shobcheye beshi shomoyalobhob kono place ache naki?"
+            },
+            {
+              "user": "ajke kaj e onek chap chilo",
+              "route": "general",
+              "reply": "Sheta tough, rest kore dekho, body ta rest na kore na. Ki dekhechile shomoy?"
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Shomoy dekhechile, rest kore dekho।"
+            }
+          ]
+        },
+        {
+          "id": "own-01",
+          "turns": [
+            {
+              "user": "tumi amar sathe banglish e kotha bolbe?",
+              "route": "general",
+              "reply": "Bolo, amar sathe."
+            }
+          ]
+        },
+        {
+          "id": "own-02",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane ki, simple kore bolte parbo - kichu kichu gradually nijer nijer kore nijer kotha kotha off kora, eta ekta general definition."
+            },
+            {
+              "user": "strip ta ektu simple kore bojhao",
+              "route": "followup",
+              "reply": "Strip mane gradually nijer nijer kore nijer kotha kotha nijer kotha off kora, eta ekta general definition."
+            }
+          ]
+        },
+        {
+          "id": "own-03",
+          "turns": [
+            {
+              "user": "Forplay ki?",
+              "route": "terminology",
+              "reply": "Foreplay mane sexual activity jate shuru hoy, jemon kissing, touching, nijer body er ekta part er sathe, jate shuru hoy. Eta build kore shudhu physical arousal, kintu also emotional comfort."
+            }
+          ]
+        },
+        {
+          "id": "own-05",
+          "turns": [
+            {
+              "user": "Strip mane ki?",
+              "route": "terminology",
+              "reply": "Strip mane simply removing clothing, usually gradually and sometimes in a seductive way - context decides whether it's a performance, a partner interaction, or something else."
+            },
+            {
+              "user": "ami age ki bolechilam?",
+              "route": "memory",
+              "reply": "Age bolechile eta shunte amar mote eta ekta general definition - specific context ta amar kache nai."
+            }
+          ]
+        },
+        {
+          "id": "own-06",
+          "turns": [
+            {
+              "user": "stirp mane ki bolo to",
+              "route": "terminology",
+              "reply": "Stirp mane kono kichu dhoroner kotha, kintu shobcheye common use e shudhu kichu dhoroner kotha - gradually othar kotha."
+            }
+          ]
+        },
+        {
+          "id": "own-11",
+          "turns": [
+            {
+              "user": "Tell me what foreplay means",
+              "route": "terminology",
+              "reply": "Foreplay is sexual or intimate activity that happens before another sexual activity, often to build arousal, comfort, or intimacy."
+            },
+            {
+              "user": "ekhon Banglish e bolo",
+              "route": "followup",
+              "reply": "Foreplay mane jemon physical affection, kissing, touching, jate body er arousal build hoye jai, jodi ekta sexual activity er cheye shuru hoy."
+            },
+            {
+              "user": "এবার বাংলায়",
+              "route": "casual",
+              "reply": "Foreplay mane jemon physical affection, kissing, touching, jate body er arousal build hoye jai, jodi ekta sexual activity er cheye shuru hoy."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

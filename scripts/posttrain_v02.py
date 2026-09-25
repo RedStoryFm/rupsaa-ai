@@ -17,7 +17,7 @@ attached as named adapters and "base" is the same weights with adapters disabled
   6. unseen-terminology generalisation (24 cases, data/production/evaluation/rupsaa_v0.2/)
   7. the 10 live-behaviour checks      (real runtime context builder + live terminology store)
   8. V0.1 vs V0.2 vs base Qwen         (each model with the system prompt it was trained/served with)
-  9. human-review report               data/production/reports/rupsaa_v0.2_evaluation/POSTTRAIN_REPORT.md
+  9. human-review report               data/production/reports/rupsaa_v0.2_posttraining/POSTTRAIN_REPORT.md
  10. app-integration instructions      APP_INTEGRATION.md — written only if the automatic gate passes;
                                        nothing is switched automatically
 --dry-run: steps 1-2 plus input checks, no model load.
@@ -52,7 +52,7 @@ V01_CHECKSUMS = PROJECT_ROOT / "release/rupsaa-v0.1/checksums.sha256"
 TRAINING_COMMIT = PROJECT_ROOT / "release/rupsaa-v0.2/TRAINING_COMMIT.json"
 EVAL_DIR = PROJECT_ROOT / "data/production/evaluation/rupsaa_v0.2"
 SNAPSHOT = PROJECT_ROOT / "data/production/snapshots/rupsaa_v0.2_training"
-DEFAULT_OUT = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2_evaluation"
+DEFAULT_OUT = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2_posttraining"
 BASE_MODEL = "Qwen/Qwen2.5-7B-Instruct"
 EXPECTED_TARGETS = {"q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"}
 CUTOFF_LEN = 2048
@@ -60,7 +60,7 @@ VARIANTS = ("rupsaa_v02", "rupsaa_v01", "base")
 PROMPT_VERSION = {"rupsaa_v02": "v0.2", "rupsaa_v01": "v0.1", "base": "v0.2"}
 TERM_MARKER = "\n\nReference terminology:\n"
 RAG_MARKER = "Retrieved context:\n"
-CATCHPHRASES = ["honestly", "actually", "fair call", "fair enough", "heyy", "bindaas", "baby", "babe"]
+CATCHPHRASES = ["honestly", "actually", "fair call", "fair enough", "heyy", "bindaas", "baby", "babe", "basically"]
 BANGLISH_MARKERS = ["mane", "kore", "hoy", "ekta", "jokhon", "kichu", "theke", "tomar", "jate", "moto", "hote", "na "]
 
 # Gate for *recommending* integration. The owner still decides after human review.
@@ -363,7 +363,7 @@ def run_terminology_suite(backend, cases: list[dict], variants=VARIANTS) -> dict
 # 7. live behaviour checks through the real runtime context builder
 # ---------------------------------------------------------------------------
 
-def run_live_checks(backend, checks: list[dict], variants=VARIANTS) -> dict:
+def run_live_checks(backend, checks: list[dict], variants=VARIANTS, seed_base: int = 7000, tag: str = "live") -> dict:
     from rupsaa.rag.context_builder import build_turn_knowledge
     from rupsaa.rag.terminology import TerminologyStore
 
@@ -383,7 +383,7 @@ def run_live_checks(backend, checks: list[dict], variants=VARIANTS) -> dict:
                 system = build_system_prompt(prompt_version=PROMPT_VERSION[variant], retrieved_context=k.retrieved_context,
                                              terminology_context=k.terminology_context, conversation_note=k.conversation_note)
                 messages = [{"role": "system", "content": system}] + history + [{"role": "user", "content": user}]
-                reply = backend.generate(variant, messages, seed=7000 + ci * 10 + ti)
+                reply = backend.generate(variant, messages, seed=seed_base + ci * 10 + ti)
                 turns.append({"user": user, "route": k.route, "terms_used": k.terms_used, "reply": reply})
                 history += [{"role": "user", "content": user}, {"role": "assistant", "content": reply}]
             last = turns[-1]["reply"]
@@ -392,7 +392,7 @@ def run_live_checks(backend, checks: list[dict], variants=VARIANTS) -> dict:
                 script_ok = script_ok and len(last) <= case["expect"]["max_chars"]
             entry["runs"][variant] = {"turns": turns, "script_ok": script_ok}
         results.append(entry)
-        print(f"  live {case['id']} " + " ".join(f"{v}={'ok' if entry['runs'][v]['script_ok'] else 'flag'}" for v in variants), flush=True)
+        print(f"  {tag} {case['id']} " + " ".join(f"{v}={'ok' if entry['runs'][v]['script_ok'] else 'flag'}" for v in variants), flush=True)
     replies = {v: [t["reply"] for r in results for t in r["runs"][v]["turns"]] for v in variants}
     return {"cases": results,
             "script_pass": {v: sum(r["runs"][v]["script_ok"] for r in results) for v in variants},
@@ -460,6 +460,18 @@ def render_report(result: dict) -> str:
                              f"USER: {t['user']}  \n  RUPSAA: {t['reply']}")
                 L.append(f"  - last reply script/length ok: {run['script_ok']}")
             L.append("")
+    supp = result.get("supplementary")
+    if supp:
+        L += ["## 7b. Supplementary owner-failure + general checks (not gated)", "", f"Expected script met: {supp['script_pass']}", "",
+              f"Catchphrases: {supp['catchphrases']}", ""]
+        for c in supp["cases"]:
+            L += [f"### {c['id']} — {c['look_for']}", ""]
+            for v, run in c["runs"].items():
+                for t in run["turns"]:
+                    L.append(f"- **{v}** [{t['route']}{' ' + ','.join(t['terms_used']) if t['terms_used'] else ''}] "
+                             f"USER: {t['user']}  \n  RUPSAA: {t['reply']}")
+                L.append(f"  - last reply script/length ok: {run['script_ok']}")
+            L.append("")
     L += ["## Human review", "", "For each section, mark: CORRECT / NATURAL / CONTEXTUAL / PERSONALITY (in that priority). "
           "Integrate only if V0.2 is at least as good as V0.1 on the clean subset and clearly better on Banglish, "
           "terminology use and memory.", ""]
@@ -501,6 +513,8 @@ def main() -> None:
     manifests = json.loads((EVAL_DIR / "eval_manifests.json").read_text(encoding="utf-8"))
     cases = [json.loads(line) for line in open(EVAL_DIR / "terminology_generalization.jsonl", encoding="utf-8")]
     live_checks = json.loads((EVAL_DIR / "live_behavior_checks.json").read_text(encoding="utf-8"))
+    supp_path = EVAL_DIR / "posttrain_supplementary_checks.json"
+    supplementary = json.loads(supp_path.read_text(encoding="utf-8")) if supp_path.exists() else []
     frozen = {json.loads(line)["id"]: json.loads(line) for line in open(SNAPSHOT / "frozen_records.jsonl", encoding="utf-8")}
     candidate = {json.loads(line)["id"]: json.loads(line)["messages"]
                  for line in open(SNAPSHOT / "inputs/candidate_set.jsonl", encoding="utf-8")}
@@ -526,6 +540,9 @@ def main() -> None:
         result["terminology"] = term = run_terminology_suite(backend, cases)
         print("7. live behaviour checks", flush=True)
         result["live"] = live = run_live_checks(backend, live_checks)
+        if supplementary:
+            print("7b. supplementary owner-failure + general generation checks (not gated; human-judged)", flush=True)
+            result["supplementary"] = run_live_checks(backend, supplementary, seed_base=9000, tag="supp")
     result["gate"] = gate(result["integrity"], loss, term, live)
     (args.out / "posttrain_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     (args.out / "POSTTRAIN_REPORT.md").write_text(render_report(result), encoding="utf-8")

@@ -1,0 +1,190 @@
+{
+  "classification": "FAIL",
+  "promoted": false,
+  "released": false,
+  "hf_uploaded": false,
+  "reason": "Clear improvement over V0.1 (clean loss, catchphrases, English), but owner failure prompts still fail: Banglish/Bengali coherence, Bengali-script follow-ups, recall of earlier turns; terminology auto-pass 62% < 80%.",
+  "training": {
+    "steps": "164/164",
+    "best_checkpoint": "checkpoint-160",
+    "best_eval_loss_internal_69": 1.8131277561187744,
+    "root_adapter_is_best": true,
+    "runtime_s": 1868.1,
+    "train_loss_mean": 1.5577,
+    "overfitting": "none by eval criterion; train/eval gap widened (~0.66)"
+  },
+  "adapter": {
+    "path": "adapters/rupsaa-v0.2",
+    "sha256": "c7ca61842d58fb2b68a813a6b09f4df1fdab66717128e0112d5014235a410559",
+    "bytes": 161533192,
+    "integrity_passed": true,
+    "base_model": "Qwen/Qwen2.5-7B-Instruct",
+    "quantized": "4-bit NF4",
+    "merged": false
+  },
+  "dataset_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+  "training_commit": "afe6e4ec3580a028e8b6e39ba2a5b2a3f4628bed",
+  "prompt_version": "v0.2",
+  "loss": {
+    "A_full": {
+      "validation": {
+        "records": 77,
+        "assistant_tokens": 5800,
+        "loss_rupsaa_v02": 1.5614,
+        "ppl_rupsaa_v02": 4.765,
+        "loss_rupsaa_v01": 1.4614,
+        "ppl_rupsaa_v01": 4.312,
+        "loss_base": 3.278,
+        "ppl_base": 26.522,
+        "v02_better_than_v01_records": 41
+      },
+      "test": {
+        "records": 76,
+        "assistant_tokens": 5849,
+        "loss_rupsaa_v02": 1.5201,
+        "ppl_rupsaa_v02": 4.573,
+        "loss_rupsaa_v01": 1.4131,
+        "ppl_rupsaa_v01": 4.108,
+        "loss_base": 3.1615,
+        "ppl_base": 23.605,
+        "v02_better_than_v01_records": 39
+      }
+    },
+    "B_clean_v01_vs_v02": {
+      "validation": {
+        "records": 41,
+        "assistant_tokens": 3152,
+        "loss_rupsaa_v02": 1.5159,
+        "ppl_rupsaa_v02": 4.553,
+        "loss_rupsaa_v01": 1.755,
+        "ppl_rupsaa_v01": 5.783,
+        "loss_base": 3.0021,
+        "ppl_base": 20.128,
+        "v02_better_than_v01_records": 40
+      },
+      "test": {
+        "records": 38,
+        "assistant_tokens": 2905,
+        "loss_rupsaa_v02": 1.4609,
+        "ppl_rupsaa_v02": 4.31,
+        "loss_rupsaa_v01": 1.6721,
+        "ppl_rupsaa_v01": 5.323,
+        "loss_base": 2.9828,
+        "ppl_base": 19.744,
+        "v02_better_than_v01_records": 37
+      }
+    }
+  },
+  "terminology_pass_rate": {
+    "rupsaa_v02": 0.625,
+    "rupsaa_v01": 0.042,
+    "base": 0.25
+  },
+  "terminology_by_language": {
+    "rupsaa_v02": {
+      "banglish": "6/9",
+      "bn": "2/5",
+      "en": "4/5",
+      "mixed": "3/5"
+    },
+    "rupsaa_v01": {
+      "banglish": "1/9",
+      "bn": "0/5",
+      "en": "0/5",
+      "mixed": "0/5"
+    },
+    "base": {
+      "banglish": "0/9",
+      "bn": "5/5",
+      "en": "0/5",
+      "mixed": "1/5"
+    }
+  },
+  "terminology_v02_human_read": {
+    "real_failures": [
+      "tg-04",
+      "tg-09",
+      "tg-11",
+      "tg-13",
+      "tg-18"
+    ],
+    "mild_or_heuristic": [
+      "tg-07",
+      "tg-10",
+      "tg-23",
+      "tg-24"
+    ]
+  },
+  "live_script_pass": {
+    "rupsaa_v02": 9,
+    "rupsaa_v01": 10,
+    "base": 2
+  },
+  "supplementary_script_pass": {
+    "rupsaa_v02": 27,
+    "rupsaa_v01": 28,
+    "base": 9
+  },
+  "voice": {
+    "rupsaa_v02": {
+      "catchphrase_reply_rate": 0.0,
+      "most_common_opening_share": 0.034,
+      "emoji_replies": 0,
+      "mixed_script_words": 0,
+      "foreign_script_replies": 0,
+      "chars_mean": 153.7,
+      "questions_per_reply": 0.25
+    },
+    "rupsaa_v01": {
+      "catchphrase_reply_rate": 0.955,
+      "most_common_opening_share": 0.157,
+      "emoji_replies": 0,
+      "mixed_script_words": 13,
+      "foreign_script_replies": 0,
+      "chars_mean": 176.0,
+      "questions_per_reply": 0.3
+    },
+    "base": {
+      "catchphrase_reply_rate": 0.0,
+      "most_common_opening_share": 0.056,
+      "emoji_replies": 3,
+      "mixed_script_words": 16,
+      "foreign_script_replies": 7,
+      "chars_mean": 219.9,
+      "questions_per_reply": 0.26
+    }
+  },
+  "owner_prompts": {
+    "hi, tumi kemon acho?": "ok-weak",
+    "achcha": "ok",
+    "ajke amar mood ta bhalo na": "ok",
+    "tumi amar sathe banglish e kotha bolbe?": "fail",
+    "Strip mane ki?": "fail/weak (routing pass)",
+    "strip ta ektu simple kore bojhao": "fail (routing pass)",
+    "foreplay ki?": "mixed (English or garbled Banglish)",
+    "Forplay ki?": "routing pass, reply fail/weak",
+    "এটা বাংলায় বুঝিয়ে বলো": "fail (stays Banglish)",
+    "favourite color memory": "pass (content)",
+    "ami age ki bolechilam?": "fail"
+  },
+  "decoding_probe": "t0.5/rp1.05 cleaner than current t0.8/rp1.1; no setting fixes Bengali-script follow-ups (0/12) or earlier-turn recall (0/6)",
+  "live_smoke": {
+    "passed": 37,
+    "total": 37,
+    "quality_observations": [
+      {
+        "observation": "reply paraphrases the EDITED definition (sleepy cat)",
+        "met": false,
+        "reply": "Edited: sleepi cheye beshi edited pose ta jokhon onek baar dekhe niya. Jodi bhabcho jemon, sheta eta।"
+      }
+    ]
+  },
+  "environment": {
+    "gpu": "NVIDIA L4 23GB",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.46.3",
+    "peft": "0.21.0",
+    "bitsandbytes": "0.50.2",
+    "llamafactory": "0.7.1"
+  }
+}
