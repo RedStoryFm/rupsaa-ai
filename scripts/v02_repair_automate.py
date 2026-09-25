@@ -66,10 +66,18 @@ TRIAGE = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2_preparation/triage.
 CLASSIFICATION = PROJECT_ROOT / "data/production/v0.2_workspace/repair_automation.jsonl"
 SAMPLE_REPORT = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2_preparation/AUTO_ACCEPT_QA_SAMPLE.md"
 MIN_LENGTH_RATIO = 0.6
+MIN_CHARS_REMOVED = 25  # two filler words + their punctuation, generously
 
 
 def load_jsonl(path: Path) -> list[dict]:
     return [json.loads(line) for line in open(path, encoding="utf-8")]
+
+
+def _display(path: Path) -> str:
+    try:
+        return str(path.relative_to(PROJECT_ROOT))
+    except ValueError:
+        return str(path)
 
 
 def cmd_classify(args: argparse.Namespace) -> None:
@@ -124,9 +132,16 @@ def cmd_classify(args: argparse.Namespace) -> None:
                 checks["not_templated"] = False
                 reasons.append("proposed reply is a template reused by >=3 records")
 
-            if orig_text and len(prop_text) < MIN_LENGTH_RATIO * len(orig_text):
+            # A ratio alone false-flags short replies: "Yes, honestly." -> "Yes."
+            # is a 60% character drop and completely safe — a single filler
+            # word is a large share of a five-word sentence. Require BOTH a
+            # low ratio AND a real absolute cut (more than one filler word's
+            # worth of characters) before treating it as an editing risk.
+            chars_removed = len(orig_text) - len(prop_text)
+            if orig_text and len(prop_text) < MIN_LENGTH_RATIO * len(orig_text) and chars_removed > MIN_CHARS_REMOVED:
                 checks["length_ratio_ok"] = False
-                reasons.append(f"proposed reply is {len(prop_text)}/{len(orig_text)} chars of the original")
+                reasons.append(f"proposed reply is {len(prop_text)}/{len(orig_text)} chars of the original "
+                                f"({chars_removed} chars removed)")
 
         confidence = "AUTO_ACCEPT_REPAIR" if all(checks.values()) else "HUMAN_REVIEW"
         counts[confidence] += 1
@@ -147,7 +162,7 @@ def cmd_classify(args: argparse.Namespace) -> None:
     for lang in ("banglish", "bn", "mixed", "en"):
         print(f"  {lang:9} AUTO_ACCEPT_REPAIR={by_lang[(lang,'AUTO_ACCEPT_REPAIR')]} "
               f"HUMAN_REVIEW={by_lang[(lang,'HUMAN_REVIEW')]}")
-    print(f"wrote {CLASSIFICATION.relative_to(PROJECT_ROOT)}")
+    print(f"wrote {_display(CLASSIFICATION)}")
 
 
 def cmd_sample(args: argparse.Namespace) -> None:
@@ -192,7 +207,7 @@ def cmd_sample(args: argparse.Namespace) -> None:
         total_sampled += len(picked)
 
     SAMPLE_REPORT.write_text("\n".join(lines), encoding="utf-8")
-    print(f"sampled {total_sampled} record(s) -> {SAMPLE_REPORT.relative_to(PROJECT_ROOT)}")
+    print(f"sampled {total_sampled} record(s) -> {_display(SAMPLE_REPORT)}")
 
 
 def main() -> None:

@@ -1,0 +1,527 @@
+{
+  "total_conversations": 1533,
+  "total_assistant_replies": 2144,
+  "by_language": {
+    "en": 468,
+    "banglish": 434,
+    "bn": 400,
+    "mixed": 231
+  },
+  "by_source_type": {
+    "human_authored": 21,
+    "imported": 507,
+    "synthetic_curated": 1005
+  },
+  "by_source_and_language": {
+    "human_authored": {
+      "en": 12,
+      "bn": 3,
+      "banglish": 4,
+      "mixed": 2
+    },
+    "imported": {
+      "banglish": 153,
+      "en": 120,
+      "bn": 121,
+      "mixed": 113
+    },
+    "synthetic_curated": {
+      "bn": 276,
+      "banglish": 277,
+      "en": 336,
+      "mixed": 116
+    }
+  },
+  "catchphrase_frequency": {
+    "honestly": {
+      "count": 0,
+      "ratio": 0.0
+    },
+    "actually": {
+      "count": 16,
+      "ratio": 0.0075
+    },
+    "fair call": {
+      "count": 0,
+      "ratio": 0.0
+    },
+    "fair enough": {
+      "count": 1,
+      "ratio": 0.0005
+    },
+    "heyy": {
+      "count": 1,
+      "ratio": 0.0005
+    },
+    "bindaas": {
+      "count": 1,
+      "ratio": 0.0005
+    },
+    "baby": {
+      "count": 0,
+      "ratio": 0.0
+    },
+    "babe": {
+      "count": 0,
+      "ratio": 0.0
+    },
+    "emoji": {
+      "count": 13,
+      "ratio": 0.0061
+    }
+  },
+  "top_25_openings": [
+    [
+      "that's",
+      161
+    ],
+    [
+      "eta",
+      80
+    ],
+    [
+      "sheta",
+      78
+    ],
+    [
+      "সেটা",
+      77
+    ],
+    [
+      "fair",
+      75
+    ],
+    [
+      "that",
+      74
+    ],
+    [
+      "না",
+      54
+    ],
+    [
+      "এই",
+      47
+    ],
+    [
+      "এটা",
+      47
+    ],
+    [
+      "i",
+      44
+    ],
+    [
+      "not",
+      37
+    ],
+    [
+      "no",
+      33
+    ],
+    [
+      "it's",
+      32
+    ],
+    [
+      "na",
+      30
+    ],
+    [
+      "ekta",
+      30
+    ],
+    [
+      "হ্যাঁ",
+      27
+    ],
+    [
+      "depend",
+      22
+    ],
+    [
+      "a",
+      21
+    ],
+    [
+      "yes",
+      21
+    ],
+    [
+      "ki",
+      17
+    ],
+    [
+      "hae",
+      16
+    ],
+    [
+      "tahole",
+      14
+    ],
+    [
+      "interesting",
+      14
+    ],
+    [
+      "it",
+      13
+    ],
+    [
+      "তাহলে",
+      12
+    ]
+  ],
+  "top_25_bigrams": [
+    [
+      "that's a",
+      105
+    ],
+    [
+      "মনে হয়",
+      62
+    ],
+    [
+      "a lot",
+      48
+    ],
+    [
+      "mone hoy",
+      47
+    ],
+    [
+      "hote pare",
+      44
+    ],
+    [
+      "rather than",
+      43
+    ],
+    [
+      "i don't",
+      40
+    ],
+    [
+      "হতে পারে",
+      40
+    ],
+    [
+      "long term",
+      33
+    ],
+    [
+      "instead of",
+      33
+    ],
+    [
+      "depend kore",
+      31
+    ],
+    [
+      "it's not",
+      31
+    ],
+    [
+      "আমার কাছে",
+      31
+    ],
+    [
+      "more than",
+      30
+    ],
+    [
+      "er jonno",
+      30
+    ],
+    [
+      "lot of",
+      29
+    ],
+    [
+      "a really",
+      29
+    ],
+    [
+      "na kore",
+      28
+    ],
+    [
+      "na eta",
+      28
+    ],
+    [
+      "don't have",
+      28
+    ],
+    [
+      "বিশেষ করে",
+      27
+    ],
+    [
+      "the same",
+      26
+    ],
+    [
+      "tumi ki",
+      26
+    ],
+    [
+      "it's a",
+      26
+    ],
+    [
+      "thing to",
+      25
+    ]
+  ],
+  "top_25_trigrams": [
+    [
+      "that's a really",
+      29
+    ],
+    [
+      "a lot of",
+      28
+    ],
+    [
+      "i don't have",
+      25
+    ],
+    [
+      "eta khub common",
+      13
+    ],
+    [
+      "এই feeling টা",
+      12
+    ],
+    [
+      "long term e",
+      12
+    ],
+    [
+      "এক জিনিস না",
+      11
+    ],
+    [
+      "don't have that",
+      11
+    ],
+    [
+      "a really common",
+      10
+    ],
+    [
+      "what made you",
+      10
+    ],
+    [
+      "নেই আমার কাছে",
+      10
+    ],
+    [
+      "korar dorkar nai",
+      9
+    ],
+    [
+      "notice kora eta",
+      9
+    ],
+    [
+      "kora eta e",
+      9
+    ],
+    [
+      "more of a",
+      8
+    ],
+    [
+      "বলতে পারবো না",
+      8
+    ],
+    [
+      "bolte parbo na",
+      8
+    ],
+    [
+      "diye shuru koro",
+      8
+    ],
+    [
+      "than people admit",
+      8
+    ],
+    [
+      "মনে হয় কিন্তু",
+      8
+    ],
+    [
+      "to sit with",
+      8
+    ],
+    [
+      "that's a real",
+      8
+    ],
+    [
+      "amar mote eta",
+      7
+    ],
+    [
+      "that's a common",
+      7
+    ],
+    [
+      "না একদমই না",
+      7
+    ]
+  ],
+  "top_25_4grams": [
+    [
+      "i don't have that",
+      11
+    ],
+    [
+      "that's a really common",
+      10
+    ],
+    [
+      "notice kora eta e",
+      9
+    ],
+    [
+      "documented নেই আমার কাছে",
+      7
+    ],
+    [
+      "a lot of people",
+      6
+    ],
+    [
+      "টা documented নেই আমার",
+      6
+    ],
+    [
+      "er upor depend kore",
+      5
+    ],
+    [
+      "in what i have",
+      5
+    ],
+    [
+      "thing to sit with",
+      5
+    ],
+    [
+      "what made you notice",
+      5
+    ],
+    [
+      "makes a lot of",
+      5
+    ],
+    [
+      "a lot of sense",
+      5
+    ],
+    [
+      "that's worth sitting with",
+      5
+    ],
+    [
+      "eta khub common pattern",
+      5
+    ],
+    [
+      "not weird at all",
+      4
+    ],
+    [
+      "or more of a",
+      4
+    ],
+    [
+      "what's making it feel",
+      4
+    ],
+    [
+      "bolte parbo na karon",
+      4
+    ],
+    [
+      "nijer gut feeling ta",
+      4
+    ],
+    [
+      "more common than people",
+      4
+    ],
+    [
+      "be true at once",
+      4
+    ],
+    [
+      "that's a really useful",
+      4
+    ],
+    [
+      "that's a really specific",
+      4
+    ],
+    [
+      "সবচেয়ে বেশি matter করে",
+      4
+    ],
+    [
+      "no that's not what",
+      4
+    ]
+  ],
+  "response_length_chars": {
+    "min": 3,
+    "p25": 89,
+    "median": 121,
+    "p75": 162,
+    "p90": 211,
+    "max": 1171
+  },
+  "mixed_script_corruption_records": 4,
+  "diversity_gate": {
+    "training_ready": true,
+    "block_count": 0,
+    "warn_count": 3,
+    "issues": [
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S-",
+        "count": 577,
+        "total": 2144,
+        "ratio": 0.2691,
+        "threshold": 0.15
+      },
+      {
+        "severity": "warn",
+        "kind": "skeleton",
+        "scope": "corpus",
+        "key": "S|SQ",
+        "count": 334,
+        "total": 2144,
+        "ratio": 0.1558,
+        "threshold": 0.15
+      },
+      {
+        "severity": "warn",
+        "kind": "opening_bigram",
+        "scope": "corpus",
+        "key": "that's a",
+        "count": 91,
+        "total": 2144,
+        "ratio": 0.0424,
+        "threshold": 0.03
+      }
+    ]
+  }
+}

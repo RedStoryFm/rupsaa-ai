@@ -36,11 +36,41 @@ Reference terminology from Rupsaa's owner is included below as background knowle
 """
 
 
+PROMPT_VERSIONS = ("v0.1", "v0.2")
+
+
+def base_persona(prompt_version: str = "v0.1") -> str:
+    """The base persona each adapter was trained with. v0.1 keeps serving
+    BASE_PERSONA exactly as before; v0.2 was trained on V02_SYSTEM_PROMPT
+    ("train as you serve"), so it must be served with that exact string."""
+    if prompt_version == "v0.2":
+        from rupsaa.personality.system_prompt_v02 import V02_SYSTEM_PROMPT
+
+        return V02_SYSTEM_PROMPT
+    if prompt_version != "v0.1":
+        raise ValueError(f"unknown prompt_version {prompt_version!r} (allowed: {PROMPT_VERSIONS})")
+    return BASE_PERSONA
+
+
+def resolve_prompt_version(adapter_path: str | None, override: str | None = None) -> str:
+    """Explicit override (RUPSAA_PROMPT_VERSION) wins; otherwise infer from the
+    adapter actually loaded, so serving adapters/rupsaa-v0.2 can't silently
+    fall back to the V0.1 persona — the V0.1 train/serve mismatch."""
+    if override:
+        if override not in PROMPT_VERSIONS:
+            raise ValueError(f"unknown prompt_version {override!r} (allowed: {PROMPT_VERSIONS})")
+        return override
+    if adapter_path and "rupsaa-v0.2" in str(adapter_path).replace("\\", "/").rstrip("/").split("/")[-1]:
+        return "v0.2"
+    return "v0.1"
+
+
 def build_system_prompt(
     *,
     retrieved_context: str | None = None,
     terminology_context: str | None = None,
     conversation_note: str | None = None,
+    prompt_version: str = "v0.1",
 ) -> str:
     """Assemble the full system prompt for a single turn.
 
@@ -55,7 +85,7 @@ def build_system_prompt(
             (e.g. "the user is asking about earlier messages"), set by
             rupsaa/rag/context_builder.py for memory questions.
     """
-    parts = [BASE_PERSONA.strip()]
+    parts = [base_persona(prompt_version).strip()]
     if terminology_context:
         parts.append(TERMINOLOGY_INSTRUCTIONS.strip())
         parts.append(f"Reference terminology:\n{terminology_context}")

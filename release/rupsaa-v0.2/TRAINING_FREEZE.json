@@ -1,0 +1,70 @@
+{
+  "release_name": "rupsaa-v0.2",
+  "stage": "training-freeze (adapter not trained yet)",
+  "dataset": {
+    "sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+    "conversations": 1533,
+    "assistant_replies": 2144,
+    "splits": {
+      "train": 1380,
+      "validation": 77,
+      "test": 76
+    },
+    "manifest": "data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json"
+  },
+  "system_prompt": {
+    "file": "rupsaa/personality/system_prompt_v02.py",
+    "constant": "V02_SYSTEM_PROMPT",
+    "sha256": "ef1d8fd4b16a04f9b6754d7cee623c9b4e8779c6dd75cfc0d2c1f88625f526a4"
+  },
+  "training": {
+    "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "method": "SFT + QLoRA (4-bit NF4, double quant, bf16)",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "learning_rate": 0.0002,
+    "num_train_epochs": 2.0,
+    "expected_steps": 164,
+    "eval_save_steps": 20,
+    "best_model": "eval_loss",
+    "cli_config": "configs/training/llamafactory_rupsaa_v0.2.yaml",
+    "gui_template": "configs/training/llamafactory_webui_rupsaa_v0.2.yaml",
+    "output_dir": "adapters/rupsaa-v0.2"
+  },
+  "checksums": "release/rupsaa-v0.2/checksums.sha256",
+  "training_commit_record": "release/rupsaa-v0.2/TRAINING_COMMIT.json (written by a follow-up commit; this file cannot contain its own commit SHA)",
+  "environment": {
+    "python": "3.12.11",
+    "platform": "Linux-6.8.0-1067-gcp-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.46.3",
+      "peft": "0.21.0",
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "trl": "0.12.2",
+      "datasets": "5.0.1",
+      "sentence-transformers": "5.7.0",
+      "faiss-cpu": "1.15.1",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.20.3",
+      "huggingface-hub": "0.36.2",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "starlette": "1.6.0",
+      "pydantic": "2.13.5",
+      "pydantic-settings": "2.15.0",
+      "python-multipart": "0.0.32",
+      "gradio": "4.38.1",
+      "gradio_client": "1.1.0",
+      "llamafactory": "0.7.1",
+      "openpyxl": "3.1.5",
+      "numpy": "1.26.4"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA L4",
+    "nvidia_smi": "NVIDIA L4, 580.173.02, 23034 MiB"
+  }
+}

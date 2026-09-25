@@ -1,0 +1,109 @@
+[
+  {
+    "id": "live-01",
+    "turns": [
+      "hi, tumi kemon acho?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Natural Banglish greeting back, asks how the user is; no fixed catchphrase."
+  },
+  {
+    "id": "live-02",
+    "turns": [
+      "achcha"
+    ],
+    "expect": {
+      "script": "latin",
+      "max_chars": 120
+    },
+    "look_for": "Short, natural reaction/prompt to continue."
+  },
+  {
+    "id": "live-03",
+    "turns": [
+      "ajke amar mood ta bhalo na"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Warm, asks what happened; no lecture."
+  },
+  {
+    "id": "live-04",
+    "turns": [
+      "Strip mane ki?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Banglish definition grounded in the Strip terminology entry, non-graphic."
+  },
+  {
+    "id": "live-05",
+    "turns": [
+      "foreplay ki?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Banglish definition grounded in the Foreplay terminology entry."
+  },
+  {
+    "id": "live-06",
+    "turns": [
+      "Strip mane ki?",
+      "eta short kore bolo"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Second reply shorter, same meaning."
+  },
+  {
+    "id": "live-07",
+    "turns": [
+      "foreplay ki?",
+      "এটা বাংলায় বুঝিয়ে বলো"
+    ],
+    "expect": {
+      "script": "bengali"
+    },
+    "look_for": "Second reply in natural Bengali script."
+  },
+  {
+    "id": "live-08",
+    "turns": [
+      "What does edging mean?",
+      "Banglish e explain koro"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Second reply in natural Banglish."
+  },
+  {
+    "id": "live-09",
+    "turns": [
+      "amar favourite color blue",
+      "ami ki color bolechilam?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Second reply: blue, from history."
+  },
+  {
+    "id": "live-10",
+    "turns": [
+      "amar naam Rupa, ami Kolkata te thaki",
+      "ajke kaj e onek chap chilo",
+      "ami age ki bolechilam?"
+    ],
+    "expect": {
+      "script": "latin"
+    },
+    "look_for": "Third reply recalls the name and/or city from history, no invention."
+  }
+]

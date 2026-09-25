@@ -352,3 +352,69 @@ def test_v02_candidate_build_excludes_repair_and_undecided_human_review(tmp_path
     # REPAIR (unreviewed) and undecided HUMAN_REVIEW must NOT appear; KEEP and
     # the new-coverage batch must.
     assert candidate_ids == {"rup-900001", "rup-900004"}
+
+
+# --- V0.2 REPAIR-queue automated confidence classification ---------------------------------------
+
+def test_v02_repair_automation_classifies_by_actual_risk(tmp_path, monkeypatch):
+    """scripts/v02_repair_automate.py classify: AUTO_ACCEPT_REPAIR must be
+    reserved for provably-safe filler-only repairs; anything where a content
+    word was transliterated, or a short reply merely looks dramatic in
+    percentage terms, must be classified correctly (this is a regression
+    test for both bugs found and fixed this session: over-flagging any
+    script_mix change, and over-flagging short replies by ratio alone)."""
+    import json as _json
+
+    from rupsaa.dataset.schema import ConversationRecord
+    from rupsaa.dataset.store import DatasetStore
+    import scripts.v02_repair_automate as automate_mod
+
+    store = DatasetStore(tmp_path / "store")
+
+    filler_only = ConversationRecord(
+        id="rup-910001", language="en", category="casual_friendly",
+        source_type="synthetic_curated", quality_status="draft",
+        messages=[{"role": "user", "content": "hey"}, {"role": "assistant", "content": "Honestly, yeah."}])
+    filler_only_proposed = [{"role": "user", "content": "hey"}, {"role": "assistant", "content": "Yeah."}]
+
+    script_mix = ConversationRecord(
+        id="rup-910002", language="banglish", category="casual_friendly",
+        source_type="synthetic_curated", quality_status="draft",
+        messages=[{"role": "user", "content": "kemon acho"},
+                  {"role": "assistant", "content": "Bhalo achi, kotha bolার iccha kore."}])
+    script_mix_proposed = [{"role": "user", "content": "kemon acho"},
+                           {"role": "assistant", "content": "Bhalo achi, kotha bolar iccha kore."}]
+
+    for r in (filler_only, script_mix):
+        store.save_new(r)
+
+    triage_rows = [
+        {"record_id": "rup-910001", "classification": "REPAIR", "language": "en", "category": "casual_friendly",
+         "source_type": "synthetic_curated", "quality_status": "draft", "proposed_messages": filler_only_proposed},
+        {"record_id": "rup-910002", "classification": "REPAIR", "language": "banglish", "category": "casual_friendly",
+         "source_type": "synthetic_curated", "quality_status": "draft", "proposed_messages": script_mix_proposed},
+    ]
+    triage_path = tmp_path / "triage.jsonl"
+    triage_path.write_text("\n".join(_json.dumps(t) for t in triage_rows), encoding="utf-8")
+    automation_path = tmp_path / "automation.jsonl"
+
+    monkeypatch.setattr(automate_mod, "TRIAGE", triage_path)
+    monkeypatch.setattr(automate_mod, "CLASSIFICATION", automation_path)
+    monkeypatch.setattr(automate_mod, "default_base_dir", lambda: tmp_path / "store")
+
+    automate_mod.cmd_classify(argparse_namespace())
+
+    results = {r["record_id"]: r for r in (_json.loads(line) for line in open(automation_path, encoding="utf-8"))}
+    # A single filler word removed from a short reply is a large percentage
+    # drop but zero semantic risk — must still be AUTO_ACCEPT_REPAIR.
+    assert results["rup-910001"]["confidence"] == "AUTO_ACCEPT_REPAIR"
+    # A content word was transliterated (tার -> tar) — real, if usually
+    # small, semantic risk — must go to HUMAN_REVIEW regardless of how
+    # clean the result looks.
+    assert results["rup-910002"]["confidence"] == "HUMAN_REVIEW"
+    assert not results["rup-910002"]["checks"]["script_mix_noop"]
+
+
+def argparse_namespace():
+    import argparse
+    return argparse.Namespace()

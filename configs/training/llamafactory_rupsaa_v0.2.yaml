@@ -1,0 +1,93 @@
+# LLaMA-Factory 0.7.1 CLI config for Rupsaa V0.2 (SFT + QLoRA).
+#   llamafactory-cli train configs/training/llamafactory_rupsaa_v0.2.yaml   (run from the rupsaa-ai root)
+#
+# Same experiment as the GUI template configs/training/llamafactory_webui_rupsaa_v0.2.yaml
+# (rendered to config/rupsaa_v0.2.yaml). Values the 0.7.1 WebUI cannot set are
+# pinned here to what the GUI actually runs with, so both paths match.
+#
+# Dataset: frozen, owner-approved export data/production/exports/rupsaa_v0.2/,
+# registered in data/dataset_info.json as rupsaa_v0.2_{train,validation,test}.
+# Manifest + SHA-256: data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json
+#
+# Train-as-you-serve: every record's system turn is exactly
+# rupsaa.personality.system_prompt.build_system_prompt(prompt_version="v0.2", ...)
+# (V02_SYSTEM_PROMPT + the runtime terminology / retrieved-context block where
+# present). LLaMA-Factory's sharegpt loader uses that per-record system turn,
+# so the qwen template's default "You are a helpful assistant." is never used.
+#
+# Changes vs V0.1 (configs/training/llamafactory_rupsaa_v0.1.yaml / the V0.1 GUI run):
+#   num_train_epochs 3.0 -> 2.0   V0.1's eval loss was best at step 100 (epoch 2.19) while
+#                                 train loss kept falling (0.83-0.99), i.e. overfitting in
+#                                 epoch 3. V0.2 has 1.8x the rows, so 2 epochs is still more
+#                                 optimizer steps (164) than all of V0.1 (135).
+#   save/eval every 50 -> 20      8 evaluations instead of 2, so best-model retention can
+#                                 actually pick the right point.
+#   warmup 4 -> 5 steps           3% of 164.
+#   weight_decay 0.01 -> 0.0      V0.1's real (GUI) run used the trainer default 0.0; the 0.7.1
+#                                 WebUI cannot set it. Pinned so CLI == GUI.
+#   Unchanged: model, 4-bit NF4 + double quant, bf16, qwen template, LoRA r16/a32/d0.05 on all
+#   7 projections, cutoff 2048, batch 2 x accum 8 (= 16), gradient checkpointing (LLaMA-Factory
+#   default), paged_adamw_8bit, max_grad_norm 0.3, cosine, lr 2e-4.
+#
+# Evaluation during training: LLaMA-Factory 0.7.1 has no argument for a separate eval file
+# (data/utils.py split_dataset only supports val_size). So, exactly like V0.1 and the GUI,
+# eval uses a seed-42 5% resplit of rupsaa_v0.2_train (1311 train / 69 eval rows). The frozen
+# validation and test files are never loaded by this config. To score checkpoints on the
+# frozen validation split afterwards use configs/training/llamafactory_rupsaa_v0.2_eval_validation.yaml.
+
+### model
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+### quantization (QLoRA)
+quantization_bit: 4
+quantization_type: nf4
+double_quantization: true
+upcast_layernorm: true
+
+### dataset
+dataset_dir: data
+dataset: rupsaa_v0.2_train
+val_size: 0.05
+template: qwen
+cutoff_len: 2048
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: adapters/rupsaa-v0.2
+overwrite_output_dir: false
+logging_steps: 10
+save_steps: 20
+plot_loss: true
+report_to: none
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_steps: 5
+weight_decay: 0.0
+optim: paged_adamw_8bit
+max_grad_norm: 0.3
+bf16: true
+seed: 42
+
+### eval (best-model retention on eval_loss, same as the GUI sets when val_size > 0)
+per_device_eval_batch_size: 2
+evaluation_strategy: steps
+eval_steps: 20
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false

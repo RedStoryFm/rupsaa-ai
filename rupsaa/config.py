@@ -47,6 +47,13 @@ class Settings(BaseSettings):
         validation_alias=AliasChoices("RUPSAA_ADAPTER_PATH", "ADAPTER_PATH"),
     )
 
+    # Base system prompt version (rupsaa.personality.system_prompt.PROMPT_VERSIONS).
+    # Unset: inferred from the loaded adapter (rupsaa-v0.2 -> "v0.2", else "v0.1").
+    prompt_version: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("RUPSAA_PROMPT_VERSION"),
+    )
+
     api_host: str = "0.0.0.0"
     api_port: int = 8000
     cors_origins: str = "http://localhost:5500,http://127.0.0.1:5500"

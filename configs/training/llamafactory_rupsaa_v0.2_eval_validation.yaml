@@ -1,0 +1,38 @@
+# Score a trained Rupsaa V0.2 adapter (or one of its checkpoints) on the FROZEN
+# validation split — the separate eval file LLaMA-Factory 0.7.1 cannot use during
+# training. Evaluation only: do_train is false, no optimizer steps, and the
+# output_dir is a scratch directory, never the adapter directory.
+#
+#   llamafactory-cli train configs/training/llamafactory_rupsaa_v0.2_eval_validation.yaml
+#
+# To compare checkpoints, change adapter_name_or_path to e.g.
+# adapters/rupsaa-v0.2/checkpoint-100 and output_dir to a matching scratch dir.
+# With do_train false, data/utils.py split_dataset returns the whole dataset as
+# the eval set, so eval_loss is over exactly the 77 frozen validation conversations.
+#
+# Do NOT point this at rupsaa_v0.2_test while choosing checkpoints — the test
+# split is for the single final evaluation only.
+
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+adapter_name_or_path: adapters/rupsaa-v0.2
+
+stage: sft
+do_train: false
+do_eval: true
+finetuning_type: lora
+
+quantization_bit: 4
+quantization_type: nf4
+double_quantization: true
+
+dataset_dir: data
+dataset: rupsaa_v0.2_validation
+template: qwen
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 4
+
+output_dir: checkpoints/rupsaa_v0.2_eval_validation
+per_device_eval_batch_size: 2
+bf16: true
+report_to: none

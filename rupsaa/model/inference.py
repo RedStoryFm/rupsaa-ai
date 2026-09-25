@@ -17,7 +17,12 @@ from rupsaa.model.generation import (
     generate_reply,
 )
 from rupsaa.model.loader import LoadedModel, load_model
-from rupsaa.personality.system_prompt import build_system_prompt
+import logging
+
+from rupsaa.config import get_settings
+from rupsaa.personality.system_prompt import build_system_prompt, resolve_prompt_version
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -29,8 +34,12 @@ class ChatResult:
 
 
 class RupsaaEngine:
-    def __init__(self, loaded: LoadedModel):
+    def __init__(self, loaded: LoadedModel, prompt_version: str | None = None):
         self.loaded = loaded
+        self.prompt_version = resolve_prompt_version(
+            loaded.adapter_path, prompt_version or get_settings().prompt_version
+        )
+        logger.info("system prompt version: %s (adapter: %s)", self.prompt_version, loaded.adapter_path)
 
     @classmethod
     def load(cls, **kwargs) -> "RupsaaEngine":
@@ -62,6 +71,7 @@ class RupsaaEngine:
             retrieved_context=retrieved_context,
             terminology_context=terminology_context,
             conversation_note=conversation_note,
+            prompt_version=self.prompt_version,
         )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]

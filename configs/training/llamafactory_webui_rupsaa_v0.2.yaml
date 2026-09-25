@@ -1,0 +1,53 @@
+# Rupsaa V0.2 — LLaMA-Factory 0.7.1 **WebUI "Load arguments"** template.
+#
+# DO NOT point the GUI at this file directly. `bash scripts/start_llamafactory_gui.sh v0.2`
+# renders it (substituting the project-root placeholder in train.output_dir) into
+# config/rupsaa_v0.2.yaml on every launch; in the GUI you then type just:   rupsaa_v0.2.yaml
+#
+# Same loading mechanics as the V0.1 template (see configs/training/llamafactory_webui_rupsaa_v0.1.yaml
+# for the source-level details): keys are WebUI elem_ids, config path is ./config relative to the
+# WebUI process CWD, absolute train.output_dir so the adapter lands in <root>/adapters/rupsaa-v0.2,
+# and top.model_name / top.model_path / train.dataset_dir / finetuning_type / training_stage match
+# what the page shows on load so no Gradio .change handler resets the template or blanks the dataset.
+#
+# Same experiment as configs/training/llamafactory_rupsaa_v0.2.yaml. What the GUI does implicitly:
+#  * val_size > 0  -> eval_steps = save_steps, load_best_model_at_end = true (webui/runner.py),
+#                     metric eval_loss. The final adapter written to adapters/rupsaa-v0.2 is the best
+#                     checkpoint by eval loss, not the last step.
+#  * 4-bit NF4 + double quantization + gradient checkpointing: LLaMA-Factory defaults.
+#  * weight_decay 0.0 and seed 42: trainer defaults (not exposed by the 0.7.1 WebUI).
+#  * eval set = seed-42 5% resplit of rupsaa_v0.2_train (1311 train / 69 eval rows); the frozen
+#    validation/test files are never loaded. Score on the frozen validation split afterwards with
+#    configs/training/llamafactory_rupsaa_v0.2_eval_validation.yaml.
+#  * 164 optimizer steps (82/epoch x 2), warmup 5 (~3%), save+eval every 20.
+
+top.model_name: Custom
+top.model_path: Qwen/Qwen2.5-7B-Instruct
+top.finetuning_type: lora
+top.quantization_bit: "4"
+top.template: qwen
+
+train.training_stage: Supervised Fine-Tuning
+train.dataset_dir: data
+train.dataset:
+  - rupsaa_v0.2_train
+train.learning_rate: "2e-4"
+train.num_train_epochs: "2.0"
+train.max_grad_norm: "0.3"
+train.max_samples: "100000"
+train.compute_type: bf16
+train.cutoff_len: 2048
+train.batch_size: 2
+train.gradient_accumulation_steps: 8
+train.val_size: 0.05
+train.lr_scheduler_type: cosine
+train.logging_steps: 10
+train.save_steps: 20
+train.warmup_steps: 5
+train.optim: paged_adamw_8bit
+train.upcast_layernorm: true
+train.lora_rank: 16
+train.lora_alpha: 32
+train.lora_dropout: 0.05
+train.lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+train.output_dir: "@RUPSAA_ROOT@/adapters/rupsaa-v0.2"

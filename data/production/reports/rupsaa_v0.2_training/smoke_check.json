@@ -1,0 +1,87 @@
+{
+  "all_passed": true,
+  "checks": {
+    "frozen_export_sha256": {
+      "pass": true,
+      "detail": {
+        "train": "62771ea2ada050893ba55ae7268e713ba6bcfb88f6c464f02c72f523a789a314",
+        "validation": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+        "test": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9"
+      }
+    },
+    "config_parses": {
+      "pass": true,
+      "detail": "stage=sft lr=0.0002 epochs=2.0"
+    },
+    "dataset_is_v02_train": {
+      "pass": true,
+      "detail": "rupsaa_v0.2_train"
+    },
+    "output_dir_is_v02": {
+      "pass": true,
+      "detail": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2"
+    },
+    "output_dir_not_populated": {
+      "pass": true,
+      "detail": "absent"
+    },
+    "qlora_settings": {
+      "pass": true,
+      "detail": "4bit=4 nf4 double=True grad_ckpt=True bf16=True optim=OptimizerNames.PAGED_ADAMW_8BIT"
+    },
+    "lora_settings": {
+      "pass": true,
+      "detail": "r=16 a=32 d=0.05 target=['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']"
+    },
+    "best_model_retention": {
+      "pass": true,
+      "detail": "eval_steps=20 save_steps=20"
+    },
+    "no_rows_dropped_in_preprocessing": {
+      "pass": true,
+      "detail": "1380 tokenized / 1380 frozen train rows"
+    },
+    "resplit_counts": {
+      "pass": true,
+      "detail": "train=1311 eval=69"
+    },
+    "expected_steps": {
+      "pass": true,
+      "detail": "82/epoch x 2.0 = 164"
+    },
+    "v02_system_prompt_in_every_example": {
+      "pass": true,
+      "detail": "1380/1380 start with their V0.2 system turn (1332 exactly build_system_prompt('v0.2')), V0.1-style system turns: 0"
+    },
+    "terminology_blocks_survive_formatting": {
+      "pass": true,
+      "detail": "30/30"
+    },
+    "labels_are_assistant_turns_only": {
+      "pass": true,
+      "detail": "mismatches: []"
+    },
+    "prompt_tokens_identical_to_runtime": {
+      "pass": true,
+      "detail": "1380/1380 identical to tokenizer.apply_chat_template (runtime path)"
+    },
+    "no_truncation_at_cutoff": {
+      "pass": true,
+      "detail": "max tokens 848 / cutoff 2048, truncated 0"
+    },
+    "eval_validation_config_parses": {
+      "pass": true,
+      "detail": "dataset=rupsaa_v0.2_validation do_train=False do_eval=True"
+    }
+  },
+  "counts": {
+    "frozen_train_rows": 1380,
+    "resplit_train": 1311,
+    "resplit_eval": 69,
+    "steps_per_epoch": 82,
+    "total_steps": 164,
+    "max_tokens": 848
+  },
+  "optimizer_steps_run": 0,
+  "model_weights_loaded": false
+}

@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-# Launch the LLaMA-Factory WebUI for Rupsaa V0.1 (GUI only — this script
+# Launch the LLaMA-Factory WebUI for Rupsaa (GUI only — this script
 # never starts training; you press Start in the browser yourself).
 #
-# Usage:  bash scripts/start_llamafactory_gui.sh
+# Usage:  bash scripts/start_llamafactory_gui.sh [v0.1|v0.2]   (default v0.1)
 #   env:  LLAMAFACTORY_GUI_PORT (default 7860) — must not be 5500 or 8000
+#         RUPSAA_TRAIN_VERSION  (alternative to the positional argument)
 #
 # What it does, and why (see configs/training/llamafactory_webui_rupsaa_v0.1.yaml
 # for the source-level details):
@@ -21,10 +22,17 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 PORT="${LLAMAFACTORY_GUI_PORT:-7860}"
-CONFIG_NAME="rupsaa_v0.1.yaml"
-TEMPLATE="configs/training/llamafactory_webui_rupsaa_v0.1.yaml"
+VERSION="${1:-${RUPSAA_TRAIN_VERSION:-v0.1}}"
 
 die() { echo "ERROR: $*" >&2; exit 1; }
+
+case "$VERSION" in
+  v0.1) MANIFEST="data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json" ;;
+  v0.2) MANIFEST="data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json" ;;
+  *) die "unknown version '$VERSION' (use v0.1 or v0.2)" ;;
+esac
+CONFIG_NAME="rupsaa_${VERSION}.yaml"
+TEMPLATE="configs/training/llamafactory_webui_rupsaa_${VERSION}.yaml"
 
 case "$PORT" in
   5500|8000) die "port $PORT is reserved for Rupsaa (5500 = web UI, 8000 = internal API). Pick another LLAMAFACTORY_GUI_PORT." ;;
@@ -45,9 +53,9 @@ PY="${LLAMAFACTORY_PYTHON:-$(dirname "$LF_CLI")/python}"
 for f in \
   "$TEMPLATE" \
   data/dataset_info.json \
-  data/production/exports/rupsaa_v0.1/train.jsonl \
-  data/production/exports/rupsaa_v0.1/validation.jsonl \
-  data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json
+  "data/production/exports/rupsaa_${VERSION}/train.jsonl" \
+  "data/production/exports/rupsaa_${VERSION}/validation.jsonl" \
+  "$MANIFEST"
 do
   [ -r "$f" ] || die "required file missing or unreadable: $ROOT/$f"
 done
@@ -77,9 +85,9 @@ PYEOF
 
 # --- seed LLaMA-Factory's own user_config (non-destructive merge) and
 #     render the GUI-loadable config, then verify both with LF's own code ---
-"$PY" - "$ROOT" "$TEMPLATE" "$CONFIG_NAME" <<'PYEOF' || die "config render/verification failed"
-import os, sys, yaml
-root, template, config_name = sys.argv[1:4]
+"$PY" - "$ROOT" "$TEMPLATE" "$CONFIG_NAME" "$VERSION" "$MANIFEST" <<'PYEOF' || die "config render/verification failed"
+import hashlib, json, os, sys, yaml
+root, template, config_name, version, manifest_path = sys.argv[1:6]
 
 os.makedirs("cache", exist_ok=True)
 uc_path = os.path.join("cache", "user_config.yaml")
@@ -106,9 +114,19 @@ from llamafactory.webui.common import get_model_path, get_save_path, list_datase
 
 cfg = load_args(config_name)
 assert cfg is not None, f"LLaMA-Factory load_args could not open {get_save_path(config_name)}"
-assert cfg["train.output_dir"] == os.path.join(root, "adapters", "rupsaa-v0.1"), cfg["train.output_dir"]
+assert cfg["train.output_dir"] == os.path.join(root, "adapters", f"rupsaa-{version}"), cfg["train.output_dir"]
+assert cfg["train.dataset"] == [f"rupsaa_{version}_train"], cfg["train.dataset"]
+assert cfg["top.template"] == "qwen" and cfg["top.quantization_bit"] == "4", "template/quantization drifted"
 choices = [c[0] if isinstance(c, tuple) else c for c in list_dataset(cfg["train.dataset_dir"]).choices]
-assert "rupsaa_v0.1_train" in choices, f"rupsaa_v0.1_train not registered in {cfg['train.dataset_dir']}/dataset_info.json"
+assert f"rupsaa_{version}_train" in choices, f"rupsaa_{version}_train not registered in {cfg['train.dataset_dir']}/dataset_info.json"
+if version == "v0.2":
+    # The frozen export must still be byte-identical to what the manifest recorded.
+    manifest = json.load(open(manifest_path, encoding="utf-8"))
+    for split, expected in manifest["export_files_sha256"].items():
+        path = os.path.join("data", "production", "exports", "rupsaa_v0.2", f"{split}.jsonl")
+        actual = hashlib.sha256(open(path, "rb").read()).hexdigest()
+        assert actual == expected, f"{path} changed since freeze ({actual} != {expected})"
+    assert cfg["train.output_dir"] != os.path.join(root, "adapters", "rupsaa-v0.1"), "would overwrite the V0.1 adapter"
 assert load_config()["last_model"] == cfg["top.model_name"], "page-load model_name would differ from the loaded one"
 assert get_model_path("Custom") == cfg["top.model_path"], "page-load model_path would differ from the loaded one"
 
@@ -119,16 +137,21 @@ if os.path.isdir(out) and os.listdir(out):
 PYEOF
 
 echo "=============================================================="
-echo " LLaMA-Factory WebUI for Rupsaa V0.1"
+echo " LLaMA-Factory WebUI for Rupsaa ${VERSION}"
 echo "  project root : $ROOT"
 echo "  config file  : $ROOT/config/$CONFIG_NAME (rendered from $TEMPLATE)"
 echo "  GUI 'Config path' field — type exactly:  $CONFIG_NAME   then click 'Load arguments'"
-echo "  dataset      : rupsaa_v0.1_train  (registered in data/dataset_info.json)"
-echo "  adapter out  : $ROOT/adapters/rupsaa-v0.1"
+echo "  dataset      : rupsaa_${VERSION}_train  (registered in data/dataset_info.json)"
+echo "  adapter out  : $ROOT/adapters/rupsaa-${VERSION}"
 echo "  listening on : 0.0.0.0:$PORT   -> open/forward ONLY port $PORT in Lightning"
 echo "  untouched    : 5500 (Rupsaa web), 8000 (Rupsaa API)"
 echo "  Training does NOT start until you press Start in the GUI."
 echo "=============================================================="
+
+if [ "${RUPSAA_GUI_DRY_RUN:-0}" = "1" ]; then
+  echo "RUPSAA_GUI_DRY_RUN=1: config rendered and verified; not starting the WebUI."
+  exit 0
+fi
 
 export GRADIO_SERVER_NAME=0.0.0.0
 export GRADIO_SERVER_PORT="$PORT"
