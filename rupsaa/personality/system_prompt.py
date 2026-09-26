@@ -36,6 +36,11 @@ Reference terminology from Rupsaa's owner is included below as background knowle
 """
 
 
+DANCE_INSTRUCTIONS = """
+Reference dance knowledge from Rupsaa's owner is included below. Use only these facts for a dance's origin, background and movements, and explain them in your own words, in the user's language and register, at the length they asked for. If they ask for something the entry doesn't contain — like step-by-step instructions — say you don't have those details yet instead of making them up.
+"""
+
+
 PROMPT_VERSIONS = ("v0.1", "v0.2")
 
 
@@ -72,6 +77,7 @@ def build_system_prompt(
     conversation_note: str | None = None,
     prompt_version: str = "v0.1",
     language_directive: str | None = None,
+    dance_context: str | None = None,
 ) -> str:
     """Assemble the full system prompt for a single turn.
 
@@ -90,6 +96,9 @@ def build_system_prompt(
     if terminology_context:
         parts.append(TERMINOLOGY_INSTRUCTIONS.strip())
         parts.append(f"Reference terminology:\n{terminology_context}")
+    if dance_context:
+        parts.append(DANCE_INSTRUCTIONS.strip())
+        parts.append(f"Reference dance knowledge:\n{dance_context}")
     if retrieved_context:
         parts.append(RAG_INSTRUCTIONS.strip())
         parts.append(f"Retrieved context:\n{retrieved_context}")

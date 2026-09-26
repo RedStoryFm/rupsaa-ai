@@ -162,3 +162,58 @@ class TerminologyOut(BaseModel):
     enabled: bool
     created_at: str
     updated_at: str
+
+
+# --- Owner tools: Rupsaa Knowledge → Dance (rupsaa/rag/dance.py) ---
+
+class _DanceFields(BaseModel):
+    aliases: list[str] | str | None = None
+    origin: str | None = Field(default=None, max_length=1000)
+    category: str | None = Field(default=None, max_length=120)
+    key_movements: str | None = Field(default=None, max_length=4000)
+    answer_guidance: str | None = Field(default=None, max_length=2000)
+    languages: list[str] | None = None
+    tags: list[str] | str | None = None
+    enabled: bool | None = None
+    difficulty: str | None = Field(default=None, max_length=200)
+    prerequisites: str | None = Field(default=None, max_length=2000)
+    warmup: str | None = Field(default=None, max_length=4000)
+    basic_steps: str | None = Field(default=None, max_length=6000)
+    step_sequence: str | None = Field(default=None, max_length=6000)
+    common_mistakes: str | None = Field(default=None, max_length=4000)
+    practice_tips: str | None = Field(default=None, max_length=4000)
+    source: str | None = Field(default=None, max_length=500)
+
+
+class DanceCreate(_DanceFields):
+    name: str = Field(..., min_length=1, max_length=120)
+    description: str = Field(..., min_length=1, max_length=4000)
+
+
+class DanceUpdate(_DanceFields):
+    name: str | None = Field(default=None, min_length=1, max_length=120)
+    description: str | None = Field(default=None, min_length=1, max_length=4000)
+
+
+class DanceOut(BaseModel):
+    id: str
+    name: str
+    description: str
+    origin: str
+    category: str
+    aliases: list[str]
+    key_movements: str
+    answer_guidance: str
+    languages: list[str]
+    tags: list[str]
+    enabled: bool
+    difficulty: str
+    prerequisites: str
+    warmup: str
+    basic_steps: str
+    step_sequence: str
+    common_mistakes: str
+    practice_tips: str
+    source: str
+    created_at: str
+    updated_at: str

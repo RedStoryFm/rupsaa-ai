@@ -39,6 +39,9 @@ from api.schemas import (
     TeachExampleRequest,
     TerminologyCreate,
     TerminologyOut,
+    DanceCreate,
+    DanceOut,
+    DanceUpdate,
     TerminologyUpdate,
     TeachExampleResponse,
 )
@@ -50,7 +53,8 @@ from rupsaa.dataset.teach import LANGUAGE_OPTIONS, TeachSubmission, TeachTurn, s
 from rupsaa.rag.document_manager import KNOWLEDGE_CATEGORIES, DocumentManager, DocumentManagerError
 from rupsaa.rag.router import classify_message
 from rupsaa.rag.terminology import TERM_CATEGORIES, TERM_LANGUAGES, TerminologyError, TerminologyStore
-from rupsaa.rag import terminology_import
+from rupsaa.rag import dance_import, terminology_import
+from rupsaa.rag.dance import DanceError, DanceStore
 
 logger = logging.getLogger("rupsaa.api.owner")
 _warned_unprotected = False
@@ -84,6 +88,12 @@ def _get_terminology() -> TerminologyStore:
     from api.services import get_service
 
     return get_service().terminology
+
+
+def _get_dance() -> DanceStore:
+    from api.services import get_service
+
+    return get_service().dance
 
 
 def _get_doc_manager() -> DocumentManager:
@@ -347,3 +357,96 @@ async def delete_terminology(term_id: str, confirm: bool = False, x_owner_key: s
     except TerminologyError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return {"deleted": term_id}
+
+
+# --- Rupsaa Knowledge → Dance (structured dance styles; RAG, no retraining) ---
+# Static routes (lookup, templates, import) are registered before /dance/{dance_id}.
+
+@router.get("/dance")
+async def list_dance(q: str = "", x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    store = _get_dance()
+    records = store.search(q) if q else store.list()
+    return {"dances": [DanceOut(**vars(r)) for r in records], "count": len(records)}
+
+
+@router.get("/dance/lookup")
+async def lookup_dance(message: str, x_owner_key: str | None = Header(default=None)) -> dict:
+    """Owner test tool: how a chat message routes and which dance entries it would retrieve (no model call)."""
+    require_owner(x_owner_key)
+    decision = classify_message(message)
+    matches = _get_dance().lookup(message, decision.term_candidate) if decision.use_terminology else []
+    return {"route": decision.route.value, "reason": decision.reason, "term_candidate": decision.term_candidate,
+            "matches": [{"id": m.record.id, "name": m.record.name, "score": m.score, "matched": m.matched, "method": m.method}
+                        for m in matches]}
+
+
+@router.get("/dance/template.csv")
+async def dance_template_csv() -> Response:
+    return Response(content=dance_import.template_csv(), media_type="text/csv; charset=utf-8",
+                    headers={"Content-Disposition": 'attachment; filename="dance_template.csv"'})
+
+
+@router.get("/dance/template.xlsx")
+async def dance_template_xlsx() -> Response:
+    return Response(content=dance_import.template_xlsx(),
+                    media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    headers={"Content-Disposition": 'attachment; filename="dance_template.xlsx"'})
+
+
+@router.post("/dance/import/preview")
+async def preview_dance_import(file: UploadFile = File(...), x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    name, content = await _read_upload(file)
+    try:
+        return dance_import.preview(name, content, _get_dance()).to_dict()
+    except terminology_import.ImportFileError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/dance/import")
+async def commit_dance_import(file: UploadFile = File(...), update_rows: str = Form(default=""),
+                              x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    name, content = await _read_upload(file)
+    try:
+        return dance_import.commit(name, content, _get_dance(), _parse_update_rows(update_rows)).to_dict()
+    except terminology_import.ImportFileError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.get("/dance/{dance_id}", response_model=DanceOut)
+async def get_dance(dance_id: str, x_owner_key: str | None = Header(default=None)) -> DanceOut:
+    require_owner(x_owner_key)
+    try:
+        return DanceOut(**vars(_get_dance().get(dance_id)))
+    except DanceError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.post("/dance", response_model=DanceOut)
+async def create_dance(request: DanceCreate, x_owner_key: str | None = Header(default=None)) -> DanceOut:
+    require_owner(x_owner_key)
+    try:
+        return DanceOut(**vars(_get_dance().create(request.model_dump(exclude_none=True))))
+    except DanceError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.put("/dance/{dance_id}", response_model=DanceOut)
+async def update_dance(dance_id: str, request: DanceUpdate, x_owner_key: str | None = Header(default=None)) -> DanceOut:
+    require_owner(x_owner_key)
+    try:
+        return DanceOut(**vars(_get_dance().update(dance_id, request.model_dump(exclude_unset=True))))
+    except DanceError as e:
+        raise HTTPException(status_code=404 if "no such dance" in str(e) else 400, detail=str(e))
+
+
+@router.delete("/dance/{dance_id}")
+async def delete_dance(dance_id: str, confirm: bool = False, x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    try:
+        _get_dance().delete(dance_id, confirm=confirm)
+    except DanceError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return {"deleted": dance_id}

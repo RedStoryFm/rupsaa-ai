@@ -19,6 +19,7 @@ from rupsaa.guardrails.essential_boundaries import check_text
 from rupsaa.model.inference import RupsaaEngine
 from rupsaa.personality.language import detect_language
 from rupsaa.rag.context_builder import build_turn_knowledge
+from rupsaa.rag.dance import DanceStore
 from rupsaa.rag.pipeline import RagPipeline
 from rupsaa.rag.terminology import TerminologyStore
 
@@ -65,6 +66,7 @@ class RupsaaService:
         self._rag_pipeline: RagPipeline | None = None
         self.conversation_manager = ConversationManager()
         self._terminology: TerminologyStore | None = None
+        self._dance: DanceStore | None = None
         # conversation_id -> term ids used on the previous turn (for follow-ups
         # like "এটা বাংলায় বুঝিয়ে বলো").
         self._last_terms: dict[str, list[str]] = {}
@@ -91,6 +93,14 @@ class RupsaaService:
 
             self._terminology = TerminologyStore(PROJECT_ROOT / get_settings().knowledge_terminology_dir)
         return self._terminology
+
+    @property
+    def dance(self) -> DanceStore:
+        if self._dance is None:
+            from rupsaa.config import PROJECT_ROOT, get_settings
+
+            self._dance = DanceStore(PROJECT_ROOT / get_settings().knowledge_dance_dir)
+        return self._dance
 
     def is_model_loaded(self) -> bool:
         return self._engine is not None
@@ -131,6 +141,7 @@ class RupsaaService:
             history_truncated=conversation.dropped_messages > 0,
             history=conversation.messages,
             language_state=self._language.get(conversation.conversation_id),
+            dance=self.dance,
         )
         logger.info("route=%s terms=%s docs=%d lang=%s", knowledge.route, knowledge.terms_used,
                     len(knowledge.sources), knowledge.language)
@@ -144,6 +155,7 @@ class RupsaaService:
             terminology_context=knowledge.terminology_context,
             conversation_note=knowledge.conversation_note,
             language_directive=directive_for(knowledge.language_state if knowledge.language else None),
+            dance_context=knowledge.dance_context,
             generation_overrides={
                 "temperature": temperature,
                 "top_p": top_p,

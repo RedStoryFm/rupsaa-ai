@@ -78,6 +78,12 @@
     const terms = which === "terms";
     termsSection.hidden = !terms;
     docsSection.hidden = terms;
+    // Dance tab (web/dance.js) — hide it whenever Documents or Terminology is chosen.
+    if ($("dance-section")) $("dance-section").hidden = true;
+    if ($("tab-dance")) {
+      $("tab-dance").classList.remove("active");
+      $("tab-dance").setAttribute("aria-selected", "false");
+    }
     tabTerms.classList.toggle("active", terms);
     tabDocs.classList.toggle("active", !terms);
     tabTerms.setAttribute("aria-selected", String(terms));

@@ -29,6 +29,7 @@ from rupsaa.config import PROJECT_ROOT  # noqa: E402
 from rupsaa.conversation.language_control import directive_for  # noqa: E402
 from rupsaa.personality.system_prompt import build_system_prompt  # noqa: E402
 from rupsaa.rag.context_builder import build_turn_knowledge  # noqa: E402
+from rupsaa.rag.dance import DanceStore  # noqa: E402
 from rupsaa.rag.terminology import TerminologyStore  # noqa: E402
 
 CORR_DIR = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1"
@@ -49,7 +50,7 @@ def load_source(path: Path = SOURCE) -> list[dict]:
     return mod.CONVERSATIONS
 
 
-def replay(conv: dict, store: TerminologyStore) -> dict:
+def replay(conv: dict, store: TerminologyStore, dance: DanceStore | None = None) -> dict:
     """Run a conversation through the runtime exactly like RupsaaService.chat does."""
     history: list[Msg] = []
     previous_terms, language_state = None, None
@@ -57,7 +58,7 @@ def replay(conv: dict, store: TerminologyStore) -> dict:
     for user, assistant in conv["turns"]:
         k = build_turn_knowledge(user, use_rag=False, rag_query=None, terminology=store, previous_terms=previous_terms,
                                  history_messages=len(history), history_truncated=False, history=history,
-                                 language_state=language_state)
+                                 language_state=language_state, dance=dance)
         trace.append({"user": user, "route": k.route, "terms_used": k.terms_used, "requested_language": k.language})
         if k.terms_used:
             previous_terms = k.terms_used
@@ -67,7 +68,8 @@ def replay(conv: dict, store: TerminologyStore) -> dict:
         history += [Msg("user", user), Msg("assistant", assistant)]
     system = build_system_prompt(prompt_version="v0.2", terminology_context=k.terminology_context,
                                  conversation_note=k.conversation_note,
-                                 language_directive=directive_for(k.language_state if k.language else None))
+                                 language_directive=directive_for(k.language_state if k.language else None),
+                                 dance_context=k.dance_context)
     messages = [{"role": "system", "content": system}]
     for user, assistant in conv["turns"]:
         messages += [{"role": "user", "content": user}, {"role": "assistant", "content": assistant}]
@@ -76,14 +78,14 @@ def replay(conv: dict, store: TerminologyStore) -> dict:
             "messages": messages, "runtime_trace": trace}
 
 
-def build(convs: list[dict], store: TerminologyStore) -> tuple[list[dict], list[str]]:
+def build(convs: list[dict], store: TerminologyStore, dance: DanceStore | None = None) -> tuple[list[dict], list[str]]:
     records, errors = [], []
     seen = set()
     for conv in convs:
         if conv["id"] in seen:
             errors.append(f"{conv['id']}: duplicate id")
         seen.add(conv["id"])
-        rec = replay(conv, store)
+        rec = replay(conv, store, dance)
         final = set(rec["runtime_trace"][-1]["terms_used"])
         want = set(conv.get("expect_terms", []))
         if final != want:

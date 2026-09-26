@@ -128,7 +128,7 @@ def _slug(term: str) -> str:
 
 @dataclass
 class TermMatch:
-    record: TermRecord
+    record: object  # TermRecord, DanceRecord, ...
     score: float
     matched: str  # which key/phrase matched
     method: str  # exact | phrase | fuzzy
@@ -256,44 +256,54 @@ class TerminologyStore:
         phrase the router extracted from a definition question ("Strip" from
         "Strip mane ki?"); without it, whole-phrase alias containment is used
         (e.g. a knowledge question that mentions a defined term)."""
-        records = self.list(include_disabled=False)
-        if not records:
-            return []
-        matches: dict[str, TermMatch] = {}
+        return match_records(self.list(include_disabled=False), message, term_candidate, limit=limit)
 
-        def add(rec: TermRecord, score: float, matched: str, method: str) -> None:
-            if rec.id not in matches or matches[rec.id].score < score:
-                matches[rec.id] = TermMatch(rec, score, matched, method)
 
-        cand = normalize(term_candidate) if term_candidate else ""
-        msg = f" {normalize(message)} "
-        for rec in records:
-            keys = rec.keys()
-            if cand and cand in keys:
-                add(rec, 1.0, cand, "exact")
-                continue
-            if cand and any(normalize(q) == normalize(message) for q in rec.example_queries):
-                add(rec, 0.98, message, "exact")
-                continue
-            phrase_hits = [k for k in keys if len(k) >= 3 and f" {k} " in msg]
-            if phrase_hits:
-                best = max(phrase_hits, key=len)
-                # A term mentioned inside a definition question for something else scores lower.
-                add(rec, 0.9 if not cand else 0.75, best, "phrase")
-                continue
-            if cand and len(cand) >= 4 and not _all_known_words(cand):
-                # Typos rarely change the first letter ("tripping" is not "stripping").
-                same_start = [k for k in keys if k[:1] == cand[:1]]
-                ratio = max((difflib.SequenceMatcher(None, cand, k).ratio() for k in same_start), default=0.0)
-                if ratio >= 0.85:
-                    add(rec, round(ratio * 0.9, 3), cand, "fuzzy")
-                elif " " not in cand and any(len(k) >= 4 and _one_edit_apart(cand, k) for k in same_start):
-                    add(rec, 0.75, cand, "fuzzy")
-        if cand and any(m.method == "exact" for m in matches.values()):
-            # "lip biting ki?" is about Lip Biting — not also about the term whose alias is "biting".
-            matches = {i: m for i, m in matches.items()
-                       if not (m.method == "phrase" and m.matched in cand and m.matched != cand)}
-        return sorted(matches.values(), key=lambda m: -m.score)[:limit]
+def match_records(records: list, message: str, candidate: str | None = None, *, limit: int = 2) -> list[TermMatch]:
+    """Shared chat-time matcher for owner knowledge records (terminology, dance, ...).
+
+    A record needs `.id`, `.keys()` (normalized names/aliases) and optionally
+    `.example_queries`. Order of evidence: exact key == router candidate,
+    whole-phrase key containment, then conservative typo matching (never on real
+    English words, same first letter, ratio >= 0.85 or one edit)."""
+    if not records:
+        return []
+    matches: dict[str, TermMatch] = {}
+
+    def add(rec, score: float, matched: str, method: str) -> None:
+        if rec.id not in matches or matches[rec.id].score < score:
+            matches[rec.id] = TermMatch(rec, score, matched, method)
+
+    cand = normalize(candidate) if candidate else ""
+    msg = f" {normalize(message)} "
+    for rec in records:
+        keys = rec.keys()
+        if cand and cand in keys:
+            add(rec, 1.0, cand, "exact")
+            continue
+        if cand and any(normalize(q) == normalize(message) for q in getattr(rec, "example_queries", []) or []):
+            add(rec, 0.98, message, "exact")
+            continue
+        phrase_hits = [k for k in keys if len(k) >= 3 and f" {k} " in msg]
+        if phrase_hits:
+            best = max(phrase_hits, key=len)
+            # A term mentioned inside a definition question for something else scores lower.
+            add(rec, 0.9 if not cand else 0.75, best, "phrase")
+            continue
+        if cand and len(cand) >= 4 and not _all_known_words(cand):
+            # Typos rarely change the first letter ("tripping" is not "stripping").
+            same_start = [k for k in keys if k[:1] == cand[:1]]
+            ratio = max((difflib.SequenceMatcher(None, cand, k).ratio() for k in same_start), default=0.0)
+            if ratio >= 0.85:
+                add(rec, round(ratio * 0.9, 3), cand, "fuzzy")
+            # One edit on a 4-letter word is too loose ("hake" is not "haka"); needs >= 5 letters.
+            elif " " not in cand and len(cand) >= 5 and any(len(k) >= 5 and _one_edit_apart(cand, k) for k in same_start):
+                add(rec, 0.75, cand, "fuzzy")
+    if cand and any(m.method == "exact" for m in matches.values()):
+        # "lip biting ki?" is about Lip Biting — not also about the term whose alias is "biting".
+        matches = {i: m for i, m in matches.items()
+                   if not (m.method == "phrase" and m.matched in cand and m.matched != cand)}
+    return sorted(matches.values(), key=lambda m: -m.score)[:limit]
 
 
 _KNOWN_WORDS: frozenset[str] | None = None

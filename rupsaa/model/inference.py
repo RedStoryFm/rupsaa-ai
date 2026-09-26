@@ -64,6 +64,7 @@ class RupsaaEngine:
         terminology_context: str | None = None,
         conversation_note: str | None = None,
         language_directive: str | None = None,
+        dance_context: str | None = None,
         generation_overrides: dict | None = None,
     ) -> ChatResult:
         boundary = check_text(user_message)
@@ -76,6 +77,7 @@ class RupsaaEngine:
             conversation_note=conversation_note,
             prompt_version=self.prompt_version,
             language_directive=language_directive,
+            dance_context=dance_context,
         )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]

@@ -67,6 +67,10 @@ class Settings(BaseSettings):
     # file per term, owner-editable via web/knowledge.html → Terminology.
     knowledge_terminology_dir: str = "knowledge/terminology"
 
+    # Structured dance-style knowledge (rupsaa/rag/dance.py), one JSON file per
+    # dance, owner-editable via web/knowledge.html → Dance. Facts live here, not in the LoRA.
+    knowledge_dance_dir: str = "knowledge/dance"
+
     # Owner-only tools (Teach Rupsaa, Rupsaa Knowledge) — see api/owner_routes.py.
     # Unset (empty) by default for local development, which allows access
     # with a logged warning. Set this to a real secret before ever exposing

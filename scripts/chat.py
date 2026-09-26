@@ -29,6 +29,7 @@ from rupsaa.model.inference import RupsaaEngine  # noqa: E402
 from rupsaa.config import PROJECT_ROOT, get_settings  # noqa: E402
 from rupsaa.conversation.language_control import directive_for  # noqa: E402
 from rupsaa.rag.context_builder import build_turn_knowledge  # noqa: E402
+from rupsaa.rag.dance import DanceStore  # noqa: E402
 from rupsaa.rag.pipeline import RagPipeline  # noqa: E402
 from rupsaa.rag.terminology import TerminologyStore  # noqa: E402
 
@@ -72,6 +73,7 @@ def main() -> None:
 
     try:
         terminology = TerminologyStore(PROJECT_ROOT / get_settings().knowledge_terminology_dir)
+        dance = DanceStore(PROJECT_ROOT / get_settings().knowledge_dance_dir)
         last_terms: list[str] | None = None
         language_state: dict | None = None
         while True:
@@ -102,6 +104,7 @@ def main() -> None:
                 history_truncated=conversation.dropped_messages > 0,
                 history=conversation.messages,
                 language_state=language_state,
+                dance=dance,
             )
             language_state = knowledge.language_state
             if knowledge.sources:
@@ -117,6 +120,7 @@ def main() -> None:
                 terminology_context=knowledge.terminology_context,
                 conversation_note=knowledge.conversation_note,
                 language_directive=directive_for(knowledge.language_state if knowledge.language else None),
+                dance_context=knowledge.dance_context,
                 generation_overrides=generation_overrides,
             )
             if knowledge.terms_used:

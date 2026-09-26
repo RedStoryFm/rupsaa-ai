@@ -21,6 +21,7 @@ from collections.abc import Callable
 from dataclasses import dataclass, field
 
 from rupsaa.conversation.language_control import resolve_turn_language
+from rupsaa.rag.dance import DanceStore, format_dance_context
 from rupsaa.rag.router import Route, RouteDecision, classify_message
 from rupsaa.rag.terminology import TerminologyStore, format_terminology_context
 
@@ -31,7 +32,8 @@ class TurnKnowledge:
     retrieved_context: str | None = None
     sources: list[dict] = field(default_factory=list)
     terminology_context: str | None = None
-    terms_used: list[str] = field(default_factory=list)
+    terms_used: list[str] = field(default_factory=list)  # terminology AND dance record ids
+    dance_context: str | None = None
     conversation_note: str | None = None
     language: str | None = None  # explicitly requested reply language ("bn"/"banglish"/"en")
     language_state: dict | None = None  # per-conversation language choice to keep for the next turn
@@ -52,6 +54,7 @@ def build_turn_knowledge(
     history_truncated: bool = False,
     history: list | None = None,
     language_state: dict | None = None,
+    dance: DanceStore | None = None,
 ) -> TurnKnowledge:
     """`use_rag` is the user's document-RAG toggle; it gates *documents* only.
     Owner-curated terminology is small, deterministic and always consulted
@@ -68,30 +71,39 @@ def build_turn_knowledge(
         out.conversation_note = memory_note(history, history_messages, history_truncated, question=message)
         return out
 
-    matches = []
-    if terminology is not None:
-        if decision.route == Route.FOLLOWUP:
-            by_id = {r.id: r for r in terminology.list(include_disabled=False)}
-            matches = [_Carried(by_id[t]) for t in previous_terms or [] if t in by_id]
-            # "strip ta simple kore bojhao" names the term itself; a newly named term joins the carried one.
-            carried = set(previous_terms or [])
-            matches += [m for m in terminology.lookup(message) if m.record.id not in carried]
-            matches = matches[:2]
-        elif decision.use_terminology:
-            matches = terminology.lookup(message, decision.term_candidate)
+    matches = _reference_matches(terminology, decision, message, previous_terms)
+    dance_matches = _reference_matches(dance, decision, message, previous_terms)
     if decision.route == Route.FOLLOWUP and history_messages == 0:
         out.conversation_note = ("The user refers to an earlier answer, but this conversation has no earlier messages yet — "
                                  "ask what they would like explained instead of guessing a topic.")
     if matches:
         out.terminology_context = format_terminology_context(matches)
-        out.terms_used = [m.record.id for m in matches]
+    if dance_matches:
+        out.dance_context = format_dance_context(dance_matches)
+    out.terms_used = [m.record.id for m in matches] + [m.record.id for m in dance_matches]
 
     wants_documents = use_rag and rag_query is not None and decision.use_documents
-    if decision.route == Route.TERMINOLOGY and matches:
+    if decision.route == Route.TERMINOLOGY and (matches or dance_matches):
         wants_documents = False  # the structured entry answers it; don't dilute with chunks
     if wants_documents:
         out.retrieved_context, out.sources = rag_query(message, strict=decision.strict_documents)
     return out
+
+
+def _reference_matches(store, decision, message: str, previous_ids: list[str] | None) -> list:
+    """Owner reference entries (terminology or dance) for this turn. Follow-ups carry the
+    previous turn's entries of this store; a newly named entry joins them."""
+    if store is None:
+        return []
+    if decision.route == Route.FOLLOWUP:
+        by_id = {r.id: r for r in store.list(include_disabled=False)}
+        carried = [_Carried(by_id[t]) for t in previous_ids or [] if t in by_id]
+        ids = {c.record.id for c in carried}
+        # "strip ta simple kore bojhao" names the term itself; a newly named term joins the carried one.
+        return (carried + [m for m in store.lookup(message) if m.record.id not in ids])[:2]
+    if decision.use_terminology:
+        return store.lookup(message, decision.term_candidate)
+    return []
 
 
 MAX_RECALL_MESSAGES = 12

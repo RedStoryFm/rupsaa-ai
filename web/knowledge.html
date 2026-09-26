@@ -12,7 +12,7 @@
     <header class="owner-topbar">
       <div>
         <h1>Rupsaa Knowledge</h1>
-        <div class="subtitle">Owner tool — manage RAG knowledge documents and terminology.</div>
+        <div class="subtitle">Owner tool — manage RAG knowledge documents, terminology and dance styles.</div>
       </div>
       <div class="owner-nav">
         <a href="teach.html">Teach Rupsaa →</a>
@@ -33,6 +33,7 @@
     <div class="owner-tabs" role="tablist">
       <button class="owner-tab active" id="tab-docs" type="button" role="tab" aria-selected="true">Documents</button>
       <button class="owner-tab" id="tab-terms" type="button" role="tab" aria-selected="false">Terminology</button>
+      <button class="owner-tab" id="tab-dance" type="button" role="tab" aria-selected="false">Dance</button>
     </div>
 
     <section id="docs-section">
@@ -200,10 +201,142 @@
       <div id="term-list" class="doc-list"></div>
     </div>
     </section>
+
+    <section id="dance-section" hidden>
+    <div class="owner-banner">
+      Dance entries are structured knowledge Rupsaa looks up when someone asks about a dance style
+      ("Kathak kothakar dance?", "Ballet ki?", "tell me about flamenco"). They take effect on the
+      <strong>next chat message</strong> — no reindex, no retraining. Rupsaa only uses what is written
+      here: leave step fields empty unless you have verified steps; she will say she doesn't have them.
+    </div>
+
+    <div class="owner-card">
+      <h2 id="dance-form-title">New dance</h2>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="dance-name">Name</label>
+          <input type="text" id="dance-name" placeholder="e.g. Kathak">
+        </div>
+        <div class="owner-field">
+          <label for="dance-category">Category <span style="font-weight:400">(optional)</span></label>
+          <input type="text" id="dance-category" placeholder="e.g. classical, street, folk">
+        </div>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="dance-origin">Origin</label>
+          <input type="text" id="dance-origin" placeholder="Where it comes from">
+        </div>
+        <div class="owner-field">
+          <label for="dance-aliases">Aliases <span style="font-weight:400">(comma or one per line — other names, Banglish/Bengali spellings)</span></label>
+          <textarea id="dance-aliases" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="owner-field">
+        <label for="dance-description">Description</label>
+        <textarea id="dance-description" rows="3"></textarea>
+      </div>
+      <div class="owner-field">
+        <label for="dance-movements">Key movements <span style="font-weight:400">(optional)</span></label>
+        <textarea id="dance-movements" rows="2"></textarea>
+      </div>
+      <div class="owner-field">
+        <label for="dance-guidance">Answer guidance <span style="font-weight:400">(optional)</span></label>
+        <textarea id="dance-guidance" rows="2"></textarea>
+      </div>
+      <details class="owner-field">
+        <summary>Optional details (difficulty, warm-up, steps, mistakes, tips) — only if verified</summary>
+        <div class="owner-field"><label for="dance-difficulty">Difficulty</label><input type="text" id="dance-difficulty"></div>
+        <div class="owner-field"><label for="dance-prerequisites">Prerequisites</label><textarea id="dance-prerequisites" rows="2"></textarea></div>
+        <div class="owner-field"><label for="dance-warmup">Warm-up</label><textarea id="dance-warmup" rows="2"></textarea></div>
+        <div class="owner-field"><label for="dance-basic-steps">Basic steps</label><textarea id="dance-basic-steps" rows="3"></textarea></div>
+        <div class="owner-field"><label for="dance-step-sequence">Step sequence</label><textarea id="dance-step-sequence" rows="3"></textarea></div>
+        <div class="owner-field"><label for="dance-mistakes">Common mistakes</label><textarea id="dance-mistakes" rows="2"></textarea></div>
+        <div class="owner-field"><label for="dance-tips">Practice tips</label><textarea id="dance-tips" rows="2"></textarea></div>
+      </details>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <label for="dance-tags">Tags <span style="font-weight:400">(comma-separated)</span></label>
+          <input type="text" id="dance-tags">
+          <label for="dance-source" style="margin-top:12px">Source <span style="font-weight:400">(optional)</span></label>
+          <input type="text" id="dance-source" placeholder="e.g. owner list 2026-09">
+        </div>
+        <div class="owner-field">
+          <label>Languages</label>
+          <div class="owner-checks" id="dance-languages"></div>
+          <label class="owner-check-inline"><input type="checkbox" id="dance-enabled" checked> Enabled</label>
+        </div>
+      </div>
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="save-dance-btn" type="button">Save dance</button>
+        <button class="owner-btn secondary" id="cancel-dance-btn" type="button" hidden>Cancel edit</button>
+      </div>
+      <div id="dance-result-msg"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Import dances</h2>
+      <p class="import-help">
+        Add many dances at once from a <strong>.csv</strong>, <strong>.xlsx</strong> or <strong>.json</strong> file.
+        Required columns: <code>name</code>, <code>description</code>; <code>origin</code> and the rest are optional.
+        Headers like "Dance Style", "Region" or "Also known as" are recognised. Several aliases/tags: use
+        <code>|</code>. Nothing is saved until you review the preview and click <em>Import Valid Records</em>.
+      </p>
+      <div class="owner-actions">
+        <a class="owner-btn secondary" id="dance-tmpl-csv-link" href="#" download="dance_template.csv">Download CSV Template</a>
+        <a class="owner-btn secondary" id="dance-tmpl-xlsx-link" href="#" download="dance_template.xlsx">Download XLSX Template</a>
+      </div>
+      <div class="owner-field" style="margin-top:14px">
+        <label for="dance-import-file">Choose file to preview (.csv, .xlsx or .json, max 2 MB)</label>
+        <input type="file" id="dance-import-file" accept=".csv,.xlsx,.json">
+      </div>
+      <div id="dance-import-msg"></div>
+      <div id="dance-import-preview" hidden>
+        <div class="import-counts" id="dance-import-counts"></div>
+        <div class="import-table-wrap">
+          <table class="import-table">
+            <thead><tr><th>Row</th><th>Dance</th><th>Status</th><th>Details</th><th>Action</th></tr></thead>
+            <tbody id="dance-import-rows"></tbody>
+          </table>
+        </div>
+        <div class="owner-actions">
+          <button class="owner-btn primary" id="dance-import-commit-btn" type="button">Import Valid Records</button>
+          <button class="owner-btn secondary" id="dance-import-cancel-btn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Test a chat message</h2>
+      <div class="owner-field-row">
+        <div class="owner-field">
+          <input type="text" id="dance-test-input" placeholder="Kathak kothakar dance?">
+        </div>
+        <div class="owner-actions" style="margin:0">
+          <button class="owner-btn secondary" id="dance-test-btn" type="button">Check retrieval</button>
+        </div>
+      </div>
+      <div id="dance-test-result"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Dances <span id="dance-count" style="font-weight:400"></span></h2>
+      <div class="owner-field-row" style="margin-bottom: 14px;">
+        <div class="owner-field">
+          <input type="text" id="dance-search" placeholder="Search name, alias, origin, category…">
+        </div>
+        <div class="owner-actions" style="margin:0">
+          <button class="owner-btn secondary" id="dance-refresh-btn" type="button">Refresh</button>
+        </div>
+      </div>
+      <div id="dance-list" class="doc-list"></div>
+    </div>
+    </section>
   </div>
 
   <script src="config.js"></script>
   <script src="knowledge.js"></script>
   <script src="terminology.js"></script>
+  <script src="dance.js"></script>
 </body>
 </html>

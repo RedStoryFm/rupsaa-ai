@@ -118,6 +118,20 @@ _TERM_PATTERNS = [
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:bolte|bolle)\s+ki\s+(?:bojhay|bujhay|bojhai|bujhai|bojhano hoy|bujhano hoy)\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,30}?)[\"'”]?\s+(?:ki|kii)(?:\s+jinis)?\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:ki|kii)\s+(?:mane|bojhay)\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
+    # Origin / "tell me about" / "explain X in <language>" (dance styles and other reference entries)
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:er\s+|ta\s+|ti\s+)?(?:origin|jonmo|utpotti)\s+(?:kothay|kothae|kothakar|ki)\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?kothakar(?:\s+(?:dance|nach|nritto|jinis))?\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?kotha\s*theke\s+(?:esheche|eseche|ashe|asche|elo)\s*\??\s*$", re.I),
+    re.compile(r"^\s*where\s+(?:is|does|do|did)\s+(?:the\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:dance\s+)?(?:from|come\s+from|originate(?:\s+from)?)\s*\??\s*$", re.I),
+    re.compile(r"^\s*(?:what(?:'s|\s+is)\s+the\s+)?origin\s+of\s+(?:the\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
+    re.compile(r"^\s*(?:more\s+)?about\s+(?:the\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
+    re.compile(r"^\s*(?:amake\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:somporke|shomporke|sombondhe)(?:\s+(?:ektu\s+)?(?:bolo|bol|janao|bujhao|bojhao))?\s*\??\s*$", re.I),
+    # "X niye" alone is usually just an answer ("porashona niye") — needs an explicit ask verb.
+    re.compile(r"^\s*(?:amake\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+niye\s+(?:ektu\s+)?(?:bolo|bol|janao|bujhao|bojhao)\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?(?:banglish|bangla|bengali|english)\s*(?:e|y|te)?\s+(?:ektu\s+)?(?:bojhao|bujhao|bolo|bujhiye\s+bolo|explain\s+koro)\s*\??\s*$", re.I),
+    re.compile(r"^\s*(?:আমাকে\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:সম্পর্কে|সম্বন্ধে)(?:\s+(?:একটু\s+)?(?:বলো|বল|বলুন|জানাও|বোঝাও))?\s*[?？।]?\s*$"),
+    re.compile(r"^\s*(?:আমাকে\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+নিয়ে\s+(?:একটু\s+)?(?:বলো|বল|বলুন|জানাও|বোঝাও)\s*[?？।]?\s*$"),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:কোথাকার|কোথা থেকে এসেছে|কোথা থেকে এল)(?:\s+নাচ)?\s*[?？।]?\s*$"),
     # Bengali: "স্ট্রিপ মানে কী", "X কী", "X বলতে কী বোঝায়", "X কাকে বলে", "X এর মানে কি"
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:এর\s+)?(?:মানে|অর্থ)\s+(?:কী|কি)\s*[?？।]?\s*$"),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+বলতে\s+(?:কী|কি)\s+(?:বোঝায়|বোঝানো হয়)\s*[?？।]?\s*$"),
@@ -134,7 +148,8 @@ _TERM_SUFFIX_RE = re.compile(r"[\s,]+(?:bolo(?: to| na)?|bolo to dekhi|please|pl
 _NOT_A_TERM = re.compile(
     rf"^(?:tumi|tui|apni|ami|amar|tomar|tor|ajke|aj|kal|ekhon|keno|kemon|kivabe|kothay|kokhon|ke|eta|sheta|seta|oita|"
     rf"you|i|it|this|that|he|she|they|we|up|going on|new|wrong|happening|the time|your name|"
-    rf"তুমি|তুই|আপনি|আমি|আমার|তোমার|আজ|আজকে|এখন|কেন|কেমন|এটা|সেটা)(?:\s|$)",
+    rf"yourself|yourselves|myself|me|us|him|her|them|tomake|amake|nijer|nijeke|ki|kichu|kono|"
+    rf"তুমি|তুই|আপনি|আমি|আমার|তোমার|আজ|আজকে|এখন|কেন|কেমন|এটা|সেটা|তোমাকে|আমাকে|নিজের)(?:\s|$)",
     re.I,
 )
 
@@ -163,9 +178,11 @@ _CASUAL_RE = _rx(
 
 
 def _term_candidate(message: str) -> str | None:
-    text = _TERM_SUFFIX_RE.sub("", _TERM_PREFIX_RE.sub("", message.strip()))
+    unsuffixed = _TERM_PREFIX_RE.sub("", message.strip())
+    text = _TERM_SUFFIX_RE.sub("", unsuffixed)
     for pat in _TERM_PATTERNS:
-        m = pat.match(text)
+        # Try the text without trailing filler first, then as typed ("X niye bolo" needs its verb).
+        m = pat.match(text) or (pat.match(unsuffixed) if unsuffixed != text else None)
         if not m:
             continue
         term = m.group("term").strip(" \"'“”‘’.,")
