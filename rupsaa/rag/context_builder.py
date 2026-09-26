@@ -20,6 +20,7 @@ from __future__ import annotations
 from collections.abc import Callable
 from dataclasses import dataclass, field
 
+from rupsaa.conversation.language_control import resolve_turn_language
 from rupsaa.rag.router import Route, RouteDecision, classify_message
 from rupsaa.rag.terminology import TerminologyStore, format_terminology_context
 
@@ -32,6 +33,8 @@ class TurnKnowledge:
     terminology_context: str | None = None
     terms_used: list[str] = field(default_factory=list)
     conversation_note: str | None = None
+    language: str | None = None  # explicitly requested reply language ("bn"/"banglish"/"en")
+    language_state: dict | None = None  # per-conversation language choice to keep for the next turn
 
     @property
     def route(self) -> str:
@@ -47,24 +50,22 @@ def build_turn_knowledge(
     previous_terms: list[str] | None = None,
     history_messages: int = 0,
     history_truncated: bool = False,
+    history: list | None = None,
+    language_state: dict | None = None,
 ) -> TurnKnowledge:
     """`use_rag` is the user's document-RAG toggle; it gates *documents* only.
     Owner-curated terminology is small, deterministic and always consulted
     for definition questions (a "Strip mane ki?" answer shouldn't depend on a
-    UI checkbox). `rag_query(question, strict=...)` is RagPipeline.query."""
+    UI checkbox). `rag_query(question, strict=...)` is RagPipeline.query.
+    `history` (ChatMessage-like objects with .role/.content) feeds the
+    structured recall block for memory questions; `language_state` is the
+    conversation's explicit language choice (rupsaa.conversation.language_control)."""
     decision = classify_message(message)
     out = TurnKnowledge(decision=decision)
+    out.language, out.language_state = resolve_turn_language(message, decision.route.value, language_state)
 
     if decision.route == Route.MEMORY:
-        note = (
-            "The user is asking about something said earlier in this conversation. "
-            "The conversation so far is above — answer from it directly."
-        )
-        if history_messages == 0:
-            note = "The user is asking about earlier messages, but this conversation has no earlier messages yet."
-        elif history_truncated:
-            note += " Only the most recent messages are kept; if what they ask about isn't there, say it's too far back."
-        out.conversation_note = note
+        out.conversation_note = memory_note(history, history_messages, history_truncated, question=message)
         return out
 
     matches = []
@@ -91,6 +92,32 @@ def build_turn_knowledge(
     if wants_documents:
         out.retrieved_context, out.sources = rag_query(message, strict=decision.strict_documents)
     return out
+
+
+MAX_RECALL_MESSAGES = 12
+MAX_RECALL_CHARS = 300
+
+
+def memory_note(history: list | None, history_messages: int, history_truncated: bool, question: str = "") -> str:
+    """Conversation-recall note: the user's own messages before the recall question as a
+    numbered, oldest-first list (the chat history itself also follows the system prompt).
+    Facts are only *listed* — which one answers the question is the model's job. The note
+    quotes the question, so it stays true for every turn of a conversation (serving == training)."""
+    user_msgs = [m.content for m in (history or []) if getattr(m, "role", None) == "user"]
+    q = question.strip()[:200]
+    if not user_msgs and history_messages == 0:
+        return (f"In the message \"{q}\" the user asks about earlier messages, but there were no earlier "
+                "messages in this conversation — say so.")
+    lines = [f"In the message \"{q}\" the user asks about something they said earlier in this conversation. "
+             "Answer it from the conversation itself (never from documents), directly and briefly, in the user's language."]
+    if user_msgs:
+        shown = user_msgs[-MAX_RECALL_MESSAGES:]
+        first_no = len(user_msgs) - len(shown) + 1
+        lines.append("The user's messages before that question, oldest first:")
+        lines += [f"{first_no + i}. {m[:MAX_RECALL_CHARS]}" for i, m in enumerate(shown)]
+    if history_truncated or (user_msgs and len(user_msgs) > MAX_RECALL_MESSAGES):
+        lines.append("Older messages are no longer kept; if what they ask about isn't listed, say it's too far back.")
+    return "\n".join(lines)
 
 
 @dataclass

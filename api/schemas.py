@@ -31,6 +31,8 @@ class ChatResponse(BaseModel):
     # / casual / general) and which terminology entries informed the reply.
     route: str | None = None
     terms_used: list[str] = []
+    # Reply language the user explicitly asked for ("bn" / "banglish" / "en"); None = mirror the user.
+    response_language: str | None = None
 
 
 class ModelInfo(BaseModel):

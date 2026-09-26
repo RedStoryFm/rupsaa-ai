@@ -13,6 +13,7 @@ from __future__ import annotations
 import logging
 from functools import lru_cache
 
+from rupsaa.conversation.language_control import directive_for
 from rupsaa.conversation.manager import ConversationManager
 from rupsaa.guardrails.essential_boundaries import check_text
 from rupsaa.model.inference import RupsaaEngine
@@ -24,6 +25,40 @@ from rupsaa.rag.terminology import TerminologyStore
 logger = logging.getLogger("rupsaa.api.services")
 
 
+def _trace_turn(*, conversation_id, message, language, knowledge, history, result) -> None:
+    """Opt-in per-turn trace (RUPSAA_TRACE_FILE=<path.jsonl>): exactly what the model
+    received. Off by default; contains conversation text, never credentials."""
+    import json
+    import os
+    from datetime import datetime, timezone
+
+    path = os.getenv("RUPSAA_TRACE_FILE")
+    if not path:
+        return
+    row = {
+        "ts": datetime.now(timezone.utc).isoformat(),
+        "conversation_id": conversation_id,
+        "user": message,
+        "detected_language": language,
+        "route": knowledge.route,
+        "route_reason": knowledge.decision.reason,
+        "term_candidate": knowledge.decision.term_candidate,
+        "terms_used": knowledge.terms_used,
+        "rag_sources": [s.get("source_filename") for s in knowledge.sources],
+        "rag_context_attached": knowledge.retrieved_context is not None,
+        "requested_language": knowledge.language,
+        "history_passed": history,
+        "system_prompt": getattr(result, "system_prompt", None),
+        "generation": getattr(result, "generation_params", None),
+        "reply": result.text,
+    }
+    try:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except OSError:
+        logger.warning("could not write trace to %s", path)
+
+
 class RupsaaService:
     def __init__(self):
         self._engine: RupsaaEngine | None = None
@@ -33,6 +68,8 @@ class RupsaaService:
         # conversation_id -> term ids used on the previous turn (for follow-ups
         # like "এটা বাংলায় বুঝিয়ে বলো").
         self._last_terms: dict[str, list[str]] = {}
+        # conversation_id -> explicit reply-language choice ("banglay bolo" etc.)
+        self._language: dict[str, dict] = {}
 
     @property
     def engine(self) -> RupsaaEngine:
@@ -92,16 +129,21 @@ class RupsaaService:
             previous_terms=self._last_terms.get(conversation.conversation_id),
             history_messages=len(conversation.messages),
             history_truncated=conversation.dropped_messages > 0,
+            history=conversation.messages,
+            language_state=self._language.get(conversation.conversation_id),
         )
-        logger.info("route=%s terms=%s docs=%d", knowledge.route, knowledge.terms_used, len(knowledge.sources))
+        logger.info("route=%s terms=%s docs=%d lang=%s", knowledge.route, knowledge.terms_used,
+                    len(knowledge.sources), knowledge.language)
         retrieved_context, sources = knowledge.retrieved_context, knowledge.sources
 
+        history_before = [{"role": m.role, "content": m.content} for m in conversation.messages]
         result = self.engine.chat(
             history=conversation.messages,
             user_message=message,
             retrieved_context=retrieved_context,
             terminology_context=knowledge.terminology_context,
             conversation_note=knowledge.conversation_note,
+            language_directive=directive_for(knowledge.language_state if knowledge.language else None),
             generation_overrides={
                 "temperature": temperature,
                 "top_p": top_p,
@@ -115,7 +157,15 @@ class RupsaaService:
                 self._last_terms[conversation.conversation_id] = knowledge.terms_used
             elif knowledge.route not in ("followup", "memory"):
                 self._last_terms.pop(conversation.conversation_id, None)
+            if knowledge.language_state:
+                self._language[conversation.conversation_id] = knowledge.language_state
+            else:
+                self._language.pop(conversation.conversation_id, None)
 
+        _trace_turn(
+            conversation_id=conversation.conversation_id, message=message, language=language,
+            knowledge=knowledge, history=history_before, result=result,
+        )
         return {
             "response": result.text,
             "conversation_id": conversation.conversation_id,
@@ -125,6 +175,7 @@ class RupsaaService:
             "blocked": result.blocked,
             "route": knowledge.route,
             "terms_used": knowledge.terms_used,
+            "response_language": knowledge.language,
         }
 
     def reindex(self) -> int:
@@ -134,6 +185,7 @@ class RupsaaService:
     def reset_conversation(self, conversation_id: str) -> None:
         self.conversation_manager.reset(conversation_id)
         self._last_terms.pop(conversation_id, None)
+        self._language.pop(conversation_id, None)
 
     def model_info(self) -> dict:
         from rupsaa.config import get_settings

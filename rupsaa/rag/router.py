@@ -69,15 +69,21 @@ _MEMORY_RE = _rx(
     rf"{_B}what (color|colour|name|number|city|food|thing) did i ",
     rf"{_B}(earlier|before|previously),? i (said|told|mentioned|asked)",
     rf"{_B}what did we (talk|discuss) about",
+    rf"{_B}(sum up|summari[sz]e|recap)\s+(what|everything)\s+i('ve| have)?\s*(said|told|mentioned|shared)",
+    rf"{_B}what i('ve| have) (said|told you|mentioned) (so far|till now|until now)",
     # Banglish
-    rf"{_B}ami (age|agey|prothome|prothom e|first e|shurute|shuru te)?\s*ki\s+(\w+\s+)?(bolechilam|bollam|boleci|bolchilam|likhechilam|jiggesh korechilam|jigges korechilam|jiggasha korechilam)",
+    rf"{_B}(ami|amar) (age|agey|prothome|prothom e|first e|shurute|shuru te)?\s*ki\s+(\w+\s+)?(bolechilam|bolechi|bollam|boleci|bolchilam|bolsilam|likhechilam|likhechi|jiggesh korechilam|jigges korechilam|jiggasha korechilam)",
+    rf"{_B}(ager|agey|prothom|first|ager ta|last) (message|msg|kotha)\s*(e|te)?\s*ki\s+(bolechilam|bolechi|bollam|likhechilam|likhechi)",
     rf"{_B}(amar|amr) (ager|agey|prothom|first|shesh|last) (kotha|message|msg|question|proshno)",
     rf"{_B}mone (ache|ase|ache ki)[, ]+ami ki",
     rf"{_B}(ki|kon) (color|colour|nam|naam|jinis|kotha) (bolechilam|bollam)",
+    # "ami kar biyer kotha bolechilam?", "amar kothay betha bolechilam?", "ami keno mon kharap bolechilam?"
+    rf"{_B}(ki|kar|kothay|keno|kon|kake|kobe|koto|koi)\b[^?.!]{{0,40}}?\b(bolechilam|bolchilam|bollam|likhechilam)(?![A-Za-z])",
     # Bengali
     rf"আমি (আগে|প্রথমে|শুরুতে)?\s*(কী|কি)\s+(\S+\s+)?(বলেছিলাম|বললাম|লিখেছিলাম|জিজ্ঞেস করেছিলাম)",
     rf"আমার (আগের|প্রথম|শেষ) (কথা|মেসেজ|প্রশ্ন)",
     rf"মনে আছে[, ]*আমি",
+    r"(কী|কি|কার|কোথায়|কেন|কোন|কাকে|কবে)[^?।!]{0,40}?(বলেছিলাম|লিখেছিলাম)",
 )
 
 _FOLLOWUP_RE = _rx(
@@ -88,13 +94,13 @@ _FOLLOWUP_RE = _rx(
     rf"^\s*(explain|tell me) (more|in (more )?detail)|^\s*(more detail|elaborate|go deeper)\s*[?.!]*\s*$",
     rf"^\s*(what do you mean|i don'?t get it|didn'?t understand)",
     # Banglish
-    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*(bujhiye|bujhie|bujhaye)?\s*(bolo|bolen|bol|likho)",
-    rf"{_B}(eta|sheta|seta)?\s*(short|choto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
+    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
+    rf"{_B}(eta|sheta|seta)?\s*(short|choto|chhoto|chotto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
     rf"{_B}(aro|ektu) (detail|bistarito|bistarito bhabe|bujhiye) (bolo|bol|bujhao)",
-    rf"{_B}(bujhlam|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",
+    rf"{_B}(bujhlam na|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",  # "bujhlam" alone = "got it", not a re-ask
     # Bengali
-    r"(এটা|সেটা|ওটা)?\s*(বাংলায়|ইংরেজিতে)\s*(বুঝিয়ে)?\s*(বলো|বলুন|বল|লেখো)",
-    r"(ছোট|সহজ) করে (বলো|বল|বোঝাও)",
+    r"(এটা|সেটা|ওটা)?\s*(বাংলায়|ইংরেজিতে)\s*(বুঝিয়ে)?\s*(বলো|বলুন|বল|লেখো|দাও)",
+    r"(ছোট|সহজ|শর্ট) করে (বলো|বল|বোঝাও)",
     r"(আরও|আরো|একটু) (বিস্তারিত|বুঝিয়ে) (বলো|বল|বোঝাও)",
     r"(বুঝলাম না|বুঝিনি|বুঝতে পারিনি)",
 )

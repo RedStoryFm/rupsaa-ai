@@ -31,6 +31,8 @@ class ChatResult:
     blocked: bool
     prompt_tokens: int = 0
     completion_tokens: int = 0
+    system_prompt: str | None = None  # the exact system prompt sent (for opt-in tracing)
+    generation_params: dict | None = None
 
 
 class RupsaaEngine:
@@ -61,6 +63,7 @@ class RupsaaEngine:
         retrieved_context: str | None = None,
         terminology_context: str | None = None,
         conversation_note: str | None = None,
+        language_directive: str | None = None,
         generation_overrides: dict | None = None,
     ) -> ChatResult:
         boundary = check_text(user_message)
@@ -72,6 +75,7 @@ class RupsaaEngine:
             terminology_context=terminology_context,
             conversation_note=conversation_note,
             prompt_version=self.prompt_version,
+            language_directive=language_directive,
         )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]
@@ -85,4 +89,6 @@ class RupsaaEngine:
             blocked=False,
             prompt_tokens=result.prompt_tokens,
             completion_tokens=result.completion_tokens,
+            system_prompt=system_prompt,
+            generation_params=dict(vars(params)),
         )

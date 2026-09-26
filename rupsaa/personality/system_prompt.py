@@ -71,6 +71,7 @@ def build_system_prompt(
     terminology_context: str | None = None,
     conversation_note: str | None = None,
     prompt_version: str = "v0.1",
+    language_directive: str | None = None,
 ) -> str:
     """Assemble the full system prompt for a single turn.
 
@@ -94,4 +95,6 @@ def build_system_prompt(
         parts.append(f"Retrieved context:\n{retrieved_context}")
     if conversation_note:
         parts.append(conversation_note)
+    if language_directive:
+        parts.append(language_directive)  # last, closest to the conversation: it overrides mirroring
     return "\n\n".join(parts)

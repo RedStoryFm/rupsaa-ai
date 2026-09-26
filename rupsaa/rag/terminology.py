@@ -281,13 +281,35 @@ class TerminologyStore:
                 # A term mentioned inside a definition question for something else scores lower.
                 add(rec, 0.9 if not cand else 0.75, best, "phrase")
                 continue
-            if cand and len(cand) >= 4:
-                ratio = max((difflib.SequenceMatcher(None, cand, k).ratio() for k in keys), default=0.0)
+            if cand and len(cand) >= 4 and not _all_known_words(cand):
+                # Typos rarely change the first letter ("tripping" is not "stripping").
+                same_start = [k for k in keys if k[:1] == cand[:1]]
+                ratio = max((difflib.SequenceMatcher(None, cand, k).ratio() for k in same_start), default=0.0)
                 if ratio >= 0.85:
                     add(rec, round(ratio * 0.9, 3), cand, "fuzzy")
-                elif " " not in cand and any(len(k) >= 4 and _one_edit_apart(cand, k) for k in keys):
+                elif " " not in cand and any(len(k) >= 4 and _one_edit_apart(cand, k) for k in same_start):
                     add(rec, 0.75, cand, "fuzzy")
+        if cand and any(m.method == "exact" for m in matches.values()):
+            # "lip biting ki?" is about Lip Biting — not also about the term whose alias is "biting".
+            matches = {i: m for i, m in matches.items()
+                       if not (m.method == "phrase" and m.matched in cand and m.matched != cand)}
         return sorted(matches.values(), key=lambda m: -m.score)[:limit]
+
+
+_KNOWN_WORDS: frozenset[str] | None = None
+
+
+def _all_known_words(phrase: str) -> bool:
+    """True if every word of `phrase` is a common real English word (rupsaa/rag/known_words.txt):
+    such a phrase is not a typo, so it never fuzzy-matches a term ("content" !~ "consent")."""
+    global _KNOWN_WORDS
+    if _KNOWN_WORDS is None:
+        path = Path(__file__).with_name("known_words.txt")
+        _KNOWN_WORDS = frozenset(
+            line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line and not line.startswith("#")
+        ) if path.exists() else frozenset()
+    words = phrase.split()
+    return bool(words) and all(w in _KNOWN_WORDS for w in words)
 
 
 def _one_edit_apart(a: str, b: str) -> bool:
