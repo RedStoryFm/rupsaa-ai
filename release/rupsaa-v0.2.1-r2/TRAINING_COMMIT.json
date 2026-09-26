@@ -1,0 +1,12 @@
+{
+  "training_commit": "00422c51b3b664c0d14497a9605165e22923c086",
+  "tag": "rupsaa-v0.2.1-r2-training",
+  "dataset_sha256": "e1332c83b522cc57bd3240a28e517edda1cd757a929afcf89b155118d254cd22",
+  "supersedes": {
+    "dataset_sha256": "5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543",
+    "tag": "rupsaa-v0.2.1-training",
+    "trained": false
+  },
+  "recorded_at": "2026-09-26T17:39:24.660470+00:00",
+  "note": "The V0.2.1 adapter is to be trained from this commit's tree (R2). This file is added by the NEXT commit, which changes nothing training-relevant."
+}
