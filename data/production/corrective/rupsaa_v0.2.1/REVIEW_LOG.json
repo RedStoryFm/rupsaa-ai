@@ -1,0 +1,830 @@
+{
+ "reviewed_by": "Claude (full manual read of every conversation, 2026-09-26)",
+ "style_guide": "data/production/reports/rupsaa_v0.2.1_preparation/BANGLISH_STYLE_GUIDE.md",
+ "records": [
+  {
+   "id": "c021-001",
+   "status": "rewritten",
+   "reason": "replaced: greeting contained the eval prompt 'kemon acho?' — new, structurally different greeting",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-002",
+   "status": "rewritten",
+   "reason": "style: 'eta-i ekhon main kaj' -> natural 'ekhon etai amar kaj'"
+  },
+  {
+   "id": "c021-003",
+   "status": "rewritten",
+   "reason": "style: aaj/tara-tari -> aj/taratari (house style)"
+  },
+  {
+   "id": "c021-004",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-005",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-006",
+   "status": "rewritten",
+   "reason": "style: 'Cha-r team' -> 'cha er team'"
+  },
+  {
+   "id": "c021-007",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-008",
+   "status": "rewritten",
+   "reason": "wording: 'Mood ta palte jay' -> 'Mood ta bodle jay'"
+  },
+  {
+   "id": "c021-009",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-010",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-011",
+   "status": "rewritten",
+   "reason": "style: duto-i -> dutoi"
+  },
+  {
+   "id": "c021-012",
+   "status": "rewritten",
+   "reason": "meaning fixed: said 'eat without finishing the earlier work' — now 'eat first, work later'"
+  },
+  {
+   "id": "c021-013",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-014",
+   "status": "rewritten",
+   "reason": "spelling: Brishti r / janala r -> Brishtir / janalar"
+  },
+  {
+   "id": "c021-015",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-016",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-017",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-018",
+   "status": "rewritten",
+   "reason": "style: duto-i -> dutoi"
+  },
+  {
+   "id": "c021-019",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-020",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-021",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-022",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-023",
+   "status": "rewritten",
+   "reason": "leakage: user turn 'মোটামুটি' was identical to a frozen VALIDATION user turn — replaced"
+  },
+  {
+   "id": "c021-024",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-025",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-026",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-027",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-028",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-029",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-030",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-031",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-032",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-033",
+   "status": "rewritten",
+   "reason": "style: intimacy-r -> intimacy er; duijon-i -> dujonei"
+  },
+  {
+   "id": "c021-034",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-035",
+   "status": "rewritten",
+   "reason": "grammar: 'kontar upor tomar haat ache' -> 'kon gulo tomar hate ache'"
+  },
+  {
+   "id": "c021-036",
+   "status": "rewritten",
+   "reason": "held-out integrity: command 'ebar banglish e bolo' was a near-copy of trained commands — now 'roman horofe likho'"
+  },
+  {
+   "id": "c021-037",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-038",
+   "status": "rewritten",
+   "reason": "unnatural Banglish ('ki te okay ar ki te okay na') rewritten; prompt changed off the benchmark wording"
+  },
+  {
+   "id": "c021-039",
+   "status": "rewritten",
+   "reason": "style: tara-hura -> tarahuro, duijon -> dujon, barae -> baray"
+  },
+  {
+   "id": "c021-040",
+   "status": "rewritten",
+   "reason": "held-out integrity: reply was near-identical to a frozen V0.2 reply — rewritten"
+  },
+  {
+   "id": "c021-041",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-042",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-043",
+   "status": "rewritten",
+   "reason": "unnatural 'manush ta nijeke dekha hocche bole feel kore' -> 'mone kore take shotti dekha hocche'"
+  },
+  {
+   "id": "c021-044",
+   "status": "rewritten",
+   "reason": "style taratari; command changed off the benchmark wording 'eta banglay bolo'"
+  },
+  {
+   "id": "c021-045",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-046",
+   "status": "rewritten",
+   "reason": "style: duto-i -> dutoi"
+  },
+  {
+   "id": "c021-047",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-048",
+   "status": "rewritten",
+   "reason": "replaced: 'tumi ki amar sathe banglish e kotha bolte paro?' was a trivial paraphrase of the owner benchmark prompt",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-049",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-050",
+   "status": "rewritten",
+   "reason": "held-out integrity: 'bangla te bolo' near-copy of trained commands — now 'eta bangla hoorofe likhe dao'; 3rd turn removed (its system prompt lost the directive)"
+  },
+  {
+   "id": "c021-051",
+   "status": "rewritten",
+   "reason": "style: asol -> ashol, duijon er -> dujoner"
+  },
+  {
+   "id": "c021-052",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-053",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-054",
+   "status": "rewritten",
+   "reason": "style: ke-i -> -kei"
+  },
+  {
+   "id": "c021-055",
+   "status": "rewritten",
+   "reason": "runtime gap found ('banglish e-i' not detected, fixed in language_control); first reply clarified"
+  },
+  {
+   "id": "c021-056",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-057",
+   "status": "rewritten",
+   "reason": "benchmark: user 'achcha' equals the owner's test prompt -> 'ohh accha'; style fixes in the explanation"
+  },
+  {
+   "id": "c021-058",
+   "status": "rewritten",
+   "reason": "style + wording: 'shokal e tara thakbe na' -> 'shokale tarahuro thakbe na'"
+  },
+  {
+   "id": "c021-059",
+   "status": "rewritten",
+   "reason": "style: Ekhon-i/Duijon/bolle-o"
+  },
+  {
+   "id": "c021-060",
+   "status": "rewritten",
+   "reason": "style: bosano-i -> bosanoi"
+  },
+  {
+   "id": "c021-061",
+   "status": "rewritten",
+   "reason": "style + clarity of the consent point"
+  },
+  {
+   "id": "c021-062",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-063",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-064",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-065",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-066",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-067",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-068",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-069",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-070",
+   "status": "rewritten",
+   "reason": "leakage: reply 'Bolo, shunchi.' was word-for-word a frozen VALIDATION target; style Achcha"
+  },
+  {
+   "id": "c021-071",
+   "status": "rewritten",
+   "reason": "style: Accha -> Achcha, Emni-o -> Emnio"
+  },
+  {
+   "id": "c021-072",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-073",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-074",
+   "status": "rewritten",
+   "reason": "wording: 'kintu tara kore na' (unclear) -> 'jor kore bhulte jeyo na'"
+  },
+  {
+   "id": "c021-075",
+   "status": "rewritten",
+   "reason": "unnatural question rewritten"
+  },
+  {
+   "id": "c021-076",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-077",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-078",
+   "status": "rewritten",
+   "reason": "style: ta-o -> tao"
+  },
+  {
+   "id": "c021-079",
+   "status": "rewritten",
+   "reason": "'practice-i shob' -> 'ashol holo practice'"
+  },
+  {
+   "id": "c021-080",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-081",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-082",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-083",
+   "status": "rewritten",
+   "reason": "style: deya-o -> deyao"
+  },
+  {
+   "id": "c021-084",
+   "status": "rewritten",
+   "reason": "wording: 'bairer alo te boso' -> 'baire alo te giye boso'"
+  },
+  {
+   "id": "c021-085",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-086",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-087",
+   "status": "rewritten",
+   "reason": "held-out integrity: 'situationship' already in frozen V0.2 train — replaced by FOMO (absent everywhere)",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-088",
+   "status": "rewritten",
+   "reason": "wording: mittha bola -> mitthe kotha bola"
+  },
+  {
+   "id": "c021-089",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-090",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-091",
+   "status": "rewritten",
+   "reason": "unnatural list rewritten"
+  },
+  {
+   "id": "c021-092",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-093",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-094",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-095",
+   "status": "rewritten",
+   "reason": "spelling: parena -> pare na"
+  },
+  {
+   "id": "c021-096",
+   "status": "rewritten",
+   "reason": "held-out integrity: 'toxic' already in frozen V0.2 train — replaced by impostor syndrome",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-097",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-098",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-099",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-100",
+   "status": "rewritten",
+   "reason": "style: tara-tari/shuru tei"
+  },
+  {
+   "id": "c021-101",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-102",
+   "status": "rewritten",
+   "reason": "style: puro -> pura, kora-i -> koratai"
+  },
+  {
+   "id": "c021-103",
+   "status": "rewritten",
+   "reason": "held-out integrity: ghosting also taught in train c021-037 — new topic (slow texting)",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-104",
+   "status": "rewritten",
+   "reason": "style: duto-i -> dutoi"
+  },
+  {
+   "id": "c021-105",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-106",
+   "status": "rewritten",
+   "reason": "wording: fol -> result"
+  },
+  {
+   "id": "c021-107",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-108",
+   "status": "rewritten",
+   "reason": "style: ek-i/eta-i/petey"
+  },
+  {
+   "id": "c021-109",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-110",
+   "status": "rewritten",
+   "reason": "wording: 'mon shohoje ante chay na' -> 'bhorsha korte chay na'"
+  },
+  {
+   "id": "c021-111",
+   "status": "rewritten",
+   "reason": "spelling: 'ghar' (house) -> 'ghaar' (neck); egio -> egiyo"
+  },
+  {
+   "id": "c021-112",
+   "status": "rewritten",
+   "reason": "spelling: kaoke -> kauke; lagle-i -> laglei"
+  },
+  {
+   "id": "c021-113",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-114",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-115",
+   "status": "rewritten",
+   "reason": "spelling: khheyal -> kheyal"
+  },
+  {
+   "id": "c021-116",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-117",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-118",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-119",
+   "status": "rewritten",
+   "reason": "style: duto-i -> dutoi"
+  },
+  {
+   "id": "c021-120",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-121",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-122",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-123",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-124",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-125",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-126",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-127",
+   "status": "rewritten",
+   "reason": "style: intimacy-r -> intimacy er"
+  },
+  {
+   "id": "c021-128",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-129",
+   "status": "rewritten",
+   "reason": "style: intimacy-r, chamrae -> chamray"
+  },
+  {
+   "id": "c021-130",
+   "status": "rewritten",
+   "reason": "'porishkar-porichchhonnota ar safer-sex' (stilted) -> 'hygiene ar safer sex'"
+  },
+  {
+   "id": "c021-131",
+   "status": "rewritten",
+   "reason": "style: intimacy-r, dujon-i"
+  },
+  {
+   "id": "c021-132",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-133",
+   "status": "rewritten",
+   "reason": "style: bhalobasha-r chhoa-o -> bhalobashar chhoyao"
+  },
+  {
+   "id": "c021-134",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-135",
+   "status": "rewritten",
+   "reason": "script fix: Latin-typed typo question now answered in Banglish; kaoke -> kauke"
+  },
+  {
+   "id": "c021-136",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-137",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-138",
+   "status": "rewritten",
+   "reason": "held-out integrity: neck kissing duplicated train c021-111 — now a hair-stroking typo (term only in held-out)",
+   "replaced_with_new_content": true
+  },
+  {
+   "id": "c021-139",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-140",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-141",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-142",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-143",
+   "status": "rewritten",
+   "reason": "held-out integrity: question template matched train c021-146 — rephrased"
+  },
+  {
+   "id": "c021-144",
+   "status": "rewritten",
+   "reason": "style: eta-i -> etai"
+  },
+  {
+   "id": "c021-145",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-146",
+   "status": "rewritten",
+   "reason": "style: doura-dori -> douradouri"
+  },
+  {
+   "id": "c021-147",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-148",
+   "status": "rewritten",
+   "reason": "style: hanta-hati -> hatahati"
+  },
+  {
+   "id": "c021-149",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-150",
+   "status": "rewritten",
+   "reason": "benchmark: exact owner prompt 'ami age ki bolechilam?' removed; Accha -> Achcha"
+  },
+  {
+   "id": "c021-151",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-152",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-153",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-154",
+   "status": "rewritten",
+   "reason": "user typo 'shoto kichu' -> 'kichui'"
+  },
+  {
+   "id": "c021-155",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-156",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-157",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-158",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-159",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-160",
+   "status": "kept",
+   "reason": ""
+  },
+  {
+   "id": "c021-161",
+   "status": "added",
+   "reason": "added: multi-message summary recall (Banglish)"
+  },
+  {
+   "id": "c021-162",
+   "status": "added",
+   "reason": "added: multi-message summary recall (English)"
+  }
+ ],
+ "summary": {
+  "reviewed": 162,
+  "kept": 94,
+  "rewritten": 66,
+  "of_which_replaced_with_new_content": 6,
+  "removed": 0,
+  "added": 2
+ }
+}

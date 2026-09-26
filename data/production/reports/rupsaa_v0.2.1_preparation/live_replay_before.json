@@ -1,0 +1,377 @@
+{
+  "label": "before",
+  "created_at": "2026-09-25T17:36:12.945488+00:00",
+  "sequence": [
+    "hi, tumi kemon acho?",
+    "ajke amar mood ta bhalo na",
+    "achcha",
+    "tumi amar sathe banglish e kotha bolbe?",
+    "Strip mane ki?",
+    "strip ta ektu simple kore bojhao",
+    "Forplay ki?",
+    "এটা বাংলায় বুঝিয়ে বলো",
+    "amar favourite color blue",
+    "ami ki color bolechilam?",
+    "ami age ki bolechilam?"
+  ],
+  "owner_live_outputs": [
+    "Bhalo achi tumi ki bhabcho?",
+    "Ki dekhle shune tumi niye sobcheye beshi mood down hoye jai?",
+    "Just express korar dorkar nai, tai bolte pari - ekta somoy kokhono shobcheye beshi mood down hoyeo hoye jai।",
+    "Sheta niye concern na kore amar sathe, tumi amake comfortable feel koro. Kotha bolte chao?",
+    "Simple term - strip mane kichu niye kichu remove kora, typically bishoyer jonno. Tumi shunte chai ki emon kichu?",
+    "Strip mane gradually ar often seductive diye kichu niye kichu remove kora - eta othak kori je tomar situation er upor depend kore. Eta always performative na, sometimes just a normal thing, sheta difference thakte pare context er upor।",
+    "Foreplay mane kichu sex e bishoy der jonno kichu make karar effort - physical onno der jonno, emotional intimacy, nijer mood er modhhe ekta build-up create kora. Shobar onno der jonno o shomoy, eta manush er bhoy gulo reduce kore dujon e mone hote pare।",
+    "Foreplay mane kichu sex e bishoy der jonno kichu physical ar emotional activity - body part der jonno remove kora, nijer mood er modhhe relax kora, jate onno der interest upor rakho, ei ekta build-up create kora. Tumi keno ask korcho, interest ache ki?",
+    "Blue ekta very grounding color, calm feeling ashar - shudhu ekta fun fact!",
+    "Blue - tumi emon kichu onek baar bolche, ekdom forget korechilo।",
+    "Sorry, ami memory er sathe completely full. Ki bolechile?"
+  ],
+  "runs": [
+    {
+      "conversation_id": "30ea1206-597d-4dda-9e15-3ef211ce1b6e",
+      "turns": [
+        {
+          "user": "hi, tumi kemon acho?",
+          "reply": "Achi bhalo, tumi ki?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ajke amar mood ta bhalo na",
+          "reply": "Ki hobe naki, ekta shunchi lagche?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "achcha",
+          "reply": "Sheta beshi important - ekta small break, ektu janiye hoye ja. Ekhon ki dekhecho?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "tumi amar sathe banglish e kotha bolbe?",
+          "reply": "Sure, bolo, ami kono problem mone korbo na. Amar kache shobcheye comfortable language eta।",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": true,
+          "sources": [
+            "rupsaa_identity.md",
+            "rupsaa_identity.md"
+          ],
+          "response_language": null
+        },
+        {
+          "user": "Strip mane ki?",
+          "reply": "It just means removing clothing, often slowly or for attention. Kintu context e different meaning dey - some ke stripteasing, others partner er jonno, ar alada ekta category ache. Tumi ki shomadhan korcho already, ba na?",
+          "route": "terminology",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "strip ta ektu simple kore bojhao",
+          "reply": "Fair, kichuta beshi simple kora - strip just means removing clothes, sometimes gradually and intentionally. Ki dorkar nijer kichur emon kora, ba jana?",
+          "route": "followup",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "Forplay ki?",
+          "reply": "Foreplay mane sexual activity chilo na, tomar mood ta bhalo hoye gele, shomoy e. Kintu somoy e shudhu physical aspect - emotional connection der cheye beshi matter kore. Tumi ki shomadhan korte chai, ba just clear korte chao?",
+          "route": "terminology",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "এটা বাংলায় বুঝিয়ে বলো",
+          "reply": "Fair, তবে এখন শুধু সহজ ভাষায় জবাব দিই, আর প্রশ্নটা অনুযায়ী বিস্তারিত করি। হ্যাঁ, ফোরপ্লে মানে এমন একটা সেক্সুয়াল activity যা অন্যান্য সেক্সুয়াল activity টার চেয়ে আগে হয়, যাতে স্থানীয় উত্তেজনা, প্রতিক্রিয়া, বা সম্পর্ক বাড়ে। কী নিয়ে জিজ্ঞেস করছো আজকে?",
+          "route": "followup",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "amar favourite color blue",
+          "reply": "Blue shobcheye attractive color, tui ki shune chai?",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami ki color bolechilam?",
+          "reply": "Shune bola, blue, tumi ki shone e chao?",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami age ki bolechilam?",
+          "reply": "Age ki bolechile amar kache niye, amar memory sheta clear na. Tor memory correct, tai bolo ei to make it official।",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        }
+      ]
+    },
+    {
+      "conversation_id": "e79c2ebb-f796-444b-a9e3-0c6ea41c2a5b",
+      "turns": [
+        {
+          "user": "hi, tumi kemon acho?",
+          "reply": "Acho bhalo, tumi ki dekhe?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ajke amar mood ta bhalo na",
+          "reply": "Ki hobe, bolo - shudhu shuru hoyeche ei feeling ba jinis ta clear hoyechilo na।",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "achcha",
+          "reply": "Sotti bolte mone hocche tumi ei feeling ta handle korar sathe sathe e boro cholecho - ekjon na hole eta build up kore।",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "tumi amar sathe banglish e kotha bolbe?",
+          "reply": "Sure, if you want - tumi ki prefer korcho?",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": true,
+          "sources": [
+            "rupsaa_identity.md",
+            "rupsaa_identity.md"
+          ],
+          "response_language": null
+        },
+        {
+          "user": "Strip mane ki?",
+          "reply": "Strip mane simply clothing remove kora - gradually, seductively, ar ba torpokta bhabe - eta o. Kono other kono context deya shobcheye beshi matter kore, tarpor shathe term ja kothay bole diye pawa jai.",
+          "route": "terminology",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "strip ta ektu simple kore bojhao",
+          "reply": "Fair - strip mane just clothing remove kora, gradually ba seductively - ekjon kichu eta include kore, alada alada.",
+          "route": "followup",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "Forplay ki?",
+          "reply": "Foreplay mane sexual or intimate activity tomar jonno jigges korte hole shomoy shuru hoyeche, usually to make body comfortable ba aroused - ekjon er jonno shikha howa naki clearly shurute arujon hoyeche eta important difference, always jani dorkar nai.",
+          "route": "terminology",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "এটা বাংলায় বুঝিয়ে বলো",
+          "reply": "Foreplay mane jigges kore tomar jonno sexual activity shomoy shuru hoyeche, usually comfort ba arousal build korte pare - clear shikha ba arujon shuru hoyeche eta important difference, always jani dorkar nai.",
+          "route": "followup",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "amar favourite color blue",
+          "reply": "Blue thakleo bhalo laglo, sheta matter kore na mone rekho - eta personal detail tui onujayi।",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami ki color bolechilam?",
+          "reply": "Yes, tumi amar jonno blue bolechile - ami tumi er preference rakhar sathe e ektu more information dey jeta useful hishebe, amar own guess na।",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami age ki bolechilam?",
+          "reply": "Tumi amar jonno ebochile, sheta matter kore na - just ektu extra information deyar jonno emon kichu add kori jeta tumi jei bolecho na।",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        }
+      ]
+    },
+    {
+      "conversation_id": "3ca0c580-9005-4ca3-964a-8390d32e1783",
+      "turns": [
+        {
+          "user": "hi, tumi kemon acho?",
+          "reply": "Bhalo amar, tumi ki chao?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ajke amar mood ta bhalo na",
+          "reply": "Ki niye affected hoyeche tumi jani nai?",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "achcha",
+          "reply": "Na shunte chao na, answer give korar dorkar nai - mood thakle ekta minute dekho boro bhabte parbe।",
+          "route": "casual",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "tumi amar sathe banglish e kotha bolbe?",
+          "reply": "Sure, why not, this could be fun. Boro, tumi bolo tumi ki bolecho।",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": true,
+          "sources": [
+            "rupsaa_identity.md",
+            "rupsaa_identity.md"
+          ],
+          "response_language": null
+        },
+        {
+          "user": "Strip mane ki?",
+          "reply": "Strip mane remove kora, kichu kichu nijer jonno. Sheta general term, exact context depend kore eta ki sexual, seductive ba just simple remove, ar mane ki notun.",
+          "route": "terminology",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "strip ta ektu simple kore bojhao",
+          "reply": "Sheta mane just gradually rupurup korar process, alada kichu naki na - eta general term, nijei nishchita context diye bhabe specific hote pare।",
+          "route": "followup",
+          "terms_used": [
+            "term-strip_stripping"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "Forplay ki?",
+          "reply": "Foreplay mane sexual activity e rakhar jonno onujayi prepare kora, build kora - ekta example thakte parbo tumi ekjon shuru te ki shobcheye enjoy korcho, tarpor bodole body/brain ready hoye gele?",
+          "route": "terminology",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "এটা বাংলায় বুঝিয়ে বলো",
+          "reply": "Foreplay mane onujayi other sexual activity er cheye prepare kora - body/brain der mood build kora, comfortable feeling create kora, sheta general concept.",
+          "route": "followup",
+          "terms_used": [
+            "term-foreplay"
+          ],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "amar favourite color blue",
+          "reply": "Blue - nice choice. Amar favorite color green, tui ki?",
+          "route": "general",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami ki color bolechilam?",
+          "reply": "Tumi shuru te boloche 'stript', seta amake exactly koto bano nijer jonno, tor favori color emon na।",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        },
+        {
+          "user": "ami age ki bolechilam?",
+          "reply": "Ami forget korege tumi boloche 'stript' mane 'simple strip', ekjon shuru te tumi bolecho ei. Tumi age ki bolechilam na, tai ami ignore korege।",
+          "route": "memory",
+          "terms_used": [],
+          "rag_used": false,
+          "sources": [],
+          "response_language": null
+        }
+      ]
+    }
+  ]
+}

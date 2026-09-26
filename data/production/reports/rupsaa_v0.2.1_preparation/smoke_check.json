@@ -1,0 +1,104 @@
+{
+  "all_passed": true,
+  "checks": {
+    "export_matches_freeze_manifest": {
+      "pass": true,
+      "detail": "6 files"
+    },
+    "parent_v02_export_unchanged": {
+      "pass": true,
+      "detail": "rupsaa_v0.2 train/validation/test == V02 manifest"
+    },
+    "external_validation_test_identical_to_v02": {
+      "pass": true,
+      "detail": "byte-identical copies"
+    },
+    "dataset_is_v021_train": {
+      "pass": true,
+      "detail": "['rupsaa_v0.2.1_train'] in data/production/exports/rupsaa_v0.2.1"
+    },
+    "fresh_lora_from_base": {
+      "pass": true,
+      "detail": "base=Qwen/Qwen2.5-7B-Instruct adapter=None"
+    },
+    "output_dir_safe": {
+      "pass": true,
+      "detail": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2.1 (absent)"
+    },
+    "qlora_settings": {
+      "pass": true,
+      "detail": "4bit nf4 double=True grad_ckpt=True bf16=True OptimizerNames.PAGED_ADAMW_8BIT"
+    },
+    "lora_settings": {
+      "pass": true,
+      "detail": "r=16 a=32 d=0.05 ['q_proj', 'k_proj', 'v_proj', 'o_proj', 'gate_proj', 'up_proj', 'down_proj']"
+    },
+    "schedule": {
+      "pass": true,
+      "detail": "lr=0.0002 epochs=2.0 warmup=6 batch=2x8 seed=42"
+    },
+    "best_model_retention": {
+      "pass": true,
+      "detail": "eval/save every 20"
+    },
+    "no_rows_dropped": {
+      "pass": true,
+      "detail": "1662 tokenized / 1662 rows"
+    },
+    "resplit_counts": {
+      "pass": true,
+      "detail": "train=1578 eval=84"
+    },
+    "internal_eval_is_the_planned_v02_rows": {
+      "pass": true,
+      "detail": "84 planned eval rows, all single-copy V0.2"
+    },
+    "no_corrective_row_in_internal_eval": {
+      "pass": true,
+      "detail": "141 distinct corrective rows, 0 in eval"
+    },
+    "expected_steps": {
+      "pass": true,
+      "detail": "98/epoch x 2 = 196"
+    },
+    "corrective_rows_equal_runtime_rebuild": {
+      "pass": true,
+      "detail": "mismatches: []"
+    },
+    "system_turn_is_v02_runtime_prompt_in_every_row": {
+      "pass": true,
+      "detail": "1662/1662 (no qwen default, no bare 'You are Rupsaa.')"
+    },
+    "dynamic_blocks_survive_formatting": {
+      "pass": true,
+      "detail": {
+        "terminology": 92,
+        "language_directive": 36,
+        "recall_note": 24,
+        "recall_note_empty": 4
+      }
+    },
+    "labels_are_assistant_turns_only": {
+      "pass": true,
+      "detail": "mismatches: []"
+    },
+    "prompt_tokens_identical_to_runtime": {
+      "pass": true,
+      "detail": "1662/1662"
+    },
+    "no_truncation_at_cutoff": {
+      "pass": true,
+      "detail": "max tokens 848 / 2048"
+    }
+  },
+  "counts": {
+    "train_file_rows": 1662,
+    "internal_train": 1578,
+    "internal_eval": 84,
+    "steps_per_epoch": 98,
+    "total_steps": 196,
+    "max_tokens": 848
+  },
+  "optimizer_steps_run": 0,
+  "model_weights_loaded": false
+}

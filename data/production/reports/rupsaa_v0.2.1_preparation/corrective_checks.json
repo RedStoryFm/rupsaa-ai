@@ -1,0 +1,284 @@
+{
+  "records": 162,
+  "assistant_replies": 270,
+  "by_category": {
+    "banglish_casual": 20,
+    "bengali_casual": 12,
+    "language_switch": 24,
+    "acknowledgement": 16,
+    "emotional_context": 14,
+    "direct_definition": 12,
+    "simplify_followup": 12,
+    "terminology": 20,
+    "typo_terminology": 8,
+    "memory_recall": 18,
+    "english": 6
+  },
+  "by_final_language": {
+    "banglish": 85,
+    "bn": 46,
+    "en": 31
+  },
+  "turns": {
+    "1": 74,
+    "2": 70,
+    "3": 16,
+    "4": 2
+  },
+  "final_routes": {
+    "casual": 47,
+    "general": 46,
+    "terminology": 31,
+    "followup": 19,
+    "knowledge": 3,
+    "memory": 16
+  },
+  "with_terminology_block": 34,
+  "with_language_directive": 21,
+  "with_recall_note": 16,
+  "question_ending_rate_all": 0.111,
+  "question_ending_rate_direct": 0.071,
+  "top_openings": [
+    [
+      "ki hoyeche",
+      3
+    ],
+    [
+      "মন খারাপ",
+      3
+    ],
+    [
+      "tahole tumi",
+      2
+    ],
+    [
+      "achcha tahole",
+      2
+    ],
+    [
+      "ঠিক আছে",
+      2
+    ],
+    [
+      "cuddling mane",
+      2
+    ],
+    [
+      "eta shotti",
+      2
+    ],
+    [
+      "tahole ekta",
+      2
+    ]
+  ],
+  "top_opening_share": 0.011,
+  "near_duplicate_reply_pairs": [],
+  "top_first_tokens": [
+    [
+      "tahole",
+      8
+    ],
+    [
+      "good",
+      5
+    ],
+    [
+      "hae",
+      5
+    ],
+    [
+      "achcha",
+      5
+    ],
+    [
+      "bah",
+      4
+    ],
+    [
+      "eta",
+      4
+    ],
+    [
+      "ki",
+      4
+    ],
+    [
+      "tomar",
+      3
+    ],
+    [
+      "darun",
+      3
+    ],
+    [
+      "whispering",
+      3
+    ]
+  ],
+  "top_first_token_share": 0.03,
+  "opening_bigrams": [
+    [
+      "ki hoyeche",
+      3
+    ],
+    [
+      "মন খারাপ",
+      3
+    ],
+    [
+      "tahole tumi",
+      2
+    ],
+    [
+      "achcha tahole",
+      2
+    ],
+    [
+      "ঠিক আছে",
+      2
+    ],
+    [
+      "cuddling mane",
+      2
+    ],
+    [
+      "eta shotti",
+      2
+    ],
+    [
+      "tahole ekta",
+      2
+    ],
+    [
+      "bhaloi jacche",
+      1
+    ],
+    [
+      "tomar sathe",
+      1
+    ],
+    [
+      "ei cholche",
+      1
+    ],
+    [
+      "tahole aj",
+      1
+    ]
+  ],
+  "top_sentence_skeletons": [
+    [
+      "_ ta _",
+      8
+    ],
+    [
+      "_ ar _",
+      7
+    ],
+    [
+      "_ er _",
+      7
+    ],
+    [
+      "_ একটু _",
+      5
+    ],
+    [
+      "_ আর _",
+      5
+    ],
+    [
+      "_ ki _",
+      4
+    ],
+    [
+      "_ na",
+      4
+    ],
+    [
+      "_ মানে _",
+      4
+    ],
+    [
+      "_ করে _",
+      4
+    ],
+    [
+      "_ or _",
+      4
+    ]
+  ],
+  "top_skeleton_share": 0.02,
+  "exact_duplicate_replies": [],
+  "emoji_rate": 0.0,
+  "definition_replies_starting_X_mane": "17/40 (expected: definitions answer first)",
+  "reply_length_percentiles": {
+    "p10": 27,
+    "p50": 78,
+    "p90": 157,
+    "max": 309
+  },
+  "assistant_reply_language": {
+    "latin": 201,
+    "bn": 69
+  },
+  "romanization_counts": {
+    "shobcheye/sobcheye": {
+      "shobcheye": 3,
+      "sobcheye": 0
+    },
+    "bhalo/valo": {
+      "bhalo": 22,
+      "valo": 0
+    },
+    "shomoy/somoy": {
+      "shomoy": 18,
+      "somoy": 0
+    },
+    "sheta/seta": {
+      "sheta": 22,
+      "seta": 0
+    }
+  },
+  "reply_chars_by_script": {
+    "latin": {
+      "n": 201,
+      "mean": 91,
+      "max": 309
+    },
+    "bn": {
+      "n": 69,
+      "mean": 83,
+      "max": 261
+    }
+  },
+  "limits": {
+    "question_rate_all": 0.25,
+    "question_rate_direct": 0.1,
+    "top_opening_share": 0.06,
+    "catchphrase_replies": 0,
+    "top_first_token_share": 0.1,
+    "top_skeleton_share": 0.05
+  },
+  "gates": {
+    "no_flagged_records": true,
+    "question_rate_all": true,
+    "question_rate_direct": true,
+    "top_opening_share": true,
+    "no_near_duplicate_replies": true,
+    "no_catchphrases": true,
+    "top_first_token_share": true,
+    "top_skeleton_share": true,
+    "no_exact_duplicate_replies": true,
+    "no_emoji": true
+  },
+  "all_gates_pass": true,
+  "flags": {},
+  "info": [
+    "c021-033: user turn also in frozen V0.2 (short command, reply differs): 'এটা বাংলায় বলো'",
+    "c021-044: user turn also in frozen V0.2 (short command, reply differs): 'love bombing ki?'",
+    "c021-052: user turn also in frozen V0.2 (short command, reply differs): 'banglish e bolo'"
+  ],
+  "note": "Automatic gates catch defects; they do not approve data. Owner review is required."
+}

@@ -1,0 +1,9 @@
+{
+  "authorized": true,
+  "authorized_by": "owner",
+  "instruction": "RUPSAA V0.2.1 \u2014 FINAL DATA REVIEW + FREEZE + TRAINING PREFLIGHT: 'If all gates pass, freeze as rupsaa_v0.2.1'",
+  "scope": "freeze + training preflight only. GPU training is NOT authorized by this file.",
+  "review": "Full manual read of all 162 corrective conversations by Claude (REVIEW_LOG.json); corpus gates, leakage check and runtime rebuild must pass (enforced by scripts/v021_prepare_training_set.py).",
+  "recorded_at": "2026-09-26T16:28:30.531351+00:00",
+  "corrective_records_sha256": "4b189bc7788a962f8ee24b28beae5d9ac7b3db02bff04257b67b1d86cbadeb8c"
+}

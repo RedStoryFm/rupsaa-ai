@@ -1,0 +1,41 @@
+{
+  "holdout_ids": [
+    "c021-003",
+    "c021-020",
+    "c021-021",
+    "c021-023",
+    "c021-036",
+    "c021-040",
+    "c021-050",
+    "c021-064",
+    "c021-065",
+    "c021-078",
+    "c021-080",
+    "c021-087",
+    "c021-096",
+    "c021-103",
+    "c021-106",
+    "c021-113",
+    "c021-121",
+    "c021-138",
+    "c021-143",
+    "c021-156",
+    "c021-161"
+  ],
+  "train_records": 141,
+  "holdout_records": 21,
+  "thresholds": {
+    "near_duplicate": 0.8,
+    "benchmark_near": 0.9,
+    "min_len_for_fuzzy": 12
+  },
+  "benchmarks_checked": {
+    "owner_live_sequence": 11,
+    "prompts_total": 100,
+    "unseen_terms": 24,
+    "frozen_validation_test_turns": 412
+  },
+  "blocking": [],
+  "warnings": [],
+  "pass": true
+}

@@ -2,7 +2,7 @@
 # Launch the LLaMA-Factory WebUI for Rupsaa (GUI only — this script
 # never starts training; you press Start in the browser yourself).
 #
-# Usage:  bash scripts/start_llamafactory_gui.sh [v0.1|v0.2]   (default v0.1)
+# Usage:  bash scripts/start_llamafactory_gui.sh [v0.1|v0.2|v0.2.1]   (default v0.1)
 #   env:  LLAMAFACTORY_GUI_PORT (default 7860) — must not be 5500 or 8000
 #         RUPSAA_TRAIN_VERSION  (alternative to the positional argument)
 #
@@ -29,7 +29,8 @@ die() { echo "ERROR: $*" >&2; exit 1; }
 case "$VERSION" in
   v0.1) MANIFEST="data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json" ;;
   v0.2) MANIFEST="data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json" ;;
-  *) die "unknown version '$VERSION' (use v0.1 or v0.2)" ;;
+  v0.2.1) MANIFEST="data/production/exports/rupsaa_v0.2.1/V021_TRAINING_MANIFEST.json" ;;
+  *) die "unknown version '$VERSION' (use v0.1, v0.2 or v0.2.1)" ;;
 esac
 CONFIG_NAME="rupsaa_${VERSION}.yaml"
 TEMPLATE="configs/training/llamafactory_webui_rupsaa_${VERSION}.yaml"
@@ -50,9 +51,11 @@ PY="${LLAMAFACTORY_PYTHON:-$(dirname "$LF_CLI")/python}"
 [ -x "$PY" ] || die "python interpreter not found next to $LF_CLI (set LLAMAFACTORY_PYTHON)"
 
 # --- required files ---
+DATASET_INFO=data/dataset_info.json
+[ "$VERSION" = "v0.2.1" ] && DATASET_INFO=data/production/exports/rupsaa_v0.2.1/dataset_info.json
 for f in \
   "$TEMPLATE" \
-  data/dataset_info.json \
+  "$DATASET_INFO" \
   "data/production/exports/rupsaa_${VERSION}/train.jsonl" \
   "data/production/exports/rupsaa_${VERSION}/validation.jsonl" \
   "$MANIFEST"
@@ -119,6 +122,15 @@ assert cfg["train.dataset"] == [f"rupsaa_{version}_train"], cfg["train.dataset"]
 assert cfg["top.template"] == "qwen" and cfg["top.quantization_bit"] == "4", "template/quantization drifted"
 choices = [c[0] if isinstance(c, tuple) else c for c in list_dataset(cfg["train.dataset_dir"]).choices]
 assert f"rupsaa_{version}_train" in choices, f"rupsaa_{version}_train not registered in {cfg['train.dataset_dir']}/dataset_info.json"
+if version == "v0.2.1":
+    # Frozen export: every file must still match the freeze manifest; never train into V0.1/V0.2.
+    manifest = json.load(open(manifest_path, encoding="utf-8"))
+    for name, expected in manifest["files_sha256"].items():
+        path = os.path.join("data", "production", "exports", "rupsaa_v0.2.1", name)
+        actual = hashlib.sha256(open(path, "rb").read()).hexdigest()
+        assert actual == expected, f"{path} changed since freeze ({actual} != {expected})"
+    for other in ("rupsaa-v0.1", "rupsaa-v0.2"):
+        assert cfg["train.output_dir"] != os.path.join(root, "adapters", other), f"would overwrite the {other} adapter"
 if version == "v0.2":
     # The frozen export must still be byte-identical to what the manifest recorded.
     manifest = json.load(open(manifest_path, encoding="utf-8"))
@@ -141,7 +153,11 @@ echo " LLaMA-Factory WebUI for Rupsaa ${VERSION}"
 echo "  project root : $ROOT"
 echo "  config file  : $ROOT/config/$CONFIG_NAME (rendered from $TEMPLATE)"
 echo "  GUI 'Config path' field — type exactly:  $CONFIG_NAME   then click 'Load arguments'"
-echo "  dataset      : rupsaa_${VERSION}_train  (registered in data/dataset_info.json)"
+if [ "$VERSION" = "v0.2.1" ]; then
+  echo "  dataset      : rupsaa_v0.2.1_train  (Data dir: data/production/exports/rupsaa_v0.2.1)"
+else
+  echo "  dataset      : rupsaa_${VERSION}_train  (registered in data/dataset_info.json)"
+fi
 echo "  adapter out  : $ROOT/adapters/rupsaa-${VERSION}"
 echo "  listening on : 0.0.0.0:$PORT   -> open/forward ONLY port $PORT in Lightning"
 echo "  untouched    : 5500 (Rupsaa web), 8000 (Rupsaa API)"

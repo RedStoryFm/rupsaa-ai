@@ -1,0 +1,119 @@
+{
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "generation": {
+    "max_new_tokens": 512,
+    "temperature": 0.8,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": 1.1,
+    "do_sample": true
+  },
+  "turns": [
+    {
+      "user": "tumi amar sathe banglish e kotha bolbe?",
+      "route": "general",
+      "requested_language": "banglish",
+      "runs": {
+        "rupsaa_v02": [
+          "Bole, tomar chinta na - jaigai e naki amar chinta na.",
+          "Shuru te ami bolo, tai o ashle bhalo lagbe. Kirokom bolo naki amar upor?",
+          "Banglish e kotha bola, tumi bolo."
+        ],
+        "base": [
+          "eta mane ... hello! how are you doing today?",
+          "eta mane ... ami korbe. Tumi khub bhalo jani, right?",
+          "eta mane ... ami bhalo achi amar Banglish e kotha bolbo. Apni amar bhalo achen mood e bhasha korte pari."
+        ]
+      }
+    },
+    {
+      "user": "Strip mane ki?",
+      "route": "terminology",
+      "requested_language": null,
+      "runs": {
+        "rupsaa_v02": [
+          "Strip mane kichudin rokom body er kotha ove rakha dorkar nai - gradually, saral, onujayi jani, ojaple eta context er upor chilo hoy।",
+          "Sheta eta simple - strip mane body er jonno beshi jere shikhar kora, literally - strip, stripping, striptease bole. Eta o adult industry er modhhe common term.",
+          "Remove kora - body er upor jigges korte manush onek chay. Kintu context depend kore, sometime public stage e, sometime private partner er jonno - core meaning simple kichu bole, rest ekhono jete pare."
+        ],
+        "base": [
+          "Strip mane ki dui fashan o proyaktik rolik kora jay. Jodi somon pore kintu jonne gysthobor oya chokro achi, proyaktik hoy. Dhonnobad!",
+          "Strip mane ki, cloths theke porjonto dite ho. Ei kintu category kore yebena - performancete, sexuaitete vai prentaretete dependa kore.",
+          "ট্রিপ করা বলে একজন মানুষ আসলে কি হয়। যতখন তাই কেউ অ্যাডোল দিয়ে শীতল বা ছেদনীয় জিনিস ধরে ঘুমাচ্ছে বা সেখানে যাওয়ার উপক্রম শুরু করে। সাধারণত এটা দুর্ঘটনার লক্ষণ বলে ভবিষ্যতে খুশি থাকার জন্য বা রোগচিকিৎসার ফলে হয়।"
+        ]
+      }
+    },
+    {
+      "user": "Forplay ki?",
+      "route": "terminology",
+      "requested_language": null,
+      "runs": {
+        "rupsaa_v02": [
+          "Foreplay mane sexual or intimate activity eta nijer theke shuru hoye jete pare, shudhu penetration er cheye shukh der jonno. Ekhon ojaigay tor theke ei definition ta clear hoyeo hoyeche?",
+          "Foreplay mane sexual or intimate activity jekhane beshi comfortable lage, ektu er age - abar word, affection, kintu physical activity o possible, context depend korte pare.",
+          "Foreplay means any kind of affectionate or physical interaction meant to build arousal, comfort, or intimacy before sex starts - kissing, touching, talking dirty, whatever works for both people."
+        ],
+        "base": [
+          "Foreplay means the sexual or intimate activities that happen before main sex to build up excitement, comfort, or intimacy. It can include touching, kissing, or other sexy stuff that both partners enjoy.",
+          "Foreplay means sexual or intimate activities that happen before other sex acts. These activities help build arousal and comfort. They can include things like kissing, touching, or other physical closeness.",
+          "Foreplay ki? Ami jiboner upaj, ghashon er daptor hoil. Nokhoter kichu ghashon bhulaiya jay, por jonno kintu ami kichu bahir ghashon korbo. Aita amra jahur korben pare."
+        ]
+      }
+    },
+    {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "route": "followup",
+      "requested_language": "bn",
+      "runs": {
+        "rupsaa_v02": [
+          "Foreplay shune e tomar modhhe ekjon e nijer upor beshi focus diya, tarpor alada onujayi ei manush o emon kichu choto physical or emotional preparation korte pari, sheta - shobcheye beshi comfortable feel korle shathe eta best use hoy.",
+          "Foreplay মানে এমন sexual বা intimate activity যা অন্যান্ত সexoয়াল কাজের আগে হয়, সাধারণত arousal, comfort বা intimacy থেকে শুরু হয়।",
+          "Foreplay মনে করো সেই অন্য কোনো সexoয়ালা কাজ থেকে আগে শুরু হওয়া এমন কিছু - attraction build করতে, চাপ দিতে, নাও করতে। শুধু এক কথায় বলি - সেই আগের ভিতর থেকে শুরু হওয়া কিছু।"
+        ],
+        "base": [
+          "ফোরপ্লে এটি আগের সেxশালী কাজের পূর্বে হওয়া সেxশালী অ্যাক্ট। এটি উত্তরসূচকতা, শান্তি বা সম্পর্ক গড়ার জন্য ব্যবহৃত হয়। এটি মার্জিন্যাল অ্যাক্ট হতে পারে বা ডেট করার জন্য সেখানে একজনের সাথে একজন মিলে যেতে পারে।",
+          "Foreplay হল এমন সexoয়াল অথবা আইন্টিমিটি যা আরো সexoয়াল কাজে চলতে থাকলে পূর্বে হয়। এটা আগ্রাসণ তৈরি করতে, শান্তি দিতে বা সম্ভাষণ বাড़িতে উৎসাহ তৈরি করতে কাজ করতে পারে।",
+          "ফোরপ্লে হল এমন সexoয়াল অথবা নিষেধাজ্ঞার পূর্বে আসতে রাগিনী বা দৃষ্টি বা সহজেশীতা তৈরি করার জন্য হওয়া সexoয়াল অথবা মিশ্রণ।"
+        ]
+      }
+    },
+    {
+      "user": "ami ki color bolechilam?",
+      "route": "memory",
+      "requested_language": null,
+      "runs": {
+        "rupsaa_v02": [
+          "Amar kache ektu shomoy er kotha lageche, tumi shunte chao na.",
+          "Shune bolte chilo, forget kori।",
+          "Blue bolechile, tumi shunte chao."
+        ],
+        "base": [
+          "তোমার ফ্যা�ভরিট কলর নেইন্স হল লাল।",
+          "Amar favorite color blue bolechi. Tumi bolechen kintu?",
+          "Amar favorite color blue bolchi. Tumi bolechilam ki color?"
+        ]
+      }
+    },
+    {
+      "user": "ami age ki bolechilam?",
+      "route": "memory",
+      "requested_language": null,
+      "runs": {
+        "rupsaa_v02": [
+          "Age ekhon same choto message te bolechile, tai amar kache jaigaya shomadhan korte - shudhu color bolecho, context ta amar der sathe nai.",
+          "Sheta ekta valid question, amar memory er upor age tumi shudhu 'blue' bolechile, detail chup chapa. Tumi ki boloche - blue ektu specific hue?",
+          "Tumi amar sathe bola favorite color blue, sheta e onek chilo. Amar kache niye bolo, tai emon kichu different hote pare - tumi emon kichu bolechile amar kache niye bolo, tai amar answer accordingly hocche."
+        ],
+        "base": [
+          "Age, apni favorite color blue bolle.",
+          "Ami tebo, \"Blue\" as your favorite color.",
+          "Ami age achi lagilam, bhalo achen?"
+        ]
+      }
+    }
+  ]
+}

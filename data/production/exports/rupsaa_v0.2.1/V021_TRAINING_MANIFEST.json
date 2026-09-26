@@ -1,0 +1,179 @@
+{
+  "name": "rupsaa_v0.2.1",
+  "status": "frozen",
+  "created_at": "2026-09-26T16:30:06.411322+00:00",
+  "git_head_at_freeze": "5d39eafa93bea7a70acef22b769393c447e8d2dd",
+  "dataset_sha256": "5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543",
+  "dataset_sha256_definition": "sha256 of the lines '<sha256>  <file>\\n' for train.jsonl, validation.jsonl, test.jsonl, corrective_holdout.jsonl (in that order) of this export",
+  "files_sha256": {
+    "corrective_holdout.jsonl": "dc683a246c72162076b2254e9f17f64422f57d49ab5e0a9e2db7b812b6ddf9e0",
+    "test.jsonl": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9",
+    "train.jsonl": "5bcd5cce714962210a15f0567572a3f12454199663bf461ddcb35373bc361cac",
+    "train_row_map.jsonl": "663a5533fb5e014641ed3577de1ce527cc224c2b0a9c71644cd5c556cd95d583",
+    "validation.jsonl": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+    "dataset_info.json": "b2fbcf1fdbb0cc1a3ad56627a084d69ef03b5925c7fecf4ade25b6dde8c357c7"
+  },
+  "snapshot_files_sha256": {
+    "FREEZE_AUTHORIZATION.json": "1c967c7c8cafaa96df88056a0de2b0a1785d913f76ab33997f062e876f4de3e3",
+    "corrective_records.jsonl": "4b189bc7788a962f8ee24b28beae5d9ac7b3db02bff04257b67b1d86cbadeb8c",
+    "source_conversations.py": "0b53a855c126eaaf4679423a3b11c9a4f58bb003b6be495c540a27ea5a1b9151"
+  },
+  "parent_dataset": {
+    "name": "rupsaa_v0.2",
+    "dataset_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+    "export_files_sha256": {
+      "train": "62771ea2ada050893ba55ae7268e713ba6bcfb88f6c464f02c72f523a789a314",
+      "validation": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+      "test": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9"
+    },
+    "manifest": "data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json",
+    "modified": false
+  },
+  "prompt_version": "v0.2",
+  "system_prompt_sha256": "ef1d8fd4b16a04f9b6754d7cee623c9b4e8779c6dd75cfc0d2c1f88625f526a4",
+  "system_prompt_note": "Every row's system turn is exactly what the runtime sends (V02_SYSTEM_PROMPT + the terminology block / recall note / language directive where the runtime adds them).",
+  "conversations": {
+    "base_v02_train_unique": 1380,
+    "corrective_train_unique": 141,
+    "corrective_holdout_unique": 21,
+    "unique_training_conversations": 1521
+  },
+  "assistant_replies": {
+    "base_v02_train": 1938,
+    "corrective_train_unique": 232,
+    "corrective_train_weighted": 464,
+    "corrective_holdout": 38,
+    "training_total_weighted": 2402
+  },
+  "languages": {
+    "base_v02_train": {
+      "bn": 360,
+      "banglish": 389,
+      "en": 422,
+      "mixed": 209
+    },
+    "corrective_train_final_reply": {
+      "banglish": 74,
+      "bn": 39,
+      "en": 28
+    },
+    "corrective_holdout_final_reply": {
+      "banglish": 11,
+      "bn": 7,
+      "en": 3
+    },
+    "corrective_language_switch_conversations": 24
+  },
+  "sources": {
+    "base_v02_train": {
+      "human_authored": 19,
+      "imported": 452,
+      "synthetic_curated": 909
+    },
+    "corrective": {
+      "v021_corrective_handwritten": 162
+    }
+  },
+  "corrective_categories": {
+    "train": {
+      "banglish_casual": 18,
+      "bengali_casual": 10,
+      "language_switch": 21,
+      "acknowledgement": 14,
+      "emotional_context": 12,
+      "direct_definition": 10,
+      "simplify_followup": 10,
+      "terminology": 18,
+      "typo_terminology": 7,
+      "memory_recall": 16,
+      "english": 5
+    },
+    "holdout": {
+      "banglish_casual": 2,
+      "bengali_casual": 2,
+      "language_switch": 3,
+      "acknowledgement": 2,
+      "emotional_context": 2,
+      "direct_definition": 2,
+      "simplify_followup": 2,
+      "terminology": 2,
+      "typo_terminology": 1,
+      "memory_recall": 2,
+      "english": 1
+    }
+  },
+  "weighting": {
+    "method": "duplicate rows",
+    "corrective_train_copies": 2,
+    "base_copies": 1,
+    "corrective_share_of_train_rows": 0.17,
+    "holdout_duplicated": false,
+    "row_map": "train_row_map.jsonl",
+    "internal_eval_placement": "LLaMA-Factory 0.7.1 split_dataset = datasets.train_test_split(test_size=0.05, seed=42); those row positions hold only single-copy frozen V0.2 rows (V0.2's own 69 internal-eval rows first)"
+  },
+  "splits": {
+    "train_file_rows": 1662,
+    "internal_train_rows": 1578,
+    "internal_eval_rows": 84,
+    "internal_eval_rows_shared_with_v02_internal_eval": 69,
+    "corrective_rows_in_internal_eval": 0,
+    "external_validation": 77,
+    "external_test": 76,
+    "corrective_holdout": 21
+  },
+  "holdout_ids": [
+    "c021-003",
+    "c021-020",
+    "c021-021",
+    "c021-023",
+    "c021-036",
+    "c021-040",
+    "c021-050",
+    "c021-064",
+    "c021-065",
+    "c021-078",
+    "c021-080",
+    "c021-087",
+    "c021-096",
+    "c021-103",
+    "c021-106",
+    "c021-113",
+    "c021-121",
+    "c021-138",
+    "c021-143",
+    "c021-156",
+    "c021-161"
+  ],
+  "preserved_evaluation_sets": {
+    "frozen_v02_validation_test": "byte-identical copies (see files_sha256 == parent export_files_sha256)",
+    "clean_v01_vs_v02_subsets": "data/production/evaluation/rupsaa_v0.2/eval_manifests.json (unchanged)",
+    "unseen_terminology_24": "data/production/evaluation/rupsaa_v0.2/terminology_generalization.jsonl (unchanged)",
+    "corrective_holdout_21": "corrective_holdout.jsonl"
+  },
+  "training": {
+    "expected_steps_per_epoch": 98,
+    "expected_total_steps": 196,
+    "batch": 2,
+    "gradient_accumulation": 8,
+    "epochs": 2,
+    "val_size": 0.05,
+    "config_cli": "configs/training/llamafactory_rupsaa_v0.2.1.yaml",
+    "config_gui_template": "configs/training/llamafactory_webui_rupsaa_v0.2.1.yaml",
+    "output_dir": "adapters/rupsaa-v0.2.1",
+    "status": "NOT STARTED — owner approval required"
+  },
+  "reviews": {
+    "corpus_checks": "data/production/reports/rupsaa_v0.2.1_preparation/corrective_checks.json",
+    "leakage": "data/production/reports/rupsaa_v0.2.1_preparation/leakage_report.json",
+    "human_review": "data/production/reports/rupsaa_v0.2.1_preparation/CORRECTIVE_DATA_REVIEW.md"
+  },
+  "authorization": {
+    "authorized": true,
+    "authorized_by": "owner",
+    "instruction": "RUPSAA V0.2.1 — FINAL DATA REVIEW + FREEZE + TRAINING PREFLIGHT: 'If all gates pass, freeze as rupsaa_v0.2.1'",
+    "scope": "freeze + training preflight only. GPU training is NOT authorized by this file.",
+    "review": "Full manual read of all 162 corrective conversations by Claude (REVIEW_LOG.json); corpus gates, leakage check and runtime rebuild must pass (enforced by scripts/v021_prepare_training_set.py).",
+    "recorded_at": "2026-09-26T16:28:30.531351+00:00",
+    "corrective_records_sha256": "4b189bc7788a962f8ee24b28beae5d9ac7b3db02bff04257b67b1d86cbadeb8c"
+  }
+}
