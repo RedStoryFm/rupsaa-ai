@@ -1,0 +1,7 @@
+{
+  "training_commit": "f4b877aad0f5b38a2a208c9a24ddce8629eaa185",
+  "tag": "rupsaa-v0.2.1-training",
+  "dataset_sha256": "5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543",
+  "recorded_at": "2026-09-26T16:36:34.915291+00:00",
+  "note": "The V0.2.1 adapter is to be trained from this commit's tree. This file is added by the NEXT commit, which changes nothing training-relevant. The freeze manifest's git_head_at_freeze (5d39eaf) predates committing the runtime fixes; this record is the authoritative source commit."
+}
