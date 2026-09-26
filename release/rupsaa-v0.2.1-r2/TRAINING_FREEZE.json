@@ -1,0 +1,122 @@
+{
+  "release_name": "rupsaa-v0.2.1-r2",
+  "stage": "training-freeze R2 (adapter not trained yet; training requires owner approval)",
+  "dataset": {
+    "name": "rupsaa_v0.2.1_r2",
+    "sha256": "e1332c83b522cc57bd3240a28e517edda1cd757a929afcf89b155118d254cd22",
+    "parent": "rupsaa_v0.2",
+    "parent_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+    "conversations": {
+      "base_v02_train_unique": 1380,
+      "corrective_train_unique": 141,
+      "dance_train_unique": 24,
+      "corrective_holdout": 21,
+      "dance_holdout": 12,
+      "unique_training_conversations": 1545
+    },
+    "assistant_replies": {
+      "base_v02_train": 1938,
+      "corrective_train_unique": 232,
+      "dance_train_unique": 29,
+      "training_total_weighted": 2460
+    },
+    "splits": {
+      "train_file_rows": 1710,
+      "internal_train_rows": 1624,
+      "internal_eval_rows": 86,
+      "internal_eval_rows_shared_with_v02_internal_eval": 69,
+      "corrective_or_dance_rows_in_internal_eval": 0,
+      "external_validation": 77,
+      "external_test": 76,
+      "corrective_holdout": 21,
+      "dance_holdout": 12
+    },
+    "weighting": {
+      "method": "duplicate rows",
+      "corrective_train_copies": 2,
+      "dance_train_copies": 2,
+      "share_of_train_rows": 0.193
+    },
+    "manifest": "data/production/exports/rupsaa_v0.2.1_r2/V021_R2_TRAINING_MANIFEST.json"
+  },
+  "system_prompt": {
+    "prompt_version": "v0.2",
+    "file": "rupsaa/personality/system_prompt_v02.py",
+    "constant": "V02_SYSTEM_PROMPT",
+    "sha256": "ef1d8fd4b16a04f9b6754d7cee623c9b4e8779c6dd75cfc0d2c1f88625f526a4",
+    "runtime_blocks": "terminology block (rupsaa/rag/terminology.py), recall note (rupsaa/rag/context_builder.py), language directive (rupsaa/conversation/language_control.py)"
+  },
+  "training": {
+    "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "method": "SFT + QLoRA, fresh LoRA from base (4-bit NF4, double quant, bf16)",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "lora_target": "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_steps": 6,
+    "num_train_epochs": 2.0,
+    "batch": 2,
+    "gradient_accumulation": 8,
+    "cutoff_len": 2048,
+    "expected_steps": 202,
+    "eval_save_steps": 20,
+    "best_model": "eval_loss",
+    "cli_config": "configs/training/llamafactory_rupsaa_v0.2.1.yaml",
+    "gui_template": "configs/training/llamafactory_webui_rupsaa_v0.2.1.yaml",
+    "output_dir": "adapters/rupsaa-v0.2.1"
+  },
+  "preflight": "data/production/reports/rupsaa_v0.2.1_preparation/smoke_check.json",
+  "checksums": "release/rupsaa-v0.2.1-r2/checksums.sha256",
+  "training_commit_record": "release/rupsaa-v0.2.1-r2/TRAINING_COMMIT.json (written by a follow-up commit)",
+  "environment": {
+    "python": "3.12.11",
+    "platform": "Linux-6.8.0-1067-gcp-x86_64-with-glibc2.39",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.46.3",
+      "peft": "0.21.0",
+      "accelerate": "1.15.0",
+      "bitsandbytes": "0.50.2",
+      "trl": "0.12.2",
+      "datasets": "5.0.1",
+      "sentence-transformers": "5.7.0",
+      "faiss-cpu": "1.15.1",
+      "safetensors": "0.8.0",
+      "tokenizers": "0.20.3",
+      "huggingface-hub": "0.36.2",
+      "fastapi": "0.141.1",
+      "uvicorn": "0.52.4",
+      "starlette": "1.6.0",
+      "pydantic": "2.13.5",
+      "pydantic-settings": "2.15.0",
+      "python-multipart": "0.0.32",
+      "gradio": "4.38.1",
+      "gradio_client": "1.1.0",
+      "llamafactory": "0.7.1",
+      "openpyxl": "3.1.5",
+      "numpy": "1.26.4"
+    },
+    "torch_cuda": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA L4",
+    "nvidia_smi": "NVIDIA L4, 580.173.02, 23034 MiB"
+  },
+  "supersedes": {
+    "release": "rupsaa-v0.2.1",
+    "dataset_sha256": "5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543",
+    "tag": "rupsaa-v0.2.1-training",
+    "trained": false,
+    "reason": "owner added Dance Knowledge to the V0.2.1 cycle before any training; the old freeze stays on disk unmodified and must not be trained"
+  },
+  "dance_knowledge": {
+    "records": 60,
+    "sha256": "8aeab8e4c1132d263b4c747193481e344c4ed5aea7d34bcd9d3c59d75972866b",
+    "dir": "knowledge/dance",
+    "owner_source": "data/owner/dance_knowledge_owner_60.txt",
+    "owner_source_sha256": "75a3aee620994e32c7821035fde4eea9bb42a84d20fa6c287062be0372931977",
+    "snapshot_copy": "dance_knowledge/",
+    "in_lora": "no — facts are served by RAG; 24 training rows teach answer behaviour"
+  }
+}

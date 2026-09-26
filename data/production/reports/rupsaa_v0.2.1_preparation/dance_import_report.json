@@ -1,0 +1,516 @@
+{
+  "source": "data/owner/dance_knowledge_owner_60.txt",
+  "source_sha256": "75a3aee620994e32c7821035fde4eea9bb42a84d20fa6c287062be0372931977",
+  "supplied": 60,
+  "parsed": 60,
+  "stored": 60,
+  "enabled": 60,
+  "import_counts": {
+    "created": 60,
+    "updated": 0,
+    "skipped": 0,
+    "failed": 0
+  },
+  "failed": [],
+  "verbatim_mismatches": [],
+  "choreography_fields_filled": [],
+  "derived": {
+    "aliases_rule": "slash parts, hyphen/space/accent variants and 'X dancing' of the owner's name",
+    "bengali_script_name_spellings_for_retrieval_review_please": {
+      "Belly Dance": [
+        "বেলি ডান্স"
+      ],
+      "Ballet": [
+        "ব্যালে"
+      ],
+      "Tap Dance": [
+        "ট্যাপ ডান্স"
+      ],
+      "Jazz Dance": [
+        "জ্যাজ ডান্স"
+      ],
+      "Hip-Hop": [
+        "হিপ হপ"
+      ],
+      "Breaking / Breakdance": [
+        "ব্রেকডান্স",
+        "ব্রেকিং"
+      ],
+      "Salsa": [
+        "সালসা"
+      ],
+      "Samba": [
+        "সাম্বা"
+      ],
+      "Tango": [
+        "ট্যাঙ্গো"
+      ],
+      "Flamenco": [
+        "ফ্লামেঙ্কো"
+      ],
+      "Waltz": [
+        "ওয়াল্টজ"
+      ],
+      "Bharatanatyam": [
+        "ভরতনাট্যম"
+      ],
+      "Kathak": [
+        "কথক"
+      ],
+      "Kathakali": [
+        "কথাকলি"
+      ],
+      "Kuchipudi": [
+        "কুচিপুড়ি"
+      ],
+      "Odissi": [
+        "ওড়িশি"
+      ],
+      "Bhangra": [
+        "ভাংড়া"
+      ],
+      "Garba": [
+        "গরবা"
+      ],
+      "Lavani": [
+        "লাবণী"
+      ],
+      "Hula": [
+        "হুলা"
+      ],
+      "Haka": [
+        "হাকা"
+      ]
+    },
+    "category_rule": "first description phrase from CATEGORY_RULES; all matches become tags",
+    "key_movements": "left empty — the owner's description already carries the movements"
+  },
+  "records": [
+    {
+      "id": "dance-belly_dance",
+      "name": "Belly Dance",
+      "category": "",
+      "aliases": [
+        "Belly dancing",
+        "বেলি ডান্স"
+      ]
+    },
+    {
+      "id": "dance-ballet",
+      "name": "Ballet",
+      "category": "classical",
+      "aliases": [
+        "ব্যালে"
+      ]
+    },
+    {
+      "id": "dance-tap_dance",
+      "name": "Tap Dance",
+      "category": "",
+      "aliases": [
+        "Tap dancing",
+        "ট্যাপ ডান্স"
+      ]
+    },
+    {
+      "id": "dance-jazz_dance",
+      "name": "Jazz Dance",
+      "category": "",
+      "aliases": [
+        "Jazz dancing",
+        "জ্যাজ ডান্স"
+      ]
+    },
+    {
+      "id": "dance-hip_hop",
+      "name": "Hip-Hop",
+      "category": "street",
+      "aliases": [
+        "Hip Hop",
+        "HipHop",
+        "হিপ হপ"
+      ]
+    },
+    {
+      "id": "dance-breaking_breakdance",
+      "name": "Breaking / Breakdance",
+      "category": "street",
+      "aliases": [
+        "Breaking",
+        "Breakdance",
+        "breakdancing",
+        "ব্রেকডান্স",
+        "ব্রেকিং"
+      ]
+    },
+    {
+      "id": "dance-popping",
+      "name": "Popping",
+      "category": "street",
+      "aliases": []
+    },
+    {
+      "id": "dance-locking",
+      "name": "Locking",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-krump",
+      "name": "Krump",
+      "category": "street",
+      "aliases": []
+    },
+    {
+      "id": "dance-house_dance",
+      "name": "House Dance",
+      "category": "club",
+      "aliases": [
+        "House dancing"
+      ]
+    },
+    {
+      "id": "dance-waacking",
+      "name": "Waacking",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-voguing",
+      "name": "Voguing",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-dancehall",
+      "name": "Dancehall",
+      "category": "social",
+      "aliases": []
+    },
+    {
+      "id": "dance-reggaeton",
+      "name": "Reggaeton",
+      "category": "club",
+      "aliases": []
+    },
+    {
+      "id": "dance-salsa",
+      "name": "Salsa",
+      "category": "partner",
+      "aliases": [
+        "সালসা"
+      ]
+    },
+    {
+      "id": "dance-bachata",
+      "name": "Bachata",
+      "category": "partner",
+      "aliases": []
+    },
+    {
+      "id": "dance-merengue",
+      "name": "Merengue",
+      "category": "partner",
+      "aliases": []
+    },
+    {
+      "id": "dance-cha_cha",
+      "name": "Cha-Cha",
+      "category": "ballroom",
+      "aliases": [
+        "Cha Cha",
+        "ChaCha"
+      ]
+    },
+    {
+      "id": "dance-rumba",
+      "name": "Rumba",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-mambo",
+      "name": "Mambo",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-samba",
+      "name": "Samba",
+      "category": "",
+      "aliases": [
+        "সাম্বা"
+      ]
+    },
+    {
+      "id": "dance-tango",
+      "name": "Tango",
+      "category": "partner",
+      "aliases": [
+        "ট্যাঙ্গো"
+      ]
+    },
+    {
+      "id": "dance-milonga",
+      "name": "Milonga",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-cumbia",
+      "name": "Cumbia",
+      "category": "folk",
+      "aliases": []
+    },
+    {
+      "id": "dance-forro",
+      "name": "Forró",
+      "category": "partner",
+      "aliases": [
+        "Forro"
+      ]
+    },
+    {
+      "id": "dance-flamenco",
+      "name": "Flamenco",
+      "category": "",
+      "aliases": [
+        "ফ্লামেঙ্কো"
+      ]
+    },
+    {
+      "id": "dance-sevillanas",
+      "name": "Sevillanas",
+      "category": "folk",
+      "aliases": []
+    },
+    {
+      "id": "dance-irish_step_dance",
+      "name": "Irish Step Dance",
+      "category": "",
+      "aliases": [
+        "Irish Step dancing"
+      ]
+    },
+    {
+      "id": "dance-highland_fling",
+      "name": "Highland Fling",
+      "category": "solo",
+      "aliases": []
+    },
+    {
+      "id": "dance-morris_dance",
+      "name": "Morris Dance",
+      "category": "folk",
+      "aliases": [
+        "Morris dancing"
+      ]
+    },
+    {
+      "id": "dance-polka",
+      "name": "Polka",
+      "category": "partner",
+      "aliases": []
+    },
+    {
+      "id": "dance-mazurka",
+      "name": "Mazurka",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-tarantella",
+      "name": "Tarantella",
+      "category": "folk",
+      "aliases": []
+    },
+    {
+      "id": "dance-waltz",
+      "name": "Waltz",
+      "category": "ballroom",
+      "aliases": [
+        "ওয়াল্টজ"
+      ]
+    },
+    {
+      "id": "dance-foxtrot",
+      "name": "Foxtrot",
+      "category": "ballroom",
+      "aliases": []
+    },
+    {
+      "id": "dance-quickstep",
+      "name": "Quickstep",
+      "category": "ballroom",
+      "aliases": []
+    },
+    {
+      "id": "dance-bharatanatyam",
+      "name": "Bharatanatyam",
+      "category": "Indian classical",
+      "aliases": [
+        "ভরতনাট্যম"
+      ]
+    },
+    {
+      "id": "dance-kathak",
+      "name": "Kathak",
+      "category": "Indian classical",
+      "aliases": [
+        "কথক"
+      ]
+    },
+    {
+      "id": "dance-kathakali",
+      "name": "Kathakali",
+      "category": "classical dance-drama",
+      "aliases": [
+        "কথাকলি"
+      ]
+    },
+    {
+      "id": "dance-kuchipudi",
+      "name": "Kuchipudi",
+      "category": "Indian classical",
+      "aliases": [
+        "কুচিপুড়ি"
+      ]
+    },
+    {
+      "id": "dance-odissi",
+      "name": "Odissi",
+      "category": "Indian classical",
+      "aliases": [
+        "ওড়িশি"
+      ]
+    },
+    {
+      "id": "dance-bhangra",
+      "name": "Bhangra",
+      "category": "folk",
+      "aliases": [
+        "ভাংড়া"
+      ]
+    },
+    {
+      "id": "dance-garba",
+      "name": "Garba",
+      "category": "folk",
+      "aliases": [
+        "গরবা"
+      ]
+    },
+    {
+      "id": "dance-lavani",
+      "name": "Lavani",
+      "category": "dance-drama",
+      "aliases": [
+        "লাবণী"
+      ]
+    },
+    {
+      "id": "dance-lion_dance",
+      "name": "Lion Dance",
+      "category": "",
+      "aliases": [
+        "Lion dancing"
+      ]
+    },
+    {
+      "id": "dance-dragon_dance",
+      "name": "Dragon Dance",
+      "category": "",
+      "aliases": [
+        "Dragon dancing"
+      ]
+    },
+    {
+      "id": "dance-kabuki",
+      "name": "Kabuki",
+      "category": "classical dance-drama",
+      "aliases": []
+    },
+    {
+      "id": "dance-butoh",
+      "name": "Butoh",
+      "category": "avant-garde",
+      "aliases": []
+    },
+    {
+      "id": "dance-kecak",
+      "name": "Kecak",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-hula",
+      "name": "Hula",
+      "category": "",
+      "aliases": [
+        "হুলা"
+      ]
+    },
+    {
+      "id": "dance-haka",
+      "name": "Haka",
+      "category": "group",
+      "aliases": [
+        "হাকা"
+      ]
+    },
+    {
+      "id": "dance-dabke",
+      "name": "Dabke",
+      "category": "folk",
+      "aliases": []
+    },
+    {
+      "id": "dance-tanoura",
+      "name": "Tanoura",
+      "category": "folk",
+      "aliases": []
+    },
+    {
+      "id": "dance-sufi_whirling",
+      "name": "Sufi Whirling",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-kizomba",
+      "name": "Kizomba",
+      "category": "partner",
+      "aliases": []
+    },
+    {
+      "id": "dance-zouk",
+      "name": "Zouk",
+      "category": "partner",
+      "aliases": []
+    },
+    {
+      "id": "dance-azonto",
+      "name": "Azonto",
+      "category": "street",
+      "aliases": []
+    },
+    {
+      "id": "dance-eskista",
+      "name": "Eskista",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-gumboot",
+      "name": "Gumboot",
+      "category": "",
+      "aliases": []
+    },
+    {
+      "id": "dance-lindy_hop",
+      "name": "Lindy Hop",
+      "category": "partner",
+      "aliases": []
+    }
+  ]
+}

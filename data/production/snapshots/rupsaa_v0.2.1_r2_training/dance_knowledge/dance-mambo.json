@@ -1,0 +1,29 @@
+{
+  "id": "dance-mambo",
+  "name": "Mambo",
+  "description": "It is a Latin dance with strong syncopation, quick steps, and energetic turns.",
+  "origin": "Cuba / New York.",
+  "category": "",
+  "aliases": [],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #20 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.618067+00:00",
+  "updated_at": "2026-09-26T17:10:21.618113+00:00"
+}

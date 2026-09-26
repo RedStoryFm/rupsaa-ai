@@ -3,7 +3,7 @@
   "checks": {
     "export_matches_freeze_manifest": {
       "pass": true,
-      "detail": "6 files"
+      "detail": "7 files"
     },
     "parent_v02_export_unchanged": {
       "pass": true,
@@ -13,9 +13,9 @@
       "pass": true,
       "detail": "byte-identical copies"
     },
-    "dataset_is_v021_train": {
+    "dataset_is_v021_r2_train": {
       "pass": true,
-      "detail": "['rupsaa_v0.2.1_train'] in data/production/exports/rupsaa_v0.2.1"
+      "detail": "['rupsaa_v0.2.1_r2_train'] in data/production/exports/rupsaa_v0.2.1_r2"
     },
     "fresh_lora_from_base": {
       "pass": true,
@@ -43,39 +43,44 @@
     },
     "no_rows_dropped": {
       "pass": true,
-      "detail": "1662 tokenized / 1662 rows"
+      "detail": "1710 tokenized / 1710 rows"
     },
     "resplit_counts": {
       "pass": true,
-      "detail": "train=1578 eval=84"
+      "detail": "train=1624 eval=86"
     },
     "internal_eval_is_the_planned_v02_rows": {
       "pass": true,
-      "detail": "84 planned eval rows, all single-copy V0.2"
+      "detail": "86 planned eval rows, all single-copy V0.2"
     },
-    "no_corrective_row_in_internal_eval": {
+    "no_corrective_or_dance_row_in_internal_eval": {
       "pass": true,
-      "detail": "141 distinct corrective rows, 0 in eval"
+      "detail": "165 distinct corrective+dance rows, 0 in eval"
     },
     "expected_steps": {
       "pass": true,
-      "detail": "98/epoch x 2 = 196"
+      "detail": "101/epoch x 2 = 202"
     },
-    "corrective_rows_equal_runtime_rebuild": {
+    "dance_knowledge_equals_frozen_copy": {
+      "pass": true,
+      "detail": "60 records"
+    },
+    "corrective_and_dance_rows_equal_runtime_rebuild": {
       "pass": true,
       "detail": "mismatches: []"
     },
     "system_turn_is_v02_runtime_prompt_in_every_row": {
       "pass": true,
-      "detail": "1662/1662 (no qwen default, no bare 'You are Rupsaa.')"
+      "detail": "1710/1710 (no qwen default, no bare 'You are Rupsaa.')"
     },
     "dynamic_blocks_survive_formatting": {
       "pass": true,
       "detail": {
         "terminology": 92,
-        "language_directive": 36,
+        "language_directive": 40,
         "recall_note": 24,
-        "recall_note_empty": 4
+        "recall_note_empty": 4,
+        "dance": 48
       }
     },
     "labels_are_assistant_turns_only": {
@@ -84,7 +89,7 @@
     },
     "prompt_tokens_identical_to_runtime": {
       "pass": true,
-      "detail": "1662/1662"
+      "detail": "1710/1710"
     },
     "no_truncation_at_cutoff": {
       "pass": true,
@@ -92,11 +97,11 @@
     }
   },
   "counts": {
-    "train_file_rows": 1662,
-    "internal_train": 1578,
-    "internal_eval": 84,
-    "steps_per_epoch": 98,
-    "total_steps": 196,
+    "train_file_rows": 1710,
+    "internal_train": 1624,
+    "internal_eval": 86,
+    "steps_per_epoch": 101,
+    "total_steps": 202,
     "max_tokens": 848
   },
   "optimizer_steps_run": 0,

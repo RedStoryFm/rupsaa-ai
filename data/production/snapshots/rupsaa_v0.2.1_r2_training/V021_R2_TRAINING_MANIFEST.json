@@ -1,0 +1,204 @@
+{
+  "name": "rupsaa_v0.2.1_r2",
+  "status": "frozen",
+  "created_at": "2026-09-26T17:31:37.001042+00:00",
+  "git_head_at_freeze": "91225aaee30e469c101f1c3b30cc5cc254529a55",
+  "dataset_sha256": "e1332c83b522cc57bd3240a28e517edda1cd757a929afcf89b155118d254cd22",
+  "dataset_sha256_definition": "sha256 of the lines '<sha256>  <file>\\n' for train.jsonl, validation.jsonl, test.jsonl, corrective_holdout.jsonl, dance_holdout.jsonl (in that order)",
+  "files_sha256": {
+    "corrective_holdout.jsonl": "dc683a246c72162076b2254e9f17f64422f57d49ab5e0a9e2db7b812b6ddf9e0",
+    "dance_holdout.jsonl": "d900acb129249d48073c101cc9f4a7c23b6e61eeafcb752577e771a84a294ef6",
+    "test.jsonl": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9",
+    "train.jsonl": "fe7f914083943f3c332445f62165f2e5a4ac3ef70f7aa21acef1f3c4cc7e9e69",
+    "train_row_map.jsonl": "7b5742387598234a5086ea5fb6af8d4cecb4b255af13ed8f02ee550e27aa115b",
+    "validation.jsonl": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+    "dataset_info.json": "9eccc3b9819b3607079eb3696cd212a7297cdab11b0e32197622d2831ef720c0"
+  },
+  "snapshot_files_sha256": {
+    "FREEZE_AUTHORIZATION_R2.json": "5fca243345fb7943c1753b057792ce1dee95aab04518f9bbe5dd8895fe6e2119",
+    "REVIEW_LOG.json": "5d0429439751a1690df55fe518316f471a5ad54d72f7be3f29eefc99ff8294bf",
+    "corrective_records.jsonl": "4b189bc7788a962f8ee24b28beae5d9ac7b3db02bff04257b67b1d86cbadeb8c",
+    "dance_conversations.py": "a2c65bd66e6503066e0a15610b1d75edda0a40eb76faa55b779d39deb1e9bd69",
+    "dance_holdout_records.jsonl": "d900acb129249d48073c101cc9f4a7c23b6e61eeafcb752577e771a84a294ef6",
+    "dance_knowledge_owner_60.txt": "75a3aee620994e32c7821035fde4eea9bb42a84d20fa6c287062be0372931977",
+    "dance_records.jsonl": "e048a9a89c09de790debe6675ecd4ebe46065ca05bc97a47ba4ef64f847e4f7f",
+    "source_conversations.py": "0b53a855c126eaaf4679423a3b11c9a4f58bb003b6be495c540a27ea5a1b9151"
+  },
+  "supersedes": {
+    "dataset": "rupsaa_v0.2.1",
+    "dataset_sha256": "5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543",
+    "tag": "rupsaa-v0.2.1-training",
+    "export": "data/production/exports/rupsaa_v0.2.1",
+    "trained": false,
+    "reason": "owner added Dance Knowledge to the V0.2.1 cycle before any training; the old freeze stays on disk unmodified and must not be trained"
+  },
+  "parent_dataset": {
+    "name": "rupsaa_v0.2",
+    "dataset_sha256": "96e0125e39ab2754c8540a29b6d3fee0a3132d46ae72adb9a4c3c7dcd067da33",
+    "export_files_sha256": {
+      "train": "62771ea2ada050893ba55ae7268e713ba6bcfb88f6c464f02c72f523a789a314",
+      "validation": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+      "test": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9"
+    },
+    "modified": false
+  },
+  "prompt_version": "v0.2",
+  "system_prompt_sha256": "ef1d8fd4b16a04f9b6754d7cee623c9b4e8779c6dd75cfc0d2c1f88625f526a4",
+  "dance_knowledge": {
+    "records": 60,
+    "sha256": "8aeab8e4c1132d263b4c747193481e344c4ed5aea7d34bcd9d3c59d75972866b",
+    "dir": "knowledge/dance",
+    "owner_source": "data/owner/dance_knowledge_owner_60.txt",
+    "owner_source_sha256": "75a3aee620994e32c7821035fde4eea9bb42a84d20fa6c287062be0372931977",
+    "snapshot_copy": "dance_knowledge/",
+    "in_lora": "no — facts are served by RAG; 24 training rows teach answer behaviour"
+  },
+  "conversations": {
+    "base_v02_train_unique": 1380,
+    "corrective_train_unique": 141,
+    "dance_train_unique": 24,
+    "corrective_holdout": 21,
+    "dance_holdout": 12,
+    "unique_training_conversations": 1545
+  },
+  "assistant_replies": {
+    "base_v02_train": 1938,
+    "corrective_train_unique": 232,
+    "dance_train_unique": 29,
+    "training_total_weighted": 2460
+  },
+  "languages": {
+    "base_v02_train": {
+      "bn": 360,
+      "banglish": 389,
+      "en": 422,
+      "mixed": 209
+    },
+    "corrective_train_final_reply": {
+      "banglish": 74,
+      "bn": 39,
+      "en": 28
+    },
+    "dance_train_final_reply": {
+      "banglish": 11,
+      "bn": 5,
+      "en": 8
+    },
+    "corrective_holdout_final_reply": {
+      "banglish": 11,
+      "bn": 7,
+      "en": 3
+    },
+    "dance_holdout_final_reply": {
+      "banglish": 5,
+      "bn": 3,
+      "en": 4
+    }
+  },
+  "sources": {
+    "base_v02_train": {
+      "human_authored": 19,
+      "imported": 452,
+      "synthetic_curated": 909
+    },
+    "corrective": {
+      "v021_corrective_handwritten": 162
+    },
+    "dance": {
+      "v021_dance_handwritten": 36
+    }
+  },
+  "weighting": {
+    "method": "duplicate rows",
+    "corrective_train_copies": 2,
+    "dance_train_copies": 2,
+    "base_copies": 1,
+    "share_of_train_rows": 0.193,
+    "holdouts_duplicated": false,
+    "row_map": "train_row_map.jsonl",
+    "justification": "same x2 as the first freeze: dance rows are behaviour examples like the corrective ones; 48 rows (2.8%) teach the format without making the 60 facts a LoRA target",
+    "internal_eval_placement": "datasets.train_test_split(test_size=0.05, seed=42) positions hold only single-copy frozen V0.2 rows"
+  },
+  "splits": {
+    "train_file_rows": 1710,
+    "internal_train_rows": 1624,
+    "internal_eval_rows": 86,
+    "internal_eval_rows_shared_with_v02_internal_eval": 69,
+    "corrective_or_dance_rows_in_internal_eval": 0,
+    "external_validation": 77,
+    "external_test": 76,
+    "corrective_holdout": 21,
+    "dance_holdout": 12
+  },
+  "holdout_ids": {
+    "corrective": [
+      "c021-003",
+      "c021-020",
+      "c021-021",
+      "c021-023",
+      "c021-036",
+      "c021-040",
+      "c021-050",
+      "c021-064",
+      "c021-065",
+      "c021-078",
+      "c021-080",
+      "c021-087",
+      "c021-096",
+      "c021-103",
+      "c021-106",
+      "c021-113",
+      "c021-121",
+      "c021-138",
+      "c021-143",
+      "c021-156",
+      "c021-161"
+    ],
+    "dance": [
+      "d021h-01",
+      "d021h-02",
+      "d021h-03",
+      "d021h-04",
+      "d021h-05",
+      "d021h-06",
+      "d021h-07",
+      "d021h-08",
+      "d021h-09",
+      "d021h-10",
+      "d021h-11",
+      "d021h-12"
+    ]
+  },
+  "preserved_evaluation_sets": {
+    "frozen_v02_validation_test": "byte-identical copies (files_sha256 == parent export_files_sha256)",
+    "clean_v01_vs_v02_subsets": "data/production/evaluation/rupsaa_v0.2/eval_manifests.json (unchanged)",
+    "unseen_terminology_24": "data/production/evaluation/rupsaa_v0.2/terminology_generalization.jsonl (unchanged)"
+  },
+  "training": {
+    "expected_steps_per_epoch": 101,
+    "expected_total_steps": 202,
+    "batch": 2,
+    "gradient_accumulation": 8,
+    "epochs": 2,
+    "val_size": 0.05,
+    "config_cli": "configs/training/llamafactory_rupsaa_v0.2.1.yaml",
+    "config_gui_template": "configs/training/llamafactory_webui_rupsaa_v0.2.1.yaml",
+    "output_dir": "adapters/rupsaa-v0.2.1",
+    "status": "NOT STARTED — owner approval required"
+  },
+  "reviews": {
+    "corpus_checks": "data/production/reports/rupsaa_v0.2.1_preparation/corrective_checks.json",
+    "leakage": "data/production/reports/rupsaa_v0.2.1_preparation/leakage_report.json",
+    "dance_retrieval": "data/production/reports/rupsaa_v0.2.1_preparation/dance_retrieval_check.json",
+    "human_review": "data/production/reports/rupsaa_v0.2.1_preparation/CORRECTIVE_DATA_REVIEW.md"
+  },
+  "authorization": {
+    "authorized": true,
+    "authorized_by": "owner",
+    "instruction": "RUPSAA V0.2.1 R2 — OWNER DANCE DATA DELIVERED: 'Build the immutable V0.2.1 R2 replacement freeze' (all gates must pass)",
+    "scope": "R2 freeze + training preflight only. GPU training is NOT authorized by this file.",
+    "supersedes": "rupsaa_v0.2.1 dataset 5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543 (tag rupsaa-v0.2.1-training) — never trained",
+    "recorded_at": "2026-09-26T17:29:18.435778+00:00",
+    "inputs_sha256": "67062fc7eb90318aacd9e2678f545ef5c5a610fb81e0ba06d2e80e1640223dbb:8aeab8e4c1132d263b4c747193481e344c4ed5aea7d34bcd9d3c59d75972866b"
+  }
+}

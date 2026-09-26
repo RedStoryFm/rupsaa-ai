@@ -1,0 +1,3097 @@
+{
+  "dances": 60,
+  "enabled": 60,
+  "queries": 366,
+  "passed": 366,
+  "dances_fully_passing": 60,
+  "typo_queries": 28,
+  "representative": [
+    {
+      "query": "Belly dance ki?",
+      "expected": "dance-belly_dance",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "query": "belly dancing mane ki?",
+      "expected": "dance-belly_dance",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Ballet ki?",
+      "expected": "dance-ballet",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Kathak kothakar dance?",
+      "expected": "dance-kathak",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Voguing ki?",
+      "expected": "dance-voguing",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Breaking ar breakdance same?",
+      "expected": "dance-breaking_breakdance",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Haka origin kothay?",
+      "expected": "dance-haka",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "query": "আমাকে কথক সম্পর্কে বলো",
+      "expected": "dance-kathak",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "query": "Bhangra ta banglish e bojhao",
+      "expected": "dance-bhangra",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    }
+  ],
+  "negatives": [
+    {
+      "query": "hi, tumi kemon acho?",
+      "retrieved": []
+    },
+    {
+      "query": "ajke amar mood ta bhalo na",
+      "retrieved": []
+    },
+    {
+      "query": "achcha",
+      "retrieved": []
+    },
+    {
+      "query": "Strip mane ki?",
+      "retrieved": []
+    },
+    {
+      "query": "Forplay ki?",
+      "retrieved": []
+    },
+    {
+      "query": "ami age ki bolechilam?",
+      "retrieved": []
+    },
+    {
+      "query": "breaking news dekhlam",
+      "retrieved": []
+    },
+    {
+      "query": "phone locking problem hocche",
+      "retrieved": []
+    },
+    {
+      "query": "salsa sauce banabo",
+      "retrieved": []
+    },
+    {
+      "query": "polka dot dress kinlam",
+      "retrieved": []
+    },
+    {
+      "query": "hula hoop kinechi",
+      "retrieved": []
+    },
+    {
+      "query": "everyone has a breaking point",
+      "retrieved": []
+    },
+    {
+      "query": "popping up everywhere",
+      "retrieved": []
+    },
+    {
+      "query": "house e party ache",
+      "retrieved": []
+    },
+    {
+      "query": "amar dragon fruit bhalo lage",
+      "retrieved": []
+    },
+    {
+      "query": "lion king dekhechi",
+      "retrieved": []
+    },
+    {
+      "query": "kal office e onek kaj",
+      "retrieved": []
+    },
+    {
+      "query": "What does a chargeback mean for a creator?",
+      "retrieved": []
+    },
+    {
+      "query": "consent ki jinis?",
+      "retrieved": []
+    },
+    {
+      "query": "tumi amar sathe banglish e kotha bolbe?",
+      "retrieved": []
+    }
+  ],
+  "failures": [],
+  "false_positives": [],
+  "pass": true,
+  "cases": [
+    {
+      "dance": "dance-azonto",
+      "query": "Azonto ki?",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-azonto",
+      "query": "azonto mane ki?",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-azonto",
+      "query": "Azonto kothakar dance?",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-azonto",
+      "query": "tell me about Azonto",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-azonto",
+      "query": "Azonto origin kothay?",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-azonto",
+      "query": "azotno ki?",
+      "retrieved": [
+        "dance-azonto"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "Bachata ki?",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "bachata mane ki?",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "Bachata kothakar dance?",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "tell me about Bachata",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "Bachata origin kothay?",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bachata",
+      "query": "bacahta ki?",
+      "retrieved": [
+        "dance-bachata"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "Ballet ki?",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "ballet mane ki?",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "Ballet kothakar dance?",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "tell me about Ballet",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "Ballet origin kothay?",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-ballet",
+      "query": "আমাকে ব্যালে সম্পর্কে বলো",
+      "retrieved": [
+        "dance-ballet"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "Belly Dance ki?",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "belly dance mane ki?",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "Belly Dance kothakar dance?",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "tell me about Belly Dance",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "Belly Dance origin kothay?",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "Belly dancing ki?",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-belly_dance",
+      "query": "আমাকে বেলি ডান্স সম্পর্কে বলো",
+      "retrieved": [
+        "dance-belly_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "Bhangra ki?",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "bhangra mane ki?",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "Bhangra kothakar dance?",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "tell me about Bhangra",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "Bhangra origin kothay?",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "আমাকে ভাংড়া সম্পর্কে বলো",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bhangra",
+      "query": "bhagnra ki?",
+      "retrieved": [
+        "dance-bhangra"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "Bharatanatyam ki?",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "bharatanatyam mane ki?",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "Bharatanatyam kothakar dance?",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "tell me about Bharatanatyam",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "Bharatanatyam origin kothay?",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "আমাকে ভরতনাট্যম সম্পর্কে বলো",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-bharatanatyam",
+      "query": "bharatnaatyam ki?",
+      "retrieved": [
+        "dance-bharatanatyam"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "Breaking / Breakdance ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "breaking / breakdance mane ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "Breaking / Breakdance kothakar dance?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "tell me about Breaking / Breakdance",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "Breaking / Breakdance origin kothay?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "Breaking ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "Breakdance ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "breakdancing ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "আমাকে ব্রেকডান্স সম্পর্কে বলো",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "আমাকে ব্রেকিং সম্পর্কে বলো",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-breaking_breakdance",
+      "query": "breakadnce ki?",
+      "retrieved": [
+        "dance-breaking_breakdance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-butoh",
+      "query": "Butoh ki?",
+      "retrieved": [
+        "dance-butoh"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-butoh",
+      "query": "butoh mane ki?",
+      "retrieved": [
+        "dance-butoh"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-butoh",
+      "query": "Butoh kothakar dance?",
+      "retrieved": [
+        "dance-butoh"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-butoh",
+      "query": "tell me about Butoh",
+      "retrieved": [
+        "dance-butoh"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-butoh",
+      "query": "Butoh origin kothay?",
+      "retrieved": [
+        "dance-butoh"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "Cha-Cha ki?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "cha-cha mane ki?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "Cha-Cha kothakar dance?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "tell me about Cha-Cha",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "Cha-Cha origin kothay?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "Cha Cha ki?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cha_cha",
+      "query": "ChaCha ki?",
+      "retrieved": [
+        "dance-cha_cha"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "Cumbia ki?",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "cumbia mane ki?",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "Cumbia kothakar dance?",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "tell me about Cumbia",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "Cumbia origin kothay?",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-cumbia",
+      "query": "cumiba ki?",
+      "retrieved": [
+        "dance-cumbia"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dabke",
+      "query": "Dabke ki?",
+      "retrieved": [
+        "dance-dabke"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dabke",
+      "query": "dabke mane ki?",
+      "retrieved": [
+        "dance-dabke"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dabke",
+      "query": "Dabke kothakar dance?",
+      "retrieved": [
+        "dance-dabke"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dabke",
+      "query": "tell me about Dabke",
+      "retrieved": [
+        "dance-dabke"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dabke",
+      "query": "Dabke origin kothay?",
+      "retrieved": [
+        "dance-dabke"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "Dancehall ki?",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "dancehall mane ki?",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "Dancehall kothakar dance?",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "tell me about Dancehall",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "Dancehall origin kothay?",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dancehall",
+      "query": "dancheall ki?",
+      "retrieved": [
+        "dance-dancehall"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "Dragon Dance ki?",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "dragon dance mane ki?",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "Dragon Dance kothakar dance?",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "tell me about Dragon Dance",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "Dragon Dance origin kothay?",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-dragon_dance",
+      "query": "Dragon dancing ki?",
+      "retrieved": [
+        "dance-dragon_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "Eskista ki?",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "eskista mane ki?",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "Eskista kothakar dance?",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "tell me about Eskista",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "Eskista origin kothay?",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-eskista",
+      "query": "esksita ki?",
+      "retrieved": [
+        "dance-eskista"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "Flamenco ki?",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "flamenco mane ki?",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "Flamenco kothakar dance?",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "tell me about Flamenco",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "Flamenco origin kothay?",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "আমাকে ফ্লামেঙ্কো সম্পর্কে বলো",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-flamenco",
+      "query": "flamneco ki?",
+      "retrieved": [
+        "dance-flamenco"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "Forró ki?",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "forró mane ki?",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "Forró kothakar dance?",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "tell me about Forró",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "Forró origin kothay?",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-forro",
+      "query": "Forro ki?",
+      "retrieved": [
+        "dance-forro"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "Foxtrot ki?",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "foxtrot mane ki?",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "Foxtrot kothakar dance?",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "tell me about Foxtrot",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "Foxtrot origin kothay?",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-foxtrot",
+      "query": "foxrtot ki?",
+      "retrieved": [
+        "dance-foxtrot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "Garba ki?",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "garba mane ki?",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "Garba kothakar dance?",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "tell me about Garba",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "Garba origin kothay?",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-garba",
+      "query": "আমাকে গরবা সম্পর্কে বলো",
+      "retrieved": [
+        "dance-garba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "Gumboot ki?",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "gumboot mane ki?",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "Gumboot kothakar dance?",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "tell me about Gumboot",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "Gumboot origin kothay?",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-gumboot",
+      "query": "gumobot ki?",
+      "retrieved": [
+        "dance-gumboot"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "Haka ki?",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "haka mane ki?",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "Haka kothakar dance?",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "tell me about Haka",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "Haka origin kothay?",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-haka",
+      "query": "আমাকে হাকা সম্পর্কে বলো",
+      "retrieved": [
+        "dance-haka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-highland_fling",
+      "query": "Highland Fling ki?",
+      "retrieved": [
+        "dance-highland_fling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-highland_fling",
+      "query": "highland fling mane ki?",
+      "retrieved": [
+        "dance-highland_fling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-highland_fling",
+      "query": "Highland Fling kothakar dance?",
+      "retrieved": [
+        "dance-highland_fling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-highland_fling",
+      "query": "tell me about Highland Fling",
+      "retrieved": [
+        "dance-highland_fling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-highland_fling",
+      "query": "Highland Fling origin kothay?",
+      "retrieved": [
+        "dance-highland_fling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "Hip-Hop ki?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "hip-hop mane ki?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "Hip-Hop kothakar dance?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "tell me about Hip-Hop",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "Hip-Hop origin kothay?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "Hip Hop ki?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "HipHop ki?",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hip_hop",
+      "query": "আমাকে হিপ হপ সম্পর্কে বলো",
+      "retrieved": [
+        "dance-hip_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "House Dance ki?",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "house dance mane ki?",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "House Dance kothakar dance?",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "tell me about House Dance",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "House Dance origin kothay?",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-house_dance",
+      "query": "House dancing ki?",
+      "retrieved": [
+        "dance-house_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "Hula ki?",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "hula mane ki?",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "Hula kothakar dance?",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "tell me about Hula",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "Hula origin kothay?",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-hula",
+      "query": "আমাকে হুলা সম্পর্কে বলো",
+      "retrieved": [
+        "dance-hula"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "Irish Step Dance ki?",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "irish step dance mane ki?",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "Irish Step Dance kothakar dance?",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "tell me about Irish Step Dance",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "Irish Step Dance origin kothay?",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-irish_step_dance",
+      "query": "Irish Step dancing ki?",
+      "retrieved": [
+        "dance-irish_step_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "Jazz Dance ki?",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "jazz dance mane ki?",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "Jazz Dance kothakar dance?",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "tell me about Jazz Dance",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "Jazz Dance origin kothay?",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "Jazz dancing ki?",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-jazz_dance",
+      "query": "আমাকে জ্যাজ ডান্স সম্পর্কে বলো",
+      "retrieved": [
+        "dance-jazz_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "Kabuki ki?",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "kabuki mane ki?",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "Kabuki kothakar dance?",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "tell me about Kabuki",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "Kabuki origin kothay?",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kabuki",
+      "query": "kabkui ki?",
+      "retrieved": [
+        "dance-kabuki"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "Kathak ki?",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "kathak mane ki?",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "Kathak kothakar dance?",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "tell me about Kathak",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "Kathak origin kothay?",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "আমাকে কথক সম্পর্কে বলো",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathak",
+      "query": "katahk ki?",
+      "retrieved": [
+        "dance-kathak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "Kathakali ki?",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "kathakali mane ki?",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "Kathakali kothakar dance?",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "tell me about Kathakali",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "Kathakali origin kothay?",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "আমাকে কথাকলি সম্পর্কে বলো",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kathakali",
+      "query": "kathkaali ki?",
+      "retrieved": [
+        "dance-kathakali"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kecak",
+      "query": "Kecak ki?",
+      "retrieved": [
+        "dance-kecak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kecak",
+      "query": "kecak mane ki?",
+      "retrieved": [
+        "dance-kecak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kecak",
+      "query": "Kecak kothakar dance?",
+      "retrieved": [
+        "dance-kecak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kecak",
+      "query": "tell me about Kecak",
+      "retrieved": [
+        "dance-kecak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kecak",
+      "query": "Kecak origin kothay?",
+      "retrieved": [
+        "dance-kecak"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "Kizomba ki?",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "kizomba mane ki?",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "Kizomba kothakar dance?",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "tell me about Kizomba",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "Kizomba origin kothay?",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kizomba",
+      "query": "kizmoba ki?",
+      "retrieved": [
+        "dance-kizomba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-krump",
+      "query": "Krump ki?",
+      "retrieved": [
+        "dance-krump"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-krump",
+      "query": "krump mane ki?",
+      "retrieved": [
+        "dance-krump"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-krump",
+      "query": "Krump kothakar dance?",
+      "retrieved": [
+        "dance-krump"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-krump",
+      "query": "tell me about Krump",
+      "retrieved": [
+        "dance-krump"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-krump",
+      "query": "Krump origin kothay?",
+      "retrieved": [
+        "dance-krump"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "Kuchipudi ki?",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "kuchipudi mane ki?",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "Kuchipudi kothakar dance?",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "tell me about Kuchipudi",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "Kuchipudi origin kothay?",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "আমাকে কুচিপুড়ি সম্পর্কে বলো",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-kuchipudi",
+      "query": "kuchpiudi ki?",
+      "retrieved": [
+        "dance-kuchipudi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "Lavani ki?",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "lavani mane ki?",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "Lavani kothakar dance?",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "tell me about Lavani",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "Lavani origin kothay?",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "আমাকে লাবণী সম্পর্কে বলো",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lavani",
+      "query": "lavnai ki?",
+      "retrieved": [
+        "dance-lavani"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lindy_hop",
+      "query": "Lindy Hop ki?",
+      "retrieved": [
+        "dance-lindy_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lindy_hop",
+      "query": "lindy hop mane ki?",
+      "retrieved": [
+        "dance-lindy_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lindy_hop",
+      "query": "Lindy Hop kothakar dance?",
+      "retrieved": [
+        "dance-lindy_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lindy_hop",
+      "query": "tell me about Lindy Hop",
+      "retrieved": [
+        "dance-lindy_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lindy_hop",
+      "query": "Lindy Hop origin kothay?",
+      "retrieved": [
+        "dance-lindy_hop"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "Lion Dance ki?",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "lion dance mane ki?",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "Lion Dance kothakar dance?",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "tell me about Lion Dance",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "Lion Dance origin kothay?",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-lion_dance",
+      "query": "Lion dancing ki?",
+      "retrieved": [
+        "dance-lion_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-locking",
+      "query": "Locking ki?",
+      "retrieved": [
+        "dance-locking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-locking",
+      "query": "locking mane ki?",
+      "retrieved": [
+        "dance-locking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-locking",
+      "query": "Locking kothakar dance?",
+      "retrieved": [
+        "dance-locking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-locking",
+      "query": "tell me about Locking",
+      "retrieved": [
+        "dance-locking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-locking",
+      "query": "Locking origin kothay?",
+      "retrieved": [
+        "dance-locking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mambo",
+      "query": "Mambo ki?",
+      "retrieved": [
+        "dance-mambo"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mambo",
+      "query": "mambo mane ki?",
+      "retrieved": [
+        "dance-mambo"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mambo",
+      "query": "Mambo kothakar dance?",
+      "retrieved": [
+        "dance-mambo"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mambo",
+      "query": "tell me about Mambo",
+      "retrieved": [
+        "dance-mambo"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mambo",
+      "query": "Mambo origin kothay?",
+      "retrieved": [
+        "dance-mambo"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "Mazurka ki?",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "mazurka mane ki?",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "Mazurka kothakar dance?",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "tell me about Mazurka",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "Mazurka origin kothay?",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-mazurka",
+      "query": "mazruka ki?",
+      "retrieved": [
+        "dance-mazurka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "Merengue ki?",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "merengue mane ki?",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "Merengue kothakar dance?",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "tell me about Merengue",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "Merengue origin kothay?",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-merengue",
+      "query": "meregnue ki?",
+      "retrieved": [
+        "dance-merengue"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "Milonga ki?",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "milonga mane ki?",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "Milonga kothakar dance?",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "tell me about Milonga",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "Milonga origin kothay?",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-milonga",
+      "query": "milnoga ki?",
+      "retrieved": [
+        "dance-milonga"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "Morris Dance ki?",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "morris dance mane ki?",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "Morris Dance kothakar dance?",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "tell me about Morris Dance",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "Morris Dance origin kothay?",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-morris_dance",
+      "query": "Morris dancing ki?",
+      "retrieved": [
+        "dance-morris_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "Odissi ki?",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "odissi mane ki?",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "Odissi kothakar dance?",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "tell me about Odissi",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "Odissi origin kothay?",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-odissi",
+      "query": "আমাকে ওড়িশি সম্পর্কে বলো",
+      "retrieved": [
+        "dance-odissi"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-polka",
+      "query": "Polka ki?",
+      "retrieved": [
+        "dance-polka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-polka",
+      "query": "polka mane ki?",
+      "retrieved": [
+        "dance-polka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-polka",
+      "query": "Polka kothakar dance?",
+      "retrieved": [
+        "dance-polka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-polka",
+      "query": "tell me about Polka",
+      "retrieved": [
+        "dance-polka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-polka",
+      "query": "Polka origin kothay?",
+      "retrieved": [
+        "dance-polka"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-popping",
+      "query": "Popping ki?",
+      "retrieved": [
+        "dance-popping"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-popping",
+      "query": "popping mane ki?",
+      "retrieved": [
+        "dance-popping"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-popping",
+      "query": "Popping kothakar dance?",
+      "retrieved": [
+        "dance-popping"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-popping",
+      "query": "tell me about Popping",
+      "retrieved": [
+        "dance-popping"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-popping",
+      "query": "Popping origin kothay?",
+      "retrieved": [
+        "dance-popping"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "Quickstep ki?",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "quickstep mane ki?",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "Quickstep kothakar dance?",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "tell me about Quickstep",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "Quickstep origin kothay?",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-quickstep",
+      "query": "quicsktep ki?",
+      "retrieved": [
+        "dance-quickstep"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "Reggaeton ki?",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "reggaeton mane ki?",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "Reggaeton kothakar dance?",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "tell me about Reggaeton",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "Reggaeton origin kothay?",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-reggaeton",
+      "query": "reggeaton ki?",
+      "retrieved": [
+        "dance-reggaeton"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-rumba",
+      "query": "Rumba ki?",
+      "retrieved": [
+        "dance-rumba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-rumba",
+      "query": "rumba mane ki?",
+      "retrieved": [
+        "dance-rumba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-rumba",
+      "query": "Rumba kothakar dance?",
+      "retrieved": [
+        "dance-rumba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-rumba",
+      "query": "tell me about Rumba",
+      "retrieved": [
+        "dance-rumba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-rumba",
+      "query": "Rumba origin kothay?",
+      "retrieved": [
+        "dance-rumba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "Salsa ki?",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "salsa mane ki?",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "Salsa kothakar dance?",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "tell me about Salsa",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "Salsa origin kothay?",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-salsa",
+      "query": "আমাকে সালসা সম্পর্কে বলো",
+      "retrieved": [
+        "dance-salsa"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "Samba ki?",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "samba mane ki?",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "Samba kothakar dance?",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "tell me about Samba",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "Samba origin kothay?",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-samba",
+      "query": "আমাকে সাম্বা সম্পর্কে বলো",
+      "retrieved": [
+        "dance-samba"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "Sevillanas ki?",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "sevillanas mane ki?",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "Sevillanas kothakar dance?",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "tell me about Sevillanas",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "Sevillanas origin kothay?",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sevillanas",
+      "query": "sevilalnas ki?",
+      "retrieved": [
+        "dance-sevillanas"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "Sufi Whirling ki?",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "sufi whirling mane ki?",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "Sufi Whirling kothakar dance?",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "tell me about Sufi Whirling",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "Sufi Whirling origin kothay?",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-sufi_whirling",
+      "query": "sufi whirilng ki?",
+      "retrieved": [
+        "dance-sufi_whirling"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "Tango ki?",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "tango mane ki?",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "Tango kothakar dance?",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "tell me about Tango",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "Tango origin kothay?",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tango",
+      "query": "আমাকে ট্যাঙ্গো সম্পর্কে বলো",
+      "retrieved": [
+        "dance-tango"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "Tanoura ki?",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "tanoura mane ki?",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "Tanoura kothakar dance?",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "tell me about Tanoura",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "Tanoura origin kothay?",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tanoura",
+      "query": "tanuora ki?",
+      "retrieved": [
+        "dance-tanoura"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "Tap Dance ki?",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "tap dance mane ki?",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "Tap Dance kothakar dance?",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "tell me about Tap Dance",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "Tap Dance origin kothay?",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "Tap dancing ki?",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tap_dance",
+      "query": "আমাকে ট্যাপ ডান্স সম্পর্কে বলো",
+      "retrieved": [
+        "dance-tap_dance"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "Tarantella ki?",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "tarantella mane ki?",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "Tarantella kothakar dance?",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "tell me about Tarantella",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "Tarantella origin kothay?",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-tarantella",
+      "query": "taranetlla ki?",
+      "retrieved": [
+        "dance-tarantella"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "Voguing ki?",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "voguing mane ki?",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "Voguing kothakar dance?",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "tell me about Voguing",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "Voguing origin kothay?",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-voguing",
+      "query": "vogiung ki?",
+      "retrieved": [
+        "dance-voguing"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "Waacking ki?",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "waacking mane ki?",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "Waacking kothakar dance?",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "tell me about Waacking",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "Waacking origin kothay?",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waacking",
+      "query": "waacikng ki?",
+      "retrieved": [
+        "dance-waacking"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "Waltz ki?",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "waltz mane ki?",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "Waltz kothakar dance?",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "tell me about Waltz",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "Waltz origin kothay?",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-waltz",
+      "query": "আমাকে ওয়াল্টজ সম্পর্কে বলো",
+      "retrieved": [
+        "dance-waltz"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-zouk",
+      "query": "Zouk ki?",
+      "retrieved": [
+        "dance-zouk"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-zouk",
+      "query": "zouk mane ki?",
+      "retrieved": [
+        "dance-zouk"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-zouk",
+      "query": "Zouk kothakar dance?",
+      "retrieved": [
+        "dance-zouk"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-zouk",
+      "query": "tell me about Zouk",
+      "retrieved": [
+        "dance-zouk"
+      ],
+      "pass": true
+    },
+    {
+      "dance": "dance-zouk",
+      "query": "Zouk origin kothay?",
+      "retrieved": [
+        "dance-zouk"
+      ],
+      "pass": true
+    }
+  ]
+}

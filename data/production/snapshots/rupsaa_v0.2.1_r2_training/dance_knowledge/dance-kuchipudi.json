@@ -1,0 +1,32 @@
+{
+  "id": "dance-kuchipudi",
+  "name": "Kuchipudi",
+  "description": "It is a classical Indian dance combining graceful movement, rhythmic footwork, and dramatic expression.",
+  "origin": "India (Andhra Pradesh).",
+  "category": "Indian classical",
+  "aliases": [
+    "কুচিপুড়ি"
+  ],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "Indian classical",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #40 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.706820+00:00",
+  "updated_at": "2026-09-26T17:10:21.706834+00:00"
+}

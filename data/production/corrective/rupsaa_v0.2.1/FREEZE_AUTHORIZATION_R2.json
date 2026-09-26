@@ -1,0 +1,9 @@
+{
+  "authorized": true,
+  "authorized_by": "owner",
+  "instruction": "RUPSAA V0.2.1 R2 \u2014 OWNER DANCE DATA DELIVERED: 'Build the immutable V0.2.1 R2 replacement freeze' (all gates must pass)",
+  "scope": "R2 freeze + training preflight only. GPU training is NOT authorized by this file.",
+  "supersedes": "rupsaa_v0.2.1 dataset 5e54c8f24aad837f3d037cb661806316969a169aeca0cfe1da282a1c654e5543 (tag rupsaa-v0.2.1-training) \u2014 never trained",
+  "recorded_at": "2026-09-26T17:29:18.435778+00:00",
+  "inputs_sha256": "67062fc7eb90318aacd9e2678f545ef5c5a610fb81e0ba06d2e80e1640223dbb:8aeab8e4c1132d263b4c747193481e344c4ed5aea7d34bcd9d3c59d75972866b"
+}

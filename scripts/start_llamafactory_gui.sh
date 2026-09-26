@@ -29,10 +29,13 @@ die() { echo "ERROR: $*" >&2; exit 1; }
 case "$VERSION" in
   v0.1) MANIFEST="data/production/snapshots/rupsaa_v0.1_training/V01_TRAINING_MANIFEST.json" ;;
   v0.2) MANIFEST="data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json" ;;
-  v0.2.1) MANIFEST="data/production/exports/rupsaa_v0.2.1/V021_TRAINING_MANIFEST.json" ;;
+  v0.2.1) MANIFEST="data/production/exports/rupsaa_v0.2.1_r2/V021_R2_TRAINING_MANIFEST.json" ;;  # R2 freeze
   *) die "unknown version '$VERSION' (use v0.1, v0.2 or v0.2.1)" ;;
 esac
 CONFIG_NAME="rupsaa_${VERSION}.yaml"
+# Frozen export/dataset name: v0.2.1 trains ONLY on its R2 replacement freeze.
+DATASET_NAME="rupsaa_${VERSION}"
+[ "$VERSION" = "v0.2.1" ] && DATASET_NAME="rupsaa_v0.2.1_r2"
 TEMPLATE="configs/training/llamafactory_webui_rupsaa_${VERSION}.yaml"
 
 case "$PORT" in
@@ -52,12 +55,12 @@ PY="${LLAMAFACTORY_PYTHON:-$(dirname "$LF_CLI")/python}"
 
 # --- required files ---
 DATASET_INFO=data/dataset_info.json
-[ "$VERSION" = "v0.2.1" ] && DATASET_INFO=data/production/exports/rupsaa_v0.2.1/dataset_info.json
+[ "$VERSION" = "v0.2.1" ] && DATASET_INFO=data/production/exports/rupsaa_v0.2.1_r2/dataset_info.json
 for f in \
   "$TEMPLATE" \
   "$DATASET_INFO" \
-  "data/production/exports/rupsaa_${VERSION}/train.jsonl" \
-  "data/production/exports/rupsaa_${VERSION}/validation.jsonl" \
+  "data/production/exports/${DATASET_NAME}/train.jsonl" \
+  "data/production/exports/${DATASET_NAME}/validation.jsonl" \
   "$MANIFEST"
 do
   [ -r "$f" ] || die "required file missing or unreadable: $ROOT/$f"
@@ -88,9 +91,9 @@ PYEOF
 
 # --- seed LLaMA-Factory's own user_config (non-destructive merge) and
 #     render the GUI-loadable config, then verify both with LF's own code ---
-"$PY" - "$ROOT" "$TEMPLATE" "$CONFIG_NAME" "$VERSION" "$MANIFEST" <<'PYEOF' || die "config render/verification failed"
+"$PY" - "$ROOT" "$TEMPLATE" "$CONFIG_NAME" "$VERSION" "$MANIFEST" "$DATASET_NAME" <<'PYEOF' || die "config render/verification failed"
 import hashlib, json, os, sys, yaml
-root, template, config_name, version, manifest_path = sys.argv[1:6]
+root, template, config_name, version, manifest_path, dataset_name = sys.argv[1:7]
 
 os.makedirs("cache", exist_ok=True)
 uc_path = os.path.join("cache", "user_config.yaml")
@@ -118,15 +121,15 @@ from llamafactory.webui.common import get_model_path, get_save_path, list_datase
 cfg = load_args(config_name)
 assert cfg is not None, f"LLaMA-Factory load_args could not open {get_save_path(config_name)}"
 assert cfg["train.output_dir"] == os.path.join(root, "adapters", f"rupsaa-{version}"), cfg["train.output_dir"]
-assert cfg["train.dataset"] == [f"rupsaa_{version}_train"], cfg["train.dataset"]
+assert cfg["train.dataset"] == [f"{dataset_name}_train"], cfg["train.dataset"]
 assert cfg["top.template"] == "qwen" and cfg["top.quantization_bit"] == "4", "template/quantization drifted"
 choices = [c[0] if isinstance(c, tuple) else c for c in list_dataset(cfg["train.dataset_dir"]).choices]
-assert f"rupsaa_{version}_train" in choices, f"rupsaa_{version}_train not registered in {cfg['train.dataset_dir']}/dataset_info.json"
+assert f"{dataset_name}_train" in choices, f"{dataset_name}_train not registered in {cfg['train.dataset_dir']}/dataset_info.json"
 if version == "v0.2.1":
     # Frozen export: every file must still match the freeze manifest; never train into V0.1/V0.2.
     manifest = json.load(open(manifest_path, encoding="utf-8"))
     for name, expected in manifest["files_sha256"].items():
-        path = os.path.join("data", "production", "exports", "rupsaa_v0.2.1", name)
+        path = os.path.join("data", "production", "exports", "rupsaa_v0.2.1_r2", name)
         actual = hashlib.sha256(open(path, "rb").read()).hexdigest()
         assert actual == expected, f"{path} changed since freeze ({actual} != {expected})"
     for other in ("rupsaa-v0.1", "rupsaa-v0.2"):
@@ -154,7 +157,7 @@ echo "  project root : $ROOT"
 echo "  config file  : $ROOT/config/$CONFIG_NAME (rendered from $TEMPLATE)"
 echo "  GUI 'Config path' field — type exactly:  $CONFIG_NAME   then click 'Load arguments'"
 if [ "$VERSION" = "v0.2.1" ]; then
-  echo "  dataset      : rupsaa_v0.2.1_train  (Data dir: data/production/exports/rupsaa_v0.2.1)"
+  echo "  dataset      : rupsaa_v0.2.1_r2_train  (Data dir: data/production/exports/rupsaa_v0.2.1_r2 — R2 freeze)"
 else
   echo "  dataset      : rupsaa_${VERSION}_train  (registered in data/dataset_info.json)"
 fi

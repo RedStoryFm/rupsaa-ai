@@ -1,0 +1,30 @@
+{
+  "id": "dance-popping",
+  "name": "Popping",
+  "description": "It is a funk street dance style based on quickly contracting and relaxing muscles to create a “pop” or hit.",
+  "origin": "United States (California).",
+  "category": "street",
+  "aliases": [],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "street",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #7 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.573635+00:00",
+  "updated_at": "2026-09-26T17:10:21.573651+00:00"
+}

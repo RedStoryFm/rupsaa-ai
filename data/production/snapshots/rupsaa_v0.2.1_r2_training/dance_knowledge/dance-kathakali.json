@@ -1,0 +1,34 @@
+{
+  "id": "dance-kathakali",
+  "name": "Kathakali",
+  "description": "It is a classical dance-drama with elaborate makeup, costumes, and codified gestures.",
+  "origin": "India (Kerala).",
+  "category": "classical dance-drama",
+  "aliases": [
+    "কথাকলি"
+  ],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "classical dance-drama",
+    "classical",
+    "dance-drama",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #39 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.702024+00:00",
+  "updated_at": "2026-09-26T17:10:21.702040+00:00"
+}

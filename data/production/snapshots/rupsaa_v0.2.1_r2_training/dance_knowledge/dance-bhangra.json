@@ -1,0 +1,32 @@
+{
+  "id": "dance-bhangra",
+  "name": "Bhangra",
+  "description": "It is an energetic folk dance with strong shoulder and hip movements, often performed at celebrations.",
+  "origin": "India / Pakistan (Punjab).",
+  "category": "folk",
+  "aliases": [
+    "ভাংড়া"
+  ],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "folk",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #42 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.715057+00:00",
+  "updated_at": "2026-09-26T17:10:21.715071+00:00"
+}

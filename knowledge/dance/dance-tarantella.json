@@ -1,0 +1,30 @@
+{
+  "id": "dance-tarantella",
+  "name": "Tarantella",
+  "description": "It is a fast, whirling folk dance often accompanied by tambourines and lively music.",
+  "origin": "Italy (Southern Italy).",
+  "category": "folk",
+  "aliases": [],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "folk",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #33 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.673445+00:00",
+  "updated_at": "2026-09-26T17:10:21.673456+00:00"
+}

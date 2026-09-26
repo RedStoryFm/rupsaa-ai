@@ -26,7 +26,11 @@ FROZEN = PROJECT_ROOT / "data/production/snapshots/rupsaa_v0.2_training/frozen_r
 EVAL = PROJECT_ROOT / "data/production/evaluation/rupsaa_v0.2"
 REPORT_DIR = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2.1_preparation"
 
-CATCHPHRASES = ["honestly", "actually", "fair call", "fair enough", "heyy", "bindaas", "baby", "babe", "basically"]
+CATCHPHRASES = ["honestly", "actually", "fair call", "fair enough", "heyy", "bindaas", "baby", "babe", "basically",
+                "oh dear", "anything more"]
+DANCE_TRAIN = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/dance_records.jsonl"
+DANCE_HOLDOUT = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/dance_holdout_records.jsonl"
+DANCE_DIR = PROJECT_ROOT / "knowledge/dance"
 # Phrases from V0.2's garbled live replies ("jiggesh" itself is fine Banglish for "ask", so it is not listed).
 BAD_BANGLISH = ["kichu niye kichu", "bishoy der", "onno der jonno", "make kora", "shobcheye beshi kichu"]
 ROMANIZATION = {"shobcheye/sobcheye": ("shobcheye", "sobcheye"), "bhalo/valo": ("bhalo", "valo"),
@@ -71,10 +75,40 @@ def load_eval_prompts() -> list[str]:
     return prompts
 
 
+_PLACE_VOCAB: set[str] | None = None
+
+
+def dance_faithfulness(rec: dict) -> list[str]:
+    """Every origin place named in a (Latin-script) reply must come from the dance entries the runtime
+    attached to that conversation; a reply may not claim steps the owner never recorded."""
+    global _PLACE_VOCAB
+    from rupsaa.rag.dance import DanceStore
+    store = DanceStore(DANCE_DIR)
+    if _PLACE_VOCAB is None:
+        _PLACE_VOCAB = {w for d in store.list() for w in re.findall(r"[A-Z][a-zA-Zāó]+", d.origin)} - {"United", "States", "India", "South", "North", "New", "Middle", "East", "Africa", "French", "Southern"}
+    attached = {t for tr in rec["runtime_trace"] for t in tr["terms_used"] if t.startswith("dance-")}
+    allowed = " ".join(store.get(t).origin + " " + store.get(t).description for t in attached)
+    out = []
+    for i, m in enumerate(x for x in rec["messages"] if x["role"] == "assistant"):
+        for place in _PLACE_VOCAB:
+            if re.search(r"\b" + re.escape(place) + r"\b", m["content"]) and place not in allowed:
+                out.append(f"turn {i + 1}: names '{place}', which is not in the attached dance entries {sorted(attached)}")
+        if re.search(r"\b(step \d|first step|step one|1\.|prothom step)", m["content"], re.I):
+            out.append(f"turn {i + 1}: looks like step instructions — none are in the owner's records")
+    if not attached:
+        out.append("no dance entry attached by the runtime")
+    return out
+
+
 def main() -> None:
     from scripts.v021_replay_live import OWNER_SEQUENCE
 
     recs = [json.loads(line) for line in open(CORR, encoding="utf-8")]
+    n_corr = len(recs)
+    for extra in (DANCE_TRAIN, DANCE_HOLDOUT):
+        if extra.exists():
+            recs += [json.loads(line) for line in open(extra, encoding="utf-8")]
+    dance_ids = {r["id"] for r in recs[n_corr:]}
     frozen = [json.loads(line) for line in open(FROZEN, encoding="utf-8")]
     frozen_users = {m["content"].strip().lower() for r in frozen for m in r["messages"] if m["role"] == "user"}
     eval_terms = [json.loads(line)["term"].lower() for line in open(EVAL / "terminology_generalization.jsonl", encoding="utf-8")]
@@ -107,7 +141,8 @@ def main() -> None:
             if MIXED_WORD.search(a):
                 flags[r["id"]].append(f"turn {i + 1}: mixed-script word {MIXED_WORD.findall(a)}")
             replies.append(a)
-            if r["category"] in ("direct_definition", "terminology", "typo_terminology", "acknowledgement", "memory_recall"):
+            if r["category"] in ("direct_definition", "terminology", "typo_terminology", "acknowledgement", "memory_recall") \
+                    or r["category"].startswith("dance_"):
                 direct_replies.append(a)
         for u in users:
             ul = u.strip().lower()
@@ -119,6 +154,8 @@ def main() -> None:
                 if ul == p or close:
                     flags[r["id"]].append(f"user turn too close to an evaluation/live-test prompt: {u!r} ~ {p!r}")
                     break
+        if r["id"] in dance_ids:
+            flags[r["id"]] += dance_faithfulness(r)
         blob = " ".join(m["content"].lower() for m in r["messages"][1:])
         for t in eval_terms + ["strip", "foreplay", "ফোরপ্লে", "স্ট্রিপ"]:
             if re.search(r"(?<![a-zঀ-৿])" + re.escape(t) + r"(?![a-zঀ-৿])", blob):
@@ -178,6 +215,9 @@ def main() -> None:
     }
     summary = {
         "records": len(recs),
+        "corrective_records": n_corr,
+        "dance_train_records": sum(1 for r in recs[n_corr:] if r.get("review_status") != "held_out_never_train"),
+        "dance_holdout_records": sum(1 for r in recs[n_corr:] if r.get("review_status") == "held_out_never_train"),
         "assistant_replies": len(replies),
         "by_category": dict(Counter(r["category"] for r in recs)),
         "by_final_language": dict(Counter(r["language"] for r in recs)),

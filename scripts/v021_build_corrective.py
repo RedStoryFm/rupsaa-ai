@@ -94,14 +94,44 @@ def build(convs: list[dict], store: TerminologyStore, dance: DanceStore | None =
     return records, errors
 
 
-def main() -> None:
+DANCE_SOURCE = CORR_DIR / "dance_conversations.py"
+DANCE_OUT = CORR_DIR / "dance_records.jsonl"
+DANCE_HOLDOUT_OUT = CORR_DIR / "dance_holdout_records.jsonl"
+
+
+def load_dance_source(path: Path = DANCE_SOURCE) -> tuple[list[dict], list[dict]]:
+    spec = importlib.util.spec_from_file_location("v021_dance_source", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.DANCE_TRAIN, mod.DANCE_HOLDOUT
+
+
+def build_all() -> tuple[dict[Path, list[dict]], list[str]]:
+    """Corrective + dance train + dance held-out, all through the runtime with the live dance store."""
     store = TerminologyStore(PROJECT_ROOT / "knowledge/terminology")
-    records, errors = build(load_source(), store)
+    dance = DanceStore(PROJECT_ROOT / "knowledge/dance")
+    corrective, errors = build(load_source(), store, dance)
+    train, holdout = load_dance_source()
+    dance_train, e2 = build(train, store, dance)
+    dance_hold, e3 = build(holdout, store, dance)
+    for r in dance_train + dance_hold:
+        r["source_type"] = "v021_dance_handwritten"
+    for r in dance_hold:
+        r["review_status"] = "held_out_never_train"
+    ids = [r["id"] for r in corrective + dance_train + dance_hold]
+    dupes = sorted({i for i in ids if ids.count(i) > 1})
+    return ({OUT: corrective, DANCE_OUT: dance_train, DANCE_HOLDOUT_OUT: dance_hold},
+            errors + e2 + e3 + [f"duplicate id {d}" for d in dupes])
+
+
+def main() -> None:
+    outputs, errors = build_all()
     if errors:
         print("BUILD ERRORS:\n  " + "\n  ".join(errors))
         sys.exit(1)
-    OUT.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records), encoding="utf-8")
-    print(f"{len(records)} records -> {OUT.relative_to(PROJECT_ROOT)}")
+    for path, records in outputs.items():
+        path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in records), encoding="utf-8")
+        print(f"{len(records)} records -> {path.relative_to(PROJECT_ROOT)}")
 
 
 if __name__ == "__main__":

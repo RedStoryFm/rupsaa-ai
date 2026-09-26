@@ -1,6 +1,9 @@
 {
-  "records": 162,
-  "assistant_replies": 270,
+  "records": 198,
+  "corrective_records": 162,
+  "dance_train_records": 24,
+  "dance_holdout_records": 12,
+  "assistant_replies": 314,
   "by_category": {
     "banglish_casual": 20,
     "bengali_casual": 12,
@@ -12,32 +15,43 @@
     "terminology": 20,
     "typo_terminology": 8,
     "memory_recall": 18,
-    "english": 6
+    "english": 6,
+    "dance_definition": 7,
+    "dance_origin": 7,
+    "dance_simplify": 2,
+    "dance_detail": 1,
+    "dance_comparison": 6,
+    "dance_alias": 2,
+    "dance_typo": 3,
+    "dance_language_switch": 4,
+    "dance_follow_up": 1,
+    "dance_no_steps": 2,
+    "dance_casual": 1
   },
   "by_final_language": {
-    "banglish": 85,
-    "bn": 46,
-    "en": 31
+    "banglish": 101,
+    "bn": 54,
+    "en": 43
   },
   "turns": {
-    "1": 74,
-    "2": 70,
+    "1": 102,
+    "2": 78,
     "3": 16,
     "4": 2
   },
   "final_routes": {
-    "casual": 47,
-    "general": 46,
-    "terminology": 31,
-    "followup": 19,
+    "casual": 48,
+    "general": 56,
+    "terminology": 49,
+    "followup": 26,
     "knowledge": 3,
     "memory": 16
   },
   "with_terminology_block": 34,
-  "with_language_directive": 21,
+  "with_language_directive": 25,
   "with_recall_note": 16,
-  "question_ending_rate_all": 0.111,
-  "question_ending_rate_direct": 0.071,
+  "question_ending_rate_all": 0.096,
+  "question_ending_rate_direct": 0.053,
   "top_openings": [
     [
       "ki hoyeche",
@@ -72,7 +86,7 @@
       2
     ]
   ],
-  "top_opening_share": 0.011,
+  "top_opening_share": 0.01,
   "near_duplicate_reply_pairs": [],
   "top_first_tokens": [
     [
@@ -85,6 +99,10 @@
     ],
     [
       "hae",
+      5
+    ],
+    [
+      "a",
       5
     ],
     [
@@ -110,13 +128,9 @@
     [
       "darun",
       3
-    ],
-    [
-      "whispering",
-      3
     ]
   ],
-  "top_first_token_share": 0.03,
+  "top_first_token_share": 0.025,
   "opening_bigrams": [
     [
       "ki hoyeche",
@@ -151,41 +165,41 @@
       2
     ],
     [
+      "you mean",
+      2
+    ],
+    [
+      "both come",
+      2
+    ],
+    [
       "bhaloi jacche",
       1
     ],
     [
       "tomar sathe",
       1
-    ],
-    [
-      "ei cholche",
-      1
-    ],
-    [
-      "tahole aj",
-      1
     ]
   ],
   "top_sentence_skeletons": [
     [
-      "_ ta _",
-      8
-    ],
-    [
       "_ ar _",
-      7
+      16
     ],
     [
       "_ er _",
+      10
+    ],
+    [
+      "_ ta _",
+      9
+    ],
+    [
+      "_ আর _",
       7
     ],
     [
       "_ একটু _",
-      5
-    ],
-    [
-      "_ আর _",
       5
     ],
     [
@@ -205,23 +219,23 @@
       4
     ],
     [
-      "_ or _",
+      "_ e _",
       4
     ]
   ],
-  "top_skeleton_share": 0.02,
+  "top_skeleton_share": 0.032,
   "exact_duplicate_replies": [],
   "emoji_rate": 0.0,
   "definition_replies_starting_X_mane": "17/40 (expected: definitions answer first)",
   "reply_length_percentiles": {
-    "p10": 27,
-    "p50": 78,
-    "p90": 157,
+    "p10": 30,
+    "p50": 94,
+    "p90": 169,
     "max": 309
   },
   "assistant_reply_language": {
-    "latin": 201,
-    "bn": 69
+    "latin": 237,
+    "bn": 77
   },
   "romanization_counts": {
     "shobcheye/sobcheye": {
@@ -233,7 +247,7 @@
       "valo": 0
     },
     "shomoy/somoy": {
-      "shomoy": 18,
+      "shomoy": 20,
       "somoy": 0
     },
     "sheta/seta": {
@@ -243,13 +257,13 @@
   },
   "reply_chars_by_script": {
     "latin": {
-      "n": 201,
-      "mean": 91,
+      "n": 237,
+      "mean": 101,
       "max": 309
     },
     "bn": {
-      "n": 69,
-      "mean": 83,
+      "n": 77,
+      "mean": 89,
       "max": 261
     }
   },

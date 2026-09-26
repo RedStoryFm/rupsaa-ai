@@ -5,17 +5,17 @@
 # config/rupsaa_v0.2.1.yaml on every launch; in the GUI you then type just:   rupsaa_v0.2.1.yaml
 #
 # Same loading mechanics as the V0.2 template (configs/training/llamafactory_webui_rupsaa_v0.2.yaml).
-# Differences from V0.2: dataset rupsaa_v0.2.1_train registered in the V0.2.1 export's own
-# dataset_info.json (train.dataset_dir = data/production/exports/rupsaa_v0.2.1 — the "Data dir"
-# box), warmup 6, output adapters/rupsaa-v0.2.1.
+# Differences from V0.2: dataset rupsaa_v0.2.1_r2_train (the R2 freeze, which supersedes the never-trained
+# first V0.2.1 freeze) registered in the R2 export's own dataset_info.json (train.dataset_dir =
+# data/production/exports/rupsaa_v0.2.1_r2 — the "Data dir" box), warmup 6, output adapters/rupsaa-v0.2.1.
 #
 # Same experiment as configs/training/llamafactory_rupsaa_v0.2.1.yaml (CLI). What the GUI does implicitly:
 #  * val_size > 0 -> eval_steps = save_steps, load_best_model_at_end = true (webui/runner.py),
 #    metric eval_loss; the final adapter is the best checkpoint by eval loss.
 #  * 4-bit NF4 + double quantization + gradient checkpointing: LLaMA-Factory defaults.
 #  * weight_decay 0.0 and seed 42: trainer defaults — seed 42 is what makes the 84-row internal eval
-#    slice land exactly on the single-copy V0.2 rows the freeze placed there.
-#  * 196 optimizer steps (98/epoch x 2), save+eval every 20.
+#    slice (86 rows) land exactly on the single-copy V0.2 rows the freeze placed there.
+#  * 202 optimizer steps (101/epoch x 2), save+eval every 20.
 
 top.model_name: Custom
 top.model_path: Qwen/Qwen2.5-7B-Instruct
@@ -24,9 +24,9 @@ top.quantization_bit: "4"
 top.template: qwen
 
 train.training_stage: Supervised Fine-Tuning
-train.dataset_dir: data/production/exports/rupsaa_v0.2.1
+train.dataset_dir: data/production/exports/rupsaa_v0.2.1_r2
 train.dataset:
-  - rupsaa_v0.2.1_train
+  - rupsaa_v0.2.1_r2_train
 train.learning_rate: "2e-4"
 train.num_train_epochs: "2.0"
 train.max_grad_norm: "0.3"

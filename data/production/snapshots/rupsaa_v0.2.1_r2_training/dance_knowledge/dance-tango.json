@@ -1,0 +1,32 @@
+{
+  "id": "dance-tango",
+  "name": "Tango",
+  "description": "It is a dramatic partner dance known for close embrace, sharp leg movements, and intense musicality.",
+  "origin": "Argentina / Uruguay.",
+  "category": "partner",
+  "aliases": [
+    "ট্যাঙ্গো"
+  ],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "partner",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #22 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.623903+00:00",
+  "updated_at": "2026-09-26T17:10:21.623918+00:00"
+}

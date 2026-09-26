@@ -24,6 +24,7 @@ from pathlib import Path
 from rupsaa.rag.terminology import (
     TERM_LANGUAGES,
     TermMatch,
+    _all_known_words,
     _clean_list,
     _now,
     match_records,
@@ -31,6 +32,12 @@ from rupsaa.rag.terminology import (
 )
 
 DANCE_LANGUAGES = list(TERM_LANGUAGES)  # en, bn, banglish
+# Dance names that are also everyday words outside the Qwen vocabulary list ("polka dots", "hula hoop").
+EVERYDAY_WORD_NAMES = {"polka", "hula", "salsa", "tango", "samba", "rumba", "mambo", "waltz", "popping", "locking",
+                       "breaking", "krump", "house dance", "zouk", "garba"}
+# Words that show a message is about dancing (normalized, whole words).
+DANCE_CUES = ("dance", "dances", "dancing", "dancer", "dancers", "dance form", "nach", "nache", "nacher", "nritto",
+              "nritya", "moves", "choreography", "নাচ", "নাচের", "নৃত্য", "ডান্স")
 _ID_RE = re.compile(r"^dance-[a-z0-9_]{1,60}$")
 
 # Optional, future fields: kept empty unless the owner supplies them — never generated.
@@ -234,8 +241,25 @@ class DanceStore:
 
     def lookup(self, message: str, candidate: str | None = None, *, limit: int = 2) -> list[TermMatch]:
         """Dances a chat message is about — same matcher as terminology (exact name/alias,
-        whole-phrase mention, conservative typos that are never real English words)."""
-        return match_records(self.list(include_disabled=False), message, candidate, limit=limit)
+        whole-phrase mention, conservative typos that are never real English words).
+
+        A passing mention of a name that is also a common English word ("breaking point",
+        "popping up", "salsa sauce") only counts when the message also talks about dancing;
+        a direct question about it ("Locking ki?") is an exact match and always counts."""
+        matches = match_records(self.list(include_disabled=False), message, candidate, limit=limit + 2)
+
+        def guarded(m) -> bool:
+            return m.method == "phrase" and (_all_known_words(m.matched) or m.matched in EVERYDAY_WORD_NAMES)
+
+        # Dancing is the topic if the message says so, or if it also names an unambiguous dance
+        # ("difference between rumba and cha-cha").
+        has_cue = self.mentions_dancing(message) or any(not guarded(m) for m in matches)
+        return [m for m in matches if has_cue or not guarded(m)][:limit]
+
+    @staticmethod
+    def mentions_dancing(message: str) -> bool:
+        msg = f" {normalize(message)} "
+        return any(f" {c} " in msg for c in DANCE_CUES)
 
 
 def format_dance_context(matches: list[TermMatch]) -> str | None:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pre-training smoke validation for Rupsaa V0.2.1 — tokenizer only, no model weights, no optimizer steps.
+"""Pre-training smoke validation for Rupsaa V0.2.1 (R2 freeze) — tokenizer only, no model weights, no optimizer steps.
 
     python scripts/v021_pretrain_smoke.py
 
@@ -38,8 +38,9 @@ os.environ.setdefault("GRADIO_ANALYTICS_ENABLED", "False")
 from rupsaa.config import PROJECT_ROOT  # noqa: E402
 
 CLI_CONFIG = PROJECT_ROOT / "configs/training/llamafactory_rupsaa_v0.2.1.yaml"
-EXPORT = PROJECT_ROOT / "data/production/exports/rupsaa_v0.2.1"
-MANIFEST = EXPORT / "V021_TRAINING_MANIFEST.json"
+EXPORT = PROJECT_ROOT / "data/production/exports/rupsaa_v0.2.1_r2"  # R2 freeze (supersedes the never-trained first freeze)
+MANIFEST = EXPORT / "V021_R2_TRAINING_MANIFEST.json"
+DATASET = "rupsaa_v0.2.1_r2_train"
 V02_EXPORT = PROJECT_ROOT / "data/production/exports/rupsaa_v0.2"
 V02_MANIFEST = PROJECT_ROOT / "data/production/snapshots/rupsaa_v0.2_training/V02_TRAINING_MANIFEST.json"
 OUT = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2.1_preparation/smoke_check.json"
@@ -75,7 +76,7 @@ def main() -> None:
     cfg["output_dir"] = str(PROJECT_ROOT / cfg["output_dir"])
     model_args, data_args, training_args, finetuning_args, _ = get_train_args(dict(cfg))
     names = [d.strip() for d in data_args.dataset.split(",")] if isinstance(data_args.dataset, str) else list(data_args.dataset)
-    check("dataset_is_v021_train", names == ["rupsaa_v0.2.1_train"]
+    check("dataset_is_v021_r2_train", names == [DATASET]
           and Path(data_args.dataset_dir).resolve() == EXPORT.resolve(), f"{names} in {data_args.dataset_dir}")
     check("fresh_lora_from_base", model_args.model_name_or_path == "Qwen/Qwen2.5-7B-Instruct"
           and not model_args.adapter_name_or_path, f"base={model_args.model_name_or_path} adapter={model_args.adapter_name_or_path}")
@@ -116,19 +117,24 @@ def main() -> None:
           and all(m["source"] == "rupsaa_v0.2_train" for m in row_map if m["internal_split"] == "eval"),
           f"{sum(planned.values())} planned eval rows, all single-copy V0.2")
     corr_ids = {tuple(dataset[m["row"]]["input_ids"]) for m in row_map if m["source"] != "rupsaa_v0.2_train"}
-    check("no_corrective_row_in_internal_eval", not (set(eval_ids) & corr_ids), f"{len(corr_ids)} distinct corrective rows, 0 in eval")
+    check("no_corrective_or_dance_row_in_internal_eval", not (set(eval_ids) & corr_ids),
+          f"{len(corr_ids)} distinct corrective+dance rows, 0 in eval")
     batches = -(-n_train // training_args.per_device_train_batch_size)
     per_epoch = batches // training_args.gradient_accumulation_steps
     total = int(per_epoch * training_args.num_train_epochs)
-    check("expected_steps", total == manifest["training"]["expected_total_steps"] == 196, f"{per_epoch}/epoch x 2 = {total}")
+    check("expected_steps", total == manifest["training"]["expected_total_steps"] == 202, f"{per_epoch}/epoch x 2 = {total}")
 
     # Train-as-serve for the corrective rows: rebuild with the runtime today.
-    from rupsaa.rag.terminology import TerminologyStore
-    from scripts.v021_build_corrective import build, load_source
-    rebuilt, errors = build(load_source(), TerminologyStore(PROJECT_ROOT / "knowledge/terminology"))
-    by_id = {r["id"]: r["messages"] for r in rebuilt}
+    from scripts.v021_build_corrective import build_all
+    outputs, errors = build_all()
+    by_id = {r["id"]: r["messages"] for recs in outputs.values() for r in recs}
+    snap_dance = PROJECT_ROOT / "data/production/snapshots/rupsaa_v0.2.1_r2_training/dance_knowledge"
+    live_dance = PROJECT_ROOT / "knowledge/dance"
+    check("dance_knowledge_equals_frozen_copy", sorted(p.name for p in snap_dance.glob("dance-*.json")) ==
+          sorted(p.name for p in live_dance.glob("dance-*.json")) and all(sha(p) == sha(live_dance / p.name)
+          for p in snap_dance.glob("dance-*.json")), f"{len(list(snap_dance.glob('dance-*.json')))} records")
     mismatch = [m["id"] for m in row_map if m["source"] != "rupsaa_v0.2_train" and rows[m["row"]] != by_id.get(m["id"])]
-    check("corrective_rows_equal_runtime_rebuild", not errors and not mismatch, f"mismatches: {mismatch[:5]}")
+    check("corrective_and_dance_rows_equal_runtime_rebuild", not errors and not mismatch, f"mismatches: {mismatch[:5]}")
 
     from rupsaa.personality.system_prompt_v02 import V02_SYSTEM_PROMPT
     bad_system, bad_labels, bad_runtime, truncated, max_len = [], [], [], 0, 0
@@ -143,7 +149,8 @@ def main() -> None:
                 or system.strip() == "You are Rupsaa." or not system.startswith(V02_SYSTEM_PROMPT)):
             bad_system.append(i)
         for key, marker in (("terminology", "Reference terminology:\nTerm: "), ("recall_note", "they said earlier"),
-                            ("recall_note_empty", "asks about earlier messages"), ("language_directive", "Response language: in the message")):
+                            ("recall_note_empty", "asks about earlier messages"), ("language_directive", "Response language: in the message"),
+                            ("dance", "Reference dance knowledge:\nDance: ")):
             if marker in system:
                 blocks[key] += marker in text
         label_text = tokenizer.decode([t for t in labels if t != IGNORE_INDEX], skip_special_tokens=False)
@@ -154,7 +161,8 @@ def main() -> None:
             bad_runtime.append(i)
     check("system_turn_is_v02_runtime_prompt_in_every_row", not bad_system,
           f"{len(rows) - len(bad_system)}/{len(rows)} (no qwen default, no bare 'You are Rupsaa.')")
-    check("dynamic_blocks_survive_formatting", blocks["terminology"] > 0 and blocks["language_directive"] > 0 and blocks["recall_note"] > 0,
+    check("dynamic_blocks_survive_formatting", blocks["terminology"] > 0 and blocks["language_directive"] > 0
+          and blocks["recall_note"] > 0 and blocks["dance"] == 48,
           dict(blocks))
     check("labels_are_assistant_turns_only", not bad_labels, f"mismatches: {bad_labels[:10]}")
     check("prompt_tokens_identical_to_runtime", not bad_runtime, f"{len(rows) - len(bad_runtime)}/{len(rows)}")

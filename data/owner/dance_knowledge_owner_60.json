@@ -1,0 +1,1675 @@
+{
+  "source_sha256": "75a3aee620994e32c7821035fde4eea9bb42a84d20fa6c287062be0372931977",
+  "dances": [
+    {
+      "name": "Belly Dance",
+      "origin": "Middle East / North Africa (Egypt, Turkey, Lebanon, etc.).",
+      "description": "It is an expressive, traditional dance form that focuses on fluid, rhythmic isolations and movements of the torso and hips.",
+      "aliases": [
+        "Belly dancing",
+        "বেলি ডান্স"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #1 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Ballet",
+      "origin": "Italy, later developed in France and Russia.",
+      "description": "It is a highly technical classical dance form known for pointe work, turn-out, grace, and storytelling.",
+      "aliases": [
+        "ব্যালে"
+      ],
+      "category": "classical",
+      "tags": [
+        "classical",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #2 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Tap Dance",
+      "origin": "United States.",
+      "description": "It is a rhythmic dance form where dancers wear metal-tipped shoes and create percussion sounds with their feet.",
+      "aliases": [
+        "Tap dancing",
+        "ট্যাপ ডান্স"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #3 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Jazz Dance",
+      "origin": "United States.",
+      "description": "It is an energetic dance style blending ballet technique, isolations, syncopation, and theatrical performance.",
+      "aliases": [
+        "Jazz dancing",
+        "জ্যাজ ডান্স"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #4 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Hip-Hop",
+      "origin": "United States (Bronx, New York).",
+      "description": "It is a street dance style tied to hip-hop culture, featuring grooves, freestyle, battles, and strong musicality.",
+      "aliases": [
+        "Hip Hop",
+        "HipHop",
+        "হিপ হপ"
+      ],
+      "category": "street",
+      "tags": [
+        "street",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #5 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Breaking / Breakdance",
+      "origin": "United States (South Bronx, New York).",
+      "description": "It is an athletic street dance form with top rocks, footwork, freezes, and power moves, danced to breakbeats.",
+      "aliases": [
+        "Breaking",
+        "Breakdance",
+        "breakdancing",
+        "ব্রেকডান্স",
+        "ব্রেকিং"
+      ],
+      "category": "street",
+      "tags": [
+        "street",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #6 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Popping",
+      "origin": "United States (California).",
+      "description": "It is a funk street dance style based on quickly contracting and relaxing muscles to create a “pop” or hit.",
+      "aliases": [],
+      "category": "street",
+      "tags": [
+        "street",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #7 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Locking",
+      "origin": "United States (Los Angeles).",
+      "description": "It is a funk dance style with sharp arm movements, holds, points, and playful character.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #8 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Krump",
+      "origin": "United States (Los Angeles).",
+      "description": "It is a high-energy street dance style using aggressive, expressive movements, chest pops, stomps, and freestyle expression.",
+      "aliases": [],
+      "category": "street",
+      "tags": [
+        "street",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #9 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "House Dance",
+      "origin": "United States (Chicago and New York).",
+      "description": "It is a club dance style with fast footwork, jacking, lofting, and fluid floor movements, danced to house music.",
+      "aliases": [
+        "House dancing"
+      ],
+      "category": "club",
+      "tags": [
+        "club",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #10 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Waacking",
+      "origin": "United States (Los Angeles, LGBTQ+ club scene).",
+      "description": "It is a disco-era dance style known for dramatic arm movements, poses, and attitude.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #11 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Voguing",
+      "origin": "United States (New York, Harlem ballroom scene).",
+      "description": "It is a stylized dance form with model-like poses, lines, angles, and categories such as Old Way, New Way, and Vogue Fem.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #12 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Dancehall",
+      "origin": "Jamaica.",
+      "description": "It is an energetic social dance style performed to dancehall reggae, known for hip movements, attitude, and improvisation.",
+      "aliases": [],
+      "category": "social",
+      "tags": [
+        "social",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #13 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Reggaeton",
+      "origin": "Puerto Rico / Panama / Caribbean.",
+      "description": "It is a club dance style performed to reggaeton music, blending hip movements, Latin rhythms, and urban street style.",
+      "aliases": [],
+      "category": "club",
+      "tags": [
+        "club",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #14 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Salsa",
+      "origin": "Cuba / Puerto Rico / New York.",
+      "description": "It is a lively partner dance with syncopated steps, turns, and hip motion, danced to salsa music.",
+      "aliases": [
+        "সালসা"
+      ],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #15 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Bachata",
+      "origin": "Dominican Republic.",
+      "description": "It is a romantic partner dance with a four-step rhythm, close embrace, and gentle hip movement.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #16 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Merengue",
+      "origin": "Dominican Republic.",
+      "description": "It is a fast, simple partner dance with a marching step and strong hip action.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #17 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Cha-Cha",
+      "origin": "Cuba.",
+      "description": "It is a playful Latin ballroom dance with a triple step and rhythmic hip motion.",
+      "aliases": [
+        "Cha Cha",
+        "ChaCha"
+      ],
+      "category": "ballroom",
+      "tags": [
+        "ballroom",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #18 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Rumba",
+      "origin": "Cuba.",
+      "description": "It is a slow, expressive Latin dance focused on hip movement, connection, and romantic storytelling.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #19 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Mambo",
+      "origin": "Cuba / New York.",
+      "description": "It is a Latin dance with strong syncopation, quick steps, and energetic turns.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #20 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Samba",
+      "origin": "Brazil.",
+      "description": "It is a lively Brazilian dance with rapid footwork, hip action, and Carnival-style energy.",
+      "aliases": [
+        "সাম্বা"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #21 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Tango",
+      "origin": "Argentina / Uruguay.",
+      "description": "It is a dramatic partner dance known for close embrace, sharp leg movements, and intense musicality.",
+      "aliases": [
+        "ট্যাঙ্গো"
+      ],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #22 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Milonga",
+      "origin": "Argentina / Uruguay.",
+      "description": "It is a faster, more relaxed cousin of tango with a steady rhythm and playful steps.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #23 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Cumbia",
+      "origin": "Colombia.",
+      "description": "It is a folkloric and social dance with shuffling steps, hip movement, and circular partner patterns.",
+      "aliases": [],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "social",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #24 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Forró",
+      "origin": "Brazil.",
+      "description": "It is a Brazilian partner dance with close embrace, simple steps, and rhythmic turns.",
+      "aliases": [
+        "Forro"
+      ],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #25 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Flamenco",
+      "origin": "Spain (Andalusia).",
+      "description": "It is a passionate dance form with percussive footwork, hand clapping, guitar music, and expressive arm movements.",
+      "aliases": [
+        "ফ্লামেঙ্কো"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #26 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Sevillanas",
+      "origin": "Spain (Seville).",
+      "description": "It is a festive Spanish folk dance with patterned footwork, castanets, and partner turns.",
+      "aliases": [],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #27 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Irish Step Dance",
+      "origin": "Ireland.",
+      "description": "It is a traditional dance style with rigid upper body, quick footwork, and reels, jigs, and hornpipes.",
+      "aliases": [
+        "Irish Step dancing"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #28 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Highland Fling",
+      "origin": "Scotland.",
+      "description": "It is a traditional Scottish solo dance with precise footwork, jumps, and arms held in position.",
+      "aliases": [],
+      "category": "solo",
+      "tags": [
+        "solo",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #29 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Morris Dance",
+      "origin": "England.",
+      "description": "It is a traditional English folk dance with rhythmic stepping, bells, sticks, and handkerchiefs.",
+      "aliases": [
+        "Morris dancing"
+      ],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #30 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Polka",
+      "origin": "Czech Republic / Bohemia.",
+      "description": "It is a fast, lively partner dance with hopping steps and a cheerful 2/4 rhythm.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #31 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Mazurka",
+      "origin": "Poland.",
+      "description": "It is a traditional Polish dance in triple time with lively turns, heel clicks, and folk character.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #32 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Tarantella",
+      "origin": "Italy (Southern Italy).",
+      "description": "It is a fast, whirling folk dance often accompanied by tambourines and lively music.",
+      "aliases": [],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #33 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Waltz",
+      "origin": "Austria / Germany.",
+      "description": "It is a smooth ballroom dance in 3/4 time with flowing turns and rise-and-fall movement.",
+      "aliases": [
+        "ওয়াল্টজ"
+      ],
+      "category": "ballroom",
+      "tags": [
+        "ballroom",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #34 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Foxtrot",
+      "origin": "United States.",
+      "description": "It is a smooth ballroom dance with long, walking steps and a relaxed, jazzy feel.",
+      "aliases": [],
+      "category": "ballroom",
+      "tags": [
+        "ballroom",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #35 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Quickstep",
+      "origin": "England / United States.",
+      "description": "It is a fast ballroom dance with quick steps, runs, hops, and lively turns.",
+      "aliases": [],
+      "category": "ballroom",
+      "tags": [
+        "ballroom",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #36 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Bharatanatyam",
+      "origin": "India (Tamil Nadu).",
+      "description": "It is a classical Indian dance with geometric poses, expressive gestures, rhythmic footwork, and storytelling.",
+      "aliases": [
+        "ভরতনাট্যম"
+      ],
+      "category": "Indian classical",
+      "tags": [
+        "Indian classical",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #37 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kathak",
+      "origin": "India (North India).",
+      "description": "It is a classical Indian dance known for spins, intricate footwork, and expressive storytelling.",
+      "aliases": [
+        "কথক"
+      ],
+      "category": "Indian classical",
+      "tags": [
+        "Indian classical",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #38 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kathakali",
+      "origin": "India (Kerala).",
+      "description": "It is a classical dance-drama with elaborate makeup, costumes, and codified gestures.",
+      "aliases": [
+        "কথাকলি"
+      ],
+      "category": "classical dance-drama",
+      "tags": [
+        "classical dance-drama",
+        "classical",
+        "dance-drama",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #39 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kuchipudi",
+      "origin": "India (Andhra Pradesh).",
+      "description": "It is a classical Indian dance combining graceful movement, rhythmic footwork, and dramatic expression.",
+      "aliases": [
+        "কুচিপুড়ি"
+      ],
+      "category": "Indian classical",
+      "tags": [
+        "Indian classical",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #40 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Odissi",
+      "origin": "India (Odisha).",
+      "description": "It is a classical Indian dance with sculptural poses, fluid torso movement, and devotional themes.",
+      "aliases": [
+        "ওড়িশি"
+      ],
+      "category": "Indian classical",
+      "tags": [
+        "Indian classical",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #41 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Bhangra",
+      "origin": "India / Pakistan (Punjab).",
+      "description": "It is an energetic folk dance with strong shoulder and hip movements, often performed at celebrations.",
+      "aliases": [
+        "ভাংড়া"
+      ],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #42 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Garba",
+      "origin": "India (Gujarat).",
+      "description": "It is a circular devotional folk dance performed with claps and graceful turns, often during Navratri.",
+      "aliases": [
+        "গরবা"
+      ],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #43 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Lavani",
+      "origin": "India (Maharashtra).",
+      "description": "It is a traditional dance-drama form with rhythmic footwork, expressive gestures, and lively music.",
+      "aliases": [
+        "লাবণী"
+      ],
+      "category": "dance-drama",
+      "tags": [
+        "dance-drama",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #44 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Lion Dance",
+      "origin": "China.",
+      "description": "It is a traditional dance performed with a lion costume, drumming, and martial-arts-like movements for luck and celebration.",
+      "aliases": [
+        "Lion dancing"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #45 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Dragon Dance",
+      "origin": "China.",
+      "description": "It is a festive dance where performers move a long dragon puppet through coordinated waves and turns.",
+      "aliases": [
+        "Dragon dancing"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #46 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kabuki",
+      "origin": "Japan.",
+      "description": "It is a classical Japanese dance-drama with stylized movement, elaborate costumes, and dramatic makeup.",
+      "aliases": [],
+      "category": "classical dance-drama",
+      "tags": [
+        "classical dance-drama",
+        "dance-drama",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #47 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Butoh",
+      "origin": "Japan.",
+      "description": "It is an avant-garde dance form with slow, controlled, and often surreal or grotesque movements.",
+      "aliases": [],
+      "category": "avant-garde",
+      "tags": [
+        "avant-garde",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #48 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kecak",
+      "origin": "Indonesia (Bali).",
+      "description": "It is a dramatic Balinese dance performance with a large male chorus chanting “cak” in interlocking rhythms.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #49 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Hula",
+      "origin": "Hawaii.",
+      "description": "It is a traditional Hawaiian dance with flowing gestures, hip movements, and chants or songs that tell stories.",
+      "aliases": [
+        "হুলা"
+      ],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #50 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Haka",
+      "origin": "New Zealand (Māori).",
+      "description": "It is a powerful group dance with stomping, chanting, and fierce facial expressions, performed for welcome, war, or celebration.",
+      "aliases": [
+        "হাকা"
+      ],
+      "category": "group",
+      "tags": [
+        "group",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #51 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Dabke",
+      "origin": "Levant (Lebanon, Syria, Palestine, Jordan, Iraq).",
+      "description": "It is a line or circle folk dance with stomping, linked arms, and communal celebration.",
+      "aliases": [],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #52 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Tanoura",
+      "origin": "Egypt.",
+      "description": "It is a Sufi folk dance where a male dancer spins continuously in a colorful skirt, often with LED lights.",
+      "aliases": [],
+      "category": "folk",
+      "tags": [
+        "folk",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #53 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Sufi Whirling",
+      "origin": "Turkey (Mevlevi Sufi tradition).",
+      "description": "It is a meditative spinning dance performed to achieve spiritual ecstasy and connection with the divine.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #54 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Kizomba",
+      "origin": "Angola.",
+      "description": "It is a sensual partner dance with close embrace, slow rhythmic steps, and African and Latin influences.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #55 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Zouk",
+      "origin": "French Caribbean (Guadeloupe, Martinique).",
+      "description": "It is a smooth partner dance with flowing turns, close connection, and rhythmic hip movement.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #56 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Azonto",
+      "origin": "Ghana.",
+      "description": "It is a fast, expressive street dance with hand gestures, knee movements, and everyday-life storytelling.",
+      "aliases": [],
+      "category": "street",
+      "tags": [
+        "street",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #57 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Eskista",
+      "origin": "Ethiopia.",
+      "description": "It is a traditional dance known for intense shoulder shimmying, bouncing, and rhythmic isolation.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #58 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Gumboot",
+      "origin": "South Africa.",
+      "description": "It is a rhythmic dance created by mine workers, performed with gumboots and body percussion.",
+      "aliases": [],
+      "category": "",
+      "tags": [
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #59 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    },
+    {
+      "name": "Lindy Hop",
+      "origin": "United States (Harlem, New York).",
+      "description": "It is a swing partner dance with energetic footwork, aerial moves, and improvisation.",
+      "aliases": [],
+      "category": "partner",
+      "tags": [
+        "partner",
+        "owner-dance-list"
+      ],
+      "key_movements": "",
+      "answer_guidance": "",
+      "languages": [
+        "en",
+        "bn",
+        "banglish"
+      ],
+      "enabled": true,
+      "source": "owner dance list #60 (data/owner/dance_knowledge_owner_60.txt)",
+      "difficulty": "",
+      "prerequisites": "",
+      "warmup": "",
+      "basic_steps": "",
+      "step_sequence": "",
+      "common_mistakes": "",
+      "practice_tips": ""
+    }
+  ]
+}

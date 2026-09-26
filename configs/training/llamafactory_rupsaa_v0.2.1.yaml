@@ -1,29 +1,30 @@
-# LLaMA-Factory 0.7.1 CLI config for Rupsaa V0.2.1 (SFT + QLoRA, FRESH LoRA from base) — NOT RUN.
+# LLaMA-Factory 0.7.1 CLI config for Rupsaa V0.2.1 — R2 freeze (SFT + QLoRA, FRESH LoRA from base) — NOT RUN.
 #   llamafactory-cli train configs/training/llamafactory_rupsaa_v0.2.1.yaml     (from the rupsaa-ai root;
 #   owner-started only, after approving data/production/reports/rupsaa_v0.2.1_preparation/PRETRAINING_REPORT.md)
 #
 # GUI equivalent: bash scripts/start_llamafactory_gui.sh v0.2.1  -> type rupsaa_v0.2.1.yaml, Load arguments.
 #
-# Dataset: frozen rupsaa_v0.2.1 export data/production/exports/rupsaa_v0.2.1/ (its own dataset_info.json;
-# data/dataset_info.json, checksummed in release/rupsaa-v0.2, is not touched).
-# Manifest + SHA-256: data/production/exports/rupsaa_v0.2.1/V021_TRAINING_MANIFEST.json
-#   train.jsonl = frozen V0.2 train (1380, unchanged) + 141 corrective records x2 = 1662 rows (17% corrective)
+# Dataset: ONLY the R2 freeze data/production/exports/rupsaa_v0.2.1_r2/ (its own dataset_info.json).
+# Manifest + SHA-256: data/production/exports/rupsaa_v0.2.1_r2/V021_R2_TRAINING_MANIFEST.json
+#   (dataset sha e1332c83…54cd22). R2 supersedes the never-trained first V0.2.1 freeze
+#   (5e54c8f2…4e5543, tag rupsaa-v0.2.1-training), which must not be trained.
+#   train.jsonl = frozen V0.2 train (1380, unchanged) + 141 corrective x2 + 24 dance x2 = 1710 rows (19.3%)
+#   Dance FACTS are served by RAG (knowledge/dance/, 60 owner records); the dance rows teach answer behaviour.
 #
 # Evaluation during training: LLaMA-Factory 0.7.1 has no separate eval file; val_size 0.05 carves the
-# internal eval slice from train.jsonl with datasets.train_test_split(seed=42) -> 1578 train / 84 eval.
-# The freeze script put ONLY single-copy frozen V0.2 rows at those 84 positions (incl. all 69 of V0.2's
-# own internal-eval rows), so no duplicated corrective row is in both train and eval. The frozen
-# external validation/test and the 21 corrective held-out cases are never loaded by this config.
+# internal eval slice from train.jsonl with datasets.train_test_split(seed=42) -> 1624 train / 86 eval.
+# The freeze put ONLY single-copy frozen V0.2 rows at those 86 positions (incl. all 69 of V0.2's own
+# internal-eval rows), so no duplicated corrective/dance row is on both sides. External validation/test,
+# the 21 corrective and 12 dance held-out cases are never loaded by this config.
 #
-# Recipe identical to V0.2 (configs/training/llamafactory_rupsaa_v0.2.yaml) so differences in the
-# result come from the data: Qwen2.5-7B-Instruct base, fresh LoRA r16/a32/d0.05 on all 7 projections,
+# Recipe identical to V0.2: Qwen2.5-7B-Instruct base, fresh LoRA r16/a32/d0.05 on all 7 projections,
 # 4-bit NF4 + double quant, bf16, gradient checkpointing (LLaMA-Factory default), paged_adamw_8bit,
 # lr 2e-4 cosine, warmup 6 (~3%), 2 epochs, batch 2 x accum 8 = 16, cutoff 2048, eval+save every 20,
-# best checkpoint by eval_loss.  Expected: 1578 rows -> 789 batches -> 98 steps/epoch -> 196 steps
-# (~37-40 min on an NVIDIA L4 at V0.2's 11.4 s/step).
+# best checkpoint by eval_loss.  Expected: 1624 rows -> 812 batches -> 101 steps/epoch -> 202 steps
+# (~38-41 min on an NVIDIA L4 at V0.2's 11.4 s/step).
 #
-# Train-as-serve: every row's system turn is what the runtime sends (V02_SYSTEM_PROMPT + terminology
-# block / recall note / language directive where the runtime adds them); serve with
+# Train-as-serve: every row's system turn is what the runtime sends (V02_SYSTEM_PROMPT + terminology /
+# dance block / recall note / language directive where the runtime adds them); serve with
 # RUPSAA_PROMPT_VERSION=v0.2 (inferred from the adapter name rupsaa-v0.2.1).
 
 ### model
@@ -45,8 +46,8 @@ double_quantization: true
 upcast_layernorm: true
 
 ### dataset
-dataset_dir: data/production/exports/rupsaa_v0.2.1
-dataset: rupsaa_v0.2.1_train
+dataset_dir: data/production/exports/rupsaa_v0.2.1_r2
+dataset: rupsaa_v0.2.1_r2_train
 val_size: 0.05
 template: qwen
 cutoff_len: 2048

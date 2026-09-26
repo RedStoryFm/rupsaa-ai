@@ -20,10 +20,22 @@
     "c021-138",
     "c021-143",
     "c021-156",
-    "c021-161"
+    "c021-161",
+    "d021h-01",
+    "d021h-02",
+    "d021h-03",
+    "d021h-04",
+    "d021h-05",
+    "d021h-06",
+    "d021h-07",
+    "d021h-08",
+    "d021h-09",
+    "d021h-10",
+    "d021h-11",
+    "d021h-12"
   ],
-  "train_records": 141,
-  "holdout_records": 21,
+  "train_records": 165,
+  "holdout_records": 33,
   "thresholds": {
     "near_duplicate": 0.8,
     "benchmark_near": 0.9,
@@ -31,7 +43,7 @@
   },
   "benchmarks_checked": {
     "owner_live_sequence": 11,
-    "prompts_total": 100,
+    "prompts_total": 109,
     "unseen_terms": 24,
     "frozen_validation_test_turns": 412
   },

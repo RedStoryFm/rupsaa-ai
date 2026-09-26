@@ -1,0 +1,32 @@
+{
+  "id": "dance-house_dance",
+  "name": "House Dance",
+  "description": "It is a club dance style with fast footwork, jacking, lofting, and fluid floor movements, danced to house music.",
+  "origin": "United States (Chicago and New York).",
+  "category": "club",
+  "aliases": [
+    "House dancing"
+  ],
+  "key_movements": "",
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "club",
+    "owner-dance-list"
+  ],
+  "enabled": true,
+  "difficulty": "",
+  "prerequisites": "",
+  "warmup": "",
+  "basic_steps": "",
+  "step_sequence": "",
+  "common_mistakes": "",
+  "practice_tips": "",
+  "source": "owner dance list #10 (data/owner/dance_knowledge_owner_60.txt)",
+  "created_at": "2026-09-26T17:10:21.583782+00:00",
+  "updated_at": "2026-09-26T17:10:21.583795+00:00"
+}

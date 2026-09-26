@@ -1,0 +1,239 @@
+1) Belly Dance
+Origin: Middle East / North Africa (Egypt, Turkey, Lebanon, etc.).
+Description: It is an expressive, traditional dance form that focuses on fluid, rhythmic isolations and movements of the torso and hips.
+
+2) Ballet
+Origin: Italy, later developed in France and Russia.
+Description: It is a highly technical classical dance form known for pointe work, turn-out, grace, and storytelling.
+
+3) Tap Dance
+Origin: United States.
+Description: It is a rhythmic dance form where dancers wear metal-tipped shoes and create percussion sounds with their feet.
+
+4) Jazz Dance
+Origin: United States.
+Description: It is an energetic dance style blending ballet technique, isolations, syncopation, and theatrical performance.
+
+5) Hip-Hop
+Origin: United States (Bronx, New York).
+Description: It is a street dance style tied to hip-hop culture, featuring grooves, freestyle, battles, and strong musicality.
+
+6) Breaking / Breakdance
+Origin: United States (South Bronx, New York).
+Description: It is an athletic street dance form with top rocks, footwork, freezes, and power moves, danced to breakbeats.
+
+7) Popping
+Origin: United States (California).
+Description: It is a funk street dance style based on quickly contracting and relaxing muscles to create a “pop” or hit.
+
+8) Locking
+Origin: United States (Los Angeles).
+Description: It is a funk dance style with sharp arm movements, holds, points, and playful character.
+
+9) Krump
+Origin: United States (Los Angeles).
+Description: It is a high-energy street dance style using aggressive, expressive movements, chest pops, stomps, and freestyle expression.
+
+10) House Dance
+Origin: United States (Chicago and New York).
+Description: It is a club dance style with fast footwork, jacking, lofting, and fluid floor movements, danced to house music.
+
+11) Waacking
+Origin: United States (Los Angeles, LGBTQ+ club scene).
+Description: It is a disco-era dance style known for dramatic arm movements, poses, and attitude.
+
+12) Voguing
+Origin: United States (New York, Harlem ballroom scene).
+Description: It is a stylized dance form with model-like poses, lines, angles, and categories such as Old Way, New Way, and Vogue Fem.
+
+13) Dancehall
+Origin: Jamaica.
+Description: It is an energetic social dance style performed to dancehall reggae, known for hip movements, attitude, and improvisation.
+
+14) Reggaeton
+Origin: Puerto Rico / Panama / Caribbean.
+Description: It is a club dance style performed to reggaeton music, blending hip movements, Latin rhythms, and urban street style.
+
+15) Salsa
+Origin: Cuba / Puerto Rico / New York.
+Description: It is a lively partner dance with syncopated steps, turns, and hip motion, danced to salsa music.
+
+16) Bachata
+Origin: Dominican Republic.
+Description: It is a romantic partner dance with a four-step rhythm, close embrace, and gentle hip movement.
+
+17) Merengue
+Origin: Dominican Republic.
+Description: It is a fast, simple partner dance with a marching step and strong hip action.
+
+18) Cha-Cha
+Origin: Cuba.
+Description: It is a playful Latin ballroom dance with a triple step and rhythmic hip motion.
+
+19) Rumba
+Origin: Cuba.
+Description: It is a slow, expressive Latin dance focused on hip movement, connection, and romantic storytelling.
+
+20) Mambo
+Origin: Cuba / New York.
+Description: It is a Latin dance with strong syncopation, quick steps, and energetic turns.
+
+21) Samba
+Origin: Brazil.
+Description: It is a lively Brazilian dance with rapid footwork, hip action, and Carnival-style energy.
+
+22) Tango
+Origin: Argentina / Uruguay.
+Description: It is a dramatic partner dance known for close embrace, sharp leg movements, and intense musicality.
+
+23) Milonga
+Origin: Argentina / Uruguay.
+Description: It is a faster, more relaxed cousin of tango with a steady rhythm and playful steps.
+
+24) Cumbia
+Origin: Colombia.
+Description: It is a folkloric and social dance with shuffling steps, hip movement, and circular partner patterns.
+
+25) Forró
+Origin: Brazil.
+Description: It is a Brazilian partner dance with close embrace, simple steps, and rhythmic turns.
+
+26) Flamenco
+Origin: Spain (Andalusia).
+Description: It is a passionate dance form with percussive footwork, hand clapping, guitar music, and expressive arm movements.
+
+27) Sevillanas
+Origin: Spain (Seville).
+Description: It is a festive Spanish folk dance with patterned footwork, castanets, and partner turns.
+
+28) Irish Step Dance
+Origin: Ireland.
+Description: It is a traditional dance style with rigid upper body, quick footwork, and reels, jigs, and hornpipes.
+
+29) Highland Fling
+Origin: Scotland.
+Description: It is a traditional Scottish solo dance with precise footwork, jumps, and arms held in position.
+
+30) Morris Dance
+Origin: England.
+Description: It is a traditional English folk dance with rhythmic stepping, bells, sticks, and handkerchiefs.
+
+31) Polka
+Origin: Czech Republic / Bohemia.
+Description: It is a fast, lively partner dance with hopping steps and a cheerful 2/4 rhythm.
+
+32) Mazurka
+Origin: Poland.
+Description: It is a traditional Polish dance in triple time with lively turns, heel clicks, and folk character.
+
+33) Tarantella
+Origin: Italy (Southern Italy).
+Description: It is a fast, whirling folk dance often accompanied by tambourines and lively music.
+
+34) Waltz
+Origin: Austria / Germany.
+Description: It is a smooth ballroom dance in 3/4 time with flowing turns and rise-and-fall movement.
+
+35) Foxtrot
+Origin: United States.
+Description: It is a smooth ballroom dance with long, walking steps and a relaxed, jazzy feel.
+
+36) Quickstep
+Origin: England / United States.
+Description: It is a fast ballroom dance with quick steps, runs, hops, and lively turns.
+
+37) Bharatanatyam
+Origin: India (Tamil Nadu).
+Description: It is a classical Indian dance with geometric poses, expressive gestures, rhythmic footwork, and storytelling.
+
+38) Kathak
+Origin: India (North India).
+Description: It is a classical Indian dance known for spins, intricate footwork, and expressive storytelling.
+
+39) Kathakali
+Origin: India (Kerala).
+Description: It is a classical dance-drama with elaborate makeup, costumes, and codified gestures.
+
+40) Kuchipudi
+Origin: India (Andhra Pradesh).
+Description: It is a classical Indian dance combining graceful movement, rhythmic footwork, and dramatic expression.
+
+41) Odissi
+Origin: India (Odisha).
+Description: It is a classical Indian dance with sculptural poses, fluid torso movement, and devotional themes.
+
+42) Bhangra
+Origin: India / Pakistan (Punjab).
+Description: It is an energetic folk dance with strong shoulder and hip movements, often performed at celebrations.
+
+43) Garba
+Origin: India (Gujarat).
+Description: It is a circular devotional folk dance performed with claps and graceful turns, often during Navratri.
+
+44) Lavani
+Origin: India (Maharashtra).
+Description: It is a traditional dance-drama form with rhythmic footwork, expressive gestures, and lively music.
+
+45) Lion Dance
+Origin: China.
+Description: It is a traditional dance performed with a lion costume, drumming, and martial-arts-like movements for luck and celebration.
+
+46) Dragon Dance
+Origin: China.
+Description: It is a festive dance where performers move a long dragon puppet through coordinated waves and turns.
+
+47) Kabuki
+Origin: Japan.
+Description: It is a classical Japanese dance-drama with stylized movement, elaborate costumes, and dramatic makeup.
+
+48) Butoh
+Origin: Japan.
+Description: It is an avant-garde dance form with slow, controlled, and often surreal or grotesque movements.
+
+49) Kecak
+Origin: Indonesia (Bali).
+Description: It is a dramatic Balinese dance performance with a large male chorus chanting “cak” in interlocking rhythms.
+
+50) Hula
+Origin: Hawaii.
+Description: It is a traditional Hawaiian dance with flowing gestures, hip movements, and chants or songs that tell stories.
+
+51) Haka
+Origin: New Zealand (Māori).
+Description: It is a powerful group dance with stomping, chanting, and fierce facial expressions, performed for welcome, war, or celebration.
+
+52) Dabke
+Origin: Levant (Lebanon, Syria, Palestine, Jordan, Iraq).
+Description: It is a line or circle folk dance with stomping, linked arms, and communal celebration.
+
+53) Tanoura
+Origin: Egypt.
+Description: It is a Sufi folk dance where a male dancer spins continuously in a colorful skirt, often with LED lights.
+
+54) Sufi Whirling
+Origin: Turkey (Mevlevi Sufi tradition).
+Description: It is a meditative spinning dance performed to achieve spiritual ecstasy and connection with the divine.
+
+55) Kizomba
+Origin: Angola.
+Description: It is a sensual partner dance with close embrace, slow rhythmic steps, and African and Latin influences.
+
+56) Zouk
+Origin: French Caribbean (Guadeloupe, Martinique).
+Description: It is a smooth partner dance with flowing turns, close connection, and rhythmic hip movement.
+
+57) Azonto
+Origin: Ghana.
+Description: It is a fast, expressive street dance with hand gestures, knee movements, and everyday-life storytelling.
+
+58) Eskista
+Origin: Ethiopia.
+Description: It is a traditional dance known for intense shoulder shimmying, bouncing, and rhythmic isolation.
+
+59) Gumboot
+Origin: South Africa.
+Description: It is a rhythmic dance created by mine workers, performed with gumboots and body percussion.
+
+60) Lindy Hop
+Origin: United States (Harlem, New York).
+Description: It is a swing partner dance with energetic footwork, aerial moves, and improvisation.

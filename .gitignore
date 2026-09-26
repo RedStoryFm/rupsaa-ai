@@ -41,6 +41,7 @@ data/production/reports/*
 !data/production/exports/rupsaa_v0.1/
 !data/production/exports/rupsaa_v0.2/
 !data/production/exports/rupsaa_v0.2.1/
+!data/production/exports/rupsaa_v0.2.1_r2/
 !data/production/reports/rupsaa_v0.1_evaluation/
 !data/production/reports/rupsaa_v0.2_preparation/
 !data/production/reports/rupsaa_v0.2_training/

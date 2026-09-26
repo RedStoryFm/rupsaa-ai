@@ -25,6 +25,8 @@ from rupsaa.config import PROJECT_ROOT  # noqa: E402
 from rupsaa.rag.router import classify_message  # noqa: E402
 
 CORR = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/corrective_records.jsonl"
+DANCE_TRAIN = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/dance_records.jsonl"
+DANCE_HOLDOUT = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/dance_holdout_records.jsonl"
 FROZEN = PROJECT_ROOT / "data/production/snapshots/rupsaa_v0.2_training/frozen_records.jsonl"
 EVAL = PROJECT_ROOT / "data/production/evaluation/rupsaa_v0.2"
 OUT = PROJECT_ROOT / "data/production/reports/rupsaa_v0.2.1_preparation"
@@ -63,9 +65,13 @@ def main() -> None:
     from scripts.v021_replay_live import OWNER_SEQUENCE
 
     corr = [json.loads(line) for line in open(CORR, encoding="utf-8")]
-    hold_ids = holdout_ids(corr)
-    hold = [r for r in corr if r["id"] in hold_ids]
-    train = [r for r in corr if r["id"] not in hold_ids]
+    corr_hold_ids = holdout_ids(corr)
+    dance_train = [json.loads(line) for line in open(DANCE_TRAIN, encoding="utf-8")] if DANCE_TRAIN.exists() else []
+    dance_hold = [json.loads(line) for line in open(DANCE_HOLDOUT, encoding="utf-8")] if DANCE_HOLDOUT.exists() else []
+    hold_ids = corr_hold_ids | {r["id"] for r in dance_hold}
+    hold = [r for r in corr if r["id"] in corr_hold_ids] + dance_hold
+    train = [r for r in corr if r["id"] not in corr_hold_ids] + dance_train
+    corr = corr + dance_train + dance_hold  # benchmark checks below cover every record
     frozen = [json.loads(line) for line in open(FROZEN, encoding="utf-8")]
     term_cases = [json.loads(line) for line in open(EVAL / "terminology_generalization.jsonl", encoding="utf-8")]
     bench_prompts = [("owner_live_sequence", p) for p in OWNER_SEQUENCE]
@@ -75,7 +81,26 @@ def main() -> None:
     for c in term_cases:
         bench_prompts += [(f"terminology:{c['id']}", t) for t in c["turns"]]
 
+    from scripts.v021_dance_retrieval_check import REPRESENTATIVE
+    bench_prompts += [("owner_dance_representative", q) for q in REPRESENTATIVE]
+
     blocking, warnings = [], []
+
+    # 0. dance held-out: its dances must never appear in any training record, and only rarely in frozen text
+    def dances_of(recs):
+        return {t for r in recs for tr in r.get("runtime_trace", []) for t in tr["terms_used"] if t.startswith("dance-")}
+    shared = dances_of(dance_hold) & dances_of(train)
+    for d in sorted(shared):
+        blocking.append({"check": "dance_holdout_dance_in_training", "dance": d})
+    from rupsaa.rag.dance import DanceStore
+    frozen_text = " ".join(m["content"].lower() for f in [json.loads(line) for line in open(FROZEN, encoding="utf-8")]
+                           for m in f["messages"][1:])
+    for d in sorted(dances_of(dance_hold)):
+        name = DanceStore(PROJECT_ROOT / "knowledge/dance").get(d).name.split(" / ")[0].lower()
+        n = len(re.findall(r"(?<![a-z])" + re.escape(name) + r"(?![a-z])", frozen_text))
+        if n:
+            warnings.append({"check": "dance_holdout_name_mentioned_in_frozen_v02", "dance": d, "mentions": n,
+                             "note": "a mention in older conversations, not the owner's record text"})
 
     # 1. held-out vs corrective train
     train_concepts = {}
@@ -110,7 +135,7 @@ def main() -> None:
                             {"check": f"holdout_vs_frozen_{role}", "holdout": h["id"], "frozen": fid, "split": split,
                              "similarity": round(s, 3), "holdout_text": ht, "frozen_text": ft})
         c = concept(h)
-        if c and "term-" not in c and re.search(r"(?<!\w)" + re.escape(c) + r"(?!\w)", frozen_blob):
+        if c and "term-" not in c and "dance-" not in c and re.search(r"(?<!\w)" + re.escape(c) + r"(?!\w)", frozen_blob):
             blocking.append({"check": "holdout_concept_in_frozen", "holdout": h["id"], "concept": c})
 
     # 3. all corrective vs benchmarks and the frozen external validation/test

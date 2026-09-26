@@ -73,6 +73,9 @@ def build_turn_knowledge(
 
     matches = _reference_matches(terminology, decision, message, previous_terms)
     dance_matches = _reference_matches(dance, decision, message, previous_terms)
+    if dance is not None and not dance_matches and decision.route == Route.CASUAL and dance.mentions_dancing(message):
+        # Short messages are routed CASUAL ("chacha dance kemon?"); an explicit dance mention still counts.
+        dance_matches = dance.lookup(message)
     if decision.route == Route.FOLLOWUP and history_messages == 0:
         out.conversation_note = ("The user refers to an earlier answer, but this conversation has no earlier messages yet — "
                                  "ask what they would like explained instead of guessing a topic.")
