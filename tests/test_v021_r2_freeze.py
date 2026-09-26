@@ -44,7 +44,12 @@ def test_r2_supersedes_the_untrained_first_freeze_which_is_untouched():
     assert old["dataset_sha256"] == OLD_SHA
     for name, expected in old["files_sha256"].items():
         assert sha(OLD / name) == expected, name  # old freeze byte-identical
-    assert not (PROJECT_ROOT / "adapters/rupsaa-v0.2.1").exists()  # nothing trained
+    # The superseded freeze is never trained: any V0.2.1 run must use the R2 dataset.
+    run_cfg = PROJECT_ROOT / "adapters/rupsaa-v0.2.1/trainer_config.yaml"
+    if run_cfg.exists():
+        cfg = run_cfg.read_text(encoding="utf-8")
+        assert "rupsaa_v0.2.1_r2_train" in cfg and "exports/rupsaa_v0.2.1_r2" in cfg
+        assert "dataset: rupsaa_v0.2.1_train" not in cfg
 
 
 @frozen

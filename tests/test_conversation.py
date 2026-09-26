@@ -22,11 +22,25 @@ def test_get_or_create_returns_existing_conversation():
     assert len(fetched.messages) == 2
 
 
-def test_get_or_create_with_unknown_id_creates_new_with_that_id():
+def test_unknown_or_client_chosen_id_gets_a_fresh_server_id():
+    """A client-chosen id is never adopted (two users sending "1" must not share a history)."""
     manager = ConversationManager(store=InMemoryConversationStore(), max_history_messages=20)
     conv = manager.get_or_create("custom-id-123")
-    assert conv.conversation_id == "custom-id-123"
-    assert conv.messages == []
+    assert conv.conversation_id != "custom-id-123" and conv.messages == []
+    other = manager.get_or_create("custom-id-123")
+    assert other.conversation_id != conv.conversation_id  # no shared history through a guessable id
+    unknown_uuid = "0195a040-b91c-4c1e-9f0a-aff213f509fd"
+    assert manager.get_or_create(unknown_uuid).conversation_id != unknown_uuid
+
+
+def test_store_is_bounded_by_count_and_idle_time():
+    now = [0.0]
+    store = InMemoryConversationStore(max_conversations=3, idle_seconds=60, clock=lambda: now[0])
+    manager = ConversationManager(store=store, max_history_messages=20)
+    ids = [manager.get_or_create(None).conversation_id for _ in range(5)]
+    assert len(store) == 3 and store.get(ids[0]) is None and store.get(ids[-1]) is not None
+    now[0] = 61.0
+    assert store.get(ids[-1]) is None and len(store) == 0
 
 
 def test_append_turn_adds_user_and_assistant_messages():

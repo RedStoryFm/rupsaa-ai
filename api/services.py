@@ -11,7 +11,10 @@ monkeypatching internals.
 from __future__ import annotations
 
 import logging
+import threading
+import time
 from functools import lru_cache
+from pathlib import Path
 
 from rupsaa.conversation.language_control import directive_for
 from rupsaa.conversation.manager import ConversationManager
@@ -72,13 +75,71 @@ class RupsaaService:
         self._last_terms: dict[str, list[str]] = {}
         # conversation_id -> explicit reply-language choice ("banglay bolo" etc.)
         self._language: dict[str, dict] = {}
+        # One model load at a time: two simultaneous first messages must not load the 7B model twice.
+        self._load_lock = threading.Lock()
+        self._generate_lock = threading.Lock()
+        self._preload_thread: threading.Thread | None = None
+        self.load_error: str | None = None
 
     @property
     def engine(self) -> RupsaaEngine:
         if self._engine is None:
-            logger.info("Lazily loading Rupsaa engine on first use...")
-            self._engine = RupsaaEngine.load(use_adapter=True)
+            with self._load_lock:
+                if self._engine is None:
+                    self._engine = self._load_engine()
         return self._engine
+
+    def _load_engine(self) -> RupsaaEngine:
+        from rupsaa.config import get_settings
+
+        settings = get_settings()
+        adapter = settings.resolve_path(settings.adapter_path)
+        if settings.is_production and not (adapter / "adapter_model.safetensors").is_file():
+            # Production never silently falls back to the base model or another adapter.
+            raise RuntimeError(f"configured adapter '{adapter.name}' not found — refusing to serve")
+        started = time.monotonic()
+        logger.info("Loading model: base=%s adapter=%s", settings.model_id or "configs/model.yaml", adapter.name)
+        engine = RupsaaEngine.load(use_adapter=True)
+        if settings.is_production and engine.loaded.adapter_path is None:
+            raise RuntimeError(f"adapter '{adapter.name}' did not attach — refusing to serve the base model")
+        logger.info("Model ready in %.0fs: adapter=%s prompt_version=%s", time.monotonic() - started,
+                    Path(engine.loaded.adapter_path).name if engine.loaded.adapter_path else None, engine.prompt_version)
+        return engine
+
+    def start_preload(self) -> None:
+        """Load the model in the background (production) so /ready turns green before real traffic."""
+        if self._engine is not None or (self._preload_thread and self._preload_thread.is_alive()):
+            return
+
+        def _run() -> None:
+            try:
+                _ = self.engine
+            except Exception as exc:  # surfaced via /ready and the logs
+                self.load_error = type(exc).__name__ + ": " + str(exc)[:200]
+                logger.exception("Model preload failed")
+
+        self._preload_thread = threading.Thread(target=_run, name="rupsaa-model-preload", daemon=True)
+        self._preload_thread.start()
+
+    def readiness(self) -> dict:
+        loading = bool(self._preload_thread and self._preload_thread.is_alive())
+        return {"ready": self._engine is not None, "model_loading": loading, "model_error": self.load_error}
+
+    def knowledge_status(self) -> dict:
+        from rupsaa.config import get_settings
+
+        settings = get_settings()
+        index_dir = settings.resolve_path(settings.vector_store_dir)
+        try:
+            terms = len(self.terminology.list(include_disabled=False))
+            dances = len(self.dance.list(include_disabled=False))
+            ok = True
+        except Exception:
+            logger.exception("knowledge store unreadable")
+            terms = dances = 0
+            ok = False
+        return {"knowledge_ok": ok, "terminology_entries": terms, "dance_entries": dances,
+                "rag_index_present": index_dir.is_dir() and any(p.name != ".gitkeep" for p in index_dir.iterdir())}
 
     @property
     def rag_pipeline(self) -> RagPipeline:
@@ -115,6 +176,12 @@ class RupsaaService:
         top_p: float | None,
         max_new_tokens: int | None,
     ) -> dict:
+        started = time.monotonic()
+        from rupsaa.config import get_settings
+
+        cap = get_settings().max_new_tokens_cap
+        if max_new_tokens is not None:
+            max_new_tokens = min(max_new_tokens, cap)
         boundary = check_text(message)
         language = detect_language(message)
         conversation = self.conversation_manager.get_or_create(conversation_id)
@@ -148,20 +215,22 @@ class RupsaaService:
         retrieved_context, sources = knowledge.retrieved_context, knowledge.sources
 
         history_before = [{"role": m.role, "content": m.content} for m in conversation.messages]
-        result = self.engine.chat(
-            history=conversation.messages,
-            user_message=message,
-            retrieved_context=retrieved_context,
-            terminology_context=knowledge.terminology_context,
-            conversation_note=knowledge.conversation_note,
-            language_directive=directive_for(knowledge.language_state if knowledge.language else None),
-            dance_context=knowledge.dance_context,
-            generation_overrides={
-                "temperature": temperature,
-                "top_p": top_p,
-                "max_new_tokens": max_new_tokens,
-            },
-        )
+        engine = self.engine
+        with self._generate_lock:  # one generation at a time on the single GPU; others wait their turn
+            result = engine.chat(
+                history=conversation.messages,
+                user_message=message,
+                retrieved_context=retrieved_context,
+                terminology_context=knowledge.terminology_context,
+                conversation_note=knowledge.conversation_note,
+                language_directive=directive_for(knowledge.language_state if knowledge.language else None),
+                dance_context=knowledge.dance_context,
+                generation_overrides={
+                    "temperature": temperature,
+                    "top_p": top_p,
+                    "max_new_tokens": max_new_tokens,
+                },
+            )
 
         if not result.blocked:
             self.conversation_manager.append_turn(conversation, message, result.text)
@@ -173,11 +242,16 @@ class RupsaaService:
                 self._language[conversation.conversation_id] = knowledge.language_state
             else:
                 self._language.pop(conversation.conversation_id, None)
+            self._prune_side_state()
 
         _trace_turn(
             conversation_id=conversation.conversation_id, message=message, language=language,
             knowledge=knowledge, history=history_before, result=result,
         )
+        # Operational log line: no message text (verbose tracing is opt-in via RUPSAA_TRACE_FILE).
+        logger.info("chat done route=%s lang=%s reply_lang=%s terms=%d docs=%d chars_in=%d tokens_out=%s latency_ms=%d",
+                    knowledge.route, language, knowledge.language, len(knowledge.terms_used), len(sources), len(message),
+                    getattr(result, "completion_tokens", None), (time.monotonic() - started) * 1000)
         return {
             "response": result.text,
             "conversation_id": conversation.conversation_id,
@@ -190,6 +264,14 @@ class RupsaaService:
             "response_language": knowledge.language,
         }
 
+    def _prune_side_state(self) -> None:
+        """Per-conversation follow-up/language state lives only as long as its conversation."""
+        limit = getattr(self.conversation_manager.store, "max_conversations", 5000)
+        if len(self._last_terms) + len(self._language) > 2 * limit:
+            for side in (self._last_terms, self._language):
+                for cid in [c for c in side if self.conversation_manager.store.get(c) is None]:
+                    side.pop(cid, None)
+
     def reindex(self) -> int:
         self._rag_pipeline = RagPipeline()
         return self._rag_pipeline.ingest()
@@ -200,6 +282,21 @@ class RupsaaService:
         self._language.pop(conversation_id, None)
 
     def model_info(self) -> dict:
+        info = self._model_info()
+        from rupsaa.config import get_settings
+
+        if get_settings().is_production:
+            # Never publish server filesystem layout: adapter NAMES only.
+            for key in ("adapter_path", "configured_adapter_path"):
+                if info.get(key):
+                    info[key] = Path(info[key]).name
+            if info.get("base_model_id") and Path(info["base_model_id"]).is_absolute():
+                info["base_model_id"] = Path(info["base_model_id"]).name
+        info["environment"] = "production" if get_settings().is_production else "development"
+        info["adapter_name"] = Path(info["adapter_path"]).name if info.get("adapter_path") else None
+        return info
+
+    def _model_info(self) -> dict:
         from rupsaa.config import get_settings
 
         settings = get_settings()

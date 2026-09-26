@@ -34,8 +34,14 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
+    # "development" (default: permissive, lazy model load, no rate limits) or "production"
+    # (fail closed: owner key required, adapter must exist, rate limits on, paths redacted).
+    env: str = Field(default="development", validation_alias=AliasChoices("RUPSAA_ENV"))
+    log_level: str = Field(default="INFO", validation_alias=AliasChoices("LOG_LEVEL", "RUPSAA_LOG_LEVEL"))
+
     huggingface_token: str | None = None
-    model_id: str | None = None  # overrides configs/model.yaml if set
+    # Base model: HF id or local directory. RUPSAA_MODEL_PATH overrides configs/model.yaml.
+    model_id: str | None = Field(default=None, validation_alias=AliasChoices("RUPSAA_MODEL_PATH", "MODEL_ID"))
     # Which trained LoRA adapter to load on top of the base model. Override
     # via the RUPSAA_ADAPTER_PATH env var (e.g. "adapters/rupsaa-v0.1" once
     # that adapter exists). If the resolved path doesn't exist or is empty,
@@ -77,6 +83,45 @@ class Settings(BaseSettings):
     # the API beyond localhost/a trusted tunnel — once set, every /owner/*
     # request must send a matching `X-Owner-Key` header or it's rejected.
     owner_api_key: str = ""
+
+    # --- production hardening (all overridable; defaults depend on RUPSAA_ENV) -----------------
+    # Load the model at startup (production) instead of on the first chat message (development).
+    preload_model: bool | None = Field(default=None, validation_alias=AliasChoices("RUPSAA_PRELOAD_MODEL"))
+    # Chat rate limit per client and for the whole server (requests per minute; 0 = off).
+    rate_limit_per_client: int | None = Field(default=None, validation_alias=AliasChoices("RUPSAA_RATE_LIMIT_PER_MINUTE"))
+    rate_limit_global: int | None = Field(default=None, validation_alias=AliasChoices("RUPSAA_RATE_LIMIT_GLOBAL_PER_MINUTE"))
+    # Largest request body accepted outside the (separately capped) import uploads.
+    max_request_bytes: int = Field(default=64 * 1024, validation_alias=AliasChoices("RUPSAA_MAX_REQUEST_BYTES"))
+    # Upper bound a client may request for max_new_tokens.
+    max_new_tokens_cap: int = Field(default=1024, validation_alias=AliasChoices("RUPSAA_MAX_NEW_TOKENS_CAP"))
+    # In-memory conversations: at most this many, dropped after this many idle minutes.
+    max_conversations: int = Field(default=5000, validation_alias=AliasChoices("RUPSAA_MAX_CONVERSATIONS"))
+    conversation_idle_minutes: int = Field(default=360, validation_alias=AliasChoices("RUPSAA_CONVERSATION_IDLE_MINUTES"))
+
+    @property
+    def is_production(self) -> bool:
+        return self.env.strip().lower() in ("production", "prod")
+
+    def effective_preload(self) -> bool:
+        return self.is_production if self.preload_model is None else self.preload_model
+
+    def effective_rate_limits(self) -> tuple[int, int]:
+        """(per client, global) chat requests per minute; development defaults to no limit."""
+        per_client = self.rate_limit_per_client if self.rate_limit_per_client is not None else (20 if self.is_production else 0)
+        global_ = self.rate_limit_global if self.rate_limit_global is not None else (120 if self.is_production else 0)
+        return per_client, global_
+
+    def production_problems(self) -> list[str]:
+        """What stops this configuration from serving the public (empty = fine)."""
+        problems = []
+        if len(self.owner_api_key.strip()) < 24:
+            problems.append("OWNER_API_KEY must be set (at least 24 characters) in production")
+        adapter = self.resolve_path(self.adapter_path)
+        if not ((adapter / "adapter_config.json").is_file() and (adapter / "adapter_model.safetensors").is_file()):
+            problems.append("RUPSAA_ADAPTER_PATH must point at a trained adapter (adapter_config.json + adapter_model.safetensors)")
+        if any(o == "*" for o in self.cors_origin_list()):
+            problems.append("CORS_ORIGINS must list real origins, not '*', in production")
+        return problems
 
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]

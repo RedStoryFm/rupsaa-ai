@@ -15,11 +15,20 @@
   const resultMsg = document.getElementById("result-msg");
   const ownerKeyInput = document.getElementById("owner-key");
 
-  // Owner key is a convenience for local/dev use only — it never leaves
-  // this browser except as the X-Owner-Key header on /owner/* requests.
-  ownerKeyInput.value = localStorage.getItem("rupsaa_owner_key") || "";
+  // The owner types the key; it is never part of any page source. It is kept only for this
+  // browser tab session (sessionStorage) and sent solely as the X-Owner-Key header on /owner/*.
+  try {
+    localStorage.removeItem("rupsaa_owner_key"); // older versions kept it permanently
+    ownerKeyInput.value = sessionStorage.getItem("rupsaa_owner_key") || "";
+  } catch (e) {
+    /* storage unavailable */
+  }
   ownerKeyInput.addEventListener("input", () => {
-    localStorage.setItem("rupsaa_owner_key", ownerKeyInput.value);
+    try {
+      sessionStorage.setItem("rupsaa_owner_key", ownerKeyInput.value);
+    } catch (e) {
+      /* storage unavailable */
+    }
   });
 
   function authHeaders() {

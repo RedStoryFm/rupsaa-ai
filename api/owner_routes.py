@@ -26,6 +26,7 @@ without OWNER_API_KEY set.
 
 from __future__ import annotations
 
+import hmac
 import logging
 
 from fastapi import APIRouter, File, Form, Header, HTTPException, UploadFile
@@ -64,6 +65,9 @@ def require_owner(x_owner_key: str | None = Header(default=None)) -> None:
     global _warned_unprotected
     settings = get_settings()
     if not settings.owner_api_key:
+        if settings.is_production:
+            # Fail closed: a production server without an owner key exposes NO owner operation.
+            raise HTTPException(status_code=503, detail="owner tools are disabled: OWNER_API_KEY is not configured")
         if not _warned_unprotected:
             logger.warning(
                 "OWNER_API_KEY is not set — /owner/* routes are UNPROTECTED. "
@@ -71,7 +75,7 @@ def require_owner(x_owner_key: str | None = Header(default=None)) -> None:
             )
             _warned_unprotected = True
         return
-    if x_owner_key != settings.owner_api_key:
+    if not x_owner_key or not hmac.compare_digest(x_owner_key.encode(), settings.owner_api_key.encode()):
         raise HTTPException(status_code=401, detail="missing or invalid X-Owner-Key header")
 
 

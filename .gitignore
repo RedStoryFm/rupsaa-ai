@@ -79,3 +79,8 @@ nohup.out
 .DS_Store
 .idea/
 .vscode/
+
+# Production launcher pid files
+/run/
+# Owner knowledge backups (scripts/backup_knowledge.sh) — copy them off the server
+/backups/

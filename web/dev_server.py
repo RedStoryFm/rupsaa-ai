@@ -27,6 +27,8 @@ API_PORT = os.getenv("API_PORT", "8000")
 BACKEND_URL = os.getenv("RUPSAA_BACKEND_URL", f"http://127.0.0.1:{API_PORT}")
 
 API_PREFIX = "/api"
+# Generation is serialised on one GPU, so a reply can wait behind others; keep the proxy patient.
+PROXY_TIMEOUT = int(os.getenv("RUPSAA_PROXY_TIMEOUT", "300"))
 
 # Hop-by-hop headers (RFC 7230 6.1) plus ones the HTTP client sets itself
 # from `data=`/the request line — never forward these in either direction.
@@ -60,11 +62,15 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         body = self.rfile.read(length) if length else None
 
         headers = {k: v for k, v in self.headers.items() if k.lower() not in _HOP_BY_HOP}
+        # Tell the API who the real client is (used for per-client rate limiting; the API only
+        # trusts this header when the request comes from this proxy on loopback).
+        prior = self.headers.get("X-Forwarded-For")
+        headers["X-Forwarded-For"] = f"{prior}, {self.client_address[0]}" if prior else self.client_address[0]
 
         req = urllib.request.Request(target_url, data=body, headers=headers, method=self.command)
 
         try:
-            with urllib.request.urlopen(req, timeout=120) as resp:
+            with urllib.request.urlopen(req, timeout=PROXY_TIMEOUT) as resp:
                 self._send_proxied_response(resp.status, resp.headers, resp.read())
         except urllib.error.HTTPError as err:
             self._send_proxied_response(err.code, err.headers, err.read())

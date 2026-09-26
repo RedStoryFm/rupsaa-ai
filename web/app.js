@@ -72,12 +72,27 @@
     inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
   }
 
+  const CHAT_TIMEOUT_MS = 180000; // generation is queued on one GPU; the web proxy waits up to 300 s
+
+  function friendlyError(status, detail) {
+    if (status === 429) return detail || "Too many messages — please wait a moment.";
+    if (status === 503) return detail || "Rupsaa is starting up — please try again in a minute.";
+    if (status === 413) return "That message is too long.";
+    if (status === 422) return "That message couldn't be sent (too long or empty).";
+    if (status >= 500) return "Something went wrong on our side — please try again.";
+    return detail || `status ${status}`;
+  }
+
   async function checkHealth() {
     try {
       const res = await fetch(`${API_URL}/health`, { method: "GET" });
       if (!res.ok) throw new Error(`status ${res.status}`);
       const data = await res.json();
-      statusLine.textContent = data.model_loaded ? "online" : "online (model loads on first message)";
+      statusLine.textContent = data.model_loaded
+        ? "online"
+        : data.model_loading
+          ? "starting up (loading the model)…"
+          : "online (model loads on first message)";
     } catch (err) {
       statusLine.textContent = "offline — check backend";
       showError(`Can't reach Rupsaa backend at ${API_URL}. Is the API running?`);
@@ -97,6 +112,8 @@
     sendBtn.disabled = true;
     appendTypingIndicator();
 
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), CHAT_TIMEOUT_MS);
     try {
       const res = await fetch(`${API_URL}/chat`, {
         method: "POST",
@@ -106,11 +123,12 @@
           conversation_id: conversationId,
           use_rag: ragToggle.checked,
         }),
+        signal: controller.signal,
       });
 
       if (!res.ok) {
         const errBody = await res.json().catch(() => ({}));
-        throw new Error(errBody.detail || `status ${res.status}`);
+        throw new Error(friendlyError(res.status, errBody.detail));
       }
 
       const data = await res.json();
@@ -119,8 +137,15 @@
       appendBubble("assistant", data.response, data.sources);
     } catch (err) {
       removeTypingIndicator();
-      showError(`Message failed: ${err.message}`);
+      if (err.name === "AbortError") {
+        showError("Rupsaa is taking too long to answer — please try again.");
+      } else if (err instanceof TypeError) {
+        showError("Network problem — check your connection and try again.");
+      } else {
+        showError(`Message failed: ${err.message}`);
+      }
     } finally {
+      clearTimeout(timer);
       isSending = false;
       sendBtn.disabled = false;
       inputEl.focus();

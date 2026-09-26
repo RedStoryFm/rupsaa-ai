@@ -294,7 +294,11 @@ def service(tmp_path, terms):
 
 
 def _chat(svc, msg, cid="c1", use_rag=True):
-    return svc.chat(message=msg, conversation_id=cid, use_rag=use_rag, temperature=None, top_p=None, max_new_tokens=None)
+    # One conversation per test: reuse the server-issued id (client-chosen ids are never adopted).
+    cid = getattr(svc, "_test_cid", None) if cid == "c1" else cid
+    out = svc.chat(message=msg, conversation_id=cid, use_rag=use_rag, temperature=None, top_p=None, max_new_tokens=None)
+    svc._test_cid = out["conversation_id"]
+    return out
 
 
 def test_memory_question_uses_conversation_history(service):
@@ -321,7 +325,8 @@ def test_service_terminology_turn_and_followup(service):
     assert "Term: Strip / Stripping" in service._engine.calls[-1]["terminology_context"]
     out2 = _chat(service, "এটা বাংলায় বুঝিয়ে বলো")
     assert out2["route"] == "followup" and out2["terms_used"] == ["term-strip_stripping"]
-    service.reset_conversation("c1")
+    service.reset_conversation(out2["conversation_id"])
+    service._test_cid = None
     assert _chat(service, "এটা বাংলায় বুঝিয়ে বলো")["terms_used"] == []
 
 

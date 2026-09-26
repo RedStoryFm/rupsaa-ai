@@ -49,11 +49,20 @@ class ModelInfo(BaseModel):
     # System-prompt version the engine sends (v0.2 = the exact V0.2 training prompt).
     # Before the lazy load this is the version it *will* use for the configured adapter.
     prompt_version: str | None = None
+    adapter_name: str | None = None  # e.g. "rupsaa-v0.2.1" — what is actually attached
+    environment: str | None = None
 
 
 class HealthResponse(BaseModel):
-    status: str
+    status: str  # "ok" = process alive
     model_loaded: bool
+    ready: bool = False  # model loaded and able to answer (see also GET /ready)
+    model_loading: bool = False
+    knowledge_ok: bool = True
+    terminology_entries: int = 0
+    dance_entries: int = 0
+    rag_index_present: bool = False
+    environment: str = "development"
 
 
 class ReindexResponse(BaseModel):
