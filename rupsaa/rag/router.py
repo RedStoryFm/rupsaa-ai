@@ -103,6 +103,15 @@ _FOLLOWUP_RE = _rx(
     r"(ছোট|সহজ|শর্ট) করে (বলো|বল|বোঝাও)",
     r"(আরও|আরো|একটু) (বিস্তারিত|বুঝিয়ে) (বলো|বল|বোঝাও)",
     r"(বুঝলাম না|বুঝিনি|বুঝতে পারিনি)",
+    # Immediate short follow-ups that rework the previous answer ("এবার বাংলায়", "বাংলা হরফে লেখো", "আরও সহজ করে",
+    # "aro simple kore", "simpler please", "ek line e bolo") — whole message only, so topics are never swallowed.
+    r"^\s*(এটা|সেটা|ওটা|এবার|এখন|আচ্ছা)?\s*(বাংলায়|বাংলাতে|বাংলা হরফে|বাংলা অক্ষরে)\s*(বুঝিয়ে)?\s*(বলো|বল|বলুন|লেখো|লিখো|লিখে দাও|দাও|বোঝাও)?\s*(তো|প্লিজ)?\s*[?？।!.]*\s*$",
+    r"^\s*(এটা|সেটা)?\s*(আরও|আরো|একটু|আরেকটু)?\s*(সহজ|ছোট|শর্ট|সংক্ষেপে)\s*(করে|ভাবে)?\s*(বলো|বল|বোঝাও|লেখো|বুঝিয়ে বলো)?\s*(তো|প্লিজ)?\s*[?？।!.]*\s*$",
+    r"^\s*এক (লাইনে|কথায়)\s*(বলো|বল|বোঝাও)?\s*[?？।!.]*\s*$",
+    rf"^\s*(eta|sheta|oita)?\s*(aro|ektu|arektu|aaro)?\s*(simple|simpler|shohoj|sohoj|short|shorter|choto|chhoto|easy)\s*(kore|bhabe)?\s*(bolo|bol|bujhao|bojhao|bujhiye bolo|likho)?\s*(to|na|please|pls|plz)?\s*[?.!]*\s*$",
+    rf"^\s*(ek|1) (line|kothay|lain) (e|a)?\s*(bolo|bol|bujhao|likho)?\s*[?.!]*\s*$",
+    rf"^\s*(eta|sheta|ebar|ekhon)?\s*(bangla|bengali)\s*(horofe|hoorofe|akkhore|script e)\s*(bolo|bol|likho|lekho|dao)?\s*[?.!]*\s*$",
+    rf"^\s*(simpler|shorter|in simple words|in short|one line|simpler please|shorter please|make it simpler)\s*[?.!]*\s*$",
 )
 
 # Definition questions. Group "term" captures the thing being asked about.
@@ -114,13 +123,15 @@ _TERM_PATTERNS = [
     re.compile(r"^\s*(?:define|explain the term|explain)\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|meaning)\s*\?\s*$", re.I),
     # Banglish: "strip mane ki", "strip ki", "strip bolte ki bojhay", "strip ki jinis", "strip er mane ki"
-    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:er\s+)?(?:mane|mani|meaning)\s+(?:ki|kii|ki\s+jinis|kii\s+jinis)\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:er\s+)?(?:mane|mani|meaning)\s+(?:ki|kii|ki\s+jinish?|kii\s+jinish?)\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:bolte|bolle)\s+ki\s+(?:bojhay|bujhay|bojhai|bujhai|bojhano hoy|bujhano hoy)\s*\??\s*$", re.I),
-    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,30}?)[\"'”]?\s+(?:ki|kii)(?:\s+jinis)?\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,30}?)[\"'”]?\s+(?:ki|kii)(?:\s+jinish?)?\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:ki|kii)\s+(?:mane|bojhay)\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
     # Origin / "tell me about" / "explain X in <language>" (dance styles and other reference entries)
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:er\s+|ta\s+|ti\s+)?(?:origin|jonmo|utpotti)\s+(?:kothay|kothae|kothakar|ki)\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?kothakar(?:\s+(?:dance|nach|nritto|jinis))?\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?kon\s+desh\s*(?:er|theke)(?:\s+(?:dance|nach|nritto|jinis|jinish))?\s*\??\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:কোন দেশের|কোন দেশ থেকে এসেছে)(?:\s+নাচ)?\s*[?？।]?\s*$"),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:ta\s+|ti\s+)?kotha\s*theke\s+(?:esheche|eseche|ashe|asche|elo)\s*\??\s*$", re.I),
     re.compile(r"^\s*where\s+(?:is|does|do|did)\s+(?:the\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:dance\s+)?(?:from|come\s+from|originate(?:\s+from)?)\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:what(?:'s|\s+is)\s+the\s+)?origin\s+of\s+(?:the\s+)?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),

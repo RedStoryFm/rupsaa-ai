@@ -4,7 +4,9 @@
   "description": "It is a high-energy street dance style using aggressive, expressive movements, chest pops, stomps, and freestyle expression.",
   "origin": "United States (Los Angeles).",
   "category": "street",
-  "aliases": [],
+  "aliases": [
+    "ক্রাম্প"
+  ],
   "key_movements": "",
   "answer_guidance": "",
   "languages": [
@@ -26,5 +28,5 @@
   "practice_tips": "",
   "source": "owner dance list #9 (data/owner/dance_knowledge_owner_60.txt)",
   "created_at": "2026-09-26T17:10:21.579722+00:00",
-  "updated_at": "2026-09-26T17:10:21.579735+00:00"
+  "updated_at": "2026-09-27T16:21:01.797771+00:00"
 }

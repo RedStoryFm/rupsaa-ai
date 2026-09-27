@@ -34,14 +34,15 @@ from rupsaa.rag.terminology import (
 DANCE_LANGUAGES = list(TERM_LANGUAGES)  # en, bn, banglish
 # Dance names that are also everyday words outside the Qwen vocabulary list ("polka dots", "hula hoop").
 EVERYDAY_WORD_NAMES = {"polka", "hula", "salsa", "tango", "samba", "rumba", "mambo", "waltz", "popping", "locking",
-                       "breaking", "krump", "house dance", "zouk", "garba"}
+                       "breaking", "krump", "house dance", "zouk", "garba", "tap", "tap dance",
+                       "লকিং", "পপিং", "পোলকা", "ব্রেকিং", "ট্যাপ", "মাম্বো"}
 # Words that show a message is about dancing (normalized, whole words).
 DANCE_CUES = ("dance", "dances", "dancing", "dancer", "dancers", "dance form", "nach", "nache", "nacher", "nritto",
               "nritya", "moves", "choreography", "নাচ", "নাচের", "নৃত্য", "ডান্স",
 )
 # Origin words count as dance context only when the question is not about a longer phrase that merely
 # contains the name ("Ballet kothay originate korechilo?" yes; "breaking news er origin ki?" no).
-ORIGIN_CUES = ("originate", "originated", "originates", "origin", "originally", "kothakar", "কোথাকার")
+ORIGIN_CUES = ("originate", "originated", "originates", "origin", "originally", "kothakar", "desher", "কোথাকার", "দেশের")
 _ID_RE = re.compile(r"^dance-[a-z0-9_]{1,60}$")
 
 # Optional, future fields: kept empty unless the owner supplies them — never generated.
@@ -266,7 +267,7 @@ class DanceStore:
             if not guarded(m) or has_cue:
                 return True
             # "ballet er origin" -> "ballet": the question is about the dance itself
-            core = re.sub(r"\b(er|ta|ti|origin|jonmo|utpotti|kothakar|kothay)\b", " ", cand).split()
+            core = re.sub(r"\b(er|ta|ti|origin|jonmo|utpotti|kothakar|kothay|kon|desher)\b", " ", cand).split()
             return origin_q and (not cand or " ".join(core) == m.matched)
         return [m for m in matches if keep(m)][:limit]
 

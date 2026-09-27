@@ -256,7 +256,19 @@ class TerminologyStore:
         phrase the router extracted from a definition question ("Strip" from
         "Strip mane ki?"); without it, whole-phrase alias containment is used
         (e.g. a knowledge question that mentions a defined term)."""
-        return match_records(self.list(include_disabled=False), message, term_candidate, limit=limit)
+        matches = match_records(self.list(include_disabled=False), message, term_candidate, limit=limit)
+        if _TECH_CONTEXT.search(message):
+            # "strip whitespace in python": a passing mention inside a technical message is not the adult term;
+            # a direct definition question ("strip mane ki?") is an exact match and still counts.
+            matches = [m for m in matches if m.method == "exact"]
+        return matches
+
+
+# Programming / text-processing context: terminology words used in their technical sense.
+_TECH_CONTEXT = re.compile(
+    r"(?<![A-Za-z])(python|javascript|java|sql|regex|string|strings|whitespace|function|method|code|coding|script|"
+    r"excel|csv|json|html|css|variable|array|list comprehension|trim|substring|character|characters|bash|shell|"
+    r"terminal|command|library|api|php|c\+\+)(?![A-Za-z])", re.I)
 
 
 def match_records(records: list, message: str, candidate: str | None = None, *, limit: int = 2) -> list[TermMatch]:

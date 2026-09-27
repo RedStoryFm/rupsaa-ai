@@ -82,7 +82,12 @@ def test_frozen_dance_knowledge_copy_matches_live_store():
     live = sorted((PROJECT_ROOT / "knowledge/dance").glob("dance-*.json"))
     snap = sorted((SNAP / "dance_knowledge").glob("dance-*.json"))
     assert len(live) == len(snap) == 60
-    assert [(p.name, sha(p)) for p in live] == [(p.name, sha(p)) for p in snap]
+    assert [p.name for p in live] == [p.name for p in snap]
+    # V0.2.2 added Bengali-script aliases to the live store; every owner-supplied field is unchanged.
+    for lp, sp in zip(live, snap):
+        a, b = json.loads(lp.read_text(encoding="utf-8")), json.loads(sp.read_text(encoding="utf-8"))
+        assert {k for k in a if a[k] != b.get(k)} <= {"aliases", "updated_at"}, lp.name
+        assert set(b["aliases"]) <= set(a["aliases"]), lp.name
     assert manifest()["dance_knowledge"]["owner_source_sha256"] == sha(OWNER)
 
 

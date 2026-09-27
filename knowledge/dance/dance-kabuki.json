@@ -4,7 +4,9 @@
   "description": "It is a classical Japanese dance-drama with stylized movement, elaborate costumes, and dramatic makeup.",
   "origin": "Japan.",
   "category": "classical dance-drama",
-  "aliases": [],
+  "aliases": [
+    "কাবুকি"
+  ],
   "key_movements": "",
   "answer_guidance": "",
   "languages": [
@@ -27,5 +29,5 @@
   "practice_tips": "",
   "source": "owner dance list #47 (data/owner/dance_knowledge_owner_60.txt)",
   "created_at": "2026-09-26T17:10:21.740037+00:00",
-  "updated_at": "2026-09-26T17:10:21.740065+00:00"
+  "updated_at": "2026-09-27T16:21:00.863887+00:00"
 }

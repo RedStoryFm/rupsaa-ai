@@ -4,7 +4,9 @@
   "description": "It is a romantic partner dance with a four-step rhythm, close embrace, and gentle hip movement.",
   "origin": "Dominican Republic.",
   "category": "partner",
-  "aliases": [],
+  "aliases": [
+    "বাচাটা"
+  ],
   "key_movements": "",
   "answer_guidance": "",
   "languages": [
@@ -26,5 +28,5 @@
   "practice_tips": "",
   "source": "owner dance list #16 (data/owner/dance_knowledge_owner_60.txt)",
   "created_at": "2026-09-26T17:10:21.601349+00:00",
-  "updated_at": "2026-09-26T17:10:21.601362+00:00"
+  "updated_at": "2026-09-27T16:21:00.785848+00:00"
 }

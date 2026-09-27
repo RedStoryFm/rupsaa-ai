@@ -4,7 +4,10 @@
   "description": "It is a funk street dance style based on quickly contracting and relaxing muscles to create a “pop” or hit.",
   "origin": "United States (California).",
   "category": "street",
-  "aliases": [],
+  "aliases": [
+    "পপিং",
+    "পপিং ডান্স"
+  ],
   "key_movements": "",
   "answer_guidance": "",
   "languages": [
@@ -26,5 +29,5 @@
   "practice_tips": "",
   "source": "owner dance list #7 (data/owner/dance_knowledge_owner_60.txt)",
   "created_at": "2026-09-26T17:10:21.573635+00:00",
-  "updated_at": "2026-09-26T17:10:21.573651+00:00"
+  "updated_at": "2026-09-27T16:21:01.859608+00:00"
 }

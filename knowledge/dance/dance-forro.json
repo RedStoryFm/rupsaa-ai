@@ -5,7 +5,9 @@
   "origin": "Brazil.",
   "category": "partner",
   "aliases": [
-    "Forro"
+    "Forro",
+    "ফোরো",
+    "ফরো"
   ],
   "key_movements": "",
   "answer_guidance": "",
@@ -28,5 +30,5 @@
   "practice_tips": "",
   "source": "owner dance list #25 (data/owner/dance_knowledge_owner_60.txt)",
   "created_at": "2026-09-26T17:10:21.645641+00:00",
-  "updated_at": "2026-09-26T17:10:21.645661+00:00"
+  "updated_at": "2026-09-27T16:21:00.829811+00:00"
 }
