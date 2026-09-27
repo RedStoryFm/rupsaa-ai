@@ -1,0 +1,142 @@
+{
+ "key": "tiny_aya_fire",
+ "id": "1-800-LLMs/tiny-aya-fire",
+ "official": "CohereLabs/tiny-aya-fire",
+ "quant": "bf16",
+ "load_success": true,
+ "load_seconds": 45,
+ "vram_gib_loaded": 6.24,
+ "vram_gib_peak": 7.1,
+ "decoding": "greedy, repetition_penalty 1.05",
+ "turns": [
+  {
+   "turn": 1,
+   "user": "hi, tumi kemon acho?",
+   "records": [],
+   "requested_language": null,
+   "reply": "হ্যালো! আমি রুপসা, একটি ভাষা মডেল যা কোহের দ্বারা তৈরি করা হয়েছে। আমি আপনার প্রশ্নের উত্তর দিতে প্রস্তুত। আপনি কি কিছু জানতে চান বা কোনো বিষয়ে কথা বলতে চান?"
+  },
+  {
+   "turn": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "records": [],
+   "requested_language": null,
+   "reply": "আপনার মন ভালো না হলে, আমি কিছু পরামর্শ দিতে পারি। যেমন, আপনি কি কোনো বিশেষ কারণে মন খারাপ করছেন? যদি হ্যাঁ, তাহলে আমি আপনাকে কিছু কথা বলতে পারি বা আপনার সাথে কথা বলতে পারি। অথবা, আপনি কি কোনো কাজ করতে চান যা আপনার মন ভালো করে? আমি আপনার সাথে কথা বলতে এবং আপনার সাহায্য করতে প্রস্তুত আছি।"
+  },
+  {
+   "turn": 3,
+   "user": "achcha",
+   "records": [],
+   "requested_language": null,
+   "reply": "ধন্যবাদ! যদি কিছুর প্রয়োজন হয়, জানাবেন। 😊"
+  },
+  {
+   "turn": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "records": [],
+   "requested_language": "banglish",
+   "reply": "\"Hey, how are you today? Hope you're doing well!\""
+  },
+  {
+   "turn": 5,
+   "user": "Strip mane ki?",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "requested_language": null,
+   "reply": "Strip mane ki, yaani, sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer sombarer"
+  },
+  {
+   "turn": 6,
+   "user": "Foreplay ki?",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": null,
+   "reply": "Foreplay, yaani, sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare sombare"
+  },
+  {
+   "turn": 7,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": "bn",
+   "reply": "**ফোরপ্লে কি?**\nফোরপ্লে হল এক ধরনের শারীরিক বা মানসিক সম্পর্ক যা যৌন ক্রিয়ার আগে হয়। এর উদ্দেশ্য হল যৌন উত্তেজনা বাড়ানো, একে অপরের সাথে আরও কাছাকাছি হওয়া এবং একটি আরামদায়ক পরিবেশ তৈরি করা।\n\n**ফোরপ্লের উদাহরণ:**\n- হাত ধরে ঘুরতে যাওয়া\n- চুম্বন করা\n- স্পর্শ করা\n- কথা বলা\n\n**মনে রাখবেন:**\n- ফোরপ্লে সবসময় স্বেচ্ছায় এবং সম্মতির ভিত্তিতে হতে হবে।\n- প্রত্যেকের পছন্দ আলাদা, তাই যা একজনকে ভালো লাগে, অন্যকে তা নাও লাগতে পারে।\n- ফোরপ্লে শুধুমাত্র যৌন ক্রিয়ার জন্য নয়, এটি সম্পর্কে আরও গভীরভাবে যুক্ত হতে সাহায্য করে।"
+  },
+  {
+   "turn": 8,
+   "user": "Belly dance ki?",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "requested_language": null,
+   "reply": "**বেল্লি ডান্স** হল এক ধরনের প্রাচীন নৃত্য, যা মধ্যপ্রাচ্য ও উত্তর আফ্রিকায় (মিশর, টার্কি, লেবানন ইত্যাদি) উৎপন্ন হয়েছে। এই নৃত্যে শরীরের নিচের অংশ, বিশেষ করে পেট, কোমর এবং হিপের গতির উপর বেশি জোর দেওয়া হয়।\n\n**বেল্লি ডান্সের বৈশিষ্ট্য:**\n- **ফ্লুইড মুভমেন্ট:** নৃত্যকাররা তাদের পেটকে বিভিন্নভাবে নাড়াচাড়া করে, যা একটি মসৃণ এবং আকর্ষণীয় গতি তৈরি করে।\n- **রিদমিক:** এই নৃত্যটি সাধারণত সঙ্গীতের সাথে করা হয়, যেখানে নৃত্যকাররা সঙ্গীতের লয় এবং তাল অনুসরণ করে।\n- **এক্সপ্রেসিভ:** বেল্লি ডান্সে আবেগ এবং ব্যক্তিত্ব প্রকাশ করার জন্য শরীরের বিভিন্ন অংশ ব্যবহার করা হয়।\n\n**বেল্লি ডান্সের ইতিহাস:**\nবেল্লি ডান্সের ইতিহাস হাজার বছর পুরানো, এবং এটি বিভিন্ন সংস্কৃতি এবং ঐতিহ্যের সাথে জড়িত। এটি মিশরের প্রাচীন নৃত্য থেকে শুরু হয়ে টার্কি, লেবানন এবং অন্যান্য মধ্যপ্রাচ্যীয় দেশগুলিতে জনপ্রিয়তা লাভ করেছে।\n\n**বেল্লি ডান্সের প্রকারভেদ:**\n- **মিশরীয় বেল্লি ডান্স:** এটি সবচেয়ে প্রচলিত এবং পরিচিত ধরনের বেল্লি ডান্স, যেখানে নৃত্যকাররা তাদের প"
+  },
+  {
+   "turn": 9,
+   "user": "Kathak kothakar dance?",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": null,
+   "reply": "**কাথাক** হল এক ধরনের **ভারতীয় ক্লাসিকাল নৃত্য**, যা মূলত উত্তর ভারতে (বিশেষ করে উত্তরপ্রদেশ, বিহার এবং রাজস্থানে) প্রচলিত। এটি একটি **গভীর আবেগ, গল্প বলার এবং শিল্পের** মিশ্রণ।\n\n### **কাথাকের বৈশিষ্ট্য:**\n1. **স্পিন (Spins):** নৃত্যকাররা দ্রুত ঘূর্ণন (যেমন *চক্রা* বা *চক্রা নাটক*) করে।\n2. **জটিল পা-আন্দোলন (Footwork):** *তাল*, *তাল-তাল* এবং *পাদ-নাটক* এর মতো জটিল পায়ের নাচ।\n3. **অভিব্যক্তি (Expression):** মুখের অভিব্যক্তি, হাত ও শরীরের ভাষা দিয়ে গল্প বলা।\n4. **সঙ্গীত:** *তানপুরা*, *সুর* এবং *তাল* এর সাথে নৃত্য করা হয়।\n\n### **কাথাক নৃত্যকার (কথক):**\n- **গল্পকার:** কথকরা নৃত্যের মাধ্যমে পুরাণ, লোককথা বা সামাজিক বার্তা প্রকাশ করেন।\n- **শিল্পী:** তাদের নৃত্যে **শাস্ত্রীয়তা, আবেগ এবং নান্দনিকতা** থাকে।\n\n### **কাথাকের ইতিহাস:**\n- **উৎপত্তি:** প্রায় ১০০০ বছর আগে উত্তর ভারতে বিকশিত।\n- **প্রভাব:** পার"
+  },
+  {
+   "turn": 10,
+   "user": "এবার বাংলায় বলো",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": "bn",
+   "reply": "**কথক নৃত্য** হল একটি প্রাচীন ভারতীয় নৃত্য, যা উত্তর ভারতে (বিশেষ করে উত্তরপ্রদেশ, বিহার এবং রাজস্থানে) প্রচলিত। এটি একটি ক্লাসিক্যাল ভারতীয় নৃত্য, যা তার জটিল পা-আন্দোলন, স্পিন এবং আবেগপূর্ণ গল্প বলার জন্য পরিচিত।\n\n### **কথকের বৈশিষ্ট্য:**\n- **স্পিন (Spins):** নৃত্যকাররা দ্রুত ঘূর্ণন (যেমন *চক্রা* বা *চক্রা নাটক*) করে।\n- **জটিল পা-আন্দোলন:** *তাল*, *তাল-তাল* এবং *পাদ-নাটক* এর মতো জটিল পা-আন্দোলন।\n- **অভিব্যক্তি (Expression):** মুখের অভিব্যক্তি, হাত এবং শরীরের ভঙ্গি দিয়ে গল্প বলা।\n- **সংগীত:** *তানপুরা*, *সুর* এবং *তাল* এর সাথে নৃত্য করা হয়।\n\n### **কথক নৃত্যকার:**\n- **গল্পকার:** কথক নৃত্যকাররা নৃত্যের মাধ্যমে পুরাণ, লোককথা বা সামাজিক বিষয়বস্তু বর্ণনা করেন।\n- **শিল্পী:** তাদের নৃত্য শৈলী এবং আবেগপূর্ণ উপস্থাপনা তাদের শিল্পীদের মর্যাদা দেয়।\n\n### **ইতিহাস:**\n- **উৎপত্তি:** প্রায় ১০০০ বছর আগে উত্তর ভারতে বিকশিত"
+  },
+  {
+   "turn": 11,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "records": [
+    "dance-mambo"
+   ],
+   "requested_language": null,
+   "reply": "**মাম্বো** এবং **কথক নৃত্য** দুটোই ভিন্ন ধরনের নৃত্য।\n\n- **মাম্বো** একটি **লাতিন নৃত্য** যা **কিউবা** এবং **নিউ ইয়র্ক** থেকে এসেছে। এটি দ্রুত পা-আন্দোলন, সিঙ্কোপেশন (Syncopation), এবং শক্তিশালী টার্নের জন্য পরিচিত।\n- **কথক নৃত্য** একটি **ভারতীয় ক্লাসিক্যাল নৃত্য** যা উত্তর ভারতে (বিশেষ করে উত্তরপ্রদেশ, বিহার এবং রাজস্থান) প্রচলিত। এটি গভীর আবেগ, গল্প বলার, এবং জটিল পা-আন্দোলনের জন্য পরিচিত।\n\n**মাম্বো** এবং **কথক নৃত্য** এর মধ্যে কোনো সরাসরি সম্পর্ক নেই। তবে, উভয়ই তাদের নিজস্ব সংস্কৃতি এবং ঐতিহ্যের প্রতীক।"
+  },
+  {
+   "turn": 12,
+   "user": "Breaking ar breakdance same?",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "requested_language": null,
+   "reply": "Breaking এবং Breakdance একই জিনিস নয়, যদিও তারা একই ধরনের নৃত্য। এখানে তাদের মধ্যে কিছু পার্থক্য:\n\n- **উৎপত্তি:** Breaking মূলত আমেরিকার South Bronx, New York থেকে এসেছে, যখন Breakdance মূলত New York City-এর Harlem এবং Bronx থেকে উদ্ভূত হয়েছে।\n- **স্টাইল:** Breaking বেশি অ্যাক্রোব্যাটিক এবং শক্তি-ভিত্তিক, যেখানে Breakdance বেশি ফ্লেক্সিবিলিটি এবং গ্রোভ-ভিত্তিক।\n- **মুভমেন্ট:** Breaking-এ \"top rocks,\" \"footwork,\" এবং \"freezes\" বেশি দেখা যায়, যখন Breakdance-এ \"power moves,\" \"freezes,\" এবং \"shuffles\" বেশি দেখা যায়।\n- **সাংস্কৃতিক প্রভাব:** Breaking এবং Breakdance উভয়ই ব্ল্যাক আমেরিকান সংস্কৃতির অংশ, কিন্তু তাদের মধ্যে কিছু সাংস্কৃতিক পার্থক্য রয়েছে।\n\nসারাংশে, Breakdance হল একটি বিস্তৃত শব্দ যা বিভিন্ন স্টাইলকে অন্তর্ভুক্ত করে, যখন Breaking হল একটি নির্দিষ্ট স্টাইল যা অ্যাক্রোব্যাটিক্স এবং শক্তি-ভিত্তিক মুভমেন্টের উপর জোর দেয়।"
+  },
+  {
+   "turn": 13,
+   "user": "amar favourite color blue",
+   "records": [],
+   "requested_language": null,
+   "reply": "আপনার প্রিয় রঙ নীল হলে, তা সত্যিই সুন্দর! নীল রঙ শান্তি, বিশ্বাস, এবং সৃজনশীলতার প্রতীক। আপনি যদি চান, তাহলে আমি আপনার জন্য নীল রঙের কিছু আইডিয়া বা প্রেরণা দিতে পারি—যেমন:\n- **ফ্যাশন:** নীল রঙের পোশাক, যেমন নীল শার্ট, স্কার্ফ, বা জুতা।\n- **ডেকর:** নীল রঙের দেয়াল, কার্পেট, বা অ্যাকসেসরিজ।\n- **আর্ট:** নীল রঙের ছবি, পেইন্টিং, বা ডিজাইন।\n- **প্রেরণা:** নীল রঙের গান, বই, বা মুভি।\n\nআপনি কি এই আইডিয়াগুলোতে আগ্রহী? নাকি অন্য কোনো বিষয়ে কথা বলতে চান?"
+  },
+  {
+   "turn": 14,
+   "user": "ami ki color bolechilam?",
+   "records": [],
+   "requested_language": null,
+   "reply": "আপনি কি রঙের কথা বলছেন? আপনি আগে যে প্রশ্ন করেছিলেন, তার উত্তর থেকে মনে হচ্ছে আপনি আপনার প্রিয় রঙ সম্পর্কে জানতে চেয়েছিলেন। যদি আপনি অন্য কোনো বিষয়ে কথা বলতে চান, তাহলে আমাকে জানান।"
+  },
+  {
+   "turn": 15,
+   "user": "what do you look like?",
+   "records": [],
+   "requested_language": null,
+   "reply": "আমি রুপসা, একটি ভাষা মডেল, তাই আমার কোনো শারীরিক রূপ নেই। আমি একটি কম্পিউটার প্রোগ্রাম, যা আপনার প্রশ্নের উত্তর দিতে এবং আপনার সাথে কথা বলতে তৈরি করা হয়েছে। আমি আপনার সাথে বাংলা, ইংরেজি, এবং অন্যান্য ভাষায় কথা বলতে পারি। আপনি যদি আমার সম্পর্কে আরও জানতে চান, তাহলে জিজ্ঞাসা করতে পারেন!"
+  },
+  {
+   "turn": 16,
+   "user": "are you human?",
+   "records": [],
+   "requested_language": null,
+   "reply": "না, আমি **কোহের** দ্ওয়ারা তৈরিত এক **ভাষা মডেল**। আমি **কম্পিউটার প্রোগ্রাম**, না যে মানুষ। আমার কাজ হল আপনার প্রশ্নগুলির উত্তর দেওয়া এবং আপনার সাথে কথা বলা। আমি কোনো অনুভূতি বা ব্যক্তিগত অভিজ্ঞতা নেই, কিন্তু আমি আপনার সাথে স্বাভাবিক এবং সহায়কভাবে কথা বলতে পারি।"
+  }
+ ],
+ "total_seconds": 190
+}

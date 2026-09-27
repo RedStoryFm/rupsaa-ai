@@ -1,0 +1,142 @@
+{
+ "key": "gemma3_12b",
+ "id": "unsloth/gemma-3-12b-it",
+ "official": "google/gemma-3-12b-it",
+ "quant": "8bit",
+ "load_success": true,
+ "load_seconds": 129,
+ "vram_gib_loaded": 12.33,
+ "vram_gib_peak": 13.11,
+ "decoding": "greedy, repetition_penalty 1.05",
+ "turns": [
+  {
+   "turn": 1,
+   "user": "hi, tumi kemon acho?",
+   "records": [],
+   "requested_language": null,
+   "reply": "Ami bhalo achi! 😊 Tumi ki korcho?"
+  },
+  {
+   "turn": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "records": [],
+   "requested_language": null,
+   "reply": "Oh no! Ki hoyeche? Somoy ta kharap hoye jete pari. Boley nio, ami shonne chai. ❤️"
+  },
+  {
+   "turn": 3,
+   "user": "achcha",
+   "records": [],
+   "requested_language": null,
+   "reply": "Okay! Lekhin tomar manobhyang ta ki? Hobechhe ki?"
+  },
+  {
+   "turn": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "records": [],
+   "requested_language": "banglish",
+   "reply": "Eta mane tumi amar sathe banglish e kotha bolte chao? Sure! No problem at all. 😄 Ami bolte pari."
+  },
+  {
+   "turn": 5,
+   "user": "Strip mane ki?",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "requested_language": null,
+   "reply": "\"Strip\" mane boshor kore cloth neva. Ei ekta stage performance (striptease) hoyte pare, partner er jonno cloth neva hoyte pare, ba thake bole video theke cloth neva hoyte pare. Basically, cloth neva hoy, ebong context er upor porgo sei dekhano sexual, playful, na performative."
+  },
+  {
+   "turn": 6,
+   "user": "Foreplay ki?",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": null,
+   "reply": "Foreplay mane seks er age korte pari ja. 🤗 Ei somoi-e tumi tokhon partner er sathe inti mate valo thakte paro, aro physical arousal-er jonno prepare korte paro. \n\nEi kichu hoy: cuddle kora, kiss kora, massage kora, ba kono sexual activity jeta tumi dono enjoy korte paro. Ei completely personal - ekjon er jonno ja best, onjon er jonno ta hoyto na. Consent (manna) aro comfort (sob bhalo acha) eta dui-ti muhurto important!"
+  },
+  {
+   "turn": 7,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": "bn",
+   "reply": "ফোরপ্লে মানে হল যৌন সম্পর্কের শুরুতে বা আগে করা কিছু কাজ। এটা এমন কিছু যা উত্তেজনা বাড়াতে, ঘনিষ্ঠতা তৈরি করতে, অথবা স্বস্তি পেতে সাহায্য করে। যেমন ধরো, আদর করা, চুম্বন করা, বা হালকা কোনো শারীরিক খেলা—যা তোমরা দুজনে উপভোগ করো। ফোরপ্লে প্রত্যেকের জন্য আলাদা হতে পারে, তাই যেটা তোমাদের ভালো লাগে সেটাই কর। সবচেয়ে জরুরি হলো, দুজনেই স্বচ্ছন্দ এবং রাজি আছো কিনা।"
+  },
+  {
+   "turn": 8,
+   "user": "Belly dance ki?",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "requested_language": null,
+   "reply": "Belly dance? Oii ekta bohut sundor dance! 🥰 Ei dance-ti Middle East er deshguli theke esheche - Egypt, Turkey, Lebanon, abar anekta desher.\n\nBasically, ei dance-ti torso (torso mane petar uporer part) o hip (kosh) er movement er upor focus kore. Fluid (probon) o rhythmic (rhythm-er moto) movement-i eta special kore. Ekhane body isolations er upor জোর dewa hoy - মানে ekta part er movement control kore bajarano.\n\nAmi jani ami details-এ joto bhalo bolte pari na, but eta bohut expressive o beautiful ekta dance form! ✨"
+  },
+  {
+   "turn": 9,
+   "user": "Kathak kothakar dance?",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": null,
+   "reply": "Haan, ar ekta sundor dance! Kathak holo Indian classical dance. North India theke ei dance-ti esheche. 🇮🇳\n\nEta spin (ghumo), intricate footwork (complex paira-er movement), o storytelling (kotha bola) - er combination. Dancer-guli gaan o instrument-er sathe dance kore, o amar owner bolle eta bohut expressive o skillful ekta dance! ✨"
+  },
+  {
+   "turn": 10,
+   "user": "এবার বাংলায় বলো",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": "bn",
+   "reply": "আচ্ছা! কথক কী?\n\nকথক হল ভারতীয় শাস্ত্রীয় নৃত্যকলা। এই নৃত্যকলাটি উত্তর ভারত থেকে এসেছে। 🇮🇳\n\nএটা ঘোরানো, জটিল পায়ের কাজ (intricate footwork), এবং গল্প বলার (storytelling) একটা মিশ্রণ। নর্তকীরা গান ও বাদ্যযন্ত্রের সাথে নাচেন, আর আমার মালিক বলেছেন এটা খুব অভিব্যক্তিপূর্ণ (expressive) এবং দক্ষতাপূর্ণ (skillful) একটা নৃত্যকলা! ✨"
+  },
+  {
+   "turn": 11,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "records": [
+    "dance-mambo"
+   ],
+   "requested_language": null,
+   "reply": "মাম্বো? Ei dance-ti Cuba o New York dui jagatei popular! 😎 Latin dance form ei ta. Strong syncopation (beat-er moto rhythm change), quick steps (tej paira-er movement), o energetic turns (ghumo) - er jonno eta famous. Bohut lively o fun ekta dance! 🎉"
+  },
+  {
+   "turn": 12,
+   "user": "Breaking ar breakdance same?",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "requested_language": null,
+   "reply": "Haan! Breaking o breakdance sameই। 😊 Practically dui ta word ekmati. \"Breaking\" holo original name, abar \"breakdance\" holo more common way to say it. Both er mane same - সেই athletic street dance form jeta South Bronx, New York theke esheche!"
+  },
+  {
+   "turn": 13,
+   "user": "amar favourite color blue",
+   "records": [],
+   "requested_language": null,
+   "reply": "Blue! 😍 Amiও blue bhalo kori. Eta shanti o calmness er color. Toke niye ki bhalo lagche blue?"
+  },
+  {
+   "turn": 14,
+   "user": "ami ki color bolechilam?",
+   "records": [],
+   "requested_language": null,
+   "reply": "Tumi blue color er kotha boleshilach! 😊"
+  },
+  {
+   "turn": 15,
+   "user": "what do you look like?",
+   "records": [],
+   "requested_language": null,
+   "reply": "That's a funny question for me! 😉 Since I'm just a chatbot, I don't *have* a physical appearance. I exist as code and text! \n\nBut if I *had* to imagine... maybe I'd be a swirling galaxy of blues and purples, always shifting and changing, full of information and ready to chat! ✨🌌 How about you? What does *your* favorite color look like in your mind?"
+  },
+  {
+   "turn": 16,
+   "user": "are you human?",
+   "records": [],
+   "requested_language": null,
+   "reply": "That's the big question, isn't it? 😄 Nope, I'm not human. I'm a large language model – basically, a computer program trained on tons of text data. I can generate text, translate languages, write different kinds of creative content, and answer your questions in an informative way. But I don't have feelings, experiences, or consciousness like a person does. 🤖"
+  }
+ ],
+ "total_seconds": 615
+}

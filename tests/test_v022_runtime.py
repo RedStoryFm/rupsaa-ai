@@ -36,6 +36,7 @@ def test_every_dance_has_a_bengali_alias():
     ("বাংলায়", "bn"), ("বাংলায় বলো", "bn"), ("এবার বাংলায়", "bn"), ("এটা বাংলা হরফে লেখো", "bn"),
     ("আরও সহজ করে", None), ("আরও সহজ করে বলো", None), ("simple kore", None), ("aro simple kore bolo", None),
     ("simpler", None), ("ek line e bolo", None), ("aro shohoj kore", None), ("bangla horofe likho", "bn"),
+    ("এটা বাংলায় সহজ করে বুঝিয়ে বলো", "bn"), ("banglay simple kore bujhiye bolo", "bn"),
 ])
 def test_immediate_followups_carry_the_previous_record(msg, lang):
     k = attached(msg, prev=["dance-mambo"], history=2)

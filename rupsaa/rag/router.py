@@ -94,12 +94,12 @@ _FOLLOWUP_RE = _rx(
     rf"^\s*(explain|tell me) (more|in (more )?detail)|^\s*(more detail|elaborate|go deeper)\s*[?.!]*\s*$",
     rf"^\s*(what do you mean|i don'?t get it|didn'?t understand)",
     # Banglish
-    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
+    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*((aro|ektu)?\s*(simple|shohoj|sohoj|short) kore)?\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
     rf"{_B}(eta|sheta|seta)?\s*(short|choto|chhoto|chotto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
     rf"{_B}(aro|ektu) (detail|bistarito|bistarito bhabe|bujhiye) (bolo|bol|bujhao)",
     rf"{_B}(bujhlam na|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",  # "bujhlam" alone = "got it", not a re-ask
     # Bengali
-    r"(এটা|সেটা|ওটা)?\s*(বাংলায়|ইংরেজিতে)\s*(বুঝিয়ে)?\s*(বলো|বলুন|বল|লেখো|দাও)",
+    r"(এটা|সেটা|ওটা)?\s*(বাংলায়|ইংরেজিতে)\s*((আরও|আরো|একটু)?\s*(সহজ|ছোট) করে)?\s*(বুঝিয়ে)?\s*(বলো|বলুন|বল|লেখো|দাও)",
     r"(ছোট|সহজ|শর্ট) করে (বলো|বল|বোঝাও)",
     r"(আরও|আরো|একটু) (বিস্তারিত|বুঝিয়ে) (বলো|বল|বোঝাও)",
     r"(বুঝলাম না|বুঝিনি|বুঝতে পারিনি)",

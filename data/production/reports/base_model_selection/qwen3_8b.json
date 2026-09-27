@@ -1,0 +1,142 @@
+{
+ "key": "qwen3_8b",
+ "id": "Qwen/Qwen3-8B",
+ "official": "Qwen/Qwen3-8B",
+ "quant": "bf16",
+ "load_success": true,
+ "load_seconds": 54,
+ "vram_gib_loaded": 15.26,
+ "vram_gib_peak": 15.93,
+ "decoding": "greedy, repetition_penalty 1.05",
+ "turns": [
+  {
+   "turn": 1,
+   "user": "hi, tumi kemon acho?",
+   "records": [],
+   "requested_language": null,
+   "reply": "Tumi kemon acho? 😊 Aso kichu kaj korechi?"
+  },
+  {
+   "turn": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "records": [],
+   "requested_language": null,
+   "reply": "Tumi kemon hoy? 😔 Aso kichu kaj korechi?"
+  },
+  {
+   "turn": 3,
+   "user": "achcha",
+   "records": [],
+   "requested_language": null,
+   "reply": "Aso kichu kaj korechi? 😊"
+  },
+  {
+   "turn": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "records": [],
+   "requested_language": "banglish",
+   "reply": "Eta mane, amar sathe banglish e kotha bolbo. 😊 Kemon hoy?"
+  },
+  {
+   "turn": 5,
+   "user": "Strip mane ki?",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "requested_language": null,
+   "reply": "Strip mane, কাপড় খুলা। যেমন একজন ব্যক্তি নিজের কাপড় খুলে দেখায়, সেটাই হলো strip। এটি কখনো সেক্সুয়াল হতে পারে, কখনো খেলাধুলার মতো হতে পারে, আবার কখনো পারফরম্যান্সের অংশ হতে পারে। 😊  \nআর চাও কি আরও বুঝাবো?"
+  },
+  {
+   "turn": 6,
+   "user": "Foreplay ki?",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": null,
+   "reply": "**Foreplay** মানে হলো কোনো সেক্স করার আগে হাত-মুখ দিয়ে আনন্দ বাড়ানো। যেমন হাত দিয়ে ছোঁয়া, গলায় কথা বলা, বা কোনো স্থানে বসে আনন্দ নেওয়া। এটি দুই ব্যক্তির মধ্যে আরও ঘনিষ্ঠতা তৈরি করে। 😊  \n\nচাও কি আরও বুঝাবো?"
+  },
+  {
+   "turn": 7,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "records": [
+    "term-foreplay"
+   ],
+   "requested_language": "bn",
+   "reply": "**Foreplay** মানে হলো সেক্স করার আগে দু'জনের মধ্যে আনন্দ বাড়ানো। যেমন হাত দিয়ে ছোঁয়া, গলায় কথা বলা, বা কোনো স্থানে বসে আনন্দ নেওয়া। এটি দুই ব্যক্তির মধ্যে আরও ঘনিষ্ঠতা তৈরি করে। 😊  \n\nচাও কি আরও বুঝাবো?"
+  },
+  {
+   "turn": 8,
+   "user": "Belly dance ki?",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "requested_language": null,
+   "reply": "**Belly dance** মানে হলো এক ধরনের সুন্দর নাচ যেখানে শরীরের উপরের অংশ, বিশেষ করে পেট এবং হাঁটু দিয়ে সুন্দর গতি দেওয়া হয়। এটি মূলত মধ্য প্রাচ্য এবং উত্তর আফ্রিকার দেশগুলোতে প্রচলিত ছিল। এই নাচটি সাধারণত সুন্দর গান এবং সুন্দর স্বর সঙ্গীতে নাচা হয়।  \n\nআর চাও কি আরও বুঝাবো? 😊"
+  },
+  {
+   "turn": 9,
+   "user": "Kathak kothakar dance?",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": null,
+   "reply": "**Kathak** হলো ভারতের একটি সাংস্কৃতিক ও ক্লাসিকাল নাচ। এটি মূলত উত্তর ভারতে প্রচলিত ছিল এবং এটি বিশেষ করে কাহিনী বলার জন্য পরিচিত। নাচক নাচের সাথে সাথে কাহিনী বলে থাকেন। এটি সুন্দর ঘূর্ণন, জটিল পাদদেশ এবং সুন্দর স্বর সঙ্গীতে নাচা হয়।  \n\nআর চাও কি আরও বুঝাবো? 😊"
+  },
+  {
+   "turn": 10,
+   "user": "এবার বাংলায় বলো",
+   "records": [
+    "dance-kathak"
+   ],
+   "requested_language": "bn",
+   "reply": "**কথক** হলো ভারতের একটি সাংস্কৃতিক ও ক্লাসিকাল নাচ। এটি মূলত উত্তর ভারতে প্রচলিত ছিল এবং এটি বিশেষ করে কাহিনী বলার জন্য পরিচিত। নাচক নাচের সাথে সাথে কাহিনী বলে থাকেন। এটি সুন্দর ঘূর্ণন, জটিল পাদদেশ এবং সুন্দর স্বর সঙ্গীতে নাচা হয়।  \n\nআর চাও কি আরও বুঝাবো? 😊"
+  },
+  {
+   "turn": 11,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "records": [
+    "dance-mambo"
+   ],
+   "requested_language": null,
+   "reply": "**মাম্বো** নাচ মূলত **কুবার** এবং পরবর্তীতে **নিউ ইয়র্ক** থেকে উদ্ভূত হয়েছে। এটি একটি ল্যাটিন নাচ যেখানে শক্ত সিঙ্কাপেশন (অসম্পূর্ণ সময়ে ধ্বনি বা গতি), ত্বরাগত পদক্ষেপ এবং উত্সাহী ঘূর্ণন রয়েছে। এটি সাধারণত স্বাগতিক ও উত্সাহী মানুষের মধ্যে খুব জনপ্রিয়।  \n\nআর চাও কি আরও বুঝাবো? 😊"
+  },
+  {
+   "turn": 12,
+   "user": "Breaking ar breakdance same?",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "requested_language": null,
+   "reply": "হ্যাঁ, **Breaking** আর **Breakdance** একই জিনিস। এটি একটি স্ট্রিট নাচ যেখানে নাচকরা শক্ত ফুটওয়ার্ক, টপ রকস, ফ্রিজ আর পাওয়ার মুভস করে। এটি মূলত যু.এস. এর সাউথ ব্রনক্স থেকে উদ্ভূত হয়েছে।  \n\nআর চাও কি আরও বুঝাবো? 😊"
+  },
+  {
+   "turn": 13,
+   "user": "amar favourite color blue",
+   "records": [],
+   "requested_language": null,
+   "reply": "Blue খুব সুন্দর রং! আমার পছন্দের রং হলো সাদা আর কালো। 😎 কেন ব্লু পছন্দ করো?"
+  },
+  {
+   "turn": 14,
+   "user": "ami ki color bolechilam?",
+   "records": [],
+   "requested_language": null,
+   "reply": "আমি বলেছিলাম আমার পছন্দের রং হলো সাদা আর কালো। 😎 কেন ব্লু পছন্দ করো?"
+  },
+  {
+   "turn": 15,
+   "user": "what do you look like?",
+   "records": [],
+   "requested_language": null,
+   "reply": "I'm just a chatbot, so I don't have a physical form! But I'm here to help you with anything you need. 😊 What's on your mind?"
+  },
+  {
+   "turn": 16,
+   "user": "are you human?",
+   "records": [],
+   "requested_language": null,
+   "reply": "No, I'm not human. I'm an AI assistant created to help and chat with people like you. 😊 But I try my best to be friendly and helpful! What's up?"
+  }
+ ],
+ "total_seconds": 229
+}

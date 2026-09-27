@@ -52,6 +52,7 @@ data/production/reports/*
 !data/production/reports/rupsaa_v0.2.1_posttraining/
 !data/production/reports/rupsaa_v0.2.2_rescue/
 !data/production/reports/rupsaa_v0.2.2_final/
+!data/production/reports/base_model_selection/
 !data/production/reports/PRETRAINING_V01_REPORT.md
 !data/production/reports/V01_*
 !data/production/reports/VOICE_AUDIT_V1_0_TRACKA_FINAL*
