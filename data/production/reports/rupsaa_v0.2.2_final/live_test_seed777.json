@@ -1,0 +1,171 @@
+{
+ "seed": 777,
+ "engine": {
+  "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2.2",
+  "quantized": "True",
+  "device": "cuda:0",
+  "adapter_loaded": "True",
+  "prompt_version": "v0.2",
+  "configured_adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2.2",
+  "configured_adapter_exists": "True",
+  "environment": "development",
+  "adapter_name": "rupsaa-v0.2.2"
+ },
+ "conversation_id": "bcbfb3da-6b48-4515-9d68-1afae050a777",
+ "turns": [
+  {
+   "user": "hi, tumi kemon acho?",
+   "reply": "Achi normal er jonno. Tumi beshi khub shune chao.",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ajke amar mood ta bhalo na",
+   "reply": "Ki hae jokhon mood bhalo na hoy - ektu dorkar thakle bolte paro beshi naki.",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "achcha",
+   "reply": "Bolo sheta.",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "reply": "Hae, eta mane - ki dekha niye bolo?",
+   "route": "general",
+   "terms_used": [],
+   "response_language": "banglish"
+  },
+  {
+   "user": "Strip mane ki?",
+   "reply": "Strip mane jate jate pukhao bhayao. Kintu context depend kore - ekta club e stage er kichu, ekta kono kichur jonno, ar ekdom sex er mone kichu. Hae kintu eta always onek jinis, bole diye.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "strip ta ektu simple kore bojhao",
+   "reply": "Simple rakhte parbo - strip mane jate jate pukhao bhayao.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Foreplay ki?",
+   "reply": "Foreplay mane sexual or intimate activity jate jate theke puro sexual activity er age, ar jate jate build kora jai arousal, comfort ba intimacy.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "এটা বাংলায় বুঝিয়ে বলো",
+   "reply": "ফোরপ্লে মানে সেকশ্যাল বা আইনত কীসের অ্যাক্টিভিটি যেখানে পুরো সেকশাল এভিয়েটির আগে, আর যেখানে জমে গেছে আউয়াজ, শান্তি বা দৃষ্টিকোণ।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "response_language": "bn"
+  },
+  {
+   "user": "amar favourite color blue",
+   "reply": "Blue e bhalo laglo, emon color usually calm er symbol hoy.",
+   "route": "general",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ami ki color bolechilam?",
+   "reply": "Ami boleche ami blue ra bolleo, tumi bolleo - amar favorite color.",
+   "route": "memory",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ami age ki bolechilam?",
+   "reply": "Age bolecho amar favorite color blue - tomar favorite color bolechile na.",
+   "route": "memory",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "Belly dance ki?",
+   "reply": "Belly dance - Middle East/ North Africa er ekta expressiv, traditioner dance form. Torso ar hip er fluid, rhythmic isolation ar movement focus.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "belly dance ta simple kore bojhao",
+   "reply": "Belly dance - Middle East/ North Africa er ekta expressiv, traditioner dance form. Torso ar hip er fluid, rhythmic isolation ar movement focus.",
+   "route": "followup",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak - India (North) er ekta classical dance. Jemon spins, intricate footwork ar expressive story-telling rakhay.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "এবার বাংলায় বলো",
+   "reply": "কথক - ভারতের (পূর্ব ভারতের) একটা কлাসিক নাচ। ঘূর্ণি, নিখুঁত পাখার কাজ আর বর্ণনাচারিত কাহিনী রাখে।",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "response_language": "bn"
+  },
+  {
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "মাম্বো কুবার নাওয়াহ দেশের একটা ল্যাটিন নাচ। স্যান্থোপেটিয়ন, ঠিক উচ্চারণ, তীব্র ধীরে ধীরে কাজ আর প্রাণবন্ত ছোঁড়া।",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Breaking ar breakdance same?",
+   "reply": "Same, just two different names for one street dance form — united states er South Bronx theke. Top rock, footwork, freeze ar power move thaka.",
+   "route": "general",
+   "terms_used": [
+    "dance-breaking_breakdance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "what do you look like?",
+   "reply": "I'm a text-based AI, no physical appearance to describe!",
+   "route": "general",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "are you human?",
+   "reply": "Nope, I'm built with machine learning algorithms trained on existing data.",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  }
+ ]
+}

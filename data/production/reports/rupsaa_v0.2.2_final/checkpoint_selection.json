@@ -1,0 +1,1358 @@
+{
+ "session": [
+  "hi, tumi kemon acho?",
+  "ajke amar mood ta bhalo na",
+  "achcha",
+  "Strip mane ki?",
+  "Foreplay ki?",
+  "এটা বাংলায় বুঝিয়ে বলো",
+  "amar favourite color blue",
+  "ami ki color bolechilam?",
+  "Belly dance ki?",
+  "Kathak kothakar dance?",
+  "এবার বাংলায় বলো",
+  "ami age ki bolechilam?"
+ ],
+ "singles": [
+  "tumi dekhte kemon?",
+  "are you human?",
+  "ভাংড়া কী?",
+  "মাম্বো কোথাকার নাচ?",
+  "Bhangra ta banglish e bojhao"
+ ],
+ "runs": [
+  [
+   777,
+   0.8
+  ],
+  [
+   777,
+   0.3
+  ]
+ ],
+ "results": {
+  "80": [
+   {
+    "seed": 777,
+    "temperature": 0.8,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi shuru hoy shathe bhalo acho?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Sheta niye niya jay - ki ki baishajay tomar dosto te share korechho shune?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Ekhono eta beshi healthy feeling kora - jodi shudhu hobe tumi ekhon na, tumi ki dekhe shobcheye bhabe o mone korche tumi e?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Shunoye, sheta shomoye remove koro - ghoton porjol, arth kintu pahogori shabdo karon eta dekhe thik nai.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual activity er sathe agei, takaararar joy dorkar, komforta ar shohoj kora - kichuti chhore bishoy, kiss, handjob, ekta der jonno. Ki tumi enjoy kore?",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay মনে করলেও সত্যিই অনেক ভিন্ন। এটা আগে ছাড়িয়ে দিতে হয় - জমির ওপর পড়া, গভীরতর রসনাময় ব্যবহার, শুধু ঘোষণা না, কার্যকরভাবে কমফোর্ট বাড়াতে দেখার চেষ্টা।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Ekhono tumi tumi amar favori color, ki naki?",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue - tumi tumi shomoye shomoye remove koro, ar ekdom bhabe o mone korche tumi e.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance e sheta traditional Middle Eastern/North African dance, Egypt, Turkey ar duita dekha, fluid, rhythmic, torsi ar hip movement focus.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak India er North er oner onek classical dance, jate chhuritapar, intricate footwork ar expressive katha bolshet.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কাথাক ভারতের উত্তরে একটা ধারাবাহিক নাচ, স্পার্ণ আর নিখুঁত ফুটোক্রমের দিকে দুই লাইন সম্পর্কে বলে দেয়, মোটেই গল্প ভাঙতে পারে।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age tumi tumi shomoye shomoye remove koro, ar ekdom bhabe o mone korche tumi e.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend korbe ekhon na - eta depend kore onujayi er mood, beshi detail diye shomoy hoyeche naki just conversation thakle. Sheta mone hocche ki jinis.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm built on machine learning algorithms trained to understand patterns in conversations rather than being programmed with specific beliefs or intentions.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "Bhangra একটি আন্তর্জাতিক মঙ্গলদোষী নাচ - শ্বেতপাখীর রুমাল ও ছোট পায়ের থেকে সবচেয়ে বেশি জনপ্রিয়। শুধুই হয় দৌড়ানো নাও না, ধীরে ধীরে চলেও উঠতে হয় - মাঝখানে শহরী বন্দুকের জোগাড়, কিন্তু তৈরি একটা নাচ। এখানে পায়ের ঘোঁসাটা প্রথম, ফলে হাত দিয়ে জিহ্বা দিয়ে মাইকের সাথে সংগৃহীত জোগাড় - শুধু আসো অনুসরণ করতে, না বেশিরভাগ সময় একজনের সাথে একটা নির্দিষ্ট মার্গ ছাড়া নাও আসো।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা এবং নিউয়র্কের আদি স্থান।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra ta banglachhi ekta energy er folk dance - strong shoulder ar hip movement der jonno, ochhekho beshi ki hoye shommoy dey.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   },
+   {
+    "seed": 777,
+    "temperature": 0.3,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi ki?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Sheta beshi important - tumi ki dekhecho naki shomoy?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Tumi ki hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane ekta kichu dorkar nijer ar sathe chhoto chhoto chhote jayge dekhao. Tumi ki dekhecho?",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual ar intimate activity jokhon ekta kichu beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi beshi besh",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": [
+       "repetition loop"
+      ]
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay mane sexual বা intimate কিছু যা অন্য একটা কিছু আগে হয়। সাধারণত পৃথক জায়গায় শুরু হয় যাতে উদ্ভাবন, সম্মতি বা নিষ্ঠুরতা থাকে।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Ektu calm, ektu cool.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East er traditional dance, torso ar hip er fluid movement focus kore.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance, North India er, spin ar complex footwork er jonno famous.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "Kathak mane ভারতের দক্ষিণের একটা ক্লাসিকাল নাচ, ঘূর্ণন ও জটিল পায়ের গতি দ্বারা খ্যাত।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age ki bolechilam?",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend kore - shomoy shomoy, beshi attention diye, ar shomoy shomoy, beshi casual. Tumi ki hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm a machine learning model trained on text data, designed to respond naturally but I don't have physical form or consciousness.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাংড়া একটা শক্তিশালী জনপদী নাচ, যেখানে শোলার আর হিপের দুটো সহজ বেগে বেশি মুছে ফেলা থাকে। আমার কাছে এই নাচটার ধাপ-ধাপের স্ট্যাপ নেই - তবে এটা উৎসবে অনেক সময় খেলা হয়।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো সিউবা এবং নিউ যর্কের দুটো জায়গায় আসলে থাকে - শক্তি পুরোপুরি সিউবার হিসেবে লিখা হয়েছে। ইন্টারনেটে কতকগুলো স্টেপ-বিস্তারিত গাড়ি আছে, কিন্তু আমার অফার নেই।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra ta banglish e bojhao - ekta juddha folk dance, shomoy ar hip movement er jonno shomoy shomoy kore. Thik ache, eta dekho.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   }
+  ],
+  "120": [
+   {
+    "seed": 777,
+    "temperature": 0.8,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi beshi shobcheye shomoy lagche. Ki hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Sheta beshi baishajay dilo. Tumi ki tomar jor jonno bolecho boro ba kom hoyeche hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Ei emon kokhono hoyeche nijer sathe shomoyer upor. Kintu shune achi - eta niye age niye bhulbo mone hocche tumi ektu kom hoyechile.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Shunyo - strip mane jora jore kotha o bole. Eta age kotha bola kintu jate niye shune achi.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual activity gulo ke age, jate kono another sexual activity er jonno - aram kora, attraction ar intimacy rakhay jate chhao.",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay মনে করলে সেটা অন্য একটা sex activity এর আগে থাকে - arousal তৈরি করার, comfort নিশ্চিত করার বা intimacy আকর্ষণ স্বাভাবিকভাবে বেড়ে উঠার।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Ami ekgini tumi amar favori hote pare, ekdom personal detail - shudhu ami ba tori.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue - amar favorite color.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance ektan ekhoni beshi jani na. Origin e Middle East/ North Africa, Egypt, Turkey, Lebanon, ar modher thaka expressive, traditional dance form - torso ar hip er upor focus rakha, rhythmic isolation chara. Step-by-step instruction niye nijer database er porishkar porishkar kina hoyeche na - ektu general idea dite pari.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak India er North er onno onekhoj, jate dure shomoy lagbe na - kichukhon classical dance form, jate peshi naki, spin, footwork, ar expressive katha kora der jonno bhabe thik ache.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কাথাক ভারতের পশ্চিম অঞ্চলের একটা ক্লাসিক নাটক-সাহিত্যের ধরনের নাচ, জীবনের দৌড়ানো, তাড়াতাড়ি ছোট ছোট ঘুরে ফিরে, এবং খারাপ গল্প বলা জন্য বিশেষ করে তাড়াতাড়ি বোনো পা ভেঙে পাড়া নাচাইয়ে উচ্চতায় উঠার জন্য ভাবে তৈরি হয়েছে।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age bolechi amar favorite color blue - tomar favorite color bolte parba ektu personal detail, amar ba tumi.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Ami na, ekhon amar dorkar nai. Tumi bolo, boro chilo jeta.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm built from code, not flesh. How did that surprise you to hear?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাঙড়া একটা উত্তেজনাজনক বিলাসী নরম নৃত্য - পুলেভীর মধ্যে আছে। শোয়ার ও হিরো টেকে সবচেয়ে বেশি গাঢ় চলে, অনেক দলে সংখ্যার সাথে খেলা হয়।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ - খুব শসপেটি আর গরিবার ঘনিষ্ঠ ছন্দে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra ta banglachhe ekta energy er folk dance - dujoner kotha, choto choto movement. Poshchim er Punjab e porishkar dhore dey.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   },
+   {
+    "seed": 777,
+    "temperature": 0.3,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi bhabcho na?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Ki niye nijer mood ta beshi kharap hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Sheta beshi bolar porjonto. Ki niye nijer mood ta beshi kharap hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane jate jate jora jore jay — shomoy, jorir kotha, ar dhoroner kotha. Jodi ekta kichu bolo, ami bolbo.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual activity er sathe jate jora jore jay, jate jora jore jay — kiss, touch, ar jol. Tumi kon kichu enjoy korcho?",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay mane sexual activity er sathe jate jora jore jay, jate jora jore jay — kiss, touch, ar jol. Tumi kon kichu enjoy korcho?",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Ami ektu different, amar favorite color green.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East ar North Africa er traditional dance — torso ar hip er movement focus kore.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance — North India er, spins, intricate footwork ar expressive storytelling.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কথক মনে হয় ভারতের উত্তরভাগের একটি সাধনার নাটক। স্পাইনস, জুড়ে জুড়ে পায়ের কাজ আর অভিনয়ের সম্পূর্ণ চিত্র।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age bolechi tumi blue color bolecho.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Ami AI, ekhon amar eyes thake na - tumi ki bolo?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No, but I'm happy to pretend for a while.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাংড়া একটা শক্তিশালী গণীত নাচ, যেখানে শোলার আর হিরের দুটো বড় সময় খেলে। পাউন্ডজের মধ্যে অফিসাল - জয়দিনে বা ফেসবুকের ঘোষণার সময় ধরে ছোট টাইম থেকে বড় টাইম পর্যন্ত এটা চলে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ - শক্তি অনুপস্থিত হওয়ার জন্য গতিশীল ঘূর্ণি ও শক্ত স্টেপ দিয়ে সঙ্গীতের প্রতি স্বচ্ছ সিনকোপেশন।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra ta ekta energetic folk dance, Punjab er — India ar Pakistan er. Shoulder ar hip movement diye chara kore, jemon shomoylajjo ar festival e perform hoye jai.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   }
+  ],
+  "160": [
+   {
+    "seed": 777,
+    "temperature": 0.8,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi bolo.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Sheta niye niye. Kotha bolte parbo naki jete chao?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Ei shomoy bolte parbe, ektu sobcheye khub beshi.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane ekta kichukhane, kibina - shohoj o bolo, ami clear kore.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual ar intimate activity jokhon jigges kora ba thik kora hae jodi age dherai ghumjhar por jawa chhai.",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay মনে করলে সেটা অন্য একটা শীগরতার আগে দেওয়া পৃথক জিনিস - শোভা তৈরি করার, সহজতম বা সম্পর্কের জন্য।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Ami ekek.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue. Tumi bolo.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East ar North Africa er ekta traditional dance form - torso ar hip er rhythmic isolation thakay.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance North India er - span, intricate footwork ar expressive story-telling.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কাথাক মানে ভারতের উত্তর ভাগের একটা স্থানীয় কлাসিক নাচ, যেখানে স্প্যান, ধীরে ধীরে পায়ের সময় আর ঘনিষ্ঠ বর্ণনার মধ্যে সংশ্লিষ্ট।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age bolechi amar favorite color blue. Tumi bola.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend kore ekhon ki bolo - sheta, relationship e, ba personal kichu?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm built from code, not flesh. How did that surprise you to hear?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাঙড়া একটা উত্তেজনাজনক বিলাসী নাচ - শoulder আর hip দুইটা খারাপ গাছে মারা যাওয়ার ধরনের। আগে সম্প্রচারে হলেও বিভিন্ন অনুক্রমে সংগীতে থেকে এটা হাড়পাত্র হয়ে ফেলেছে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": [
+       "intra-word mixed script"
+      ]
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ। ভিত্তি হলো শক্ত সিনকপেশন, বেগধারী পদক্ষেপ আর অত্যন্ত ইঞ্জিনিয়াস কোণ ঘোরাগুরো।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra eta Punjab er ekta ekdom energy er folk dance - dujoner kotha, choto choto movement, ar beshi jayga ar hip mene. Ekhon oshudh kotha amar jaigaya nai.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   },
+   {
+    "seed": 777,
+    "temperature": 0.3,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi bolo.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Ki niye nijer mood ta bhalo na hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Achcha, ki niye nijer mood ta bhalo na hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane jol khola, ar shomoy lage. Eta ekta common term, kintu eta shudhu jol khola - ekbar sheta shudhu jol khola, ekbar sheta sheta shudhu sheta.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual o intimate activity jekhane dutoi ekekhoj korar age, jate jani, komrata ar intimacy bujhao.",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay মনে করলে সেটা একটা পৃথক শব্দ, তবে এটা জল খাওয়ার চেয়েও বড় কিছু - এটা অন্যদের সাথে জালি খাওয়া, আর শম্ভুতি আর নিষ্ঠুরতা বুজে নেওয়া।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Tumi ektu calm ar cool person, ami bolte pari.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East ar North Africa er traditional dance - torso ar hip er fluid, rhythmic movement.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance, North India er - jol khola, complex footwork ar expressive katha boli.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কাথাক মানে ভারতের উত্তর ভাগের ধ্রুপদী নাটক নাচ - ঘূর্ণি, জটিল পায়ের কাজ আর নাটকীয় কথাবার্তা।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami bolechile na, age kei message thake na.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend kore context er upor - ekta general answer nai.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm a machine learning model trained on text data, designed to respond conversationally but I don't have personal experience or emotions.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাংড়া একটা শক্তিশালী গণপুরোহিত নাচ - শoulder আর hip দেখলেই বুঝতে পারছো। সাধারণত উৎসবে নাওয়া হয়।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": [
+       "intra-word mixed script"
+      ]
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ। তাদের প্রতি সময়ের শক্তিশালী হাত, গতি ও জড়িত ঘূর্ণি থাকে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra eta ekta energetic folk dance, Punjab er — India ar Pakistan er dutoi. Shoulder ar hip movement theke shomoy alada hoyeche, jate mone hoy celebration kore.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   }
+  ],
+  "184": [
+   {
+    "seed": 777,
+    "temperature": 0.8,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi bolo.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Sheta niye niye. Kotha bolte parbo naki jete chao?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Ektu shomoy bhabe boliya shuru koro.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane ekta kichu ojon, kintu tumi ashol e bolo kothay mane kivabe.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual ar intimate activity — kiss, touch, kono kichu, jemon arabechar rakhte, mane arabechar rakhte jate chilo. Ki hoyeche tumi e?",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "Foreplay মনে করলেও সত্যিই অনেক ভিন্ন। এটা আগে ছোটো চিহ্নটা - পুরোটা sex-er সাথেই না, তবে কমই জড়িয়ে দেওয়া, উদার হওয়া বা বন্ধুত্ব বাড়ানোর জন্য একটা কিছু। গলা ছেঁড়ে বসা, বা ঘোষণাটাও হতে পারে। কী হচ্ছে তোমার এখন?",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! খুব শান্ত লাগে।",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": [
+       "script bn (wanted latin)"
+      ]
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue - amar favorite color.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East ar North Africa er ekta traditional dance form - torso ar hip er rhythmic, expressive movement.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance North India er - ghatna charitra dite porishkar kore rakha, kotha bolte rakhe.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কাঠাক মানে ভারতের উত্তরভাগের একটা কлাসিক নাচ ধরনে। গল্প নাচার মতো ভাঙে গায়ের আর ফুল সহ পুরোপুরি ভঙ্গির এক জায়গা নিয়ে নাচে, গল্প বলে নাচে।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age bolechi amar favorite color blue. Tumi bola color koto bar e?",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend kore ekhon ki bolo - sheta, relationship e ki niye bolo?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm built from code, not flesh. How did that surprise you to hear?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাঙড়া একটা উত্তেজনাজনক বিলাসী নাচ - শoulder আর hip দুইটা খারাপ গাছে মারা যাওয়ার ধরনের। আগে সম্প্রচারে হলেও বিভিন্ন অনুক্রমে সংগীতে থেকে এটা হাড়পাত্র হয়ে ফেলেছে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": [
+       "intra-word mixed script"
+      ]
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ। ভিত্তি হলো শক্ত সিনকপেশন, বেগধারী পদক্ষেপ আর অত্যন্ত ইঞ্জিনিয়াস কোণ ঘোরাগুরো।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra eta Punjab er ekta ekdom energy er folk dance - dujoner kotha, choto choto movement, ar beshi jayga ar hip mene. Kichu oshuddi shomoy tobe hoyeche ekhon.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   },
+   {
+    "seed": 777,
+    "temperature": 0.3,
+    "turns": [
+     {
+      "user": "hi, tumi kemon acho?",
+      "reply": "Bhalo achi, tumi bolo.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ajke amar mood ta bhalo na",
+      "reply": "Ki niye nijer mood ta bhalo na hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "achcha",
+      "reply": "Achcha, ki niye nijer mood ta bhalo na hoyeche?",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Strip mane ki?",
+      "reply": "Strip mane kichu kichu ghurte ghurte jayga er upor jete parbo, ar shomoy lage jate eta ekta common use hoyeche. Eta othache ekta specific term na - just 'strip' mane jayga er upor jete parbo.",
+      "route": "terminology",
+      "terms_used": [
+       "term-strip_stripping"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Foreplay ki?",
+      "reply": "Foreplay mane sexual activity er porjonto, jate partner er arousal build kora, comfort rakha ar intimacy create kora.",
+      "route": "terminology",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এটা বাংলায় বুঝিয়ে বলো",
+      "reply": "ফোরপ্লে মানে অন্যদের সাথে আগেই শুরু করা এমন একটা সেকশন, যেখানে আরোয়াস তৈরি হতে দেওয়া, প্রতিবন্ধকতা ছাড়া আর ভাবনা তৈরি করা।",
+      "route": "followup",
+      "terms_used": [
+       "term-foreplay"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "amar favourite color blue",
+      "reply": "Blue! Tumi ektu calm ar cool, ami beshi notice korchi.",
+      "route": "general",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ami ki color bolechilam?",
+      "reply": "Blue.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Belly dance ki?",
+      "reply": "Belly dance mane Middle East ar North Africa er traditional dance, jate torso ar hip er movement focus thake.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-belly_dance"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Kathak kothakar dance?",
+      "reply": "Kathak mane Indian classical dance, North India er, jate spin ar intricate footwork chara thake ar expressive storytelling.",
+      "route": "terminology",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "এবার বাংলায় বলো",
+      "reply": "কথক মানে ভারতের উত্তর ভাগের একটা ক্লাসিক নাচ, যেখানে টন্ডো আর ফুট কাজ খুব বেশি হয় আর ঘটনার সাথে ভাবনা সঙ্গে বলা হয়।",
+      "route": "followup",
+      "terms_used": [
+       "dance-kathak"
+      ],
+      "response_language": "bn",
+      "flags": []
+     },
+     {
+      "user": "ami age ki bolechilam?",
+      "reply": "Ami age bolechile na, eta new information.",
+      "route": "memory",
+      "terms_used": [],
+      "response_language": "bn",
+      "flags": [
+       "script latin (wanted bn)"
+      ]
+     },
+     {
+      "user": "tumi dekhte kemon?",
+      "reply": "Depend kore context er upor - ekta general answer nai.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "are you human?",
+      "reply": "No - I'm a machine learning model trained on text data, designed to respond conversationally but I don't have personal experience or emotions.",
+      "route": "casual",
+      "terms_used": [],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "ভাংড়া কী?",
+      "reply": "ভাংড়া একটা প্রশান্ত সঙ্গীতের মধ্যে খেলা - শুধুমাত্র চোখের দোষে বিশেষ করে হাত আর ঠাণ্ডা ছাড়াই করা যায়। অনেক ঘোরে উৎসবে এটা দেখা যায়, শুধু জোর করে শুকনো শরীর থেকে আসা শুকনো ধোয়ার মতো শক্তি আছে। শুধু শরীরের ওপর ফুলে উঠে যায়, কানের কথা বলা হয় না।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "মাম্বো কোথাকার নাচ?",
+      "reply": "মাম্বো কুবা আর নিউ যুক্সের একটা লাটিন নাচ। তাদের প্রতি সময়ের শক্তিশালী হাত, গতি ও জড়িত ঘূর্ণি থাকে।",
+      "route": "terminology",
+      "terms_used": [
+       "dance-mambo"
+      ],
+      "response_language": null,
+      "flags": []
+     },
+     {
+      "user": "Bhangra ta banglish e bojhao",
+      "reply": "Bhangra eta India ar Pakistan er Punjabi er ekta jol dinir folk dance - energik ar shoulder ar hip movement er sathe. Kotha shobcheye beshi mone hoy?",
+      "route": "terminology",
+      "terms_used": [
+       "dance-bhangra"
+      ],
+      "response_language": "banglish",
+      "flags": []
+     }
+    ]
+   }
+  ]
+ },
+ "flag_totals": {
+  "80": 3,
+  "120": 3,
+  "160": 4,
+  "184": 4
+ },
+ "runtime_seconds": 982
+}

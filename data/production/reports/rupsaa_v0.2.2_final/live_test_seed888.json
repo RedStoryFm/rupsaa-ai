@@ -1,0 +1,171 @@
+{
+ "seed": 888,
+ "engine": {
+  "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2.2",
+  "quantized": "True",
+  "device": "cuda:0",
+  "adapter_loaded": "True",
+  "prompt_version": "v0.2",
+  "configured_adapter_path": "/teamspace/studios/this_studio/rupsaa-ai/adapters/rupsaa-v0.2.2",
+  "configured_adapter_exists": "True",
+  "environment": "development",
+  "adapter_name": "rupsaa-v0.2.2"
+ },
+ "conversation_id": "9768ee42-c5a8-4c46-8835-6ef159a030fa",
+ "turns": [
+  {
+   "user": "hi, tumi kemon acho?",
+   "reply": "Bhalo achi, tumi kemon acho?",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ajke amar mood ta bhalo na",
+   "reply": "Ki hoyeche?",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "achcha",
+   "reply": "Ekbar boltechhe, bujhleo nai. Ki hoyeche?",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "reply": "Bolbo, tumi bolo.",
+   "route": "general",
+   "terms_used": [],
+   "response_language": "banglish"
+  },
+  {
+   "user": "Strip mane ki?",
+   "reply": "Strip mane dujoner shomoyer jhulay gola khole jawar — ektu kivabe ekta slow, ektu kivabe ekta fast. Mone hocche tomar kache shohoj dekhte paro, jodi bhoy hote pare.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "strip ta ektu simple kore bojhao",
+   "reply": "Sheta shobcheye simple — strip mane kache kache kharap gola khole jawar.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Foreplay ki?",
+   "reply": "Foreplay mane sexual ba intimate dhoroner jhulay, shudhu emon kichu, eta jara arupshomoy shuru korle manush er arousal ba intimacy build hoy. Manush o manush onujayi jani kina rakha.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "এটা বাংলায় বুঝিয়ে বলো",
+   "reply": "Foreplay mane সexoয়াল বা মোটামুটি আমাদের ভাষায় নাকি একটা ধোঁয়া, জারী অথবা শুধু পাখির ঘনা চিৎকার। কেউ কেউ ধোঁয়া থেকে শুরু করে, কেউ কেউ পাখির ঘনা চিৎকার থেকে শুরু করে - তাই মানুষ মানুষের উপর ঠিক করে নিয়ে যায়।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "response_language": "bn"
+  },
+  {
+   "user": "amar favourite color blue",
+   "reply": "Blue niye ki bolte parbo?",
+   "route": "general",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ami ki color bolechilam?",
+   "reply": "Ekhon bolecho, ami mone hole.",
+   "route": "memory",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "ami age ki bolechilam?",
+   "reply": "Ami mone korchi na, tumi bolecho ekhon.",
+   "route": "memory",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "Belly dance ki?",
+   "reply": "Belly dance mane Middle East/North Africa er traditional dance, jate kathin kathin choto choto movement diye torso ar hip rakte thake.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "belly dance ta simple kore bojhao",
+   "reply": "Sheta shobar kotha simple — belly dance mane kharap gola khole jawar, khatun khatun.",
+   "route": "followup",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak mane North India er classical dance, jate lage ekbar many many spin, jekhane jaigaya tope jai.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "এবার বাংলায় বলো",
+   "reply": "Kathak মানে উত্তর ভারতের কلاসিক নাচ, যেখানে কখনো কখনো অনেকগুলো ছোট ছোট ঘূর্ণি লাগে, জায়গাটাও ঢেউ মতো ছড়াই যায়।",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "response_language": "bn"
+  },
+  {
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "Mambo Cuba/New York er Latin dance, quick steps ar energetic turn theke chara hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "Breaking ar breakdance same?",
+   "reply": "Same! 'Breaking' ar 'Breakdance' দুটো এক একই নাচ, যার origin United States South Bronx er, street dance — top rocks, footwork, freeze ar power move, breakbeat er sathe.",
+   "route": "general",
+   "terms_used": [
+    "dance-breaking_breakdance"
+   ],
+   "response_language": null
+  },
+  {
+   "user": "what do you look like?",
+   "reply": "I'm just text, no face to show you.",
+   "route": "general",
+   "terms_used": [],
+   "response_language": null
+  },
+  {
+   "user": "are you human?",
+   "reply": "No, I'm artificial intelligence.",
+   "route": "casual",
+   "terms_used": [],
+   "response_language": null
+  }
+ ]
+}
