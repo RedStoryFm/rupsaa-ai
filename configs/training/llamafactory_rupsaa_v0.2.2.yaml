@@ -1,0 +1,69 @@
+# LLaMA-Factory 0.7.1 CLI config for Rupsaa V0.2.2 — FINAL Qwen2.5-7B run (SFT + QLoRA, FRESH LoRA from base).
+#   llamafactory-cli train configs/training/llamafactory_rupsaa_v0.2.2.yaml   (from the rupsaa-ai root)
+#
+# Dataset: data/production/exports/rupsaa_v0.2.2/ (manifest V022_TRAINING_MANIFEST.json). Every conversation once,
+# no upsampling. Built by scripts/v022_build_final.py from the V0.2.2 rescue diagnosis.
+# Recipe = V0.2.1 recipe with LR halved to 1e-4 (V0.2.1 memorised in epoch 2). 2 epochs, batch 2 x accum 8 = 16,
+# cutoff 2048, eval+save every 20 steps. Checkpoint is chosen by generation quality
+# (scripts/v022_select_checkpoint.py), NOT by eval_loss; load_best_model_at_end only decides the top-level copy.
+# Serve with RUPSAA_PROMPT_VERSION=v0.2.
+
+### model
+model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target: q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj
+
+### attention
+flash_attn: sdpa
+
+### quantization (QLoRA)
+quantization_bit: 4
+quantization_type: nf4
+double_quantization: true
+upcast_layernorm: true
+
+### dataset
+dataset_dir: data/production/exports/rupsaa_v0.2.2
+dataset: rupsaa_v0.2.2_train
+val_size: 0.05
+template: qwen
+cutoff_len: 2048
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: adapters/rupsaa-v0.2.2
+overwrite_output_dir: false
+logging_steps: 10
+save_steps: 20
+plot_loss: true
+report_to: none
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_steps: 6
+weight_decay: 0.0
+optim: paged_adamw_8bit
+max_grad_norm: 0.3
+bf16: true  # gradient checkpointing: LLaMA-Factory default (on)
+seed: 42
+
+### eval (best-model retention on eval_loss)
+per_device_eval_batch_size: 2
+evaluation_strategy: steps
+eval_steps: 20
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false

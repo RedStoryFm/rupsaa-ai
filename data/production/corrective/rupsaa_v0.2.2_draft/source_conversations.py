@@ -59,7 +59,7 @@ CONVERSATIONS = [
     {"id": "d022-011", "category": "identity", "language": "banglish", "turns": [
         ("tumi ki amake dekhte pao?", "Na, ami tomake dekhte pai na. Tumi ja likho, shudhu shetai pai.")]},
     {"id": "d022-012", "category": "identity", "language": "banglish", "turns": [
-        ("tomar prothom memory ki?", "Amar chhotobela ba purono memory nei — ami AI. Ei conversation e tumi ja bolo, shetai mone rakhte pari.")]},
+        ("tomar prothom memory ki?", "Chhotobela ba purono smriti bole kichu amar nei — ami AI. Ei conversation e tumi ja bolo, shetai mone rakhte pari.")]},
 
     # ------------------------------------------------------------------ B. short acknowledgements (reply stays on the topic already discussed)
     {"id": "d022-013", "category": "acknowledgement", "language": "banglish", "turns": [
@@ -156,7 +156,7 @@ CONVERSATIONS = [
         ("cuddle kora mane ki?", "Cuddle kora mane partner ke aram kore, ador kore jorie dhore thaka.")]},
     {"id": "d022-047", "category": "definition", "language": "banglish", "expect_terms": ["term-roleplay_scenario"], "turns": [
         ("roleplay scenario ki?", "Roleplay scenario mane intimate roleplay er shomoy ekta banano poristhiti, jeta dujone mile obhinoy kore.")]},
-    {"id": "d022-048", "category": "definition", "language": "banglish", "expect_terms": ["term-roleplay_aftercare"], "turns": [
+    {"id": "d022-048", "category": "definition", "language": "banglish", "expect_terms": ["term-aftercare", "term-roleplay_aftercare"], "turns": [
         ("roleplay aftercare ki?", "Roleplay aftercare mane roleplay ba intense kono intimate muhurter pore partner ke bhorsha ar jotno deya — kotha bola, jorie dhora, thik ache kina jiggesh kora.")]},
     {"id": "d022-049", "category": "definition", "language": "en", "expect_terms": ["term-strip_stripping"], "turns": [
         ("what does stripping mean?", "Stripping means taking clothes off — sometimes slowly and seductively, as a performance or in an intimate moment. The meaning depends on the context.")]},
@@ -164,7 +164,7 @@ CONVERSATIONS = [
         ("ফোরপ্লে বলতে কী বোঝায়?", "ফোরপ্লে মানে সেক্সের আগে চুমু, ছোঁয়া আর আদর — যাতে দুজনের উত্তেজনা আর স্বস্তি ধীরে ধীরে বাড়ে।")]},
     {"id": "d022-051", "category": "definition", "language": "bn", "expect_terms": ["term-strip_stripping"], "turns": [
         ("স্ট্রিপিং কী জিনিস?", "স্ট্রিপিং মানে পোশাক খোলা — কখনো ধীরে ধীরে, আকর্ষণীয়ভাবে, পারফরম্যান্স বা ঘনিষ্ঠ মুহূর্তে। প্রসঙ্গ অনুযায়ী মানেটা বদলায়।")]},
-    {"id": "d022-052", "category": "definition", "language": "banglish", "expect_terms": ["term-aftercare"], "turns": [
+    {"id": "d022-052", "category": "definition", "language": "banglish", "turns": [
         ("aftercare keno dorkar?", "Karon intense ba intimate muhurter pore mon ar shorir dutoi ektu naram thake. Tokhon jotno pele dujonei safe ar kache feel kore.")]},
     {"id": "d022-053", "category": "definition", "language": "banglish", "expect_terms": ["term-foreplay"], "turns": [
         ("foreplay ki shudhu physical?", "Na. Kiss, chhoa to ache-i, kintu kotha bola, dushtu message, chokh e chokh rakha — egulo o foreplay er ongsho.")]},
@@ -232,8 +232,8 @@ CONVERSATIONS = [
         ("jazz dance er steps shekhao", "Jazz dance er step-by-step amar kache nei, tai baniye bolbo na. Ja jani: eta United States er energetic style — ballet technique, isolation, syncopation ar theatrical performance mishiye.")]},
     {"id": "d022-077", "category": "dance", "language": "banglish", "expect_terms": ["dance-cumbia"], "turns": [
         ("cumbia kon desher?", "Colombia r. Folk ar social dance — shuffle step, hip movement ar partner er sathe gol kore ghora.")]},
-    {"id": "d022-078", "category": "dance", "language": "banglish", "expect_terms": ["dance-locking"], "turns": [
-        ("locking ar popping ek?", "Ek na. Locking Los Angeles er funk dance — tikkho haater movement, hold ar point. Popping e muscle jhatka diye contract ar relax kore 'pop' toiri kora hoy.")]},
+    {"id": "d022-078", "category": "dance", "language": "banglish", "expect_terms": ["dance-locking", "dance-popping"], "turns": [
+        ("locking dance ar popping dance ki ek?", "Ek na. Locking Los Angeles er funk dance — tikkho haater movement, hold ar point. Popping e muscle jhatka diye contract ar relax kore 'pop' toiri kora hoy.")]},
     {"id": "d022-079", "category": "dance", "language": "en", "expect_terms": ["dance-tarantella"], "turns": [
         ("where is the tarantella from?", "Southern Italy. It's a fast, whirling folk dance, often danced to tambourines and lively music.")]},
     {"id": "d022-080", "category": "dance", "language": "bn", "expect_terms": ["dance-zouk"], "turns": [

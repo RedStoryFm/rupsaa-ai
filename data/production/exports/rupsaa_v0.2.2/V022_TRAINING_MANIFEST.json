@@ -1,0 +1,102 @@
+{
+ "name": "rupsaa_v0.2.2",
+ "status": "FROZEN",
+ "created_at": "2026-09-27T16:30:02.491677+00:00",
+ "git_head_at_freeze": "14181c83042a50c4c8d6d40e1bff200f83efa3af",
+ "dataset_sha256": "df6277b205b83f245d4d2fe8463a6640efbff165b17f3d1560c03fc60d57fd35",
+ "dataset_sha256_definition": "sha256 of the lines '<sha256>  <file>\\n' for train.jsonl, validation.jsonl, test.jsonl, corrective_holdout.jsonl, dance_holdout.jsonl (in that order)",
+ "files_sha256": {
+  "train.jsonl": "ce01b5cd0de1a826533cb848fcca3c2c540023d3fc9c1a57a3f3fa278ecfbae5",
+  "validation.jsonl": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+  "test.jsonl": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9",
+  "corrective_holdout.jsonl": "dc683a246c72162076b2254e9f17f64422f57d49ab5e0a9e2db7b812b6ddf9e0",
+  "dance_holdout.jsonl": "d900acb129249d48073c101cc9f4a7c23b6e61eeafcb752577e771a84a294ef6",
+  "train_row_map.jsonl": "3b1f1b824fb32fb6b9d3cf26eed5ef58e260b5c99115b9e5e1f9c5c5d02cf1f8",
+  "dropped.jsonl": "80583f2a7926713aa0f190a9f070e0190a1d32642bf129113db955c47d9a0926"
+ },
+ "prompt_version": "v0.2",
+ "system_prompt_sha256": "ef1d8fd4b16a04f9b6754d7cee623c9b4e8779c6dd75cfc0d2c1f88625f526a4",
+ "stats": {
+  "conversations": 1556,
+  "assistant_replies": 2215,
+  "by_source": {
+   "rupsaa_v0.2_train": 1294,
+   "rupsaa_v0.2.1_corrective": 138,
+   "rupsaa_v0.2.1_dance": 24,
+   "rupsaa_v0.2.2_corrective": 100
+  },
+  "by_language_label": {
+   "bn": 403,
+   "banglish": 481,
+   "en": 463,
+   "mixed": 209
+  },
+  "reply_script": {
+   "bn": 582,
+   "latin": 1530,
+   "mixed": 103
+  }
+ },
+ "dropped": {
+  "invented human body/life": 46,
+  "audit BAD reply": 41,
+  "catchphrase": 2
+ },
+ "repairs": {
+  "danda -> period in Latin text": 180,
+  "template opener removed": 79
+ },
+ "v02_prompts_updated_to_current_runtime": 16,
+ "weighting": "none — every conversation appears exactly once",
+ "splits": {
+  "train": "train.jsonl (LLaMA-Factory val_size 0.05, seed 42 -> internal eval slice)",
+  "external_validation": "validation.jsonl (77, unchanged)",
+  "external_test": "test.jsonl (76, unchanged)",
+  "corrective_holdout": "21, never trained",
+  "dance_holdout": "12, never trained"
+ },
+ "gate": {
+  "no_holdout_leakage": [
+   true,
+   "held-out ids in train: []"
+  ],
+  "no_exact_duplicates": [
+   true,
+   "1556 conversations, 1556 unique"
+  ],
+  "no_near_duplicate_flooding": [
+   true,
+   "replies used >4 times: 0 []"
+  ],
+  "no_catchphrase_domination": [
+   true,
+   "catchphrase replies 0; top opener \"that's a\" 3.7%"
+  ],
+  "no_mixed_script_corruption": [
+   true,
+   "intra-word mixed-script replies 0"
+  ],
+  "no_human_body_claims": [
+   true,
+   "embodiment-pattern replies 0"
+  ],
+  "identity_not_a_catchphrase": [
+   true,
+   "'I'm an AI' replies 9 (0.41%)"
+  ],
+  "train_as_serve_prompts": [
+   true,
+   "every record starts with the V0.2 runtime prompt; turns alternate"
+  ],
+  "rag_examples_have_context": [
+   true,
+   "single-turn definition records missing their block: []"
+  ]
+ },
+ "training": {
+  "config": "configs/training/llamafactory_rupsaa_v0.2.2.yaml",
+  "base": "Qwen/Qwen2.5-7B-Instruct",
+  "fresh_lora": true,
+  "output_dir": "adapters/rupsaa-v0.2.2"
+ }
+}
