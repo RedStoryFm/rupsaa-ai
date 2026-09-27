@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Rupsaa</title>
+<meta name="description" content="Talk to Rupsaa — in English, বাংলা, or Banglish.">
+<meta name="theme-color" content="#d94f8c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
         <div class="avatar">R</div>
         <div class="brand-text">
           <div class="brand-name">Rupsaa</div>
-          <div class="brand-status" id="status-line">connecting…</div>
+          <div class="brand-status" id="status-line" role="status">connecting…</div>
         </div>
       </div>
       <div class="topbar-actions">
@@ -21,17 +24,32 @@
           <input type="checkbox" id="rag-toggle">
           <span>Use knowledge base</span>
         </label>
-        <button id="reset-btn" title="Start a new chat">New chat</button>
+        <button id="reset-btn" title="Start a new chat" aria-label="Start a new chat">New chat</button>
       </div>
     </header>
 
-    <main id="messages" class="messages" aria-live="polite"></main>
+    <main id="messages" class="messages" aria-live="polite">
+      <div id="welcome" class="welcome">
+        <div class="welcome-avatar">R</div>
+        <h1 class="welcome-title">Rupsaa</h1>
+        <p class="welcome-tagline">Talk to me ✨</p>
+        <div class="suggestions" id="suggestions">
+          <button type="button" class="suggestion-chip">Banglish e kotha bolo</button>
+          <button type="button" class="suggestion-chip">Strip mane ki?</button>
+          <button type="button" class="suggestion-chip">Belly dance ki?</button>
+          <button type="button" class="suggestion-chip">Ajke amar mood ta bhalo na</button>
+        </div>
+      </div>
+    </main>
 
-    <div id="error-banner" class="error-banner" hidden></div>
+    <div id="error-banner" class="error-banner" role="alert" hidden></div>
 
     <footer class="composer">
-      <textarea id="input" placeholder="Message Rupsaa… (বাংলা, Banglish, or English)" rows="1" maxlength="8000"></textarea>
-      <button id="send-btn" aria-label="Send">➤</button>
+      <div class="composer-input-wrap">
+        <textarea id="input" placeholder="Message Rupsaa… (বাংলা, Banglish, or English)" rows="1" maxlength="8000" aria-label="Message Rupsaa"></textarea>
+        <div class="char-counter" id="char-counter" hidden></div>
+      </div>
+      <button id="send-btn" aria-label="Send message">➤</button>
     </footer>
   </div>
 
