@@ -37,7 +37,11 @@ EVERYDAY_WORD_NAMES = {"polka", "hula", "salsa", "tango", "samba", "rumba", "mam
                        "breaking", "krump", "house dance", "zouk", "garba"}
 # Words that show a message is about dancing (normalized, whole words).
 DANCE_CUES = ("dance", "dances", "dancing", "dancer", "dancers", "dance form", "nach", "nache", "nacher", "nritto",
-              "nritya", "moves", "choreography", "নাচ", "নাচের", "নৃত্য", "ডান্স")
+              "nritya", "moves", "choreography", "নাচ", "নাচের", "নৃত্য", "ডান্স",
+)
+# Origin words count as dance context only when the question is not about a longer phrase that merely
+# contains the name ("Ballet kothay originate korechilo?" yes; "breaking news er origin ki?" no).
+ORIGIN_CUES = ("originate", "originated", "originates", "origin", "originally", "kothakar", "কোথাকার")
 _ID_RE = re.compile(r"^dance-[a-z0-9_]{1,60}$")
 
 # Optional, future fields: kept empty unless the owner supplies them — never generated.
@@ -254,7 +258,17 @@ class DanceStore:
         # Dancing is the topic if the message says so, or if it also names an unambiguous dance
         # ("difference between rumba and cha-cha").
         has_cue = self.mentions_dancing(message) or any(not guarded(m) for m in matches)
-        return [m for m in matches if has_cue or not guarded(m)][:limit]
+        msg = f" {normalize(message)} "
+        origin_q = any(f" {c} " in msg for c in ORIGIN_CUES)
+        cand = normalize(candidate) if candidate else ""
+
+        def keep(m) -> bool:
+            if not guarded(m) or has_cue:
+                return True
+            # "ballet er origin" -> "ballet": the question is about the dance itself
+            core = re.sub(r"\b(er|ta|ti|origin|jonmo|utpotti|kothakar|kothay)\b", " ", cand).split()
+            return origin_q and (not cand or " ".join(core) == m.matched)
+        return [m for m in matches if keep(m)][:limit]
 
     @staticmethod
     def mentions_dancing(message: str) -> bool:

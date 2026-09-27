@@ -183,3 +183,22 @@ def test_owner_dance_api(tmp_path, monkeypatch):
     assert up["counts"]["created"] == 3
     assert c.delete("/owner/dance/dance-kathak").status_code == 400  # needs confirm
     assert c.delete("/owner/dance/dance-kathak?confirm=true").status_code == 200
+
+
+def test_origin_questions_about_everyday_word_dances(tmp_path):
+    """Found in the V0.2.1 showcase probe: 'Ballet kothay originate korechilo?' attached nothing."""
+    from rupsaa.rag.terminology import TerminologyStore
+
+    store = DanceStore(tmp_path / "d")
+    store.create({"name": "Ballet", "origin": "fixture", "description": "fixture"})
+    store.create({"name": "Breaking / Breakdance", "description": "fixture"})
+    terms = TerminologyStore(tmp_path / "t")
+
+    def got(msg):
+        k = build_turn_knowledge(msg, use_rag=False, rag_query=None, terminology=terms, dance=store)
+        return [t for t in k.terms_used if t.startswith("dance-")]
+    assert got("Ballet kothay originate korechilo?") == ["dance-ballet"]
+    assert got("ballet er origin ki?") == ["dance-ballet"]
+    assert got("where did ballet originate?") == ["dance-ballet"]
+    assert got("breaking news er origin ki?") == []
+    assert got("everyone has a breaking point") == []

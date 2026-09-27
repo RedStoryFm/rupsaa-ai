@@ -1,0 +1,1193 @@
+{
+ "loss": {
+  "A_full/validation": {
+   "overall": {
+    "records": 77,
+    "tokens": 5800,
+    "loss_rupsaa_v021": 1.5634,
+    "ppl_rupsaa_v021": 4.775,
+    "loss_rupsaa_v02": 1.5614,
+    "ppl_rupsaa_v02": 4.765,
+    "loss_rupsaa_v01": 1.4614,
+    "ppl_rupsaa_v01": 4.312,
+    "loss_base": 3.278,
+    "ppl_base": 26.522,
+    "v021_better_than_v02": 35
+   },
+   "by_language": {
+    "banglish": {
+     "records": 23,
+     "tokens": 1187,
+     "loss_rupsaa_v021": 2.7346,
+     "ppl_rupsaa_v021": 15.403,
+     "loss_rupsaa_v02": 2.7733,
+     "ppl_rupsaa_v02": 16.011,
+     "loss_rupsaa_v01": 2.8277,
+     "ppl_rupsaa_v01": 16.907,
+     "loss_base": 5.7666,
+     "ppl_base": 319.453,
+     "v021_better_than_v02": 12
+    },
+    "bn": {
+     "records": 20,
+     "tokens": 1979,
+     "loss_rupsaa_v021": 0.9413,
+     "ppl_rupsaa_v021": 2.563,
+     "loss_rupsaa_v02": 0.9328,
+     "ppl_rupsaa_v02": 2.541,
+     "loss_rupsaa_v01": 0.8628,
+     "ppl_rupsaa_v01": 2.37,
+     "loss_base": 1.8739,
+     "ppl_base": 6.514,
+     "v021_better_than_v02": 8
+    },
+    "en": {
+     "records": 23,
+     "tokens": 1228,
+     "loss_rupsaa_v021": 1.9093,
+     "ppl_rupsaa_v021": 6.748,
+     "loss_rupsaa_v02": 1.9042,
+     "ppl_rupsaa_v02": 6.714,
+     "loss_rupsaa_v01": 1.566,
+     "ppl_rupsaa_v01": 4.787,
+     "loss_base": 4.4044,
+     "ppl_base": 81.81,
+     "v021_better_than_v02": 12
+    },
+    "mixed": {
+     "records": 11,
+     "tokens": 1406,
+     "loss_rupsaa_v021": 1.1482,
+     "ppl_rupsaa_v021": 3.152,
+     "loss_rupsaa_v02": 1.1238,
+     "ppl_rupsaa_v02": 3.076,
+     "loss_rupsaa_v01": 1.0589,
+     "ppl_rupsaa_v01": 2.883,
+     "loss_base": 2.1695,
+     "ppl_base": 8.754,
+     "v021_better_than_v02": 3
+    }
+   }
+  },
+  "A_full/test": {
+   "overall": {
+    "records": 76,
+    "tokens": 5849,
+    "loss_rupsaa_v021": 1.539,
+    "ppl_rupsaa_v021": 4.66,
+    "loss_rupsaa_v02": 1.5201,
+    "ppl_rupsaa_v02": 4.573,
+    "loss_rupsaa_v01": 1.4131,
+    "ppl_rupsaa_v01": 4.108,
+    "loss_base": 3.1615,
+    "ppl_base": 23.605,
+    "v021_better_than_v02": 28
+   },
+   "by_language": {
+    "banglish": {
+     "records": 22,
+     "tokens": 1199,
+     "loss_rupsaa_v021": 2.778,
+     "ppl_rupsaa_v021": 16.087,
+     "loss_rupsaa_v02": 2.7863,
+     "ppl_rupsaa_v02": 16.221,
+     "loss_rupsaa_v01": 2.572,
+     "ppl_rupsaa_v01": 13.091,
+     "loss_base": 5.7738,
+     "ppl_base": 321.754,
+     "v021_better_than_v02": 9
+    },
+    "bn": {
+     "records": 20,
+     "tokens": 2433,
+     "loss_rupsaa_v021": 0.7785,
+     "ppl_rupsaa_v021": 2.178,
+     "loss_rupsaa_v02": 0.7592,
+     "ppl_rupsaa_v02": 2.137,
+     "loss_rupsaa_v01": 0.6423,
+     "ppl_rupsaa_v01": 1.901,
+     "loss_base": 1.5177,
+     "ppl_base": 4.562,
+     "v021_better_than_v02": 8
+    },
+    "en": {
+     "records": 23,
+     "tokens": 1118,
+     "loss_rupsaa_v021": 1.8778,
+     "ppl_rupsaa_v021": 6.539,
+     "loss_rupsaa_v02": 1.8521,
+     "ppl_rupsaa_v02": 6.373,
+     "loss_rupsaa_v01": 1.7037,
+     "ppl_rupsaa_v01": 5.494,
+     "loss_base": 4.1658,
+     "ppl_base": 64.445,
+     "v021_better_than_v02": 8
+    },
+    "mixed": {
+     "records": 11,
+     "tokens": 1099,
+     "loss_rupsaa_v021": 1.5262,
+     "ppl_rupsaa_v021": 4.601,
+     "loss_rupsaa_v02": 1.4853,
+     "ppl_rupsaa_v02": 4.416,
+     "loss_rupsaa_v01": 1.5593,
+     "ppl_rupsaa_v01": 4.756,
+     "loss_base": 2.9287,
+     "ppl_base": 18.703,
+     "v021_better_than_v02": 3
+    }
+   }
+  },
+  "B_clean_v01_vs_v02/validation": {
+   "overall": {
+    "records": 41,
+    "tokens": 3152,
+    "loss_rupsaa_v021": 1.5293,
+    "ppl_rupsaa_v021": 4.615,
+    "loss_rupsaa_v02": 1.5159,
+    "ppl_rupsaa_v02": 4.553,
+    "loss_rupsaa_v01": 1.755,
+    "ppl_rupsaa_v01": 5.783,
+    "loss_base": 3.0021,
+    "ppl_base": 20.128,
+    "v021_better_than_v02": 15
+   },
+   "by_language": {
+    "banglish": {
+     "records": 16,
+     "tokens": 769,
+     "loss_rupsaa_v021": 2.7918,
+     "ppl_rupsaa_v021": 16.31,
+     "loss_rupsaa_v02": 2.8041,
+     "ppl_rupsaa_v02": 16.513,
+     "loss_rupsaa_v01": 3.2854,
+     "ppl_rupsaa_v01": 26.72,
+     "loss_base": 5.6078,
+     "ppl_base": 272.542,
+     "v021_better_than_v02": 8
+    },
+    "bn": {
+     "records": 11,
+     "tokens": 1140,
+     "loss_rupsaa_v021": 0.8951,
+     "ppl_rupsaa_v021": 2.448,
+     "loss_rupsaa_v02": 0.8628,
+     "ppl_rupsaa_v02": 2.37,
+     "loss_rupsaa_v01": 0.9579,
+     "ppl_rupsaa_v01": 2.606,
+     "loss_base": 1.5226,
+     "ppl_base": 4.584,
+     "v021_better_than_v02": 1
+    },
+    "en": {
+     "records": 9,
+     "tokens": 458,
+     "loss_rupsaa_v021": 1.7339,
+     "ppl_rupsaa_v021": 5.663,
+     "loss_rupsaa_v02": 1.7128,
+     "ppl_rupsaa_v02": 5.544,
+     "loss_rupsaa_v01": 2.0361,
+     "ppl_rupsaa_v01": 7.661,
+     "loss_base": 4.3397,
+     "ppl_base": 76.684,
+     "v021_better_than_v02": 4
+    },
+    "mixed": {
+     "records": 5,
+     "tokens": 785,
+     "loss_rupsaa_v021": 1.0943,
+     "ppl_rupsaa_v021": 2.987,
+     "loss_rupsaa_v02": 1.0875,
+     "ppl_rupsaa_v02": 2.967,
+     "loss_rupsaa_v01": 1.2493,
+     "ppl_rupsaa_v01": 3.488,
+     "loss_base": 1.8179,
+     "ppl_base": 6.159,
+     "v021_better_than_v02": 2
+    }
+   }
+  },
+  "B_clean_v01_vs_v02/test": {
+   "overall": {
+    "records": 38,
+    "tokens": 2905,
+    "loss_rupsaa_v021": 1.4742,
+    "ppl_rupsaa_v021": 4.367,
+    "loss_rupsaa_v02": 1.4609,
+    "ppl_rupsaa_v02": 4.31,
+    "loss_rupsaa_v01": 1.6721,
+    "ppl_rupsaa_v01": 5.323,
+    "loss_base": 2.9828,
+    "ppl_base": 19.744,
+    "v021_better_than_v02": 17
+   },
+   "by_language": {
+    "banglish": {
+     "records": 9,
+     "tokens": 370,
+     "loss_rupsaa_v021": 2.9098,
+     "ppl_rupsaa_v021": 18.353,
+     "loss_rupsaa_v02": 3.0035,
+     "ppl_rupsaa_v02": 20.156,
+     "loss_rupsaa_v01": 3.5379,
+     "ppl_rupsaa_v01": 34.395,
+     "loss_base": 5.7152,
+     "ppl_base": 303.452,
+     "v021_better_than_v02": 6
+    },
+    "bn": {
+     "records": 9,
+     "tokens": 1039,
+     "loss_rupsaa_v021": 0.7522,
+     "ppl_rupsaa_v021": 2.122,
+     "loss_rupsaa_v02": 0.7441,
+     "ppl_rupsaa_v02": 2.104,
+     "loss_rupsaa_v01": 0.8345,
+     "ppl_rupsaa_v01": 2.304,
+     "loss_base": 1.3274,
+     "ppl_base": 3.771,
+     "v021_better_than_v02": 5
+    },
+    "en": {
+     "records": 12,
+     "tokens": 630,
+     "loss_rupsaa_v021": 1.7212,
+     "ppl_rupsaa_v021": 5.592,
+     "loss_rupsaa_v02": 1.7029,
+     "ppl_rupsaa_v02": 5.49,
+     "loss_rupsaa_v01": 1.9699,
+     "ppl_rupsaa_v01": 7.17,
+     "loss_base": 4.0932,
+     "ppl_base": 59.929,
+     "v021_better_than_v02": 5
+    },
+    "mixed": {
+     "records": 8,
+     "tokens": 866,
+     "loss_rupsaa_v021": 1.5473,
+     "ppl_rupsaa_v021": 4.699,
+     "loss_rupsaa_v02": 1.4859,
+     "ppl_rupsaa_v02": 4.419,
+     "loss_rupsaa_v01": 1.6631,
+     "ppl_rupsaa_v01": 5.275,
+     "loss_base": 2.9939,
+     "ppl_base": 19.963,
+     "v021_better_than_v02": 1
+    }
+   }
+  },
+  "corrective_holdout": {
+   "overall": {
+    "records": 21,
+    "tokens": 1660,
+    "loss_rupsaa_v021": 1.7442,
+    "ppl_rupsaa_v021": 5.721,
+    "loss_rupsaa_v02": 2.0506,
+    "ppl_rupsaa_v02": 7.773,
+    "loss_rupsaa_v01": 2.3151,
+    "ppl_rupsaa_v01": 10.126,
+    "loss_base": 3.095,
+    "ppl_base": 22.087,
+    "v021_better_than_v02": 19
+   },
+   "by_language": {
+    "banglish": {
+     "records": 11,
+     "tokens": 749,
+     "loss_rupsaa_v021": 2.6197,
+     "ppl_rupsaa_v021": 13.731,
+     "loss_rupsaa_v02": 3.1087,
+     "ppl_rupsaa_v02": 22.392,
+     "loss_rupsaa_v01": 3.4689,
+     "ppl_rupsaa_v01": 32.101,
+     "loss_base": 4.4623,
+     "ppl_base": 86.683,
+     "v021_better_than_v02": 11
+    },
+    "bn": {
+     "records": 7,
+     "tokens": 774,
+     "loss_rupsaa_v021": 0.8483,
+     "ppl_rupsaa_v021": 2.336,
+     "loss_rupsaa_v02": 1.0284,
+     "ppl_rupsaa_v02": 2.797,
+     "loss_rupsaa_v01": 1.1924,
+     "ppl_rupsaa_v01": 3.295,
+     "loss_base": 1.4783,
+     "ppl_base": 4.386,
+     "v021_better_than_v02": 7
+    },
+    "en": {
+     "records": 3,
+     "tokens": 137,
+     "loss_rupsaa_v021": 2.019,
+     "ppl_rupsaa_v021": 7.531,
+     "loss_rupsaa_v02": 2.0406,
+     "ppl_rupsaa_v02": 7.695,
+     "loss_rupsaa_v01": 2.3504,
+     "ppl_rupsaa_v01": 10.49,
+     "loss_base": 4.7536,
+     "ppl_base": 115.998,
+     "v021_better_than_v02": 1
+    }
+   }
+  },
+  "dance_holdout": {
+   "overall": {
+    "records": 12,
+    "tokens": 866,
+    "loss_rupsaa_v021": 1.0518,
+    "ppl_rupsaa_v021": 2.863,
+    "loss_rupsaa_v02": 1.5016,
+    "ppl_rupsaa_v02": 4.489,
+    "loss_rupsaa_v01": 1.7463,
+    "ppl_rupsaa_v01": 5.733,
+    "loss_base": 2.2967,
+    "ppl_base": 9.941,
+    "v021_better_than_v02": 12
+   },
+   "by_language": {
+    "banglish": {
+     "records": 5,
+     "tokens": 253,
+     "loss_rupsaa_v021": 1.885,
+     "ppl_rupsaa_v021": 6.586,
+     "loss_rupsaa_v02": 2.5554,
+     "ppl_rupsaa_v02": 12.876,
+     "loss_rupsaa_v01": 3.0191,
+     "ppl_rupsaa_v01": 20.472,
+     "loss_base": 4.177,
+     "ppl_base": 65.172,
+     "v021_better_than_v02": 5
+    },
+    "bn": {
+     "records": 3,
+     "tokens": 456,
+     "loss_rupsaa_v021": 0.7398,
+     "ppl_rupsaa_v021": 2.096,
+     "loss_rupsaa_v02": 1.0568,
+     "ppl_rupsaa_v02": 2.877,
+     "loss_rupsaa_v01": 1.1525,
+     "ppl_rupsaa_v01": 3.166,
+     "loss_base": 1.3269,
+     "ppl_base": 3.769,
+     "v021_better_than_v02": 3
+    },
+    "en": {
+     "records": 4,
+     "tokens": 157,
+     "loss_rupsaa_v021": 0.6151,
+     "ppl_rupsaa_v021": 1.85,
+     "loss_rupsaa_v02": 1.0954,
+     "ppl_rupsaa_v02": 2.99,
+     "loss_rupsaa_v01": 1.4197,
+     "ppl_rupsaa_v01": 4.136,
+     "loss_base": 2.0831,
+     "ppl_base": 8.029,
+     "v021_better_than_v02": 4
+    }
+   }
+  }
+ },
+ "terminology_generalisation": {
+  "pass_rate": {
+   "rupsaa_v021": 0.75,
+   "rupsaa_v02": 0.625,
+   "base": 0.25
+  },
+  "by_language": {
+   "rupsaa_v021": {
+    "banglish": "7/9",
+    "bn": "4/5",
+    "en": "4/5",
+    "mixed": "3/5"
+   },
+   "rupsaa_v02": {
+    "banglish": "6/9",
+    "bn": "2/5",
+    "en": "4/5",
+    "mixed": "3/5"
+   },
+   "base": {
+    "banglish": "0/9",
+    "bn": "5/5",
+    "en": "0/5",
+    "mixed": "1/5"
+   }
+  }
+ },
+ "sessions": {
+  "owner_live": {
+   "rupsaa_v021": {
+    "turns": 32,
+    "script_ok": 30,
+    "catchphrase_replies": 0,
+    "ends_with_question": 6,
+    "record_turns": 14,
+    "records_attached": 14,
+    "dance_turns": 10,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   },
+   "rupsaa_v02": {
+    "turns": 16,
+    "script_ok": 14,
+    "catchphrase_replies": 0,
+    "ends_with_question": 3,
+    "record_turns": 7,
+    "records_attached": 7,
+    "dance_turns": 5,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   }
+  },
+  "live_checks": {
+   "rupsaa_v021": {
+    "turns": 16,
+    "script_ok": 16,
+    "catchphrase_replies": 0,
+    "ends_with_question": 5,
+    "record_turns": 4,
+    "records_attached": 4
+   },
+   "rupsaa_v02": {
+    "turns": 16,
+    "script_ok": 16,
+    "catchphrase_replies": 0,
+    "ends_with_question": 6,
+    "record_turns": 4,
+    "records_attached": 4
+   }
+  },
+  "supplementary": {
+   "rupsaa_v021": {
+    "turns": 41,
+    "script_ok": 38,
+    "catchphrase_replies": 0,
+    "ends_with_question": 10,
+    "record_turns": 4,
+    "records_attached": 4
+   },
+   "rupsaa_v02": {
+    "turns": 41,
+    "script_ok": 39,
+    "catchphrase_replies": 0,
+    "ends_with_question": 10,
+    "record_turns": 4,
+    "records_attached": 4
+   }
+  },
+  "corrective_holdout": {
+   "rupsaa_v021": {
+    "turns": 38,
+    "script_ok": 37,
+    "catchphrase_replies": 0,
+    "ends_with_question": 10
+   },
+   "rupsaa_v02": {
+    "turns": 38,
+    "script_ok": 36,
+    "catchphrase_replies": 1,
+    "ends_with_question": 15
+   }
+  },
+  "dance_holdout": {
+   "rupsaa_v021": {
+    "turns": 15,
+    "script_ok": 14,
+    "catchphrase_replies": 0,
+    "ends_with_question": 0,
+    "record_turns": 15,
+    "records_attached": 15,
+    "dance_turns": 15,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   },
+   "rupsaa_v02": {
+    "turns": 15,
+    "script_ok": 15,
+    "catchphrase_replies": 0,
+    "ends_with_question": 2,
+    "record_turns": 15,
+    "records_attached": 15,
+    "dance_turns": 15,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   }
+  },
+  "showcase_dance": {
+   "rupsaa_v021": {
+    "turns": 10,
+    "script_ok": 10,
+    "catchphrase_replies": 0,
+    "ends_with_question": 1,
+    "record_turns": 10,
+    "records_attached": 9,
+    "dance_turns": 9,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   },
+   "rupsaa_v02": {
+    "turns": 10,
+    "script_ok": 10,
+    "catchphrase_replies": 0,
+    "ends_with_question": 3,
+    "record_turns": 10,
+    "records_attached": 9,
+    "dance_turns": 9,
+    "dance_foreign_place_flags": 0,
+    "dance_step_flags": 0
+   }
+  }
+ },
+ "style": {
+  "rupsaa_v021": {
+   "replies": 184,
+   "catchphrases_replies_containing": {
+    "honestly": 0,
+    "actually": 0,
+    "fair call": 0,
+    "fair enough": 0,
+    "heyy": 0,
+    "bindaas": 0,
+    "baby": 0,
+    "babe": 0,
+    "basically": 0
+   },
+   "catchphrase_reply_rate": 0.0,
+   "top_openings": [
+    [
+     "belly dance",
+     5
+    ],
+    [
+     "strip mane",
+     4
+    ],
+    [
+     "foreplay mane",
+     4
+    ],
+    [
+     "strip er",
+     3
+    ],
+    [
+     "ফোরপ্লে মানে",
+     2
+    ],
+    [
+     "blue bolechile",
+     2
+    ],
+    [
+     "foreplay er",
+     2
+    ],
+    [
+     "এটা মানে",
+     2
+    ]
+   ],
+   "most_common_opening_share": 0.027,
+   "repeated_sentence_frames": [],
+   "emoji_replies": 0,
+   "english_filler_replies": 0,
+   "mixed_script_words": 5,
+   "mixed_script_examples": [
+    "সexo",
+    "অf",
+    "সexo",
+    "স্কulptural",
+    "শoulder"
+   ],
+   "foreign_script_replies": 0,
+   "chars_mean": 132.3,
+   "chars_median": 116.0,
+   "chars_max": 680,
+   "over_600_chars": 1,
+   "questions_per_reply": 0.22,
+   "replies_with_2plus_questions": 2
+  },
+  "rupsaa_v02": {
+   "replies": 168,
+   "catchphrases_replies_containing": {
+    "honestly": 0,
+    "actually": 1,
+    "fair call": 0,
+    "fair enough": 1,
+    "heyy": 0,
+    "bindaas": 0,
+    "baby": 0,
+    "babe": 0,
+    "basically": 0
+   },
+   "catchphrase_reply_rate": 0.006,
+   "top_openings": [
+    [
+     "eta mane",
+     5
+    ],
+    [
+     "foreplay mane",
+     4
+    ],
+    [
+     "kathak e",
+     2
+    ],
+    [
+     "foreplay means",
+     2
+    ],
+    [
+     "edging means",
+     2
+    ],
+    [
+     "amar favorite",
+     2
+    ],
+    [
+     "i don't",
+     2
+    ],
+    [
+     "bhalo achi",
+     1
+    ]
+   ],
+   "most_common_opening_share": 0.03,
+   "repeated_sentence_frames": [],
+   "emoji_replies": 0,
+   "english_filler_replies": 0,
+   "mixed_script_words": 0,
+   "mixed_script_examples": [],
+   "foreign_script_replies": 0,
+   "chars_mean": 134.7,
+   "chars_median": 117.0,
+   "chars_max": 1106,
+   "over_600_chars": 1,
+   "questions_per_reply": 0.26,
+   "replies_with_2plus_questions": 3
+  }
+ },
+ "style_previous_eval": {
+  "rupsaa_v02": {
+   "catchphrase_reply_rate": 0.0,
+   "most_common_opening_share": 0.034,
+   "mixed_script_words": 0,
+   "questions_per_reply": 0.25,
+   "chars_mean": 153.7
+  },
+  "rupsaa_v01": {
+   "catchphrase_reply_rate": 0.955,
+   "most_common_opening_share": 0.157,
+   "mixed_script_words": 13,
+   "questions_per_reply": 0.3,
+   "chars_mean": 176.0
+  },
+  "base": {
+   "catchphrase_reply_rate": 0.0,
+   "most_common_opening_share": 0.056,
+   "mixed_script_words": 16,
+   "questions_per_reply": 0.26,
+   "chars_mean": 219.9
+  }
+ },
+ "isolation": {
+  "session_a": "941aebbe-70ac-4718-a7fb-5eed5a33135b",
+  "foreign_id_request_got": "b8302151-2b8a-4105-982f-f38fa81d054a",
+  "foreign_reply": "Ekhon bolechi na, ekbar bolecho ektu lagche kono memory te.",
+  "same_session_reply": "Blue bolecho - ar tomar favorite.",
+  "isolated": true
+ },
+ "owner_live_attribution": [
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "hi, tumi kemon acho?",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "ajke amar mood ta bhalo na",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "achcha",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "Strip mane ki?",
+   "route": "terminology",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "strip ta ektu simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "Foreplay ki?",
+   "route": "terminology",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "এটা বাংলায় বুঝিয়ে বলো",
+   "route": "followup",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "amar favourite color blue",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "ami ki color bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "ami age ki bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "Belly dance ki?",
+   "route": "terminology",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "belly dance ta simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "Kathak kothakar dance?",
+   "route": "terminology",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "এবার বাংলায় বলো",
+   "route": "followup",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 777,
+   "user": "Breaking ar breakdance same?",
+   "route": "general",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "hi, tumi kemon acho?",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "ajke amar mood ta bhalo na",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "achcha",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "Strip mane ki?",
+   "route": "terminology",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "strip ta ektu simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "Foreplay ki?",
+   "route": "terminology",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "এটা বাংলায় বুঝিয়ে বলো",
+   "route": "followup",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "amar favourite color blue",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "ami ki color bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "ami age ki bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "Belly dance ki?",
+   "route": "terminology",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": false
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "belly dance ta simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "Kathak kothakar dance?",
+   "route": "terminology",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": false
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "এবার বাংলায় বলো",
+   "route": "followup",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v021",
+   "seed": 888,
+   "user": "Breaking ar breakdance same?",
+   "route": "general",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "hi, tumi kemon acho?",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "ajke amar mood ta bhalo na",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "achcha",
+   "route": "casual",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "Strip mane ki?",
+   "route": "terminology",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "strip ta ektu simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "term-strip_stripping"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "Foreplay ki?",
+   "route": "terminology",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "এটা বাংলায় বুঝিয়ে বলো",
+   "route": "followup",
+   "records": [
+    "term-foreplay"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": false
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "amar favourite color blue",
+   "route": "general",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "ami ki color bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "ami age ki bolechilam?",
+   "route": "memory",
+   "records": [],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "Belly dance ki?",
+   "route": "terminology",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "belly dance ta simple kore bojhao",
+   "route": "followup",
+   "records": [
+    "dance-belly_dance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "Kathak kothakar dance?",
+   "route": "terminology",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "এবার বাংলায় বলো",
+   "route": "followup",
+   "records": [
+    "dance-kathak"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": false
+  },
+  {
+   "variant": "rupsaa_v02",
+   "seed": 777,
+   "user": "Breaking ar breakdance same?",
+   "route": "general",
+   "records": [
+    "dance-breaking_breakdance"
+   ],
+   "runtime_ok": true,
+   "model_checks_ok": true
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+  "pass": true,
+  "hard_pass": true,
+  "quality_pass": true,
+  "checks": [
+    {
+      "check": "health",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "model_loaded": true,
+        "terminology_entries": 40,
+        "dance_entries": 60,
+        "environment": "production"
+      }
+    },
+    {
+      "check": "ready (model loaded)",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "model_loading": false,
+        "model_error": false
+      }
+    },
+    {
+      "check": "model/info: adapter loaded + quantized",
+      "pass": true,
+      "detail": {
+        "base_model_id": "Qwen/Qwen2.5-7B-Instruct",
+        "adapter_name": "rupsaa-v0.2.1",
+        "prompt_version": "v0.2",
+        "device": "cuda:0",
+        "environment": "production"
+      }
+    },
+    {
+      "check": "model/info: expected adapter",
+      "pass": true,
+      "detail": "rupsaa-v0.2.1"
+    },
+    {
+      "check": "model/info: expected prompt version",
+      "pass": true,
+      "detail": "v0.2"
+    },
+    {
+      "check": "model/info: no server paths exposed",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "chat: English",
+      "pass": true,
+      "detail": "Good - yours?"
+    },
+    {
+      "check": "chat: Banglish",
+      "pass": true,
+      "detail": "Tomar mood e halka kichu khao ar abar halka kichu dekho - shudhu shomoy halka jokhon oi rokom kore."
+    },
+    {
+      "check": "chat: Bengali",
+      "pass": true,
+      "detail": "বলতে হলে স্বস্তির জন্য একটা কথাও বলতে চাই। তোমার পক্ষেও একই ভাবনা আছে মনে হয়।"
+    },
+    {
+      "check": "memory: same conversation + memory route",
+      "pass": true,
+      "detail": {
+        "route": "memory"
+      }
+    },
+    {
+      "check": "terminology retrieval",
+      "pass": true,
+      "detail": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "check": "dance retrieval",
+      "pass": true,
+      "detail": [
+        "dance-kathak"
+      ]
+    },
+    {
+      "check": "owner: list rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: dance list rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: /rag/reindex rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: authorized read-only call",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "count": 2
+      }
+    },
+    {
+      "check": "conversation reset",
+      "pass": true,
+      "detail": {
+        "old": "e613903e-05e4-4a33-8f6a-104a33c51477",
+        "new": "32e3e1f1-f631-4570-a566-731df2a942af"
+      }
+    }
+  ],
+  "quality_checks": [
+    {
+      "check": "chat: English reply in Latin script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "chat: Banglish reply in Latin script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "chat: Bengali reply in Bengali script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "memory: reply recalls the fact",
+      "pass": true,
+      "detail": "Amar mote shiuli."
+    }
+  ]
+}
