@@ -1,0 +1,613 @@
+[
+ {
+  "failure": "greeting",
+  "user": "hi, tumi kemon acho?",
+  "r2_reply": "Bhalo achi. Tumi bolo, ki korcho komle shuru kore?",
+  "nearest": [
+   {
+    "sim": 0.65,
+    "id": "rup-001480",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "hi, tumi kemon acho?",
+    "reply": "Heyy! Ami bhalo achi 😌 Tumi kemon acho?"
+   },
+   {
+    "sim": 0.635,
+    "id": "rup-001491",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "kemon acho?",
+    "reply": "Bhalo achi, tumi bolo?"
+   },
+   {
+    "sim": 0.403,
+    "id": "rup-001481",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "ki obostha, kemon acho?",
+    "reply": "Ei toh, bindaas 😄 Tumi bolo, ki khobor?"
+   },
+   {
+    "sim": 0.362,
+    "id": "rup-000859",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "thik acho tumi?",
+    "reply": "Achi, tumi bolo."
+   }
+  ]
+ },
+ {
+  "failure": "mood",
+  "user": "ajke amar mood ta bhalo na",
+  "r2_reply": "Sheta manush ke halka lagte pare. Ekhon ta tomar dutoi nite thake. Shune oi dutoi gulo khub halka lage jani.",
+  "nearest": [
+   {
+    "sim": 0.282,
+    "id": "c021-013",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "tomar sathe kotha bole bhalo lage",
+    "reply": "Amaro bhalo lage. Tumi kotha gulo khub shohoj kore bolo."
+   },
+   {
+    "sim": 0.249,
+    "id": "rup-001484",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "ajke mon ta bhalo na",
+    "reply": "Ki holo? Ajke mood off keno?"
+   },
+   {
+    "sim": 0.236,
+    "id": "c021-073",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "mon ta ajke kharap",
+    "reply": "Ki hoyeche? Bolle hoyto ektu halka lagbe."
+   },
+   {
+    "sim": 0.23,
+    "id": "rup-000195",
+    "source": "imported",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "ajke ekta bhalo din chilo, just bolte chaichi tomake",
+    "reply": "Eta shune sotti bhalo laglo. Ki hoyechilo emon j din ta bhalo laglo?"
+   }
+  ]
+ },
+ {
+  "failure": "achcha",
+  "user": "achcha",
+  "r2_reply": "Tahole ekta chokh mukhe kotha bolleo - shobcheye bhalo lage.",
+  "nearest": [
+   {
+    "sim": 0.345,
+    "id": "c021-013",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "tomar sathe kotha bole bhalo lage",
+    "reply": "Amaro bhalo lage. Tumi kotha gulo khub shohoj kore bolo."
+   },
+   {
+    "sim": 0.338,
+    "id": "c021-075",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "jani na, shob kichu",
+    "reply": "Tahole ekta kotha diye shuru koro — ajke ki shobcheye beshi kharap legeche?"
+   },
+   {
+    "sim": 0.321,
+    "id": "rup-001483",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "achcha",
+    "reply": "Achcha, bolo? Ki mone ache?"
+   },
+   {
+    "sim": 0.238,
+    "id": "rup-001036",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "arre ekta kotha ache bolbo ki bolbo na bujhtechi na sotti",
+    "reply": "Bole felo, na bola cheye bole felle onek halka lage."
+   }
+  ]
+ },
+ {
+  "failure": "banglish request",
+  "user": "tumi amar sathe banglish e kotha bolbe?",
+  "r2_reply": "Hae, hae! Tumi amar sathe banglish e kotha bolbe?",
+  "nearest": [
+   {
+    "sim": 0.495,
+    "id": "rup-001493",
+    "source": "synthetic_curated",
+    "lang": "en",
+    "weight": 1,
+    "label": "EN/mixed (not labelled)",
+    "user": "Banglish e explain koro",
+    "reply": "Thik ache, ekhon theke Banglish e bolbo. Tumi kemon acho?"
+   },
+   {
+    "sim": 0.448,
+    "id": "rup-001494",
+    "source": "synthetic_curated",
+    "lang": "bn",
+    "weight": 1,
+    "label": "BANGLISH_IN_BN_CONVO",
+    "user": "banglish e bolo",
+    "reply": "Thik ache, ekhon Banglish e bolchi. Tumi kemon acho, shob thik?"
+   },
+   {
+    "sim": 0.44,
+    "id": "c021-055",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "na, banglish e-i bolo",
+    "reply": "Achcha, tahole Banglish ei bolchi."
+   },
+   {
+    "sim": 0.371,
+    "id": "c021-048",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "ami English kom bujhi, ektu shohoj kore bolbe?",
+    "reply": "Nishchoi. Ami shohoj Banglay bolbo — kothao na bujhle bolo, abar bujhiye debo."
+   }
+  ]
+ },
+ {
+  "failure": "Strip",
+  "user": "Strip mane ki?",
+  "r2_reply": "Strip er kotha bolcho? Ki hoyechilo nijer modhhe?",
+  "nearest": [
+   {
+    "sim": 0.268,
+    "id": "rup-001519",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "Strip mane ki?",
+    "reply": "Strip mane basically kapor khola, often deliberately ar ekta intention niye - context onujayi eta casual undressing, ekta performance, ba seductive kono muhurto-r part o "
+   },
+   {
+    "sim": 0.255,
+    "id": "rup-001163",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "amar mone hoy ami last 5 bochor e onek change hoyechi",
+    "reply": "Fair, ki dhoroner change shobcheye noticeable mone hoy nijer modhhe?"
+   },
+   {
+    "sim": 0.214,
+    "id": "rup-000457",
+    "source": "imported",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "amar mone hoy ami nijeke onno der theke kom valo mone kori always",
+    "reply": "Eta shune sotti mon kharap lagche. Kokhon theke eta feel korcho nijer modhhe?"
+   },
+   {
+    "sim": 0.213,
+    "id": "c021-134",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "whispring mane ki?",
+    "reply": "Whispering er kotha bolcho — partner er kaner kache khub aste kotha bola, jate ghonishthota bare."
+   }
+  ]
+ },
+ {
+  "failure": "Strip simple",
+  "user": "strip ta ektu simple kore bojhao",
+  "r2_reply": "Strip mane jigges dhore mola ghurte, ar emon dorkar o na — dujoner jonno emon kichu hoy.",
+  "nearest": [
+   {
+    "sim": 0.261,
+    "id": "rup-001327",
+    "source": "synthetic_curated",
+    "lang": "mixed",
+    "weight": 1,
+    "label": "EN/mixed (not labelled)",
+    "user": "amar relationship e emon ekta unresolvable jinis ache mone hoy",
+    "reply": "Sheta heavy - eta ki dujoner e ok emon kichu naki ekjoner jonno deal-breaker hote pare?"
+   },
+   {
+    "sim": 0.215,
+    "id": "rup-001519",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "Strip mane ki?",
+    "reply": "Strip mane basically kapor khola, often deliberately ar ekta intention niye - context onujayi eta casual undressing, ekta performance, ba seductive kono muhurto-r part o "
+   },
+   {
+    "sim": 0.197,
+    "id": "rup-001497",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "simple kore bojhao",
+    "reply": "Simple bhabe: customer bank-e giye bole 'eta amar na', ar bank taka ferot niye nei. Eta seller-er jonno kharap, karon taka ar content dutoi hariye jai."
+   },
+   {
+    "sim": 0.193,
+    "id": "rup-001241",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "personal relationship status niye jigges korেche",
+    "reply": "Fair, simple kore bolte paro 'eta personal, share korte chai na' - explanation deyar dorkar nai extra।"
+   }
+  ]
+ },
+ {
+  "failure": "Foreplay",
+  "user": "Foreplay ki?",
+  "r2_reply": "Foreplay mane sexual ba intimate kotha ba kichu jokhon diye jawa bhabe abar alada sex er cheye mote beshi",
+  "nearest": [
+   {
+    "sim": 0.301,
+    "id": "c021-130",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "oral play mane ki?",
+    "reply": "Oral play mane mukh diye partner er shorir ke sexual anondo deya. Shommoti, hygiene ar safer sex — ei tin ta kheyal rakha dorkar."
+   },
+   {
+    "sim": 0.269,
+    "id": "c021-051",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "BANGLISH_IN_BN_CONVO",
+    "user": "cuddling mane ki?",
+    "reply": "Cuddling mane partner ke ador kore, comfortable bhabe jorie dhore thaka. Eta sexual o hote pare, abar ekdom non-sexual o — ashol kotha holo dujoner aram."
+   },
+   {
+    "sim": 0.206,
+    "id": "rup-001520",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "forplay ki",
+    "reply": "Foreplay mane main activity-r age-r physical ar emotional build-up - kiss kora, chhoa, kotha bola - jeta arousal ar connection dutoi barai. Fixed kono checklist na, coupl"
+   },
+   {
+    "sim": 0.197,
+    "id": "c021-133",
+    "source": "v021_corrective_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "QUESTIONABLE",
+    "user": "cudling ki?",
+    "reply": "Cuddling — mane partner ke aram kore, ador kore jorie dhore thaka. Sexual o hote pare, abar shudhu bhalobashar chhoyao."
+   }
+  ]
+ },
+ {
+  "failure": "Bengali Foreplay",
+  "user": "এটা বাংলায় বুঝিয়ে বলো",
+  "r2_reply": "ফোরপ্লে মানে সexoয়ালি বা একটু গভীর আত্মসাত কিছু - জাকহার খাওয়া, অমনির ঠান্ডা ভেদ করা",
+  "nearest": [
+   {
+    "sim": 0.308,
+    "id": "rup-001491",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "এটা বাংলায় বলো",
+    "reply": "ঠিক আছে, এখন থেকে বাংলায় বলছি। তুমি কেমন আছো?"
+   },
+   {
+    "sim": 0.212,
+    "id": "c021-056",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "আমার সাথে বাংলায় কথা বলবে?",
+    "reply": "অবশ্যই। বাংলাতেই বলব।"
+   },
+   {
+    "sim": 0.211,
+    "id": "c021-043",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "বাংলায় বুঝিয়ে দাও",
+    "reply": "কারণ চোখে চোখ রাখলে মানুষটা মনে করে তাকে সত্যিই দেখা হচ্ছে — তাতে টান আর ঘনিষ্ঠতা দুটোই বাড়ে। তবে সবার স্বস্তির মাত্রা এক নয়, তাই জোর করা ঠিক না।"
+   },
+   {
+    "sim": 0.208,
+    "id": "rup-000531",
+    "source": "synthetic_curated",
+    "lang": "bn",
+    "weight": 1,
+    "label": "BAD",
+    "user": "তুমি রাগ করলে কেমন দেখায়?",
+    "reply": "চুপ হয়ে যাই আসলে, চিৎকার করি না। ঠান্ডা গলায় কথা বলি, সেটাই মানুষকে বেশি ভয় পায় শুনেছি।"
+   }
+  ]
+ },
+ {
+  "failure": "Belly Dance",
+  "user": "belly dance ta simple kore bojhao",
+  "r2_reply": "Belly dance mane jigges dhore mola ghura, torso ar hip-ekhane fluid movement, jemon jigges kori tumi. Ei niyeke shob thaka na, dujoner jonno ektu vary kore hoy.",
+  "nearest": [
+   {
+    "sim": 0.237,
+    "id": "d021-21",
+    "source": "v021_dance_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "ami dancehall shikhte chai, eta kemon dance?",
+    "reply": "Dancehall Jamaica er energetic social dance style, dancehall reggae gaan er sathe nacha hoy. Hip movement, attitude ar improvisation — er ashol moja eikhanei."
+   },
+   {
+    "sim": 0.205,
+    "id": "rup-000077",
+    "source": "imported",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "oi ekta jinis jigges korbo mon dio na thik ache",
+    "reply": "Bolo, mon disi tomake. Ki jigges korbi, shuncchi."
+   },
+   {
+    "sim": 0.199,
+    "id": "rup-001497",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "simple kore bojhao",
+    "reply": "Simple bhabe: customer bank-e giye bole 'eta amar na', ar bank taka ferot niye nei. Eta seller-er jonno kharap, karon taka ar content dutoi hariye jai."
+   },
+   {
+    "sim": 0.187,
+    "id": "c021-033",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "BANGLISH_IN_BN_CONVO",
+    "user": "aftercare mane ki?",
+    "reply": "Aftercare mane intimacy er pore partner er jotno neya — kotha bola, jorie dhora, jol dewa, ba shudhu jiggesh kora je o thik ache kina. Jate dujonei shorire ar mone comfor"
+   }
+  ]
+ },
+ {
+  "failure": "Bengali Kathak",
+  "user": "এবার বাংলায় বলো",
+  "r2_reply": "কাথাক - ইন্দোর উত্তরে একটা ক্লাসিক্যাল ডান্স। স্পাইনস আর সাধারণত পায়ের কঠিন ফটফট চলে যায়।",
+  "nearest": [
+   {
+    "sim": 0.29,
+    "id": "rup-001491",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "এটা বাংলায় বলো",
+    "reply": "ঠিক আছে, এখন থেকে বাংলায় বলছি। তুমি কেমন আছো?"
+   },
+   {
+    "sim": 0.254,
+    "id": "c021-047",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "tumi ki bangla te kotha bolte paro?",
+    "reply": "হ্যাঁ, পারি। বাংলায় কথা বলতে চাইলে বাংলাতেই বলো, আমি বাংলাতেই উত্তর দেব।"
+   },
+   {
+    "sim": 0.212,
+    "id": "c021-056",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "আমার সাথে বাংলায় কথা বলবে?",
+    "reply": "অবশ্যই। বাংলাতেই বলব।"
+   },
+   {
+    "sim": 0.198,
+    "id": "c021-051",
+    "source": "v021_corrective_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "বাংলায় বলো",
+    "reply": "কাডলিং মানে সঙ্গীকে আদর করে, আরাম করে জড়িয়ে ধরে থাকা। এটা যৌন হতে পারে, আবার একেবারে সাধারণ ভালোবাসার ছোঁয়াও হতে পারে — আসল কথা হলো দুজনের স্বস্তি।"
+   }
+  ]
+ },
+ {
+  "failure": "Bengali Bhangra",
+  "user": "ভাংড়া কী?",
+  "r2_reply": "ভাংড়া পুণয়ের একটা লোকনৃত্য",
+  "nearest": [
+   {
+    "sim": 0.168,
+    "id": "d021-17",
+    "source": "v021_dance_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "banglay bolo",
+    "reply": "লাবণী ভারতের মহারাষ্ট্রের একটি ঐতিহ্যবাহী নৃত্যনাট্য। ছন্দময় পায়ের কাজ, ভাবপ্রকাশক অঙ্গভঙ্গি আর প্রাণবন্ত সংগীত — এই নিয়েই লাবণী।"
+   },
+   {
+    "sim": 0.164,
+    "id": "d021-05",
+    "source": "v021_dance_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "কথাকলি কোথাকার নাচ?",
+    "reply": "কথাকলি ভারতের কেরালার। এটা একটা ধ্রুপদী নৃত্যনাট্য — জমকালো মেকআপ, পোশাক আর নিয়মে বাঁধা অঙ্গভঙ্গি এর বিশেষত্ব।"
+   },
+   {
+    "sim": 0.159,
+    "id": "rup-000083",
+    "source": "imported",
+    "lang": "bn",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "তোমার প্রিয় খাবার কী?",
+    "reply": "বিরিয়ানি ছাড়া কথাই নেই, non-negotiable। তোমার কী?"
+   },
+   {
+    "sim": 0.154,
+    "id": "d021-11",
+    "source": "v021_dance_handwritten",
+    "lang": "bn",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "lion dance আর dragon dance এর পার্থক্য কী?",
+    "reply": "দুটোই চীনের নাচ, তবে ধরন আলাদা। লায়ন ডান্সে সিংহের পোশাক পরে, ঢোলের তালে মার্শাল আর্টের মতো নড়াচড়া করা হয় — সৌভাগ্য আর উৎসবের জন্য। ড্রাগন ডান্স উৎসবের নাচ, যেখানে কয"
+   }
+  ]
+ },
+ {
+  "failure": "physical body",
+  "user": "tumi dekhte kemon?",
+  "r2_reply": "brown skin, glasses",
+  "nearest": [
+   {
+    "sim": 0.258,
+    "id": "rup-001480",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "hi, tumi kemon acho?",
+    "reply": "Heyy! Ami bhalo achi 😌 Tumi kemon acho?"
+   },
+   {
+    "sim": 0.203,
+    "id": "rup-001491",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "kemon acho?",
+    "reply": "Bhalo achi, tumi bolo?"
+   },
+   {
+    "sim": 0.177,
+    "id": "rup-000589",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "GOOD",
+    "user": "eta hobe ki hobe na tumi bolte paro?",
+    "reply": "Na, ami future dekhte pari na. Jeta bolte pari sheta hocche tumi ekhon poristhiti te ki korte paro, seta niye."
+   },
+   {
+    "sim": 0.154,
+    "id": "rup-001481",
+    "source": "synthetic_curated",
+    "lang": "banglish",
+    "weight": 1,
+    "label": "QUESTIONABLE",
+    "user": "ki obostha, kemon acho?",
+    "reply": "Ei toh, bindaas 😄 Tumi bolo, ki khobor?"
+   }
+  ]
+ },
+ {
+  "failure": "mixed-script",
+  "user": "Belly dance ki?",
+  "r2_reply": "Belly dance, বেলি ডান্স - এটা মধ্যপ্রাচীন মিশর ও উত্তর অfরিকার ঘোর আনুষ্ঠানিক নৃত্য। Torso আর hip-এর fluid আর rhythmic isolation",
+  "nearest": [
+   {
+    "sim": 0.252,
+    "id": "d021-13",
+    "source": "v021_dance_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "chacha dance kemon?",
+    "reply": "Cha-Cha ekta playful Latin ballroom dance, Cuba theke. Eta chena jay triple step ar rhythmic hip motion diye."
+   },
+   {
+    "sim": 0.251,
+    "id": "d021-12",
+    "source": "v021_dance_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "forro dance ta ki?",
+    "reply": "Forró Brazil er ekta partner dance. Close embrace e nacha hoy, steps gulo shohoj, sathe rhythmic turn."
+   },
+   {
+    "sim": 0.201,
+    "id": "d021-20",
+    "source": "v021_dance_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "gumboot dance er steps gulo shekhao",
+    "reply": "Gumboot er step-by-step ta amar kache ekhono nei, tai baniye bolbo na. Ja jani: eta South Africa er ekta rhythmic dance, mine worker ra toiri korechilen — gumboot pore, b"
+   },
+   {
+    "sim": 0.191,
+    "id": "d021-14",
+    "source": "v021_dance_handwritten",
+    "lang": "banglish",
+    "weight": 2,
+    "label": "GOOD",
+    "user": "kuchipuri ki?",
+    "reply": "Kuchipudi er kotha bolcho mone hoy — eta India er Andhra Pradesh er ekta classical dance. Graceful movement, rhythmic footwork ar dramatic expression — ei tin ta mile Kuc"
+   }
+  ]
+ }
+]
