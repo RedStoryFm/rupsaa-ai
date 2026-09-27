@@ -17,9 +17,20 @@
   const docListEl = document.getElementById("doc-list");
   const ownerKeyInput = document.getElementById("owner-key");
 
-  ownerKeyInput.value = localStorage.getItem("rupsaa_owner_key") || "";
+  // The owner types the key; it is never part of any page source. It is kept only for this
+  // browser tab session (sessionStorage) and sent solely as the X-Owner-Key header on /owner/*.
+  try {
+    localStorage.removeItem("rupsaa_owner_key"); // older versions kept it permanently
+    ownerKeyInput.value = sessionStorage.getItem("rupsaa_owner_key") || "";
+  } catch (e) {
+    /* storage unavailable */
+  }
   ownerKeyInput.addEventListener("input", () => {
-    localStorage.setItem("rupsaa_owner_key", ownerKeyInput.value);
+    try {
+      sessionStorage.setItem("rupsaa_owner_key", ownerKeyInput.value);
+    } catch (e) {
+      /* storage unavailable */
+    }
   });
 
   let editingFilename = null; // null = creating a new document

@@ -32,6 +32,10 @@ class Settings(BaseSettings):
         env_file=str(PROJECT_ROOT / ".env"),
         env_file_encoding="utf-8",
         extra="ignore",
+        # .env.example documents optional fields (RUPSAA_PRELOAD_MODEL, rate limits, ...) with an
+        # empty value meaning "use the default" — without this, pydantic-settings treats "KEY="
+        # as the literal empty string and fails to parse it as bool/int.
+        env_ignore_empty=True,
     )
 
     # "development" (default: permissive, lazy model load, no rate limits) or "production"

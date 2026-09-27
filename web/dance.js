@@ -236,6 +236,18 @@
     importFile = imp.file.files[0] || null;
     imp.preview.hidden = true;
     if (!importFile) return;
+    if (!/\.(csv|xlsx|json)$/i.test(importFile.name)) {
+      importFile = null;
+      imp.file.value = "";
+      showMsg(imp.msg, "error", "Unsupported file type — choose a .csv, .xlsx or .json file.");
+      return;
+    }
+    if (importFile.size > 2 * 1024 * 1024) {
+      importFile = null;
+      imp.file.value = "";
+      showMsg(imp.msg, "error", "File is too large (max 2 MB).");
+      return;
+    }
     const body = new FormData();
     body.append("file", importFile);
     try {
