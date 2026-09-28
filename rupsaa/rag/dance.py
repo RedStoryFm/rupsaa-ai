@@ -152,10 +152,19 @@ def _clean(data: dict) -> dict:
     return out
 
 
+def _file_signature(path: Path) -> tuple[int, int, int]:
+    """Cache key for a record file: (mtime in ns, size, inode). Float st_mtime alone missed a
+    rewrite landing in the same timestamp tick (flaky "stale record" reads). Every save goes
+    through temp-file + rename, which gives a new inode, so even a same-tick rewrite changes
+    the signature; own writes/deletes also drop their cache entry explicitly."""
+    st = path.stat()
+    return (st.st_mtime_ns, st.st_size, st.st_ino)
+
+
 class DanceStore:
     def __init__(self, directory: Path):
         self.directory = Path(directory)
-        self._cache: dict[str, tuple[float, DanceRecord]] = {}
+        self._cache: dict[str, tuple[tuple[int, int, int], DanceRecord]] = {}
 
     def _path(self, dance_id: str) -> Path:
         if not _ID_RE.match(dance_id):
@@ -172,13 +181,13 @@ class DanceStore:
         out, live = [], set()
         for path in sorted(self.directory.glob("dance-*.json")):
             live.add(path.name)
-            mtime = path.stat().st_mtime
+            sig = _file_signature(path)
             cached = self._cache.get(path.name)
-            if cached and cached[0] == mtime:
+            if cached and cached[0] == sig:
                 rec = cached[1]
             else:
                 rec = self._from_json(json.loads(path.read_text(encoding="utf-8")))
-                self._cache[path.name] = (mtime, rec)
+                self._cache[path.name] = (sig, rec)
             if include_disabled or rec.enabled:
                 out.append(rec)
         for stale in set(self._cache) - live:
@@ -197,6 +206,7 @@ class DanceStore:
         tmp = path.with_suffix(".json.tmp")
         tmp.write_text(json.dumps(asdict(rec), ensure_ascii=False, indent=2), encoding="utf-8")
         tmp.replace(path)
+        self._cache.pop(path.name, None)  # never serve the pre-write record, whatever the file clock says
 
     def _check_conflicts(self, rec: DanceRecord) -> None:
         mine = rec.keys()
@@ -236,6 +246,7 @@ class DanceStore:
         if not path.exists():
             raise DanceError(f"no such dance: {dance_id}")
         path.unlink()
+        self._cache.pop(path.name, None)
 
     def search(self, query: str) -> list[DanceRecord]:
         q = normalize(query)

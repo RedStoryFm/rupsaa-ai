@@ -11,6 +11,7 @@ without editing YAML, while YAML remains the documented default.
 
 from __future__ import annotations
 
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -22,14 +23,19 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 CONFIGS_DIR = PROJECT_ROOT / "configs"
 
-load_dotenv(PROJECT_ROOT / ".env")
+# Which env file to read. Default: <project>/.env. RUPSAA_ENV_FILE overrides it; an EMPTY value
+# disables env-file loading entirely — tests/conftest.py does that so the test suite never
+# consumes a real (production) .env or its secrets.
+ENV_FILE: str | None = os.environ.get("RUPSAA_ENV_FILE", str(PROJECT_ROOT / ".env")) or None
+if ENV_FILE:
+    load_dotenv(ENV_FILE)
 
 
 class Settings(BaseSettings):
     """Environment-driven settings (see .env.example for documented defaults)."""
 
     model_config = SettingsConfigDict(
-        env_file=str(PROJECT_ROOT / ".env"),
+        env_file=ENV_FILE,
         env_file_encoding="utf-8",
         extra="ignore",
         # .env.example documents optional fields (RUPSAA_PRELOAD_MODEL, rate limits, ...) with an
