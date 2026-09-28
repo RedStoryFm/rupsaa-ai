@@ -58,6 +58,35 @@ def build_prompt(
     )
 
 
+# Chat-turn terminators that some templates use instead of (or besides) the tokenizer's eos:
+# Gemma ends a turn with <end_of_turn> while tokenizer.eos_token is <eos>; Qwen's eos IS <|im_end|>.
+_TURN_END_TOKENS = ("<end_of_turn>", "<|im_end|>", "<|eot_id|>", "<|end|>")
+
+
+def stop_token_ids(model, tokenizer) -> list[int]:
+    """Every token id that ends an assistant turn: the tokenizer's eos, the model's own
+    generation_config eos ids, and the chat template's end-of-turn token if it has one.
+    Stopping only on tokenizer.eos_token_id made Gemma keep generating past <end_of_turn>,
+    inventing further user/assistant turns until max_new_tokens."""
+    ids: list[int] = []
+
+    def add(value) -> None:
+        for v in value if isinstance(value, (list, tuple)) else [value]:
+            if isinstance(v, int) and v >= 0 and v not in ids:
+                ids.append(v)
+
+    add(tokenizer.eos_token_id)
+    gen_cfg = getattr(model, "generation_config", None)
+    if gen_cfg is not None:
+        add(getattr(gen_cfg, "eos_token_id", None))
+    unk = getattr(tokenizer, "unk_token_id", None)
+    for tok in _TURN_END_TOKENS:
+        tid = tokenizer.convert_tokens_to_ids(tok)
+        if isinstance(tid, int) and tid != unk:
+            add(tid)
+    return ids
+
+
 def generate_reply(
     model: PreTrainedModel,
     tokenizer: PreTrainedTokenizerBase,
@@ -81,7 +110,7 @@ def generate_reply(
             do_sample=params.do_sample,
             repetition_penalty=params.repetition_penalty,
             pad_token_id=tokenizer.pad_token_id,
-            eos_token_id=tokenizer.eos_token_id,
+            eos_token_id=stop_token_ids(model, tokenizer),
         )
 
     completion_ids = output_ids[0][prompt_tokens:]

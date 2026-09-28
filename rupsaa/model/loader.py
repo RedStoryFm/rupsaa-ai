@@ -103,7 +103,10 @@ def load_model(
     model = AutoModelForCausalLM.from_pretrained(
         resolved_model_id,
         quantization_config=quant_config,
-        torch_dtype=compute_dtype if quant_config is None else None,
+        # Always the compute dtype (bf16 on capable GPUs), also when quantizing: left unset, newer
+        # transformers load the non-quantized layers in fp16, and Gemma 3 overflows to NaN logits in fp16.
+        # bf16 is also what every Rupsaa adapter was trained with.
+        torch_dtype=compute_dtype,
         device_map=device_map,
         token=settings.huggingface_token or None,
     )
