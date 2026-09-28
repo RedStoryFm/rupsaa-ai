@@ -39,6 +39,10 @@ data/production/reports/*
 # V0.2 preparation reports, which are expensive (GPU) or impossible to
 # regenerate exactly. Timestamped audit_*/stats_* runs stay ignored.
 !data/production/exports/rupsaa_v0.1/
+# Gemma V1 + FINAL corrective dataset and their reports (small; frozen; checksummed)
+!data/production/exports/rupsaa_v0.3_final/
+!data/production/reports/rupsaa_v0.3_gemma/
+!data/production/reports/rupsaa_v0.3_final/
 !data/production/exports/rupsaa_v0.2/
 !data/production/exports/rupsaa_v0.2.1/
 !data/production/exports/rupsaa_v0.2.1_r2/

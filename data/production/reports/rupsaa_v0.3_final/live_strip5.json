@@ -1,0 +1,91 @@
+{
+ "label": "final strip x5",
+ "suite": "strip5",
+ "temperature": 0.55,
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "Strip mane ki?",
+   "reply": "Striper kapor khola — kono mood e na, ekdom direct bhabe. Performance hishebe, partner er jonno ba video te o hoy. Kon context e shunchile eta niye jigges korcho?",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.5
+  },
+  {
+   "n": 2,
+   "user": "Strip mane ki?",
+   "reply": "Striper ekta performance jekhane manush kapor khola jay, ektu ektu kore, attractive bhabe. Eta club ba stage e hoy, o agei home e partner er jonno o hote pare.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.4
+  },
+  {
+   "n": 3,
+   "user": "Strip mane ki?",
+   "reply": "Striper kapor khola, shomoy shomoy dhire dhire, ekta show hishebeba intimate bhabe. Context er upor depend kore eta kono performance naki dujoner modhhe.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 13.4
+  },
+  {
+   "n": 4,
+   "user": "Strip mane ki?",
+   "reply": "Kapor khola, shiddhanto ta eta e. Kotha bolcho, kono specific context ache?",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.4
+  },
+  {
+   "n": 5,
+   "user": "Strip mane ki?",
+   "reply": "Strip mane kapor khola — shudhu ekta process, kono specific mood ba context na diye. Kotha bolcho kivabe?",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.6
+  }
+ ]
+}

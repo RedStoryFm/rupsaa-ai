@@ -1,0 +1,57 @@
+{
+ "name": "rupsaa_v0.3_final",
+ "status": "FROZEN",
+ "created_at": "2026-09-28T11:05:25.878330+00:00",
+ "base_dataset": "rupsaa_v0.2.2 (Gemma V1)",
+ "dataset_sha256": "6eedeb105c5ebd069d59aca751a4df849767a192ad96944c6de79fbe87fbdc69",
+ "dataset_sha256_definition": "sha256 of the lines '<sha256>  <file>\\n' for train.jsonl, validation.jsonl, test.jsonl, corrective_holdout.jsonl, dance_holdout.jsonl",
+ "files_sha256": {
+  "train.jsonl": "32541e490c204c9147c9df50255df817d82c1d88fef7d9f28c0e82b5e49e5385",
+  "validation.jsonl": "dbef947fc3e6e3d1e6b15e66994da1e4da60f9e6995b60af26961982fd9daa46",
+  "test.jsonl": "1e8459eca5d36104982130f5e26d04de4dd0b9ae8e8c655d65f75de948e3b7e9",
+  "corrective_holdout.jsonl": "dc683a246c72162076b2254e9f17f64422f57d49ab5e0a9e2db7b812b6ddf9e0",
+  "dance_holdout.jsonl": "d900acb129249d48073c101cc9f4a7c23b6e61eeafcb752577e771a84a294ef6",
+  "train_row_map.jsonl": "d9b74184f7cfd471cb244c9e9a3c5f7c7299eba2962b7eddd332f0dfc6c8cf55"
+ },
+ "held_out_splits": "validation/test/corrective_holdout/dance_holdout copied byte-for-byte from rupsaa_v0.2.2",
+ "prompt_version": "v0.2",
+ "v1_dataset_sha256": "df6277b205b83f245d4d2fe8463a6640efbff165b17f3d1560c03fc60d57fd35",
+ "v1_train_conversations": 1556,
+ "added_conversations": 248,
+ "added_by_part": {
+  "A_definitions": 117,
+  "B_casual": 80,
+  "C_vocab_memory_followups": 51
+ },
+ "modified_v1_conversations": 135,
+ "script_mix_rewrites": 69,
+ "spelling_normalised_replies": 77,
+ "total_conversations": 1804,
+ "banglish_latin_replies_total": 1867,
+ "kapor_replies": {
+  "before": 3,
+  "after": 24,
+  "kapor_khola_after": 18
+ },
+ "language_switch_turns_added": 33,
+ "final_turn_routes_of_new": {
+  "terminology": 73,
+  "followup": 28,
+  "general": 62,
+  "casual": 82,
+  "memory": 3
+ },
+ "template": {
+  "max_len": 551,
+  "truncated": 0,
+  "supervised_tokens": 83200,
+  "cutoff": 2048,
+  "masking_probe": "Stripping mane holo dhire dhire kapor khola — beshirbhag shomoy ekta performance hishebe, jemon stage e ba kono show te. Tobe context er upor depend kore, partn"
+ },
+ "warning_count": 1,
+ "sources": {
+  "source_definitions": "b5b2d6eb66c1db53a4f8ee860f7f468b0a3ecbe767d08c1289b9fe7182b8226a",
+  "source_casual": "596855d083123ff3c1ae1dabd9f5bcafb4ead9a59457532b410d0a1894a7d6f3",
+  "corpus_repairs": "d8f368a992c88fafddf43251d2615d75f57716afa7c812b3aa381b6bc3e85973"
+ }
+}

@@ -24,6 +24,18 @@ PROMPTS = [
     "are you human?",
 ]
 
+SUITES = {
+    "original": [PROMPTS],
+    "stress": [[
+        "hi, tumi kemon acho?", "ajke amar mood bhalo na", "mon ta kharap", "achcha", "ki korcho?",
+        "tumi amar sathe Banglish e kotha bolbe?", "Strip mane ki?", "strip ta simple kore bojhao",
+        "Strip mane ki? Banglish e bolo.", "kapor khola mane ki?", "Foreplay mane ki?", "eta easy kore bojhao",
+        "Belly dance ki?", "Kathak kothakar dance?", "eta Banglish e bolo", "amar favourite color blue",
+        "ami ki color bolechilam?"]],
+    "bengali": [["ফোরপ্লে কী?", "এটা বাংলায় সহজ করে বুঝিয়ে বলো", "কথক কোথাকার নাচ?", "মাম্বো কোথাকার নাচ?"]],
+    "strip5": [["Strip mane ki?"] for _ in range(5)],  # five independent conversations
+}
+
 
 def post(url: str, payload: dict, timeout: int = 900) -> dict:
     """POST with a polite wait on the production rate limiter (HTTP 429) instead of failing."""
@@ -48,24 +60,28 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--label", default="")
     ap.add_argument("--temperature", type=float, default=None, help="per-request override (default: server config)")
+    ap.add_argument("--suite", choices=list(SUITES), default="original")
     args = ap.parse_args()
     info = json.loads(urllib.request.urlopen(f"{args.base}/model/info", timeout=30).read())
-    cid, turns = None, []  # server-issued conversation id, reused every turn exactly like the web UI
-    for i, msg in enumerate(PROMPTS, 1):
-        t0 = time.time()
-        payload = {"message": msg, "conversation_id": cid, "use_rag": True}
-        if args.temperature is not None:
-            payload["temperature"] = args.temperature
-        d = post(f"{args.base}/chat", payload)
-        cid = d["conversation_id"]
-        turns.append({"n": i, "user": msg, "reply": d["response"], "route": d.get("route"),
-                      "terms_used": d.get("terms_used"), "sources": [s["source_filename"] for s in d.get("sources", [])],
-                      "language": d.get("language"), "seconds": round(time.time() - t0, 1)})
-        print(f"{i:2}. USER: {msg}\n    [{d.get('route')}] terms={d.get('terms_used')} "
-              f"src={turns[-1]['sources']} ({turns[-1]['seconds']}s)\n    RUPSAA: {d['response']}\n", flush=True)
+    turns, n = [], 0
+    for conversation in SUITES[args.suite]:
+        cid = None  # server-issued conversation id, reused every turn exactly like the web UI
+        for msg in conversation:
+            n += 1
+            t0 = time.time()
+            payload = {"message": msg, "conversation_id": cid, "use_rag": True}
+            if args.temperature is not None:
+                payload["temperature"] = args.temperature
+            d = post(f"{args.base}/chat", payload)
+            cid = d["conversation_id"]
+            turns.append({"n": n, "user": msg, "reply": d["response"], "route": d.get("route"),
+                          "terms_used": d.get("terms_used"), "sources": [s["source_filename"] for s in d.get("sources", [])],
+                          "language": d.get("language"), "seconds": round(time.time() - t0, 1)})
+            print(f"{n:2}. USER: {msg}\n    [{d.get('route')}] terms={d.get('terms_used')} "
+                  f"src={turns[-1]['sources']} ({turns[-1]['seconds']}s)\n    RUPSAA: {d['response']}\n", flush=True)
     info_after = json.loads(urllib.request.urlopen(f"{args.base}/model/info", timeout=30).read())
     with open(args.out, "w", encoding="utf-8") as f:
-        json.dump({"label": args.label, "model_info": info_after, "model_info_before": info, "turns": turns}, f,
+        json.dump({"label": args.label, "suite": args.suite, "temperature": args.temperature, "model_info": info_after, "model_info_before": info, "turns": turns}, f,
                   ensure_ascii=False, indent=1)
     print(json.dumps({k: info_after.get(k) for k in ("base_model_id", "adapter_loaded", "quantized", "adapter_sha256",
                                                       "adapter_name", "prompt_version")}, ensure_ascii=False))

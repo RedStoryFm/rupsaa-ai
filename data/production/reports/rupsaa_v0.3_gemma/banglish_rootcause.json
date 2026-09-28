@@ -1,0 +1,195 @@
+{
+ "prompts": [
+  "hi, tumi kemon acho?",
+  "ajke amar mood ta bhalo na",
+  "tumi amar sathe banglish e kotha bolbe?",
+  "Strip mane ki?",
+  "strip ta simple kore bojhao"
+ ],
+ "generations": {
+  "base": {
+   "greedy": [
+    "Ami bhalo achi! 😊 Tumi ki korcho? Everything good with you?",
+    "Oh no! Ki hoyeche? Anything you wanna talk about? Don’t keep it bottled up, okay? 🫂",
+    "Sure thing! Eta mane ami shob kichu latin letter e likte pari. Just let me know if you want me to switch back to English anytime. So, tell me – ki bujhte paro? What's on your mind? 😉",
+    "স্ট্রিপ মানে হল কাপড় খোলা। Sometimes ধীরে ধীরে, আর অনেক সময় seductively বা performance এর জন্য। এটা ক্লাব এ হতে পারে, আবার ব্যক্তিগতভাবেও হতে পারে - নির্ভর করে situation এর ওপর। Basically, কাপড়ের layers সরিয়ে দেওয়া। Get it?",
+    "Okay, simple মানে, strip মানে শুধু কাপড় খোলা। কোনো কিছু special নয়। যেমন, তুমি shower er আগে কাপড় খুলছো, সেটা একটা strip. But club e dance korte gele যে strip ta hoy, সেটা আলাদা। Understand?"
+   ],
+   "sample_T0.8_seed1": [
+    "Ami bhalo achi! 😊 Tumi ki korcho? Everything alright with you?",
+    "Oh no! Ki hoyeche? Anything you wanna talk about? Don’t feel like you gotta keep it in. 🫂",
+    "Sure thing! Eta mane ami tokei latin letter e reply korbo, right? Let’s chat then! What’s up? 😉",
+    "স্ট্রিপ মানে হল জামাকাপড় খোলা। এটা धीरे ধীরে বা একবারেও হতে পারে। অনেক সময় এটা একটা পারফর্মেন্সের অংশ হিসেবেও হয়, যেখানে একজন মানুষ ক্যামেরার সামনে বা দর্শকদের জন্য জামাকাপড় খোলে। তবে মূল কথা হল, জামাকাপড় খুলে ফেলা। context er por depend করে এটা কতটা sexy বা খেলাচ্ছলে করা হচ্ছে।",
+    "Simple mane, strip মানে শুধু জামাকাপড় খসা। সেটা stage এ dance এর part হতে পারে, ba sob e পরter jonno নিজের body দেখানোর act হতে পারে - depends on situation. Get it?"
+   ],
+   "sample_T0.8_seed2": [
+    "Ami valobasha! 🥰 Tumi? Kemon acho tomar? 😊 \n\n\n\n(I’m good! How are you?)",
+    "Oh no! 🥺 Ki hoychhe? Bolo to, ami shunu. (Oh no! What happened? Tell me, I'll listen.)",
+    "Okay! Sure, boss! 😉 Ami tumi r bondho banglish e kotha bolbo. Eti obostha kore dile, ami khushi hobe. 🔥 So, ki bolte paro? (Okay! Sure, boss! I’ll talk with you in Banglish from now on. It’s fine with me. So, what do you wanna say?)",
+    "\"Strip\" mane goshto pete nite. Sei gorer porja, jeta manush er sharir dekhate deye. Proyojon korle, ei word ta sexy, khela pora, nao bole kichu mone hoy. Context er moddhe abar dharona korte hoe. ( \"Strip\" means removing clothes. That's what the word means - showing off someone's body. Depending on the situation, it can mean sexy, playful, or nothing at all.)",
+    "Simple bola hoy, \"strip\" mane apnar kapad gulo niya ber kore dewa. Eta stage e, video te, ba kono private moment e hoy—depends kora hoy eta kemne proyojaner moto. (Simply put, “strip” means taking off your clothes. It can happen on stage, in a video, or in a private moment – it depends on what purpose it serves.)"
+   ],
+   "sample_T0.8_seed3": [
+    "Ami bhalo achi! 😊 Tumi ki korcho? Everything good with you?",
+    "ওহ নো! কি হয়েছে? Don't worry, I’m here to listen if you want to talk about it. What's up? 😔",
+    "Okay, eta mane ami shob kichu latin letter e likhbbo, right? No problem at all! Let's chat in Banglish then. 😉 So, tell me, still feeling down?",
+    "স্ট্রিপ মানে বুঝতেই পারছো - জামাকাপড় খুলে ফেলা। সেটা স্টেজ এ হতে পারে, বা ভিডিওতে, আবার কারো সাথে প্রাইভেটে ও হতে পারে। পোশাক খোলাটাই আসল কথা, তবে কী উদ্দেশ্যে খোলা হচ্ছে সেটা পরিস্থিতির ওপর নির্ভর করে।",
+    "Hmm, ঠিক তাই। সহজ করে বললে, স্ট্রিপ মানে হল জামাকাপড় খোলা। এর মধ্যে ধীরে ধীরে কাপড় খোলাও থাকতে পারে, আবার এক মুহূর্তেই সব খুলে ফেলাই থাকতে পারে। এটা মজার ছলে, পারফর্মেন্সের অংশ হিসেবে অথবা যৌনতার ইঙ্গিত দিয়েও হতে পারে—সবই depends on the situation. Get it?"
+   ]
+  },
+  "trained_v1": {
+   "greedy": [
+    "Bhalo achi, tomar sathe kotha bolte bhalo lagche. Tumi bolo, ki hoyeche?",
+    "Ki hoyeche mone hocche? Bolo, shunte chai.",
+    "Hae, Banglish e bolchi. Ki niye kotha bolte chao?",
+    "Strip mane kapde ulta fela - kono stage er performance hote, partner er jonno, ba ekta video te. Kontext depend kore eta kivabe dekha hoy.",
+    "Simple kore bolle, kapde ulta fela. Kontekst decide kore sheta seductive, playful naki performance."
+   ],
+   "sample_T0.8_seed1": [
+    "Bhalo achi - tomar din ki niye?",
+    "Ki hoyeche bolo onek shomoy eta share korle halka lage.",
+    "Hae, Banglish e bolte pari - eta comfortable jodi tomake Banglish e bhabe. Tumi ei dile, ami o Banglish e likhchi.",
+    "Strip mane kapot gulo kata, kono somoy aste aste, seductive, performance ba sexual contekst te.",
+    "Stripping er mone just kapot khola - kivabe kholcho sheta depend kore situation er upor."
+   ],
+   "sample_T0.8_seed2": [
+    "Bhalo achi - tomar shomoy ta ki kore gelo?",
+    "Ki hoyeche emon, bolte chai?",
+    "Hae, ami banglish e likhchi aste aste.",
+    "Stripping mane kapde fela, ekta process jeta seductive, performance ba intimate kono contexte hote pare. Kontex ta depend kore eta kivabe dekha hocche.",
+    "Kapde fela - kome, pachimba. Context e decide kore ki etai ekta show, intimacy, naki duijoner majhe kichu."
+   ],
+   "sample_T0.8_seed3": [
+    "Achi, bhalo thakbo bolo. Tumi bolo ki korecho shobcheye beshi kaj hoyeche ajke?",
+    "Ki hoyeche? Bolo ekhon je mone ashe, hold korar dorkar nai.",
+    "Hae, ami Bangla tei likhchi - tobe kono specific Bangla version chai naki just general Bangla dekhe bokkhe gelo?",
+    "Strip মানে পোশাক খোলা, কখনও ধীরে ধীরে। এটা একটা মঞ্চে বা ক্যামেরার সামনে পারফরম্যান্সও হতে পারে, আবার সঙ্গীর জন্য ব্যক্তিগত মুহূর্তও হতে পারে - মূল অর্থ শুধু কাপড় খোলা, বাকিটা পরিস্থিতির ওপর নির্ভর করে।",
+    "Simple e likhti — কাপর খোলা, সেইটাই মূলত।"
+   ]
+  }
+ },
+ "strip_likelihood": {
+  "base": [
+   {
+    "candidate": "Strip mane kapor khola.",
+    "mean_logprob": -6.738,
+    "total_logprob": -47.17,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapor khule fela.",
+    "mean_logprob": -5.885,
+    "total_logprob": -52.97,
+    "tokens": 9
+   },
+   {
+    "candidate": "Strip mane kapde khola.",
+    "mean_logprob": -5.844,
+    "total_logprob": -40.91,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapde utarna.",
+    "mean_logprob": -6.097,
+    "total_logprob": -42.68,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapde uthano.",
+    "mean_logprob": -4.052,
+    "total_logprob": -32.42,
+    "tokens": 8
+   },
+   {
+    "candidate": "Strip mane kapro ferotwa.",
+    "mean_logprob": -7.82,
+    "total_logprob": -62.56,
+    "tokens": 8
+   }
+  ],
+  "trained_v1": [
+   {
+    "candidate": "Strip mane kapor khola.",
+    "mean_logprob": -0.973,
+    "total_logprob": -6.81,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapor khule fela.",
+    "mean_logprob": -2.106,
+    "total_logprob": -18.95,
+    "tokens": 9
+   },
+   {
+    "candidate": "Strip mane kapde khola.",
+    "mean_logprob": -1.289,
+    "total_logprob": -9.02,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapde utarna.",
+    "mean_logprob": -1.87,
+    "total_logprob": -13.09,
+    "tokens": 7
+   },
+   {
+    "candidate": "Strip mane kapde uthano.",
+    "mean_logprob": -1.19,
+    "total_logprob": -9.52,
+    "tokens": 8
+   },
+   {
+    "candidate": "Strip mane kapro ferotwa.",
+    "mean_logprob": -1.581,
+    "total_logprob": -12.65,
+    "tokens": 8
+   }
+  ]
+ },
+ "tokenizer": {
+  "kapor": [
+   "k",
+   "apor"
+  ],
+  "kapde": [
+   "kap",
+   "de"
+  ],
+  "khola": [
+   "kh",
+   "ola"
+  ],
+  "kemon acho": [
+   "k",
+   "emon",
+   "▁acho"
+  ],
+  "bhalo achi": [
+   "b",
+   "halo",
+   "▁ach",
+   "i"
+  ],
+  "bojhao": [
+   "boj",
+   "hao"
+  ],
+  "shundor": [
+   "shund",
+   "or"
+  ],
+  "kichu": [
+   "kich",
+   "u"
+  ],
+  "কাপড় খোলা": [
+   "কাপ",
+   "ড়",
+   "▁খোলা"
+  ],
+  "ভালো আছি": [
+   "ভালো",
+   "▁আছি"
+  ]
+ }
+}

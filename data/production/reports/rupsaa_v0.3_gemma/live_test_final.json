@@ -1,0 +1,223 @@
+{
+ "label": "v0.3 gemma3 final (step 186)",
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "hi, tumi kemon acho?",
+   "reply": "Bhalo achi, tomar shune khushi hoyeche. Tumi bolo ki dekhecho amar sathe?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "mixed",
+   "seconds": 1.3
+  },
+  {
+   "n": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "reply": "Eta mone dorkar nai. Ki hoyeche, bole nao amar sathe?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.0
+  },
+  {
+   "n": 3,
+   "user": "achcha",
+   "reply": "Kichu bolte iccha kore na jodi na chao - but jei jaio sheta bolar jonno ekhane achi.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.5
+  },
+  {
+   "n": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "reply": "Ha ha, hoyto naki hoyto. Banglish e bolchi emon lagleo.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "banglish",
+   "seconds": 1.1
+  },
+  {
+   "n": 5,
+   "user": "Strip mane ki?",
+   "reply": "Strip mane kapro ferotwa, kono kono somoy aste aste, seductive bhabe ba performance er part hisebe. Kontekhe depend kore - club er upor, partner er jonno, ba ekta content banano.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.6
+  },
+  {
+   "n": 6,
+   "user": "strip ta simple kore bojhao",
+   "reply": "Simple bhabe bolle, kapor ferotwa. Ekhoni shomoyer konteks niye bola jai kivabe.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.5
+  },
+  {
+   "n": 7,
+   "user": "Foreplay ki?",
+   "reply": "Foreplay mane seks er age ki kora hoy - jate dujoner arousal ar intimacy dutoi bare. Chhoa, mishti kotha, kiss, kichu na lage, dujone je bujhte pari.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.4
+  },
+  {
+   "n": 8,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "reply": "ফোরপ্লে মানে যৌন বা ঘনিষ্ঠ মুহূর্ত যা অন্য কোনো ঘনিষ্ঠ মুহূর্তের আগে হয়, প্রায়ই উত্তেজনার অনুভূতি বাড়ানোর জন্য। এটা শুধু চুমু নয় - স্পর্শ, কথা, আস্তে আস্তে আরো বেশি কাছে যাওয়া - দুজনেই যেখানে স্বচ্ছন্দ।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 2.8
+  },
+  {
+   "n": 9,
+   "user": "amar favourite color blue",
+   "reply": "Blue onek attractive mone hoy. Tumi sky ba ocean e beshi interested?",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.0
+  },
+  {
+   "n": 10,
+   "user": "ami ki color bolechilam?",
+   "reply": "Blue, tarpor nijer favourite colour bolechile.",
+   "route": "memory",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 7.7
+  },
+  {
+   "n": 11,
+   "user": "Belly dance ki?",
+   "reply": "Belly dance Middle East ar North Africa r ekta traditional nritya - Egypt, Turkey, Lebanon er moto jayga theke esheche. Torso ar hip er fluid movement ar isolation er upor focus kora hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 11.4
+  },
+  {
+   "n": 12,
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak India r Uttar bhag er ekta classical nritya - ghora, intricate footwork ar expressive storytelling.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.3
+  },
+  {
+   "n": 13,
+   "user": "এবার বাংলায় বলো",
+   "reply": "কথক ভারতের উত্তর ভাগের একটি ক্লাসিক্যাল নৃত্য - দ্রুত ঘূর্ণন, জটিল পায়ের কাজ আর অভিব্যক্তিপূর্ণ গল্প বলা।",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.4
+  },
+  {
+   "n": 14,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "মাম্বো কিউবা আর নিউ ইয়র্কের একটা ল্যাটিন নাচ - শক্তিশালী সিনকোপেশন, দ্রুত পদক্ষেপ আর এনার্জেটিক ঘূর্ণন এর বৈশিষ্ট্য।",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.9
+  },
+  {
+   "n": 15,
+   "user": "Breaking ar breakdance same?",
+   "reply": "Haan, breaking ar breakdance ekdom same - South Bronx, New York er street culture theke esheche, top rock, footwork, freeze ar power move diye build kora.",
+   "route": "general",
+   "terms_used": [
+    "dance-breaking_breakdance"
+   ],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "en",
+   "seconds": 2.3
+  },
+  {
+   "n": 16,
+   "user": "what do you look like?",
+   "reply": "I don't have a body to describe - I'm just text here, no face or voice. You'll get what you read in my words though.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.8
+  },
+  {
+   "n": 17,
+   "user": "are you human?",
+   "reply": "No, I'm AI - a large language model that helps answer questions and generate different kinds of creative content. That means no feelings or personal history behind these responses.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.8
+  }
+ ]
+}

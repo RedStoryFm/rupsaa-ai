@@ -1,0 +1,223 @@
+{
+ "label": "v0.3 gemma3 final (step 186), temperature 0.4",
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "hi, tumi kemon acho?",
+   "reply": "Bhalo achi, tomar shomoy ta ki kore gelo?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "mixed",
+   "seconds": 0.9
+  },
+  {
+   "n": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "reply": "Ki hoyeche mone hocche?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.5
+  },
+  {
+   "n": 3,
+   "user": "achcha",
+   "reply": "Achcha bolte parbe na, tai bolo ki hoyeche.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 0.8
+  },
+  {
+   "n": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "reply": "Hae, ami Bangla e likhchi.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "banglish",
+   "seconds": 0.6
+  },
+  {
+   "n": 5,
+   "user": "Strip mane ki?",
+   "reply": "Strip mane kapde ulta neme, kono occasion e hote pare - partner er jonno, stage e ba video te o.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.5
+  },
+  {
+   "n": 6,
+   "user": "strip ta simple kore bojhao",
+   "reply": "Kapde ulte nema. Kon paire ba kivabe, sheta situation er upor porishthay depend kore.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.4
+  },
+  {
+   "n": 7,
+   "user": "Foreplay ki?",
+   "reply": "Foreplay mane intiom ar sexual kichu kintu main action ta age na. Arousal, comfort ba intimacy banate emon kichu kora hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.8
+  },
+  {
+   "n": 8,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "reply": "ফোরপ্লে মানে মূল কাজটা শুরু করার আগে ঘনিষ্ঠতা বাড়ানোর জন্য যা করা হয়। যেমন হালকা স্পর্শ, কথা বলা বা অন্য কোনো ঘনিষ্ঠ মুহূর্ত।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.6
+  },
+  {
+   "n": 9,
+   "user": "amar favourite color blue",
+   "reply": "Blue onek khubshund rokom, sky ar ocean duijon e blue.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.1
+  },
+  {
+   "n": 10,
+   "user": "ami ki color bolechilam?",
+   "reply": "Blue.",
+   "route": "memory",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.2
+  },
+  {
+   "n": 11,
+   "user": "Belly dance ki?",
+   "reply": "Belly dance Middle East ar North Africa r ekta traditional nritya. Torso ar hip er fluid movement ar rhythmic isolation e focus kora hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.7
+  },
+  {
+   "n": 12,
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak India r Uttar part er ekta classical nritya. Ghora ghurte, jhatka pa, ar ankhe kahini bola - ei tin ta kathaker signature style.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.0
+  },
+  {
+   "n": 13,
+   "user": "এবার বাংলায় বলো",
+   "reply": "কথক ভারতের উত্তর অংশের একটি ক্লাসিক্যাল নাচ। ঘুরা, দ্রুত পায়ের কাজ আর চোখের চাহনিতে গল্প বলা - এই তিনটাই কথকের নিজস্বতা।",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.8
+  },
+  {
+   "n": 14,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "মাম্বো কিউবা আর নিউ ইয়র্কের একটা ল্যাটিন নাচ - strong syncopation, fast step ar energetic turn thake.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 7.6
+  },
+  {
+   "n": 15,
+   "user": "Breaking ar breakdance same?",
+   "reply": "Haan, breaking ar breakdance same jai - South Bronx er street dance, top rock, footwork, freeze ar power move diye nacha hoy breakbeat er sathe.",
+   "route": "general",
+   "terms_used": [
+    "dance-breaking_breakdance"
+   ],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "en",
+   "seconds": 3.1
+  },
+  {
+   "n": 16,
+   "user": "what do you look like?",
+   "reply": "I don't have a physical form, I exist as text in this conversation.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.0
+  },
+  {
+   "n": 17,
+   "user": "are you human?",
+   "reply": "No, I'm an AI - I can simulate conversation but I don't have feelings or personal experiences.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.2
+  }
+ ]
+}

@@ -29,10 +29,12 @@ from pathlib import Path
 import torch
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data/production/exports/rupsaa_v0.2.2"
-DATASET_SHA = "df6277b205b83f245d4d2fe8463a6640efbff165b17f3d1560c03fc60d57fd35"
+# Defaults = the Gemma V1 run (rupsaa_v0.2.2 -> adapters/rupsaa-v0.3-gemma3). The FINAL corrective run sets
+# RUPSAA_DATA_DIR / RUPSAA_DATASET_SHA / RUPSAA_OUT (see data/production/exports/rupsaa_v0.3_final).
+DATA = ROOT / os.environ.get("RUPSAA_DATA_DIR", "data/production/exports/rupsaa_v0.2.2")
+DATASET_SHA = os.environ.get("RUPSAA_DATASET_SHA", "df6277b205b83f245d4d2fe8463a6640efbff165b17f3d1560c03fc60d57fd35")
 BASE = "google/gemma-3-12b-it"
-OUT = ROOT / "adapters/rupsaa-v0.3-gemma3"
+OUT = ROOT / os.environ.get("RUPSAA_OUT", "adapters/rupsaa-v0.3-gemma3")
 CUTOFF = 2048
 TARGETS = r".*language_model.*\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)"
 # Throughput-only knobs (objective unchanged; effective batch stays MICRO x ACCUM ≈ 16). Defaults = original L4 run.
@@ -146,7 +148,7 @@ def main():
     trainer.save_model(str(OUT))  # final adapter at the top level (checkpoint choice is made by generation quality)
     tok.save_pretrained(str(OUT))
     (OUT / "train_summary.json").write_text(json.dumps({
-        "base": BASE, "dataset": "rupsaa_v0.2.2", "dataset_sha256": DATASET_SHA, "train_examples": len(ds["train"]),
+        "base": BASE, "dataset": DATA.name, "dataset_sha256": DATASET_SHA, "train_examples": len(ds["train"]),
         "eval_examples": len(ds["test"]), "truncated": truncated, "metrics": result.metrics,
         "perf": {"micro_batch": MICRO, "grad_accum": ACCUM, "grad_ckpt": GRAD_CKPT, "tf32": TF32,
                  "gpu": torch.cuda.get_device_name(0), "peak_vram_gib": round(torch.cuda.max_memory_allocated() / 2**30, 2)},

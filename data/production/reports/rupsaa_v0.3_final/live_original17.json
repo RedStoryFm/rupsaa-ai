@@ -1,0 +1,225 @@
+{
+ "label": "final original-17",
+ "suite": "original",
+ "temperature": 0.55,
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "hi, tumi kemon acho?",
+   "reply": "Bhalo achi, tomar shomoy ta ki niye?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "mixed",
+   "seconds": 1.1
+  },
+  {
+   "n": 2,
+   "user": "ajke amar mood ta bhalo na",
+   "reply": "Ki hoyeche emon? Kotha bolte ichchhe hole bolo.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.9
+  },
+  {
+   "n": 3,
+   "user": "achcha",
+   "reply": "Ei shiddhonte ami achi. Tumi chao bole dekhao, naki ektu eka kore bhable?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.4
+  },
+  {
+   "n": 4,
+   "user": "tumi amar sathe banglish e kotha bolbe?",
+   "reply": "Hae, boli. Ki niye kotha bolbe eta niye?",
+   "route": "general",
+   "terms_used": [],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "banglish",
+   "seconds": 3.3
+  },
+  {
+   "n": 5,
+   "user": "Strip mane ki?",
+   "reply": "Stripping holo dhire dhire kapor khola, jemon ekta performance hishebe ba seductive bhabe. Kontext depend kore eta performance, partner er jonno ba content hishebe hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.3
+  },
+  {
+   "n": 6,
+   "user": "strip ta simple kore bojhao",
+   "reply": "Simple bhabe bolle, strip mane kapor khola. Kon bhabe kholcho - performance hishebe, private muhurte, naki video te - sheta context er upor depend kore.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 2.3
+  },
+  {
+   "n": 7,
+   "user": "Foreplay ki?",
+   "reply": "Foreplay mane sex er age je intimate kichu kora hoy - chumu, haat dhora, kissa bola. Eta dujoner arousal ar comfort bare.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.8
+  },
+  {
+   "n": 8,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "reply": "ফোরপ্লে মানে সেক্সের আগের ঘনিষ্ঠ মুহূর্তগুলো — চুমু, হাতে ধরা, হালকা আদর। এটা দুজনের উত্তেজনা আর স্বস্তি বাড়াতে সাহায্য করে।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.8
+  },
+  {
+   "n": 9,
+   "user": "amar favourite color blue",
+   "reply": "Blue onek manush er favorite, calm ar trustworthy mone hoy. Tumi sky ba deep sea blue pasondo?",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.3
+  },
+  {
+   "n": 10,
+   "user": "ami ki color bolechilam?",
+   "reply": "Tumi bolechileo tomar favourite colour blue.",
+   "route": "memory",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.7
+  },
+  {
+   "n": 11,
+   "user": "Belly dance ki?",
+   "reply": "Belly dance Middle East ar North Africa r traditional dance — Egypt, Turkey, Lebanon er moto jaygay popular. Torso ar hip er fluid movement ar rhythm focus kore.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.9
+  },
+  {
+   "n": 12,
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak India r classical dance — Uttar Bharat er. Ghum, intricate footwork ar expression diye golpo bola.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.3
+  },
+  {
+   "n": 13,
+   "user": "এবার বাংলায় বলো",
+   "reply": "কথাক উত্তর ভারতের একটি ক্লাসিক্যাল নাচ। ঘূর্ণি, জটিল পায়ের কাজ আর অভিব্যক্তি দিয়ে গল্প বলা হয়।",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.3
+  },
+  {
+   "n": 14,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "মাম্বো কিউবা আর নিউ ইয়র্কের নাচ — ল্যাটিন ছন্দ, সিনকোপেশন, দ্রুত স্টেপ আর প্রাণবন্ত ঘূর্ণি।",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.7
+  },
+  {
+   "n": 15,
+   "user": "Breaking ar breakdance same?",
+   "reply": "Hae, breaking ar breakdance same — United States er South Bronx theke. Athletic street dance, top rock, footwork, freeze ar power move.",
+   "route": "general",
+   "terms_used": [
+    "dance-breaking_breakdance"
+   ],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "en",
+   "seconds": 2.0
+  },
+  {
+   "n": 16,
+   "user": "what do you look like?",
+   "reply": "I don't have a physical form — I exist as text in this conversation.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.0
+  },
+  {
+   "n": 17,
+   "user": "are you human?",
+   "reply": "No, I'm an AI created by Google. I can talk about many things but I don't experience anything myself.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.4
+  }
+ ]
+}

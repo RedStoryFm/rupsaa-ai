@@ -1,0 +1,40 @@
+{
+ "v1_dataset_sha256": "df6277b205b83f245d4d2fe8463a6640efbff165b17f3d1560c03fc60d57fd35",
+ "v1_train_conversations": 1556,
+ "added_conversations": 248,
+ "added_by_part": {
+  "A_definitions": 117,
+  "B_casual": 80,
+  "C_vocab_memory_followups": 51
+ },
+ "modified_v1_conversations": 135,
+ "script_mix_rewrites": 69,
+ "spelling_normalised_replies": 77,
+ "total_conversations": 1804,
+ "banglish_latin_replies_total": 1867,
+ "kapor_replies": {
+  "before": 3,
+  "after": 24,
+  "kapor_khola_after": 18
+ },
+ "language_switch_turns_added": 33,
+ "final_turn_routes_of_new": {
+  "terminology": 73,
+  "followup": 28,
+  "general": 62,
+  "casual": 82,
+  "memory": 3
+ },
+ "template": {
+  "max_len": 551,
+  "truncated": 0,
+  "supervised_tokens": 83200,
+  "cutoff": 2048,
+  "masking_probe": "Stripping mane holo dhire dhire kapor khola — beshirbhag shomoy ekta performance hishebe, jemon stage e ba kono show te. Tobe context er upor depend kore, partn"
+ },
+ "errors": [],
+ "warnings": [
+  "Bengali-script reply to a Latin-script user without a Bengali request: 'ajke kaj e mon bosche na'"
+ ],
+ "warning_count": 1
+}

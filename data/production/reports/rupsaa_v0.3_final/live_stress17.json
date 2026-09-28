@@ -1,0 +1,220 @@
+{
+ "label": "final banglish stress",
+ "suite": "stress",
+ "temperature": 0.55,
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "hi, tumi kemon acho?",
+   "reply": "Bhalo achi! Tomar din ki niye cholche?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "mixed",
+   "seconds": 0.8
+  },
+  {
+   "n": 2,
+   "user": "ajke amar mood bhalo na",
+   "reply": "Ki hoyeche? Bolo, shunbo.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.6
+  },
+  {
+   "n": 3,
+   "user": "mon ta kharap",
+   "reply": "Kharap mood e thaka shokto. Ki dhoroner feeling eta - duhkho, oboshesh, naki emon kichu?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.7
+  },
+  {
+   "n": 4,
+   "user": "achcha",
+   "reply": "Emon shomoy nijer jonno kichu bhalo korcho? Gaan chhowa, ba ekta ghonta phone nao?",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 20.6
+  },
+  {
+   "n": 5,
+   "user": "ki korcho?",
+   "reply": "Ami okhane achi, jodi kono jaygay jigges korechile bolo.",
+   "route": "casual",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.1
+  },
+  {
+   "n": 6,
+   "user": "tumi amar sathe Banglish e kotha bolbe?",
+   "reply": "Hae, Banglish e boli. Ekhon theke Banglish e likhchi.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [
+    "rupsaa_identity.md",
+    "rupsaa_identity.md"
+   ],
+   "language": "banglish",
+   "seconds": 1.2
+  },
+  {
+   "n": 7,
+   "user": "Strip mane ki?",
+   "reply": "Strip er moto ekta show jekhane manush dhire dhire kapor khola jai, attractive bhabe. Eta stage e, club e, ba video te hoy.",
+   "route": "terminology",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.0
+  },
+  {
+   "n": 8,
+   "user": "strip ta simple kore bojhao",
+   "reply": "Simple korte gele, strip mane dhire dhire kapor khola, entertainment ar attraction create korar jonno.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 2.3
+  },
+  {
+   "n": 9,
+   "user": "Strip mane ki? Banglish e bolo.",
+   "reply": "Striper mote ekta show jekhane manush dhire dhire kapor khola jai, attractive bhabe. Eta stage e, club e, ba video te hoy.",
+   "route": "followup",
+   "terms_used": [
+    "term-strip_stripping"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 3.0
+  },
+  {
+   "n": 10,
+   "user": "kapor khola mane ki?",
+   "reply": "Kapor khola mane dhire dhire kapor off kora, performance er part hishebei.",
+   "route": "terminology",
+   "terms_used": [],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.2
+  },
+  {
+   "n": 11,
+   "user": "Foreplay mane ki?",
+   "reply": "Foreplay holo sex er age ki hoi - kiss, cuddle, ba onno romantic moment, dujon ke ready korar jonno.",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 2.6
+  },
+  {
+   "n": 12,
+   "user": "eta easy kore bojhao",
+   "reply": "Easy kore bolo, foreplay holo sex er age dujoner modhhe jorie, jate dujonei comfortable ar excited lage.",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.6
+  },
+  {
+   "n": 13,
+   "user": "Belly dance ki?",
+   "reply": "Belly dance Middle East ar North Africa er traditional nach - torso ar komorer fluid movement, rhythm diye control kora.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-belly_dance"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.4
+  },
+  {
+   "n": 14,
+   "user": "Kathak kothakar dance?",
+   "reply": "Kathak Bharat er Uttar bhag er classical dance - ghurano, intricate footwork ar kahini bola.",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "en",
+   "seconds": 1.3
+  },
+  {
+   "n": 15,
+   "user": "eta Banglish e bolo",
+   "reply": "Kathak India er Uttar bhag er classical dance — ghurnai, intricate footwork ar expressibo golpo bola.",
+   "route": "followup",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 1.4
+  },
+  {
+   "n": 16,
+   "user": "amar favourite color blue",
+   "reply": "Blue onek shundor colour. Sky ar sea r rong.",
+   "route": "general",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.8
+  },
+  {
+   "n": 17,
+   "user": "ami ki color bolechilam?",
+   "reply": "Blue. Tumi bolechilo tomar favorite color blue.",
+   "route": "memory",
+   "terms_used": [],
+   "sources": [],
+   "language": "banglish",
+   "seconds": 0.7
+  }
+ ]
+}

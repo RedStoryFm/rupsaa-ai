@@ -1,0 +1,79 @@
+{
+ "label": "final bengali",
+ "suite": "bengali",
+ "temperature": 0.55,
+ "model_info": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "model_info_before": {
+  "base_model_id": "google/gemma-3-12b-it",
+  "adapter_path": "rupsaa-v0.3-gemma3-final",
+  "quantized": true,
+  "device": "cuda:0",
+  "adapter_loaded": true,
+  "configured_adapter_path": "rupsaa-v0.3-gemma3-final",
+  "configured_adapter_exists": true,
+  "prompt_version": "v0.2",
+  "adapter_name": "rupsaa-v0.3-gemma3-final",
+  "environment": "production"
+ },
+ "turns": [
+  {
+   "n": 1,
+   "user": "ফোরপ্লে কী?",
+   "reply": "ফোরপ্লে মানে যৌন সম্পর্কের আগের মুহূর্তগুলো - চুমু, ছোঁয়া, কথা বলা, যা উত্তেজনা আর ঘনিষ্ঠতা বাড়ায়।",
+   "route": "terminology",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.6
+  },
+  {
+   "n": 2,
+   "user": "এটা বাংলায় সহজ করে বুঝিয়ে বলো",
+   "reply": "ফোরপ্লে মানে মূল কাজের আগে হালকাভাবে চাওয়া - হাতে হাত ধরা, চুমু দেওয়া, গল্প করা - যাতে দুজনেরই আগ্রহ বাড়ে।",
+   "route": "followup",
+   "terms_used": [
+    "term-foreplay"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.6
+  },
+  {
+   "n": 3,
+   "user": "কথক কোথাকার নাচ?",
+   "reply": "উত্তর ভারতের, ভারতে। এটা ভারতীয় শাস্ত্রীয় নাচের একটা ধারা — দ্রুত ঘূর্ণি, জটিল পায়ের কাজ আর গল্পের মাধ্যমে প্রকাশ।",
+   "route": "terminology",
+   "terms_used": [
+    "dance-kathak"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 1.4
+  },
+  {
+   "n": 4,
+   "user": "মাম্বো কোথাকার নাচ?",
+   "reply": "মাম্বো কিউবার — ল্যাটিন নাচ, যেখানে তালে জোর দেওয়া হয়, দ্রুত পদক্ষেপ আর প্রাণবন্ত ঘূর্ণি থাকে। নিউ ইয়র্কও এর বিকাশে ভূমিকা রেখেছে।",
+   "route": "terminology",
+   "terms_used": [
+    "dance-mambo"
+   ],
+   "sources": [],
+   "language": "bn",
+   "seconds": 2.0
+  }
+ ]
+}
