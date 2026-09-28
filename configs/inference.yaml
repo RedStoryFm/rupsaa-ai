@@ -3,7 +3,8 @@
 
 generation:
   max_new_tokens: 512
-  temperature: 0.8
+  # 0.55 = the serving temperature Rupsaa Gemma FINAL passed its live evaluation with (V0.3 final report).
+  temperature: 0.55
   top_p: 0.9
   top_k: 50
   repetition_penalty: 1.1

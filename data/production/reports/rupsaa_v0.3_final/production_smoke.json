@@ -1,0 +1,142 @@
+{
+  "pass": true,
+  "hard_pass": true,
+  "quality_pass": true,
+  "checks": [
+    {
+      "check": "health",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "model_loaded": true,
+        "terminology_entries": 40,
+        "dance_entries": 60,
+        "environment": "production"
+      }
+    },
+    {
+      "check": "ready (model loaded)",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "model_loading": false,
+        "model_error": false
+      }
+    },
+    {
+      "check": "model/info: adapter loaded + quantized",
+      "pass": true,
+      "detail": {
+        "base_model_id": "google/gemma-3-12b-it",
+        "adapter_name": "rupsaa-v0.3-gemma3-final",
+        "prompt_version": "v0.2",
+        "device": "cuda:0",
+        "environment": "production"
+      }
+    },
+    {
+      "check": "model/info: expected adapter",
+      "pass": true,
+      "detail": "rupsaa-v0.3-gemma3-final"
+    },
+    {
+      "check": "model/info: expected prompt version",
+      "pass": true,
+      "detail": "v0.2"
+    },
+    {
+      "check": "model/info: no server paths exposed",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "chat: English",
+      "pass": true,
+      "detail": "Pretty good, just enjoying the quiet. Yours?"
+    },
+    {
+      "check": "chat: Banglish",
+      "pass": true,
+      "detail": "Kotha bolbo naki ekta korechilo ekhon porishkar koro?"
+    },
+    {
+      "check": "chat: Bengali",
+      "pass": true,
+      "detail": "মোটামুটি। তুমি বলো তো, তোমারটা কেমন যাচ্ছে?"
+    },
+    {
+      "check": "memory: same conversation + memory route",
+      "pass": true,
+      "detail": {
+        "route": "memory"
+      }
+    },
+    {
+      "check": "terminology retrieval",
+      "pass": true,
+      "detail": [
+        "term-strip_stripping"
+      ]
+    },
+    {
+      "check": "dance retrieval",
+      "pass": true,
+      "detail": [
+        "dance-kathak"
+      ]
+    },
+    {
+      "check": "owner: list rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: dance list rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: /rag/reindex rejected without key",
+      "pass": true,
+      "detail": 401
+    },
+    {
+      "check": "owner: authorized read-only call",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "count": 2
+      }
+    },
+    {
+      "check": "conversation reset",
+      "pass": true,
+      "detail": {
+        "old": "5cb8e244-d684-4bf8-9657-6bfdf1e7d8b2",
+        "new": "31bc4bf9-74c0-4679-9f35-6302f8655a0c"
+      }
+    }
+  ],
+  "quality_checks": [
+    {
+      "check": "chat: English reply in Latin script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "chat: Banglish reply in Latin script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "chat: Bengali reply in Bengali script",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "memory: reply recalls the fact",
+      "pass": true,
+      "detail": "Shiuli."
+    }
+  ]
+}
