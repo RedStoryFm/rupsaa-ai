@@ -71,6 +71,7 @@
     "repo_id": "rstudioModel/rupsaa",
     "subfolder": "rupsaa-v0.3-gemma3-final",
     "revision": "rupsaa-v0.3-gemma3-final",
-    "uploaded": false
+    "uploaded": true,
+    "verified_remote_sha256": "3c79e394578261cdb04033867a9d6a96bb20784d5b0fc9d78d20e1b057724f05"
   }
 }
