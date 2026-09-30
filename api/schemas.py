@@ -12,6 +12,29 @@ class ChatRequest(BaseModel):
     temperature: float | None = Field(default=None, ge=0.0, le=2.0)
     top_p: float | None = Field(default=None, gt=0.0, le=1.0)
     max_new_tokens: int | None = Field(default=None, ge=1, le=2048)
+    # Per-conversation "Internet" switch in the chat UI (off by default).
+    allow_internet: bool = False
+    # Random per-browser id for opt-in long-term memory (UUID; never a name or email).
+    user_id: str | None = Field(default=None, max_length=64)
+
+
+class WebSourceInfo(BaseModel):
+    title: str
+    url: str
+    provider: str = "wikipedia"
+
+
+class MemoryRequest(BaseModel):
+    user_id: str = Field(..., max_length=64)
+
+
+class MemoryConsentRequest(MemoryRequest):
+    enabled: bool
+
+
+class MemoryStatus(BaseModel):
+    enabled: bool
+    facts: list[str] = []
 
 
 class SourceInfo(BaseModel):
@@ -31,6 +54,9 @@ class ChatResponse(BaseModel):
     # / casual / general) and which terminology entries informed the reply.
     route: str | None = None
     terms_used: list[str] = []
+    web_sources: list[WebSourceInfo] = []
+    memory_enabled: bool | None = None
+    memory_saved: int = 0
     # Reply language the user explicitly asked for ("bn" / "banglish" / "en"); None = mirror the user.
     response_language: str | None = None
 

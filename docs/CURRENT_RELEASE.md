@@ -13,6 +13,8 @@ google/gemma-3-12b-it                  base model, 4-bit NF4, bf16 compute   (Hu
   + serving notes                      identity + conversational style       (rupsaa/personality/system_prompt.py)
   + runtime knowledge (RAG)            owner records, NOT in the LoRA        (knowledge/terminology, knowledge/dance, knowledge/documents)
   + routing / language / recall        router, language directive, same-session memory note (rupsaa/rag, rupsaa/conversation)
+  + Internet switch (per chat)         Wikipedia look-ups for questions owner knowledge can't answer (rupsaa/rag/web_search.py)
+  + opt-in long-term memory            per-browser, user-controlled (rupsaa/conversation/user_memory.py)
   + FastAPI                            127.0.0.1:8000                        (api/)
   + web UI                             port 5500; proxies /api/* to 8000     (web/)
 ```
@@ -80,6 +82,23 @@ returns `"ready":true`. Then check:
 For the full post-start check, run `python scripts/production_smoke.py`.
 
 Only **port 5500** is opened, through Lightning's port forwarding. Port 8000 stays on loopback.
+
+## Knowledge order, Internet and memory
+- **Knowledge order.** Owner records are used first: terminology and dance. Owner documents come next, then the web.
+  The web is used only when the chat's **Internet** switch is on and the message is a real general-knowledge
+  question. Greetings, questions about Rupsaa or the user, memory questions and follow-ups never go to the web.
+- **What leaves the server.** Only the cleaned question does (e.g. "Taj Mahal kothay?" → `Taj Mahal`).
+  Chat history and memory are never sent. Results go into the prompt as *untrusted* facts-only text, and sources
+  appear under the reply as links. `RUPSAA_WEB_SEARCH_PROVIDER=none` turns web access off for the whole server.
+- **Memory is off by default.** The user turns it on in the **Memory** dialog. The browser keeps a random
+  ID; there is no login. Once memory is on, Rupsaa stores only:
+  - self-statements (name, where the user lives, favourites, likes, work, study, pets, birthday)
+  - things the user explicitly asks her to remember ("mone rekho …")
+- **Reading and deleting memory.**
+  - The Memory dialog lists what Rupsaa has stored.
+  - Asking "what do you remember about me?" / "amar bishoye ki jano?" makes her answer from it.
+  - "Forget everything", turning memory off, or "amake bhule jao" deletes it immediately.
+  - The data lives in `data/user_memory/`, one file per SHA-256-hashed ID, and is git-ignored.
 
 ## Owner tools
 - Chat: `<5500 URL>/`

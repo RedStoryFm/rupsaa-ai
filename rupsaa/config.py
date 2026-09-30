@@ -107,6 +107,13 @@ class Settings(BaseSettings):
     # In-memory conversations: at most this many, dropped after this many idle minutes.
     max_conversations: int = Field(default=5000, validation_alias=AliasChoices("RUPSAA_MAX_CONVERSATIONS"))
     conversation_idle_minutes: int = Field(default=360, validation_alias=AliasChoices("RUPSAA_CONVERSATION_IDLE_MINUTES"))
+    # Web knowledge: used only when the user switches "Internet" on for a conversation. "none" disables it
+    # server-wide. Only the cleaned question is sent (never chat history).
+    web_search_provider: str = Field(default="wikipedia", validation_alias=AliasChoices("RUPSAA_WEB_SEARCH_PROVIDER"))
+    web_search_timeout: float = Field(default=6.0, validation_alias=AliasChoices("RUPSAA_WEB_SEARCH_TIMEOUT"))
+    # Opt-in persistent user memory (per browser/device id). Never committed to git.
+    user_memory_dir: str = Field(default="data/user_memory", validation_alias=AliasChoices("RUPSAA_USER_MEMORY_DIR"))
+    user_memory_max_facts: int = Field(default=50, validation_alias=AliasChoices("RUPSAA_USER_MEMORY_MAX_FACTS"))
 
     @property
     def is_production(self) -> bool:

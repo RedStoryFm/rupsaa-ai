@@ -25,6 +25,9 @@ from rupsaa.rag.context_builder import build_turn_knowledge
 from rupsaa.rag.dance import DanceStore
 from rupsaa.rag.pipeline import RagPipeline
 from rupsaa.rag.terminology import TerminologyStore
+from rupsaa.conversation import user_memory as um
+from rupsaa.rag import web_search
+from rupsaa.rag.router import classify_message, is_smalltalk
 
 logger = logging.getLogger("rupsaa.api.services")
 
@@ -80,6 +83,26 @@ class RupsaaService:
         self._generate_lock = threading.Lock()
         self._preload_thread: threading.Thread | None = None
         self.load_error: str | None = None
+        self._user_memory: um.UserMemoryStore | None = None
+        self._web_provider = None
+        self._web_provider_loaded = False
+
+    @property
+    def user_memory(self) -> um.UserMemoryStore:
+        if self._user_memory is None:
+            from rupsaa.config import PROJECT_ROOT, get_settings
+
+            s = get_settings()
+            d = Path(s.user_memory_dir)
+            self._user_memory = um.UserMemoryStore(d if d.is_absolute() else PROJECT_ROOT / d, s.user_memory_max_facts)
+        return self._user_memory
+
+    @property
+    def web_provider(self):
+        if not self._web_provider_loaded:
+            self._web_provider = web_search.get_provider()
+            self._web_provider_loaded = True
+        return self._web_provider
 
     @property
     def engine(self) -> RupsaaEngine:
@@ -175,6 +198,8 @@ class RupsaaService:
         temperature: float | None,
         top_p: float | None,
         max_new_tokens: int | None,
+        allow_internet: bool = False,
+        user_id: str | None = None,
     ) -> dict:
         started = time.monotonic()
         from rupsaa.config import get_settings
@@ -214,6 +239,39 @@ class RupsaaService:
                     len(knowledge.sources), knowledge.language)
         retrieved_context, sources = knowledge.retrieved_context, knowledge.sources
 
+        # --- opt-in long-term memory (per browser id) -------------------------------------------------------------
+        memory_enabled, memory_saved, memory_text = None, 0, None
+        if um.valid_user_id(user_id):
+            store = self.user_memory
+            if um.is_forget_request(message):
+                was_on = store.get(user_id).consent
+                store.forget(user_id)
+                memory_enabled, memory_text = False, (um.memory_note(um.UserMemory(), forgotten=True) if was_on else None)
+            else:
+                memory_saved = store.remember(user_id, um.extract_facts(message))
+                mem = store.get(user_id)
+                memory_enabled = mem.consent
+                memory_text = um.memory_note(mem, recall=um.is_recall_request(message))
+        conversation_note = "\n\n".join(x for x in (memory_text, knowledge.conversation_note) if x) or None
+
+        # --- web knowledge (only with the conversation's Internet switch on) ---------------------------------------
+        web_context, web_sources = None, []
+        owner_found = bool(knowledge.terms_used or retrieved_context)
+        if web_search.should_search(allow_internet=allow_internet and self.web_provider is not None,
+                                    route=knowledge.route, message=message, owner_knowledge_found=owner_found,
+                                    smalltalk=is_smalltalk(message)) and not um.is_recall_request(message):
+            if not use_rag:  # owner documents first, even when the knowledge-base switch is off
+                try:
+                    retrieved_context, sources = self.rag_pipeline.query(message, strict=True)
+                except Exception:  # noqa: BLE001 — documents are optional here
+                    retrieved_context, sources = None, []
+            if not retrieved_context:
+                query = web_search.clean_query(message, classify_message(message).term_candidate)
+                results = self.web_provider.search(query)
+                web_context = web_search.format_web_context(results)
+                web_sources = [{"title": r.title, "url": r.url, "provider": r.provider} for r in results]
+                logger.info("web lookup: results=%d", len(results))  # never the query text
+
         history_before = [{"role": m.role, "content": m.content} for m in conversation.messages]
         engine = self.engine
         with self._generate_lock:  # one generation at a time on the single GPU; others wait their turn
@@ -222,9 +280,10 @@ class RupsaaService:
                 user_message=message,
                 retrieved_context=retrieved_context,
                 terminology_context=knowledge.terminology_context,
-                conversation_note=knowledge.conversation_note,
+                conversation_note=conversation_note,
                 language_directive=directive_for(knowledge.language_state if knowledge.language else None),
                 dance_context=knowledge.dance_context,
+                web_context=web_context,
                 generation_overrides={
                     "temperature": temperature,
                     "top_p": top_p,
@@ -262,6 +321,9 @@ class RupsaaService:
             "route": knowledge.route,
             "terms_used": knowledge.terms_used,
             "response_language": knowledge.language,
+            "web_sources": web_sources,
+            "memory_enabled": memory_enabled,
+            "memory_saved": memory_saved,
         }
 
     def _prune_side_state(self) -> None:

@@ -23,6 +23,9 @@ from api.schemas import (
     ChatRequest,
     ChatResponse,
     HealthResponse,
+    MemoryConsentRequest,
+    MemoryRequest,
+    MemoryStatus,
     ModelInfo,
     ReindexResponse,
     ResetRequest,
@@ -137,11 +140,44 @@ async def chat(request: ChatRequest, http_request: Request, service: RupsaaServi
             temperature=request.temperature,
             top_p=request.top_p,
             max_new_tokens=request.max_new_tokens,
+            allow_internet=request.allow_internet,
+            user_id=request.user_id,
         )
     except Exception:
         logger.exception("Chat generation failed")
         raise HTTPException(status_code=500, detail="Generation failed. See server logs.")
     return ChatResponse(**result)
+
+
+def _memory_user(request: MemoryRequest, http_request: Request) -> str:
+    from rupsaa.conversation.user_memory import valid_user_id
+
+    if chat_limiter.enabled and chat_limiter.check(client_key(http_request)) is not None:
+        raise HTTPException(status_code=429, detail="Too many requests — slow down a little.")
+    if not valid_user_id(request.user_id):
+        raise HTTPException(status_code=400, detail="invalid user_id")
+    return request.user_id
+
+
+@app.post("/memory/status", response_model=MemoryStatus)
+async def memory_status(request: MemoryRequest, http_request: Request,
+                        service: RupsaaService = Depends(get_service)) -> MemoryStatus:
+    mem = service.user_memory.get(_memory_user(request, http_request))
+    return MemoryStatus(enabled=mem.consent, facts=[f["text"] for f in mem.facts])
+
+
+@app.post("/memory/consent", response_model=MemoryStatus)
+async def memory_consent(request: MemoryConsentRequest, http_request: Request,
+                         service: RupsaaService = Depends(get_service)) -> MemoryStatus:
+    mem = service.user_memory.set_consent(_memory_user(request, http_request), request.enabled)
+    return MemoryStatus(enabled=mem.consent, facts=[f["text"] for f in mem.facts])
+
+
+@app.post("/memory/forget", response_model=MemoryStatus)
+async def memory_forget(request: MemoryRequest, http_request: Request,
+                        service: RupsaaService = Depends(get_service)) -> MemoryStatus:
+    service.user_memory.forget(_memory_user(request, http_request))
+    return MemoryStatus(enabled=False, facts=[])
 
 
 @app.post("/rag/reindex", response_model=ReindexResponse)

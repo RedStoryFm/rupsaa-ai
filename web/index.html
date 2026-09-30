@@ -20,10 +20,15 @@
         </div>
       </div>
       <div class="topbar-actions">
-        <label class="rag-toggle">
+        <label class="rag-toggle" title="Use Rupsaa's knowledge base">
           <input type="checkbox" id="rag-toggle">
-          <span>Use knowledge base</span>
+          <span class="lbl-full">Use knowledge base</span><span class="lbl-short" aria-hidden="true">📚</span>
         </label>
+        <label class="rag-toggle" title="Let Rupsaa look things up online (Wikipedia) in this chat. Off by default; resets with New chat.">
+          <input type="checkbox" id="web-toggle">
+          <span class="lbl-full">Internet</span><span class="lbl-short" aria-hidden="true">🌐</span>
+        </label>
+        <button id="memory-btn" class="topbar-btn" title="Memory: what Rupsaa remembers about you" aria-haspopup="dialog">Memory</button>
         <button id="reset-btn" title="Start a new chat" aria-label="Start a new chat">New chat</button>
       </div>
     </header>
@@ -52,6 +57,21 @@
       <button id="send-btn" aria-label="Send message">➤</button>
     </footer>
   </div>
+
+  <dialog id="memory-dialog" class="memory-dialog" aria-labelledby="memory-title">
+    <h2 id="memory-title">Memory</h2>
+    <p class="memory-help">When on, Rupsaa remembers things you tell her about yourself (your name, where you live, what you like) across chats on this browser. Off by default. Turning it off deletes everything.</p>
+    <label class="memory-switch"><input type="checkbox" id="memory-toggle"> <span>Remember me across chats</span></label>
+    <div class="memory-list-wrap">
+      <div class="memory-list-title">What Rupsaa remembers</div>
+      <ul id="memory-list" class="memory-list"></ul>
+      <p id="memory-empty" class="memory-empty">Nothing saved.</p>
+    </div>
+    <div class="memory-actions">
+      <button type="button" id="memory-forget" class="danger-btn">Forget everything</button>
+      <button type="button" id="memory-close">Close</button>
+    </div>
+  </dialog>
 
   <script src="config.js"></script>
   <script src="app.js"></script>

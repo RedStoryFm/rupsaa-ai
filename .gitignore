@@ -93,3 +93,6 @@ nohup.out
 /run/
 # Owner knowledge backups (scripts/backup_knowledge.sh) — copy them off the server
 /backups/
+
+# Opt-in user memory (personal data) — never committed
+data/user_memory/

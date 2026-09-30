@@ -222,3 +222,8 @@ def classify_message(message: str) -> RouteDecision:
     # Terminology here is whole-phrase containment only ("foreplay niye detail e bojhao").
     return RouteDecision(Route.GENERAL, "no strong knowledge signal", use_documents=True, strict_documents=True,
                          use_terminology=True)
+
+
+def is_smalltalk(message: str) -> bool:
+    """Greeting / mood / small talk (the casual patterns), as opposed to a short factual question."""
+    return bool(_CASUAL_RE.search(message.strip()))

@@ -10,6 +10,14 @@
   const sendBtn = document.getElementById("send-btn");
   const resetBtn = document.getElementById("reset-btn");
   const ragToggle = document.getElementById("rag-toggle");
+  const webToggle = document.getElementById("web-toggle");
+  const memoryBtn = document.getElementById("memory-btn");
+  const memoryDialog = document.getElementById("memory-dialog");
+  const memoryToggle = document.getElementById("memory-toggle");
+  const memoryList = document.getElementById("memory-list");
+  const memoryEmpty = document.getElementById("memory-empty");
+  const memoryForget = document.getElementById("memory-forget");
+  const memoryClose = document.getElementById("memory-close");
   const statusLine = document.getElementById("status-line");
   const errorBanner = document.getElementById("error-banner");
   const charCounter = document.getElementById("char-counter");
@@ -22,6 +30,20 @@
   let rateLimitedUntil = 0;
   let countdownTimer = null;
   let healthPollTimer = null;
+  let memoryEnabled = false;
+
+  // Random per-browser id for opt-in memory (never a name/email). Kept in localStorage when available.
+  const userId = (function () {
+    const make = () => (window.crypto && crypto.randomUUID ? crypto.randomUUID()
+      : "xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx".replace(/x/g, () => ((Math.random() * 16) | 0).toString(16)));
+    try {
+      let id = localStorage.getItem("rupsaa_user_id");
+      if (!id) { id = make(); localStorage.setItem("rupsaa_user_id", id); }
+      return id;
+    } catch (e) {
+      return make();
+    }
+  })();
 
   function hideWelcome() {
     welcomeEl.hidden = true;
@@ -41,7 +63,7 @@
     messagesEl.scrollTop = messagesEl.scrollHeight;
   }
 
-  function appendBubble(role, text, sources) {
+  function appendBubble(role, text, sources, extra) {
     const row = document.createElement("div");
     row.className = `bubble-row ${role}`;
 
@@ -56,6 +78,27 @@
       src.textContent =
         "Sources: " + sources.map((s) => `${s.source_filename} (${s.score})`).join(", ");
       bubble.appendChild(src);
+    }
+    if (extra && extra.webSources && extra.webSources.length > 0) {
+      const web = document.createElement("div");
+      web.className = "sources web-sources";
+      web.appendChild(document.createTextNode("🌐 "));
+      extra.webSources.forEach((w, i) => {
+        if (i > 0) web.appendChild(document.createTextNode(" · "));
+        const a = document.createElement("a");
+        a.href = /^https:\/\//.test(w.url) ? w.url : "#";
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = w.title;
+        web.appendChild(a);
+      });
+      bubble.appendChild(web);
+    }
+    if (extra && extra.memorySaved > 0) {
+      const saved = document.createElement("div");
+      saved.className = "memory-saved";
+      saved.textContent = "Saved to memory";
+      bubble.appendChild(saved);
     }
 
     if (role === "assistant") {
@@ -218,6 +261,8 @@
           message: text,
           conversation_id: conversationId,
           use_rag: ragToggle.checked,
+          allow_internet: webToggle.checked,
+          user_id: userId,
         }),
         signal: controller.signal,
       });
@@ -242,7 +287,11 @@
       const data = await res.json();
       conversationId = data.conversation_id;
       removeTypingIndicator();
-      appendBubble("assistant", data.response, data.sources);
+      appendBubble("assistant", data.response, data.sources,
+        { webSources: data.web_sources, memorySaved: data.memory_saved });
+      if (typeof data.memory_enabled === "boolean" && data.memory_enabled !== memoryEnabled) {
+        setMemoryState(data.memory_enabled);  // e.g. "amake bhule jao" in chat turned memory off
+      }
     } catch (err) {
       removeTypingIndicator();
       // Restore the failed message so the user can just hit send again — but only if they
@@ -280,6 +329,7 @@
       }
     }
     conversationId = null;
+    webToggle.checked = false;  // the Internet switch is per conversation
     [...messagesEl.children].forEach((child) => {
       if (child !== welcomeEl) child.remove();
     });
@@ -287,6 +337,58 @@
     clearError();
     inputEl.focus();
   }
+
+  function setMemoryState(enabled) {
+    memoryEnabled = enabled;
+    memoryToggle.checked = enabled;
+    memoryBtn.classList.toggle("on", enabled);
+    memoryBtn.textContent = enabled ? "Memory ✓" : "Memory";
+  }
+
+  function renderMemory(status) {
+    setMemoryState(!!status.enabled);
+    memoryList.replaceChildren(...(status.facts || []).map((f) => {
+      const li = document.createElement("li");
+      li.textContent = f;
+      return li;
+    }));
+    memoryEmpty.hidden = (status.facts || []).length > 0;
+    memoryForget.disabled = !status.enabled && !(status.facts || []).length;
+  }
+
+  async function memoryCall(path, body) {
+    const res = await fetch(`${API_URL}/memory/${path}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(Object.assign({ user_id: userId }, body || {})),
+    });
+    if (!res.ok) throw new Error(friendlyError(res.status));
+    return res.json();
+  }
+
+  async function refreshMemory() {
+    try { renderMemory(await memoryCall("status")); } catch (e) { /* memory is optional */ }
+  }
+
+  memoryBtn.addEventListener("click", async () => {
+    await refreshMemory();
+    if (typeof memoryDialog.showModal === "function") memoryDialog.showModal();
+  });
+  memoryClose.addEventListener("click", () => memoryDialog.close());
+  memoryToggle.addEventListener("change", async () => {
+    const enable = memoryToggle.checked;
+    if (!enable && !confirm("Turn memory off? Everything Rupsaa remembers about you will be deleted.")) {
+      memoryToggle.checked = true;
+      return;
+    }
+    try { renderMemory(await memoryCall("consent", { enabled: enable })); }
+    catch (e) { memoryToggle.checked = !enable; showError(`Memory: ${e.message}`); }
+  });
+  memoryForget.addEventListener("click", async () => {
+    if (!confirm("Delete everything Rupsaa remembers about you?")) return;
+    try { renderMemory(await memoryCall("forget")); } catch (e) { showError(`Memory: ${e.message}`); }
+  });
+  refreshMemory();
 
   sendBtn.addEventListener("click", sendMessage);
   resetBtn.addEventListener("click", resetConversation);

@@ -28,7 +28,7 @@ class FakeService:
             "device": "cuda:0",
         }
 
-    def chat(self, *, message, conversation_id, use_rag, temperature, top_p, max_new_tokens):
+    def chat(self, *, message, conversation_id, use_rag, temperature, top_p, max_new_tokens, allow_internet=False, user_id=None):
         return {
             "response": f"echo: {message}",
             "conversation_id": conversation_id or "generated-id",
