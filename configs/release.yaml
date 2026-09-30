@@ -14,7 +14,7 @@ hf_repo_id: "rstudioModel/rupsaa"
 # Current production release. Each release lives in its own subfolder of the
 # HF repo AND gets its own git tag there, so publishing v0.2 can never
 # overwrite v0.1.
-current_release: rupsaa-v0.1
+current_release: rupsaa-v0.3-gemma3-final
 
 releases:
   rupsaa-v0.1:
@@ -23,3 +23,12 @@ releases:
     local_adapter_path: adapters/rupsaa-v0.1
     manifest: release/rupsaa-v0.1/manifest.json
     checksums: release/rupsaa-v0.1/checksums.sha256
+  rupsaa-v0.3-gemma3-final:
+    # FINAL production adapter (Gemma 3 12B IT base). Release record prepared 2026-09-30; the HF upload waits
+    # for the owner's explicit go-ahead (repo is public; Gemma terms apply) — until then restore it from a
+    # local/backup copy with: python scripts/fetch_adapter.py --from-dir <copy of the adapter folder>
+    revision: rupsaa-v0.3-gemma3-final
+    subfolder: rupsaa-v0.3-gemma3-final
+    local_adapter_path: adapters/rupsaa-v0.3-gemma3-final
+    manifest: release/rupsaa-v0.3-gemma3-final/manifest.json
+    checksums: release/rupsaa-v0.3-gemma3-final/checksums.sha256

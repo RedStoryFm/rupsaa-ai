@@ -172,6 +172,17 @@ def check_release(check_adapter: bool) -> None:
                 f"{key} differs from the {name} release record" + ("" if "exports/" in key or "snapshots/" in key
                                                                     else " (config edited since release)"))
     ds = manifest["dataset"]
+    if "snapshot_manifest" not in ds:
+        # file-listed dataset (e.g. rupsaa_v0.3_final): sha256 of the lines '<sha256>  <file>\n' in the listed order
+        import hashlib
+        export = ROOT / ds["export_dir"]
+        missing = [f for f in ds["files"] if not (export / f).is_file()]
+        if missing:
+            fail(f"frozen dataset {ds['version']}: missing {missing}")
+            return
+        actual = hashlib.sha256("".join(f"{sha256_file(export / f)}  {f}\n" for f in ds["files"]).encode()).hexdigest()
+        (ok if actual == ds["sha256"] else fail)(f"frozen dataset {ds['version']}: sha256 {actual[:16]}…")
+        return
     snap = ROOT / Path(ds["snapshot_manifest"]).parent / "approved"
     if snap.is_dir():
         from rupsaa.dataset.schema import ConversationRecord

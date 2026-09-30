@@ -11,38 +11,20 @@ run against this codebase.
 
 ## Quick start
 
-**Current release: Rupsaa V0.1.** It's a LoRA adapter (rank 16, alpha 32, all 7 attention and MLP projection
-layers) trained with SFT + QLoRA on `Qwen/Qwen2.5-7B-Instruct`. The adapter is served in 4-bit NF4 on top of the
-base model and is never merged.
+**Current release: Rupsaa Gemma — `google/gemma-3-12b-it` + LoRA `adapters/rupsaa-v0.3-gemma3-final`**
+(adapter SHA-256 `3c79e394…724f05`, dataset `rupsaa_v0.3_final`), served in 4-bit on an NVIDIA L4 with RAG
+knowledge, routing, language control and same-session memory. **Rebuild / run / owner test:
+[docs/CURRENT_RELEASE.md](docs/CURRENT_RELEASE.md).**
 
 ```bash
-# Fresh install / restore (new Lightning Studio or any Linux + NVIDIA GPU box)
-git clone <your-github-repo-url> rupsaa-ai
-cd rupsaa-ai
-hf auth login                 # only if the Hugging Face adapter repo is private
-bash setup_rupsaa.sh
-
-# Start
-bash scripts/start_rupsaa_v01.sh
+bash scripts/setup_gemma_stack.sh                                        # once per Studio
+PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh --check
+PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh
+bash scripts/stop_rupsaa_production.sh
 ```
 
-**Open:** port **5500** only.
-
-**Verify the trained model:** send one chat message (the first one downloads and loads the base model, so it can
-take minutes), then open `<5500 URL>/api/model/info`. It should show:
-
-```json
-"adapter_loaded": true,
-"quantized": true
-```
-
-**Tools and docs:**
-- **Knowledge Manager:** `<5500 URL>/knowledge.html`. It covers documents plus the **Terminology** tab: create,
-  edit, delete, search and routing test, and **CSV/XLSX bulk import** with downloadable templates, a preview, and
-  duplicate SKIP/UPDATE.
-- **Backup, restore and release:** [docs/BACKUP_AND_RESTORE.md](docs/BACKUP_AND_RESTORE.md).
-- **Release record:** `release/rupsaa-v0.1/` (manifest, checksums, model card).
-- **Offline install check:** `python scripts/verify_installation.py`.
+Open **port 5500** only. Sections below document the full pipeline history (the Qwen V0.1–V0.2.2 work
+included); where they differ from docs/CURRENT_RELEASE.md, the latter describes what runs now.
 
 ---
 

@@ -1,0 +1,76 @@
+{
+  "release_name": "rupsaa-v0.3-gemma3-final",
+  "created_at": "2026-09-30T17:43:50.670613+00:00",
+  "base_model_id": "google/gemma-3-12b-it",
+  "code": {
+    "git_commit": "06cc65bf6b90c9fed53b2550790939f4ccf1cf46",
+    "git_remote": "https://github.com/RedStoryFm/rupsaa-ai.git"
+  },
+  "adapter": {
+    "local_path": "adapters/rupsaa-v0.3-gemma3-final",
+    "adapter_model_sha256": "3c79e394578261cdb04033867a9d6a96bb20784d5b0fc9d78d20e1b057724f05",
+    "adapter_model_bytes": 261982424,
+    "adapter_config_sha256": "5545df702403d483969880b728a5d2af4ecabefb6258410306de7ad4c0322188",
+    "peft_type": "LORA",
+    "target_modules": ".*language_model.*\\.(q_proj|k_proj|v_proj|o_proj|gate_proj|up_proj|down_proj)",
+    "published_files": [
+      "adapter_model.safetensors",
+      "adapter_config.json",
+      "train_summary.json"
+    ]
+  },
+  "training": {
+    "script": "scripts/gemma_train_qlora.py",
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "quantization": "4-bit NF4 + double quant, bf16 compute",
+    "learning_rate": 0.0001,
+    "epochs": 2,
+    "steps": 216,
+    "micro_batch": 4,
+    "grad_accum": 4,
+    "effective_batch": 16,
+    "cutoff": 2048,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "train_loss": 1.8992895594349615,
+    "eval_loss_first": 2.488,
+    "eval_loss_last": 1.892,
+    "train_examples": 1713,
+    "eval_examples": 91
+  },
+  "dataset": {
+    "version": "rupsaa_v0.3_final",
+    "sha256": "6eedeb105c5ebd069d59aca751a4df849767a192ad96944c6de79fbe87fbdc69",
+    "sha256_definition": "sha256 of the lines '<sha256>  <file>\\n' for train.jsonl, validation.jsonl, test.jsonl, corrective_holdout.jsonl, dance_holdout.jsonl",
+    "conversations": 1804,
+    "export_dir": "data/production/exports/rupsaa_v0.3_final",
+    "files": [
+      "train.jsonl",
+      "validation.jsonl",
+      "test.jsonl",
+      "corrective_holdout.jsonl",
+      "dance_holdout.jsonl"
+    ],
+    "location": "data/production/exports/rupsaa_v0.3_final/ (GitHub repository); not uploaded to Hugging Face"
+  },
+  "serving": {
+    "prompt_version": "v0.2",
+    "serving_notes": "enabled (RUPSAA_SERVING_NOTES=1)",
+    "temperature": 0.55,
+    "top_p": 0.9,
+    "top_k": 50,
+    "repetition_penalty": 1.1,
+    "python_env": "PYTHONPATH=.gemma_stack (transformers 4.57.x)",
+    "fixes": [
+      "bf16 compute dtype for quantized Gemma",
+      "stop on <end_of_turn>"
+    ]
+  },
+  "huggingface": {
+    "repo_id": "rstudioModel/rupsaa",
+    "subfolder": "rupsaa-v0.3-gemma3-final",
+    "revision": "rupsaa-v0.3-gemma3-final",
+    "uploaded": false
+  }
+}

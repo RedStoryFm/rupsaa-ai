@@ -100,7 +100,9 @@ def test_release_whitelist_excludes_training_state(tmp_path):
 @pytest.mark.skipif(not (ADAPTER / "adapter_model.safetensors").exists(), reason="V0.1 adapter not present")
 def test_fetch_adapter_restores_from_local_copy_and_verifies(tmp_path):
     dest = tmp_path / "restored"
-    env_run = lambda *a: subprocess.run([sys.executable, "scripts/fetch_adapter.py", *a], cwd=ROOT,  # noqa: E731
+    # this test exercises the tooling on the v0.1 adapter; the current release is Gemma (checked below)
+    env_run = lambda *a: subprocess.run([sys.executable, "scripts/fetch_adapter.py", "--release", "rupsaa-v0.1", *a],  # noqa: E731
+                                        cwd=ROOT,
                                         capture_output=True, text=True,
                                         env={**__import__("os").environ, "RUPSAA_ADAPTER_PATH": str(dest)})
     r = env_run("--check-only")
@@ -112,6 +114,18 @@ def test_fetch_adapter_restores_from_local_copy_and_verifies(tmp_path):
     assert env_run("--check-only").returncode == 0
     (dest / "adapter_config.json").write_text("{}")  # tamper → detected
     assert env_run("--check-only").returncode == 1
+
+
+def test_current_release_is_the_verified_gemma_adapter():
+    import yaml
+    cfg = yaml.safe_load((ROOT / "configs/release.yaml").read_text(encoding="utf-8"))
+    assert cfg["current_release"] == "rupsaa-v0.3-gemma3-final"
+    gemma = ROOT / "adapters/rupsaa-v0.3-gemma3-final"
+    if not (gemma / "adapter_model.safetensors").exists():
+        pytest.skip("final adapter not present in this checkout")
+    r = subprocess.run([sys.executable, "scripts/fetch_adapter.py", "--check-only"], cwd=ROOT, capture_output=True,
+                       text=True, env={k: v for k, v in __import__("os").environ.items() if k != "RUPSAA_ADAPTER_PATH"})
+    assert r.returncode == 0 and "OK: 3 files" in r.stdout, r.stdout + r.stderr
 
 
 def test_fetch_adapter_refuses_corrupt_source(tmp_path):
