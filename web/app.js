@@ -105,6 +105,8 @@
   function autoResize() {
     inputEl.style.height = "auto";
     inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
+    // scroll only once the text is taller than the max height — no idle scrollbar/spinner on the right
+    inputEl.style.overflowY = inputEl.scrollHeight > 140 ? "auto" : "hidden";
   }
 
   const CHAT_TIMEOUT_MS = 180000; // generation is queued on one GPU; the web proxy waits up to 300 s

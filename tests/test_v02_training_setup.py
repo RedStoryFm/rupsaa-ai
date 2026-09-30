@@ -249,7 +249,13 @@ def test_engine_serves_v02_adapter_with_v02_prompt(monkeypatch):
 
     loaded = MagicMock(adapter_path="/x/adapters/rupsaa-v0.2")
     inference.RupsaaEngine(loaded).chat(history=[], user_message="hi")
+    # served = trained v0.2 persona + the serving-only identity/style notes (owner live test, round 1)
+    from rupsaa.personality.system_prompt import SERVING_NOTES_V02
+    assert captured["system"] == V02_SYSTEM_PROMPT + "\n\n" + SERVING_NOTES_V02
+    monkeypatch.setenv("RUPSAA_SERVING_NOTES", "0")  # rollback switch -> exactly the trained prompt
+    inference.RupsaaEngine(loaded).chat(history=[], user_message="hi")
     assert captured["system"] == V02_SYSTEM_PROMPT
+    monkeypatch.delenv("RUPSAA_SERVING_NOTES")
 
     loaded = MagicMock(adapter_path="/x/adapters/rupsaa-v0.1")
     inference.RupsaaEngine(loaded).chat(history=[], user_message="hi")

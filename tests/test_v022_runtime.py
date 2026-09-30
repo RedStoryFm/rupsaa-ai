@@ -52,3 +52,23 @@ def test_immediate_followups_carry_the_previous_record(msg, lang):
 def test_false_positive_protection(msg):
     k = attached(msg)
     assert k.terms_used == [] and k.route != "followup"
+
+
+def test_serving_notes_only_at_serving_time():
+    """Identity/style notes are added by the engine, never by dataset builders (training prompts unchanged)."""
+    from rupsaa.personality.system_prompt import SERVING_NOTES_V02, build_system_prompt
+    from rupsaa.personality.system_prompt_v02 import V02_SYSTEM_PROMPT
+    plain = build_system_prompt(prompt_version="v0.2", terminology_context="Term: X")
+    served = build_system_prompt(prompt_version="v0.2", terminology_context="Term: X", serving_notes=SERVING_NOTES_V02)
+    assert plain.startswith(V02_SYSTEM_PROMPT) and SERVING_NOTES_V02 not in plain
+    assert served.startswith(V02_SYSTEM_PROMPT + "\n\n" + SERVING_NOTES_V02)
+    assert served.index(SERVING_NOTES_V02) < served.index("Term: X")
+    assert "Google" in SERVING_NOTES_V02 and "no pet names" in SERVING_NOTES_V02
+
+
+def test_serving_notes_can_be_switched_off(monkeypatch):
+    from rupsaa.model.inference import serving_notes_enabled
+    monkeypatch.setenv("RUPSAA_SERVING_NOTES", "0")
+    assert not serving_notes_enabled()
+    monkeypatch.delenv("RUPSAA_SERVING_NOTES")
+    assert serving_notes_enabled()

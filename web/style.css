@@ -290,9 +290,14 @@ button, input, textarea { font-family: inherit; }
 }
 
 #input {
+  display: block;
   width: 100%;
+  box-sizing: border-box;
   resize: none;
   max-height: 140px;
+  line-height: 1.4;
+  overflow-y: hidden;       /* no scrollbar while the text fits; app.js enables scrolling past max-height */
+  scrollbar-width: thin;
   padding: 10px 14px;
   border-radius: 18px;
   border: 1px solid var(--border);
@@ -303,6 +308,9 @@ button, input, textarea { font-family: inherit; }
   outline: none;
 }
 #input:focus { border-color: var(--accent); }
+#input::-webkit-scrollbar { width: 6px; }
+#input::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+#input::-webkit-scrollbar-track, #input::-webkit-scrollbar-button, #input::-webkit-resizer { background: transparent; display: none; }
 
 .char-counter {
   position: absolute;

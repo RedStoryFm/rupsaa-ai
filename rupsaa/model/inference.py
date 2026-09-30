@@ -18,11 +18,17 @@ from rupsaa.model.generation import (
 )
 from rupsaa.model.loader import LoadedModel, load_model
 import logging
+import os
 
 from rupsaa.config import get_settings
-from rupsaa.personality.system_prompt import build_system_prompt, resolve_prompt_version
+from rupsaa.personality.system_prompt import SERVING_NOTES_V02, build_system_prompt, resolve_prompt_version
 
 logger = logging.getLogger(__name__)
+
+
+def serving_notes_enabled() -> bool:
+    """RUPSAA_SERVING_NOTES=0 turns the serving-only persona notes off (instant rollback, no code change)."""
+    return os.environ.get("RUPSAA_SERVING_NOTES", "1").strip().lower() not in ("0", "false", "off", "no")
 
 
 @dataclass
@@ -78,6 +84,7 @@ class RupsaaEngine:
             prompt_version=self.prompt_version,
             language_directive=language_directive,
             dance_context=dance_context,
+            serving_notes=SERVING_NOTES_V02 if self.prompt_version == "v0.2" and serving_notes_enabled() else None,
         )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]

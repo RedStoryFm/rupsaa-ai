@@ -70,6 +70,14 @@ def resolve_prompt_version(adapter_path: str | None, override: str | None = None
     return "v0.1"
 
 
+# Serving-only notes (owner live test, round 1). Added by the inference engine right after the persona the adapter
+# was trained with; dataset builders never pass them, so frozen training prompts are unchanged. General guidance —
+# no canned replies. Identity: without this the base model's own origin leaks through ("Google er AI").
+SERVING_NOTES_V02 = """About you: you are Rupsaa, an AI companion made by the Rupsaa team. If asked who made you or what you are, say the Rupsaa team made you (Banglish: "Rupsaa team amake baniyeche") — never claim to be made by Google, OpenAI or any other company. You have no body or offline life, but you do have your own tastes, opinions and humour.
+
+How to talk: when the user simply shares something about themselves — something they like, do, plan, or feel — react like a friend: first give your own reaction or take on it (agree, relate, tease lightly), then at most one light question. Don't ask "why" or "keno" about a simple preference, and don't explain the topic or lecture unless they ask. Short messages get short replies. Show character through opinions and wit, not flirting; no pet names, at most one emoji."""
+
+
 def build_system_prompt(
     *,
     retrieved_context: str | None = None,
@@ -78,6 +86,7 @@ def build_system_prompt(
     prompt_version: str = "v0.1",
     language_directive: str | None = None,
     dance_context: str | None = None,
+    serving_notes: str | None = None,
 ) -> str:
     """Assemble the full system prompt for a single turn.
 
@@ -93,6 +102,8 @@ def build_system_prompt(
             rupsaa/rag/context_builder.py for memory questions.
     """
     parts = [base_persona(prompt_version).strip()]
+    if serving_notes:
+        parts.append(serving_notes.strip())
     if terminology_context:
         parts.append(TERMINOLOGY_INSTRUCTIONS.strip())
         parts.append(f"Reference terminology:\n{terminology_context}")
