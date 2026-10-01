@@ -1,0 +1,42 @@
+{
+  "id": "gk-menstrual_hygiene",
+  "title": "Menstrual Hygiene",
+  "category": "Health & Hygiene",
+  "subcategory": "Hygiene",
+  "aliases": [
+    "tampons",
+    "menstrual cup",
+    "pad koto ghonta por bodlabo",
+    "menstrual cup kemon",
+    "মাসিকের পরিচ্ছন্নতা",
+    "স্যানিটারি প্যাড",
+    "মেনস্ট্রুয়াল কাপ"
+  ],
+  "summary": "Period products include pads, tampons, menstrual cups and period underwear. Change pads every 4–6 hours, tampons at least every 8 hours, and empty and rinse cups regularly.",
+  "description": "",
+  "key_points": [
+    "Leaving a tampon in too long increases the risk of toxic shock syndrome."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hygiene",
+    "periods"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.838832+00:00",
+  "updated_at": "2026-10-01T16:01:43.838859+00:00"
+}

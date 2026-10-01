@@ -1,0 +1,52 @@
+{
+  "id": "gk-long_distance",
+  "title": "Long-Distance Relationship",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "ldr",
+    "long distance",
+    "long distance relationship kibhabe tikiye rakhbo",
+    "ldr tips",
+    "দূরত্বের সম্পর্ক",
+    "লং ডিস্ট্যান্স"
+  ],
+  "summary": "A long-distance relationship is one where partners live far apart. It works best with regular communication, trust, shared plans to meet, and an eventual plan to close the distance.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [
+    "Schedule calls but stay flexible",
+    "Share daily small moments",
+    "Plan visits or a future together"
+  ],
+  "dont": [
+    "Demand constant check-ins or location tracking"
+  ],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "long distance"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Is your long-distance relationship unhealthy? (love is respect)",
+      "url": "https://www.loveisrespect.org/resources/is-your-long-distance-relationship-unhealthy/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.819192+00:00",
+  "updated_at": "2026-10-01T16:01:42.819212+00:00"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gk-intersex",
+  "title": "Intersex",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "intersex ki",
+    "আন্তঃলিঙ্গ",
+    "ইন্টারসেক্স"
+  ],
+  "summary": "Intersex describes people born with natural variations in sex characteristics — chromosomes, hormones or anatomy — that don't fit typical definitions of male or female. It's about biology, not orientation.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "biology"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.454929+00:00",
+  "updated_at": "2026-10-01T16:01:41.454948+00:00"
+}

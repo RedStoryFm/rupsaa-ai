@@ -1,0 +1,40 @@
+{
+  "id": "gk-coming_out",
+  "title": "Coming Out",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "come out",
+    "coming out mane ki",
+    "family ke kibhabe bolbo",
+    "নিজের পরিচয় প্রকাশ করা"
+  ],
+  "summary": "Coming out is sharing your sexual orientation or gender identity with others. It's personal and ongoing; you decide who to tell, when, and whether it's safe.",
+  "description": "",
+  "key_points": [
+    "Safety comes first, especially in unsupportive families.",
+    "Trusted friends or LGBTQ+ support groups can help."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "lgbtq"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.500242+00:00",
+  "updated_at": "2026-10-01T16:01:41.500263+00:00"
+}

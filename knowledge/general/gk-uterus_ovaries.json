@@ -1,0 +1,53 @@
+{
+  "id": "gk-uterus_ovaries",
+  "title": "Uterus and Ovaries",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "uterus",
+    "womb",
+    "ovaries",
+    "ovary",
+    "uterus ki",
+    "jorayu ki",
+    "জরায়ু",
+    "ডিম্বাশয়",
+    "গর্ভাশয়"
+  ],
+  "summary": "The uterus (womb) is the muscular organ where a pregnancy grows; its lining sheds each month as a period. The two ovaries store eggs and make hormones like oestrogen and progesterone.",
+  "description": "",
+  "key_points": [
+    "Roughly once per cycle an ovary releases an egg (ovulation).",
+    "Fallopian tubes carry the egg from the ovary toward the uterus; fertilisation usually happens there."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "female",
+    "reproduction"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.545228+00:00",
+  "updated_at": "2026-10-01T16:01:40.545242+00:00"
+}

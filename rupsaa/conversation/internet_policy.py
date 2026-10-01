@@ -61,12 +61,18 @@ _REJECT = re.compile(
 _EXPLICIT_LOOKUP = re.compile(
     rf"{_B}(?:search|google|look (?:it )?up|check online|search online|internet\s*-?e\s*(?:dekho|khojo|search|verify|check)|"
     rf"online\s*-?e\s*(?:dekho|check)|net\s*-?e\s*dekho|verify koro)\b|ইন্টারনেটে দেখো|সার্চ করো", re.I)
+# Words that by themselves ask for live data.
 _FRESH = re.compile(
-    rf"{_B}(?:latest|newest|today'?s?|todays|current(?:ly)?|right now|now|live|recent(?:ly)?|this (?:week|month|year)|"
-    rf"news|headlines?|weather|forecast|temperature|price|prices|rate|rates|stock|share price|exchange rate|score|scores|"
-    rf"result|results|standings|election|trending|release date|version|update|ajker|ajke|aj|ekhon|ekhonkar|akhon|"
-    rf"dam|koto taka|khobor|abohawa|briskti|brishti|live score|202[4-9])"
-    rf"{_E}|আজ|আজকের|এখন|সর্বশেষ|দাম|খবর|আবহাওয়া", re.I)
+    rf"{_B}(?:latest|newest|current(?:ly)?|live|recent(?:ly)?|"
+    rf"news|headlines?|weather|forecast|temperature|price|prices|rate|rates|stock|stocks|share price|exchange rate|"
+    rf"score|scores|result|results|standings|election|trending|release date|version|sensex|nifty|bitcoin|crypto|"
+    rf"who won|jitlo|jiteche|dam|koto taka|khobor|abohawa|briskti|brishti|live score|202[4-9])"
+    rf"{_E}|সর্বশেষ|দাম|খবর|আবহাওয়া|ফলাফল", re.I)
+# Time words ("ajke", "today", "এখন") only make a question current together with a value question ("ajker Sensex
+# koto?") — "ajke ki korle bhalo lagbe?" is advice, not a live-data request.
+_TIME = re.compile(rf"{_B}(?:today'?s?|todays|right now|now|this (?:week|month|year)|ajker|ajke|aj|ekhon|ekhonkar|akhon)"
+                   rf"{_E}|আজ|আজকের|এখন", re.I)
+_VALUE_Q = re.compile(rf"{_B}(?:koto|how much|how many|what'?s the|ki ache){_E}|কত", re.I)
 
 
 def detect_command(message: str, *, has_pending: bool) -> str | None:
@@ -89,7 +95,7 @@ def detect_command(message: str, *, has_pending: bool) -> str | None:
 
 
 def is_fresh(message: str) -> bool:
-    return bool(_FRESH.search(message))
+    return bool(_FRESH.search(message) or (_TIME.search(message) and _VALUE_Q.search(message)))
 
 
 def explicit_lookup(message: str) -> bool:

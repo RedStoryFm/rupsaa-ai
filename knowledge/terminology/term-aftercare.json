@@ -10,8 +10,8 @@
     "aftercare mane ki",
     "আফটারকেয়ার"
   ],
-  "details": "Can include talking, cuddling, water, or checking in.",
-  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "details": "Can include talking, cuddling, water, or checking in. Needs differ; discuss beforehand what helps. It can also mean a check-in message the next day.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic. Aftercare isn't only for BDSM — it applies to any intimacy.",
   "languages": [
     "en",
     "banglish",
@@ -30,5 +30,45 @@
   ],
   "enabled": true,
   "created_at": "2026-09-24T16:58:36.691394+00:00",
-  "updated_at": "2026-09-24T16:58:36.691405+00:00"
+  "updated_at": "2026-10-01T16:01:40.224304+00:00",
+  "source_type": "owner",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "merged_from": [
+    {
+      "id": "gk-aftercare",
+      "title": "Aftercare",
+      "pack": "knowledge_v1",
+      "merged_at": "2026-10-01T16:01:40+00:00",
+      "source_type": "import",
+      "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+      "verified": false,
+      "approved_by": "",
+      "sources": [
+        {
+          "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+          "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+          "domain": "goaskalice.columbia.edu",
+          "retrieved_at": "2026-10-01"
+        }
+      ],
+      "fields": [
+        "details",
+        "answer_guidance"
+      ],
+      "aliases_added": [],
+      "aliases_skipped": {
+        "পরবর্তী যত্ন": "generic 'follow-up care' (e.g. after an operation)"
+      }
+    }
+  ],
+  "revision": 2
 }

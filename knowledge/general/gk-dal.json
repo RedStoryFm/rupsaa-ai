@@ -1,0 +1,43 @@
+{
+  "id": "gk-dal",
+  "title": "Dal",
+  "category": "Food / Recipes",
+  "subcategory": "Everyday",
+  "aliases": [
+    "dal recipe",
+    "lentil curry",
+    "masoor dal",
+    "dal kibhabe ranna kori",
+    "ডাল",
+    "মুসুর ডাল"
+  ],
+  "summary": "Dal is a lentil stew eaten daily across India. Bengali masoor dal is simple: boiled red lentils with turmeric and salt, finished with a tempering (phoron) of nigella seeds or panch phoron and chillies.",
+  "description": "",
+  "key_points": [],
+  "steps": [
+    "Boil rinsed lentils with turmeric and salt until soft",
+    "Heat oil, add phoron and green chillies",
+    "Pour the tempering over the dal and simmer briefly"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "everyday",
+    "vegetarian"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.375279+00:00",
+  "updated_at": "2026-10-01T16:01:46.375301+00:00"
+}

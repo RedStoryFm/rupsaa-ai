@@ -1,0 +1,44 @@
+{
+  "id": "gk-sterilization",
+  "title": "Vasectomy and Tubal Ligation",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "vasectomy",
+    "tubal ligation",
+    "tubectomy",
+    "vasectomy ki",
+    "ligation kora",
+    "ভ্যাসেক্টমি",
+    "লাইগেশন",
+    "স্থায়ী জন্মনিয়ন্ত্রণ"
+  ],
+  "summary": "Sterilisation is permanent contraception: a vasectomy blocks the tubes that carry sperm; tubal ligation (tubectomy) blocks or removes the fallopian tubes. Both are highly effective and meant to be permanent.",
+  "description": "",
+  "key_points": [
+    "A vasectomy doesn't affect erections, orgasm or testosterone.",
+    "After a vasectomy, backup contraception is needed until a test confirms no sperm."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "permanent"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.860821+00:00",
+  "updated_at": "2026-10-01T16:01:40.860837+00:00"
+}

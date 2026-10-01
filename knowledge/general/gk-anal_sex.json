@@ -1,0 +1,57 @@
+{
+  "id": "gk-anal_sex",
+  "title": "Anal Sex",
+  "category": "Adult Terminology",
+  "subcategory": "Sexual Activities",
+  "aliases": [
+    "anal",
+    "anal sex ki",
+    "anal safe ki",
+    "পায়ুমৈথুন",
+    "অ্যানাল সেক্স"
+  ],
+  "summary": "Anal sex involves stimulation or penetration of the anus. The anus doesn't self-lubricate and its tissue is delicate, so lube, going slowly and condoms are important; STI risk is higher than for many other activities.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [
+    "Use plenty of lube",
+    "Use a condom",
+    "Go slowly and stop if it hurts"
+  ],
+  "dont": [
+    "Go from anal to vaginal contact without changing the condom or washing"
+  ],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sex",
+    "safer sex"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What Is Oral and Anal Sex? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/teens/sex/all-about-sex",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "How Do I Make Sex Safer? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/safer-sex/how-do-i-make-sex-safer",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.655608+00:00",
+  "updated_at": "2026-10-01T16:01:41.655629+00:00"
+}

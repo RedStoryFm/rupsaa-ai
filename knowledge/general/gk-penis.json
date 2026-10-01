@@ -1,0 +1,57 @@
+{
+  "id": "gk-penis",
+  "title": "Penis",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "dick",
+    "male genitals",
+    "penis ki",
+    "penis size normal ki",
+    "লিঙ্গ",
+    "পুরুষাঙ্গ",
+    "শিশ্ন"
+  ],
+  "summary": "The penis is the external male sexual organ. It has a shaft and a sensitive head (glans) and contains the urethra, which carries urine and semen.",
+  "description": "",
+  "key_points": [
+    "Erections happen when spongy tissue fills with blood.",
+    "Size varies a lot; size has little to do with a partner's pleasure or with fertility.",
+    "Slight curves are common and usually normal; a painful or sudden bend is worth a doctor's check."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Users often ask about size anxiety; reassure with facts, without mocking or comparing.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "male"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.552569+00:00",
+  "updated_at": "2026-10-01T16:01:40.552584+00:00"
+}

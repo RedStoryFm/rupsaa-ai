@@ -1,0 +1,37 @@
+{
+  "id": "gk-content_creator",
+  "title": "Content Creator",
+  "category": "Creator Platforms",
+  "subcategory": "Basics",
+  "aliases": [
+    "influencer",
+    "creator economy",
+    "content creator hobo kibhabe",
+    "কনটেন্ট ক্রিয়েটর",
+    "ইনফ্লুয়েন্সার"
+  ],
+  "summary": "A content creator makes videos, photos, writing or streams for an online audience, earning through ads, sponsorships, subscriptions, tips or selling products.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "creator"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.942851+00:00",
+  "updated_at": "2026-10-01T16:01:44.942874+00:00"
+}

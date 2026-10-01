@@ -1,0 +1,39 @@
+{
+  "id": "gk-vaginal_discharge",
+  "title": "Vaginal Discharge",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Health",
+  "aliases": [
+    "white discharge",
+    "leucorrhoea",
+    "white discharge normal ki",
+    "shada srab",
+    "সাদা স্রাব",
+    "যোনিস্রাব"
+  ],
+  "summary": "Clear or white discharge is normal and changes through the cycle. Discharge with a strong fishy smell, grey/green colour, itching or a cottage-cheese texture can mean an infection worth checking.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "health",
+    "female"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.109819+00:00",
+  "updated_at": "2026-10-01T16:01:41.109840+00:00"
+}

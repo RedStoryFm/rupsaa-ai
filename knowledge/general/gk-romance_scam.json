@@ -1,0 +1,37 @@
+{
+  "id": "gk-romance_scam",
+  "title": "Romance Scam",
+  "category": "Dating",
+  "subcategory": "Dating Basics",
+  "aliases": [
+    "dating scam",
+    "dating scam kibhabe chinbo",
+    "প্রেমের প্রতারণা"
+  ],
+  "summary": "A romance scam is when a fraudster builds an online relationship to eventually ask for money, gifts or investments. Requests for money from someone you've never met in person are a major warning sign.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it light, practical and encouraging. Define slang plainly and give realistic tips; avoid gender stereotypes.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "dating",
+    "safety",
+    "scam"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.617852+00:00",
+  "updated_at": "2026-10-01T16:01:43.617874+00:00"
+}

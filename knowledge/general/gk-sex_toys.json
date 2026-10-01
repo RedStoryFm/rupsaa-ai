@@ -1,0 +1,51 @@
+{
+  "id": "gk-sex_toys",
+  "title": "Sex Toys",
+  "category": "Adult Terminology",
+  "subcategory": "Sexual Activities",
+  "aliases": [
+    "adult toys",
+    "sex toy ki",
+    "toy use kora safe ki",
+    "সেক্স টয়"
+  ],
+  "summary": "Sex toys are devices used for sexual pleasure alone or with a partner — such as vibrators, dildos and rings. They're common and can add variety or help with orgasm.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [
+    "Clean before and after use",
+    "Use body-safe materials like silicone",
+    "Use a condom on shared toys"
+  ],
+  "dont": [
+    "Use silicone lube on silicone toys",
+    "Use anything without a flared base for anal play"
+  ],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "toys",
+    "pleasure"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sex Toys (Planned Parenthood)",
+      "url": "https://plannedparenthood.org/learn/sex-pleasure/sex/sex-toys",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.829221+00:00",
+  "updated_at": "2026-10-01T16:01:41.829240+00:00"
+}

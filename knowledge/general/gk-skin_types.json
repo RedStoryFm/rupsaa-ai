@@ -1,0 +1,40 @@
+{
+  "id": "gk-skin_types",
+  "title": "Skin Types",
+  "category": "Beauty",
+  "subcategory": "Skincare",
+  "aliases": [
+    "skin type",
+    "oily skin",
+    "dry skin",
+    "combination skin",
+    "amar skin type ki",
+    "ত্বকের ধরন",
+    "তৈলাক্ত ত্বক",
+    "শুষ্ক ত্বক"
+  ],
+  "summary": "Common skin types are oily, dry, combination, normal and sensitive. Knowing yours helps choose textures: gels for oily skin, creams for dry skin, fragrance-free for sensitive skin.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "skincare"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.100087+00:00",
+  "updated_at": "2026-10-01T16:01:44.100110+00:00"
+}

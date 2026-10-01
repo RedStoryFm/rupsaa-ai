@@ -1,0 +1,55 @@
+{
+  "id": "gk-prep_pep",
+  "title": "PrEP and PEP",
+  "category": "Sexual Education",
+  "subcategory": "STIs & Safer Sex",
+  "aliases": [
+    "hiv prevention pill",
+    "post exposure prophylaxis",
+    "hiv prep",
+    "hiv pep",
+    "prep ki",
+    "pep kokhon nite hoy",
+    "প্রেপ",
+    "পেপ"
+  ],
+  "summary": "PrEP is medicine taken before possible exposure to greatly lower the chance of getting HIV. PEP is an emergency course started within 72 hours after a possible exposure.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sti",
+    "hiv",
+    "prevention"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Preventing HIV (CDC)",
+      "url": "https://www.cdc.gov/hiv/prevention/",
+      "domain": "cdc.gov",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Primary Prevention Methods - STI Treatment Guidelines (CDC)",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/clinical-primary.htm",
+      "domain": "cdc.gov",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.951386+00:00",
+  "updated_at": "2026-10-01T16:01:40.951402+00:00"
+}

@@ -17,6 +17,8 @@ rupsaa/personality/system_prompt.py), never as a canned reply.
 
 from __future__ import annotations
 
+import re
+
 from collections.abc import Callable
 from dataclasses import dataclass, field
 
@@ -24,7 +26,7 @@ from rupsaa.conversation.language_control import resolve_turn_language
 from rupsaa.rag.dance import DanceStore, format_dance_context
 from rupsaa.rag.general_knowledge import GeneralKnowledgeStore, format_general_context
 from rupsaa.rag.router import Route, RouteDecision, classify_message
-from rupsaa.rag.terminology import TerminologyStore, format_terminology_context
+from rupsaa.rag.terminology import TerminologyStore, contains_phrase, format_terminology_context
 
 
 @dataclass
@@ -76,8 +78,9 @@ def build_turn_knowledge(
         out.conversation_note = memory_note(history, history_messages, history_truncated, question=message)
         return out
 
-    matches = _reference_matches(terminology, decision, message, previous_terms)
-    dance_matches = _reference_matches(dance, decision, message, previous_terms)
+    mode = _lookup_mode(decision, message)
+    matches = _reference_matches(terminology, decision, message, previous_terms, mode)
+    dance_matches = _reference_matches(dance, decision, message, previous_terms, mode)
     if dance is not None and not dance_matches and decision.route == Route.CASUAL and dance.mentions_dancing(message):
         # Short messages are routed CASUAL ("chacha dance kemon?"); an explicit dance mention still counts.
         dance_matches = dance.lookup(message)
@@ -91,8 +94,31 @@ def build_turn_knowledge(
         if decision.route == Route.FOLLOWUP:  # carry the active topic; no semantic search on "eta Bengali te bolo"
             by_id = {r.id: r for r in general.list(include_disabled=False)}
             general_matches = [_Carried(by_id[t]) for t in previous_terms or [] if t in by_id][:2]
-        elif not (matches or dance_matches) and _gk_candidate(decision, message):
-            general_matches = general.lookup(message, decision.term_candidate)
+        elif mode == "exact":
+            if not (matches or dance_matches):
+                general_matches = _exact_only(general.lookup(message, _short_candidate(message), semantic=False))
+        elif mode == "full":
+            if not (matches or dance_matches):
+                general_matches = general.lookup(message, decision.term_candidate)
+            elif not any(m.method == "exact" for m in matches + dance_matches):
+                # A more specific General Knowledge name beats a looser specialised phrase hit:
+                # "enthusiastic consent" (GK) over the Terminology entry "consent" found inside it.
+                specific = [g for g in general.lookup(message, decision.term_candidate, semantic=False)
+                            if g.method == "exact" or any(contains_phrase(g.matched, m.matched)
+                                                          for m in matches + dance_matches)]
+                if specific:
+                    general_matches = specific
+                    matches = [m for m in matches if not any(contains_phrase(g.matched, m.matched) for g in specific)]
+                    dance_matches = [m for m in dance_matches
+                                     if not any(contains_phrase(g.matched, m.matched) for g in specific)]
+    if (previous_terms and not (matches or dance_matches or general_matches)
+            and decision.route not in (Route.MEMORY, Route.FOLLOWUP) and _elliptical_followup(message)
+            and not _names_new_topic(decision, message)):
+        # "kono risk ache ki?", "আর প্রথমবার হলে?": a short question naming no topic of its own continues
+        # the active topic (fresh/current-info questions, small talk and identity questions never do).
+        matches = _carry(terminology, previous_terms)
+        dance_matches = _carry(dance, previous_terms)
+        general_matches = _carry(general, previous_terms)
     if matches:
         out.terminology_context = format_terminology_context(matches)
     if dance_matches:
@@ -114,20 +140,69 @@ def build_turn_knowledge(
     return out
 
 
-def _gk_candidate(decision, message: str) -> bool:
-    """General Knowledge is looked up for definition/knowledge questions — never for greetings, mood talk,
-    memory questions or plain statements about the user."""
+def _lookup_mode(decision, message: str) -> str | None:
+    """How hard to look for curated knowledge in this message:
+    None    — greetings / mood / small talk, memory questions, follow-ups (those carry the active topic);
+    "exact" — a short (<= 3 words) non-question casual message: only if the whole message IS a title or alias
+              (or a typo of one): "vagina", "condom?" — but never "breaking news" or "popping a balloon"
+              via a common word inside them;
+    "full"  — everything else (questions, longer messages, personal wording like "amar … ki korbo"):
+              exact → whole-phrase name → strict semantic (score + name-coverage guards)."""
     from rupsaa.rag.router import is_smalltalk
-    from rupsaa.rag.web_search import _PERSONAL_RE, is_question
+    from rupsaa.rag.web_search import is_question
 
     if decision.route in (Route.MEMORY, Route.FOLLOWUP) or is_smalltalk(message):
+        return None
+    if decision.route == Route.CASUAL and not is_question(message):
+        return "exact"
+    return "full"
+
+
+def _gk_candidate(decision, message: str) -> bool:
+    """Kept for callers that only need a yes/no: is curated knowledge looked up for this message at all?"""
+    return _lookup_mode(decision, message) is not None
+
+
+def _short_candidate(message: str) -> str:
+    return re.sub(r"[?？!.।,]+", " ", message).strip()
+
+
+def _exact_only(found: list) -> list:
+    return [m for m in found if m.method in ("exact", "fuzzy")]
+
+
+_ELLIPTICAL_START = re.compile(r"^\s*(?:ar|r|aar|and|আর|এবং)\s", re.I)
+
+
+def _elliptical_followup(message: str) -> bool:
+    from rupsaa.conversation.internet_policy import is_fresh
+    from rupsaa.rag.router import _IDENTITY_RE, is_smalltalk
+    from rupsaa.rag.web_search import is_question
+
+    words = re.findall(r"\w+", message)
+    if not words or len(words) > 6 or is_smalltalk(message) or is_fresh(message) or _IDENTITY_RE.search(message):
         return False
-    if decision.route == Route.TERMINOLOGY:
-        return True
-    return is_question(message) and not _PERSONAL_RE.search(message)
+    return is_question(message) or bool(_ELLIPTICAL_START.match(message))
 
 
-def _reference_matches(store, decision, message: str, previous_ids: list[str] | None) -> list:
+def _names_new_topic(decision, message: str) -> bool:
+    """"Kintsugi ki?" / "Kintsugi mane ki jano?" name a topic of their own (unknown here) — don't attach the previous
+    one. "kono risk ache ki?" names only common words, so it still continues the active topic."""
+    from rupsaa.owner.teaching import knowledge_check_topic
+    from rupsaa.rag.terminology import _all_known_words, normalize
+
+    topic = decision.term_candidate or knowledge_check_topic(message)
+    return bool(topic) and not _all_known_words(normalize(topic))
+
+
+def _carry(store, previous_ids: list[str] | None) -> list:
+    if store is None:
+        return []
+    by_id = {r.id: r for r in store.list(include_disabled=False)}
+    return [_Carried(by_id[t]) for t in previous_ids or [] if t in by_id][:2]
+
+
+def _reference_matches(store, decision, message: str, previous_ids: list[str] | None, mode: str | None = None) -> list:
     """Owner reference entries (terminology or dance) for this turn. Follow-ups carry the
     previous turn's entries of this store; a newly named entry joins them."""
     if store is None:
@@ -140,6 +215,10 @@ def _reference_matches(store, decision, message: str, previous_ids: list[str] | 
         return (carried + [m for m in store.lookup(message) if m.record.id not in ids])[:2]
     if decision.use_terminology:
         return store.lookup(message, decision.term_candidate)
+    if mode == "exact" or (mode == "full" and decision.route == Route.CASUAL):
+        # Short casual message: "condom?" / "vagina" — the whole message must name the entry (or be a typo of it).
+        found = store.lookup(message, _short_candidate(message))
+        return found if mode == "full" else _exact_only(found)
     return []
 
 

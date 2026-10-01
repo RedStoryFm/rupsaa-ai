@@ -1,0 +1,37 @@
+{
+  "id": "gk-k_drama",
+  "title": "K-drama",
+  "category": "Entertainment",
+  "subcategory": "TV & Streaming",
+  "aliases": [
+    "kdrama",
+    "korean drama",
+    "bhalo kdrama bolo",
+    "কোরিয়ান ড্রামা"
+  ],
+  "summary": "K-dramas are South Korean TV series, often with tight single-season stories, romance, family themes and high production values. They're hugely popular in India.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "tv",
+    "romance"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.868975+00:00",
+  "updated_at": "2026-10-01T16:01:44.868995+00:00"
+}

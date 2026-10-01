@@ -1,0 +1,58 @@
+{
+  "id": "gk-birth_control_pill",
+  "title": "Birth Control Pill",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "the pill",
+    "oral contraceptive",
+    "OCP",
+    "pill kibhabe kaj kore",
+    "pill khele ki hoy",
+    "জন্মনিয়ন্ত্রণ বড়ি",
+    "খাওয়ার পিল",
+    "গর্ভনিরোধক পিল"
+  ],
+  "summary": "The birth control pill is a daily hormonal tablet that prevents pregnancy mainly by stopping ovulation. It's about 91–93% effective in typical use and doesn't protect against STIs.",
+  "description": "",
+  "key_points": [
+    "Missing pills lowers effectiveness.",
+    "Some medicines and vomiting can affect it.",
+    "Side effects and suitability vary — a doctor helps choose."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "hormonal"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What's the Best Kind of Birth Control For You? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/teens/stds-birth-control-pregnancy/whats-best-kind-birth-control",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "If you use both a condom and birth control, are you 100% protected? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/blog/if-you-use-both-a-condom-and-birth-control-are-you-100-protected-from-getting-pregnant",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.815659+00:00",
+  "updated_at": "2026-10-01T16:01:40.815675+00:00"
+}

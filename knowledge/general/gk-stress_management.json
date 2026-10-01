@@ -1,0 +1,39 @@
+{
+  "id": "gk-stress_management",
+  "title": "Stress Management",
+  "category": "Health & Hygiene",
+  "subcategory": "Health",
+  "aliases": [
+    "stress relief",
+    "how to reduce stress",
+    "stress kibhabe komabo",
+    "tension komano",
+    "মানসিক চাপ কমানো",
+    "স্ট্রেস"
+  ],
+  "summary": "Stress management combines regular movement, enough sleep, breathing exercises, talking to people you trust, limiting overload and doing things you enjoy. Long-lasting distress deserves professional support.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "health",
+    "mental health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.000540+00:00",
+  "updated_at": "2026-10-01T16:01:44.000560+00:00"
+}

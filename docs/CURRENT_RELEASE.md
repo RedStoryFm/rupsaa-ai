@@ -26,7 +26,7 @@ google/gemma-3-12b-it                  base model, 4-bit NF4, bf16 compute   (Hu
 | Generation | temperature 0.55, top-p 0.9, top-k 50, repetition penalty 1.1 (`configs/inference.yaml`) |
 | Prompt | `RUPSAA_PROMPT_VERSION=v0.2`; serving notes on (`RUPSAA_SERVING_NOTES=0` restores the exact trained prompt) |
 | Gemma serving fixes | explicit bf16 compute dtype (`rupsaa/model/loader.py`); stop on `<end_of_turn>` (`rupsaa/model/generation.py`) |
-| Knowledge | 40 terminology records, 60 dance records (every dance has a Bengali-script alias), 5 General Knowledge test records, identity/FAQ documents |
+| Knowledge | Knowledge V1: 40 Terminology (6 merged with the V1 pack), 60 Dance, 357 General Knowledge (352 from the V1 pack, not yet owner-reviewed, plus 5 test records) = 457 concepts; identity/FAQ documents. Retrieval benchmark: [knowledge_v1_eval/SUMMARY.md](../data/production/reports/knowledge_v1_eval/SUMMARY.md) |
 | App layers (not weights) | Rupsaa Conversational Core V1 + Personal AI V1: General Knowledge, user memory, internet ASK/ALLOW/DENY with trusted source routing, in-chat Teacher Mode — see [PERSONAL_AI_V1.md](PERSONAL_AI_V1.md) |
 | GPU | NVIDIA L4 (23 GB) is enough for inference: about 11.6 GB, about 8 s for a short reply |
 

@@ -1,0 +1,48 @@
+{
+  "id": "gk-sexual_orientation",
+  "title": "Sexual Orientation",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "sexuality",
+    "sexual orientation mane ki",
+    "যৌন অভিমুখিতা",
+    "যৌন প্রবৃত্তি"
+  ],
+  "summary": "Sexual orientation describes who you're romantically, emotionally or sexually attracted to — for example straight, gay, lesbian, bisexual, pansexual or asexual.",
+  "description": "",
+  "key_points": [
+    "It isn't a choice and isn't caused by anything someone did.",
+    "Some people's orientation feels fixed; for others it shifts over time.",
+    "It's different from gender identity."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Use respectful terms; let the user's own label stand.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "lgbtq"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What is Sexual Orientation? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/sexual-orientation/sexual-orientation",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.245825+00:00",
+  "updated_at": "2026-10-01T16:01:41.245847+00:00"
+}

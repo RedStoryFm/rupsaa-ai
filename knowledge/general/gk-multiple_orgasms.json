@@ -1,0 +1,41 @@
+{
+  "id": "gk-multiple_orgasms",
+  "title": "Multiple Orgasms",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "multiple orgasm somvob ki",
+    "একাধিক অর্গাজম"
+  ],
+  "summary": "Multiple orgasms are two or more orgasms close together without a long break. They are more common for people with a vulva, who usually don't have a refractory period, but not everyone has them.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "orgasm"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.647467+00:00",
+  "updated_at": "2026-10-01T16:01:40.647481+00:00"
+}

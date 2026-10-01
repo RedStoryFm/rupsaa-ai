@@ -1,0 +1,42 @@
+{
+  "id": "gk-premature_ejaculation",
+  "title": "Premature Ejaculation",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Health",
+  "aliases": [
+    "finishing too fast",
+    "cumming too fast",
+    "taratari hoye jay",
+    "druto birjopat",
+    "অকাল বীর্যপাত",
+    "দ্রুত বীর্যপাত"
+  ],
+  "summary": "Premature ejaculation is ejaculating sooner than you'd like, often within about a minute of penetration, in a way that causes distress. It's common and often improves with techniques, practice and sometimes medical help.",
+  "description": "",
+  "key_points": [
+    "The stop-start and squeeze techniques, pelvic-floor exercises and less performance anxiety can help.",
+    "A doctor or sex therapist can offer further options."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "male",
+    "health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.037182+00:00",
+  "updated_at": "2026-10-01T16:01:41.037199+00:00"
+}

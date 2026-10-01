@@ -1,0 +1,39 @@
+{
+  "id": "gk-age_of_consent",
+  "title": "Age of Consent",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "legal age for sex",
+    "age of consent koto",
+    "সম্মতির বয়স"
+  ],
+  "summary": "The age of consent is the minimum age at which the law considers someone able to agree to sex. It differs by country; in India it is 18 for everyone under current law.",
+  "description": "",
+  "key_points": [
+    "Below that age, consent isn't legally valid regardless of what anyone says.",
+    "Laws can change; for legal questions check current official sources."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Give the general concept; for a specific country's current law, suggest checking official/current sources.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "consent",
+    "law"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.727960+00:00",
+  "updated_at": "2026-10-01T16:01:40.727976+00:00"
+}

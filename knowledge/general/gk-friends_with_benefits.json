@@ -1,0 +1,36 @@
+{
+  "id": "gk-friends_with_benefits",
+  "title": "Friends with Benefits",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "fwb",
+    "fwb mane ki",
+    "বন্ধুত্বের সঙ্গে যৌনতা"
+  ],
+  "summary": "Friends with benefits (FWB) means friends who have sex without being in a romantic relationship. It works best when both are honest about expectations and feelings.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "casual"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.901281+00:00",
+  "updated_at": "2026-10-01T16:01:42.901301+00:00"
+}

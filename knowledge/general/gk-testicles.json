@@ -1,0 +1,53 @@
+{
+  "id": "gk-testicles",
+  "title": "Testicles and Scrotum",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "testicles",
+    "scrotum",
+    "testes",
+    "testicles ki",
+    "balls e betha",
+    "অণ্ডকোষ",
+    "শুক্রাশয়",
+    "অণ্ডথলি"
+  ],
+  "summary": "The testicles are the two glands in the scrotum that produce sperm and testosterone. The scrotum hangs outside the body to keep them slightly cooler than body temperature.",
+  "description": "",
+  "key_points": [
+    "One testicle often hangs lower than the other; that's normal.",
+    "Sudden severe testicle pain is an emergency (it could be torsion).",
+    "A monthly self-check for lumps can help catch testicular cancer early."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "male",
+    "health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.558802+00:00",
+  "updated_at": "2026-10-01T16:01:40.558817+00:00"
+}

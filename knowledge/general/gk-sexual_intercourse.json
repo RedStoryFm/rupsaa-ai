@@ -1,0 +1,50 @@
+{
+  "id": "gk-sexual_intercourse",
+  "title": "Sexual Intercourse",
+  "category": "Adult Terminology",
+  "subcategory": "Sexual Activities",
+  "aliases": [
+    "intercourse",
+    "having sex",
+    "penetrative sex",
+    "sex mane ki",
+    "intercourse ki",
+    "যৌনমিলন",
+    "সঙ্গম",
+    "সহবাস"
+  ],
+  "summary": "Sexual intercourse usually means penetrative sex, most commonly penis-in-vagina, but people use 'sex' for a wide range of activities including oral, anal and manual sex.",
+  "description": "",
+  "key_points": [
+    "What counts as 'sex' differs between people.",
+    "Penis-in-vagina sex can lead to pregnancy; any sexual contact can pass STIs."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Answer educationally and non-graphically; mention protection and consent when relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sex"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What Is Oral and Anal Sex? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/teens/sex/all-about-sex",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.645602+00:00",
+  "updated_at": "2026-10-01T16:01:41.645624+00:00"
+}

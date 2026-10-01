@@ -1,0 +1,39 @@
+{
+  "id": "gk-board_games",
+  "title": "Games for Couples and Friends",
+  "category": "Entertainment",
+  "subcategory": "Games",
+  "aliases": [
+    "truth or dare",
+    "games for couples",
+    "party games",
+    "truth or dare kheli",
+    "couple game",
+    "ট্রুথ অর ডেয়ার",
+    "খেলা"
+  ],
+  "summary": "Popular social games include truth or dare, never have I ever, charades (dumb charades), Ludo, Uno and card games. They work best when everyone can comfortably skip a question or dare.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "games"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.924061+00:00",
+  "updated_at": "2026-10-01T16:01:44.924079+00:00"
+}

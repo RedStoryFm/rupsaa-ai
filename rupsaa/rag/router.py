@@ -90,13 +90,14 @@ _FOLLOWUP_RE = _rx(
     # English
     rf"^\s*(can you |could you |please )?(explain|say|tell|put|write) (it|that|this)( again)? (in|into) (bangla|bengali|banglish|english)",
     rf"^\s*(in|into) (bangla|bengali|banglish|english)( please)?\s*[?.!]*\s*$",
+    rf"^\s*(can you |could you |please )?(explain|say|tell me|answer|write)( it| that| this)? (in|into) (bangla|bengali|banglish|english)( please)?\s*[?.!]*\s*$",
     rf"^\s*(make it|keep it|say it|explain it) (short|shorter|simple|simpler|brief)",
     rf"^\s*(explain|tell me) (more|in (more )?detail)|^\s*(more detail|elaborate|go deeper)\s*[?.!]*\s*$",
     rf"^\s*(what do you mean|i don'?t get it|didn'?t understand)",
     # Banglish
     rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|bengali\s?(te|e|y)?|english\s?e|banglish\s?e|ingreji\s?te)\s*((aro|ektu)?\s*(simple|shohoj|sohoj|short) kore)?\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
     rf"{_B}(eta|sheta|seta)?\s*(short|choto|chhoto|chotto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
-    rf"{_B}(aro|ektu) (detail|bistarito|bistarito bhabe|bujhiye) (bolo|bol|bujhao)",
+    rf"{_B}(aro|ektu) (details?|bistarito|bistarito bhabe|bujhiye)\s*(e|a)? (bolo|bol|bujhao)",
     rf"{_B}(bujhlam na|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",  # "bujhlam" alone = "got it", not a re-ask
     # Bengali
     r"(এটা|সেটা|ওটা)?\s*(বাংলায়|ইংরেজিতে)\s*((আরও|আরো|একটু)?\s*(সহজ|ছোট) করে)?\s*(বুঝিয়ে)?\s*(বলো|বলুন|বল|লেখো|দাও)",
@@ -121,7 +122,7 @@ _TERM_PATTERNS = [
     re.compile(r"^\s*(?:what(?:'s| is) the )?meaning of\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
     re.compile(r"^\s*what\s+(?:a |an |the )?[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|stands for)\s*\??\s*$", re.I),
     re.compile(r"^\s*(?:define|explain the term|explain)\s+[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s*\??\s*$", re.I),
-    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|meaning)\s*\?\s*$", re.I),
+    re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:means|meaning)\s*\??\s*$", re.I),
     # Banglish: "strip mane ki", "strip ki", "strip bolte ki bojhay", "strip ki jinis", "strip er mane ki"
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:er\s+)?(?:mane|mani|meaning)\s+(?:ki|kii|ki\s+jinish?|kii\s+jinish?)\s*\??\s*$", re.I),
     re.compile(r"^\s*[\"'“]?(?P<term>[^\"'”?]{1,40}?)[\"'”]?\s+(?:bolte|bolle)\s+ki\s+(?:bojhay|bujhay|bojhai|bujhai|bojhano hoy|bujhano hoy)\s*\??\s*$", re.I),

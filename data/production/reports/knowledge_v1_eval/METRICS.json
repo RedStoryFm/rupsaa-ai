@@ -1,0 +1,428 @@
+{
+ "benchmark": "Knowledge V1 private retrieval eval (209 queries) through RupsaaService.chat; Gemma stubbed, web recorded",
+ "eval_sha256": "3b61f6f71fc3780ba3c008bd44191a324f1509bc32325b88520548ab66b56a46",
+ "before": {
+  "queries": 209,
+  "positive": 169,
+  "negative": 40,
+  "top1_accuracy_positive": 0.6154,
+  "top3_accuracy_positive": 0.6272,
+  "positive_recall_any_result": 0.645,
+  "positive_correct": 104,
+  "positive_wrong_concept": 5,
+  "positive_no_result": 60,
+  "negative_correctly_rejected": 40,
+  "negative_false_positive": 0,
+  "negative_rejection_accuracy": 1.0,
+  "false_positive_rate": 0.0,
+  "overall_accuracy": 0.689,
+  "web_lookups_requested": 7,
+  "by_language": {
+   "banglish": {
+    "n": 84,
+    "accuracy": 0.7024
+   },
+   "bn": {
+    "n": 36,
+    "accuracy": 0.7778
+   },
+   "en": {
+    "n": 87,
+    "accuracy": 0.6437
+   },
+   "mixed": {
+    "n": 2,
+    "accuracy": 0.5
+   }
+  },
+  "by_category": {
+   "Adult Terminology": {
+    "n": 21,
+    "accuracy": 0.8095
+   },
+   "Dating": {
+    "n": 10,
+    "accuracy": 0.4
+   },
+   "Negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "Other General Knowledge": {
+    "n": 22,
+    "accuracy": 0.6364
+   },
+   "Relationships": {
+    "n": 27,
+    "accuracy": 0.5926
+   },
+   "Sexual Education": {
+    "n": 65,
+    "accuracy": 0.5385
+   },
+   "Terminology": {
+    "n": 24,
+    "accuracy": 0.75
+   }
+  },
+  "by_type": {
+   "alias": {
+    "n": 10,
+    "accuracy": 0.7
+   },
+   "followup": {
+    "n": 7,
+    "accuracy": 0.1429
+   },
+   "followup_language_switch": {
+    "n": 2,
+    "accuracy": 0.5
+   },
+   "followup_topic_shift": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "language_switch": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "misspelling": {
+    "n": 12,
+    "accuracy": 0.4167
+   },
+   "mixed": {
+    "n": 1,
+    "accuracy": 0.0
+   },
+   "mixed_script": {
+    "n": 1,
+    "accuracy": 0.0
+   },
+   "negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "paraphrase": {
+    "n": 117,
+    "accuracy": 0.6838
+   },
+   "short": {
+    "n": 8,
+    "accuracy": 0.125
+   },
+   "slang": {
+    "n": 9,
+    "accuracy": 0.7778
+   }
+  },
+  "failure_types": {
+   "other: routing gate (personal wording / not a question)": 43,
+   "follow-up context issue": 7,
+   "semantic collision": 5,
+   "language/script issue": 4,
+   "alias gap": 3,
+   "embedding miss": 2,
+   "threshold too strict": 1
+  },
+  "positive_top1_by_language": {
+   "banglish": {
+    "n": 79,
+    "top1": 0.6835
+   },
+   "bn": {
+    "n": 33,
+    "top1": 0.7576
+   },
+   "en": {
+    "n": 55,
+    "top1": 0.4364
+   },
+   "mixed": {
+    "n": 2,
+    "top1": 0.5
+   }
+  }
+ },
+ "after_routing_fixes": {
+  "queries": 209,
+  "positive": 169,
+  "negative": 40,
+  "top1_accuracy_positive": 0.8639,
+  "top3_accuracy_positive": 0.8698,
+  "positive_recall_any_result": 0.8935,
+  "positive_correct": 146,
+  "positive_wrong_concept": 5,
+  "positive_no_result": 18,
+  "negative_correctly_rejected": 40,
+  "negative_false_positive": 0,
+  "negative_rejection_accuracy": 1.0,
+  "false_positive_rate": 0.0,
+  "overall_accuracy": 0.89,
+  "web_lookups_requested": 3,
+  "by_language": {
+   "banglish": {
+    "n": 84,
+    "accuracy": 0.8095
+   },
+   "bn": {
+    "n": 36,
+    "accuracy": 0.9722
+   },
+   "en": {
+    "n": 87,
+    "accuracy": 0.9425
+   },
+   "mixed": {
+    "n": 2,
+    "accuracy": 0.5
+   }
+  },
+  "by_category": {
+   "Adult Terminology": {
+    "n": 21,
+    "accuracy": 0.9048
+   },
+   "Dating": {
+    "n": 10,
+    "accuracy": 0.6
+   },
+   "Negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "Other General Knowledge": {
+    "n": 22,
+    "accuracy": 0.8636
+   },
+   "Relationships": {
+    "n": 27,
+    "accuracy": 0.8519
+   },
+   "Sexual Education": {
+    "n": 65,
+    "accuracy": 0.8462
+   },
+   "Terminology": {
+    "n": 24,
+    "accuracy": 1.0
+   }
+  },
+  "by_type": {
+   "alias": {
+    "n": 10,
+    "accuracy": 0.9
+   },
+   "followup": {
+    "n": 7,
+    "accuracy": 0.8571
+   },
+   "followup_language_switch": {
+    "n": 2,
+    "accuracy": 1.0
+   },
+   "followup_topic_shift": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "language_switch": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "misspelling": {
+    "n": 12,
+    "accuracy": 0.9167
+   },
+   "mixed": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "mixed_script": {
+    "n": 1,
+    "accuracy": 0.0
+   },
+   "negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "paraphrase": {
+    "n": 117,
+    "accuracy": 0.8462
+   },
+   "short": {
+    "n": 8,
+    "accuracy": 1.0
+   },
+   "slang": {
+    "n": 9,
+    "accuracy": 0.8889
+   }
+  },
+  "failure_types": {
+   "language/script issue": 6,
+   "threshold too strict": 5,
+   "semantic collision": 4,
+   "alias gap": 4,
+   "embedding miss": 3,
+   "follow-up context issue": 1
+  },
+  "positive_top1_by_language": {
+   "banglish": {
+    "n": 79,
+    "top1": 0.7975
+   },
+   "bn": {
+    "n": 33,
+    "top1": 0.9697
+   },
+   "en": {
+    "n": 55,
+    "top1": 0.9091
+   },
+   "mixed": {
+    "n": 2,
+    "top1": 0.5
+   }
+  }
+ },
+ "after": {
+  "queries": 209,
+  "positive": 169,
+  "negative": 40,
+  "top1_accuracy_positive": 0.8817,
+  "top3_accuracy_positive": 0.8817,
+  "positive_recall_any_result": 0.8935,
+  "positive_correct": 149,
+  "positive_wrong_concept": 2,
+  "positive_no_result": 18,
+  "negative_correctly_rejected": 40,
+  "negative_false_positive": 0,
+  "negative_rejection_accuracy": 1.0,
+  "false_positive_rate": 0.0,
+  "overall_accuracy": 0.9043,
+  "web_lookups_requested": 3,
+  "by_language": {
+   "banglish": {
+    "n": 84,
+    "accuracy": 0.8333
+   },
+   "bn": {
+    "n": 36,
+    "accuracy": 0.9722
+   },
+   "en": {
+    "n": 87,
+    "accuracy": 0.954
+   },
+   "mixed": {
+    "n": 2,
+    "accuracy": 0.5
+   }
+  },
+  "by_category": {
+   "Adult Terminology": {
+    "n": 21,
+    "accuracy": 0.9524
+   },
+   "Dating": {
+    "n": 10,
+    "accuracy": 0.7
+   },
+   "Negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "Other General Knowledge": {
+    "n": 22,
+    "accuracy": 0.8636
+   },
+   "Relationships": {
+    "n": 27,
+    "accuracy": 0.8519
+   },
+   "Sexual Education": {
+    "n": 65,
+    "accuracy": 0.8615
+   },
+   "Terminology": {
+    "n": 24,
+    "accuracy": 1.0
+   }
+  },
+  "by_type": {
+   "alias": {
+    "n": 10,
+    "accuracy": 0.9
+   },
+   "followup": {
+    "n": 7,
+    "accuracy": 0.8571
+   },
+   "followup_language_switch": {
+    "n": 2,
+    "accuracy": 1.0
+   },
+   "followup_topic_shift": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "language_switch": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "misspelling": {
+    "n": 12,
+    "accuracy": 0.9167
+   },
+   "mixed": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "mixed_script": {
+    "n": 1,
+    "accuracy": 0.0
+   },
+   "negative": {
+    "n": 40,
+    "accuracy": 1.0
+   },
+   "paraphrase": {
+    "n": 117,
+    "accuracy": 0.8718
+   },
+   "short": {
+    "n": 8,
+    "accuracy": 1.0
+   },
+   "slang": {
+    "n": 9,
+    "accuracy": 0.8889
+   }
+  },
+  "failure_types": {
+   "language/script issue": 6,
+   "threshold too strict": 5,
+   "alias gap": 4,
+   "embedding miss": 3,
+   "semantic collision": 1,
+   "follow-up context issue": 1
+  },
+  "positive_top1_by_language": {
+   "banglish": {
+    "n": 79,
+    "top1": 0.8228
+   },
+   "bn": {
+    "n": 33,
+    "top1": 0.9697
+   },
+   "en": {
+    "n": 55,
+    "top1": 0.9273
+   },
+   "mixed": {
+    "n": 2,
+    "top1": 0.5
+   }
+  }
+ }
+}

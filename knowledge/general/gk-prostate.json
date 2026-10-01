@@ -1,0 +1,46 @@
+{
+  "id": "gk-prostate",
+  "title": "Prostate",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "p-spot",
+    "prostate gland",
+    "prostate ki",
+    "প্রোস্টেট গ্রন্থি"
+  ],
+  "summary": "The prostate is a walnut-sized gland below the bladder that adds fluid to semen. It can be sensitive to stimulation and is sometimes called the 'P-spot'.",
+  "description": "",
+  "key_points": [
+    "Prostate problems become more common with age; urinary changes are worth a doctor visit."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "male"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.561765+00:00",
+  "updated_at": "2026-10-01T16:01:40.561801+00:00"
+}

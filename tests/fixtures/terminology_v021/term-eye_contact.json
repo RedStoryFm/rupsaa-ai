@@ -1,0 +1,33 @@
+{
+  "id": "term-eye_contact",
+  "term": "Eye Contact",
+  "definition": "Looking directly into a partner's eyes during intimate moments to build connection or desire.",
+  "category": "adult_terminology",
+  "aliases": [
+    "eye contact",
+    "eye contact ki",
+    "eye contact mane ki",
+    "আই কনট্যাক্ট"
+  ],
+  "details": "Cultural comfort and personal boundaries vary.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "eye contact ki",
+    "eye contact mane ki",
+    "আই কনট্যাক্ট মানে কী",
+    "eye contact meaning in intimacy"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.683445+00:00",
+  "updated_at": "2026-09-24T16:58:36.683458+00:00"
+}

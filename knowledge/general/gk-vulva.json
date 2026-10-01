@@ -1,0 +1,57 @@
+{
+  "id": "gk-vulva",
+  "title": "Vulva",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "female genitals",
+    "vulva vs vagina",
+    "vulva mane ki",
+    "vulva ar vagina er tofat",
+    "ভালভা",
+    "বহির্যোনি",
+    "মেয়েদের বাইরের যৌনাঙ্গ"
+  ],
+  "summary": "The vulva is the external part of the female genitals: the mons, outer and inner labia, the external clitoris, the urethral opening and the vaginal opening.",
+  "description": "",
+  "key_points": [
+    "People often say 'vagina' when they mean the vulva; the vagina is the internal canal.",
+    "Vulvas vary a lot in colour, shape and labia size; variation is normal.",
+    "The vulva cleans itself well with plain water; scented washes can irritate it."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Use correct anatomical words calmly. If the user mixes up vulva and vagina, clarify gently without lecturing.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "female"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.531686+00:00",
+  "updated_at": "2026-10-01T16:01:40.531706+00:00"
+}

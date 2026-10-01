@@ -1,0 +1,49 @@
+{
+  "id": "gk-erogenous_zones",
+  "title": "Erogenous Zones",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "sensitive spots",
+    "pleasure points",
+    "erogenous zone ki",
+    "sharirer sensitive jayga",
+    "কামোদ্দীপক অঞ্চল",
+    "স্পর্শকাতর জায়গা"
+  ],
+  "summary": "Erogenous zones are body areas that can feel sexually pleasurable when touched — commonly the neck, ears, lips, inner thighs, nipples and genitals.",
+  "description": "",
+  "key_points": [
+    "What feels good differs from person to person and even day to day.",
+    "Asking or noticing your partner's reactions is more reliable than any list."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it educational and point to communication rather than giving a 'map' that applies to everyone.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "pleasure",
+    "body"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.602629+00:00",
+  "updated_at": "2026-10-01T16:01:40.602646+00:00"
+}

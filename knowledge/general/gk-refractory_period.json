@@ -1,0 +1,45 @@
+{
+  "id": "gk-refractory_period",
+  "title": "Refractory Period",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "recovery time after sex",
+    "orgasm er por abar keno hoy na",
+    "refractory period ki",
+    "রিফ্র্যাক্টরি পিরিয়ড",
+    "বিরতির সময়"
+  ],
+  "summary": "The refractory period is the recovery time after orgasm, mainly for people with a penis, when another erection or orgasm isn't possible yet. It can be minutes or hours and tends to get longer with age.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "orgasm",
+    "male"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.651943+00:00",
+  "updated_at": "2026-10-01T16:01:40.651967+00:00"
+}

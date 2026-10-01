@@ -1,0 +1,40 @@
+{
+  "id": "gk-intimate_hygiene",
+  "title": "Intimate Hygiene",
+  "category": "Health & Hygiene",
+  "subcategory": "Hygiene",
+  "aliases": [
+    "private part hygiene",
+    "genital hygiene",
+    "private part kibhabe clean rakhbo",
+    "গোপনাঙ্গের পরিচ্ছন্নতা",
+    "অন্তরঙ্গ পরিচ্ছন্নতা"
+  ],
+  "summary": "Genitals need only gentle daily washing with water (and mild unscented soap on outer skin). Breathable cotton underwear and changing out of sweaty clothes help prevent irritation.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [
+    "Douche or use scented washes inside the vagina",
+    "Use harsh soaps on genital skin"
+  ],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hygiene"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.802413+00:00",
+  "updated_at": "2026-10-01T16:01:43.802442+00:00"
+}

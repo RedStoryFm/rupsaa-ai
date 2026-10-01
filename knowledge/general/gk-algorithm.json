@@ -1,0 +1,36 @@
+{
+  "id": "gk-algorithm",
+  "title": "Social Media Algorithm",
+  "category": "Social Media",
+  "subcategory": "Basics",
+  "aliases": [
+    "instagram algorithm",
+    "how the algorithm works",
+    "algorithm ki",
+    "অ্যালগরিদম"
+  ],
+  "summary": "A social media algorithm decides what each user sees, ranking posts by predicted interest — watch time, likes, shares, saves and past behaviour. Exact formulas are secret and change often.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "social media"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.326149+00:00",
+  "updated_at": "2026-10-01T16:01:45.326169+00:00"
+}

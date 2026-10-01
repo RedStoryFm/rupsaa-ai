@@ -1,0 +1,38 @@
+{
+  "id": "gk-privacy_settings",
+  "title": "Social Media Privacy Settings",
+  "category": "Social Media",
+  "subcategory": "Safety",
+  "aliases": [
+    "privacy settings",
+    "private account",
+    "make account private",
+    "account private kibhabe korbo",
+    "গোপনীয়তা সেটিংস"
+  ],
+  "summary": "Privacy settings control who sees your posts, can message you or find you. Review them regularly, hide your contact info and location, and limit who can tag you.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "social media",
+    "safety"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.530523+00:00",
+  "updated_at": "2026-10-01T16:01:45.530546+00:00"
+}

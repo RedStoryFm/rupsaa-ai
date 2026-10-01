@@ -1,0 +1,52 @@
+{
+  "id": "gk-natural_lubrication",
+  "title": "Vaginal Lubrication (Wetness)",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "vaginal lubrication",
+    "getting wet",
+    "wetness",
+    "vaginal dryness",
+    "wet hoy keno",
+    "dryness keno hoy",
+    "যোনির পিচ্ছিলতা",
+    "যোনি শুষ্কতা"
+  ],
+  "summary": "Vaginal lubrication is fluid that increases with arousal to reduce friction. The amount varies with hormones, hydration, cycle stage, medication and how relaxed someone feels.",
+  "description": "",
+  "key_points": [
+    "Dryness is common and not a sign of lack of attraction.",
+    "Extra lube is a simple, normal solution.",
+    "Wetness alone doesn't mean someone wants sex."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "arousal",
+    "body"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What's With Being Wet from That? (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/whats-being-wet",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.627276+00:00",
+  "updated_at": "2026-10-01T16:01:40.627298+00:00"
+}

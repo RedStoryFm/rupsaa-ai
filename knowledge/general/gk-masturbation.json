@@ -1,0 +1,55 @@
+{
+  "id": "gk-masturbation",
+  "title": "Masturbation",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "masturbate",
+    "self pleasure",
+    "fapping",
+    "jerking off",
+    "masturbation ki",
+    "masturbation kharap ki",
+    "hosto moithun",
+    "হস্তমৈথুন",
+    "স্বমেহন",
+    "আত্মরতি"
+  ],
+  "summary": "Masturbation means touching your own body, usually the genitals, for sexual pleasure. It is very common, normal and healthy at any age and whether or not you're in a relationship.",
+  "description": "",
+  "key_points": [
+    "It doesn't cause weakness, blindness, infertility or hair loss — those are myths.",
+    "It can relieve stress, help sleep and help people learn what they enjoy.",
+    "It becomes a concern only if it causes distress or crowds out daily life.",
+    "Clean hands and toys; use lube if there's friction."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Answer without shame and debunk myths if they come up. If asked 'how', keep it educational and non-graphic.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "pleasure",
+    "myth"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Masturbation (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/sex-pleasure-and-sexual-dysfunction/masturbation",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.660445+00:00",
+  "updated_at": "2026-10-01T16:01:40.660461+00:00"
+}

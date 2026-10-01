@@ -13,6 +13,7 @@
   const LIST_FIELDS = { aliases: "gk-aliases", key_points: "gk-key-points", steps: "gk-steps", do: "gk-do", dont: "gk-dont" };
   const TEXT_FIELDS = { title: "gk-title", category: "gk-category", subcategory: "gk-subcategory", summary: "gk-summary",
     description: "gk-description", answer_guidance: "gk-guidance" };
+  let loadedSources = [];
   let editingId = null;
   let importFile = null;
   let meta = { categories: [], languages: ["en", "bn", "banglish"], tags: [] };
@@ -98,7 +99,9 @@
     $("gk-enabled").checked = true;
     $("gk-source-type").value = "owner";
     $("gk-verified").checked = false;
+    $("gk-approved").checked = true; // a record the owner writes here is owner-approved
     $("gk-sources").value = "";
+    loadedSources = [];
     renderLangs(null);
   }
   function payload() {
@@ -110,7 +113,9 @@
     p.enabled = $("gk-enabled").checked;
     p.source_type = $("gk-source-type").value;
     p.verified = $("gk-verified").checked;
-    p.sources = lines($("gk-sources").value).map((url) => ({ url }));
+    p.approved_by = $("gk-approved").checked ? "owner" : "";
+    // Keep each existing source's title/domain/retrieved_at; only new URLs start as bare {url}.
+    p.sources = lines($("gk-sources").value).map((url) => loadedSources.find((x) => x.url === url) || { url });
     return p;
   }
   async function save() {
@@ -143,7 +148,9 @@
       $("gk-enabled").checked = d.enabled;
       $("gk-source-type").value = d.source_type || "owner";
       $("gk-verified").checked = !!d.verified;
-      $("gk-sources").value = (d.sources || []).map((x) => x.url).join("\n");
+      $("gk-approved").checked = d.approved_by === "owner"; // imported/unreviewed records stay unapproved until ticked
+      loadedSources = d.sources || [];
+      $("gk-sources").value = loadedSources.map((x) => x.url).join("\n");
       renderLangs(d.languages);
       $("gk-form-title").textContent = `Edit — ${d.title} (revision ${d.revision})`;
       $("gk-save-btn").textContent = "Save changes";
@@ -190,7 +197,7 @@
         const row = document.createElement("div");
         row.className = "doc-row";
         const meta2 = [r.category + (r.subcategory ? ` / ${r.subcategory}` : ""), r.id, r.aliases.length && `aliases: ${r.aliases.slice(0, 6).join(", ")}`,
-          r.tags.length && `tags: ${r.tags.join(", ")}`, `${r.source_type || "owner"}${r.verified ? " ✓" : ""} · rev ${r.revision}`].filter(Boolean).map(esc).join(" · ");
+          r.tags.length && `tags: ${r.tags.join(", ")}`, `${r.source_type || "owner"}${r.verified ? " · verified" : ""} · ${r.approved_by === "owner" ? "owner-approved" : "not reviewed"}${(r.sources || []).length ? ` · ${r.sources.length} source(s)` : ""} · rev ${r.revision}`].filter(Boolean).map(esc).join(" · ");
         row.innerHTML = `<div class="doc-info"><div class="doc-title">${esc(r.title)}${r.enabled ? "" : `<span class="badge readonly">disabled</span>`}</div>
           <div class="doc-meta">${meta2}</div><div class="term-def">${esc(r.summary || r.description)}</div></div><div class="doc-actions"></div>`;
         const acts = row.querySelector(".doc-actions");

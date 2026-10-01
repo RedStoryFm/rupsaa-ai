@@ -83,6 +83,13 @@ class TermRecord:
     enabled: bool = True
     created_at: str = field(default_factory=_now)
     updated_at: str = field(default_factory=_now)
+    # Provenance (optional; older records simply don't have it). Never shown to the model.
+    source_type: str = "owner"  # owner | import | owner_teaching | owner_verified_web
+    sources: list[dict] = field(default_factory=list)  # [{title, url, domain, retrieved_at}]
+    verified: bool = False
+    approved_by: str = ""  # "owner" only when explicitly approved
+    merged_from: list[dict] = field(default_factory=list)  # content merged in from other records, with their provenance
+    revision: int = 1
 
     def keys(self) -> set[str]:
         """Normalized strings that identify this term (term, aliases, and the
@@ -115,6 +122,16 @@ def validate(data: dict) -> list[str]:
     bad_langs = [lang for lang in data.get("languages") or [] if lang not in TERM_LANGUAGES]
     if bad_langs:
         errors.append(f"unknown language(s) {bad_langs} (allowed: {TERM_LANGUAGES})")
+    sources = data.get("sources") or []
+    if not isinstance(sources, list) or len(sources) > 20:
+        errors.append("sources must be a list of at most 20 items")
+    else:
+        from rupsaa.rag.web_search import safe_url
+
+        if any(not isinstance(x, dict) or not safe_url(str(x.get("url") or "")) for x in sources):
+            errors.append("each source needs a public http(s) url")
+    if str(data.get("approved_by") or "") not in ("", "owner"):
+        errors.append("approved_by must be '' or 'owner'")
     for key, limit in (("term", 120), ("definition", 2000), ("details", 6000), ("answer_guidance", 2000)):
         if len(str(data.get(key) or "")) > limit:
             errors.append(f"{key} longer than {limit} characters")
@@ -236,10 +253,21 @@ class TerminologyStore:
         for key in ("term", "definition", "details", "answer_guidance"):
             merged[key] = (merged[key] or "").strip()
         merged["id"], merged["created_at"], merged["updated_at"] = rec.id, rec.created_at, _now()
+        merged["revision"] = rec.revision + 1
         new = TermRecord(**merged)
         self._check_conflicts(new)
+        self._backup(term_id)
         self._write(new)
         return new
+
+    def _backup(self, term_id: str) -> None:
+        """Copy the current file to .history/ before it is changed or deleted (git-ignored)."""
+        path = self._path(term_id)
+        if path.exists():
+            hist = self.directory / ".history"
+            hist.mkdir(parents=True, exist_ok=True)
+            stamp = _now().replace(":", "").replace("-", "").replace("+", "_")
+            (hist / f"{term_id}.{stamp}.json").write_bytes(path.read_bytes())
 
     def delete(self, term_id: str, *, confirm: bool) -> None:
         if not confirm:
@@ -247,6 +275,7 @@ class TerminologyStore:
         path = self._path(term_id)
         if not path.exists():
             raise TerminologyError(f"no such term: {term_id}")
+        self._backup(term_id)
         path.unlink()
         self._cache.pop(path.name, None)
 
@@ -268,9 +297,10 @@ class TerminologyStore:
         "Strip mane ki?"); without it, whole-phrase alias containment is used
         (e.g. a knowledge question that mentions a defined term)."""
         matches = match_records(self.list(include_disabled=False), message, term_candidate, limit=limit)
-        if _TECH_CONTEXT.search(message):
-            # "strip whitespace in python": a passing mention inside a technical message is not the adult term;
-            # a direct definition question ("strip mane ki?") is an exact match and still counts.
+        if _TECH_CONTEXT.search(message) or _KITCHEN_CONTEXT.search(message):
+            # "strip whitespace in python", "coffee grind kivabe kori", "ek spoon chini": a passing mention in a
+            # technical or kitchen message is not the adult term; a direct definition question ("strip mane ki?")
+            # is an exact match and still counts.
             matches = [m for m in matches if m.method == "exact"]
         return matches
 
@@ -280,6 +310,13 @@ _TECH_CONTEXT = re.compile(
     r"(?<![A-Za-z])(python|javascript|java|sql|regex|string|strings|whitespace|function|method|code|coding|script|"
     r"excel|csv|json|html|css|variable|array|list comprehension|trim|substring|character|characters|bash|shell|"
     r"terminal|command|library|api|php|c\+\+)(?![A-Za-z])", re.I)
+
+
+# Cooking / kitchen context: "grind", "spoon", "whisk", "tease" etc. in their everyday sense.
+_KITCHEN_CONTEXT = re.compile(
+    r"(?<![A-Za-z])(coffee|tea|cha|masala|spices?|recipe|kitchen|cook|cooking|bake|baking|grinder|mixer|blender|"
+    r"chini|sugar|salt|flour|atta|dal|rice|curry|ranna|ranna ghor|tablespoon|teaspoon|cup|bowl|pepper|jeera|"
+    r"rosun|peyaj|ada|garlic|onion|ginger)(?![A-Za-z])|রান্না|মশলা|চিনি|কফি|চা পাতা", re.I)
 
 
 def match_records(records: list, message: str, candidate: str | None = None, *, limit: int = 2) -> list[TermMatch]:
@@ -299,6 +336,7 @@ def match_records(records: list, message: str, candidate: str | None = None, *, 
 
     cand = normalize(candidate) if candidate else ""
     msg = f" {normalize(message)} "
+    msg_bn = f" {_strip_bengali_suffixes(msg.strip())} "  # "মাসিকের সময়" also contains the key "মাসিক"
     for rec in records:
         keys = rec.keys()
         if cand and cand in keys:
@@ -307,7 +345,7 @@ def match_records(records: list, message: str, candidate: str | None = None, *, 
         if cand and any(normalize(q) == normalize(message) for q in getattr(rec, "example_queries", []) or []):
             add(rec, 0.98, message, "exact")
             continue
-        phrase_hits = [k for k in keys if len(k) >= 3 and f" {k} " in msg]
+        phrase_hits = [k for k in keys if len(k) >= 3 and (f" {k} " in msg or (msg_bn != msg and f" {k} " in msg_bn))]
         if phrase_hits:
             best = max(phrase_hits, key=len)
             # A term mentioned inside a definition question for something else scores lower.
@@ -326,7 +364,32 @@ def match_records(records: list, message: str, candidate: str | None = None, *, 
         # "lip biting ki?" is about Lip Biting — not also about the term whose alias is "biting".
         matches = {i: m for i, m in matches.items()
                    if not (m.method == "phrase" and m.matched in cand and m.matched != cand)}
+    # The most specific name wins: "অকাল বীর্যপাত" (premature ejaculation) over "বীর্যপাত" inside it.
+    matches = {i: m for i, m in matches.items()
+               if not (m.method == "phrase" and any(o is not m and o.method in ("exact", "phrase")
+                                                    and contains_phrase(o.matched, m.matched) for o in matches.values()))}
     return sorted(matches.values(), key=lambda m: -m.score)[:limit]
+
+
+def contains_phrase(longer: str, shorter: str) -> bool:
+    """`shorter` is a proper whole-word part of `longer` ("enthusiastic consent" contains "consent")."""
+    return longer != shorter and f" {shorter} " in f" {longer} "
+
+
+# Bengali case/plural/classifier endings: a key "মাসিক" should match "মাসিকের", "ডেট" should match "ডেটে".
+_BN_SUFFIXES = ("গুলোর", "গুলো", "দের", "টার", "টির", "তে", "কে", "ের", "এর", "রা", "টা", "টি", "ে", "র")
+
+
+def _strip_bengali_suffixes(text: str) -> str:
+    out = []
+    for w in text.split():
+        if re.search(f"[{_BN}]", w):
+            for suf in _BN_SUFFIXES:
+                if w.endswith(suf) and len(w) - len(suf) >= 2:
+                    w = w[: -len(suf)]
+                    break
+        out.append(w)
+    return " ".join(out)
 
 
 _KNOWN_WORDS: frozenset[str] | None = None

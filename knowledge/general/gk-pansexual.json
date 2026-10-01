@@ -1,0 +1,43 @@
+{
+  "id": "gk-pansexual",
+  "title": "Pansexual",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "pansexual ki",
+    "প্যানসেক্সুয়াল",
+    "সর্বকামী"
+  ],
+  "summary": "Pansexual describes attraction to people regardless of gender; gender isn't a deciding factor in attraction.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "lgbtq"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Glossary of Sexual Health Terms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/glossary",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.336018+00:00",
+  "updated_at": "2026-10-01T16:01:41.336038+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gk-emotional_intimacy",
+  "title": "Emotional Intimacy",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "emotional connection",
+    "emotional connection kibhabe barabo",
+    "মানসিক ঘনিষ্ঠতা",
+    "আবেগের বন্ধন"
+  ],
+  "summary": "Emotional intimacy is feeling deeply known and accepted — able to share fears, hopes and vulnerabilities with a partner. It grows through honest conversations and feeling heard.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "intimacy"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.520795+00:00",
+  "updated_at": "2026-10-01T16:01:42.520816+00:00"
+}

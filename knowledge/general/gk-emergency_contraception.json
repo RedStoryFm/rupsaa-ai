@@ -1,0 +1,61 @@
+{
+  "id": "gk-emergency_contraception",
+  "title": "Emergency Contraception (Morning-After Pill)",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "emergency contraception",
+    "morning after pill",
+    "i pill",
+    "ipill",
+    "emergency pill",
+    "plan b pill",
+    "i pill kokhon khete hoy",
+    "unprotected sex er por ki korbo",
+    "জরুরি গর্ভনিরোধক বড়ি",
+    "আই-পিল",
+    "ইমার্জেন্সি পিল"
+  ],
+  "summary": "Emergency contraception can prevent pregnancy after unprotected sex or a condom failure. Levonorgestrel pills (e.g. Plan B, i-pill) work best within 72 hours; ulipristal (ella) and a copper IUD work up to 5 days.",
+  "description": "",
+  "key_points": [
+    "The sooner it's taken, the better it works.",
+    "It works mainly by delaying ovulation; it is not an abortion pill.",
+    "It's for emergencies, not regular contraception, and doesn't protect against STIs."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be calm and practical — the user may be worried. Give the time window clearly and suggest a pharmacist/doctor.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "emergency"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What Kind of Emergency Contraception Is Best For Me? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/morning-after-pill-emergency-contraception/which-kind-emergency-contraception-should-i-use",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Plan B Morning-After Pill (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/morning-after-pill-emergency-contraception/whats-plan-b-morning-after-pill",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.820444+00:00",
+  "updated_at": "2026-10-01T16:01:40.820461+00:00"
+}

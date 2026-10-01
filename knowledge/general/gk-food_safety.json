@@ -1,0 +1,38 @@
+{
+  "id": "gk-food_safety",
+  "title": "Food Safety Basics",
+  "category": "Food / Recipes",
+  "subcategory": "Basics",
+  "aliases": [
+    "food safety",
+    "food poisoning",
+    "storing leftovers",
+    "basi khabar khawa safe ki",
+    "খাদ্য নিরাপত্তা",
+    "বাসি খাবার"
+  ],
+  "summary": "Keep food safe by washing hands, separating raw meat, cooking thoroughly and refrigerating leftovers within two hours. Reheat leftovers until steaming hot and eat within a few days.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "safety"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.539930+00:00",
+  "updated_at": "2026-10-01T16:01:46.539952+00:00"
+}

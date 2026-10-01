@@ -1,0 +1,33 @@
+{
+  "id": "term-dirty_talk",
+  "term": "Dirty Talk",
+  "definition": "Sexually suggestive or arousing speech used during intimate moments.",
+  "category": "adult_terminology",
+  "aliases": [
+    "dirty talk",
+    "dirty talk ki",
+    "dirty talk mane ki",
+    "ডার্টি টক"
+  ],
+  "details": "Should be consensual and respectful; boundaries matter.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "dirty talk ki",
+    "dirty talk mane ki",
+    "ডার্টি টক মানে কী",
+    "what is dirty talk"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.688150+00:00",
+  "updated_at": "2026-09-24T16:58:36.688162+00:00"
+}

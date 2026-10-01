@@ -1,0 +1,41 @@
+{
+  "id": "gk-vibrator",
+  "title": "Vibrator",
+  "category": "Adult Terminology",
+  "subcategory": "Sexual Activities",
+  "aliases": [
+    "vibrator ki",
+    "ভাইব্রেটর"
+  ],
+  "summary": "A vibrator is a device that vibrates to stimulate the body, often the clitoris. Many people use one to reach orgasm more easily, alone or with a partner.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "toys"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sex Toys (Planned Parenthood)",
+      "url": "https://plannedparenthood.org/learn/sex-pleasure/sex/sex-toys",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.839359+00:00",
+  "updated_at": "2026-10-01T16:01:41.839378+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "gk-holi_dol",
+  "title": "Holi / Dol Jatra",
+  "category": "Indian Culture",
+  "subcategory": "Festivals",
+  "aliases": [
+    "holi",
+    "dol jatra",
+    "basanta utsav",
+    "dol khela",
+    "dol jatra kobe",
+    "দোলযাত্রা",
+    "হোলি",
+    "বসন্ত উৎসব"
+  ],
+  "summary": "Holi, called Dol Jatra or Dol Purnima in Bengal, is the spring festival of colours. Santiniketan's Basanta Utsav, started by Tagore, celebrates it with songs and dance.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "festival",
+    "bengal"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.027265+00:00",
+  "updated_at": "2026-10-01T16:01:46.027283+00:00"
+}

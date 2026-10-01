@@ -1,0 +1,41 @@
+{
+  "id": "gk-shorshe_ilish",
+  "title": "Shorshe Ilish",
+  "category": "Food / Recipes",
+  "subcategory": "Bengali Cuisine",
+  "aliases": [
+    "hilsa in mustard",
+    "shorshe ilish recipe",
+    "সর্ষে ইলিশ"
+  ],
+  "summary": "Shorshe ilish is hilsa fish cooked in a pungent mustard paste with mustard oil, green chillies and turmeric — a classic Bengali dish, especially in monsoon season.",
+  "description": "",
+  "key_points": [],
+  "steps": [
+    "Marinate hilsa pieces with salt and turmeric",
+    "Grind mustard seeds with green chilli and a pinch of salt",
+    "Mix the paste with water, mustard oil and turmeric; add fish",
+    "Steam or simmer gently for 10–15 minutes; finish with raw mustard oil"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "fish",
+    "bengali"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.354034+00:00",
+  "updated_at": "2026-10-01T16:01:46.354067+00:00"
+}

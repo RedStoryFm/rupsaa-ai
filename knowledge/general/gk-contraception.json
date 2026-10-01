@@ -1,0 +1,59 @@
+{
+  "id": "gk-contraception",
+  "title": "Contraception (Birth Control)",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "contraception",
+    "birth control",
+    "family planning",
+    "contraceptive methods",
+    "birth control ki",
+    "pregnancy atkano upay",
+    "গর্ভনিরোধ",
+    "জন্মনিয়ন্ত্রণ",
+    "পরিবার পরিকল্পনা"
+  ],
+  "summary": "Contraception means methods that prevent pregnancy: barrier methods (condoms), hormonal methods (pill, injection, implant, patch, ring), IUDs, sterilisation and fertility-awareness methods.",
+  "description": "",
+  "key_points": [
+    "Implants and IUDs are over 99% effective in typical use; the pill is around 91–93%; condoms about 85%.",
+    "Only condoms (external/internal) also protect against most STIs.",
+    "Combining a condom with another method gives strong protection."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Give an overview first; for choosing a method or side effects, suggest a doctor or clinic.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "pregnancy"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What's the Best Kind of Birth Control For You? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/teens/stds-birth-control-pregnancy/whats-best-kind-birth-control",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "If you use both a condom and birth control, are you 100% protected? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/blog/if-you-use-both-a-condom-and-birth-control-are-you-100-protected-from-getting-pregnant",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.799330+00:00",
+  "updated_at": "2026-10-01T16:01:40.799350+00:00"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "gk-dating",
+  "title": "Dating",
+  "category": "Dating",
+  "subcategory": "Dating Basics",
+  "aliases": [
+    "what is dating",
+    "dating mane ki",
+    "ডেটিং"
+  ],
+  "summary": "Dating means meeting and spending time with someone to explore a romantic connection. It can be casual or aimed at a serious relationship.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it light, practical and encouraging. Define slang plainly and give realistic tips; avoid gender stereotypes.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "dating"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Dating basics: what should I look for? (love is respect)",
+      "url": "https://www.loveisrespect.org/resources/dating-basics-what-should-i-look-for/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.155126+00:00",
+  "updated_at": "2026-10-01T16:01:43.155143+00:00"
+}

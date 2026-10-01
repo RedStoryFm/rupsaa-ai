@@ -1,0 +1,53 @@
+{
+  "id": "gk-conflict_resolution",
+  "title": "Conflict Resolution",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "fighting with partner",
+    "how to stop fighting",
+    "jhogra kibhabe mitabo",
+    "partner er sathe jhogra",
+    "ঝগড়া মেটানো",
+    "দ্বন্দ্ব নিরসন"
+  ],
+  "summary": "Conflict is normal; what matters is handling it fairly. Focus on the issue rather than attacking the person, take breaks when heated, and look for solutions both can live with.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [
+    "Stick to one issue",
+    "Take a time-out if voices rise",
+    "Apologise specifically"
+  ],
+  "dont": [
+    "Bring up every past mistake",
+    "Name-call, threaten or use silent treatment as punishment"
+  ],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "conflict"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Conflict resolution (love is respect)",
+      "url": "https://www.loveisrespect.org/resources/conflict-resolution/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.449314+00:00",
+  "updated_at": "2026-10-01T16:01:42.449335+00:00"
+}

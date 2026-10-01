@@ -1,0 +1,38 @@
+{
+  "id": "gk-couples_therapy",
+  "title": "Couples Therapy",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "relationship counselling",
+    "marriage counselling",
+    "couple counselling kaj kore ki",
+    "দম্পতি পরামর্শ",
+    "কাপল থেরাপি"
+  ],
+  "summary": "Couples therapy is counselling with a trained professional to improve communication, resolve recurring conflicts or decide on a relationship's future.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "support"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.938136+00:00",
+  "updated_at": "2026-10-01T16:01:42.938155+00:00"
+}

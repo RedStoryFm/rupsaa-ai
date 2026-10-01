@@ -176,7 +176,7 @@ def test_provenance_fields_validated_and_round_trip(tmp_path):
     rec = store.create({"title": "Aftercare", "category": "Adult Terminology", "summary": "Care after an intense scene.",
                         "source_type": "owner_verified_web", "verified": True,
                         "sources": [{"title": "Glossary", "url": "https://www.scarleteen.com/read/glossary"}]})
-    assert rec.sources[0]["domain"] == "www.scarleteen.com" and rec.approved_by == "owner" and rec.revision == 1
+    assert rec.sources[0]["domain"] == "www.scarleteen.com" and rec.approved_by == "" and rec.revision == 1  # not approved
     csv_bytes = gki.export_csv(store)
     assert b"owner_verified_web" in csv_bytes and b"source_type" in csv_bytes
     other = GeneralKnowledgeStore(tmp_path / "gk2", embedder=lambda t, q: None)

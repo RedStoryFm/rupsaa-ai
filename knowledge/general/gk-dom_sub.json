@@ -1,0 +1,45 @@
+{
+  "id": "gk-dom_sub",
+  "title": "Dominant and Submissive (Dom/Sub)",
+  "category": "Adult Terminology",
+  "subcategory": "Kink & BDSM",
+  "aliases": [
+    "dom sub",
+    "dom sub dynamic",
+    "dominant and submissive",
+    "dom sub mane ki",
+    "কর্তৃত্বকারী ও আজ্ঞাবহ"
+  ],
+  "summary": "In BDSM, a dominant (dom) takes control and a submissive (sub) consensually gives it up, within limits they've negotiated. The submissive's limits and safe word ultimately set the rules.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "kink",
+    "bdsm"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.080532+00:00",
+  "updated_at": "2026-10-01T16:01:42.080554+00:00"
+}

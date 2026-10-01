@@ -7,9 +7,12 @@
     "foreplay",
     "foreplay ki",
     "foreplay mane ki",
-    "ফোরপ্লে"
+    "ফোরপ্লে",
+    "fore play",
+    "শৃঙ্গার",
+    "পূর্বরাগ"
   ],
-  "details": "Foreplay can include different kinds of affectionate or sexual interaction. What people enjoy varies between individuals, and consent and comfort matter.",
+  "details": "Foreplay can include different kinds of affectionate or sexual interaction. What people enjoy varies between individuals, and consent and comfort matter. It can also be the main event itself, not only something before intercourse. It helps with lubrication, erection and relaxation, and makes sex more comfortable. It's especially important for many people with a vulva to reach orgasm. There's no set order or time; communication matters more than technique.",
   "answer_guidance": "Explain the meaning directly and naturally.\nMatch the user's language and writing style.\nIf the user only asks for the meaning, begin with a concise definition.\nGive additional explanation when the user asks for more detail.",
   "languages": [
     "en",
@@ -25,5 +28,47 @@
   "tags": [],
   "enabled": true,
   "created_at": "2026-09-24T15:55:33.698370+00:00",
-  "updated_at": "2026-09-24T15:55:33.698406+00:00"
+  "updated_at": "2026-10-01T16:01:40.216870+00:00",
+  "source_type": "owner",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "merged_from": [
+    {
+      "id": "gk-foreplay",
+      "title": "Foreplay",
+      "pack": "knowledge_v1",
+      "merged_at": "2026-10-01T16:01:40+00:00",
+      "source_type": "import",
+      "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+      "verified": false,
+      "approved_by": "",
+      "sources": [
+        {
+          "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+          "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+          "domain": "scarleteen.com",
+          "retrieved_at": "2026-10-01"
+        }
+      ],
+      "fields": [
+        "aliases",
+        "details"
+      ],
+      "aliases_added": [
+        "fore play",
+        "শৃঙ্গার",
+        "পূর্বরাগ"
+      ],
+      "aliases_skipped": {}
+    }
+  ],
+  "revision": 2
 }

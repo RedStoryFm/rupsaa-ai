@@ -1,0 +1,36 @@
+{
+  "id": "gk-plank",
+  "title": "Plank",
+  "category": "Fitness",
+  "subcategory": "Exercises",
+  "aliases": [
+    "plank exercise",
+    "plank koto khon dhorbo",
+    "প্ল্যাঙ্ক"
+  ],
+  "summary": "A plank is a core exercise holding a straight body line on forearms and toes. Squeeze glutes and abs, don't let hips sag; start with 20–30 seconds and build up.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "exercise",
+    "core"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 3,
+  "created_at": "2026-10-01T16:01:44.652137+00:00",
+  "updated_at": "2026-10-01T16:27:12.533914+00:00"
+}

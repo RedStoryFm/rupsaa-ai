@@ -1,0 +1,34 @@
+{
+  "id": "term-dirty_whisper",
+  "term": "Dirty Whisper",
+  "definition": "Whispering sexually suggestive words into a partner's ear.",
+  "category": "adult_terminology",
+  "aliases": [
+    "dirty whisper",
+    "dirty whispering",
+    "dirty whisper ki",
+    "dirty whisper mane ki",
+    "ডার্টি হুইস্পার"
+  ],
+  "details": "Consent and boundaries matter.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "dirty whisper ki",
+    "dirty whisper mane ki",
+    "ডার্টি হুইস্পার মানে কী",
+    "what is a dirty whisper"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.760517+00:00",
+  "updated_at": "2026-09-24T16:58:36.760528+00:00"
+}

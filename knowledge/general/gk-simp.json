@@ -1,0 +1,36 @@
+{
+  "id": "gk-simp",
+  "title": "Simp",
+  "category": "Dating",
+  "subcategory": "Dating Basics",
+  "aliases": [
+    "simping",
+    "simp mane ki",
+    "সিম্প"
+  ],
+  "summary": "'Simp' is internet slang, often mocking, for someone who goes overboard trying to win someone's affection.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it light, practical and encouraging. Define slang plainly and give realistic tips; avoid gender stereotypes.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "dating",
+    "slang"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.440559+00:00",
+  "updated_at": "2026-10-01T16:01:43.440576+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "gk-performance_anxiety",
+  "title": "Sexual Performance Anxiety",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Health",
+  "aliases": [
+    "performance anxiety",
+    "nervous in bed",
+    "sex anxiety",
+    "bed e nervous lage",
+    "performance anxiety ki",
+    "যৌন উদ্বেগ",
+    "পারফরম্যান্স উদ্বেগ"
+  ],
+  "summary": "Performance anxiety is worry about 'doing it right', lasting long enough or satisfying a partner. It can block arousal and erections — the worry itself becomes the problem.",
+  "description": "",
+  "key_points": [
+    "Shifting focus from performance to sensation and connection helps.",
+    "Talking openly with a partner reduces pressure.",
+    "Persistent anxiety can be helped by a therapist."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "mind",
+    "confidence"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.223616+00:00",
+  "updated_at": "2026-10-01T16:01:41.223637+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "gk-joint_family",
+  "title": "Joint Family",
+  "category": "Indian Culture",
+  "subcategory": "Society",
+  "aliases": [
+    "extended family",
+    "joint family te thaka",
+    "যৌথ পরিবার"
+  ],
+  "summary": "A joint family is several generations — grandparents, parents, uncles, aunts and cousins — living together and sharing resources. It's traditional in India though nuclear families are increasingly common.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "society",
+    "family"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.199734+00:00",
+  "updated_at": "2026-10-01T16:01:46.199758+00:00"
+}

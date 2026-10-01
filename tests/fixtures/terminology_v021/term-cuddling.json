@@ -1,0 +1,34 @@
+{
+  "id": "term-cuddling",
+  "term": "Cuddling",
+  "definition": "Holding a partner close in a comfortable, affectionate way.",
+  "category": "adult_terminology",
+  "aliases": [
+    "cuddling",
+    "cuddle",
+    "cuddling ki",
+    "cuddling mane ki",
+    "কাডলিং"
+  ],
+  "details": "Can be sexual or non-sexual; comfort matters.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "cuddling ki",
+    "cuddling mane ki",
+    "কাডলিং মানে কী",
+    "what is cuddling"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.751024+00:00",
+  "updated_at": "2026-09-24T16:58:36.751038+00:00"
+}

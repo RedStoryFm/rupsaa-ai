@@ -1,0 +1,45 @@
+{
+  "id": "gk-orgasm_gap",
+  "title": "Orgasm Gap",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "pleasure gap",
+    "orgasm gap ki",
+    "অর্গাজম গ্যাপ"
+  ],
+  "summary": "The orgasm gap is the finding that in heterosexual sex, women report orgasms much less often than men — largely because of too little clitoral stimulation and focus on penetration.",
+  "description": "",
+  "key_points": [
+    "More foreplay, communication and clitoral stimulation tend to close it."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "orgasm",
+    "pleasure"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "The Clitoris, the Vagina and Orgasm: Feelings and Frameworks (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/clitoris-vagina-and-orgasm-feelings-and-frameworks",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.706581+00:00",
+  "updated_at": "2026-10-01T16:01:40.706600+00:00"
+}

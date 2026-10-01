@@ -1,0 +1,38 @@
+{
+  "id": "gk-digital_detox",
+  "title": "Digital Detox",
+  "category": "Social Media",
+  "subcategory": "Wellbeing",
+  "aliases": [
+    "screen time",
+    "phone addiction",
+    "phone kom use korbo kibhabe",
+    "ডিজিটাল ডিটক্স",
+    "স্ক্রিন টাইম"
+  ],
+  "summary": "A digital detox is a deliberate break from screens or social media. Turning off non-essential notifications, setting app limits and phone-free times help reduce compulsive scrolling.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "social media",
+    "wellbeing"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.639634+00:00",
+  "updated_at": "2026-10-01T16:01:45.639656+00:00"
+}

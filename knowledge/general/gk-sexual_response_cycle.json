@@ -1,0 +1,47 @@
+{
+  "id": "gk-sexual_response_cycle",
+  "title": "Sexual Response Cycle",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "stages of sex",
+    "masters and johnson",
+    "sexual response cycle ki",
+    "যৌন প্রতিক্রিয়া চক্র"
+  ],
+  "summary": "The sexual response cycle is a model of how the body responds to sexual stimulation, usually described as desire, arousal (excitement), plateau, orgasm and resolution.",
+  "description": "",
+  "key_points": [
+    "Real experiences don't always follow the stages in order, and orgasm isn't required for sex to be good.",
+    "After orgasm, many people with a penis have a refractory period before they can get aroused again."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "arousal",
+    "orgasm"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.623783+00:00",
+  "updated_at": "2026-10-01T16:01:40.623796+00:00"
+}

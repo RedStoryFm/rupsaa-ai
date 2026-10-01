@@ -1,0 +1,36 @@
+{
+  "id": "gk-handwashing",
+  "title": "Handwashing",
+  "category": "Health & Hygiene",
+  "subcategory": "Hygiene",
+  "aliases": [
+    "how to wash hands",
+    "thik bhabe haat dhoa",
+    "হাত ধোয়া"
+  ],
+  "summary": "Proper handwashing with soap for at least 20 seconds — palms, backs, between fingers, thumbs and nails — is one of the most effective ways to prevent infections.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hygiene",
+    "prevention"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.862040+00:00",
+  "updated_at": "2026-10-01T16:01:43.862067+00:00"
+}

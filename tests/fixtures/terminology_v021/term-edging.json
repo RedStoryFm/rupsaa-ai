@@ -1,0 +1,33 @@
+{
+  "id": "term-edging",
+  "term": "Edging",
+  "definition": "Delaying climax by pausing or reducing stimulation near the peak of arousal.",
+  "category": "adult_terminology",
+  "aliases": [
+    "edging",
+    "edging ki",
+    "edging mane ki",
+    "এজিং"
+  ],
+  "details": "Requires clear communication and comfort.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "languages": [
+    "en",
+    "banglish",
+    "bn"
+  ],
+  "example_queries": [
+    "edging ki",
+    "edging mane ki",
+    "এজিং মানে কী",
+    "what is edging"
+  ],
+  "tags": [
+    "adult",
+    "terminology",
+    "definition"
+  ],
+  "enabled": true,
+  "created_at": "2026-09-24T16:58:36.694656+00:00",
+  "updated_at": "2026-09-24T16:58:36.694666+00:00"
+}

@@ -573,7 +573,11 @@ async def get_general(record_id: str, x_owner_key: str | None = Header(default=N
 async def create_general(request: KnowledgeIn, x_owner_key: str | None = Header(default=None)) -> dict:
     require_owner(x_owner_key)
     try:
-        return _gk_out(_get_general().create({**request.model_dump(exclude_none=True), "source": request.source or "owner"}))
+        # Created by the authenticated owner in the Knowledge Manager / Teach page: owner-approved unless the form
+        # explicitly says otherwise. (Imports keep the file's approved_by; blank stays blank.)
+        body = request.model_dump(exclude_none=True)
+        return _gk_out(_get_general().create({**body, "source": request.source or "owner",
+                                              "approved_by": body.get("approved_by", "owner")}))
     except KnowledgeError as e:
         raise HTTPException(status_code=400, detail=str(e))
 

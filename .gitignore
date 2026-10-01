@@ -99,3 +99,12 @@ data/user_memory/
 data/user_prefs/
 # General Knowledge revision backups (git history already versions the records)
 knowledge/general/.history/
+knowledge/terminology/.history/
+knowledge/dance/.history/
+# Knowledge V1 benchmark: aggregates only (per-query files contain the private eval queries)
+!data/production/reports/knowledge_v1_eval/
+data/production/reports/knowledge_v1_eval/*
+!data/production/reports/knowledge_v1_eval/SUMMARY.md
+!data/production/reports/knowledge_v1_eval/METRICS.json
+# Private retrieval evaluation sets — never committed, never imported
+data/staging/*/evaluation/

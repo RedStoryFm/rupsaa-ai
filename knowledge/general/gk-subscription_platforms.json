@@ -1,0 +1,43 @@
+{
+  "id": "gk-subscription_platforms",
+  "title": "Subscription Creator Platforms",
+  "category": "Creator Platforms",
+  "subcategory": "Monetisation",
+  "aliases": [
+    "subscription platform",
+    "patreon",
+    "onlyfans",
+    "fansly",
+    "onlyfans ki",
+    "patreon ki",
+    "সাবস্ক্রিপশন প্ল্যাটফর্ম"
+  ],
+  "summary": "Subscription platforms like Patreon, OnlyFans and Fansly let fans pay creators monthly for exclusive content, plus tips or paid messages. Some allow adult content (18+, with ID verification); others don't.",
+  "description": "",
+  "key_points": [
+    "Platforms take a percentage cut of earnings.",
+    "Each has its own content rules and payout policies — check current terms."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain neutrally and non-judgementally. Avoid stating current fees or policies as fixed facts.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "creator",
+    "monetisation"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.967454+00:00",
+  "updated_at": "2026-10-01T16:01:44.967477+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gk-rabindra_sangeet",
+  "title": "Rabindra Sangeet",
+  "category": "Entertainment",
+  "subcategory": "Music",
+  "aliases": [
+    "tagore songs",
+    "robindro songit",
+    "rabindra sangeet ki",
+    "রবীন্দ্রসংগীত"
+  ],
+  "summary": "Rabindra Sangeet is the body of over 2,000 songs written and composed by Rabindranath Tagore, central to Bengali culture and sung at festivals, celebrations and everyday moments.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "music",
+    "bengal"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.887079+00:00",
+  "updated_at": "2026-10-01T16:01:44.887100+00:00"
+}

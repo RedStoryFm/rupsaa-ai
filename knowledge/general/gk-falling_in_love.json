@@ -1,0 +1,39 @@
+{
+  "id": "gk-falling_in_love",
+  "title": "Falling in Love",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "in love",
+    "love vs infatuation",
+    "prem e pora",
+    "bhalobasha ki",
+    "প্রেমে পড়া",
+    "ভালোবাসা"
+  ],
+  "summary": "Falling in love brings intense attraction, excitement and focus on one person, driven partly by brain chemicals like dopamine. Over time, passionate love often deepens into calmer companionate love.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "love"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.038579+00:00",
+  "updated_at": "2026-10-01T16:01:43.038595+00:00"
+}

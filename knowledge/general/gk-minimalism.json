@@ -1,0 +1,36 @@
+{
+  "id": "gk-minimalism",
+  "title": "Minimalism",
+  "category": "Lifestyle",
+  "subcategory": "Home",
+  "aliases": [
+    "decluttering",
+    "ghor gochano tips",
+    "মিনিমালিজম",
+    "ঘর গোছানো"
+  ],
+  "summary": "Minimalism is keeping fewer, more meaningful possessions. Decluttering one area at a time and asking 'have I used this in a year?' make it manageable.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "home"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.727706+00:00",
+  "updated_at": "2026-10-01T16:01:46.727728+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gk-hair_oiling",
+  "title": "Hair Oiling",
+  "category": "Beauty",
+  "subcategory": "Hair",
+  "aliases": [
+    "coconut oil for hair",
+    "chule tel dewa bhalo ki",
+    "চুলে তেল দেওয়া",
+    "নারকেল তেল"
+  ],
+  "summary": "Hair oiling is a South Asian tradition of massaging oil (often coconut) into the scalp and hair before washing. It can reduce dryness and protein loss; it won't cure baldness.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hair",
+    "india"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.229219+00:00",
+  "updated_at": "2026-10-01T16:01:44.229251+00:00"
+}

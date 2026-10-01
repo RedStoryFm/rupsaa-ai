@@ -1,0 +1,37 @@
+{
+  "id": "gk-biryani_kolkata",
+  "title": "Kolkata Biryani",
+  "category": "Food / Recipes",
+  "subcategory": "Rice Dishes",
+  "aliases": [
+    "biryani",
+    "kolkata biryani te alu keno",
+    "বিরিয়ানি",
+    "কলকাতা বিরিয়ানি"
+  ],
+  "summary": "Kolkata biryani is a lighter, subtly spiced Awadhi-style biryani famous for including potatoes and often eggs, linked to Nawab Wajid Ali Shah's kitchens in Kolkata.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "rice",
+    "bengali"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.468382+00:00",
+  "updated_at": "2026-10-01T16:01:46.468407+00:00"
+}

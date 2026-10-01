@@ -1,0 +1,36 @@
+{
+  "id": "gk-one_sided_love",
+  "title": "One-sided Love",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "unrequited love",
+    "ektorofa prem",
+    "একতরফা প্রেম"
+  ],
+  "summary": "One-sided (unrequited) love is loving someone who doesn't feel the same way. It hurts, and accepting their answer while giving yourself space usually helps healing.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "emotions"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.057920+00:00",
+  "updated_at": "2026-10-01T16:01:43.057938+00:00"
+}

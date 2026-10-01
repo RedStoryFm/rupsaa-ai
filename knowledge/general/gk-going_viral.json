@@ -1,0 +1,36 @@
+{
+  "id": "gk-going_viral",
+  "title": "Going Viral",
+  "category": "Social Media",
+  "subcategory": "Basics",
+  "aliases": [
+    "how to go viral",
+    "viral video",
+    "viral howa mane ki",
+    "ভাইরাল"
+  ],
+  "summary": "Going viral means content spreads rapidly and widely through shares. It's unpredictable; consistent relatable, emotional or useful content raises the odds.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "social media"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.501058+00:00",
+  "updated_at": "2026-10-01T16:01:45.501081+00:00"
+}

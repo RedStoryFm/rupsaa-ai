@@ -78,6 +78,34 @@ Edits and deletes copy the previous version to `.history/`, which is git-ignored
 
 A live web result is never a source type on its own.
 
+**Approval is never assumed.** `approved_by` is `"owner"` only when the owner explicitly approved the record:
+- created in the Knowledge Manager or Teach page (the form's "Approved by owner" box);
+- confirmed with "save" in Teacher Mode.
+
+Imported records keep exactly what the file says, so blank stays blank. Toggling or editing a record never approves
+it. `verified` means the owner checked the record against its sources.
+
+**Knowledge V1 library** (imported 2026-10-01 from `data/staging/knowledge_v1/`; see
+`data/production/reports/knowledge_v1_eval/SUMMARY.md`):
+- 352 General Knowledge records were imported from the canonical JSONL. They are enabled, but not owner-reviewed
+  (`source_type: import`, `verified: false`, `approved_by: ""`).
+- 6 concepts that overlapped Terminology were merged into the existing `term-*` records: consent, foreplay,
+  aftercare, edging, bondage and oral sex. Their staging provenance is kept in `merged_from`.
+- Totals: 40 Terminology + 60 Dance + 357 General Knowledge = 457 concepts.
+
+To re-run the import: `python scripts/import_knowledge_v1.py --dry-run`, then run it without `--dry-run`. It checks
+the pack's checksums first. To re-run the benchmark: `python scripts/eval_knowledge_v1.py --label after`.
+
+**Import format and ids.**
+- JSON, JSONL, CSV and XLSX all keep `id`, `approved_by`, `verified` and `sources`. In CSV/XLSX, `sources` is a
+  JSON-array cell.
+- A supplied valid id is kept, which keeps ids stable for later corrections.
+- Unsafe or duplicate ids are rejected.
+- An existing id means "update this record".
+
+Terminology records also carry provenance: `source_type`, `sources`, `verified`, `approved_by`, `merged_from` and
+`revision`. Every update or delete is backed up to `.history/` first.
+
 **Multilingual aliases.** One concept is one record. English, Banglish and Bengali names are aliases of that record,
 for example `Foreplay` / `fore play` / `ফোরপ্লে`. Follow-ups such as "eta Bengali te bolo" and "abar Banglish e bolo"
 keep the active record without searching again.
@@ -90,6 +118,24 @@ keep the active record without searching again.
 4. otherwise, no local match.
 
 Weak look-alikes are rejected: "hair color" does not match *Hair Straightening*.
+
+Refinements in Knowledge V1:
+- **When curated knowledge is consulted.** For every message except small talk, memory questions and follow-ups.
+  Personal wording ("amar … ki korbo") is included.
+- **Short casual messages** (3 words or fewer, not a question). These match only when the whole message *is* a title
+  or alias, or a typo of one. "vagina" and "condom?" match; "breaking news" and "popping a balloon" never reach the
+  dance styles inside them.
+- **The most specific name wins.** "অকাল বীর্যপাত" beats "বীর্যপাত", and a General Knowledge "enthusiastic consent"
+  beats the Terminology "consent" found inside it.
+- **Bengali endings** (-এর, -ে, -তে, -কে, -দের …) are tolerated in whole-word name matches.
+- **Ranking among name hits.**
+  - Name hits are ordered by meaning.
+  - A semantic match that passes every guard can outrank a phrase hit only when it is clearly closer (margin 0.03).
+  - Exact names are never overridden.
+- **Elliptical follow-ups** ("kono risk ache ki?", "আর প্রথমবার হলে?") keep the active topic. Fresh/current, small talk
+  and identity questions never do.
+- **False-positive protection.** A programming or kitchen context ("strip whitespace", "coffee grind") blocks phrase
+  hits on Terminology words. A direct definition question still works.
 
 **Managing knowledge.** `/knowledge.html` has Terminology, Dance and General Knowledge tabs. Each supports add,
 edit, delete, enable/disable, search, category and tag filters, a retrieval test, preview, and import/export in

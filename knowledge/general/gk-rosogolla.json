@@ -1,0 +1,42 @@
+{
+  "id": "gk-rosogolla",
+  "title": "Rosogolla",
+  "category": "Food / Recipes",
+  "subcategory": "Sweets",
+  "aliases": [
+    "rasgulla",
+    "rasagola",
+    "rosogolla kibhabe banay",
+    "রসগোল্লা"
+  ],
+  "summary": "Rosogolla is a Bengali sweet of soft chhena (fresh cheese) balls cooked in light sugar syrup. Bengal received a GI tag for 'Banglar Rasogolla' in 2017.",
+  "description": "",
+  "key_points": [],
+  "steps": [
+    "Curdle boiled milk with lemon juice; strain and rinse the chhena",
+    "Knead the chhena until smooth and roll into small crack-free balls",
+    "Boil in thin sugar syrup, covered, for about 15–20 minutes until they swell",
+    "Cool in the syrup"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sweet",
+    "bengali"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.301122+00:00",
+  "updated_at": "2026-10-01T16:01:46.301143+00:00"
+}

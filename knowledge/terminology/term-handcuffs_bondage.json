@@ -11,7 +11,7 @@
     "হ্যান্ডকাফস",
     "বন্ডেজ"
   ],
-  "details": "Safety, safe words, and quick release are essential.",
+  "details": "Safety, safe words, and quick release are essential. Safety basics: never restrain the neck, check circulation often, and keep safety scissors nearby.",
   "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
   "languages": [
     "en",
@@ -31,5 +31,46 @@
   ],
   "enabled": true,
   "created_at": "2026-09-24T16:58:36.733770+00:00",
-  "updated_at": "2026-09-24T16:58:36.733785+00:00"
+  "updated_at": "2026-10-01T16:01:40.237348+00:00",
+  "source_type": "owner",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "merged_from": [
+    {
+      "id": "gk-bondage",
+      "title": "Bondage",
+      "pack": "knowledge_v1",
+      "merged_at": "2026-10-01T16:01:40+00:00",
+      "source_type": "import",
+      "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+      "verified": false,
+      "approved_by": "",
+      "sources": [
+        {
+          "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+          "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+          "domain": "goaskalice.columbia.edu",
+          "retrieved_at": "2026-10-01"
+        }
+      ],
+      "fields": [
+        "details"
+      ],
+      "aliases_added": [],
+      "aliases_skipped": {
+        "tying up": "'tying up loose ends', 'tying up the boat'",
+        "restraints": "'budget restraints', medical/physical restraints",
+        "বন্ধন": "'bond' (রাখী বন্ধন, ভালোবাসার বন্ধন)"
+      }
+    }
+  ],
+  "revision": 2
 }

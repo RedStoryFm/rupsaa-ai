@@ -1,0 +1,35 @@
+{
+  "id": "gk-anime_basics",
+  "title": "Anime",
+  "category": "Entertainment",
+  "subcategory": "TV & Streaming",
+  "aliases": [
+    "manga",
+    "anime ki",
+    "অ্যানিমে"
+  ],
+  "summary": "Anime is Japanese animation, spanning every genre from action (shōnen) to romance and slice-of-life. Manga are Japanese comics, which many anime adapt.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "animation"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.851446+00:00",
+  "updated_at": "2026-10-01T16:01:44.851469+00:00"
+}

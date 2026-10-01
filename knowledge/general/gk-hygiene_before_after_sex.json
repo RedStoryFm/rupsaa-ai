@@ -1,0 +1,38 @@
+{
+  "id": "gk-hygiene_before_after_sex",
+  "title": "Hygiene Before and After Sex",
+  "category": "Health & Hygiene",
+  "subcategory": "Hygiene",
+  "aliases": [
+    "hygiene after sex",
+    "pee after sex",
+    "clean up after sex",
+    "sex er por ki korte hoy",
+    "সেক্সের পর পরিচ্ছন্নতা"
+  ],
+  "summary": "Basic sex hygiene: wash hands, keep nails short, wash toys, and pee after sex to lower UTI risk. A simple rinse with water is enough — no special products needed.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hygiene",
+    "sexual health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.823978+00:00",
+  "updated_at": "2026-10-01T16:01:43.824000+00:00"
+}

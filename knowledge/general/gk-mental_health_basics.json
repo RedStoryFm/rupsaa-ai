@@ -1,0 +1,37 @@
+{
+  "id": "gk-mental_health_basics",
+  "title": "Mental Health Basics",
+  "category": "Health & Hygiene",
+  "subcategory": "Health",
+  "aliases": [
+    "mental health",
+    "anxiety vs depression",
+    "mental health kharap lagche",
+    "মানসিক স্বাস্থ্য"
+  ],
+  "summary": "Mental health is emotional, psychological and social wellbeing. Anxiety involves persistent worry; depression involves lasting low mood or loss of interest. Both are common and treatable.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm and non-clinical. If the user mentions self-harm or suicidal thoughts, prioritise safety and encourage contacting local emergency services or a helpline (India: Tele-MANAS 14416).",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "health",
+    "mental health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.017661+00:00",
+  "updated_at": "2026-10-01T16:01:44.017693+00:00"
+}

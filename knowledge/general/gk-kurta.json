@@ -1,0 +1,39 @@
+{
+  "id": "gk-kurta",
+  "title": "Kurta / Panjabi",
+  "category": "Fashion",
+  "subcategory": "Indian Wear",
+  "aliases": [
+    "kurta",
+    "kurti",
+    "panjabi",
+    "kurti ar kurta difference",
+    "কুর্তা",
+    "পাঞ্জাবি",
+    "কুর্তি"
+  ],
+  "summary": "A kurta (called panjabi in Bengal) is a long, loose tunic worn by men and women; a kurti is a shorter women's version. They pair with pyjamas, jeans, leggings or dhotis.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "indian wear"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.370993+00:00",
+  "updated_at": "2026-10-01T16:01:44.371013+00:00"
+}

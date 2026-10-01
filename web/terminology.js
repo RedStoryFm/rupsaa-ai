@@ -232,10 +232,14 @@
       row.className = "doc-row";
       const badge = t.enabled ? "" : `<span class="badge readonly">disabled</span>`;
       const aliases = t.aliases.length ? ` · aliases: ${escapeHtml(t.aliases.slice(0, 6).join(", "))}` : "";
+      // Provenance: sources and content merged from other records (e.g. Knowledge V1 staging, not owner-reviewed).
+      const prov = [(t.sources || []).length && `${t.sources.length} source(s)`,
+        (t.merged_from || []).length && `merged: ${t.merged_from.map((m) => `${m.id}${m.approved_by === "owner" ? "" : " (not reviewed)"}`).join(", ")}`,
+        t.revision > 1 && `rev ${t.revision}`].filter(Boolean).map(escapeHtml).join(" · ");
       row.innerHTML = `
         <div class="doc-info">
           <div class="doc-title">${escapeHtml(t.term)}${badge}</div>
-          <div class="doc-meta">${escapeHtml(t.category)} · ${escapeHtml(t.id)}${aliases}</div>
+          <div class="doc-meta">${escapeHtml(t.category)} · ${escapeHtml(t.id)}${aliases}${prov ? ` · ${prov}` : ""}</div>
           <div class="term-def">${escapeHtml(t.definition)}</div>
         </div>
         <div class="doc-actions"></div>`;

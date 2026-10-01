@@ -1,0 +1,37 @@
+{
+  "id": "gk-spoiler",
+  "title": "Spoiler",
+  "category": "Entertainment",
+  "subcategory": "TV & Streaming",
+  "aliases": [
+    "spoiler alert",
+    "no spoilers",
+    "spoiler dio na",
+    "স্পয়লার"
+  ],
+  "summary": "A spoiler is information that reveals important plot points, such as an ending or twist, before someone has watched or read it.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "slang",
+    "tv"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.833688+00:00",
+  "updated_at": "2026-10-01T16:01:44.833709+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "gk-bdsm",
+  "title": "BDSM",
+  "category": "Adult Terminology",
+  "subcategory": "Kink & BDSM",
+  "aliases": [
+    "bondage and discipline",
+    "s&m",
+    "sadomasochism",
+    "bdsm mane ki",
+    "বিডিএসএম"
+  ],
+  "summary": "BDSM covers consensual practices involving bondage & discipline, dominance & submission, and sadism & masochism. It's about negotiated power, sensation and trust — not abuse.",
+  "description": "",
+  "key_points": [
+    "Built on informed consent, negotiation, safe words and aftercare.",
+    "Any participant can stop at any time.",
+    "Frameworks include SSC (safe, sane, consensual) and RACK (risk-aware consensual kink)."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain neutrally and educationally. Stress consent, communication and safety; avoid graphic detail.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "kink",
+    "bdsm"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.022443+00:00",
+  "updated_at": "2026-10-01T16:01:42.022463+00:00"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "gk-first_time_sex",
+  "title": "First Time Having Sex",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "first time sex",
+    "does first time hurt",
+    "first time e betha hoy ki",
+    "prothom bar",
+    "প্রথমবার সেক্স",
+    "প্রথম মিলন"
+  ],
+  "summary": "The first time can feel exciting, awkward or nervous — all normal. It shouldn't be very painful; going slowly, plenty of arousal, lube and communication help.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [
+    "Talk about consent and protection first",
+    "Go slow and check in",
+    "Use lube if needed",
+    "Stop if anything hurts"
+  ],
+  "dont": [
+    "Feel pressured by a deadline or movie expectations",
+    "Skip protection"
+  ],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "first time"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Ready or Not? The Scarleteen Sex Readiness Checklist (Scarleteen)",
+      "url": "https://www.scarleteen.com/article/relationships/ready_or_not_the_scarleteen_sex_readiness_checklist",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "How Do I Make Sex Safer? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/safer-sex/how-do-i-make-sex-safer",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.759099+00:00",
+  "updated_at": "2026-10-01T16:01:40.759114+00:00"
+}

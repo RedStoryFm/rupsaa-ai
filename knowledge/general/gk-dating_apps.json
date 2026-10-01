@@ -1,0 +1,37 @@
+{
+  "id": "gk-dating_apps",
+  "title": "Dating Apps",
+  "category": "Dating",
+  "subcategory": "Dating Basics",
+  "aliases": [
+    "tinder",
+    "bumble",
+    "kon dating app bhalo",
+    "ডেটিং অ্যাপ"
+  ],
+  "summary": "Dating apps let people browse profiles, match and chat. Popular ones include Tinder, Bumble and Hinge, as well as Aisle and matrimonial sites in India.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it light, practical and encouraging. Define slang plainly and give realistic tips; avoid gender stereotypes.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "dating",
+    "online"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:43.211832+00:00",
+  "updated_at": "2026-10-01T16:01:43.211862+00:00"
+}

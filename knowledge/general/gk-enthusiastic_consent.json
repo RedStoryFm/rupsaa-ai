@@ -1,0 +1,45 @@
+{
+  "id": "gk-enthusiastic_consent",
+  "title": "Enthusiastic Consent",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "yes means yes",
+    "enthusiastic consent ki",
+    "উৎসাহী সম্মতি"
+  ],
+  "summary": "Enthusiastic consent means looking for a clear, willing 'yes' — in words or obvious eagerness — rather than just the absence of a 'no'.",
+  "description": "",
+  "key_points": [
+    "Checking in ('Is this okay?', 'Want to keep going?') is normal and can be caring and sexy.",
+    "Hesitation, freezing or pulling away means pause and check."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "consent"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Driver's Ed for the Sexual Superhighway: Navigating Consent (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/drivers-ed-sexual-superhighway-navigating-consent",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.712312+00:00",
+  "updated_at": "2026-10-01T16:01:40.712329+00:00"
+}

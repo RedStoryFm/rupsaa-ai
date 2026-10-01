@@ -1,0 +1,55 @@
+{
+  "id": "gk-healthy_relationship",
+  "title": "Healthy Relationship",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "signs of a healthy relationship",
+    "healthy relationship ki rokom",
+    "bhalo somporko",
+    "সুস্থ সম্পর্ক",
+    "ভালো সম্পর্ক"
+  ],
+  "summary": "A healthy relationship is built on respect, trust, honesty, equality and good communication. Both people feel safe, keep their own identity and can disagree without fear.",
+  "description": "",
+  "key_points": [
+    "You can spend time with friends and family freely.",
+    "Boundaries are respected.",
+    "Conflicts are resolved without insults or threats."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Warning signs of dating abuse (love is respect)",
+      "url": "https://www.loveisrespect.org/dating-basics-for-healthy-relationships/warning-signs-of-abuse/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Dating basics: what should I look for? (love is respect)",
+      "url": "https://www.loveisrespect.org/resources/dating-basics-what-should-i-look-for/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.254117+00:00",
+  "updated_at": "2026-10-01T16:01:42.254140+00:00"
+}

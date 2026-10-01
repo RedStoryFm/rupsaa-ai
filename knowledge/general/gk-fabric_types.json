@@ -1,0 +1,37 @@
+{
+  "id": "gk-fabric_types",
+  "title": "Fabric Types",
+  "category": "Fashion",
+  "subcategory": "Basics",
+  "aliases": [
+    "cotton vs polyester",
+    "breathable fabric",
+    "gorome kon kapor bhalo",
+    "কাপড়ের ধরন",
+    "সুতি"
+  ],
+  "summary": "Natural fabrics like cotton and linen breathe well in heat; silk is light and luxurious; wool is warm; synthetics like polyester are durable and quick-drying but trap heat.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "basics"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.442636+00:00",
+  "updated_at": "2026-10-01T16:01:44.442657+00:00"
+}

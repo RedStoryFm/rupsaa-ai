@@ -1,0 +1,56 @@
+{
+  "id": "gk-libido",
+  "title": "Libido (Sex Drive)",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "libido",
+    "sex drive",
+    "sexual desire",
+    "low libido",
+    "high sex drive",
+    "libido ki",
+    "sex drive kom keno",
+    "icche kome geche",
+    "যৌন ইচ্ছা",
+    "কামনা",
+    "লিবিডো",
+    "যৌন আকাঙ্ক্ষা"
+  ],
+  "summary": "Libido is a person's overall interest in sex. It naturally varies between people and over time with stress, sleep, hormones, health, medication, mood and relationship factors.",
+  "description": "",
+  "key_points": [
+    "There's no 'correct' amount of sex drive.",
+    "A sudden or distressing change is worth discussing with a doctor — it can be linked to medication, depression or hormones.",
+    "Desire can be spontaneous or appear only after closeness starts (responsive desire)."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "desire",
+    "health"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.613005+00:00",
+  "updated_at": "2026-10-01T16:01:40.613019+00:00"
+}

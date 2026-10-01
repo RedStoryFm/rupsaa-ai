@@ -1,0 +1,37 @@
+{
+  "id": "gk-phone_battery",
+  "title": "Phone Battery Care",
+  "category": "Technology",
+  "subcategory": "Devices",
+  "aliases": [
+    "battery health",
+    "phone battery",
+    "battery drain",
+    "phone er charge taratari sesh hoye jay",
+    "ফোনের ব্যাটারি"
+  ],
+  "summary": "Battery life suffers from heat, constant 100% charging and deep drains. Avoid heat, use reliable chargers, and check battery usage settings for apps draining power.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "devices"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.849991+00:00",
+  "updated_at": "2026-10-01T16:01:45.850014+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gk-body_hair_removal",
+  "title": "Body Hair Removal",
+  "category": "Beauty",
+  "subcategory": "Grooming",
+  "aliases": [
+    "hair removal",
+    "waxing",
+    "shaving",
+    "laser hair removal",
+    "wax na shave kon ta bhalo",
+    "লোম তোলা",
+    "ওয়াক্সিং"
+  ],
+  "summary": "Options include shaving (quick, short-lasting), waxing (weeks, more painful), creams, epilating and laser (longer-term reduction). Removing body hair is entirely a personal choice.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "grooming"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.305624+00:00",
+  "updated_at": "2026-10-01T16:01:44.305669+00:00"
+}

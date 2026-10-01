@@ -1,0 +1,49 @@
+{
+  "id": "gk-negotiation_kink",
+  "title": "Scene Negotiation",
+  "category": "Adult Terminology",
+  "subcategory": "Kink & BDSM",
+  "aliases": [
+    "negotiation",
+    "kink negotiation",
+    "negotiation kibhabe kore",
+    "পূর্ব-আলোচনা"
+  ],
+  "summary": "Negotiation is the conversation before kink play where partners agree on activities, limits, safe words, health issues and aftercare.",
+  "description": "",
+  "key_points": [],
+  "steps": [
+    "Share wants, limits and maybes",
+    "Agree on safe word / signals",
+    "Mention health issues or triggers",
+    "Plan aftercare"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "kink",
+    "consent"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.159115+00:00",
+  "updated_at": "2026-10-01T16:01:42.159135+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "gk-luchi",
+  "title": "Luchi",
+  "category": "Food / Recipes",
+  "subcategory": "Bengali Cuisine",
+  "aliases": [
+    "luchi kibhabe banabo",
+    "লুচি"
+  ],
+  "summary": "Luchi is a Bengali deep-fried puffed flatbread made from maida (refined flour), commonly eaten with alur dom or cholar dal.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "bread",
+    "bengali"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.447438+00:00",
+  "updated_at": "2026-10-01T16:01:46.447467+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "gk-mishti_doi",
+  "title": "Mishti Doi",
+  "category": "Food / Recipes",
+  "subcategory": "Sweets",
+  "aliases": [
+    "sweet curd",
+    "sweet yogurt",
+    "mishti doi recipe",
+    "মিষ্টি দই"
+  ],
+  "summary": "Mishti doi is Bengali sweetened yoghurt made by reducing milk with caramelised sugar or jaggery and setting it, traditionally in earthen pots.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sweet",
+    "bengali"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:46.322753+00:00",
+  "updated_at": "2026-10-01T16:01:46.322792+00:00"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "gk-hepatitis_b",
+  "title": "Hepatitis B",
+  "category": "Sexual Education",
+  "subcategory": "STIs & Safer Sex",
+  "aliases": [
+    "hep b",
+    "hepatitis b sex e chorai ki",
+    "হেপাটাইটিস বি"
+  ],
+  "summary": "Hepatitis B is a liver virus spread through blood and sexual fluids. A safe, effective vaccine prevents it.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sti",
+    "vaccine"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Primary Prevention Methods - STI Treatment Guidelines (CDC)",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/clinical-primary.htm",
+      "domain": "cdc.gov",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.960087+00:00",
+  "updated_at": "2026-10-01T16:01:40.960103+00:00"
+}

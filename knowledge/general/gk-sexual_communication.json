@@ -1,0 +1,49 @@
+{
+  "id": "gk-sexual_communication",
+  "title": "Talking About Sex With a Partner",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "talking about sex",
+    "sexual communication",
+    "how to talk about sex",
+    "partner er sathe sex niye kotha bola",
+    "ki bhabe bolbo ki bhalo lage",
+    "যৌনতা নিয়ে কথা বলা"
+  ],
+  "summary": "Talking about sex — likes, dislikes, boundaries, protection and testing — helps partners feel safer and enjoy sex more. It gets easier with practice.",
+  "description": "",
+  "key_points": [
+    "Pick a relaxed, private moment, not mid-argument.",
+    "Use 'I' statements: 'I love when…', 'I'd like to try…'.",
+    "Talk about protection and STI testing before sex, not after."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "communication"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Yes, No, Maybe So: A Sexual Inventory Stocklist (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/relationships/yes-no-maybe-so-sexual-inventory-stocklist",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.738405+00:00",
+  "updated_at": "2026-10-01T16:01:40.738420+00:00"
+}

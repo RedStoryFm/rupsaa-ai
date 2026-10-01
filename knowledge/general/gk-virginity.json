@@ -1,0 +1,51 @@
+{
+  "id": "gk-virginity",
+  "title": "Virginity",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "virgin",
+    "losing virginity",
+    "virginity mane ki",
+    "virgin kibhabe bojha jay",
+    "কুমারীত্ব",
+    "কৌমার্য",
+    "ভার্জিন"
+  ],
+  "summary": "Virginity is a social idea, usually meaning someone hasn't had sex yet. Definitions differ, and there is no medical test for it.",
+  "description": "",
+  "key_points": [
+    "People define their own 'first time'.",
+    "The hymen, bleeding or 'tightness' don't prove anything.",
+    "Your worth isn't tied to your sexual history."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "myth",
+    "first time"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.754617+00:00",
+  "updated_at": "2026-10-01T16:01:40.754630+00:00"
+}

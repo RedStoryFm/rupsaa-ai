@@ -1,0 +1,50 @@
+{
+  "id": "gk-transgender",
+  "title": "Transgender",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "trans woman",
+    "trans man",
+    "transgender mane ki",
+    "রূপান্তরকামী",
+    "ট্রান্সজেন্ডার",
+    "হিজড়া"
+  ],
+  "summary": "Transgender describes people whose gender identity differs from the sex they were assigned at birth. Transitioning can be social, legal and/or medical, and looks different for everyone.",
+  "description": "",
+  "key_points": [
+    "India legally recognises transgender people as a third gender.",
+    "Hijra is a distinct traditional South Asian community; not all trans people identify with it."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Use the names and pronouns a person uses. Avoid sensational questions about bodies.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "gender",
+    "lgbtq"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Transgender and Nonbinary Identities (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/gender-identity/transgender",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.435822+00:00",
+  "updated_at": "2026-10-01T16:01:41.435842+00:00"
+}

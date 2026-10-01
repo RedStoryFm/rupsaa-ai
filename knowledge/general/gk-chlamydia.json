@@ -1,0 +1,42 @@
+{
+  "id": "gk-chlamydia",
+  "title": "Chlamydia",
+  "category": "Sexual Education",
+  "subcategory": "STIs & Safer Sex",
+  "aliases": [
+    "chlamydia ki",
+    "ক্ল্যামিডিয়া"
+  ],
+  "summary": "Chlamydia is a very common bacterial STI that often has no symptoms. It's easily cured with antibiotics, but untreated it can cause pelvic infections and fertility problems.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sti",
+    "bacterial"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How to Prevent STIs (CDC)",
+      "url": "https://www.cdc.gov/sti/prevention/index.html",
+      "domain": "cdc.gov",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.913344+00:00",
+  "updated_at": "2026-10-01T16:01:40.913360+00:00"
+}

@@ -34,6 +34,7 @@ LANGUAGES = ["en", "bn", "banglish"]
 # "owner_verified_web" means the owner reviewed web evidence and explicitly approved the record.
 SOURCE_TYPES = ["owner", "owner_teaching", "owner_verified_web", "import", "test"]
 MAX_SOURCES = 10
+APPROVERS = ("", "owner")  # never filled in automatically: blank means not (yet) approved by the owner
 LIST_FIELDS = ("aliases", "key_points", "steps", "do", "dont", "languages", "tags")
 TEXT_FIELDS = ("title", "category", "subcategory", "summary", "description", "answer_guidance", "source")
 _TEXT_LIMITS = {"title": 120, "subcategory": 120, "summary": 1000, "description": 6000, "answer_guidance": 2000,
@@ -44,6 +45,7 @@ _ID_RE = re.compile(r"^gk-[a-z0-9_]{1,60}$")
 _BN = "ঀ-৿"
 # Semantic retrieval acceptance (multilingual-e5-small cosine; e5 scores are compressed, unrelated ≈ 0.75–0.80).
 SEMANTIC_MIN_SCORE = 0.85
+SEMANTIC_OVERRIDE_MARGIN = 0.03  # a guarded semantic match outranks a phrase hit only when clearly closer
 _STOPWORDS = {"ki", "kii", "mane", "what", "is", "the", "a", "an", "of", "how", "to", "kivabe", "keno", "why", "er",
               "ta", "ti", "e", "te", "bolo", "kore", "koro", "and", "ar", "o", "about", "somporke", "কী", "কি", "মানে"}
 
@@ -73,7 +75,7 @@ class KnowledgeRecord:
     source_type: str = "owner"  # one of SOURCE_TYPES
     sources: list[dict] = field(default_factory=list)  # [{title, url, domain, retrieved_at}] for web-assisted records
     verified: bool = False  # owner checked it against sources
-    approved_by: str = "owner"
+    approved_by: str = ""  # "owner" only when the owner explicitly approved it; blank = not reviewed
     revision: int = 1
     created_at: str = field(default_factory=_now)
     updated_at: str = field(default_factory=_now)
@@ -111,6 +113,10 @@ def validate(data: dict) -> list[str]:
         errors.append("give at least a summary, a description or key points")
     if data.get("category") and data["category"] not in CATEGORIES:
         errors.append(f"unknown category {data['category']!r} (allowed: {', '.join(CATEGORIES)})")
+    if str(data.get("approved_by") or "") not in APPROVERS:
+        errors.append(f"approved_by must be one of {APPROVERS} (blank = not owner-approved)")
+    if data.get("id") is not None and not _ID_RE.match(str(data["id"])):
+        errors.append(f"invalid id {data['id']!r} (expected gk- followed by a-z, 0-9 or _)")
     if data.get("source_type") and data["source_type"] not in SOURCE_TYPES:
         errors.append(f"unknown source_type {data['source_type']!r} (allowed: {SOURCE_TYPES})")
     errors += _source_errors(data.get("sources") or [])
@@ -168,7 +174,7 @@ def clean(data: dict) -> dict:
     out["source_type"] = str(data.get("source_type") or "owner")
     out["sources"] = _clean_sources(data.get("sources"))
     out["verified"] = bool(data.get("verified", False))
-    out["approved_by"] = str(data.get("approved_by") or "owner").strip()[:60]
+    out["approved_by"] = str(data.get("approved_by") or "").strip()
     return out
 
 
@@ -243,10 +249,15 @@ class GeneralKnowledgeStore:
             raise KnowledgeError("; ".join(errors))
         with self._lock:
             c = clean(data)
-            base = f"gk-{_slug(c['title'])}"
-            rid, n = base, 2
-            while self._path(rid).exists():
-                rid, n = f"{base}_{n}", n + 1
+            if data.get("id"):  # a supplied id is kept (stable ids for later revisions/corrections)
+                rid = str(data["id"])
+                if self._path(rid).exists():
+                    raise KnowledgeError(f"id {rid} already exists")
+            else:
+                base = f"gk-{_slug(c['title'])}"
+                rid, n = base, 2
+                while self._path(rid).exists():
+                    rid, n = f"{base}_{n}", n + 1
             rec = KnowledgeRecord(id=rid, **c)
             self._conflicts(rec)
             self._write(rec)
@@ -308,15 +319,28 @@ class GeneralKnowledgeStore:
         records = self.list(include_disabled=False)
         if not records:
             return []
-        matches = match_records(records, message, candidate, limit=limit)
-        if matches or not semantic:
-            return matches
-        # Semantic fallback: the question must share a content word with the record (rejects look-alike topics).
+        matches = match_records(records, message, candidate, limit=len(records))
+        if not semantic or any(m.method == "exact" for m in matches):
+            return matches[:limit]  # an exact title/alias match is never overridden
         with self._lock:
             index = self._semantic_index(records)
         q = self._embed([candidate or message], True)[0]
         scores = index @ q
         words = _content_words(message)
+        if matches:
+            # Ranking correction among name hits: order them by meaning ("nudes … blackmail" → Sextortion before
+            # Nudes), and let a semantic match that passes every guard (score + name coverage) win when it is
+            # clearly closer than the phrase hit ("prep for hiv" → PrEP/PEP, not HIV via the word "hiv").
+            pos = {r.id: i for i, r in enumerate(records)}
+            matches.sort(key=lambda m: (-m.score, -float(scores[pos[m.record.id]])))
+            best = int(scores.argmax())
+            rec, top = records[best], float(scores[best])
+            lead = float(scores[pos[matches[0].record.id]])
+            if (rec.id not in {m.record.id for m in matches} and top >= SEMANTIC_MIN_SCORE
+                    and top - lead >= SEMANTIC_OVERRIDE_MARGIN and _names_covered(words, rec)):
+                matches.insert(0, TermMatch(rec, round(top, 3), rec.title, "semantic"))
+            return matches[:limit]
+        # Semantic fallback: the question must share a content word with the record (rejects look-alike topics).
         out = []
         for i in scores.argsort()[::-1][:limit]:
             rec, score = records[i], float(scores[i])

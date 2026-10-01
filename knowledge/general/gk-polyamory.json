@@ -1,0 +1,37 @@
+{
+  "id": "gk-polyamory",
+  "title": "Polyamory",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "polyamorous",
+    "polyamory ki",
+    "বহুপ্রেম",
+    "পলিঅ্যামোরি"
+  ],
+  "summary": "Polyamory means having multiple loving relationships at the same time with the knowledge and consent of everyone involved. It differs from cheating because it's open and agreed.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "non-monogamy"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.741672+00:00",
+  "updated_at": "2026-10-01T16:01:42.741695+00:00"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "gk-erection",
+  "title": "Erection",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "getting hard",
+    "boner",
+    "morning wood",
+    "morning erection",
+    "erection keno hoy",
+    "sokale erection",
+    "লিঙ্গোত্থান",
+    "লিঙ্গ শক্ত হওয়া"
+  ],
+  "summary": "An erection happens when blood fills the spongy tissue of the penis, making it firm. It can come from arousal, but also randomly, and during sleep (morning wood).",
+  "description": "",
+  "key_points": [
+    "Random and morning erections are normal and a sign of healthy blood flow.",
+    "Occasional trouble getting or keeping an erection is common, especially with stress, alcohol or tiredness."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "male",
+    "arousal"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.631678+00:00",
+  "updated_at": "2026-10-01T16:01:40.631692+00:00"
+}

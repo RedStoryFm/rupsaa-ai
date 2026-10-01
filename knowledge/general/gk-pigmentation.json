@@ -1,0 +1,38 @@
+{
+  "id": "gk-pigmentation",
+  "title": "Pigmentation and Dark Spots",
+  "category": "Beauty",
+  "subcategory": "Skincare",
+  "aliases": [
+    "pigmentation",
+    "dark spots",
+    "tan removal",
+    "kalo daag tolar upay",
+    "কালো দাগ",
+    "পিগমেন্টেশন"
+  ],
+  "summary": "Dark spots come from sun exposure, acne marks or hormones. Daily sunscreen is essential; ingredients like niacinamide, vitamin C or azelaic acid can fade them gradually.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "skincare"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.157417+00:00",
+  "updated_at": "2026-10-01T16:01:44.157438+00:00"
+}

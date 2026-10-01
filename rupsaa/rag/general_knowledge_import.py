@@ -24,14 +24,16 @@ from rupsaa.rag.general_knowledge import (
 from rupsaa.rag.terminology import normalize
 from rupsaa.rag.terminology_import import MAX_CELL_CHARS, MAX_FILE_BYTES, ImportFileError, _cell, _read_csv, _read_xlsx
 
-COLUMNS = ["title", "category", "subcategory", "aliases", "summary", "description", "key_points", "steps", "do", "dont",
-           "answer_guidance", "languages", "tags", "enabled", "source", "source_type", "verified", "approved_by"]
+COLUMNS = ["id", "title", "category", "subcategory", "aliases", "summary", "description", "key_points", "steps", "do", "dont",
+           "answer_guidance", "languages", "tags", "enabled", "source", "source_type", "verified", "approved_by",
+           "sources"]
+STRUCTURED_COLUMNS = ("sources",)  # list of {title, url, domain, retrieved_at}; a JSON string inside CSV/XLSX cells
 BOOL_COLUMNS = ("enabled", "verified")
 LIST_COLUMNS = ("aliases", "key_points", "steps", "do", "dont", "languages", "tags")
-SUPPORTED_EXTENSIONS = (".csv", ".xlsx", ".json")
+SUPPORTED_EXTENSIONS = (".csv", ".xlsx", ".jsonl", ".json")
 MAX_ROWS = 1000
 HEADER_SYNONYMS = {
-    "title": ["title", "topic", "name", "concept", "term"], "category": ["category", "section"],
+    "id": ["id", "record_id"], "title": ["title", "topic", "name", "concept", "term"], "category": ["category", "section"],
     "subcategory": ["subcategory", "sub_category", "subtopic"], "aliases": ["aliases", "alias", "also_known_as", "aka"],
     "summary": ["summary", "short", "short_answer"], "description": ["description", "details", "knowledge", "content"],
     "key_points": ["key_points", "points", "keypoints"], "steps": ["steps", "how_to", "instructions"], "do": ["do", "dos"],
@@ -58,7 +60,7 @@ def _ext(filename: str, content: bytes) -> str:
     name = (filename or "").lower()
     ext = next((e for e in SUPPORTED_EXTENSIONS if name.endswith(e)), None)
     if ext is None:
-        raise ImportFileError("Unsupported file type — upload a .csv, .xlsx or .json file.")
+        raise ImportFileError("Unsupported file type — upload a .csv, .xlsx, .json or .jsonl file.")
     if not content:
         raise ImportFileError("The file is empty.")
     if len(content) > MAX_FILE_BYTES:
@@ -67,11 +69,22 @@ def _ext(filename: str, content: bytes) -> str:
 
 
 def _raw_rows(ext: str, content: bytes) -> list[dict]:
+    if ext == ".jsonl":
+        data = []
+        try:
+            for n, line in enumerate(content.decode("utf-8-sig").splitlines(), start=1):
+                if line.strip():
+                    data.append(json.loads(line))
+        except UnicodeDecodeError as e:
+            raise ImportFileError(f"Could not read JSONL: {e}")
+        except json.JSONDecodeError as e:
+            raise ImportFileError(f"Could not parse JSONL line {n}: {e}")
     if ext == ".json":
         try:
             data = json.loads(content.decode("utf-8-sig"))
         except (UnicodeDecodeError, json.JSONDecodeError) as e:
             raise ImportFileError(f"Could not parse JSON: {e}")
+    if ext in (".json", ".jsonl"):
         if isinstance(data, dict):
             data = data.get("records") or data.get("knowledge") or data.get("items")
         if not isinstance(data, list) or not all(isinstance(x, dict) for x in data):
@@ -92,13 +105,13 @@ def _text(v) -> str:
 
 def _parse(n: int, raw: dict) -> Row:
     errors, warnings = [], []
-    cells = {k: _text(raw.get(k)).strip() for k in COLUMNS}
+    cells = {k: _text(raw.get(k)).strip() for k in COLUMNS if k not in STRUCTURED_COLUMNS}
     for k, v in cells.items():
         if len(v) > MAX_CELL_CHARS:
             errors.append(f"{k} is longer than {MAX_CELL_CHARS} characters")
         if v.startswith("="):
             warnings.append(f"{k} starts with '=' — treated as plain text")
-    data = {k: cells[k] for k in COLUMNS if k not in LIST_COLUMNS and k not in BOOL_COLUMNS}
+    data = {k: cells[k] for k in COLUMNS if k not in LIST_COLUMNS and k not in BOOL_COLUMNS and k not in STRUCTURED_COLUMNS}
     for k in LIST_COLUMNS:
         data[k] = [x.strip() for x in cells[k].split("|") if x.strip()]
     if data["category"] and data["category"] not in CATEGORIES:
@@ -119,9 +132,17 @@ def _parse(n: int, raw: dict) -> Row:
         warnings.append(f"Unknown source_type {data['source_type']!r} → stored as import")
     if data["source_type"] not in SOURCE_TYPES:
         data["source_type"] = "import"
-    data["approved_by"] = data["approved_by"] or "owner"
-    if isinstance(raw.get("sources"), list):  # JSON import keeps structured sources (validated below)
-        data["sources"] = raw["sources"]
+    # approved_by is kept exactly as supplied: a blank (not reviewed) record is never marked owner-approved.
+    if not data["id"]:
+        data.pop("id")  # the store generates one from the title
+    raw_sources = raw.get("sources")
+    if isinstance(raw_sources, str) and raw_sources.strip():  # CSV/XLSX: JSON array string
+        try:
+            raw_sources = json.loads(raw_sources)
+        except json.JSONDecodeError:
+            errors.append("sources is not a valid JSON array")
+            raw_sources = []
+    data["sources"] = raw_sources if isinstance(raw_sources, list) else []
     errors += validate(data)
     return Row(row=n, status="invalid" if errors else ("warning" if warnings else "valid"), data=data, errors=errors,
                warnings=warnings)
@@ -130,7 +151,7 @@ def _parse(n: int, raw: dict) -> Row:
 def preview(filename: str, content: bytes, store: GeneralKnowledgeStore) -> dict:
     ext = _ext(filename, content)
     raws = _raw_rows(ext, content)
-    first = 1 if ext == ".json" else 2
+    first = 1 if ext in (".json", ".jsonl") else 2
     rows: list[Row] = []
     for i, raw in enumerate(raws, start=first):
         if not any(_text(v).strip() for v in raw.values() if v is not None):
@@ -139,9 +160,16 @@ def preview(filename: str, content: bytes, store: GeneralKnowledgeStore) -> dict
             raise ImportFileError(f"Too many rows — the limit is {MAX_ROWS} per file.")
         rows.append(_parse(i, {k: v for k, v in raw.items() if k}))
     existing = store.list()
+    by_id = {e.id: e for e in existing}
     seen: dict[str, int] = {}
+    seen_ids: dict[str, int] = {}
     for r in rows:
         if r.status == "invalid":
+            continue
+        rid = r.data.get("id")
+        if rid and rid in seen_ids:
+            r.status = "duplicate_in_file"
+            r.errors.append(f"Duplicate id {rid} (row {seen_ids[rid]})")
             continue
         keys = KnowledgeRecord(id="gk-x", title=r.data["title"], aliases=r.data["aliases"]).keys()
         clash = next((seen[k] for k in keys if k in seen), None)
@@ -151,7 +179,22 @@ def preview(filename: str, content: bytes, store: GeneralKnowledgeStore) -> dict
             continue
         for k in keys:
             seen[k] = r.row
+        if rid:
+            seen_ids[rid] = r.row
         matches = [e for e in existing if keys & e.keys()]
+        if rid and rid in by_id:  # same stable id: an update of that record
+            others = [m for m in matches if m.id != rid]
+            if others:
+                r.status = "invalid"
+                r.errors.append("Title/aliases already used by " + ", ".join(f"{m.id} ({m.title})" for m in others))
+            else:
+                r.status, r.existing_id = "existing_match", rid
+            continue
+        if rid and matches:
+            r.status = "invalid"
+            r.errors.append(f"New id {rid} but its title/aliases are already used by "
+                            + ", ".join(f"{m.id} ({m.title})" for m in matches))
+            continue
         if len(matches) == 1:
             r.status, r.existing_id = "existing_match", matches[0].id
         elif len(matches) > 1:
@@ -191,8 +234,17 @@ def export_json(store: GeneralKnowledgeStore) -> bytes:
 
 def _row(r: KnowledgeRecord) -> dict:
     d = asdict(r)
-    return {k: (" | ".join(d[k]) if k in LIST_COLUMNS else ("true" if d[k] else "false") if k in BOOL_COLUMNS else d[k])
-            for k in COLUMNS}
+    out = {}
+    for k in COLUMNS:
+        if k in LIST_COLUMNS:
+            out[k] = " | ".join(d[k])
+        elif k in BOOL_COLUMNS:
+            out[k] = "true" if d[k] else "false"
+        elif k in STRUCTURED_COLUMNS:
+            out[k] = json.dumps(d[k], ensure_ascii=False) if d[k] else ""
+        else:
+            out[k] = d[k]
+    return out
 
 
 def export_csv(store: GeneralKnowledgeStore) -> bytes:
@@ -200,7 +252,7 @@ def export_csv(store: GeneralKnowledgeStore) -> bytes:
     w = csv.DictWriter(buf, fieldnames=COLUMNS, lineterminator="\r\n")
     w.writeheader()
     for r in store.list():
-        w.writerow({k: ("'" + v if isinstance(v, str) and v[:1] in "=+-@" else v) for k, v in _row(r).items()})
+        w.writerow({k: ("'" + v if isinstance(v, str) and v[:1] and v[0] in "=+-@" else v) for k, v in _row(r).items()})
     return ("﻿" + buf.getvalue()).encode("utf-8")
 
 
@@ -212,7 +264,7 @@ def export_xlsx(store: GeneralKnowledgeStore) -> bytes:
     ws.title = "General Knowledge"
     ws.append(COLUMNS)
     for r in store.list():
-        ws.append([("'" + v if isinstance(v, str) and v[:1] in "=+-@" else v) for v in _row(r).values()])
+        ws.append([("'" + v if isinstance(v, str) and v[:1] and v[0] in "=+-@" else v) for v in _row(r).values()])
     buf = io.BytesIO()
     wb.save(buf)
     return buf.getvalue()

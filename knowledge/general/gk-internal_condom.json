@@ -1,0 +1,46 @@
+{
+  "id": "gk-internal_condom",
+  "title": "Internal Condom",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "female condom",
+    "female condom ki",
+    "মহিলাদের কনডম",
+    "ফিমেল কনডম"
+  ],
+  "summary": "An internal (female) condom is a soft pouch inserted into the vagina (or anus) before sex. It prevents pregnancy and lowers STI risk, and can be inserted ahead of time.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [
+    "Use it together with an external condom — friction can tear both"
+  ],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "sti"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Condoms (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/birth-control/condom",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.810739+00:00",
+  "updated_at": "2026-10-01T16:01:40.810757+00:00"
+}

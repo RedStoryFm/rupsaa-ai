@@ -1,0 +1,41 @@
+{
+  "id": "gk-sexting",
+  "title": "Sexting",
+  "category": "Adult Terminology",
+  "subcategory": "Digital Intimacy",
+  "aliases": [
+    "sexts",
+    "dirty texting",
+    "sexting mane ki",
+    "সেক্সটিং"
+  ],
+  "summary": "Sexting is sending sexually explicit messages, photos or videos by phone or online between consenting adults.",
+  "description": "",
+  "key_points": [
+    "Anything sent can be saved, screenshotted or shared.",
+    "Sharing someone's intimate images without consent is abuse and illegal in many places.",
+    "Sexual images of anyone under 18 are illegal, even if they sent them."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "digital",
+    "safety"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.957567+00:00",
+  "updated_at": "2026-10-01T16:01:41.957584+00:00"
+}

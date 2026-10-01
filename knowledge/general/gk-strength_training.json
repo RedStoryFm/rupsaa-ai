@@ -1,0 +1,44 @@
+{
+  "id": "gk-strength_training",
+  "title": "Strength Training",
+  "category": "Fitness",
+  "subcategory": "Training",
+  "aliases": [
+    "weight training",
+    "resistance training",
+    "gym e weight tola",
+    "শক্তি বৃদ্ধির ব্যায়াম",
+    "ওজন তোলা"
+  ],
+  "summary": "Strength training uses resistance — weights, bands or body weight — to build muscle and bone strength. Learn form first, then increase load gradually (progressive overload).",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "fitness"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Physical activity fact sheet (WHO)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+      "domain": "who.int",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.577483+00:00",
+  "updated_at": "2026-10-01T16:01:44.577502+00:00"
+}

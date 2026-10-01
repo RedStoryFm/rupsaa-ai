@@ -1,0 +1,43 @@
+{
+  "id": "gk-love_bombing",
+  "title": "Love Bombing",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "love bomb",
+    "love bombing ki",
+    "লাভ বম্বিং"
+  ],
+  "summary": "Love bombing is overwhelming someone with intense affection, gifts and attention very early, often to gain control quickly. It can be followed by criticism or withdrawal.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "manipulation"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Warning signs of dating abuse (love is respect)",
+      "url": "https://www.loveisrespect.org/dating-basics-for-healthy-relationships/warning-signs-of-abuse/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.354378+00:00",
+  "updated_at": "2026-10-01T16:01:42.354401+00:00"
+}

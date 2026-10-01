@@ -243,6 +243,13 @@ class TerminologyOut(BaseModel):
     enabled: bool
     created_at: str
     updated_at: str
+    # Provenance (rupsaa/rag/terminology.py): shown to the owner, never to the model.
+    source_type: str = "owner"
+    sources: list[dict] = []
+    verified: bool = False
+    approved_by: str = ""
+    merged_from: list[dict] = []
+    revision: int = 1
 
 
 # --- Owner tools: Rupsaa Knowledge → Dance (rupsaa/rag/dance.py) ---
@@ -301,7 +308,9 @@ class DanceOut(BaseModel):
 
 
 class KnowledgeIn(BaseModel):
-    """General Knowledge create/update body (all optional on update; the store validates)."""
+    """General Knowledge create/update body (all optional on update; the store validates). `id` is honoured on
+    create only (stable ids); an update never changes a record's id."""
+    id: str | None = Field(default=None, max_length=64)
     title: str | None = Field(default=None, max_length=120)
     category: str | None = Field(default=None, max_length=60)
     subcategory: str | None = Field(default=None, max_length=120)

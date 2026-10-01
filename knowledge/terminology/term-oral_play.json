@@ -1,16 +1,23 @@
 {
   "id": "term-oral_play",
-  "term": "Oral Play",
-  "definition": "Intimate activity involving the mouth on a partner's body for sexual pleasure.",
+  "term": "Oral Play / Oral Sex",
+  "definition": "Using the mouth, lips or tongue on a partner's body for sexual pleasure. Oral sex specifically means stimulating a partner's genitals or anus with the mouth.",
   "category": "adult_terminology",
   "aliases": [
     "oral play",
     "oral sex",
     "oral play ki",
     "oral play mane ki",
-    "ওরাল প্লে"
+    "ওরাল প্লে",
+    "blowjob",
+    "cunnilingus",
+    "fellatio",
+    "oral sex ki",
+    "oral e risk ache ki",
+    "মুখমৈথুন",
+    "ওরাল সেক্স"
   ],
-  "details": "Consent, hygiene, and safer-sex practices are important.",
+  "details": "Consent, hygiene, and safer-sex practices are important. Oral sex can't cause pregnancy but can pass STIs such as herpes, gonorrhoea, syphilis and HPV. Condoms or dental dams reduce STI risk.",
   "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
   "languages": [
     "en",
@@ -30,5 +37,65 @@
   ],
   "enabled": true,
   "created_at": "2026-09-24T16:58:36.745160+00:00",
-  "updated_at": "2026-09-24T16:58:36.745172+00:00"
+  "updated_at": "2026-10-01T16:01:40.245020+00:00",
+  "source_type": "owner",
+  "sources": [
+    {
+      "title": "What Is Oral and Anal Sex? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/teens/sex/all-about-sex",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "How Do I Make Sex Safer? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/safer-sex/how-do-i-make-sex-safer",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "merged_from": [
+    {
+      "id": "gk-oral_sex",
+      "title": "Oral Sex",
+      "pack": "knowledge_v1",
+      "merged_at": "2026-10-01T16:01:40+00:00",
+      "source_type": "import",
+      "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+      "verified": false,
+      "approved_by": "",
+      "sources": [
+        {
+          "title": "What Is Oral and Anal Sex? (Planned Parenthood)",
+          "url": "https://www.plannedparenthood.org/learn/teens/sex/all-about-sex",
+          "domain": "plannedparenthood.org",
+          "retrieved_at": "2026-10-01"
+        },
+        {
+          "title": "How Do I Make Sex Safer? (Planned Parenthood)",
+          "url": "https://www.plannedparenthood.org/learn/stds-hiv-safer-sex/safer-sex/how-do-i-make-sex-safer",
+          "domain": "plannedparenthood.org",
+          "retrieved_at": "2026-10-01"
+        }
+      ],
+      "fields": [
+        "aliases",
+        "definition",
+        "details",
+        "term"
+      ],
+      "aliases_added": [
+        "blowjob",
+        "cunnilingus",
+        "fellatio",
+        "oral sex ki",
+        "oral e risk ache ki",
+        "মুখমৈথুন",
+        "ওরাল সেক্স"
+      ],
+      "aliases_skipped": {}
+    }
+  ],
+  "revision": 2
 }

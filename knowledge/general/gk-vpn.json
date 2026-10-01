@@ -1,0 +1,36 @@
+{
+  "id": "gk-vpn",
+  "title": "VPN",
+  "category": "Technology",
+  "subcategory": "Security",
+  "aliases": [
+    "virtual private network",
+    "vpn ki kaj kore",
+    "ভিপিএন"
+  ],
+  "summary": "A VPN encrypts your internet traffic and routes it through another server, hiding it from the local network. It improves privacy on public Wi-Fi but doesn't make you anonymous or protect against scams.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "security",
+    "privacy"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.820953+00:00",
+  "updated_at": "2026-10-01T16:01:45.820978+00:00"
+}

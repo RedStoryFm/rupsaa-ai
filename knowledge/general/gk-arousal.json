@@ -1,0 +1,58 @@
+{
+  "id": "gk-arousal",
+  "title": "Sexual Arousal",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "arousal",
+    "turned on",
+    "aroused",
+    "arousal ki",
+    "uttejito howa",
+    "যৌন উত্তেজনা",
+    "উত্তেজনা",
+    "কামোত্তেজনা"
+  ],
+  "summary": "Arousal is the body's and mind's sexual excitement. Blood flow to the genitals increases, causing erection or swelling and lubrication, along with faster breathing and heart rate.",
+  "description": "",
+  "key_points": [
+    "Arousal involves the mind as much as the body.",
+    "Physical signs (like lubrication or erection) don't always match wanting sex — and never equal consent.",
+    "Stress, anxiety or feeling unsafe can block arousal."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain simply. If the user mixes up arousal and consent, make clear that a body reacting is not a yes.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "arousal",
+    "body"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Sexual Response & Orgasm: A Users Guide (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/sexual-response-orgasm-users-guide",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "What's With Being Wet from That? (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/whats-being-wet",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.619984+00:00",
+  "updated_at": "2026-10-01T16:01:40.620006+00:00"
+}

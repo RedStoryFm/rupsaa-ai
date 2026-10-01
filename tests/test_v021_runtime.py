@@ -163,7 +163,9 @@ def test_corrective_records_are_built_by_the_runtime():
     src = PROJECT_ROOT / "data/production/corrective/rupsaa_v0.2.1/corrective_records.jsonl"
     if not src.exists():
         pytest.skip("corrective records not built")
-    store = TerminologyStore(PROJECT_ROOT / "knowledge/terminology")
+    # The terminology the set was built from (frozen copy): live knowledge keeps evolving (e.g. Knowledge V1 merged
+    # staging content into consent/aftercare/…), but the runtime prompt builder must still reproduce these records.
+    store = TerminologyStore(PROJECT_ROOT / "tests/fixtures/terminology_v021")
     rebuilt, errors = build(load_source(), store)
     assert not errors
     on_disk = [json.loads(line) for line in open(src, encoding="utf-8")]

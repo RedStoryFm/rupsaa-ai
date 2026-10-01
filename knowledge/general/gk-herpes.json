@@ -1,0 +1,49 @@
+{
+  "id": "gk-herpes",
+  "title": "Herpes (HSV)",
+  "category": "Sexual Education",
+  "subcategory": "STIs & Safer Sex",
+  "aliases": [
+    "herpes",
+    "genital herpes",
+    "hsv",
+    "cold sores",
+    "herpes ki",
+    "হার্পিস"
+  ],
+  "summary": "Herpes is a common viral infection (HSV) that can cause painful blisters on the mouth or genitals. It isn't curable, but medicine reduces outbreaks and transmission, and many people have mild or no symptoms.",
+  "description": "",
+  "key_points": [
+    "It can spread by skin contact even when no sores are visible.",
+    "Condoms reduce but don't fully prevent it."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "sti",
+    "viral"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How to Prevent STIs (CDC)",
+      "url": "https://www.cdc.gov/sti/prevention/index.html",
+      "domain": "cdc.gov",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.930085+00:00",
+  "updated_at": "2026-10-01T16:01:40.930103+00:00"
+}

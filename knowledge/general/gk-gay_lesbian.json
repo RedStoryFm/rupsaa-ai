@@ -1,0 +1,50 @@
+{
+  "id": "gk-gay_lesbian",
+  "title": "Gay and Lesbian",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Orientation & Identity",
+  "aliases": [
+    "gay",
+    "lesbian",
+    "homosexual",
+    "gay mane ki",
+    "lesbian ki",
+    "সমকামী",
+    "গে",
+    "লেসবিয়ান"
+  ],
+  "summary": "Gay describes people attracted to people of the same gender; lesbian refers specifically to women attracted to women. 'Gay' is also used broadly for the wider community.",
+  "description": "",
+  "key_points": [
+    "Same-sex relationships between adults are legal in India (since 2018)."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "identity",
+    "lgbtq"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What is Sexual Orientation? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/sexual-orientation/sexual-orientation",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.312542+00:00",
+  "updated_at": "2026-10-01T16:01:41.312564+00:00"
+}

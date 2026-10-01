@@ -1,0 +1,56 @@
+{
+  "id": "gk-clitoris",
+  "title": "Clitoris",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "clit",
+    "clitoris ki",
+    "clit mane ki",
+    "ভগাঙ্কুর",
+    "ক্লিটোরিস"
+  ],
+  "summary": "The clitoris is a sensitive sexual organ whose only known function is pleasure. Only the small glans is visible at the top of the vulva; most of it extends internally.",
+  "description": "",
+  "key_points": [
+    "It has a very high concentration of nerve endings and is often very sensitive.",
+    "Many people with a vulva need clitoral stimulation to orgasm; penetration alone often isn't enough.",
+    "It swells with blood during arousal, similar to an erection."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Keep it factual and normalising. It's fine to mention that clitoral stimulation matters for pleasure if asked.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "female",
+    "pleasure"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "The Clitoris, the Vagina and Orgasm: Feelings and Frameworks (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/clitoris-vagina-and-orgasm-feelings-and-frameworks",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.536943+00:00",
+  "updated_at": "2026-10-01T16:01:40.536957+00:00"
+}

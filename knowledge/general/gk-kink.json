@@ -1,0 +1,45 @@
+{
+  "id": "gk-kink",
+  "title": "Kink",
+  "category": "Adult Terminology",
+  "subcategory": "Kink & BDSM",
+  "aliases": [
+    "kinky",
+    "being kinky",
+    "kinky mane ki",
+    "kink ki",
+    "কিঙ্ক",
+    "অপ্রচলিত যৌন রুচি"
+  ],
+  "summary": "Kink refers to sexual interests or practices outside what's considered conventional, such as BDSM, role-play or specific fetishes. Being kinky is common and fine when it's consensual.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "kink"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "How can S and M be safe and follow consent? (Go Ask Alice!, Columbia University)",
+      "url": "https://goaskalice.columbia.edu/answered-questions/how-can-s-and-m-be-safe-and-follow-consent",
+      "domain": "goaskalice.columbia.edu",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.037239+00:00",
+  "updated_at": "2026-10-01T16:01:42.037260+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "gk-protein_intake",
+  "title": "Protein Intake",
+  "category": "Fitness",
+  "subcategory": "Nutrition",
+  "aliases": [
+    "protein",
+    "how much protein",
+    "protein sources",
+    "protein er jonno ki khabo",
+    "প্রোটিন",
+    "আমিষ"
+  ],
+  "summary": "Protein supports muscle repair and fullness. Good sources include dal, eggs, fish, chicken, paneer, curd, soy and chana. Active people often aim for higher intake than sedentary adults.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "nutrition"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:44.687261+00:00",
+  "updated_at": "2026-10-01T16:01:44.687282+00:00"
+}

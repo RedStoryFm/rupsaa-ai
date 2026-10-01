@@ -1,0 +1,37 @@
+{
+  "id": "gk-situationship",
+  "title": "Situationship",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "situationship mane ki",
+    "সিচুয়েশনশিপ"
+  ],
+  "summary": "A situationship is an undefined romantic or sexual connection — more than friends but without clear commitment or labels.",
+  "description": "",
+  "key_points": [
+    "Often comfortable short-term but confusing if one person wants more; a 'what are we?' talk helps."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "slang"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.861082+00:00",
+  "updated_at": "2026-10-01T16:01:42.861106+00:00"
+}

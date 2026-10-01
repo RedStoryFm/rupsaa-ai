@@ -23,7 +23,11 @@ def test_command_detection(msg, pending, cmd):
 
 @pytest.mark.parametrize("msg,fresh", [("Latest iPhone price koto?", True), ("ajker weather kemon?", True),
                                        ("India vs Pakistan match er result ki?", True), ("Python er latest version ki?", True),
-                                       ("Taj Mahal kothay?", False), ("Hair straightening ki?", False)])
+                                       ("Taj Mahal kothay?", False), ("Hair straightening ki?", False),
+                                       ("ajke ki korle bhalo lagbe bolo to?", False), ("aj ki khabo?", False),
+                                       ("PAN card update korbo kivabe?", False), ("What should I do today?", False),
+                                       ("Ajker Sensex koto?", True), ("আজ পেট্রলের দাম কত?", True),
+                                       ("Who won the match yesterday?", True)])
 def test_freshness(msg, fresh):
     assert ip.is_fresh(msg) is fresh
 

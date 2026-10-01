@@ -1,0 +1,54 @@
+{
+  "id": "gk-sexual_boundaries",
+  "title": "Sexual Boundaries",
+  "category": "Sexual Education",
+  "subcategory": "Consent & Communication",
+  "aliases": [
+    "limits in bed",
+    "boundaries in sex",
+    "sexual boundary ki",
+    "limit set kora",
+    "যৌন সীমা",
+    "যৌন সীমারেখা"
+  ],
+  "summary": "Sexual boundaries are your personal limits about what you are and aren't comfortable doing, how, when and with whom. They can change over time and deserve respect.",
+  "description": "",
+  "key_points": [
+    "A 'yes / no / maybe' list is a simple way to think about and share limits.",
+    "You don't have to justify a boundary."
+  ],
+  "steps": [
+    "Think about what you want, don't want and are unsure about",
+    "Say it simply: 'I like ___, I'm not okay with ___'",
+    "Agree on a way to pause or stop",
+    "Revisit as things change"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "consent",
+    "communication"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Yes, No, Maybe So: A Sexual Inventory Stocklist (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/relationships/yes-no-maybe-so-sexual-inventory-stocklist",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.732760+00:00",
+  "updated_at": "2026-10-01T16:01:40.732788+00:00"
+}

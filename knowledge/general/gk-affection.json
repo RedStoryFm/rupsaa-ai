@@ -1,0 +1,39 @@
+{
+  "id": "gk-affection",
+  "title": "Affection",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "showing affection",
+    "affection dekhano",
+    "adorer kotha",
+    "স্নেহ",
+    "আদর",
+    "ভালোবাসা প্রকাশ"
+  ],
+  "summary": "Affection is showing warmth and care — hugs, holding hands, kind words, small gestures. Everyone has different preferences for how much and what kind.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be warm, practical and neutral rather than preachy. Explain the idea, then offer one or two concrete suggestions if useful. Don't judge the user's partner from limited information.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "affection"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.538000+00:00",
+  "updated_at": "2026-10-01T16:01:42.538021+00:00"
+}

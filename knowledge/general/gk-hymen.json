@@ -1,0 +1,49 @@
+{
+  "id": "gk-hymen",
+  "title": "Hymen",
+  "category": "Sexual Education",
+  "subcategory": "Anatomy",
+  "aliases": [
+    "hymen myth",
+    "hymen ki",
+    "hymen fete jawa",
+    "সতীচ্ছদ",
+    "হাইমেন"
+  ],
+  "summary": "The hymen is a thin, flexible fringe of tissue around the vaginal opening. It varies a lot between people and is not a reliable 'virginity' marker.",
+  "description": "",
+  "key_points": [
+    "Many hymens stretch rather than 'break', and many people don't bleed the first time they have penetrative sex.",
+    "It can also wear thin from sports, tampons or everyday activity.",
+    "No exam can prove whether someone has had sex."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Correct the virginity myth clearly but kindly; this myth causes real harm and shame.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "anatomy",
+    "myth"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "With Pleasure: A View of Whole Sexual Anatomy for Every Body (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/bodies/pleasure-view-whole-sexual-anatomy-every-body",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.547676+00:00",
+  "updated_at": "2026-10-01T16:01:40.547690+00:00"
+}

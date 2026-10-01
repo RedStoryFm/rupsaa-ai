@@ -1,0 +1,58 @@
+{
+  "id": "gk-unhealthy_relationship",
+  "title": "Unhealthy Relationship (Red Flags)",
+  "category": "Relationships",
+  "subcategory": "Foundations",
+  "aliases": [
+    "red flags",
+    "unhealthy relationship",
+    "toxic relationship",
+    "toxic partner",
+    "red flag ki ki",
+    "toxic relationship er lokkhon",
+    "অস্বাস্থ্যকর সম্পর্ক",
+    "বিষাক্ত সম্পর্ক",
+    "রেড ফ্ল্যাগ"
+  ],
+  "summary": "Red flags are warning signs of an unhealthy or abusive relationship: extreme jealousy, checking your phone, isolating you, constant put-downs, explosive anger, threats or pressure for sex.",
+  "description": "",
+  "key_points": [
+    "Abuse is about power and control and can be emotional, financial, digital, sexual or physical.",
+    "Abuse often escalates over time."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Be supportive, not alarmist. If the user describes danger, gently point to trusted people or helplines (in India: 112 emergency, 181 women's helpline).",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "relationships",
+    "safety"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "Warning signs of dating abuse (love is respect)",
+      "url": "https://www.loveisrespect.org/dating-basics-for-healthy-relationships/warning-signs-of-abuse/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    },
+    {
+      "title": "Types of abuse (love is respect)",
+      "url": "https://www.loveisrespect.org/resources/types-of-abuse/",
+      "domain": "loveisrespect.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:42.302489+00:00",
+  "updated_at": "2026-10-01T16:01:42.302510+00:00"
+}

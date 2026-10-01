@@ -1,0 +1,49 @@
+{
+  "id": "gk-sexual_attraction",
+  "title": "Sexual Attraction",
+  "category": "Sexual Education",
+  "subcategory": "Sexual Response",
+  "aliases": [
+    "physical attraction",
+    "attraction mane ki",
+    "karur proti attraction",
+    "যৌন আকর্ষণ",
+    "আকর্ষণ"
+  ],
+  "summary": "Sexual attraction is feeling drawn to someone in a sexual way — wanting physical or sexual closeness with them. It is different from romantic attraction (wanting a romantic relationship) and aesthetic attraction (finding someone good-looking).",
+  "description": "",
+  "key_points": [
+    "You can feel one kind of attraction without the others.",
+    "Feeling attracted to someone doesn't oblige you to act on it.",
+    "Attraction patterns are part of sexual orientation."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "attraction",
+    "identity"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "What is Sexual Orientation? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/learn/sexual-orientation/sexual-orientation",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.609298+00:00",
+  "updated_at": "2026-10-01T16:01:40.609312+00:00"
+}

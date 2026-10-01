@@ -1,0 +1,44 @@
+{
+  "id": "gk-sextortion",
+  "title": "Sextortion",
+  "category": "Adult Terminology",
+  "subcategory": "Digital Intimacy",
+  "aliases": [
+    "nude blackmail",
+    "leaked photos",
+    "photo leak er bhoy dekhacche",
+    "blackmail korche",
+    "যৌন ব্ল্যাকমেইল"
+  ],
+  "summary": "Sextortion is blackmail where someone threatens to share intimate images unless the victim pays or sends more. Victims are not at fault.",
+  "description": "",
+  "key_points": [],
+  "steps": [
+    "Stop replying and don't pay",
+    "Save screenshots and usernames",
+    "Report the account to the platform",
+    "Report to cybercrime police (in India: cybercrime.gov.in or 1930)",
+    "Tell someone you trust"
+  ],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Respond calmly and protectively; prioritise practical safety steps.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "digital",
+    "safety"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.978686+00:00",
+  "updated_at": "2026-10-01T16:01:41.978706+00:00"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "gk-reels_shorts",
+  "title": "Reels and Shorts",
+  "category": "Social Media",
+  "subcategory": "Formats",
+  "aliases": [
+    "reels",
+    "short videos",
+    "youtube shorts",
+    "reels viral korar upay",
+    "রিলস",
+    "শর্টস"
+  ],
+  "summary": "Reels (Instagram) and Shorts (YouTube) are vertical short videos. A strong hook in the first seconds, captions and trending audio help them reach new viewers.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "social media",
+    "video"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.432009+00:00",
+  "updated_at": "2026-10-01T16:01:45.432030+00:00"
+}

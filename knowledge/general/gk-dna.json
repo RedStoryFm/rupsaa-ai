@@ -1,0 +1,36 @@
+{
+  "id": "gk-dna",
+  "title": "DNA",
+  "category": "General Education",
+  "subcategory": "Science",
+  "aliases": [
+    "genes",
+    "dna ki",
+    "ডিএনএ",
+    "জিন"
+  ],
+  "summary": "DNA is the molecule that carries genetic instructions in living things, shaped as a double helix. Genes are DNA segments that code for proteins and traits.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "biology"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:47.700865+00:00",
+  "updated_at": "2026-10-01T16:01:47.700888+00:00"
+}

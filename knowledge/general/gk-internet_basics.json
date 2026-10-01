@@ -1,0 +1,37 @@
+{
+  "id": "gk-internet_basics",
+  "title": "How the Internet Works",
+  "category": "Technology",
+  "subcategory": "Concepts",
+  "aliases": [
+    "how internet works",
+    "wifi vs mobile data",
+    "ip address",
+    "internet kibhabe kaj kore",
+    "ইন্টারনেট কীভাবে কাজ করে"
+  ],
+  "summary": "The internet is a global network of computers exchanging data in small packets. Devices get IP addresses; DNS turns website names into addresses; Wi-Fi and mobile data are just ways to connect.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain clearly and simply in the user's language; give steps or examples when the user asks how.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "concepts"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:45.900578+00:00",
+  "updated_at": "2026-10-01T16:01:45.900611+00:00"
+}

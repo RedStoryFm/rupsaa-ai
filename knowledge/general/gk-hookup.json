@@ -1,0 +1,39 @@
+{
+  "id": "gk-hookup",
+  "title": "Hookup",
+  "category": "Adult Terminology",
+  "subcategory": "Sexual Activities",
+  "aliases": [
+    "hook up",
+    "hooking up",
+    "hookup mane ki",
+    "হুকআপ"
+  ],
+  "summary": "A hookup is a casual sexual or intimate encounter without expectations of a relationship. What 'hooking up' includes varies from kissing to sex.",
+  "description": "",
+  "key_points": [
+    "Clear expectations, consent and safer sex matter just as much in casual encounters."
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Define the term plainly first, in the user's language and register. Stay educational rather than erotic; if asked 'how', explain non-graphically with emphasis on mutual comfort and consent. Don't force flirting, pet names or emojis — personality comes from the runtime.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "casual",
+    "slang"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:41.885520+00:00",
+  "updated_at": "2026-10-01T16:01:41.885540+00:00"
+}

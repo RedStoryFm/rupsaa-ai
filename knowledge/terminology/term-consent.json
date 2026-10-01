@@ -1,16 +1,21 @@
 {
   "id": "term-consent",
   "term": "Consent",
-  "definition": "Permission and agreement to engage in intimate activity.",
+  "definition": "Consent is a freely given, clear agreement to take part in a specific sexual activity. It must be voluntary, informed, specific and ongoing, and it can be withdrawn at any time.",
   "category": "adult_terminology",
   "aliases": [
     "consent",
     "consent ki",
     "consent mane ki",
-    "কনসেন্ট"
+    "কনসেন্ট",
+    "sexual consent",
+    "what is consent",
+    "sommoti mane ki",
+    "সম্মতি",
+    "যৌন সম্মতি"
   ],
-  "details": "Consent must be voluntary, informed, and can be withdrawn at any time.",
-  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic.",
+  "details": "Consent must be voluntary, informed, and can be withdrawn at any time. Silence, a past 'yes', being in a relationship or marriage, or how someone is dressed is not consent. Someone who is asleep, unconscious or very drunk can't consent. Agreeing to one thing doesn't mean agreeing to everything. If someone says no or seems unsure, stop — don't pressure.",
+  "answer_guidance": "Explain the meaning directly and naturally. Match the user's language and writing style. If the user only asks for the meaning, begin with a concise definition. Give additional explanation when the user asks for more detail. Keep the tone respectful and non-graphic. Consent applies in every relationship, including marriage.",
   "languages": [
     "en",
     "banglish",
@@ -29,5 +34,53 @@
   ],
   "enabled": true,
   "created_at": "2026-09-24T16:58:36.693049+00:00",
-  "updated_at": "2026-09-24T16:58:36.693062+00:00"
+  "updated_at": "2026-10-01T16:01:40.205267+00:00",
+  "source_type": "owner",
+  "sources": [
+    {
+      "title": "Driver's Ed for the Sexual Superhighway: Navigating Consent (Scarleteen)",
+      "url": "https://www.scarleteen.com/read/sex-sexuality/drivers-ed-sexual-superhighway-navigating-consent",
+      "domain": "scarleteen.com",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "merged_from": [
+    {
+      "id": "gk-consent",
+      "title": "Consent",
+      "pack": "knowledge_v1",
+      "merged_at": "2026-10-01T16:01:40+00:00",
+      "source_type": "import",
+      "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+      "verified": false,
+      "approved_by": "",
+      "sources": [
+        {
+          "title": "Driver's Ed for the Sexual Superhighway: Navigating Consent (Scarleteen)",
+          "url": "https://www.scarleteen.com/read/sex-sexuality/drivers-ed-sexual-superhighway-navigating-consent",
+          "domain": "scarleteen.com",
+          "retrieved_at": "2026-10-01"
+        }
+      ],
+      "fields": [
+        "aliases",
+        "definition",
+        "details",
+        "answer_guidance"
+      ],
+      "aliases_added": [
+        "sexual consent",
+        "what is consent",
+        "sommoti mane ki",
+        "সম্মতি",
+        "যৌন সম্মতি"
+      ],
+      "aliases_skipped": {
+        "অনুমতি": "generic 'permission' (e.g. 'আমাকে অনুমতি দাও')"
+      }
+    }
+  ],
+  "revision": 2
 }

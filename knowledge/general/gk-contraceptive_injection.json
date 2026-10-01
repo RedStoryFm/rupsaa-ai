@@ -1,0 +1,44 @@
+{
+  "id": "gk-contraceptive_injection",
+  "title": "Contraceptive Injection",
+  "category": "Sexual Education",
+  "subcategory": "Contraception",
+  "aliases": [
+    "birth control shot",
+    "depo provera",
+    "injection niye birth control",
+    "গর্ভনিরোধক ইনজেকশন"
+  ],
+  "summary": "The contraceptive injection is a hormone shot given every few months (about every 3 months for Depo-Provera) to prevent pregnancy. It's about 96% effective in typical use.",
+  "description": "",
+  "key_points": [],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "Explain factually and non-graphically in the user's language (English, Banglish or Bengali). Start with a simple definition and add detail only if asked. Be non-judgemental; mention consent, safety or seeing a doctor only where genuinely relevant.",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "contraception",
+    "hormonal"
+  ],
+  "enabled": true,
+  "source": "knowledge_v1 staging pack — model-authored original summaries; owner review pending",
+  "source_type": "import",
+  "sources": [
+    {
+      "title": "If you use both a condom and birth control, are you 100% protected? (Planned Parenthood)",
+      "url": "https://www.plannedparenthood.org/blog/if-you-use-both-a-condom-and-birth-control-are-you-100-protected-from-getting-pregnant",
+      "domain": "plannedparenthood.org",
+      "retrieved_at": "2026-10-01"
+    }
+  ],
+  "verified": false,
+  "approved_by": "",
+  "revision": 1,
+  "created_at": "2026-10-01T16:01:40.841609+00:00",
+  "updated_at": "2026-10-01T16:01:40.841629+00:00"
+}
