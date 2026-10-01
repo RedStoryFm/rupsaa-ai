@@ -1,0 +1,39 @@
+{
+  "id": "gk-capsule_wardrobe",
+  "title": "Capsule Wardrobe",
+  "category": "Fashion",
+  "subcategory": "",
+  "aliases": [
+    "capsule wardrobe",
+    "ক্যাপসুল ওয়ার্ডরোব"
+  ],
+  "summary": "A small collection of versatile, easy-to-mix clothes (often 25–40 pieces) that cover most everyday outfits.",
+  "description": "",
+  "key_points": [
+    "Pick neutral base colours that match each other",
+    "Choose a few statement pieces for variety",
+    "Fewer, better-quality items"
+  ],
+  "steps": [],
+  "do": [],
+  "dont": [],
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "style",
+    "minimalism"
+  ],
+  "enabled": true,
+  "source": "owner test record",
+  "revision": 1,
+  "created_at": "2026-09-30T18:57:01.989808+00:00",
+  "updated_at": "2026-09-30T18:57:01.989818+00:00",
+  "source_type": "test",
+  "sources": [],
+  "verified": false,
+  "approved_by": "owner"
+}

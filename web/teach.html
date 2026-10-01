@@ -14,7 +14,7 @@
     <header class="owner-topbar">
       <div>
         <h1>Teach Rupsaa</h1>
-        <div class="subtitle">Owner tool — manually author conversation examples for the production dataset.</div>
+        <div class="subtitle">Owner tool — teach Rupsaa new knowledge. Saved knowledge is used on the next chat message (no training).</div>
       </div>
       <div class="owner-nav">
         <a href="knowledge.html">Rupsaa Knowledge →</a>
@@ -26,14 +26,45 @@
       </div>
     </header>
 
-    <div class="owner-banner">
-      This is an owner/development tool, not a public feature. Every example is saved as a
-      <strong>DRAFT</strong> with <code>source_type = human_authored</code> — it still needs review
-      and approval before it can be used for training. Nothing here is ever silently auto-approved
-      or overwritten.
+    <div class="owner-card">
+      <h2>Teach knowledge</h2>
+      <p class="import-help">What you save here goes into Rupsaa's curated <strong>General Knowledge</strong>
+        (the same store as the Knowledge Manager and in-chat teacher mode). One record works in every language — add
+        Banglish/Bengali names as aliases. Only write what you know to be true.</p>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="tk-title">Title</label><input type="text" id="tk-title" maxlength="120" placeholder="e.g. Hair Straightening"></div>
+        <div class="owner-field"><label for="tk-category">Category</label><select id="tk-category"></select></div>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="tk-subcategory">Subcategory <span style="font-weight:400">(optional)</span></label><input type="text" id="tk-subcategory" maxlength="120"></div>
+        <div class="owner-field"><label for="tk-aliases">Aliases <span style="font-weight:400">(one per line)</span></label><textarea id="tk-aliases" rows="2" placeholder="chul straight kora&#10;হেয়ার স্ট্রেইটনিং"></textarea></div>
+      </div>
+      <div class="owner-field"><label for="tk-summary">Knowledge — short summary</label><textarea id="tk-summary" rows="2" maxlength="1000"></textarea></div>
+      <div class="owner-field"><label for="tk-description">Details <span style="font-weight:400">(optional)</span></label><textarea id="tk-description" rows="3" maxlength="6000"></textarea></div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="tk-key-points">Key points <span style="font-weight:400">(one per line)</span></label><textarea id="tk-key-points" rows="3"></textarea></div>
+        <div class="owner-field"><label for="tk-steps">Steps <span style="font-weight:400">(one per line, if applicable)</span></label><textarea id="tk-steps" rows="3"></textarea></div>
+      </div>
+      <div class="owner-field"><label for="tk-guidance">Answer guidance <span style="font-weight:400">(optional)</span></label><textarea id="tk-guidance" rows="2" maxlength="2000"></textarea></div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="tk-tags">Tags <span style="font-weight:400">(comma-separated)</span></label><input type="text" id="tk-tags"></div>
+        <div class="owner-field"><label class="owner-check-inline" style="margin-top:28px"><input type="checkbox" id="tk-enabled" checked> Enabled</label></div>
+      </div>
+      <div class="owner-field"><label>Preview</label><pre id="tk-preview" class="tk-preview"></pre></div>
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="tk-save-btn" type="button">Save knowledge</button>
+        <button class="owner-btn secondary" id="tk-clear-btn" type="button">Clear</button>
+      </div>
+      <div id="tk-result-msg"></div>
     </div>
 
-    <div class="owner-card">
+    <details class="owner-card">
+      <summary><strong>Advanced: conversation example for a future training dataset</strong> — saved as a DRAFT, not used by chat</summary>
+      <div class="owner-banner" style="margin-top:12px">
+        Every example is saved as a <strong>DRAFT</strong> with <code>source_type = human_authored</code> — it still needs
+        review and approval before it can be used for training. It does not change how Rupsaa answers today; use
+        <em>Teach knowledge</em> above for that.
+      </div>
       <h2>New example</h2>
 
       <div class="owner-field-row">
@@ -75,10 +106,12 @@
       </div>
 
       <div id="result-msg"></div>
-    </div>
+    </details>
+
   </div>
 
   <script src="config.js"></script>
   <script src="teach.js"></script>
+  <script src="teach_knowledge.js"></script>
 </body>
 </html>

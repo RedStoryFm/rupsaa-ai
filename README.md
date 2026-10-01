@@ -12,14 +12,16 @@ run against this codebase.
 ## Quick start
 
 **Current release: Rupsaa Gemma — `google/gemma-3-12b-it` + LoRA `adapters/rupsaa-v0.3-gemma3-final`**
-(adapter SHA-256 `3c79e394…724f05`, dataset `rupsaa_v0.3_final`), served in 4-bit on an NVIDIA L4 with RAG
-knowledge, routing, language control and same-session memory. **Rebuild / run / owner test:
-[docs/CURRENT_RELEASE.md](docs/CURRENT_RELEASE.md).**
+(adapter SHA-256 `3c79e394…724f05`, dataset `rupsaa_v0.3_final`), served in 4-bit on an NVIDIA L4 —
+**Rupsaa Personal AI V1**: Conversational Core V1 + curated knowledge (Terminology, Dance, General Knowledge),
+opt-in user memory, consent-based internet fallback (ASK / ALLOW / DENY) and in-chat owner Teacher Mode.
+**Rebuild / run / owner test: [docs/CURRENT_RELEASE.md](docs/CURRENT_RELEASE.md). Knowledge, memory, internet and
+teacher mode: [docs/PERSONAL_AI_V1.md](docs/PERSONAL_AI_V1.md).**
 
 ```bash
 bash scripts/setup_gemma_stack.sh                                        # once per Studio
-PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh --check
-PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh
+bash scripts/start_rupsaa_production.sh --check   # uses ../.gemma_stack automatically when present
+bash scripts/start_rupsaa_production.sh
 bash scripts/stop_rupsaa_production.sh
 ```
 

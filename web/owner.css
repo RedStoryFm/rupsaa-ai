@@ -351,3 +351,7 @@ a.owner-btn {
   .import-issue.err { color: #f3b1b1; }
   .import-issue.warn { color: #f1d58a; }
 }
+
+.tk-preview { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+  padding: 10px 12px; font-size: 13px; min-height: 48px; margin: 0; font-family: inherit; }
+details.owner-card > summary { cursor: pointer; }

@@ -22,6 +22,9 @@ class WebSourceInfo(BaseModel):
     title: str
     url: str
     provider: str = "wikipedia"
+    domain: str = ""
+    retrieved_at: str = ""
+    source_class: str = "other"  # educational_health | educational_qa | reference | community | other
 
 
 class MemoryRequest(BaseModel):
@@ -32,9 +35,40 @@ class MemoryConsentRequest(MemoryRequest):
     enabled: bool
 
 
+class MemoryFact(BaseModel):
+    id: str
+    key: str
+    value: str
+    text: str = ""
+
+
 class MemoryStatus(BaseModel):
     enabled: bool
-    facts: list[str] = []
+    facts: list[MemoryFact] = []
+
+
+class MemoryDeleteRequest(MemoryRequest):
+    fact_id: str = Field(..., max_length=32)
+
+
+class InternetModeRequest(BaseModel):
+    user_id: str | None = Field(default=None, max_length=64)
+    conversation_id: str | None = Field(default=None, max_length=64)
+    mode: str | None = Field(default=None, pattern="^(ASK|ALLOW|DENY)$")
+
+
+class InternetModeResponse(BaseModel):
+    mode: str
+
+
+class TeachAuthRequest(BaseModel):
+    conversation_id: str = Field(..., max_length=64)
+    secret: str = Field(..., min_length=1, max_length=256)
+    user_id: str | None = Field(default=None, max_length=64)
+
+
+class TeachConversationRequest(BaseModel):
+    conversation_id: str = Field(..., max_length=64)
 
 
 class SourceInfo(BaseModel):
@@ -55,8 +89,20 @@ class ChatResponse(BaseModel):
     route: str | None = None
     terms_used: list[str] = []
     web_sources: list[WebSourceInfo] = []
+    # Which knowledge classes informed this reply: CONVERSATION, USER_MEMORY, CURATED_RAG, WEB,
+    # MODEL_GENERAL_KNOWLEDGE (record ids / scores stay server-side).
+    source_types: list[str] = []
     memory_enabled: bool | None = None
     memory_saved: int = 0
+    internet_mode: str | None = None
+    pending_search: bool = False
+    internet_permission_requested: bool = False
+    owner_auth_requested: bool = False
+    owner_auth: str | None = None  # authenticated | failed | locked (never the secret)
+    teacher_mode: bool = False
+    awaiting_secret: bool = False
+    draft: dict | None = None
+    topic: str | None = None
     # Reply language the user explicitly asked for ("bn" / "banglish" / "en"); None = mirror the user.
     response_language: str | None = None
 
@@ -252,3 +298,26 @@ class DanceOut(BaseModel):
     source: str
     created_at: str
     updated_at: str
+
+
+class KnowledgeIn(BaseModel):
+    """General Knowledge create/update body (all optional on update; the store validates)."""
+    title: str | None = Field(default=None, max_length=120)
+    category: str | None = Field(default=None, max_length=60)
+    subcategory: str | None = Field(default=None, max_length=120)
+    aliases: list[str] | None = None
+    summary: str | None = Field(default=None, max_length=1000)
+    description: str | None = Field(default=None, max_length=6000)
+    key_points: list[str] | None = None
+    steps: list[str] | None = None
+    do: list[str] | None = None
+    dont: list[str] | None = None
+    answer_guidance: str | None = Field(default=None, max_length=2000)
+    languages: list[str] | None = None
+    tags: list[str] | None = None
+    enabled: bool | None = None
+    source: str | None = Field(default=None, max_length=300)
+    source_type: str | None = Field(default=None, max_length=40)  # owner | owner_teaching | owner_verified_web | import | test
+    sources: list[dict] | None = Field(default=None, max_length=10)  # [{title, url, domain, retrieved_at}]
+    verified: bool | None = None
+    approved_by: str | None = Field(default=None, max_length=60)

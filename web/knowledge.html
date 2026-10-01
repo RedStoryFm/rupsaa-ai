@@ -36,6 +36,7 @@
       <button class="owner-tab active" id="tab-docs" type="button" role="tab" aria-selected="true">Documents</button>
       <button class="owner-tab" id="tab-terms" type="button" role="tab" aria-selected="false">Terminology</button>
       <button class="owner-tab" id="tab-dance" type="button" role="tab" aria-selected="false">Dance</button>
+      <button class="owner-tab" id="tab-general" type="button" role="tab" aria-selected="false">General Knowledge</button>
     </div>
 
     <section id="docs-section">
@@ -334,11 +335,106 @@
       <div id="dance-list" class="doc-list"></div>
     </div>
     </section>
+
+    <section id="general-section" hidden>
+    <div class="owner-banner">
+      General Knowledge is curated reference for any topic (beauty, fashion, relationships, technology, food …).
+      One record serves every language — put English, Banglish and Bengali names in <em>Aliases</em>. Rupsaa uses it
+      on the <strong>next chat message</strong> (no reindex, no retraining) and explains it in her own words. Web
+      results never land here; only you add or change knowledge.
+    </div>
+
+    <div class="owner-card">
+      <h2 id="gk-form-title">New knowledge</h2>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-title">Title</label><input type="text" id="gk-title" maxlength="120" placeholder="e.g. Hair Straightening"></div>
+        <div class="owner-field"><label for="gk-category">Category</label><select id="gk-category"></select></div>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-subcategory">Subcategory <span style="font-weight:400">(optional)</span></label><input type="text" id="gk-subcategory" maxlength="120"></div>
+        <div class="owner-field"><label for="gk-aliases">Aliases <span style="font-weight:400">(one per line — other names, Banglish/Bengali spellings)</span></label><textarea id="gk-aliases" rows="2" placeholder="chul straight kora&#10;হেয়ার স্ট্রেইটনিং"></textarea></div>
+      </div>
+      <div class="owner-field"><label for="gk-summary">Summary <span style="font-weight:400">(one or two sentences)</span></label><textarea id="gk-summary" rows="2" maxlength="1000"></textarea></div>
+      <div class="owner-field"><label for="gk-description">Description <span style="font-weight:400">(optional)</span></label><textarea id="gk-description" rows="3" maxlength="6000"></textarea></div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-key-points">Key points <span style="font-weight:400">(one per line)</span></label><textarea id="gk-key-points" rows="3"></textarea></div>
+        <div class="owner-field"><label for="gk-steps">Steps <span style="font-weight:400">(one per line, if applicable)</span></label><textarea id="gk-steps" rows="3"></textarea></div>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-do">Do <span style="font-weight:400">(one per line)</span></label><textarea id="gk-do" rows="2"></textarea></div>
+        <div class="owner-field"><label for="gk-dont">Don't <span style="font-weight:400">(one per line)</span></label><textarea id="gk-dont" rows="2"></textarea></div>
+      </div>
+      <div class="owner-field"><label for="gk-guidance">Answer guidance <span style="font-weight:400">(optional — how Rupsaa should answer)</span></label><textarea id="gk-guidance" rows="2" maxlength="2000"></textarea></div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-tags">Tags <span style="font-weight:400">(comma-separated)</span></label><input type="text" id="gk-tags"></div>
+        <div class="owner-field"><label>Languages</label><div class="owner-checks" id="gk-languages"></div>
+          <label class="owner-check-inline"><input type="checkbox" id="gk-enabled" checked> Enabled</label></div>
+      </div>
+      <div class="owner-field-row">
+        <div class="owner-field"><label for="gk-source-type">Provenance</label>
+          <select id="gk-source-type"><option value="owner">owner</option><option value="owner_teaching">owner_teaching</option>
+            <option value="owner_verified_web">owner_verified_web</option><option value="import">import</option><option value="test">test</option></select>
+          <label class="owner-check-inline"><input type="checkbox" id="gk-verified"> Verified against sources</label></div>
+        <div class="owner-field"><label for="gk-sources">Sources <span style="font-weight:400">(one https URL per line, optional)</span></label><textarea id="gk-sources" rows="2"></textarea></div>
+      </div>
+      <div class="owner-actions">
+        <button class="owner-btn primary" id="gk-save-btn" type="button">Save knowledge</button>
+        <button class="owner-btn secondary" id="gk-cancel-btn" type="button" hidden>Cancel edit</button>
+      </div>
+      <div id="gk-result-msg"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Import / export</h2>
+      <p class="import-help">Import many records from <strong>.csv</strong>, <strong>.xlsx</strong> or <strong>.json</strong>.
+        Required: <code>title</code> and a <code>summary</code> or <code>description</code>. List fields (aliases, key points,
+        steps, tags) use <code>|</code>. Existing titles are skipped unless you choose UPDATE in the preview.</p>
+      <div class="owner-actions">
+        <button class="owner-btn secondary" type="button" data-gk-export="json">Export JSON</button>
+        <button class="owner-btn secondary" type="button" data-gk-export="csv">Export CSV</button>
+        <button class="owner-btn secondary" type="button" data-gk-export="xlsx">Export XLSX</button>
+        <button class="owner-btn secondary" type="button" id="gk-backup-btn">Full knowledge backup (JSON)</button>
+      </div>
+      <div class="owner-field" style="margin-top:14px"><label for="gk-import-file">Choose file to preview (max 2 MB)</label>
+        <input type="file" id="gk-import-file" accept=".csv,.xlsx,.json"></div>
+      <div id="gk-import-msg"></div>
+      <div id="gk-import-preview" hidden>
+        <div class="import-counts" id="gk-import-counts"></div>
+        <div class="import-table-wrap"><table class="import-table">
+          <thead><tr><th>Row</th><th>Title</th><th>Status</th><th>Details</th><th>Action</th></tr></thead>
+          <tbody id="gk-import-rows"></tbody></table></div>
+        <div class="owner-actions">
+          <button class="owner-btn primary" id="gk-import-commit-btn" type="button">Import Valid Records</button>
+          <button class="owner-btn secondary" id="gk-import-cancel-btn" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Test retrieval</h2>
+      <div class="owner-field-row">
+        <div class="owner-field"><input type="text" id="gk-test-input" placeholder="Hair straightening ki?"></div>
+        <div class="owner-actions" style="margin:0"><button class="owner-btn secondary" id="gk-test-btn" type="button">Check retrieval</button></div>
+      </div>
+      <div id="gk-test-result"></div>
+    </div>
+
+    <div class="owner-card">
+      <h2>Knowledge <span id="gk-count" style="font-weight:400"></span></h2>
+      <div class="owner-field-row" style="margin-bottom: 14px;">
+        <div class="owner-field"><input type="text" id="gk-search" placeholder="Search title, alias, summary…"></div>
+        <div class="owner-field"><select id="gk-filter-category"><option value="">All categories</option></select></div>
+        <div class="owner-field"><select id="gk-filter-tag"><option value="">All tags</option></select></div>
+      </div>
+      <div id="gk-list" class="doc-list"></div>
+    </div>
+    </section>
   </div>
 
   <script src="config.js"></script>
   <script src="knowledge.js"></script>
   <script src="terminology.js"></script>
   <script src="dance.js"></script>
+  <script src="general.js"></script>
 </body>
 </html>

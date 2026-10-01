@@ -55,3 +55,19 @@ def detect_language(text: str) -> str:
     if has_banglish:
         return "banglish"
     return "en"
+
+
+_BANGLISH_QUESTION_WORDS = {"ki", "koto", "kobe", "kothay", "kothakar", "kon", "keno", "kivabe", "kemon", "er", "ajker",
+                            "mane", "ache", "nei", "jano", "paro", "korbo", "koro", "bolo", "thak", "na", "ha"}
+
+
+def fixed_reply_language(text: str) -> str:
+    """'bn' | 'banglish' | 'en' for Rupsaa's fixed system replies (permission questions, teacher-mode auth).
+    Like detect_language, but short Banglish questions ("Latest iPhone price koto?") count as Banglish, and mixed
+    text falls back to Banglish. Does not change detect_language (the conversational routing uses that)."""
+    lang = detect_language(text)
+    if lang == "bn" or (lang == "mixed" and _BENGALI_RANGE.search(text) and not re.search(r"[a-zA-Z]{3,}", text)):
+        return "bn"
+    if lang == "en" and not (set(re.findall(r"[a-z']+", text.lower())) & _BANGLISH_QUESTION_WORDS):
+        return "en"
+    return "banglish"

@@ -96,3 +96,6 @@ nohup.out
 
 # Opt-in user memory (personal data) — never committed
 data/user_memory/
+data/user_prefs/
+# General Knowledge revision backups (git history already versions the records)
+knowledge/general/.history/

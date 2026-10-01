@@ -33,6 +33,7 @@ from fastapi import APIRouter, File, Form, Header, HTTPException, UploadFile
 from fastapi.responses import Response
 
 from api.schemas import (
+    KnowledgeIn,
     KnowledgeDocumentCreate,
     KnowledgeDocumentOut,
     KnowledgeDocumentUpdate,
@@ -56,6 +57,11 @@ from rupsaa.rag.router import classify_message
 from rupsaa.rag.terminology import TERM_CATEGORIES, TERM_LANGUAGES, TerminologyError, TerminologyStore
 from rupsaa.rag import dance_import, terminology_import
 from rupsaa.rag.dance import DanceError, DanceStore
+from rupsaa.rag import general_knowledge_import as gk_import
+from rupsaa.rag.general_knowledge import CATEGORIES as GK_CATEGORIES
+from rupsaa.rag.general_knowledge import LANGUAGES as GK_LANGUAGES
+from rupsaa.rag.general_knowledge import SOURCE_TYPES as GK_SOURCE_TYPES
+from rupsaa.rag.general_knowledge import KnowledgeError
 
 logger = logging.getLogger("rupsaa.api.owner")
 _warned_unprotected = False
@@ -454,3 +460,138 @@ async def delete_dance(dance_id: str, confirm: bool = False, x_owner_key: str | 
     except DanceError as e:
         raise HTTPException(status_code=400, detail=str(e))
     return {"deleted": dance_id}
+
+
+# --- Rupsaa Knowledge → General Knowledge (owner-curated topics; RAG, no retraining) -------------------------
+# Same store instance as chat, so a saved record is used on the next message (no restart). Static routes first.
+
+def _get_general():
+    from api.services import get_service
+
+    return get_service().general
+
+
+def _gk_out(r) -> dict:
+    from dataclasses import asdict
+
+    return asdict(r)
+
+
+@router.get("/general")
+async def list_general(q: str = "", category: str = "", tag: str = "", x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    records = _get_general().search(q, category or None, tag or None)
+    return {"records": [_gk_out(r) for r in records], "count": len(records)}
+
+
+@router.get("/general/meta")
+async def general_meta(x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    records = _get_general().list()
+    counts = {c: sum(r.category == c for r in records) for c in GK_CATEGORIES}
+    tags = sorted({t for r in records for t in r.tags})
+    return {"categories": GK_CATEGORIES, "languages": GK_LANGUAGES, "source_types": GK_SOURCE_TYPES, "counts": counts,
+            "tags": tags, "total": len(records)}
+
+
+@router.get("/general/lookup")
+async def lookup_general(message: str, x_owner_key: str | None = Header(default=None)) -> dict:
+    """Owner retrieval test: route + which local knowledge (terminology, dance, general) a message would use."""
+    require_owner(x_owner_key)
+    from rupsaa.rag.context_builder import build_turn_knowledge
+
+    k = build_turn_knowledge(message, use_rag=False, rag_query=None, terminology=_get_terminology(), dance=_get_dance(),
+                             general=_get_general())
+    return {"route": k.route, "reason": k.decision.reason, "term_candidate": k.decision.term_candidate,
+            "matches": k.retrieval}
+
+
+@router.get("/general/export.{fmt}")
+async def export_general(fmt: str, x_owner_key: str | None = Header(default=None)) -> Response:
+    require_owner(x_owner_key)
+    store = _get_general()
+    if fmt == "json":
+        return Response(gk_import.export_json(store), media_type="application/json",
+                        headers={"Content-Disposition": 'attachment; filename="general_knowledge.json"'})
+    if fmt == "csv":
+        return Response(gk_import.export_csv(store), media_type="text/csv; charset=utf-8",
+                        headers={"Content-Disposition": 'attachment; filename="general_knowledge.csv"'})
+    if fmt == "xlsx":
+        return Response(gk_import.export_xlsx(store),
+                        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        headers={"Content-Disposition": 'attachment; filename="general_knowledge.xlsx"'})
+    raise HTTPException(status_code=404, detail="use json, csv or xlsx")
+
+
+@router.get("/knowledge/backup")
+async def knowledge_backup(x_owner_key: str | None = Header(default=None)) -> Response:
+    """One JSON bundle of all curated knowledge (terminology, dance, general). No user data."""
+    require_owner(x_owner_key)
+    import json as _json
+    from dataclasses import asdict
+    from datetime import datetime, timezone
+
+    bundle = {"exported_at": datetime.now(timezone.utc).isoformat(),
+              "terminology": [asdict(r) for r in _get_terminology().list()],
+              "dance": [asdict(r) for r in _get_dance().list()],
+              "general": [asdict(r) for r in _get_general().list()]}
+    return Response(_json.dumps(bundle, ensure_ascii=False, indent=1).encode("utf-8"), media_type="application/json",
+                    headers={"Content-Disposition": 'attachment; filename="rupsaa_knowledge_backup.json"'})
+
+
+@router.post("/general/import/preview")
+async def preview_general_import(file: UploadFile = File(...), x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    name, content = await _read_upload(file)
+    try:
+        return gk_import.preview(name, content, _get_general())
+    except terminology_import.ImportFileError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.post("/general/import")
+async def commit_general_import(file: UploadFile = File(...), update_rows: str = Form(default=""),
+                                x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    name, content = await _read_upload(file)
+    try:
+        return gk_import.commit(name, content, _get_general(), _parse_update_rows(update_rows))
+    except terminology_import.ImportFileError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.get("/general/{record_id}")
+async def get_general(record_id: str, x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    try:
+        return _gk_out(_get_general().get(record_id))
+    except KnowledgeError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+
+@router.post("/general")
+async def create_general(request: KnowledgeIn, x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    try:
+        return _gk_out(_get_general().create({**request.model_dump(exclude_none=True), "source": request.source or "owner"}))
+    except KnowledgeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+
+@router.put("/general/{record_id}")
+async def update_general(record_id: str, request: KnowledgeIn, x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    try:
+        return _gk_out(_get_general().update(record_id, request.model_dump(exclude_unset=True)))
+    except KnowledgeError as e:
+        raise HTTPException(status_code=404 if "no such" in str(e) else 400, detail=str(e))
+
+
+@router.delete("/general/{record_id}")
+async def delete_general(record_id: str, confirm: bool = False, x_owner_key: str | None = Header(default=None)) -> dict:
+    require_owner(x_owner_key)
+    try:
+        _get_general().delete(record_id, confirm=confirm)
+    except KnowledgeError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    return {"deleted": record_id}

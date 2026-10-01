@@ -24,10 +24,15 @@
           <input type="checkbox" id="rag-toggle">
           <span class="lbl-full">Use knowledge base</span><span class="lbl-short" aria-hidden="true">📚</span>
         </label>
-        <label class="rag-toggle" title="Let Rupsaa look things up online (Wikipedia) in this chat. Off by default; resets with New chat.">
-          <input type="checkbox" id="web-toggle">
+        <label class="rag-toggle internet-select" title="Internet: ask before searching, allow when needed, or never use it">
           <span class="lbl-full">Internet</span><span class="lbl-short" aria-hidden="true">🌐</span>
+          <select id="internet-mode" aria-label="Internet search">
+            <option value="ASK">Ask first</option>
+            <option value="ALLOW">Allow when needed</option>
+            <option value="DENY">Never</option>
+          </select>
         </label>
+        <span id="teacher-badge" class="teacher-badge" hidden>TEACHER MODE <button type="button" id="teacher-logout" title="Leave teacher mode">✕</button></span>
         <button id="memory-btn" class="topbar-btn" title="Memory: what Rupsaa remembers about you" aria-haspopup="dialog">Memory</button>
         <button id="reset-btn" title="Start a new chat" aria-label="Start a new chat">New chat</button>
       </div>
@@ -48,10 +53,16 @@
     </main>
 
     <div id="error-banner" class="error-banner" role="alert" hidden></div>
+    <div id="draft-bar" class="draft-bar" hidden>
+      <span>Teaching draft ready</span>
+      <button type="button" id="draft-save">Save</button>
+      <button type="button" id="draft-cancel">Cancel</button>
+    </div>
 
     <footer class="composer">
       <div class="composer-input-wrap">
         <textarea id="input" placeholder="Message Rupsaa… (বাংলা, Banglish, or English)" rows="1" maxlength="8000" aria-label="Message Rupsaa"></textarea>
+        <input type="password" id="secret-input" class="secret-input" hidden autocomplete="off" maxlength="256" placeholder="Owner secret (checked by the server)…" aria-label="Owner secret">
         <div class="char-counter" id="char-counter" hidden></div>
       </div>
       <button id="send-btn" aria-label="Send message">➤</button>
@@ -60,7 +71,7 @@
 
   <dialog id="memory-dialog" class="memory-dialog" aria-labelledby="memory-title">
     <h2 id="memory-title">Memory</h2>
-    <p class="memory-help">When on, Rupsaa remembers things you tell her about yourself (your name, where you live, what you like) across chats on this browser. Off by default. Turning it off deletes everything.</p>
+    <p class="memory-help">When on, Rupsaa remembers lasting things you tell her about yourself (your name, where you live, your favourites, how you like replies) across chats on this browser — not moods or plans. Off by default. Turning it off deletes everything.</p>
     <label class="memory-switch"><input type="checkbox" id="memory-toggle"> <span>Remember me across chats</span></label>
     <div class="memory-list-wrap">
       <div class="memory-list-title">What Rupsaa remembers</div>

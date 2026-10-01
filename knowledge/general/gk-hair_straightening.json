@@ -1,0 +1,45 @@
+{
+  "id": "gk-hair_straightening",
+  "title": "Hair Straightening",
+  "category": "Beauty",
+  "subcategory": "Hair care",
+  "aliases": [
+    "hair straightening",
+    "chul straight kora",
+    "হেয়ার স্ট্রেইটনিং"
+  ],
+  "summary": "Making curly or wavy hair straight, either temporarily with heat tools (flat iron) or longer-term with chemical treatments like keratin or rebonding.",
+  "description": "",
+  "key_points": [
+    "Heat styling lasts until the next wash; chemical treatments last months",
+    "Use a heat protectant before flat-ironing",
+    "Too much heat or frequent chemical treatment can make hair dry and brittle"
+  ],
+  "steps": [],
+  "do": [
+    "Use a heat protectant",
+    "Keep the iron at a moderate temperature"
+  ],
+  "dont": [
+    "Don't straighten wet hair with a flat iron"
+  ],
+  "answer_guidance": "",
+  "languages": [
+    "en",
+    "bn",
+    "banglish"
+  ],
+  "tags": [
+    "hair",
+    "styling"
+  ],
+  "enabled": true,
+  "source": "owner test record",
+  "revision": 1,
+  "created_at": "2026-09-30T18:57:01.988836+00:00",
+  "updated_at": "2026-09-30T18:57:01.988877+00:00",
+  "source_type": "test",
+  "sources": [],
+  "verified": false,
+  "approved_by": "owner"
+}

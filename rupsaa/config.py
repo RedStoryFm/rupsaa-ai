@@ -86,6 +86,8 @@ class Settings(BaseSettings):
     # Structured dance-style knowledge (rupsaa/rag/dance.py), one JSON file per
     # dance, owner-editable via web/knowledge.html → Dance. Facts live here, not in the LoRA.
     knowledge_dance_dir: str = "knowledge/dance"
+    # Owner-curated General Knowledge records (rupsaa/rag/general_knowledge.py), one JSON file per topic.
+    knowledge_general_dir: str = "knowledge/general"
 
     # Owner-only tools (Teach Rupsaa, Rupsaa Knowledge) — see api/owner_routes.py.
     # Unset (empty) by default for local development, which allows access
@@ -111,6 +113,10 @@ class Settings(BaseSettings):
     # server-wide. Only the cleaned question is sent (never chat history).
     web_search_provider: str = Field(default="wikipedia", validation_alias=AliasChoices("RUPSAA_WEB_SEARCH_PROVIDER"))
     web_search_timeout: float = Field(default=6.0, validation_alias=AliasChoices("RUPSAA_WEB_SEARCH_TIMEOUT"))
+    brave_api_key: str = Field(default="", validation_alias=AliasChoices("RUPSAA_BRAVE_API_KEY"), repr=False)  # secret
+    user_prefs_dir: str = Field(default="data/user_prefs", validation_alias=AliasChoices("RUPSAA_USER_PREFS_DIR"))
+    # In-chat owner teaching (server-side secret, constant-time compare). Empty = teacher mode unavailable.
+    teach_secret: str = Field(default="", validation_alias=AliasChoices("RUPSAA_TEACH_SECRET"), repr=False)
     # Opt-in persistent user memory (per browser/device id). Never committed to git.
     user_memory_dir: str = Field(default="data/user_memory", validation_alias=AliasChoices("RUPSAA_USER_MEMORY_DIR"))
     user_memory_max_facts: int = Field(default=50, validation_alias=AliasChoices("RUPSAA_USER_MEMORY_MAX_FACTS"))

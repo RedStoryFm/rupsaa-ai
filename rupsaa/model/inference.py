@@ -61,6 +61,13 @@ class RupsaaEngine:
     def tokenizer(self):
         return self.loaded.tokenizer
 
+    def complete(self, system: str, user: str, *, max_new_tokens: int = 600, temperature: float = 0.2) -> str:
+        """Plain instruction call without the Rupsaa persona (used to structure owner teaching notes into a draft).
+        Low temperature; the caller validates the output."""
+        params = GenerationParams.from_config({"max_new_tokens": max_new_tokens, "temperature": temperature})
+        messages = [ChatMessage(role="system", content=system), ChatMessage(role="user", content=user)]
+        return generate_reply(self.model, self.tokenizer, messages, params).text
+
     def chat(
         self,
         *,
@@ -73,6 +80,7 @@ class RupsaaEngine:
         dance_context: str | None = None,
         generation_overrides: dict | None = None,
         web_context: str | None = None,
+        general_context: str | None = None,
     ) -> ChatResult:
         boundary = check_text(user_message)
         if not boundary.allowed:
@@ -87,6 +95,7 @@ class RupsaaEngine:
             dance_context=dance_context,
             serving_notes=SERVING_NOTES_V02 if self.prompt_version == "v0.2" and serving_notes_enabled() else None,
             web_context=web_context,
+            general_context=general_context,
         )
         messages = (
             [ChatMessage(role="system", content=system_prompt)]

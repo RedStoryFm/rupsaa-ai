@@ -26,7 +26,8 @@ google/gemma-3-12b-it                  base model, 4-bit NF4, bf16 compute   (Hu
 | Generation | temperature 0.55, top-p 0.9, top-k 50, repetition penalty 1.1 (`configs/inference.yaml`) |
 | Prompt | `RUPSAA_PROMPT_VERSION=v0.2`; serving notes on (`RUPSAA_SERVING_NOTES=0` restores the exact trained prompt) |
 | Gemma serving fixes | explicit bf16 compute dtype (`rupsaa/model/loader.py`); stop on `<end_of_turn>` (`rupsaa/model/generation.py`) |
-| Knowledge | 40 terminology records, 60 dance records (every dance has a Bengali-script alias), identity/FAQ documents |
+| Knowledge | 40 terminology records, 60 dance records (every dance has a Bengali-script alias), 5 General Knowledge test records, identity/FAQ documents |
+| App layers (not weights) | Rupsaa Conversational Core V1 + Personal AI V1: General Knowledge, user memory, internet ASK/ALLOW/DENY with trusted source routing, in-chat Teacher Mode — see [PERSONAL_AI_V1.md](PERSONAL_AI_V1.md) |
 | GPU | NVIDIA L4 (23 GB) is enough for inference: about 11.6 GB, about 8 s for a short reply |
 
 ## Fresh Studio: rebuild
@@ -63,15 +64,19 @@ Then confirm the files: `python scripts/fetch_adapter.py --check-only` should pr
 
 ```bash
 cd rupsaa-ai
-PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh --check   # validate only
-PYTHONPATH=$(cd .. && pwd)/.gemma_stack bash scripts/start_rupsaa_production.sh           # start (foreground)
-bash scripts/stop_rupsaa_production.sh                                                     # stop
+bash scripts/start_rupsaa_production.sh --check   # validate only
+bash scripts/start_rupsaa_production.sh           # start (foreground)
+bash scripts/stop_rupsaa_production.sh            # stop
 ```
+
+The start script puts `../.gemma_stack` (from `scripts/setup_gemma_stack.sh`) first on `PYTHONPATH` automatically
+when it exists. Set `RUPSAA_GEMMA_STACK` to use another location. Without it, the older project transformers fails
+with `model type gemma3 not recognized`.
 
 To keep it running after the terminal closes:
 
 ```bash
-PYTHONPATH=… setsid nohup bash scripts/start_rupsaa_production.sh > logs/production.log 2>&1 &
+setsid nohup bash scripts/start_rupsaa_production.sh > logs/production.log 2>&1 &
 ```
 
 Loading the base model and adapter takes a few minutes on an L4. It is ready when `curl -s 127.0.0.1:8000/ready`

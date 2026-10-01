@@ -383,3 +383,22 @@ button, input, textarea { font-family: inherit; }
   .bubble { max-width: 86%; }
   .welcome-title { font-size: 20px; }
 }
+
+.internet-select select { border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  border-radius: 8px; padding: 5px 6px; font-size: 12px; }
+.teacher-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: var(--accent);
+  border: 1px solid var(--accent); border-radius: 999px; padding: 3px 4px 3px 10px; display: inline-flex; gap: 4px; align-items: center; }
+.teacher-badge[hidden] { display: none; }
+.teacher-badge button { border: none; background: transparent; color: inherit; cursor: pointer; font-size: 12px; padding: 0 4px; }
+.draft-bar { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 6px 16px; font-size: 13px;
+  border-top: 1px solid var(--border); background: var(--accent-soft); }
+.draft-bar[hidden] { display: none; }
+.draft-bar button { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px;
+  padding: 4px 10px; font-size: 13px; cursor: pointer; }
+.memory-list li { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.memory-del { border: none; background: transparent; color: var(--text-muted); cursor: pointer; font-size: 13px; }
+.bubble { white-space: pre-wrap; }
+@media (max-width: 480px) { .internet-select select { max-width: 92px; } }
+.secret-input { width: 100%; box-sizing: border-box; padding: 10px 14px; border-radius: 18px; border: 1px solid var(--accent);
+  background: var(--bg); color: var(--text); font-size: 15px; outline: none; }
+.secret-input[hidden] { display: none; }

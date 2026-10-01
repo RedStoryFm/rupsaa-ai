@@ -33,6 +33,14 @@ fi
 [ -n "${RUPSAA_ADAPTER_PATH:-}" ] || die "RUPSAA_ADAPTER_PATH is not set (in .env or the environment)"
 export RUPSAA_ADAPTER_PATH
 
+# Gemma 3 needs the newer transformers stack from scripts/setup_gemma_stack.sh (kept outside the project env,
+# which LLaMA-Factory pins to an older transformers). Put it first on PYTHONPATH when present.
+GEMMA_STACK="${RUPSAA_GEMMA_STACK:-$(cd "$ROOT/.." && pwd)/.gemma_stack}"
+if [ -d "$GEMMA_STACK/transformers" ] && [[ ":${PYTHONPATH:-}:" != *":$GEMMA_STACK:"* ]]; then
+  export PYTHONPATH="$GEMMA_STACK${PYTHONPATH:+:$PYTHONPATH}"
+  echo "== using Gemma serving stack: $GEMMA_STACK"
+fi
+
 # A Python that can run the app (a fresh Lightning terminal may not have conda on PATH).
 PY=""
 for cand in "${RUPSAA_PYTHON:-}" /home/zeus/miniconda3/envs/cloudspace/bin/python3 "$(command -v python3 || true)"; do

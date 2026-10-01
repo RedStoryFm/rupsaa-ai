@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 
 from rupsaa.conversation.language_control import resolve_turn_language
 from rupsaa.rag.dance import DanceStore, format_dance_context
+from rupsaa.rag.general_knowledge import GeneralKnowledgeStore, format_general_context
 from rupsaa.rag.router import Route, RouteDecision, classify_message
 from rupsaa.rag.terminology import TerminologyStore, format_terminology_context
 
@@ -37,6 +38,9 @@ class TurnKnowledge:
     conversation_note: str | None = None
     language: str | None = None  # explicitly requested reply language ("bn"/"banglish"/"en")
     language_state: dict | None = None  # per-conversation language choice to keep for the next turn
+    general_context: str | None = None  # owner General Knowledge records (knowledge/general)
+    # Internal retrieval metadata (logs/trace only, never shown in chat): source, record_id, category, match, score.
+    retrieval: list[dict] = field(default_factory=list)
 
     @property
     def route(self) -> str:
@@ -55,6 +59,7 @@ def build_turn_knowledge(
     history: list | None = None,
     language_state: dict | None = None,
     dance: DanceStore | None = None,
+    general: GeneralKnowledgeStore | None = None,
 ) -> TurnKnowledge:
     """`use_rag` is the user's document-RAG toggle; it gates *documents* only.
     Owner-curated terminology is small, deterministic and always consulted
@@ -79,18 +84,47 @@ def build_turn_knowledge(
     if decision.route == Route.FOLLOWUP and history_messages == 0:
         out.conversation_note = ("The user refers to an earlier answer, but this conversation has no earlier messages yet — "
                                  "ask what they would like explained instead of guessing a topic.")
+    # General Knowledge: carried on follow-ups; otherwise only when the specialised stores found nothing
+    # (priority: exact/specialised terminology & dance first, then General Knowledge exact → strong semantic).
+    general_matches = []
+    if general is not None:
+        if decision.route == Route.FOLLOWUP:  # carry the active topic; no semantic search on "eta Bengali te bolo"
+            by_id = {r.id: r for r in general.list(include_disabled=False)}
+            general_matches = [_Carried(by_id[t]) for t in previous_terms or [] if t in by_id][:2]
+        elif not (matches or dance_matches) and _gk_candidate(decision, message):
+            general_matches = general.lookup(message, decision.term_candidate)
     if matches:
         out.terminology_context = format_terminology_context(matches)
     if dance_matches:
         out.dance_context = format_dance_context(dance_matches)
-    out.terms_used = [m.record.id for m in matches] + [m.record.id for m in dance_matches]
+    if general_matches:
+        out.general_context = format_general_context(general_matches)
+    out.terms_used = ([m.record.id for m in matches] + [m.record.id for m in dance_matches]
+                      + [m.record.id for m in general_matches])
+    out.retrieval = [
+        {"source": src, "record_id": m.record.id, "category": getattr(m.record, "category", "") or src,
+         "match": getattr(m, "method", "carried"), "score": getattr(m, "score", 1.0)}
+        for src, ms in (("terminology", matches), ("dance", dance_matches), ("general", general_matches)) for m in ms]
 
     wants_documents = use_rag and rag_query is not None and decision.use_documents
-    if decision.route == Route.TERMINOLOGY and (matches or dance_matches):
+    if decision.route == Route.TERMINOLOGY and (matches or dance_matches or general_matches):
         wants_documents = False  # the structured entry answers it; don't dilute with chunks
     if wants_documents:
         out.retrieved_context, out.sources = rag_query(message, strict=decision.strict_documents)
     return out
+
+
+def _gk_candidate(decision, message: str) -> bool:
+    """General Knowledge is looked up for definition/knowledge questions — never for greetings, mood talk,
+    memory questions or plain statements about the user."""
+    from rupsaa.rag.router import is_smalltalk
+    from rupsaa.rag.web_search import _PERSONAL_RE, is_question
+
+    if decision.route in (Route.MEMORY, Route.FOLLOWUP) or is_smalltalk(message):
+        return False
+    if decision.route == Route.TERMINOLOGY:
+        return True
+    return is_question(message) and not _PERSONAL_RE.search(message)
 
 
 def _reference_matches(store, decision, message: str, previous_ids: list[str] | None) -> list:
@@ -113,13 +147,22 @@ MAX_RECALL_MESSAGES = 12
 MAX_RECALL_CHARS = 300
 
 
-def memory_note(history: list | None, history_messages: int, history_truncated: bool, question: str = "") -> str:
+def memory_note(history: list | None, history_messages: int, history_truncated: bool, question: str = "",
+                long_term: bool = False) -> str:
     """Conversation-recall note: the user's own messages before the recall question as a
     numbered, oldest-first list (the chat history itself also follows the system prompt).
     Facts are only *listed* — which one answers the question is the model's job. The note
     quotes the question, so it stays true for every turn of a conversation (serving == training)."""
     user_msgs = [m.content for m in (history or []) if getattr(m, "role", None) == "user"]
     q = question.strip()[:200]
+    if long_term:  # opted-in long-term memory (listed in another note) may hold the answer from an earlier chat
+        lines = [f"In the message \"{q}\" the user asks about something they told you before. Answer from the "
+                 "long-term memory list or from this conversation, whichever has it (the latest value wins), directly "
+                 "and briefly, in the user's language. If neither has it, say so."]
+        if user_msgs:
+            lines.append("The user's messages in this conversation, oldest first:")
+            lines += [f"{i + 1}. {m[:MAX_RECALL_CHARS]}" for i, m in enumerate(user_msgs[-MAX_RECALL_MESSAGES:])]
+        return "\n".join(lines)
     if not user_msgs and history_messages == 0:
         return (f"In the message \"{q}\" the user asks about earlier messages, but there were no earlier "
                 "messages in this conversation — say so.")

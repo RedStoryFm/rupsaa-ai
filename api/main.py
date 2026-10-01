@@ -23,9 +23,14 @@ from api.schemas import (
     ChatRequest,
     ChatResponse,
     HealthResponse,
+    InternetModeRequest,
+    InternetModeResponse,
     MemoryConsentRequest,
+    MemoryDeleteRequest,
     MemoryRequest,
     MemoryStatus,
+    TeachAuthRequest,
+    TeachConversationRequest,
     ModelInfo,
     ReindexResponse,
     ResetRequest,
@@ -140,8 +145,9 @@ async def chat(request: ChatRequest, http_request: Request, service: RupsaaServi
             temperature=request.temperature,
             top_p=request.top_p,
             max_new_tokens=request.max_new_tokens,
-            allow_internet=request.allow_internet,
+            allow_internet=request.allow_internet or None,
             user_id=request.user_id,
+            client_key=client_key(http_request),
         )
     except Exception:
         logger.exception("Chat generation failed")
@@ -163,14 +169,14 @@ def _memory_user(request: MemoryRequest, http_request: Request) -> str:
 async def memory_status(request: MemoryRequest, http_request: Request,
                         service: RupsaaService = Depends(get_service)) -> MemoryStatus:
     mem = service.user_memory.get(_memory_user(request, http_request))
-    return MemoryStatus(enabled=mem.consent, facts=[f["text"] for f in mem.facts])
+    return MemoryStatus(enabled=mem.consent, facts=mem.facts)
 
 
 @app.post("/memory/consent", response_model=MemoryStatus)
 async def memory_consent(request: MemoryConsentRequest, http_request: Request,
                          service: RupsaaService = Depends(get_service)) -> MemoryStatus:
     mem = service.user_memory.set_consent(_memory_user(request, http_request), request.enabled)
-    return MemoryStatus(enabled=mem.consent, facts=[f["text"] for f in mem.facts])
+    return MemoryStatus(enabled=mem.consent, facts=mem.facts)
 
 
 @app.post("/memory/forget", response_model=MemoryStatus)
@@ -178,6 +184,50 @@ async def memory_forget(request: MemoryRequest, http_request: Request,
                         service: RupsaaService = Depends(get_service)) -> MemoryStatus:
     service.user_memory.forget(_memory_user(request, http_request))
     return MemoryStatus(enabled=False, facts=[])
+
+
+@app.post("/memory/delete", response_model=MemoryStatus)
+async def memory_delete(request: MemoryDeleteRequest, http_request: Request,
+                        service: RupsaaService = Depends(get_service)) -> MemoryStatus:
+    uid = _memory_user(request, http_request)
+    service.user_memory.delete_fact(uid, request.fact_id)
+    mem = service.user_memory.get(uid)
+    return MemoryStatus(enabled=mem.consent, facts=mem.facts)
+
+
+@app.post("/internet/mode", response_model=InternetModeResponse)
+async def internet_mode(request: InternetModeRequest, http_request: Request,
+                        service: RupsaaService = Depends(get_service)) -> InternetModeResponse:
+    """Get (mode omitted) or set the ASK / ALLOW / DENY internet preference (per browser id, else per chat)."""
+    if chat_limiter.enabled and chat_limiter.check(client_key(http_request)) is not None:
+        raise HTTPException(status_code=429, detail="Too many requests — slow down a little.")
+    if request.mode:
+        return InternetModeResponse(mode=service.set_internet_mode(request.user_id, request.conversation_id, request.mode))
+    return InternetModeResponse(mode=service.internet_mode(request.user_id, request.conversation_id))
+
+
+@app.post("/teach/auth", response_model=ChatResponse)
+async def teach_auth(request: TeachAuthRequest, http_request: Request,
+                     service: RupsaaService = Depends(get_service)) -> ChatResponse:
+    """Masked owner-secret submission from the chat UI. Verified server-side; the secret is never echoed or stored."""
+    if chat_limiter.enabled and chat_limiter.check(client_key(http_request)) is not None:
+        raise HTTPException(status_code=429, detail="Too many attempts — wait a little.")
+    result = await run_in_threadpool(service.chat, message=request.secret, conversation_id=request.conversation_id,
+                                     use_rag=False, temperature=None, top_p=None, max_new_tokens=None,
+                                     user_id=request.user_id, client_key=client_key(http_request), secret_submission=True)
+    return ChatResponse(**result)
+
+
+@app.post("/teach/logout")
+async def teach_logout(request: TeachConversationRequest, service: RupsaaService = Depends(get_service)) -> dict:
+    service.teach_logout(request.conversation_id)
+    return {"teacher_mode": False}
+
+
+@app.post("/teach/cancel")
+async def teach_cancel(request: TeachConversationRequest, service: RupsaaService = Depends(get_service)) -> dict:
+    service.teach_cancel(request.conversation_id)
+    return {"draft": None}
 
 
 @app.post("/rag/reindex", response_model=ReindexResponse)

@@ -10,7 +10,12 @@
   const sendBtn = document.getElementById("send-btn");
   const resetBtn = document.getElementById("reset-btn");
   const ragToggle = document.getElementById("rag-toggle");
-  const webToggle = document.getElementById("web-toggle");
+  const internetSelect = document.getElementById("internet-mode");
+  const teacherBadge = document.getElementById("teacher-badge");
+  const teacherLogout = document.getElementById("teacher-logout");
+  const draftBar = document.getElementById("draft-bar");
+  const draftSave = document.getElementById("draft-save");
+  const draftCancel = document.getElementById("draft-cancel");
   const memoryBtn = document.getElementById("memory-btn");
   const memoryDialog = document.getElementById("memory-dialog");
   const memoryToggle = document.getElementById("memory-toggle");
@@ -31,6 +36,7 @@
   let countdownTimer = null;
   let healthPollTimer = null;
   let memoryEnabled = false;
+  let awaitingSecret = false;  // next input is the owner secret: masked, sent to /teach/auth, never shown
 
   // Random per-browser id for opt-in memory (never a name/email). Kept in localStorage when available.
   const userId = (function () {
@@ -89,7 +95,7 @@
         a.href = /^https:\/\//.test(w.url) ? w.url : "#";
         a.target = "_blank";
         a.rel = "noopener noreferrer";
-        a.textContent = w.title;
+        a.textContent = w.domain ? `${w.title} (${w.domain})` : w.title;
         web.appendChild(a);
       });
       bubble.appendChild(web);
@@ -237,6 +243,7 @@
   }
 
   async function sendMessage() {
+    if (awaitingSecret) { if (secretEl.value) submitSecret(secretEl.value); return; }
     const text = inputEl.value.trim();
     if (!text || isSending || rateLimitedUntil > Date.now()) return;
 
@@ -261,7 +268,6 @@
           message: text,
           conversation_id: conversationId,
           use_rag: ragToggle.checked,
-          allow_internet: webToggle.checked,
           user_id: userId,
         }),
         signal: controller.signal,
@@ -292,6 +298,7 @@
       if (typeof data.memory_enabled === "boolean" && data.memory_enabled !== memoryEnabled) {
         setMemoryState(data.memory_enabled);  // e.g. "amake bhule jao" in chat turned memory off
       }
+      applyServerState(data);
     } catch (err) {
       removeTypingIndicator();
       // Restore the failed message so the user can just hit send again — but only if they
@@ -329,7 +336,8 @@
       }
     }
     conversationId = null;
-    webToggle.checked = false;  // the Internet switch is per conversation
+    setTeacherUi(false, null);
+    setSecretMode(false);
     [...messagesEl.children].forEach((child) => {
       if (child !== welcomeEl) child.remove();
     });
@@ -337,6 +345,73 @@
     clearError();
     inputEl.focus();
   }
+
+  // --- internet preference (ASK / ALLOW / DENY), durable per browser --------------------------------------
+  async function internetCall(mode) {
+    try {
+      const res = await fetch(`${API_URL}/internet/mode`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.assign({ user_id: userId, conversation_id: conversationId }, mode ? { mode } : {})),
+      });
+      if (res.ok) internetSelect.value = (await res.json()).mode;
+    } catch (e) { /* optional */ }
+  }
+  internetSelect.addEventListener("change", () => internetCall(internetSelect.value));
+
+  // --- owner / teacher mode -------------------------------------------------------------------------------
+  const secretEl = document.getElementById("secret-input");
+  function setSecretMode(on) {
+    awaitingSecret = on;
+    secretEl.hidden = !on;
+    inputEl.hidden = on;
+    secretEl.value = "";
+    (on ? secretEl : inputEl).focus();
+  }
+  secretEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); const v = secretEl.value; if (v) submitSecret(v); }
+    if (e.key === "Escape") setSecretMode(false);
+  });
+  function setTeacherUi(on, draft) {
+    teacherBadge.hidden = !on;
+    draftBar.hidden = !(on && draft);
+  }
+  function applyServerState(data) {
+    if (data.internet_mode) internetSelect.value = data.internet_mode;
+    setSecretMode(!!data.awaiting_secret);
+    setTeacherUi(!!data.teacher_mode, data.draft);
+  }
+  async function submitSecret(secret) {
+    secretEl.value = "";
+    setSecretMode(false);
+    appendBubble("user", "••••••");
+    appendTypingIndicator();
+    try {
+      const res = await fetch(`${API_URL}/teach/auth`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ conversation_id: conversationId, secret, user_id: userId }),
+      });
+      removeTypingIndicator();
+      if (!res.ok) throw new Error(friendlyError(res.status));
+      const data = await res.json();
+      conversationId = data.conversation_id;
+      appendBubble("assistant", data.response);
+      applyServerState(data);
+    } catch (e) {
+      removeTypingIndicator();
+      showError(`Teacher mode: ${e.message}`);
+    }
+  }
+  teacherLogout.addEventListener("click", async () => {
+    if (conversationId) {
+      try {
+        await fetch(`${API_URL}/teach/logout`, { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ conversation_id: conversationId }) });
+      } catch (e) { /* ignore */ }
+    }
+    setTeacherUi(false, null);
+  });
+  draftSave.addEventListener("click", () => { inputEl.value = "save"; sendMessage(); });
+  draftCancel.addEventListener("click", () => { inputEl.value = "cancel"; sendMessage(); });
 
   function setMemoryState(enabled) {
     memoryEnabled = enabled;
@@ -349,7 +424,17 @@
     setMemoryState(!!status.enabled);
     memoryList.replaceChildren(...(status.facts || []).map((f) => {
       const li = document.createElement("li");
-      li.textContent = f;
+      const label = document.createElement("span");
+      label.textContent = f.key && !f.key.startsWith("note:") ? `${f.key.split(":")[0].replace(/_/g, " ")}: ${f.value}` : f.value;
+      const del = document.createElement("button");
+      del.type = "button";
+      del.className = "memory-del";
+      del.textContent = "✕";
+      del.title = "Delete this memory";
+      del.addEventListener("click", async () => {
+        try { renderMemory(await memoryCall("delete", { fact_id: f.id })); } catch (e) { showError(`Memory: ${e.message}`); }
+      });
+      li.append(label, del);
       return li;
     }));
     memoryEmpty.hidden = (status.facts || []).length > 0;
@@ -389,6 +474,7 @@
     try { renderMemory(await memoryCall("forget")); } catch (e) { showError(`Memory: ${e.message}`); }
   });
   refreshMemory();
+  internetCall(null);
 
   sendBtn.addEventListener("click", sendMessage);
   resetBtn.addEventListener("click", resetConversation);

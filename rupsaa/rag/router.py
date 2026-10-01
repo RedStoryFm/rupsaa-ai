@@ -94,7 +94,7 @@ _FOLLOWUP_RE = _rx(
     rf"^\s*(explain|tell me) (more|in (more )?detail)|^\s*(more detail|elaborate|go deeper)\s*[?.!]*\s*$",
     rf"^\s*(what do you mean|i don'?t get it|didn'?t understand)",
     # Banglish
-    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|english\s?e|banglish\s?e|ingreji\s?te)\s*((aro|ektu)?\s*(simple|shohoj|sohoj|short) kore)?\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
+    rf"{_B}(eta|sheta|seta|oita)?\s*(bangla\s?(y|te|e)?|bengali\s?(te|e|y)?|english\s?e|banglish\s?e|ingreji\s?te)\s*((aro|ektu)?\s*(simple|shohoj|sohoj|short) kore)?\s*(bujhiye|bujhie|bujhaye|likhe)?\s*(bolo|bolen|bol|likho|dao|daw)",
     rf"{_B}(eta|sheta|seta)?\s*(short|choto|chhoto|chotto|sohoj|shohoj|easy|simple) kore (bolo|bol|bujhao|bojhao|bujhiye bolo|bojhai|likho)",
     rf"{_B}(aro|ektu) (detail|bistarito|bistarito bhabe|bujhiye) (bolo|bol|bujhao)",
     rf"{_B}(bujhlam na|bujhini|bujhi ni|bujhte parini|bujhte pari ni)",  # "bujhlam" alone = "got it", not a re-ask

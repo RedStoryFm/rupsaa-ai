@@ -28,6 +28,7 @@ Gemma derivative and its use must comply with those terms and the Gemma Prohibit
 | Dataset SHA-256 | `6eedeb105c5ebd069d59aca751a4df849767a192ad96944c6de79fbe87fbdc69` |
 | Prompt version | `v0.2` persona prompt + runtime blocks (terminology / dance / recall / language directive) |
 | Serving notes | enabled in production (identity + conversational style; `RUPSAA_SERVING_NOTES=0` disables) |
+| Serving profile | **Rupsaa Conversational Core V1** — this adapter + v0.2 prompt + serving notes + temperature 0.55 + bf16 compute + `<end_of_turn>` stop |
 | Recommended generation | temperature 0.55, top-p 0.9, top-k 50, repetition penalty 1.1 |
 
 ## Inference requirements
@@ -53,6 +54,12 @@ model = PeftModel.from_pretrained(base, "<repo>", subfolder="rupsaa-v0.3-gemma3-
 ## Files
 `adapter_model.safetensors`, `adapter_config.json`, `train_summary.json` (training metrics), `manifest.json`,
 `checksums.sha256`. Checkpoints, optimizer state, base weights and training data are intentionally not published.
+
+## Application layers (not in these weights)
+Curated knowledge / RAG (Terminology, Dance, General Knowledge), opt-in user memory, the consent-based internet
+fallback (ASK / ALLOW / DENY) and the owner Teacher Mode are parts of the Rupsaa application (Personal AI V1). They
+change no weights: knowledge the owner teaches is stored as app records and retrieved at runtime, and new knowledge
+does not produce a new adapter version.
 
 ## Known limitations
 - Occasional awkward Banglish phrasing; a trained tendency to answer shared preferences with a question.
